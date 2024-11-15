@@ -10,8 +10,8 @@ nvm use $(Get-Content .nvmrc)
 ```
 注：node版本不对会导致数据库连接不上
 
-1. 先下载mongodb，在下载mongostore
-2. 执行下列命令导入数据到数据库coderstation
+1. 先下载mongodb，在下载 mongostore
+2. 执行下列命令导入数据到云数据库 coderstation
 ```shell
-mongorestore -h localhost:27017 -d coderstation --dir C:\Users\admin\Desktop\coderstationData
+mongorestore -h 120.26.76.192:27017 -u coderstation -p ECbmmEK8T84wLSt4 -d coderstation --dir C:\demo-project\coderstation-server\coderstationData
 ```

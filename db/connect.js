@@ -5,7 +5,7 @@
 const mongoose = require("mongoose");
 
 // 定义链接数据库字符串
-const dbURI = "mongodb://" + process.env.DB_HOST + "/" + process.env.DB_NAME;
+const dbURI = "mongodb://" + process.env.DB_USER + ":" + process.env.DB_PASSWORD + "@" + process.env.DB_HOST + "/" + process.env.DB_NAME;
 
 // 连接
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true });
