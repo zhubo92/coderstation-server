@@ -15,3 +15,6 @@ nvm use $(Get-Content .nvmrc)
 ```shell
 mongorestore -h 120.26.76.192:27017 -u coderstation -p ECbmmEK8T84wLSt4 -d coderstation --dir C:\demo-project\coderstation-server\coderstationData
 ```
+
+# 前端页面放到 /public 目录下面
+例如：http://120.26.76.192/web/#/ 项目，打包后直接放到/public/web文件下即可。
