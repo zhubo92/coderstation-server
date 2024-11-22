@@ -5,6 +5,7 @@ const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const session = require("express-session");
 const { ServiceError, UnknownError } = require("./utils/errors");
+const cors = require("cors");
 
 // 默认读取项目根目录下的 .env 环境变量文件
 require("dotenv").config();
@@ -24,6 +25,9 @@ const uploadRouter = require("./routes/upload");
 
 // 创建服务器实例
 const app = express();
+
+// 配置 CORS 解决跨源问题
+app.use(cors());
 
 // 使用 session 中间件
 app.use(
