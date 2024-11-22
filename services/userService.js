@@ -61,7 +61,7 @@ module.exports.loginService = async function (loginInfo) {
       loginId: data.loginId,
       enabled: data.enabled,
     };
-    var loginPeriod = 1; // token 的有效时间默认是 1 天
+    let loginPeriod = 1; // token 的有效时间默认是 1 天
     if (loginInfo.remember) {
       // 进入此 if，说明用户勾选了 7 天有效，token 的有效时长就为 7 天
       loginPeriod = process.env.LOGIN_PERIOD;

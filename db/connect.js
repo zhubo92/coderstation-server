@@ -12,5 +12,5 @@ mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // 监听
 mongoose.connection.on("connected", function () {
-  console.log(`coderstation 数据库已经连接...`);
+  console.log(`${process.env.DB_NAME || "coderstation"} 数据库已经连接...`);
 });

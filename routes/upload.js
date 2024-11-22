@@ -1,8 +1,8 @@
-var express = require("express");
+const express = require("express");
 const multer = require("multer");
 const { UploadError } = require("../utils/errors");
 const { uploading, formatResponse } = require("../utils/tools");
-var router = express.Router();
+const router = express.Router();
 
 // 上传文件接口
 router.post("/", async function (req, res, next) {
