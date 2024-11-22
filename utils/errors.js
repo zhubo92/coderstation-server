@@ -1,10 +1,4 @@
 /**
- * 自定义错误
- * 当错误发生的时候，我们捕获到发生的错误，然后抛出我们自定义的错误
- */
-const { formatResponse } = require("./tools");
-
-/**
  * 业务处理错误基类
  */
 class ServiceError extends Error {
@@ -21,7 +15,11 @@ class ServiceError extends Error {
   // 方法
   // 格式化的返回错误信息
   toResponseJSON() {
-    return formatResponse(this.code, this.message, null);
+    return {
+      code: this.code,
+      msg: this.message,
+      data: null
+    }
   }
 }
 

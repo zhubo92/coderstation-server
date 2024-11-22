@@ -11,8 +11,8 @@ module.exports.formatResponse = function (code, msg, data) {
     code,
     msg,
     data,
-  };
-};
+  }
+}
 
 // 解析客户端传递过来的 token
 module.exports.analysisToken = function (token) {
