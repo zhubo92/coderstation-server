@@ -134,6 +134,54 @@ exports.bookRule = {
 };
 
 /**
+ * 网址导航验证规则
+ */
+exports.navRule = {
+  navTitle: {
+    presence: {
+      allowEmpty: false,
+    },
+    type: "string",
+  },
+  navLogo: {
+    presence: {
+      allowEmpty: true,
+    },
+    type: "string",
+  },
+  navLink: {
+    presence: {
+      allowEmpty: false,
+    },
+    type: "string",
+  },
+  navDesc: {
+    presence: {
+      allowEmpty: true,
+    },
+    type: "string",
+  },
+  createTime: {
+    presence: {
+      allowEmpty: true,
+    },
+    type: "string",
+  },
+  clickNumber:{
+    presence: {
+      allowEmpty: true,
+    },
+    type: "number",
+  },
+  navRemark: {
+    presence: {
+      allowEmpty: true,
+    },
+    type: "string",
+  },
+};
+
+/**
  * 评论验证规则
  */
 exports.commentRule = {
