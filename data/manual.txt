@@ -1,0 +1,8 @@
+coderstation.js 是数据库备份，需要恢复数据库数据用它就行了。
+
+1. Navicat 连接上远程数据库。
+2. 新建数据库 coderstation（名字随意）。
+3. 右键集合打开菜单，选择运行脚本文件选择 coderstation.js。
+
+
+coderstationData.zip 是以前的备份，没啥用。

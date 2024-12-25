@@ -1,0 +1,5182 @@
+/*
+ Navicat Premium Dump Script
+
+ Source Server         : 宝塔 mongo
+ Source Server Type    : MongoDB
+ Source Server Version : 70008 (7.0.8)
+ Source Host           : 120.26.76.192:27017
+ Source Schema         : coderstation
+
+ Target Server Type    : MongoDB
+ Target Server Version : 70008 (7.0.8)
+ File Encoding         : 65001
+
+ Date: 25/12/2024 14:40:25
+*/
+
+
+// ----------------------------
+// Collection structure for admins
+// ----------------------------
+db.getCollection("admins").drop();
+db.createCollection("admins");
+
+// ----------------------------
+// Documents of admins
+// ----------------------------
+db.getCollection("admins").insert([ {
+    _id: ObjectId("634d7f557797638ec96fe2e4"),
+    loginId: "admin",
+    loginPwd: "e10adc3949ba59abbe56e057f20f883e",
+    nickname: "奔跑的蘑菇君",
+    avatar: "/static/uploads/avatar22216660232518134579.jpg",
+    permission: Int32("1"),
+    enabled: true
+} ]);
+db.getCollection("admins").insert([ {
+    _id: ObjectId("635641be55252911d6754faa"),
+    loginId: "anjing",
+    loginPwd: "4297f44b13955235245b2497399d7a93",
+    nickname: "静悄悄",
+    avatar: "/static/uploads/totoro16665973094053553.png",
+    permission: Int32("2"),
+    enabled: true
+} ]);
+db.getCollection("admins").insert([ {
+    _id: ObjectId("635648f955252911d6754fdb"),
+    loginId: "jinge",
+    loginPwd: "4297f44b13955235245b2497399d7a93",
+    nickname: "进哥",
+    avatar: "/static/avatar/looklook.png",
+    permission: Int32("1"),
+    enabled: true
+} ]);
+
+// ----------------------------
+// Collection structure for books
+// ----------------------------
+db.getCollection("books").drop();
+db.createCollection("books");
+
+// ----------------------------
+// Documents of books
+// ----------------------------
+db.getCollection("books").insert([ {
+    _id: ObjectId("634e1bb42fac4881713db1a1"),
+    bookTitle: "图解CSS3",
+    bookPic: "/static/uploads/s2731922616668376937019996.jpg",
+    downloadLink: "https://pan.baidu.com/s/1sFzPZXuXqJSf1U1fj-pyUw?pwd=mmuw",
+    bookIntro: "<p><strong>内容简介</strong></p><p><br></p><p>本书是CSS3领域的标准性著作，由资深Web前端工程师根据CSS3的最新技术标准撰写。内容极为全面、丰富和翔实，由浅入深地讲解了CSS3新特性的语法、功能和使用技巧，涵盖选择器、边框、背景、文本、颜色、UI、动画、新型盒模型、媒体查询、响应式设计等各种模块；写作方式创新，有趣且易懂，用图解的方式来描述CSS3的每一个特性甚至每一个步骤都配有实战效果图；包含大量案例，实战性强，每个特性都有作者从实践中精心归纳和挑选出来的案例辅助讲解，同时还包含一个综合性的大案例。无论你是完全没有经验的准前端工程师，还是已经有一定经验的前端工程师，如果你想系统学习CSS3，那么本书将会是你的最佳选择；如果你是一位成熟的前端开发工程师，但时常为如何合理地使用某些特性而费时去查阅相关资料，那么本书也是你的不二选择。</p><p><br></p><p><strong>作者简介</strong></p><p>廖伟华（网名：大漠）， 资深Web前端工程师，W3cplus创始人，目前就职于Ctrip UED。中国Drupal社区核心成员之一。对HTML5、CSS3、XHTML和Sass等前端脚本语言有非常深入的认识和丰富的实践经验，尤其专注对CSS3的研究，是国内最早研究和使用CSS3技术的一批人。现在还关注Web产品策划、交互设计、SEO以及移动端开发。2012年4月刊的《程序员》杂志上发表文章“Twitter Bootstrap：前端框架利器”。</p>",
+    scanNumber: Int32("4"),
+    commentNumber: Int32("1"),
+    onShelfDate: "1666063284986",
+    typeId: ObjectId("634d7fc47797638ec96fe2ee"),
+    requirePoints: Int32("20")
+} ]);
+db.getCollection("books").insert([ {
+    _id: ObjectId("634e32b52fac4881713db1a9"),
+    bookTitle: "CSS权威指南（第三版）",
+    bookPic: "/static/uploads/s292131416668367383665616.jpg",
+    downloadLink: "https://pan.baidu.com/s/1BG1XobiqQXNAfoudUVSamg?pwd=kp3m",
+    bookIntro: "<p>你经常是否既想获得丰富复杂的网页样式，同时又想节省时间和精力？本书为你展示了如何遵循CSS最新规范（CSS2和CSS2.1）将层叠样式表的方方面面应用于实践。</p><p><br></p><p>通过本书提供的诸多示例，你将了解如何做到仅在一处建立样式表就能创建或修改整个网站的外观，以及如何得到HTML力不能及的更丰富的表现效果。</p><p><br></p><p>资深CSS专家Eric A.Meyer。利用他独有的睿智和丰富的经验对属性、标记、标记属性和实现做了深入的研究，另外在浏览器支持和设计原则等实际问题上也有独到的见解。你所需要的就是HTML 4.0的知识即可以为网站布局和分页创建简明而且易于维护的脚本，同时兼具桌面系统的美观性和可控性。在本书中你将学到以下内容：</p><p><br></p><p>·用多种方式对文本应用样式</p><p><br></p><p>·用户界面、表布局、列表和生成内容</p><p><br></p><p>·浮动和定位的优缺点</p><p><br></p><p>·字体系列和后路</p><p><br></p><p>·框模型的工作原理</p><p><br></p><p>·IE7、Firefox和其他浏览器支持的新CSS3选择器</p><p><br></p><p>最新版《CSS权威指南》一书经过全面更新，涵盖了Internet Explorer 7，详细介绍了各个CSS属性以及属性之间的相互作用，并指导你如何避免一些常见的错误。不论你是一位经验丰富的web创作人员，还是一无所知的新手，都可以把它作为内容翔实的CSS参考资料放在手边。Eric A.Meyer。在HTML、CSS和web标准领域是国际上公认的专家，他从1993年就开始从事web方面的工作。他也是complex spiral consulting公司的奠基人，其客户包括美国在线、苹果计算机公司、富国银行和Macromedia等著名公司。</p>",
+    scanNumber: Int32("0"),
+    commentNumber: Int32("0"),
+    onShelfDate: "1666069173648",
+    typeId: ObjectId("634d7fc47797638ec96fe2ee"),
+    requirePoints: Int32("40")
+} ]);
+db.getCollection("books").insert([ {
+    _id: ObjectId("634e36d12fac4881713db1c8"),
+    bookTitle: "深入浅出Vue.js",
+    bookPic: "/static/uploads/s3147188216668366816167522.jpg",
+    downloadLink: "https://pan.baidu.com/s/1itja0x42AUpbwlbODaLCcw?pwd=yygp",
+    bookIntro: "<p><strong>内容简介</strong></p><p><br></p><p>本书从源码层面分析了Vue.js。首先，简要介绍了Vue.js；然后详细讲解了其内部核心技术“变化侦测”，这里带领大家从0到1实现一个简单的“变化侦测”系统；接着详细介绍了虚拟DOM技术，其中包括虚拟DOM的原理及其patching算法；紧接着详细讨论了模板编译技术，其中包括模板解析器的实现原理、优化器的原理以及代码生成器的原理；最后详细介绍了其整体架构以及提供给我们使用的各种API的内部原理，同时还介绍了生命周期、错误处理、指令系统与模板过滤器等功能的原理。</p><p><br></p><p>本书适合前端开发人员阅读。</p><p><br></p><p><strong>作者简介</strong></p><p><br></p><p>刘博文</p><p><br></p><p>网名Berwin，95后，从事Web前端工作5年，2015年加入360奇舞团，现任360导航事业部资深前端工程师，负责360导航首页及二级页创新项目等亿级PV站点的设计与优化，推动Vue.js成为部门内广泛使用的核心技术栈，独立研发相关开发工具与技术解决方案并使之成功落地。</p>",
+    scanNumber: Int32("1"),
+    commentNumber: Int32("0"),
+    onShelfDate: "1666070225669",
+    typeId: ObjectId("634d80417797638ec96fe2f9"),
+    requirePoints: Int32("30")
+} ]);
+db.getCollection("books").insert([ {
+    _id: ObjectId("634e38392fac4881713db1d1"),
+    bookTitle: "Vue.js 实战",
+    bookPic: "/static/uploads/s2958754516668365991543135.jpg",
+    downloadLink: "https://pan.baidu.com/s/1jVFJGLiKTu9JrDDbjuJJ4A?pwd=6ukq",
+    bookIntro: "<p><strong>内容简介</strong></p><p><br></p><p>本书以Vue.js 2为基础，以项目实战的方式来引导读者渐进式学习Vue.js。本书分为基础篇、进阶篇和实战篇三部分。基础篇主要是对 Vue.js 核心功能的介绍；进阶篇主要讲解前端工程化Vue.js的组件化、插件的使用；实战篇着重开发了两个完整的示例，所涉及的内容涵盖Vue.js绝大部分API。通过阅读本书，读者能够掌握Vue.js框架主要API的使用方法、自定义指令、组件开发、单文件组件、Render函数、使用webpack开发可复用的单页面富应用等。</p><p><br></p><p>本书示例丰富、侧重实战，适用于刚接触或即将接触Vue.js的开发者，也适用于对Vue.js有过开发经验，但需要进一步提升的开发者。</p><p><br></p><p><strong>作者简介</strong></p><p><br></p><p>梁灏，网名 Aresn，基于 Vue.js 的开源 UI 组件库 iView 的作者。目前在大数据公司 TalkingData 负责可视化基础架构。创办了程序员社区 TalkingCoder。</p>",
+    scanNumber: Int32("1"),
+    commentNumber: Int32("0"),
+    onShelfDate: "1666070585532",
+    typeId: ObjectId("634d80417797638ec96fe2f9"),
+    requirePoints: Int32("20")
+} ]);
+db.getCollection("books").insert([ {
+    _id: ObjectId("634e39f92fac4881713db1d8"),
+    bookTitle: "Vue.js项目开发实战",
+    bookPic: "/static/uploads/vuexiangmukaifa16660710318808580.png",
+    downloadLink: "https://pan.baidu.com/s/16SPkiTuo3b5_5Qf4VRqJZQ?pwd=b8fu",
+    bookIntro: "<p><strong>内容简介</strong></p><p>本书以JavaScript语言为基础，以Vue.js项目开发过程为主线，介绍了一整套面向Vue.js的项目开发技术。从NoSQL数据库的搭建到Express项目API的编写，后再由Vue.js显示在前端的页面中，让读者可以非常迅速地掌握这些技术，提高项目开发的能力。本书分为4篇。第1篇介绍了Vue.js基础环境搭建，是全书的基石；第2篇介绍了电影网站项目的设计，涵盖ES6、Webpack和工程化环境搭建等关键技术；第3篇介绍了电影网站项目的前端和后端的实现，涵盖Node.js后端技术、Vue.js各种组件和API等技术；第4篇介绍了页面优化，通过学习一些Vue.js模板和框架，从而制作更加美观的用户界面（UI）。本书适合Vue.js初学者和进阶者阅读，也适合其他Web前端和后端开发爱好者阅读。对于一些产品经理，本书也同样适合阅读。另外，对于培训机构和各类开设Web开发课程的院校，本书是一本很好的项目开发教程。</p><p><br></p><p><strong>作者简介</strong></p><p>张帆，资深全栈“码农”。有多年的项目设计和Web开发经验，熟悉各种主流前端和后端开发工具，长期从事新技术的研究与项目实践。现专注于JavaScript全栈开发，以及微信小程序和小游戏的开发实践与探索。</p>",
+    scanNumber: Int32("1"),
+    commentNumber: Int32("0"),
+    onShelfDate: "1666071033177",
+    typeId: ObjectId("634d80417797638ec96fe2f9"),
+    requirePoints: Int32("20")
+} ]);
+db.getCollection("books").insert([ {
+    _id: ObjectId("634e3b6b2fac4881713db1e7"),
+    bookTitle: "React状态管理与同构实战",
+    bookPic: "/static/uploads/s2983575816668369130382795.jpg",
+    downloadLink: "https://pan.baidu.com/s/1VkclvcuM3vnTxBziiYA9ww?pwd=sjju",
+    bookIntro: "<p><strong>内容简介</strong></p><p>React自开源以来，便以革命性的设计理念迅速颠覆了前端开发的传统意义，其倡导的组件化、状态管理、虚拟DOM等思想极大提高了前端开发效率。为了更加高效地维护React应用的数据状态，以Redux为代表的数据管理模式横空出世。</p><p><br></p><p>《React状态管理与同构实战》以React技术栈为核心，在介绍React用法的基础上，从源码层面分析了Redux思想，同时着重介绍了服务端渲染和同构应用的架构模式。《React状态管理与同构实战》中包含许多项目实例，不仅为用户打开了React技术栈的大门，更能提升读者对前沿领域的整体认知。《React状态管理与同构实战》主要适合具有一定JavaScript基础的前端工程师，以及对前端开发感兴趣的相关从业人员阅读。</p><p><br></p><p><strong>作者简介</strong></p><p>侯策。硕士毕业于法国国立高等电信学校。曾任职于BePATIENT集团，负责互联网+医疗平台的研发。曾任职于法国能源和苏伊士集团，参与欧洲天然气运输和费用系统的研发。2015年回国加入百度知识搜索部，负责多个产品线的大型技术迭代。行业之外是一名国家二级运动员（足球项目），曾组织过赴北非撒哈拉地区看望孤儿等慈善活动。</p><p><br></p><p>颜海镜。知名技术博主，开源达人，常以歪脖无脸男形象作为头像活跃于各大技术网站，经过多年沉淀，专注Web前端开发，先后任职于金山、百度、美团点评，负责前端开发工作。</p>",
+    scanNumber: Int32("1"),
+    commentNumber: Int32("0"),
+    onShelfDate: "1666071403438",
+    typeId: ObjectId("634d804d7797638ec96fe2fd"),
+    requirePoints: Int32("30")
+} ]);
+db.getCollection("books").insert([ {
+    _id: ObjectId("634e3cd92fac4881713db1f3"),
+    bookTitle: "JavaScript权威指南(第6版)",
+    bookPic: "/static/uploads/s905606516668367998542627.jpg",
+    downloadLink: "https://pan.baidu.com/s/1uyJHHtAicDK_3ddgPypADA?pwd=9mb4",
+    bookIntro: "<p><strong>内容简介</strong></p><p>本书是程序员学习核心JavaScript语言和由Web浏览器定义的JavaScript API的指南和综合参考手册。</p><p><br></p><p>第6版涵盖HTML 5和ECMAScript 5。很多章节完全重写，以便与时俱进，紧跟当今的最佳Web开发实践。本书新增章节描述了jQuery和服务器端JavaScript。</p><p><br></p><p>本书适合那些希望学习Web编程语言的初、中级程序员和希望精通JavaScript的JavaScript程序员阅读。</p><p><br></p><p><strong>作者简介</strong></p><p>David Flanagan是一名程序员，也是一名作家，它的个人网站是http://davidflanagan.com。他在O'Reilly出版的其他畅销书还包括《JavaScript Pocket Reference》、《The Ruby Programming Language》，以及《Java in a Nutshell》。David毕业于麻生理工学院，获得计算机科学与工程学位。他和妻子和孩子一起生活在西雅图和温哥华之间的美国太平洋西北海岸。</p>",
+    scanNumber: Int32("2"),
+    commentNumber: Int32("0"),
+    onShelfDate: "1666071769683",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1"),
+    requirePoints: Int32("40")
+} ]);
+db.getCollection("books").insert([ {
+    _id: ObjectId("634e3db12fac4881713db1f7"),
+    bookTitle: "JavaScript设计模式与开发实践",
+    bookPic: "/static/uploads/s2806500616668368692417145.jpg",
+    downloadLink: "https://pan.baidu.com/s/1NnbSNihx2zZ-YZZsYaxRZQ?pwd=5f9g",
+    bookIntro: "<p><strong>内容简介</strong></p><p><br></p><p>本书在尊重《设计模式》原意的同时，针对JavaScript语言特性全面介绍了更适合JavaScript程序员的了16个常用的设计模式，讲解了JavaScript面向对象和函数式编程方面的基础知识，介绍了面向对象的设计原则及其在设计模式中的体现，还分享了面向对象编程技巧和日常开发中的代码重构。本书将教会你如何把经典的设计模式应用到JavaScript语言中，编写出优美高效、结构化和可维护的代码。</p><p><br></p><p><strong>作者简介</strong></p><p><br></p><p>曾探</p><p><br></p><p>2007年毕业于吉林大学软件学院。就职于国内知名前端团队腾讯AlloyTeam，高级工程师。</p><p><br></p><p>曾参与Web QQ、QQ群、Q+开发者网站、微云、QQ兴趣部落等大型前端项目的开发。有过Java、Python和JavaScript的开发经验，业余作品有HTML5版街头霸王等。</p><p><br></p><p>平时喜欢电影和音乐，业务时间也是一名健身教练。</p>",
+    scanNumber: Int32("1"),
+    commentNumber: Int32("0"),
+    onShelfDate: "1666071985728",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1"),
+    requirePoints: Int32("20")
+} ]);
+db.getCollection("books").insert([ {
+    _id: ObjectId("634e3e982fac4881713db1ff"),
+    bookTitle: "JavaScript模式",
+    bookPic: "/static/uploads/s1133705916660722147555976.jpg",
+    downloadLink: "https://pan.baidu.com/s/1ZCuoCY0q_QReJQ6pX245ZQ?pwd=ya2q",
+    bookIntro: "<p><strong>内容简介</strong></p><p><br></p><p>《JavaScript模式》包含了实现每个讨论的模式的实践建议，并附有数个可以立即上手的范例。同时还可以学到一些反模式，一些常见的编程方式，这些编程方式引发的问题比解决的还多。它不是一本入门级的书，而是适用于希望将自身的Javascript技巧提高到一个新层次的专业的开发人员和程序员。全书共八章节，内容包括简介、基本技巧、字面量和构造函数、函数、对象创建模式、代码复用模式等。</p><p><br></p><p><strong>作者简介</strong></p><p><br></p><p>Stoyan Stefanov，是Yahoo的Web开发员、YUI的合作者、演讲师和博客博主。他还是多本O‘Reilly书籍的作者、贡献者和技术评审。Stoyan是smush.it图像优化工具的创建者和YSlow 2.0（一种Yahoo的性能优化工具）的体系架构师。</p>",
+    scanNumber: Int32("1"),
+    commentNumber: Int32("0"),
+    onShelfDate: "1666072216713",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1"),
+    requirePoints: Int32("20")
+} ]);
+db.getCollection("books").insert([ {
+    _id: ObjectId("634e3f212fac4881713db203"),
+    bookTitle: "你不知道的JavaScript（上卷）",
+    bookPic: "/static/uploads/s2803337216660723513667443.jpg",
+    downloadLink: "https://pan.baidu.com/s/1FuigwVRgt3qs5EDLcNQsMA?pwd=hg6n",
+    bookIntro: "<p><strong>内容简介</strong></p><p><br></p><p>JavaScript语言有很多复杂的概念，但却用简单的方式体现出来（比如回调函数），因此，JavaScript开发者无需理解语言内部的原理，就能编写出功能全面的程序；就像收音机一样，你无需理解里面的管子和线圈都是做什么用的，只要会操作收音机上的按键，就可以收听你喜欢的节目。然而，JavaScript的这些复杂精妙的概念才是语言的精髓，即使是经验丰富的JavaScript开发者，如果没有认真学习也无法真正理解语言本身的特性。正是因为绝大多数人不求甚解，一遇到出乎意料的行为就认为是语言本身有缺陷，进而把相关的特性加入黑名单，久而久之就排除了这门语言的多样性，人为地使它变得不完整、不安全。</p><p><br></p><p>“你不知道的JavaScript”系列就是要让不求甚解的JavaScript开发者迎难而上，深入语言内部，弄清楚JavaScript每一个零部件的用途。本书介绍了该系列的两个主题：“作用域和闭包”以及“this和对象原型”。掌握了这些知识之后，无论什么技术、框架和流行词语，你都能轻松理解。</p><p><br></p><p><strong>作者简介</strong></p><p><br></p><p>作者简介：</p><p><br></p><p>Kyle Simpson</p><p><br></p><p>推崇开放的互联网，对JavaScript、HTML5、实时/端对端通信和Web性能有深入研究。他是技术书作家、技术培训师、讲师和开源社区的活跃成员。</p><p><br></p><p>译者简介：</p><p><br></p><p>赵望野</p><p><br></p><p>前端工程师，前端基础技术组leader，曾经负责豌豆荚2.0的前端架构设计和主要开发工作，目前负责Front-end Technical Infrastructure的建设。新浪微博@赵望野。负责本书第一部分“作用域和闭包”的翻译。</p><p><br></p><p>梁杰</p><p><br></p><p>北京航空航天大学计算机科学与技术专业大四学生。热爱JavaScript、Python，热爱开源，喜欢做各种各样有趣的事情。负责本书第二部分“this和对象原型”的翻译。</p>",
+    scanNumber: Int32("1"),
+    commentNumber: Int32("2"),
+    onShelfDate: "1666072353004",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1"),
+    requirePoints: Int32("20")
+} ]);
+db.getCollection("books").insert([ {
+    _id: ObjectId("634e40a52fac4881713db20f"),
+    bookTitle: "你不知道的JavaScript（中卷）",
+    bookPic: "/static/uploads/s2896960016660727402599979.jpg",
+    downloadLink: "https://pan.baidu.com/s/1Q97BXNuXu56h3cBrB_qv5A?pwd=gqww",
+    bookIntro: "<p><strong>内容简介</strong></p><p><br></p><p>JavaScript这门语言简单易用，很容易上手，但其语言机制复杂微妙，即使是经验丰富的JavaScript开发人员，如果没有认真学习的话也无法真正理解。本套书直面当前JavaScript开发人员不求甚解的大趋势，深入理解语言内部的机制，全面介绍了JavaScript中常被人误解和忽视的重要知识点。本书是其中卷，主要介绍了类型、语法、异步和性能。</p><p><br></p><p><strong>作者简介</strong></p><p><br></p><p>&lt;作者介绍&gt;</p><p><br></p><p>Kyle Simpson</p><p><br></p><p>作家、培训师、讲师、开源社区的活跃成员，推崇开放的互联网，对JavaScript、HTML5、实时/端对端通信和Web性能有深入研究。</p><p><br></p><p>&lt;译者介绍&gt;</p><p><br></p><p>单业</p><p><br></p><p>计算机专业硕士，软件工程师，曾供职于多家软件公司，从事软件开发工作，现居于上海。负责本书第二部分“异步和性能”的翻译。</p><p><br></p><p>姜南</p><p><br></p><p>从事过国内外金融、通信、移动互联网、数字出版等领域的IT系统开发工作，擅长的技术有Java、C#、HTML5、JavaScript、iOS、Android等。长期在独立技术博客——酷壳（coolshell.cn）发表翻译文章。负责本书第一部分“类型和语法”的翻译。</p>",
+    scanNumber: Int32("4"),
+    commentNumber: Int32("0"),
+    onShelfDate: "1666072741613",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1"),
+    requirePoints: Int32("20")
+} ]);
+db.getCollection("books").insert([ {
+    _id: ObjectId("634e41482fac4881713db217"),
+    bookTitle: "JavaScript高级程序设计（第3版）",
+    bookPic: "/static/uploads/s895865016660729025157648.jpg",
+    downloadLink: "https://pan.baidu.com/s/1hMonp2bgQxC7QpKu4uSGhQ?pwd=sjcs",
+    bookIntro: "<p><strong>内容简介</strong></p><p><br></p><p>本书是JavaScript 超级畅销书的最新版。ECMAScript 5 和HTML5 在标准之争中双双胜出，使大量专有实现和客户端扩展正式进入规范，同时也为JavaScript 增添了很多适应未来发展的新特性。本书这一版除增加5 章全新内容外，其他章节也有较大幅度的增补和修订，新内容篇幅约占三分之一。全书从JavaScript 语言实现的各个组成部分——语言核心、DOM、BOM、事件模型讲起，深入浅出地探讨了面向对象编程、Ajax 与Comet 服务器端通信，HTML5 表单、媒体、Canvas（包括WebGL）及Web Workers、地理定位、跨文档传递消息、客户端存储（包括IndexedDB）等新API，还介绍了离线应用和与维护、性能、部署相关的最佳开发实践。本书附录展望了未来的API 和ECMAScript Harmony 规范。</p><p><br></p><p>本书适合有一定编程经验的Web 应用开发人员阅读，也可作为高校及社会实用技术培训相关专业课程的教材。</p><p><br></p><p><strong>作者简介</strong></p><p><br></p><p>Nicholas C. Zakas（尼古拉斯•泽卡斯）世界顶级Web技术专家，现为雅虎公司界面呈现架构师，负责My Yahoo!和雅虎首页等大访问量站点的设计。尼古拉斯拥有丰富的Web开发和界面设计经验，曾经参与许多世界级大公司的Web解决方案开发。他还是High Performance JavaScript一书的作者，并与他人合作撰写了Professional Ajax和Even Faster Web Sites。尼古拉斯拥有梅里马克学院计算机科学学士学位和埃迪柯特学院的MBA学位。他的个人网站是www.nczonline.net，他的Twitter别名是@slicknet。</p>",
+    scanNumber: Int32("32"),
+    commentNumber: Int32("4"),
+    onShelfDate: "1666072904164",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1"),
+    requirePoints: Int32("30")
+} ]);
+db.getCollection("books").insert([ {
+    _id: ObjectId("634e41c12fac4881713db21b"),
+    bookTitle: "Spring Boot实战",
+    bookPic: "/static/uploads/s2898368516660730235678721.jpg",
+    downloadLink: "https://pan.baidu.com/s/161L1JF9E2ZqYWIBCi2du6A?pwd=uunc",
+    bookIntro: "<p><strong>内容简介</strong></p><p><br></p><p>本书以Spring应用程序开发为中心，全面讲解如何运用Spring Boot提高效率，使应用程序的开发和管理更加轻松有趣。作者行文亲切流畅，以大量示例讲解了Spring Boot在各类情境中的应用，内容涵盖起步依赖、Spring Boot CLI、Groovy、Grails、Actuator。对于Spring Boot开发应用中较为繁琐的内容，附录奉上整理完毕的表格，一目了然，方便读者查阅。</p><p><br></p><p><strong>作者简介</strong></p><p><br></p><p>Craig Walls</p><p><br></p><p>Pivotal高级工程师，Spring Social及Spring Sync项目领导者，著名技术博主，畅销书《Spring实战》作者。他致力于推广Spring框架，笔耕不辍，亦时常作为演讲嘉宾出席各类相关会议。</p><p><br></p><p>译者简介：</p><p><br></p><p>丁雪丰　 资深开发及运维工程师，活跃的技术图书译者，致力于推动优秀技术在国内的发展，出版了《Spring攻略》《MongoDB实战》《RESTful Web Service Cookbook中文版》等6部译著。</p>",
+    scanNumber: Int32("2"),
+    commentNumber: Int32("1"),
+    onShelfDate: "1666073025103",
+    typeId: ObjectId("634e1b17386eea42f85fad04"),
+    requirePoints: Int32("20")
+} ]);
+db.getCollection("books").insert([ {
+    _id: ObjectId("634e43112fac4881713db23c"),
+    bookTitle: "细说PHP",
+    bookPic: "/static/uploads/s608011816660733601508920.jpg",
+    downloadLink: "https://pan.baidu.com/s/13PybI4k2uHN3etqNuU3Qdw?pwd=mjej",
+    bookIntro: "<p><strong>内容简介</strong></p><p><br></p><p>《细说PHP》开发Web应用程序PHP是最理想的工具，易于使用、功能强大、成本低廉、高安全性、开发速度快且执行灵活。《细说PHP》以实用为目标设计，包含PHP开发最主流的各项技术，对每一个知识点都进行了深入详细的讲解，并附有大量的实例代码，图文并茂。系统地介绍了PHP的相关技术及其在实际Web开发中的应用。</p><p><br></p><p>《细说PHP》共17章，每一章都是PHP独立知识点的总结。内容涵盖了PHP的运行环境搭建、Web服务器Apache的配置与应用、动态网站开发的前台技术、PHP编程语言的语法、PHP的常用功能模块和实用技巧、MySQL数据库的设计与应用、PHP 5面向对象的程序设计思想、Web开发的设计模式，以及包含DIV+CSS、mysqli扩展模块、数据库抽象层PDO、Smarty模板技术等目前PHP开发中最主流的技术。每一章中都有大量的实用示例，以及详尽的注释，加速读者的理解和学习，也为每章的技术点设置了大量的自测试题。最后以一个比较完整的、采用面向对象思想，以及通过MVC模式设计，并结合Smarty模板的CMS系统为案例，详细介绍了Web系统开发从设计到部署的各个细节，更好地进行开发实践。</p>",
+    scanNumber: Int32("5"),
+    commentNumber: Int32("0"),
+    onShelfDate: "1666073361491",
+    typeId: ObjectId("634e431a2fac4881713db242"),
+    requirePoints: Int32("500")
+} ]);
+db.getCollection("books").insert([ {
+    _id: ObjectId("6359e74da5f3673044ad96bf"),
+    bookTitle: "Go语言核心编程",
+    bookPic: "/static/uploads/s2989521016668362996227474.jpg",
+    downloadLink: "https://pan.baidu.com/s/10DtP8d-rG-f5tVKMWaZnpg?pwd=adri",
+    bookIntro: "<p><strong>内容简介</strong></p><p><br></p><p>《Go语言核心编程》是一本系统介绍Go 语言编程的书籍。首先介绍Go 语言的基础知识，使读者对Go 语言有一个整体的认知。接着围绕Go 语言的三大语言特性：类型系统、接口和并发展开论述，《Go语言核心编程》不单单介绍每个语言特性怎么使用，在章节的最后还对重要语言特性的底层实现原理做了介绍。接着介绍反射这个高级语言特征。此外，《Go语言核心编程》专门用一章的篇幅来介绍Go 语言的陷阱。最后介绍Go 语言的工程实践和编程思想。相信《Go语言核心编程》能够帮助读者快速、深入地了解和学习这门语言。</p><p><br></p><p>《Go语言核心编程》适合各个层次的Go 语言开发者阅读，初学者可以系统地从头学习，有一定的编程经验者可以选择性地阅读本书。</p><p><br></p><p><strong>作者简介</strong></p><p><br></p><p>李文塔，现就职于腾讯，FiT（前身为财付通）支付账户核心DBA，高级工程师。近十年金融系统开发、运维经验，先后参与2016年到2018年微信春节红包项目和支付账户核心多地多活容灾项目。</p><p><br></p><p>2012年开始接触Go语言，是国内较早的Go语言实践者之一。</p>",
+    scanNumber: Int32("1"),
+    commentNumber: Int32("0"),
+    onShelfDate: "1666836301430",
+    requirePoints: Int32("30"),
+    typeId: ObjectId("634d81077797638ec96fe30c")
+} ]);
+db.getCollection("books").insert([ {
+    _id: ObjectId("6359e81fa5f3673044ad96c5"),
+    bookTitle: "SPA设计与架构：理解单页面Web应用",
+    bookPic: "/static/uploads/s2916392316668365101568010.jpg",
+    downloadLink: "https://pan.baidu.com/s/1W_xdpadATNuz2ZDhYwapMw?pwd=iws4",
+    bookIntro: "<p><strong>内容简介</strong></p><p><br></p><p>SPA 开发技术的运用是当今Web 开发领域的热门趋势，但真正全面掌握该技术的开发者并不多。本书详尽阐述单页面Web 应用（SPA）开发技术，从SPA 构建基础入手，通过MV*、模块化编程、路由、模块间通信、服务器端交互等概念的阐述，全面介绍SPA 的设计与架构，帮助读者正确掌握SPA 开发的各方面知识要素。同时，《SPA设计与架构：理解单页面Web应用》中还讨论了SPA 的单元测试及客户端任务自动化，覆盖了从开发到部署的一系列任务，让读者在阅读完《SPA设计与架构：理解单页面Web应用》之后能够打下扎实的SPA 开发基础。</p><p><br></p><p>《SPA设计与架构：理解单页面Web应用》的重点是帮助读者正确、全面地掌握SPA 开发概念，这些概念都是通用的。但为了让内容更全面、具体，《SPA设计与架构：理解单页面Web应用》将通过Knockout、Backbone.js 及AngularJS 这三种不同风格的MV* 框架来进行比较性讨论，这是本书的一大特色。同时在涉及具体MV* 框架知识点时，《SPA设计与架构：理解单页面Web应用》中会提供相应介绍。书中示例丰富具体，并提供完整源代码下载。</p><p><br></p><p>《SPA设计与架构：理解单页面Web应用》适合前端及对SPA 技术感兴趣的开发者阅读。读者只需掌握JavaScript、HTML 和CSS 基本知识，就可以阅读。</p><p><br></p><p><strong>作者简介</strong></p><p><br></p><p>Emmit A. Scott 是一名有17 年Web 应用构建经验的高级软件工程师和架构师。他为教育、银行和通信领域开发过大型应用程序。他的爱好包括阅读（特别喜欢Jim Butcher的小说）、吉他（想当年他可是一位摇滚乐手）以及尽可能多陪陪孩子。</p><p><br></p><p>译者简介</p><p><br></p><p>卢俊祥</p><p><br></p><p>译者，书迷；关注Web 技术趋势，热衷App 开发、Web 开发、数据分析、架构设计以及各类编程语言；陈氏太极拳五十六式爱好者；佛禅人生，缘散缘聚。</p><p><br></p><p>微博：@2gua</p><p><br></p><p>个人网站：http://www.2gua.info/</p><p><br></p><p>知乎专栏：https://zhuanlan.zhihu.com/guagua/</p>",
+    scanNumber: Int32("1"),
+    commentNumber: Int32("0"),
+    onShelfDate: "1666836511836",
+    requirePoints: Int32("20"),
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("books").insert([ {
+    _id: ObjectId("6359ea56a5f3673044ad974e"),
+    bookTitle: "JavaScript忍者秘籍（第2版）",
+    bookPic: "/static/uploads/s2968902516668370770084093.jpg",
+    downloadLink: "https://pan.baidu.com/s/12yQzz1V3f2g7U11XYnWw8w?pwd=sk7m",
+    bookIntro: "<p><strong>内容介绍</strong></p><p><br></p><p>JavaScript语言非常重要，相关的技术图书也很多，但至今市面没有一本对JavaScript语言的最重要部分（函数、闭包和原型）进行深入、全面介绍的图书，也没有一本讲述跨浏览器代码编写的图书。而本书弥补了这一空缺，是由jQuery库创始人编写的一本深入剖析JavaScript语言的书。</p><p><br></p><p>本书共分4个部分，从不同层次讲述了逐步成为JavaScript高手所需的知识。本书从JavaScript语言及最重要的特性谈起，由浅入深地探讨了函数、作用域、闭包、生成器函数、对象、数组、模块化、JavaScript与Web页面的交互以及事件等主题，引导读者更加深入地了解JavaScript的方方面面，充分展示了JavaScript语言的各种特性。本书结合ECMAScript 6和7的相关概念，涵盖了流行的JavaScript框架所使用的技术。</p><p><br></p><p>本书适合具备一定JavaScript基础知识的读者阅读，也适合从事程序设计工作并想要深入探索JavaScript语言的读者阅读。</p><p><br></p><p><strong>作者介绍</strong></p><p><br></p><p>John Resig 是可汗学院（Khan Academy）的一名资深工程师，是jQuery JavaScript库的创建者，也是《JavaScript忍者秘籍（第1版）》和《精通JavaScript》的作者。</p><p><br></p><p>Bear Bibeault 编写软件已经超过30年，刚开始是通过100波特的电传打字机在控制数据网络超级计算机上编写井字程序。Bear有电气工程双学位，本应从事设计天线之类的技术工作，但自从他在数字设备公司从事第一份工作起，他就更着迷于编程。Bear还分别在 Dragon Systems、Works.com、Spredfast、Logitech、Caringo等诸多公司工作过。Bear目前是一名高级前端开发工程师，在一家对象存储软件的领先供应商工作，提供可伸缩性的海量存储和内容保护服务。</p><p><br></p><p>Josip Maras是克罗地亚斯普利特大学电气工程学院、机械工程学院、造船建筑学院的博士后研究员。他获得软件工程博士学位，论文题目是“在Web应用程序开发中实现自动复用”，其中包括使用JavaScript实现的JavaScript解释器。在他的研究中，他已经出版了十多篇科学会议和期刊论文，主要是分析客户端Web应用程序的处理程序。</p>",
+    scanNumber: Int32("2"),
+    commentNumber: Int32("0"),
+    onShelfDate: "1666837078419",
+    requirePoints: Int32("30"),
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("books").insert([ {
+    _id: ObjectId("6359eb17a5f3673044ad976a"),
+    bookTitle: "响应式Web设计",
+    bookPic: "/static/uploads/s2929571116668372704315117.jpg",
+    downloadLink: "https://pan.baidu.com/s/16Jp7eeXab6Gu8_IzDB0MKw?pwd=j71e",
+    bookIntro: "<p><strong>内容介绍</strong></p><p><br></p><p>本书将当前Web 设计中热门的响应式设计技术与HTML5 和CSS3 结合起来，为读者全面深入地讲解了针对各种屏幕大小设计和开发现代网站的各种技术。书中不仅讨论了媒体查询、弹性布局、响应式图片，更将最新和最有用的HTML5 和CSS3 技术一并讲解，是学习最新Web 设计技术不可多得的佳作。</p><p><br></p><p><strong>作者介绍</strong></p><p><br></p><p>作者简介：</p><p><br></p><p>Ben Frain</p><p><br></p><p>Web开发者、图书作者、演讲者。从1996年开始从事Web设计与开发，目前是Bet365的高级前端工程师。另著有《Sass和Compass设计师指南》。</p><p><br></p><p>在从事Web开发之前，他曾是一名怀才不遇的（而且谦虚的）电视演员和科技记者，毕业于索尔福德大学媒体与表演专业。他写过四部（自认为）均被低估的剧本，且至今仍觉得有望卖出其中一部（尽管不像最初那么有信心了）。</p><p><br></p><p>工作之余，在身体和妻子都允许的情况下，他会玩一玩室内足球，或者跟两个儿子练练摔跤。个人网站www.benfrain.com，Twitter账号@benfrain。</p><p><br></p><p>译者简介：</p><p><br></p><p>本书译者均来自由月影领衔的奇虎360最大前端团队——奇舞团（75team）。</p><p><br></p><p>李松峰</p><p><br></p><p>资深技术翻译，译有《JavaScript高级程序设计》《简约至上：交互式设计四策略》等数十部技术和设计书籍，现为“奇舞团”高级开发工程师、《奇舞周刊》总编。</p><p><br></p><p>钟恒</p><p><br></p><p>360奇舞团前端工程师。</p>",
+    scanNumber: Int32("2"),
+    commentNumber: Int32("0"),
+    onShelfDate: "1666837271966",
+    requirePoints: Int32("20"),
+    typeId: ObjectId("634d7fc47797638ec96fe2ee")
+} ]);
+db.getCollection("books").insert([ {
+    _id: ObjectId("6359ec52a5f3673044ad977c"),
+    bookTitle: "高性能MySQL（第二版）",
+    bookPic: "/static/uploads/s414159316668375848858431.jpg",
+    downloadLink: "https://pan.baidu.com/s/1tVUcxo9id7RUTZgKjBxGgg?pwd=mfms",
+    bookIntro: "<p><strong>内容简介</strong></p><p><br></p><p>本书荣获2009年Jolt图书大奖，是不可多得的分享MySQL实用经验的图书。它不但可以帮助MySQL初学者提高使用技巧，更为有经验的MySQL DBA指出了开发高性能MySQL应用的途径。全书包含14章和4个附录，内容覆盖MySQL系统架构、设计应用技巧、SQL语句优化、服务器性能调优、系统配置管理和安全设置、监控分析，以及复制、扩展和备份/还原等主题，每一章的内容自成体系，适合各领域技术人员作选择性的阅读。</p><p><br></p><p>汇聚著名MySQL专家在实践中构建大型系统的多年经验。</p><p><br></p><p>剖析MySQL内部工作机制，指导读者MySQL开发出快速可靠的系统。</p><p><br></p><p>实例讲解MySQL实用又安全的高性能之路。</p><p><br></p><p><strong>作者简介</strong></p><p><br></p><p>Baron Schwartz 是一名软件工程师，他住在弗吉尼亚州的Charlottesville，在网上用的名字是Xaprb，这是他名字的第一部分按QWERTY键盘的顺序打在Dvorak键盘上时显示出来的名字。当他不忙于解决有趣的编程挑战时，Baron就会和他的妻子Lynn、狗Carbon一起享受闲暇时光。他的关于软件工程的博客地址是http://www.xaprb.com/blog。</p><p><br></p><p>Peter Zaitsev，MySQL AB公司高性能组的前任经理，现正运作着mysqlperformanceblog.com 网站。他擅长于帮助管理员为每天有着数以百万计访问量的网站修补漏洞，使用数百台服务器来处理TB级的数据。他常常为了找到一个解决方案而修改和升级软硬件（比如查询优化）。Peter还经常在讨论会上发表演讲。</p><p><br></p><p>Vadim Tkachenko，Percona公司的合伙人，该公司是一家专业的MySQL性能咨询公司。他过去是MySQL AB公司的性能工程师。作为一名在多线程编程和同步领域里的专家，他的主要工作是基准测试、特征分析和找出系统瓶颈。他还在性能监控和调优方面做着一些工作，使MySQL在多个CPU上更具有伸缩性。</p><p><br></p><p>Jeremy D. Zawodny和他的两只猫在1999年底从俄亥俄州的西北部搬到了硅谷，这样他就能为Yahoo！工作了——那时他刚好亲眼见证了.com泡沫的破灭。他在Yahoo！工作了八年半，将MySQL和其他开源技术组合起来使用，找到有趣的、令人兴奋的用途，而它们往往也是很大的用途。</p><p><br></p><p>近段时间，他重新发掘出了对飞行的热爱。其实，早在2003年年初，他就已经取得了私人滑翔机飞行员的执照，2005年获得商业飞行员的定级。从那时起，他花了大量的空闲时间驾驶滑翔机,飞翔在Hollister、加利福尼亚和Tahoe湖地区上空。他偶尔还会驾驶单引擎轻型飞机，和别人共同拥有一架Citabria 7KCAB和一架Cessna 182。临时的咨询工作可以帮助他支付飞行账单。</p><p><br></p><p>Jeremy和他可人的妻子及四只猫生活在加州的旧金山湾区。他的博客地址是jeremy.zawodny.com/blog。</p><p><br></p><p>Arjen Lentz 出生在阿姆斯特丹，但从千禧年以来他和他美丽的女儿Phoebe、黑猫 Figaro一直生活在澳大利亚的Queensland。Arjen最初是C程序员，在MySQL AB公司(2001-2007)里是第25号职员。在2007年短暂的休息之后，Arjen创建了Open Query（http://openquery.com.au），该公司致力于在亚太及临近地区开发和提供数据管理培训和咨询服务。Arjen也经常在讨论会和用户群中发表讲演。在充裕的闲暇时间里，Arjen热衷于烹饪、园艺、阅读、露营，以及研究RepRap。他的博客地址是http://arjen-lentz.livejournal.com。</p><p><br></p><p>Derek J. Balling自1996年以来就一直是Linux系统管理员。他协助Yahoo!那样的公司和Vassar学院那样的机构建立和维护服务器基础设施，也曾为Perl杂志和其他一些在线杂志撰写文章，并一直为LISA（Large Installation System Administration）会议的编程委员会服务。目前，他作为数据中心经理受雇于Answers.com。</p><p><br></p><p>当不做与计算机有关的事情时，Derek喜欢和他的妻子Debbie及他们的动物群（四只猫和一只狗）在一起。在博客http://blog.megacity.org上，他也会对当前热点发出评论或写些近来惹恼他的事情。</p>",
+    scanNumber: Int32("2"),
+    commentNumber: Int32("0"),
+    onShelfDate: "1666837586222",
+    requirePoints: Int32("20"),
+    typeId: ObjectId("6359eb5ca5f3673044ad9775")
+} ]);
+
+// ----------------------------
+// Collection structure for chat
+// ----------------------------
+db.getCollection("chat").drop();
+db.createCollection("chat");
+
+// ----------------------------
+// Documents of chat
+// ----------------------------
+db.getCollection("chat").insert([ {
+    _id: ObjectId("6736b033805d8cb9c42ca80f")
+} ]);
+
+// ----------------------------
+// Collection structure for comments
+// ----------------------------
+db.getCollection("comments").drop();
+db.createCollection("comments");
+
+// ----------------------------
+// Documents of comments
+// ----------------------------
+db.getCollection("comments").insert([ {
+    _id: ObjectId("6357ae3137fe7a1aab3aeb14"),
+    userId: ObjectId("6357ae1537fe7a1aab3aeb0f"),
+    issueId: ObjectId("6357abfb37fe7a1aab3aeae8"),
+    bookId: null,
+    typeId: ObjectId("634d80417797638ec96fe2f9"),
+    commentContent: "一般来说现在的主流方式是通过 CSS预处理器 来一定好一个主题文件，然后在 loader 中配置全局引入。这样在使用的时候就可以直接用这些配置好的变量以及通用的一些混入方法。\n\n比如说 Element UI 的 var.scss 文件， AntD Vue 的 default.less 文件。",
+    commentDate: "1666690609657",
+    commentType: Int32("1")
+} ]);
+db.getCollection("comments").insert([ {
+    _id: ObjectId("6357ae9937fe7a1aab3aeb24"),
+    userId: ObjectId("6357ae8b37fe7a1aab3aeb1f"),
+    issueId: ObjectId("6357abfb37fe7a1aab3aeae8"),
+    bookId: null,
+    typeId: ObjectId("634d80417797638ec96fe2f9"),
+    commentContent: "你这个相当于是JS变量和CSS变量值要保持一致。建议都直接用CSS变量，组件那里的color，也直接通过CSS里写个class来维护就行了，然后都使用CSS变量。",
+    commentDate: "1666690713461",
+    commentType: Int32("1")
+} ]);
+db.getCollection("comments").insert([ {
+    _id: ObjectId("6357da03d84d68f7b87e11f9"),
+    userId: ObjectId("634e56402fac4881713db3e8"),
+    issueId: null,
+    bookId: ObjectId("634e41c12fac4881713db21b"),
+    typeId: ObjectId("634e1b17386eea42f85fad04"),
+    commentContent: "因最近的面试和内部培训而试着了解下Spring Boot。对Spring Framework的印象有所改观。在快速搭建项目方面，Spring Boot做了不少改进，简化了很多配置。这本书也的确紧扣“实战”主题，相比之前看过的《Java8实战》，更像一本实操手册，适合上手。",
+    commentDate: "1666701827961",
+    commentType: Int32("2")
+} ]);
+db.getCollection("comments").insert([ {
+    _id: ObjectId("6357dde4d84d68f7b87e12bb"),
+    userId: ObjectId("6357ae8b37fe7a1aab3aeb1f"),
+    issueId: null,
+    bookId: ObjectId("634e41482fac4881713db217"),
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1"),
+    commentContent: "JavaScript最基础的书籍，要看认真，慢慢地看，累计接近1000小时吧。而且对象与继承，性能优化，HTML5 api由于没有实践或缺乏代码阅读量导致看的很糊涂，不过以后可以遇到时再翻翻，或者看更专业的书。",
+    commentDate: "1666702820935",
+    commentType: Int32("2")
+} ]);
+db.getCollection("comments").insert([ {
+    _id: ObjectId("6357ddfad84d68f7b87e12c1"),
+    userId: ObjectId("6357ae8b37fe7a1aab3aeb1f"),
+    issueId: null,
+    bookId: ObjectId("634e41482fac4881713db217"),
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1"),
+    commentContent: "胜在够全面，但无论从细节方面和可读性方面都没有犀牛书好。尤其在对象的讲解上，和犀牛书差的不是一点半点。作用链倒是讲得比犀牛书简洁明了。这本书和Andrew S. Tanenbaum 那本《计算机网络》一样，在国内都是过誉了，原因大概是两本书正好出现在了同类优秀书籍在国内相对匮乏的时代。",
+    commentDate: "1666702842904",
+    commentType: Int32("2")
+} ]);
+db.getCollection("comments").insert([ {
+    _id: ObjectId("6357de26d84d68f7b87e12d8"),
+    userId: ObjectId("634e56402fac4881713db3e8"),
+    issueId: null,
+    bookId: ObjectId("634e41482fac4881713db217"),
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1"),
+    commentContent: "第二版五年前已经看过了，所以第三版看起来很快~这真的是最经典的JavaScript书，第二次看，还是感叹其中的思想，很多直击JavaScript的核心，但是需要你自己有很扎实的基本功，也确实如同很多人所讲，它真的不是一本入门书。",
+    commentDate: "1666702886906",
+    commentType: Int32("2")
+} ]);
+db.getCollection("comments").insert([ {
+    _id: ObjectId("6357df17d84d68f7b87e130f"),
+    userId: ObjectId("6357ae8b37fe7a1aab3aeb1f"),
+    issueId: ObjectId("6357deb1d84d68f7b87e12f4"),
+    bookId: null,
+    typeId: ObjectId("634e431a2fac4881713db242"),
+    commentContent: "如果你希望宏观了解一下 PHP 究竟要学些什么，完全可以参考一下较为成熟的培训机构，他们对 PHP 学习课程安排。从入门到“中级”、“高级”等等，他们都会有非常具体而详细的介绍和学习路线。不是说一定要按照他们说的来做，只是说最起码我知道我的位置，并且尽最大努力做到最好。",
+    commentDate: "1666703127062",
+    commentType: Int32("1")
+} ]);
+db.getCollection("comments").insert([ {
+    _id: ObjectId("6357dff3d84d68f7b87e134f"),
+    userId: ObjectId("6357ae8b37fe7a1aab3aeb1f"),
+    issueId: null,
+    bookId: ObjectId("634e3f212fac4881713db203"),
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1"),
+    commentContent: "读完了，五星好评，望野前辈翻译的太有意思了，这个系列的丛书完全超越了老道的Good Parts，谁读谁知道。",
+    commentDate: "1666703347627",
+    commentType: Int32("2")
+} ]);
+db.getCollection("comments").insert([ {
+    _id: ObjectId("6357e008d84d68f7b87e1355"),
+    userId: ObjectId("6357ae8b37fe7a1aab3aeb1f"),
+    issueId: null,
+    bookId: ObjectId("634e3f212fac4881713db203"),
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1"),
+    commentContent: "通过这本书可以对“对象、继承、this”等概念有一个进一步的理解。 这本书把继承分成了两种：模仿类行为的和委托。还有就是这本书很多概念都描述的非常清晰，比如模块必须满足两个条件：“为函数定义引入包装函数，并保证它的返回值和模块的API保持一致。” 这本书用词准确一致，比如“实例”，作者认为在一些其他的面向对象语言中，类的实例化是复制的过程，在闭包那一部分写到模块：模块创建器每一次被调用都会创建一个新的模块实例。 《你不知道的JavaScript》（上）和《JavaScript高级程序设计》对照着看我觉得收获很多，可以每隔一段时间就翻翻看加深理解。",
+    commentDate: "1666703368784",
+    commentType: Int32("2")
+} ]);
+db.getCollection("comments").insert([ {
+    _id: ObjectId("6357e799d84d68f7b87e1414"),
+    userId: ObjectId("6357e0f1d84d68f7b87e13a2"),
+    issueId: ObjectId("6357deb1d84d68f7b87e12f4"),
+    bookId: null,
+    typeId: ObjectId("634e431a2fac4881713db242"),
+    commentContent: "<p>按照了解的很多PHP/LNMP程序员的发展轨迹，结合个人经验体会，抽象出很多程序员对未来的迷漫，特别对技术学习的盲目和慌乱，简单梳理了这个每个阶段PHP程序员的技术要求，来帮助很多PHP程序做对照设定学习成长目标。</p><p>对目前主流技术做了一个基本的梳理，整个是假设PHP程序员不是基础非常扎实的情况进行的设定，并且所有设定都非常具体明确清晰，可能会让人觉得不适，请理解仅代表一家之言。（未来技术变化不在讨论范围）</p><p><strong>第一阶段：基础阶段（基础PHP程序员）</strong></p><p>重点：把LNMP搞熟练（核心是安装配置基本操作）</p><p>目标：能够完成基本的LNMP系统安装，简单配置维护；能够做基本的简单系统的PHP开发；能够在PHP中型系统中支持某个PHP功能模块的开发。</p><p>时间：完成本阶段的时间因人而异，有的成长快半年一年就过了，成长慢的两三年也有。</p><p><strong>1.Linux：</strong></p><p>基本命令、操作、启动、基本服务配置（包括rpm安装文件，各种服务配置等）；会写简单的shell脚本和awk/sed 脚本命令等。</p><p><strong>2.Nginx：</strong></p><p>做到能够安装配置nginx+php，知道基本的nginx核心配置选项，知道 server/fastcgi_pass/access_log 等基础配置，目标是能够让nginx+php_fpm顺利工作。</p><p><strong>3.MySQL：</strong></p><p>会自己搭建mysql，知道基本的mysql配置选项；知道innodb和myisam的区别，知道针对InnoDB和MyISAM两个引擎的不同配置选项；知道基本的两个引擎的差异和选择上面的区别；能够纯手工编译搭建一个MySQL数据库并且配置好编码等正常稳定运行；核心主旨是能够搭建一个可运行的MySQL数据库。</p><p><strong>4.PHP：</strong></p><p>基本语法数组、字符串、数据库、XML、Socket、GD/ImageMgk图片处理等等；熟悉各种跟MySQL操作链接的api（mysql/mysqli/PDO)，知道各种编码问题的解决；知道常规熟练使用的PHP框架（ThinkPHP、Zendframework、Yii、Yaf等）；了解基本MVC的运行机制和为什么这么做，稍微知道不同的PHP框架之间的区别；能够快速学习一个MVC框架。能够知道开发工程中的文件目录组织，有基本的良好的代码结构和风格，能够完成小系统的开发和中型系统中某个模块的开发工作。</p><p><strong>5.前端：</strong></p><p>如果条件时间允许，可以适当学习下 HTML/CSS/JS 等相关知识，知道什么web标准，div+css的web/wap页面模式，知道HTML5和HTML4的区别；了解一些基本的前端只是和JS框架（jQuery之类的）；了解一些基本的JavaScript编程知识；（本项不是必须项，如果有时间，稍微了解一下是可以的，不过不建议作为重点，除非个人有强烈兴趣）</p><p><strong>6.系统设计：</strong></p><p>能够完成小型系统的基本设计，包括简单的数据库设计，能够完成基本的：浏览器 -&gt; Nginx+PHP -&gt; 数据库 架构的设计开发工作；能够支撑每天几十万到数百万流量网站的开发维护工作；</p><p><strong>第二阶段：提高阶段 （中级PHP程序员）</strong></p><p>重点：提高针对LNMP的技能，能够更全面的对LNMP有熟练的应用。</p><p>目标：能够随时随地搭建好LNMP环境，快速完成常规配置；能够追查解决大部分遇到的开发和线上环境的问题；能够独立承担中型系统的构架和开发工作；能够在大型系统中承担某个中型模块的开发工作；</p><p><strong>1. Linux:</strong></p><p>在第一阶段的基础上面，能够流畅的使用Shell脚本来完成很多自动化的工作；awk/sed/perl 也操作的不错，能够完成很多文本处理和数据统计等工作；基本能够安装大部分非特殊的Linux程序（包括各种库、包、第三方依赖等等，比如MongoDB/Redis/Sphinx/Luncene/SVN之类的）；了解基本的Linux服务，知道如何查看Linux的性能指标数据，知道基本的Linux下面的问题跟踪等。</p><p><strong>2. Nginx:</strong></p><p>在第一阶段的基础上面，了解复杂一些的Nginx配置；包括 多核配置、events、proxy_pass，sendfile/tcp_*配置，知道超时等相关配置和性能影响；知道nginx除了web server，还能够承担代理服务器、反向静态服务器等配置；知道基本的nginx配置调优；知道如何配置权限、编译一个nginx扩展到nginx；知道基本的nginx运行原理（master/worker机制，epoll），知道为什么nginx性能比apache性能好等知识；</p><p><strong>3. MySQL/MongoDB：</strong></p><p>在第一阶段的基础上面，在MySQL开发方面，掌握很多小技巧，包括常规SQL优化（group by/order by/rand优化等）；除了能够搭建MySQL，还能够冷热备份MySQL数据，还知道影响innodb/myisam性能的配置选项（比如key_buffer/query_cache/sort_buffer/innodb_buffer_pool_size/innodb_flush_log_at_trx_commit等），也知道这些选项配置成为多少值合适；另外也了解一些特殊的配置选项，比如 知道如何搭建mysql主从同步的环境，知道各个binlog_format的区别；知道MySQL的性能追查，包括slow_log/explain等，还能够知道基本的索引建立处理等知识；原理方面了解基本的MySQL的架构（Server+存储引擎），知道基本的InnoDB/MyISAM索引存储结构和不同（聚簇索引，B树）；知道基本的InnoDB事务处理机制；了解大部分MySQL异常情况的处理方案（或者知道哪儿找到处理方案）。条件允许的情况，建议了解一下NoSQL的代表MongoDB数据库，顺便对比跟MySQL的差别，同事能够在合适的应用场景安全谨慎的使用MongoDB，知道基本的PHP与MongoDB的结合开发。</p><p><strong>4. Redis/Memcached：</strong></p><p>在大部分中型系统里面一定会涉及到缓存处理，所以一定要了解基本的缓存；知道Memcached和Redis的异同和应用场景，能够独立安装 Redis/Memcached，了解Memcahed的一些基本特性和限制，比如最大的value值，知道PHP跟他们的使用结合；Redis了解基本工作原理和使用，了解常规的数据类型，知道什么场景应用什么类型，了解Redis的事务等等。原理部分，能够大概了解Memcached的内存结构（slab机制），redis就了解常用数据类型底层实现存储结构（SDS/链表/SkipList/HashTable）等等，顺便了解一下Redis的事务、RDB、AOF等机制更好</p><p><strong>5. PHP：</strong></p><p>除了第一阶段的能力，安装配置方面能够随意安装PHP和各种第三方扩展的编译安装配置；了解php-fpm的大部分配置选项和含义（如max_requests/max_children/request_terminate_timeout之类的影响性能的配置），知道mod_php/fastcgi的区别；在PHP方面已经能够熟练各种基础技术，还包括各种深入些的PHP，包括对PHP面向对象的深入理解/SPL/语法层面的特殊特性比如反射之类的；在框架方面已经阅读过最少一个以上常规PHP MVC框架的代码了，知道基本PHP框架内部实现机制和设计思想；在PHP开发中已经能够熟练使用常规的设计模式来应用开发（抽象工厂/单例/观察者/命令链/策略/适配器 等模式）；建议开发自己的PHP MVC框架来充分让开发自由化，让自己深入理解MVC模式，也让自己能够在业务项目开发里快速升级；熟悉PHP的各种代码优化方法，熟悉大部分PHP安全方面问题的解决处理；熟悉基本的PHP执行的机制原理（Zend引擎/扩展基本工作机制）；</p><p><strong>6. C/C++：</strong></p><p>开始涉猎一定的C/C++语言，能够写基本的C/C++代码，对基本的C/C++语法熟悉（指针、数组操作、字符串、常规标准API）和数据结构（链表、树、哈希、队列）有一定的熟悉下；对Linux下面的C语言开发有基本的了解概念，会简单的makefile文件编写，能够使用简单的GCC/GDB的程序编译简单调试工作；对基本的网络编程有大概了解。（本项是为了向更高层次打下基础）</p><p><strong>7. 前端：</strong></p><p>在第一阶段的基础上面，熟悉基本的HTTP协议（协议代码200/300/400/500，基本的HTTP交互头）；条件允许，可以在深入写出稍微优雅的HTML+CSS+JavaScript，或者能够大致简单使用某些前端框架（jQuery/YUI/ExtJS/RequireJS/BootStrap之类）；如果条件允许，可以深入学习JavaScript编程，比如闭包机制、DOM处理；再深入些可以读读jQuery源码做深入学习。（本项不做重点学习，除非对前端有兴趣）</p><p><strong>8. 系统设计：</strong></p><p>能够设计大部分中型系统的网站架构、数据库、基本PHP框架选型；性能测试排查处理等；能够完成类似：浏览器 -&gt; CDN(Squid) -&gt; Nginx+PHP -&gt; 缓存 -&gt; 数据库 结构网站的基本设计开发维护；能够支撑每天数百万到千万流量基本网站的开发维护工作；</p><p><strong>第三阶段：高级阶段 （高级PHP程序员）</strong></p><p>重点：除了基本的LNMP程序，还能够在某个方向或领域有深入学习。（纵深维度发展）</p><p>目标：除了能够完成基本的PHP业务开发，还能够解决大部分深入复杂的技术问题，并且可以独立设计完成中大型的系统设计和开发工作；自己能够独立hold深入某个技术方向，在这块比较专业。（比如在MySQL、Nginx、PHP、Redis等等任一方向深入研究）</p><p><strong>1. Linux：</strong></p><p>除了第二阶段的能力，在Linux下面除了常规的操作和性能监控跟踪，还能够使用很多高级复杂的命令完成工作（watch/tcpdump/starce/ldd/ar等)；在shell脚本方面，已经能够编写比较复杂的shell脚本（超过500行）来协助完成很多包括备份、自动化处理、监控等工作的shell；对awk/sed/perl 等应用已经如火纯青，能够随意操作控制处理文本统计分析各种复杂格式的数据；对Linux内部机制有一些了解，对内核模块加载，启动错误处理等等有个基本的处理；同时对一些其他相关的东西也了解，比如NFS、磁盘管理等等；</p><p><strong>2. Nginx:</strong></p><p>在第二阶段的基础上面，已经能够把Nginx操作的很熟练，能够对Nginx进行更深入的运维工作，比如监控、性能优化，复杂问题处理等等；看个人兴趣，更多方面可以考虑侧重在关于Nginx工作原理部分的深入学习，主要表现在阅读源码开始，比如具体的master/worker工作机制，Nginx内部的事件处理，内存管理等等；同时可以学习Nginx扩展的开发，可以定制一些自己私有的扩展；同时可以对Nginx+Lua有一定程度的了解，看看是否可以结合应用出更好模式；这个阶段的要求是对Nginx原理的深入理解，可以考虑成为Nginx方向的深入专业者。</p><p><strong>3. MySQL/MongoDB：</strong></p><p>在第二阶段的基础上面，在MySQL应用方面，除了之前的基本SQL优化，还能够在完成一些复杂操作，比如大批量数据的导入导出，线上大批量数据的更改表结构或者增删索引字段等等高危操作；除了安装配置，已经能够处理更多复杂的MySQL的问题，比如各种问题的追查，主从同步延迟问题的解决、跨机房同步数据方案、MySQL高可用架构等都有涉及了解；对MySQL应用层面，对MySQL的核心关键技术比较熟悉，比如事务机制（隔离级别、锁等）、对触发器、分区等技术有一定了解和应用；对MySQL性能方面，有包括磁盘优化（SAS迁移到SSD）、服务器优化（内存、服务器本身配置）、除了二阶段的其他核心性能优化选项（innodb_log_buffer_size/back_log/table_open_cache/thread_cache_size/innodb_lock_wait_timeout等）、连接池软件选择应用，对show *（show status/show profile）类的操作语句有深入了解，能够完成大部分的性能问题追查；MySQL备份技术的深入熟悉，包括灾备还原、对Binlog的深入理解，冷热备份，多IDC备份等；在MySQL原理方面，有更多了解，比如对MySQL的工作机制开始阅读部分源码，比如对主从同步（复制）技术的源码学习，或者对某个存储引擎（MyISAM/Innodb/TokuDB）等等的源码学习理解，如果条件允许，可以参考CSV引擎开发自己简单的存储引擎来保存一些数据，增强对MySQL的理解；在这个过程，如果自己有兴趣，也可以考虑往DBA方向发展。MongoDB层面，可以考虑比如说在写少读多的情况开始在线上应用MongoDB，或者是做一些线上的数据分析处理的操作，具体场景可以按照工作来，不过核心是要更好的深入理解RMDBS和NoSQL的不同场景下面的应用，如果条件或者兴趣允许，可以开始深入学习一下MongoDB的工作机制。</p><p><strong>4. Redis/Memcached：</strong></p><p>在第二阶段的基础上面，能够更深入的应用和学习。因为Memcached不是特别复杂，建议可以把源码进行阅读，特别是内存管理部分，方便深入理解；Redis部分，可以多做一些复杂的数据结构的应用（zset来做排行榜排序操作/事务处理用来保证原子性在秒杀类场景应用之类的使用操作）；多涉及aof等同步机制的学习应用，设计一个高可用的Redis应用架构和集群；建议可以深入的学习一下Redis的源码，把在第二阶段积累的知识都可以应用上，特别可以阅读一下包括核心事件管理、内存管理、内部核心数据结构等充分学习了解一下。如果兴趣允许，可以成为一个Redis方面非常专业的使用者。</p><p><strong>5. PHP：</strong></p><p>作为基础核心技能，我们在第二阶段的基础上面，需要有更深入的学习和应用。从基本代码应用上面来说，能够解决在PHP开发中遇到95%的问题，了解大部分PHP的技巧；对大部分的PHP框架能够迅速在一天内上手使用，并且了解各个主流PHP框架的优缺点，能够迅速方便项目开发中做技术选型；在配置方面，除了常规第二阶段会的知识，会了解一些比较偏门的配置选项（php auto_prepend_file/auto_append_file），包括扩展中的一些复杂高级配置和原理（比如memcached扩展配置中的memcache.hash_strategy、apc扩展配置中的apc.mmap_file_mask/apc.slam_defense/apc.file_update_protection之类的）；对php的工作机制比较了解，包括php-fpm工作机制（比如php-fpm在不同配置机器下面开启进程数量计算以及原理），对zend引擎有基本熟悉（vm/gc/stream处理），阅读过基本的PHP内核源码（或者阅读过相关文章），对PHP内部机制的大部分核心数据结构（基础类型/Array/Object）实现有了解，对于核心基础结构（zval/hashtable/gc）有深入学习了解；能够进行基本的PHP扩展开发，了解一些扩展开发的中高级知识（minit/rinit等），熟悉php跟apache/nginx不同的通信交互方式细节（mod_php/fastcgi）；除了开发PHP扩展，可以考虑学习开发Zend扩展，从更底层去了解PHP。</p><p><strong>6. C/C++：</strong></p><p>在第二阶段基础上面，能够在C/C++语言方面有更深入的学习了解，能够完成中小型C/C++系统的开发工作；除了基本第二阶段的基础C/C++语法和数据结构，也能够学习一些特殊数据结构（b-tree/rb-tree/skiplist/lsm-tree/trie-tree等）方便在特殊工作中需求；在系统编程方面，熟悉多进程、多线程编程；多进程情况下面了解大部分多进程之间的通信方式，能够灵活选择通信方式（共享内存/信号量/管道等）；多线程编程能够良好的解决锁冲突问题，并且能够进行多线程程序的开发调试工作；同时对网络编程比较熟悉，了解多进程模型/多线程模型/异步网络IO模型的差别和选型，熟悉不同异步网络IO模型的原理和差异（select/poll/epoll/iocp等），并且熟悉常见的异步框架（ACE/ICE/libev/libevent/libuv/Boost.ASIO等）和使用，如果闲暇也可以看看一些国产自己开发的库（比如muduo）；同时能够设计好的高并发程序架构（leader-follow/master-worker等）；了解大部分C/C++后端Server开发中的问题（内存管理、日志打印、高并发、前后端通信协议、服务监控），知道各个后端服务RPC通信问题（struct/http/thirft/protobuf等）；能够更熟络的使用GCC和GDB来开发编译调试程序，在线上程序core掉后能够迅速追查跟踪解决问题；通用模块开发方面，可以积累或者开发一些通用的工具或库（比如异步网络框架、日志库、内存池、线程池等），不过开发后是否应用要谨慎，省的埋坑去追bug；</p><p><strong>7. 前端：</strong></p><p>深入了解HTTP协议（包括各个细致协议特殊协议代码和背后原因，比如302静态文件缓存了，502是nginx后面php挂了之类的）；除了之前的前端方面的各种框架应用整合能力，前端方面的学习如果有兴趣可以更深入，表现形式是，可以自己开发一些类似jQuery的前端框架，或者开发一个富文本编辑器之类的比较琐碎考验JavaScript功力；</p><p><strong>8. 其他领域语言学习：</strong></p><p>在基础的PHP/C/C++语言方面有基本积累，建议在当前阶段可以尝试学习不同的编程语言，看个人兴趣爱好，脚本类语言可以学学 Python/Ruby 之类的，函数式编程语言可以试试 Lisp/Haskell/Scala/Erlang 之类的，静态语言可以试试 Java/Golang，数据统计分析可以了解了解R语言，如果想换个视角做后端业务，可以试试 Node.js还有前面提到的跟Nginx结合的Nginx_Lua等。学习不同的语言主要是提升自己的视野和解决问题手段的差异，比如会了解除了进程/线程，还有轻量级协程；比如在跨机器通信场景下面，Erlang的解决方案简单的惊人；比如在不想选择C/C++的情况下，还有类似高效的Erlang/Golang可用等等；主要是提升视野。</p><p><strong>9. 其他专业方向学习：</strong></p><p>在本阶段里面，会除了基本的LNMP技能之外，会考虑一些其他领域知识的学习，这些都是可以的，看个人兴趣和长期的目标方向。目前情况能够选择的领域比较多，比如、云计算（分布式存储、分布式计算、虚拟机等），机器学习（数据挖掘、模式识别等，应用到统计、个性化推荐），自然语言处理（中文分词等），搜索引擎技术、图形图像、语音识别等等。除了这些高大上的，也有很多偏工程方面可以学习的地方，比如高性能系统、移动开发（Android/IOS）、计算机安全、嵌入式系统、硬件等方向。</p><p><strong>10. 系统设计：</strong></p><p>系统设计在第二阶段的基础之上，能够应用掌握的经验技能，设计出比较复杂的中大型系统，能够解决大部分线上的各种复杂系统的问题，完成类似 浏览器 -&gt; CDN -&gt; 负载均衡 -&gt;接入层 -&gt; Nginx+PHP -&gt; 业务缓存 -&gt; 数据库 -&gt; 各路复杂后端RPC交互（存储后端、逻辑后端、反作弊后端、外部服务） -&gt; 更多后端 酱紫的复杂业务；能够支撑每天数千万到数亿流量网站的正常开发维护工作。</p>",
+    commentDate: "1666705305271",
+    commentType: Int32("1")
+} ]);
+db.getCollection("comments").insert([ {
+    _id: ObjectId("6357e7fad84d68f7b87e1424"),
+    userId: ObjectId("6357e0f1d84d68f7b87e13a2"),
+    issueId: null,
+    bookId: ObjectId("634e41482fac4881713db217"),
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1"),
+    commentContent: "书籍太多了,我们反而不能每本都详读。如果你需要全面的了解JavaScript,知道JavaScript的语法,DOM,正则表达式,事件,浏览器差异等等,那么仅仅看这本书就够了,剩下的就是需要一个api手册和不停的实践了。",
+    commentDate: "1666705402225",
+    commentType: Int32("2")
+} ]);
+db.getCollection("comments").insert([ {
+    _id: ObjectId("6357e887d84d68f7b87e1453"),
+    userId: ObjectId("6357e0f1d84d68f7b87e13a2"),
+    issueId: ObjectId("6357db34d84d68f7b87e122d"),
+    bookId: null,
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1"),
+    commentContent: "<p>递归就好了呀</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>function getId(arr){\n    let newArr = []\n     arr.forEach(item=&gt;{\n        newArr.push(item.id);\n        if(Array.isArray(item.children)){\n            newArr.push(...getId(item.children))\n        }\n    })\n    return newArr;\n}</code></pre></div>",
+    commentDate: "1666705543857",
+    commentType: Int32("1")
+} ]);
+db.getCollection("comments").insert([ {
+    _id: ObjectId("6357eb80d84d68f7b87e14b4"),
+    userId: ObjectId("6357e0f1d84d68f7b87e13a2"),
+    issueId: ObjectId("6357db34d84d68f7b87e122d"),
+    bookId: null,
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1"),
+    commentContent: "<p>一般来说这种就只能用递归来写了，比如说这样：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>function fn(data=[]){\n    let list = []\n    data.forEach(item=&gt;{\n        list.push(item.id, ...fn(item.children))\n    })\n    return list\n}</code></pre></div><p><br></p><p><br></p>",
+    commentDate: "1666706304411",
+    commentType: Int32("1")
+} ]);
+db.getCollection("comments").insert([ {
+    _id: ObjectId("6357ede687b7ae27dc572ad2"),
+    userId: ObjectId("6357e0f1d84d68f7b87e13a2"),
+    issueId: ObjectId("6357e182d84d68f7b87e13ca"),
+    bookId: null,
+    typeId: ObjectId("6357e132d84d68f7b87e13a6"),
+    commentContent: "<p>类似反射..会通过这个字符串去查找对应的类型,常常用于类型没有被定义的情况</p><blockquote><p>这种情况下,A在定义的时候还不认识B...所以用'B'替代</p></blockquote><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>class A:\n    def __init__(self,b:'B')\n        pass\n\nclass B:\n    pass</code></pre></div>",
+    commentDate: "1666706918890",
+    commentType: Int32("1")
+} ]);
+db.getCollection("comments").insert([ {
+    _id: ObjectId("6359e3b2a5f3673044ad95af"),
+    userId: ObjectId("6357ae8b37fe7a1aab3aeb1f"),
+    issueId: ObjectId("6359e297a5f3673044ad94d1"),
+    bookId: null,
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1"),
+    commentContent: "<p>可以看下 MDN 上的描述：Array.from() 方法对一个类似数组或可迭代对象创建一个新的，浅拷贝的数组实例。</p><p><a href=\"https://link.segmentfault.com/?enc=jkiKYGzB%2FIshV%2F9UxhIGBA%3D%3D.YgnUNtUPJErR9n69a3cojs%2FZIPAVaZ9ankxGWgPkKWDXqUYSUSVpAomRN1%2Bi99fkGUsoO7wYX8TlMUilFvi6BSSmQK0rOwx61NdZ1EuaGXPJfFNYOZ9JHv9gVw3ObISC\">https://developer.mozilla.org...</a></p><p>既然是浅拷贝，那么得到的就是一个新数组，因此 a1 !== a2。但由于是浅拷贝，如果把 a1 的成员换成其他引用类型的值，那么其成员将还是相等的</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>const a1 = [{ value: 0 }, { value : 1}, { value: 2 }]\nconst a2 = Array.from(a1);\n\nconsole.log(a1 === a2); // false\n\nconsole.log(a1[0] === a2[0]); // true (a1[x] === a2[x])</code></pre></div>",
+    commentDate: "1666835378699",
+    commentType: Int32("1")
+} ]);
+db.getCollection("comments").insert([ {
+    _id: ObjectId("6359e406a5f3673044ad95cf"),
+    userId: ObjectId("6357ae8b37fe7a1aab3aeb1f"),
+    issueId: ObjectId("6359e2efa5f3673044ad950a"),
+    bookId: null,
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1"),
+    commentContent: "<p>这就相当于在问：</p><p><br></p><p>“老王的身份证”和“这张卡片”有什么共同点和不同点？</p><p>“这张卡片”四个字放在不同的场景里，所指的东西也不同：可能是指老王的身份证，也可能是小张的银行卡，还可能是某火锅店的 VIP 卡。</p>",
+    commentDate: "1666835462610",
+    commentType: Int32("1")
+} ]);
+db.getCollection("comments").insert([ {
+    _id: ObjectId("6359e444a5f3673044ad95fe"),
+    userId: ObjectId("6357ae8b37fe7a1aab3aeb1f"),
+    issueId: ObjectId("6359e2d2a5f3673044ad94f7"),
+    bookId: null,
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1"),
+    commentContent: "<p>换个思路，把折线图的下边距设置大一点即可</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>const option = {\n  grid: {\n    // 下边距\n    bottom: '10%',\n  }\n}</code></pre></div><p><br></p><p><br></p>",
+    commentDate: "1666835524375",
+    commentType: Int32("1")
+} ]);
+db.getCollection("comments").insert([ {
+    _id: ObjectId("635bdd2b4df02505401d4d14"),
+    userId: ObjectId("635bdd204df02505401d4d12"),
+    issueId: ObjectId("6359e2efa5f3673044ad950a"),
+    bookId: null,
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1"),
+    commentContent: "<p>1231231231</p>",
+    commentDate: "1666964779825",
+    commentType: Int32("1")
+} ]);
+db.getCollection("comments").insert([ {
+    _id: ObjectId("6363b8c45d1a8c89f7861110"),
+    userId: ObjectId("634e56402fac4881713db3e8"),
+    issueId: ObjectId("6359e31fa5f3673044ad9521"),
+    bookId: null,
+    typeId: ObjectId("634e1b17386eea42f85fad04"),
+    commentContent: "<p>123123</p>",
+    commentDate: "1667479748345",
+    commentType: Int32("1")
+} ]);
+db.getCollection("comments").insert([ {
+    _id: ObjectId("6363b94b5d1a8c89f786117a"),
+    userId: ObjectId("634e56402fac4881713db3e8"),
+    issueId: null,
+    bookId: ObjectId("634e1bb42fac4881713db1a1"),
+    typeId: ObjectId("634d7fc47797638ec96fe2ee"),
+    commentContent: "12312313",
+    commentDate: "1667479883074",
+    commentType: Int32("2")
+} ]);
+
+// ----------------------------
+// Collection structure for interviews
+// ----------------------------
+db.getCollection("interviews").drop();
+db.createCollection("interviews");
+
+// ----------------------------
+// Documents of interviews
+// ----------------------------
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e46292fac4881713db259"),
+    interviewTitle: "HTML中的文档声明是什么",
+    interviewContent: "<h2>经典真题</h2><ul><li><p>什么是<code data-backticks=\"1\">&lt;!DOCTYPE&gt;</code>？是否需要在 <em>HTML5</em> 中使用？</p></li><li><p>什么是严格模式与混杂模式？</p></li><li><p>列举几条怪异模式中的怪癖行为</p></li></ul><h2>文档声明概念</h2><p><em>HTML</em> 文档通常以文档声明开始，该声明的作用是帮助浏览器确定其尝试解析和显示的 <em>HTML</em> 文档类型。</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;!DOCTYPE html&gt;</code></pre></div><p>文档声明必须是 <em>HTML</em> 文档的第一行、且顶格显示，对大小写不敏感。因为任何放在 <em>DOCTYPE</em> 前面的东西，比如批注或 <em>XML</em> 声明，会令 <em>IE9</em> 或更早期的浏览器触发怪异模式（后面的渲染模式会介绍）</p><p><br></p><p>文档声明并非一个 <em>HTML</em> 标签。它是一条“信息”，告知浏览器期望的文档类型。</p><p><br></p><p>那么说到文档类型，我们首先有必要先了解一下 <em>HTML</em> 的发展历史。如下图所示：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-07-020539.png\" alt=\"image-20210907100539198\" contenteditable=\"false\"><br></p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-07-020626.png\" alt=\"image-20210907100626110\" contenteditable=\"false\"><br></p><p><br></p><p>可以看到，<em>HTML</em> 版本从最开始诞生到最新的 <em>HTML5</em>，中间经历了很多版本。</p><p><br></p><p>那不同的版本有啥区别么？当然有区别，比如一个最显著的区别就是支持的 <em>HTML</em> 元素不同。例如：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-07-021238.png\" alt=\"image-20210907101237957\" contenteditable=\"false\"><br></p><blockquote><p>更多各版本所支持的不同 <em>HTML</em> 元素可以参阅：<em>https://www.w3school.com.cn/tags/html_ref_dtd.asp</em></p></blockquote><p>所以，你现在就知道为什么要书写文档声明了。原因是不同版本所支持的 <em>HTML</em> 元素类型是不同的，我需要告诉浏览器以哪一种文档类型方式来解析当前的这个 <em>HTML</em> 文件。</p><p><br></p><p>那么，最新的 <em>HTML5</em> 的文档类型倒是很简单，前面我们已经看到了</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;!DOCTYPE html&gt;</code></pre></div><p>那么稍微老一点的版本，例如 <em>HTML4</em> 或 <em>XHTML</em> 的文档类型声明长啥样呢？</p><p><br></p><p>这里我们来看两个。</p><p><br></p><p><strong><em>HTML 4.01 Strict</em></strong></p><p><br></p><p>该 <em>DTD</em> 包含所有 <em>HTML</em> 元素和属性，但不包括展示性的和弃用的元素（比如 <em>font</em>）。不允许框架集（<em>Framesets</em>）。</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\"&gt;</code></pre></div><p><strong><em>HTML 4.01 Transitional</em></strong></p><p><br></p><p>该 <em>DTD</em> 包含所有 <em>HTML</em> 元素和属性，包括展示性的和弃用的元素（比如 <em>font</em>）。不允许框架集（<em>Framesets</em>）。</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \n\"http://www.w3.org/TR/html4/loose.dtd\"&gt;</code></pre></div><blockquote><p>更多不同文档类型的声明写法可以参阅：<em>https://www.w3school.com.cn/tags/tag_doctype.asp</em></p></blockquote><p>首先，给我们的第一直观感受，就是声明写得很长。</p><p><br></p><p>那么为什么会这么长呢？</p><p><br></p><p>原因很简单，<em>HTML5</em> 不需要引入 <em>DTD</em> 文件，而其他类型的文档声明是需要引入 <em>DTD</em> 的。</p><p><br></p><p>很好，一个新的名词出现了，<em>DTD</em>。</p><p><br></p><p>在早期的 <em>HTML</em> 版本，例如 <em>HTML 4.01</em> 中，<em>&lt;!DOCTYPE&gt;</em> 声明之所以要引用 <em>DTD</em>，是因为 <em>HTML 4.01</em> 基于 <em>SGML</em>。而 <em>DTD</em> 规定的是标记语言的规则，这样浏览器才能正确地呈现内容。</p><p><br></p><p>但是最新的 <em>HTML5</em> 不基于 <em>SGML</em>，所以不需要引用 <em>DTD</em>。</p><p><br></p><p>到这里估计有的小伙伴要懵圈了，怎么又冒出来一个 <em>SGML</em> ？？</p><p><br></p><p>是的，你没有看错，我们有：<em>SGML、HTML、XML、XHTML、HTML5</em></p><p><br></p><p>从这五者的名字中，我们都可以看到 “<em>ML</em>” 这两个字母，所以我们先从 “<em>ML</em>” 说起。</p><p><br></p><p>“<em>ML</em>”即 “<em>Markup language</em>(置标语言)”。</p><p><br></p><p>根据维基百科对其的解释，“<em>Markup language</em>” 是用标准的标记来解释纯文本文档的内容，从而提供关于文档结构或文档该如何渲染的信息。置标语言的发展可以用下图来表示：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-07-023423.png\" alt=\"image-20210907103423285\" contenteditable=\"false\"><br></p><p><br></p><p><em>GML</em> 是第一代置标语言，使文档能明确将标示和内容分开，所有文件使用同样的标示方法。</p><p><br></p><p><em>SGML</em> 在 <em>GML</em> 的基础上进行整理，形成了一套非常严谨的文件描述方法。它的组成包括语法定义，<em>DTD</em>，文件实例三部分。<em>SGML</em> 因太严谨规范达 <em>500</em> 多页，故而不易学、不易用、难以实现，所以在它的基础上又发展出了其他的更易用的置标语言。</p><p><br></p><p><em>HTML</em> 抛弃了<em>SGML</em> 复杂庞大的缺点，继承了 <em>SGML</em> 的很多优点。<em>HTML</em> 最大的特点是简单性和跨平台性。它只使用了 <em>SGML</em> 中很少的一部分标记，例如 <em>HTML 4.0</em> 中只定义了 <em>70</em> 余种标记。为了便于在计算机上实现，<em>HTML</em> 规定的标记是固定的，即 <em>HTML</em> 语法是不可扩展的。</p><p><br></p><p>随着 <em>Web</em> 应用的不断发展，<em>HTML</em> 的局限性也越来越明显地显现了出来，如 <em>HTML</em> 无法描述数据、可读性差、搜索时间长等。人们又把目光转向 <em>SGML</em>，再次改造 <em>SGML</em> 使之适应现在的网络需求。<em>1998</em> 年 <em>2</em> 月 <em>10</em> 日，<em>W3C</em>(<em>World Wide Web Consortium</em>，万维网联盟)公布 <em>XML 1.0</em> 标准，<em>XML</em> 诞生了。很长一段时间，<em>XML</em> 都作为网络传输的标准数据格式。</p><p><br></p><p><em>XHTML</em> 的出现是因为当时的 <em>HTML</em> 语法要求比较松散，这样对网页编写者来说，比较方便，但对于机器来说，语言的语法越松散，处理起来就越困难，对于传统的计算机来说，还有能力兼容松散语法，但对于许多其他设备，比如手机，难度就比较大。因此产生了由 <em>DTD</em> 定义规则，语法要求更加严格的 <em>XHTML</em>。</p><blockquote><p><em>DTD</em> 教程可以参阅：<em>https://www.w3school.com.cn/dtd/index.asp</em></p></blockquote><p>最终，<em>HTML5</em> 是 <em>HTML</em> 的第五个修订版，该版本不在基于 <em>SGML</em> 了，所以也就不用再引入 <em>DTD</em> 声明了。</p><p><br></p><p><em>HTML5</em> 的出现，其主要的目标是将互联网语义化，以便更好地被人类和机器阅读，并同时提供更好地支持各种媒体的嵌入。</p><p><br></p><p>现在国内通常所说的 <em>H5</em> 开发，实际上是 <em>HTML5</em> 与 <em>CSS3</em> 及 <em>ES6</em> 的一个组合，大概可以用以下公式说明：<em>HTML5 ≈ HTML + CSS3 + ES6</em></p><h2>渲染模式</h2><p>明白了文档类型声明的作用之后，接下来我们还需要看一个东西，那就是渲染模式。</p><p><br></p><p>浏览器渲染模式分为 <em>3</em> 种：</p><ul><li><p>怪癖模式（混杂模式）[<em>Quirks mode</em>]</p></li><li><p>严格模式（标准模式） [<em>Standars mode</em>]</p></li><li><p>几乎标准模式 [<em>Almost standards mode</em>]</p></li></ul><blockquote><p>之所以出现不同的渲染模式，是由于历史原因造成的。</p><p><br></p><p>当年 <em>Netscape4</em>（网景公司早期的浏览器）和 <em>IE4</em>（微软公司早期的浏览器）实现 <em>CSS</em> 机制时，没有遵循 <em>W3C</em> 提出的标准。<em>Netscape4</em> 提供了糟糕的支持，而 <em>IE4</em> 虽然接近标准，但依旧未能完全正确的支持标准。</p><p><br></p><p>所以，在 <em>W3C</em> 标准推出以前，浏览器在对页面的渲染上没有统一规范，产生了差异（<em>Quirks mode</em> 或者称为 <em>Compatibility Mode</em>）</p><p><br></p><p>为了保障自己的网站在各个浏览器上显示正确，网页开发者们不得不依据各个浏览器自身的规范来使用 <em>CSS</em>，因此大部分网站的 <em>CSS</em> 实现并不符合 <em>W3C</em> 规范的标准。</p><p><br></p><p><em>W3C</em> 标准推出后，浏览器渲染页面有了统一的标准（<em>Strict mode</em> 也有叫做 <em>Standars mode</em>）浏览器都开始采纳新标准，但存在一个问题就是如何保证旧的网页还能继续浏览，在标准出来以前，很多页面都是根据旧的渲染方法编写的，如果用的标准来渲染，将导致页面显示异常。</p><p><br></p><p>为保持浏览器渲染的兼容性，使以前的页面能够正常浏览，浏览器都保留了旧的渲染方法（如：微软的 <em>IE</em>）。这样浏览器渲染上就产生了 <em>Quircks mode</em> 和 <em>Standars mode</em>，两种渲染方法共存在一个浏览器上。混杂模式服务于旧式规则，而严格模式服务于标准规则。</p></blockquote><p>对于 <em>HTML</em> 文档来说，浏览器使用文档开头的 <em>DOCTYPE</em> 来决定用怪异模式处理或标准模式处理。</p><p><br></p><p>如果文档中没有 <em>DOCTYPE</em> 将触发文档的怪异模式。怪异模式最明显的影响是会触发怪异盒模型。</p><p><br></p><p>在 <em>DOCTYPE</em> 声明中，没有使用 <em>DTD</em> 声明或者使用 <em>HTML4</em> 以下的 <em>DTD</em> 声明时，基本所有的浏览器都是使用 <em>Quirks mode</em> 呈现，其他的则使用 <em>Standars mode</em> 解析。</p><p><br></p><p><strong>严格模式和怪异模式的部分渲染区别</strong></p><ol><li><p>盒模型的高宽包含内边距 <em>padding</em> 和边框 <em>border</em></p></li></ol><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-07-035904.png\" alt=\"img\" contenteditable=\"false\"><br></p><p><br></p><p>在 <em>W3C</em> 标准中，如果设置一个元素的宽度和高度，指的是元素内容的宽度和高度，而在 <em>IE5.5</em> 及以下的浏览器及其他版本的 <em>Quirks</em> 模式下，<em>IE</em> 的宽度和高度还包含了 <em>padding</em> 和 <em>border</em>。</p><ol start=\"2\"><li><p>可以设置行内元素的高宽</p></li></ol><p>在 <em>standards</em> 模式下，给 <em>span</em> 等行内元素设置 <em>wdith</em> 和 <em>height</em> 都不会生效，而在 <em>Quirks</em> 模式下，则会生效。</p><ol start=\"3\"><li><p>可设置百分比的高度</p></li></ol><p>在 <em>standards</em> 模式下，一个元素的高度是由其包含的内容来决定的，如果父元素没有设置高度，子元素设置一个百分比的高度是无效的。</p><ol start=\"4\"><li><p>用 <em>margin:0 auto</em> 设置水平居中在 <em>IE</em> 下会失效</p></li></ol><p>使用 <em>margin:0 auto</em> 在 <em>standards</em> 模式下可以使元素水平居中，但在 <em>Quirks</em> 模式下却会失效，<em>Quirks</em> 模式下的解决办法，用 <em>text-align</em> 属性：<em>body{text-align:center};#content{text-align:left}</em></p><ol start=\"5\"><li><p><em>Quirks</em> 模式下设置图片的 <em>padding</em> 会失效</p></li><li><p><em>Quirks</em> 模式下 <em>Table</em> 中的字体属性不能继承上层的设置</p></li><li><p><em>Quirks</em> 模式下 <em>white-space:pre</em> 会失效</p></li></ol><blockquote><p>更多可以参阅 <em>MDN</em> 上对怪异模式和标准模式的解释：<em>https://developer.mozilla.org/zh-CN/docs/Web/HTML/Quirks_Mode_and_Standards_Mode</em></p></blockquote><blockquote><p><em>MDN</em> 上还给出了不同模式在不同浏览器下的渲染区别（英文）：<em>https://hsivonen.fi/doctype/</em></p></blockquote><h2>真题解答</h2><ul><li><p>什么是<code data-backticks=\"1\">&lt;!DOCTYPE&gt;</code>？是否需要在 <em>HTML5</em> 中使用？</p></li></ul><blockquote><p>它是 <em>HTML</em> 的文档声明，通过它告诉浏览器，使用哪一个 <em>HTML</em> 版本标准解析文档。</p><p><br></p><p>在浏览器发展的历史中，<em>HTML</em> 出现过很多个版本，不同版本在元素、属性等书写格式上略有差异，如果不预先告诉浏览器，浏览器就不知道我们的文档标准是什么，在这种情况下，大部分浏览器将开启最大兼容模式来解析网页，我们称之为怪异模式。这不仅会降低解析效率，而且会在解析过程中产生一些难以预知的 <em>bug</em>，所以文档声明是必须的。</p><p><br></p><p>而文档声明有多种书写格式，对应不同的 <em>HTML</em> 版本，<code data-backticks=\"1\">&lt;!DOCTYPE&gt;</code>这种书写是告诉浏览器，整个文档使用 <em>HTML5</em> 的标准进行解析。</p></blockquote><ul><li><p>什么是严格模式与混杂模式？</p></li></ul><blockquote><p>严格模式：又称标准模式，是指浏览器按照 <em>W3C</em> 标准解析代码。</p><p><br></p><p>混杂模式：又称怪异模式或兼容模式，是指浏览器用自己的方式解析代码。</p><p><br></p><p>如何区分：浏览器解析时到底使用严格模式还是混杂模式，与网页中的 <em>DTD</em> 直接相关。</p><ol><li><p>如果文档包含严格的 <em>DOCTYPE</em> ，那么它一般以严格模式呈现。<strong>（严格 <em>DTD</em> ——严格模式）</strong></p></li><li><p>包含过渡 <em>DTD</em> 和 <em>URI</em> 的 <em>DOCTYPE</em> ，也以严格模式呈现，但有过渡 <em>DTD</em> 而没有 <em>URI</em> （统一资源标识符，就是声明最后的地址）会导致页面以混杂模式呈现。<strong>（有 <em>URI</em> 的过渡 <em>DTD</em> ——严格模式；没有 <em>URI</em> 的过渡 <em>DTD</em> ——混杂模式）</strong></p></li><li><p><em>DOCTYPE</em> 不存在或形式不正确会导致文档以混杂模式呈现。<strong>（<em>DTD</em> 不存在或者格式不正确——混杂模式）</strong></p></li><li><p><em>HTML5</em> 没有 <em>DTD</em> ，因此也就没有严格模式与混杂模式的区别，<em>HTML5</em> 有相对宽松的语法，实现时，已经尽可能大的实现了向后兼容。<strong>（ <em>HTML5</em> 没有严格和混杂之分）</strong></p></li></ol><p>意义：严格模式与混杂模式存在的意义与其来源密切相关，如果说只存在严格模式，那么许多旧网站必然受到影响，如果只存在混杂模式，那么会回到当时浏览器大战时的混乱，每个浏览器都有自己的解析模式。</p></blockquote><ul><li><p>列举几条怪异模式中的怪癖行为</p></li></ul><blockquote><ol><li><p>宽高的算法与 <em>W3C</em> 盒模型不同</p></li><li><p>在表格中的字体样式不会继承</p></li><li><p>怪异模式下可以设置行内元素宽高</p></li><li><p>怪异模式下 <em>white-space:pre</em> 会失效</p></li></ol></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666074153364",
+    typeId: ObjectId("634d7f707797638ec96fe2e9")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e47a62fac4881713db273"),
+    interviewTitle: "请谈一谈HTML中的语义化",
+    interviewContent: "<h1>语义化</h1><h2>经典真题</h2><ul><li><p>说说对 <em>html</em> 语义化的理解</p></li></ul><h2>什么是语义元素？</h2><p>语义是指对一个词或者句子含义的正确解释。很多 <em>HTML</em> 标签也具有语义的意义，也就是说元素本身传达了关于标签所包含内容类型的一些信息。例如，当浏览器解析到<code data-backticks=\"1\">&lt;h1&gt;&lt;/h1&gt;</code>标签时，它将该标签解释为包含这一块内容的最重要的标题。<em>h1</em> 标签的语义就是用它来标识特定网页或部分最重要的标题。</p><h2>为什么要语义化？</h2><ul><li><p>代码结构：使页面没有css的情况下，也能够呈现出很好的内容结构</p></li><li><p>有利于 <em>SEO</em>： 爬虫依赖标签来确定关键字的权重，因此可以和搜索引擎建立良好的沟通，帮助爬虫抓取更多的有效信息</p></li><li><p>提升用户体验：例如 <em>title、alt</em> 可以用于解释名称或者解释图片信息，以及 <em>label</em> 标签的灵活运用。</p></li><li><p>便于团队开发和维护：语义化使得代码更具有可读性，让其他开发人员更加理解你的 <em>html</em> 结构，减少差异化。</p></li><li><p>方便其他设备解析：如屏幕阅读器、盲人阅读器、移动设备等，以有意义的方式来渲染网页。</p></li></ul><h2><em>HTML5</em> 常用的语义元素</h2><p><em>HTML5</em> 提供了新的语义元素来定义网页的不同部分，它们被称为“切片元素”，如图所示 ：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-07-062515.png\" alt=\"image-20210907142515375\" contenteditable=\"false\"><br></p><ul><li><p><em>header</em>：用于定义页面的头部区域，通常包括网站 <em>logo</em>、主导航、全站链接以及搜索框。</p></li><li><p><em>nav</em>：定义页面的导航链接部分区域。</p></li><li><p><em>main</em>：定义文档的主要内容，该内容在文档中应当是独一无二的</p></li><li><p><em>article</em>：定义页面独立的内容，它可以有自己的 <em>header、footer、sections</em> 等，专注于单个主题的博客文章，报纸文章或网页文章。</p></li><li><p><em>section</em>：表示文档中的一个区域（或节），比如，内容中的一个专题组。</p></li><li><p><em>aside</em>：表示一个和其余页面内容几乎无关的部分，被认为是独立于该内容的一部分且可以被单独的拆分出来而不会影响整体。通常表现为侧边栏或嵌入内容。</p></li><li><p><em>footer</em>：定义最近一个章节内容或者根节点元素的页脚。一个页脚通常包含该章节作者、版权数据或者与文档相关的链接等信息。</p></li></ul><p>大约有 <em>100</em> 多个 <em>HTML</em> 语义元素可供选择，以下是常用的语义元素：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-07-062552.png\" alt=\"image-20210907142551909\" contenteditable=\"false\"><br></p><blockquote><p>更多的语义化标签可以参阅：<em>https://developer.mozilla.org/en-US/docs/Web/HTML/Element</em></p></blockquote><h2>无障碍网页</h2><p><em>W3C</em> 在 <em>1997</em> 年发起了一项 <em>WAI</em>（<em>Web Accessibility Initiative</em>）的计划，该计划的目标是提升网站的易用性(<em>accessibility</em>)，而其中有一个很重要的指标，那就是能够被残障人士使用的网站才能称得上一个易用的（易访问的）网站。</p><p><br></p><p><em>HTML5</em> 在无障碍方面进行了加强，加入了无障碍属性。</p><p><br></p><p>所谓 <em>HTML5</em> 无障碍属性，主要针对的是视觉缺陷，失聪，行动不便的残疾人以及假装残疾的测试人员。尤其像盲人，眼睛看不到，其浏览网页则需要借助辅助设备，如屏幕阅读器，屏幕阅读机可以大声朗读或者输出盲文。</p><p><br></p><p>而 <em>HTML5</em> 无障碍属性就是可以让屏幕阅读器准确识别网页中的内容，变化，状态的技术规范，可以让盲人这类用户也能无障碍阅读！</p><blockquote><p>关于无障碍的更多说明，可以参阅 <em>MDN</em>：<em>https://developer.mozilla.org/zh-CN/docs/Web/Accessibility</em></p></blockquote><p><strong>常见的无障碍属性</strong></p><p><br></p><p><em>WAI-ARIA</em> 是 <em>W3C</em> 编写的规范，定义了一组可用于其他元素的 <em>HTML</em> 特性，用于提供额外的语义化以及改善缺乏的可访问性。以下是规范中三个主要的特性：</p><ul><li><p>角色：这定义了元素是干什么的。许多「标志性的角色」，其实重复了 <em>HTML5</em> 的结构元素的语义价值。例如 <em>role=\"navigation\"</em> (<em>nav</em>) 或者 <em>role=\"complementary\"</em> (<em>aside</em>)。</p></li><li><p>属性：我们能通过定义一些属性给元素，让他们具备更多的语义。例如：<em>aria-required=\"true\"</em> 意味着元素在表单上是必填的。然而 <em>aria-labelledby=\"label\"</em> 允许在元素上设置一个 <em>ID</em>，用于 <em>labelledby</em> 引用作为屏幕阅读器指定的 <em>label</em> 内容 ，多个也可以。</p></li><li><p>状态：用于表达元素当前的条件的特殊属性，例如 <em>aria-disabled=\"true\"</em>，屏幕阅读器就会这个表单禁止输入。状态和属性的差异之处就是：属性在应用的生命周期中不会改变，而状态可以，通常我们用编程的方法改变它，例如 <em>Javascript</em>。</p></li></ul><p>关于 <em>WAI-ARIA</em> 属性重要的一点是它不会对 <em>Web</em> 页面有任何影响，除了让更多的信息从浏览器暴露给 <em>accessibility APIs</em> (无障碍 <em>API</em>)，这也是屏幕阅读器这一类软件的信息源。<em>WAI-ARIA</em> 不会影响网页的结构，以及 <em>DOM</em> 等等，尽管这些属性可用于作为 <em>CSS</em> 选择器。</p><blockquote><p>更多无障碍属性可以参阅：<em>https://developer.mozilla.org/zh-CN/docs/Learn/Accessibility/WAI-ARIA_basics</em></p></blockquote><h2>真题解答</h2><ul><li><p>说说对 <em>html</em> 语义化的理解</p></li></ul><blockquote><p>语义化的目的主要有以下几点：</p><ol><li><p>去掉或者丢失样式的时候能够让页面呈现出清晰的结构</p></li><li><p>有利于 <em>SEO</em>：和搜索引擎建立良好沟通，有助于爬虫抓取更多的有效信息：爬虫依赖于标签来确定上下文和各个关键字的权重</p></li><li><p>方便其他设备解析（如屏幕阅读器、盲人阅读器、移动设备）以意义的方式来渲染网页</p></li><li><p>便于团队开发和维护，语义化更具可读性，是下一步吧网页的重要动向，遵循 <em>W3C</em> 标准的团队都遵循这个标准，可以减少差异化。<em>HTML5</em> 中新增加的很多标签，例如：<em>article、nav、header</em> 和 <em>footer</em> 等，就是基于语义化设计原则</p></li></ol></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666074534205",
+    typeId: ObjectId("634d7f707797638ec96fe2e9")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e48032fac4881713db281"),
+    interviewTitle: "是否了解W3C组织",
+    interviewContent: "<h1><em>W3C</em> 标准组织</h1><h2>经典真题</h2><ul><li><p>对于 <em>WEB</em> 标准以及 <em>W3C</em> 的理解与认识问题</p></li></ul><h2>什么是 <em>W3C</em></h2><ul><li><p>W3C 指万维网联盟（<em>World Wide Web Consortium</em>）</p></li><li><p>W3C 创建于<em>1994年10月</em></p></li><li><p>W3C 由 <em>Tim Berners-Lee</em> 创建</p></li><li><p>W3C 是一个<em>会员组织</em></p></li><li><p>W3C 的工作是<em>对 web 进行标准化</em></p></li><li><p>W3C 创建并维护 <em>WWW 标准</em></p></li><li><p>W3C 标准被称为 <em>W3C 推荐（W3C 规范）</em></p></li></ul><h2><em>W3C</em> 是如何创建的？</h2><p>万维网（<em>World Wide Web</em>）是作为欧洲核子研究组织的一个项目发展起来的，在那里 <em>Tim Berners-Lee</em> 开发出万维网的雏形。<em>Tim Berners-Lee</em> 是万维网的发明人，目前是万维网联盟的主任。</p><p><br></p><p><em>W3C</em> 在 <em>1994</em> 年被创建，其创立目的是为了完成麻省理工学院（<em>MIT</em>）与欧洲粒子物理研究所（<em>CERN</em>）之间的协同工作，并得到了美国国防部高级研究计划局（<em>DARPA</em>）和欧洲委员会（<em>European Commission</em>）的支持。</p><h2>标准化 <em>Web</em></h2><p><em>W3C</em> 致力于实现所有的用户都能够对 <em>Web</em> 加以利用（不论其文化教育背景、能力、财力以及其身体残疾）。</p><p><br></p><p><em>W3C</em> 同时与其他标准化组织协同工作，比如 <em>Internet</em> 工程工作小组（<em>Internet Engineering Task Force</em>）、无线应用协议（<em>WAP</em>）以及 <em>Unicode</em> 联盟（<em>Unicode Consortium</em>）。</p><p><br></p><p><em>W3C</em> 由美国麻省理工学院计算机科学和人工智能实验室 (<em>MIT CSAIL</em>)，总部位于法国的欧洲信息数学研究联盟(<em>ERCIM</em>) 和日本的庆应大学（<em>Keio University</em>）联合运作，并且在世界范围内拥有分支办事处。</p><h2><em>W3C</em> 成员</h2><p>正因为 <em>Web</em> 是如此的重要（不论在其影响范围还是在投资方面），以至于不应由任何一家单独的组织来对它的未来进行控制，因此 <em>W3C</em> 扮演着一个会员组织的角色：</p><p><br></p><p>一些知名的会员包括：</p><ul><li><p><em>IBM</em></p></li><li><p><em>Microsoft</em></p></li><li><p><em>America Online</em></p></li><li><p><em>Apple</em></p></li><li><p><em>Adobe</em></p></li><li><p><em>Macromedia</em></p></li><li><p><em>Sun Microsystems</em></p></li></ul><p><em>W3C</em> 的会员包括了：软件开发商、内容提供商、企业用户、通信公司、研究机构、研究实验室、标准化团体以及政府。</p><h2><em>W3C</em> 规范的批准步骤</h2><p>在 <em>W3C</em> 发布某个新标准的过程中，规范是通过下面的严格程序由一个简单的理念逐步确立为推荐标准的：</p><ul><li><p><em>W3C</em> 收到一份提交</p></li><li><p>由 <em>W3C</em> 发布一份记录</p></li><li><p>由 <em>W3C</em> 创建一个工作组</p></li><li><p>由 <em>W3C</em> 发布一份工作草案</p></li><li><p>由 <em>W3C</em> 发布一份候选的推荐</p></li><li><p>由 <em>W3C</em> 发布一份被提议的推荐</p></li><li><p>由 <em>W3C</em> 发布推荐</p></li></ul><blockquote><p>具体步骤可以参阅：<em>https://www.runoob.com/w3c/w3c-process.html</em></p></blockquote><h2>真题解答</h2><ul><li><p>对于 <em>WEB</em> 标准以及 <em>W3C</em> 的理解与认识问题</p></li></ul><blockquote><p>任何东西都需要一个标准，有了标准才能够更好的进行交流和推广。不同的标准，得出的便是不同的结果。因此，制定什么样的标准，如何确立标准，至关重要。</p><p><br></p><p>正因为有了网页的标准，才能降低开发难度及开发成本，减少各种 <em>BUG</em>、安全问题， 提高网站易用性。</p><p><br></p><p>就好比 <em>HTML</em> 在 <em>W3C</em> 组织推出标准之前，不同的浏览器厂商有一套自己的标准，这对于开发人员来讲是痛苦的，所以才会遗留下浏览器的标准模式和怪异模式这个历史问题。</p><p><br></p><p><em>W3C</em> 就是一个推出标准的组织，被称之为万维网联盟，<em>W3C</em> 最重要的工作是发展 <em>Web</em> 规范。</p></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666074627332",
+    typeId: ObjectId("634d7f707797638ec96fe2e9")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e48302fac4881713db288"),
+    interviewTitle: "请描述下 SEO 中的 TDK？",
+    interviewContent: "<h1><em>SEO</em></h1><h2>经典真题</h2><ul><li><p>请描述下 <em>SEO</em> 中的 <em>TDK</em>？</p></li></ul><h2>什么是 <em>SEO</em>？</h2><p><em>SEO</em> 由英文 <em>Search Engine Optimization</em> 缩写而来，中文意译为“搜索引擎优化”。</p><p><br></p><p>其实叫做针对搜索引擎优化更容易理解。它是指从自然搜索结果获得网站流量的技术和过程，是在了解搜索引擎自然排名机制的基础上，对网站进行内部及外部的调整优化，改进网站在搜索引擎中的关键词自然排名，获得更多流量，从而达成网站销售及品牌建设的目标。</p><h2>如何进行 <em>SEO</em> 优化工作？</h2><p>有的同学第一反应：给钱。</p><p><br></p><p>虽然，国内的百度搜索引擎，确实存在给钱就把你排在前面的情况，但是在不给钱的情况下，我们也能够通过一些优化手段来提升页面的权重，从而使我们的页面获取更多流量。</p><p><br></p><p>下面就介绍一些常见的 <em>SEO</em> 优化手段。</p><p><br></p><p>整个 <em>SEO</em> 工作大致可以分为<strong>内部优化</strong>和<strong>外部优化</strong>。</p><h3>内部优化</h3><h4>1. 合理的 <em>title、description、keywords</em></h4><p>这个就是上面经典面试题中出现的 <em>TDK</em>，其实就是这 <em>3</em> 个单词的缩写。</p><ul><li><p><em>title</em>：浏览器上显示的那些内容，不仅用户能看到，也能被搜索引擎检索到，搜索引擎在抓取网页时，最先读取的就是网页标题，所以 <em>title</em> 是否正确设置极其重要。<em>title</em> 一般不超过 <em>80</em> 个字符，而且词语间要用英文 “-” 隔开，因为计算机只对英语的敏感性较高，对汉语的敏感性不高。</p></li><li><p><em>description</em>：也就是网页的内容摘要，这是对于一个网页的简要内容概况。<em>description</em> 一般不超过 <em>150</em> 个字符，描述内容要和页面内容相关。</p></li><li><p><em>keywords</em>：主要作用是告诉搜索引擎本页内容是围绕哪些词展开的。因此 <em>keywords</em> 的每个词都要能在内容中找到相应匹配，才有利于排名。<em>keywords</em> 一般不超过 <em>3</em> 个，每个关键词不宜过长，而且词语间要用英文 “,” 隔开，尽量将重要的关键字靠前放。</p></li></ul><h4>2. 语义化的 <em>HTML</em> 代码，符合 <em>W3C</em> 规范</h4><p>语义化代码能够让搜索引擎容易理解网页，即使脱去了 <em>CSS</em> 这一层外衣，整个网页的结构也是清清楚楚的，无论是搜索引擎还是阅读者，都能够很容易的分辨网页的结构。</p><p><br></p><p>关于语义化的具体内容，可以参阅《语义化》章节。</p><h4>3. 非装饰性图片必须加 <em>alt</em></h4><p><em>img</em> 标签的 <em>alt</em> 属性指定了替代文本，用于在图像无法显示或者用户禁用图像显示时，代替图像显示在浏览器中的内容。</p><p><br></p><p>例如：<code data-backticks=\"1\">&lt;img src=\"/xxx.jpg\" alt=\"海尔官网-双门冰箱\" /&gt;</code></p><p><br></p><p><em>alt</em> 标签的作用：</p><ul><li><p>增强内容相关性：它是可以利用汉字介绍文章内容的，对于一些特定的企业产品，由于视觉的体验，它往往是少文字的。</p></li><li><p>提高关键词密度：在操作企业站的时候，我们经常遇到是站点首屏一个大的横幅 <em>banner</em>，几乎占用了首页的大部分页面，为了有效的提高首页核心关键词密度，我们只能利用一切办法增添关键词，比如：在图片的 <em>alt</em> 标签中添加。</p></li></ul><h4>4. 对于不显示的对象谨慎使用 <em>display:none</em></h4><p>对于不想显示的文字内容，应当设置 <em>z-index</em> 或设置到浏览器显示器之外。因为搜索引擎会过滤掉 <em>display:none</em> 其中的内容。</p><h4>5. 重要内容 <em>HTML</em> 代码放在最前</h4><p>索引擎抓取 <em>HTML</em> 顺序是从上到下，所以我们尽量将重要的内容放在前面，保证重要内容一定会被抓取。</p><h4>6. 少用 <em>iframe</em></h4><p>少用或者尽量不用 <em>iframe</em>，因为搜索引擎不会抓取 <em>iframe</em> 中的内容</p><p><br></p><p>优化的细节还有很多，更多细节可以参阅这篇博文：<em>https://blog.csdn.net/yanyihan16/article/details/89209436?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1.control</em></p><h3>外部优化</h3><p>外部优化主要是指放友情链接和外链。好的友情链接可以快速的提高网站的权重，高质量的外链，会给你的网站提高源源不断的权重提升。另外，就是要向各大搜索引擎登陆入口提交尚未收录站点。</p><h2>真题解答</h2><ul><li><p>请描述下 <em>SEO</em> 中的 <em>TDK</em>？</p></li></ul><blockquote><p>在 <em>SEO</em> 中，所谓的 <em>TDK</em> 其实就是 <em>title、description、keywords</em>。</p><ul><li><p><em>title</em>：浏览器上显示的那些内容，不仅用户能看到，也能被搜索引擎检索到，搜索引擎在抓取网页时，最先读取的就是网页标题，所以 <em>title</em> 是否正确设置极其重要。<em>title</em> 一般不超过 <em>80</em> 个字符，而且词语间要用英文 “-” 隔开，因为计算机只对英语的敏感性较高，对汉语的敏感性不高。</p></li><li><p><em>description</em>：也就是网页的内容摘要，这是对于一个网页的简要内容概况。<em>description</em> 一般不超过 <em>150</em> 个字符，描述内容要和页面内容相关。</p></li><li><p><em>keywords</em>：主要作用是告诉搜索引擎本页内容是围绕哪些词展开的。因此 <em>keywords</em> 的每个词都要能在内容中找到相应匹配，才有利于排名。<em>keywords</em> 一般不超过 <em>3</em> 个，每个关键词不宜过长，而且词语间要用英文 “,” 隔开，尽量将重要的关键字靠前放。</p></li></ul></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666074672834",
+    typeId: ObjectId("634d7f707797638ec96fe2e9")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e48622fac4881713db290"),
+    interviewTitle: "知道什么是微格式吗？",
+    interviewContent: "<h1>微格式</h1><h2>经典真题</h2><ul><li><p>知道什么是微格式吗？谈谈理解。在前端构建中应该考虑微格式吗？</p></li></ul><h2>微格式介绍</h2><p>所谓微格式，是建立在已有的、被广泛采用的标准基础之上的一组简单的、开放的数据格式。</p><p><br></p><p>具体表现是把语义嵌入到 <em>HTML</em> 中，以便有助于分离式开发，并通过制定一些简单的约定，来兼顾 <em>HTML</em> 文档的人机可读性，相当于对 <em>Web</em> 网页进行了语义注解。</p><p><br></p><p><em>talk is cheap，show me code</em></p><p><br></p><p>以前我们是这样写一个链接到首页的代码的：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;a href=”http://www.bbon.cn”&gt;Web Design Blog&lt;/a&gt;</code></pre></div><p>而现在我们要为这个代码元素 <em>a</em> 加上 <em>rel</em> 属性：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;a href=”http://www.bbon.cn“ rel=”homepage”&gt;Web Design Blog&lt;/a&gt;</code></pre></div><p>通过上面的代码，我们可以发现，多了一个 <em>rel</em> 属性。这个 <em>rel=”home”</em> 属性显示链接的目标页面是该网站的首页。</p><p><br></p><p>通过为已有的链接元素添加语义化属性，就为这个链接添加了具体的结构和意义。</p><p><br></p><p>就这？</p><p><br></p><p><em>No、No、No</em>，我们再去微格式的官网瞅一瞅：<em>https://microformats.org/</em></p><p><br></p><p>官网对微格式是这么介绍的：</p><blockquote><p><em>Microformats are based on simple markup conventions that enable you to add meaningful structure to your web content.</em></p><p><br></p><p>微格式基于简单的标记约定，使您能够向web内容添加有意义的结构。</p><p><br></p><p><em>One of the key principles of microformats, is to privilege human readable content. This means that you should think first and foremost of your content design being readable and accessible to web viewers.</em></p><p><br></p><p>微格式的一个关键原则是赋予人类可读内容特权。这意味着您应该首先考虑内容设计的可读性和可访问性。</p><p><br></p><p><em>Using the most appropriate HTML elements and applying structured class names to your markup enables you to produce content that can be clearly understood by a human audience and also used in a structured way by automated programs and other online tools.</em></p><p><br></p><p>通过使用最合适的HTML元素并将结构化类名应用到标记中，您可以生成人类观众可以清楚理解的内容，并通过自动化程序和其他在线工具以结构化方式使用这些内容。</p><p><br></p><p><em>But the point is that you shouldn't have to go out of your way to produce such machine friendly markup - microformats make it easy to integrate this greater degree of structure into your websites, without the overhead of having to learn complicated new languages or formats.</em></p><p><br></p><p>但关键是，你不应该不遗余力地制作这样的机器友好型标记——微格式可以轻松地将这种更高程度的结构集成到你的网站中，而无需学习复杂的新语言或格式。</p></blockquote><p>正如前面所介绍的，微格式就是为了兼顾 <em>HTML</em> 文档的人机可读性，在标签中添加的语义注解。</p><p><br></p><p>那好，那么我们以后书写所有的 <em>HTML</em> 代码，都要这样书写注解么？</p><p><br></p><p>并不是，否则人都傻了。微格式一般用于标记人员、组织、事件、地点、博客帖子、产品、评论、简历、食谱等的 <em>HTML</em>。</p><p><br></p><p>例如：</p><blockquote><p><em>Mark-up your contact info with h-card, link to other profiles with rel=\"me\"</em></p><p><br></p><p>使用 <em>h-card</em> 标记您的联系信息，使用 <em>rel=“me”</em> 链接到其他个人资料</p><p><br></p><p><em>Mark-up your blog with h-entry.</em></p><p><br></p><p>用 <em>h-entry</em> 标记你的博客。</p></blockquote><p>这里我们以  <em>h-card</em> 为例。</p><p><br></p><p><em>h-card</em> 是一种微格式，用来发布个人，公司，组织，地点等详细的联系信息。 它可以使分析器（比如其他网站，<em>Firefox</em> 的 <em>Operator</em> 插件）获得详细的信息，并通过别的网站或者地图工具进行显示，或者载入到地址簿等其他程序。</p><p><br></p><p>例如，没有加入 <em>h-card</em> 微格式时，我们的 <em>HTML</em> 结构如下：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div&gt;\n  &lt;div&gt;Joe Doe&lt;/div&gt;\n  &lt;div&gt;The Example Company&lt;/div&gt;\n  &lt;div&gt;604-555-1234&lt;/div&gt;\n  &lt;a href=\"http://example.com/\"&gt;http://example.com/&lt;/a&gt;\n&lt;/div&gt;</code></pre></div><p>加入微格式后，成为：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"vcard\"&gt;\n  &lt;div class=\"fn\"&gt;Joe Doe&lt;/div&gt;\n  &lt;div class=\"org\"&gt;The Example Company&lt;/div&gt;\n  &lt;div class=\"tel\"&gt;604-555-1234&lt;/div&gt;\n  &lt;a class=\"url\" href=\"http://example.com/\"&gt;http://example.com/&lt;/a&gt;\n&lt;/div&gt;</code></pre></div><p>这里，正式名称（<em>class=”fn”</em>），组织（<em>class=”org”</em>），电话号码（<em>class=”tel”</em>）和 <em>url</em>（<em>class=”url”</em>）分别用相应的 <em>class</em> 标示。</p><p><br></p><p>同时，所有内容都包含在 <em>class=\"vcard\"</em> 里。</p><p><br></p><p>再例如，我们用一个维基媒体基金会的联系方式，来作为 <em>h-card</em> 微格式实例。</p><p><br></p><p>加入  <em>h-card</em> 微格式之前的信息内容如下：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">Wikimedia Foundation Inc.\n200 2nd Ave. South #358\nSt. Petersburg, FL 33701-4313\nUSA\nPhone: +1-727-231-0101\nEmail: info@wikimedia.org\nFax: +1-727-258-0207</code></pre></div><p>加入微格式后，成为：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"vcard\"&gt;\n  &lt;div class=\"fn org\"&gt;Wikimedia Foundation Inc.&lt;/div&gt;\n  &lt;div class=\"adr\"&gt;\n  \t&lt;div class=\"street-address\"&gt;200 2nd Ave. South #358&lt;/div&gt;\n    &lt;div&gt;\n      &lt;span class=\"locality\"&gt;St. Petersburg&lt;/span&gt;,\n      &lt;span class=\"region\"&gt;FL&lt;/span&gt; &lt;span class=\"postal-code\"&gt;33701-4313&lt;/span&gt;\n    &lt;/div&gt;\n  \t&lt;div class=\"country-name\"&gt;USA&lt;/div&gt;\n  &lt;/div&gt;\n  &lt;div&gt;Phone: &lt;span class=\"tel\"&gt;+1-727-231-0101&lt;/span&gt;&lt;/div&gt;\n  &lt;div&gt;Email: &lt;span class=\"email\"&gt;info@wikimedia.org&lt;/span&gt;&lt;/div&gt;\n  &lt;div&gt;\n    &lt;span class=\"tel\"&gt;&lt;span class=\"type\"&gt;Fax&lt;/span&gt;:\n    &lt;span class=\"value\"&gt;+1-727-258-0207&lt;/span&gt;&lt;/span&gt;\n  &lt;/div&gt;\n&lt;/div&gt;</code></pre></div><p>在这个例子中，正式名称（<em>class=”fn”</em>）和组织（<em>class=”org”</em>）写在了一个属性中，表示这是一个组织，而不是个人。</p><p><br></p><p>这个时候，有的小伙伴就要提问了，这些 <em>h-card</em> 里面的属性名是固定的么？</p><p><br></p><p>没错，常用的  <em>h-card</em>  属性还包括：<em>bday</em>（生日）、<em>email</em>（邮箱）、<em>tel</em>（电话）、<em>nickname</em>（昵称）等。</p><p><br></p><p>目前已具备完整规范的微格式还包括：<em>hCard、hCalendar、XOXO、XFN、VoteLinks</em> 和 <em>3</em> 个 “rel-” 的微格式：<em>rel- license、rel-nofollow</em> 和 <em>rel-tag</em>。</p><p><br></p><p>至于每一种微格式的规范（里面有哪些属性）是什么，我们可以在官网进行查阅。</p><p><br></p><p>例如：  <em>h-card</em>  的规范就可以参阅：<em>https://microformats.org/wiki/h-card</em></p><h2>真题解答</h2><ul><li><p>知道什么是微格式吗？谈谈理解。在前端构建中应该考虑微格式吗？</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p>所谓微格式，是建立在已有的、被广泛采用的标准基础之上的一组简单的、开放的数据格式。</p><p><br></p><p>具体表现是把语义嵌入到 <em>HTML</em> 中，以便有助于分离式开发，并通过制定一些简单的约定，来兼顾 <em>HTML</em> 文档的人机可读性，相当于对 <em>Web</em> 网页进行了语义注解。</p><p><br></p><p>采用微格式的 <em>Web</em> 页面，在 <em>HTML</em> 文档中给一些标签增加一些属性，这些属性对信息的语义结构进行注解，有助于处理 <em>HTML</em> 文档的软件，更好的理解该 <em>HTML</em> 文档。</p><p><br></p><p><strong>在前端构建中微格式的意义</strong></p><p><br></p><p>微格式按照某种已有的被广泛应用的标准，通过对内容块的语义标记，可以让外部应用程序、聚合程序和搜索引擎能够做以下事情：</p><ol><li><p>在爬取 <em>Web</em> 内容时，能够更为准确地识别内容块的语义；</p></li><li><p>对内容进行操作，包括提供访问、校对，还可以将其转化成其他的相关格式，提供给外部程序和Web服务使用。</p></li></ol><p>总结： 微格式可以对网站进行 <em>SEO</em> 优化，如果需要可以考虑。</p></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666074722699",
+    typeId: ObjectId("634d7f707797638ec96fe2e9")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e48952fac4881713db294"),
+    interviewTitle: "什么是可替换元素，什么是非可替换元素，它们各自有什么特点？",
+    interviewContent: "<h1>替换元素</h1><h2>经典真题</h2><ul><li><p>什么是可替换元素，什么是非可替换元素，它们各自有什么特点？</p></li></ul><h2>什么是替换元素</h2><p>所谓可替换元素（<em>replaced element</em>），是指一些展现效果不由 <em>CSS</em> 来控制的元素。这些元素是一种外部对象，它们外观的渲染，是独立于 <em>CSS</em> 的。</p><p><br></p><p>简单来说，它们的内容不受当前文档的样式的影响。<em>CSS</em> 可以影响可替换元素的位置，但不会影响到可替换元素自身的内容。某些可替换元素，例如 <code data-backticks=\"1\">&lt;iframe&gt;</code> 元素，可能具有自己的样式表，但它们不会继承父文档的样式。</p><p><br></p><p>与替换元素相对应的，就是非替换元素，顾名思义就是那些样式完全由 <em>CSS</em> 来控制的元素，例如 <em>p，h1～h6</em> 等。</p><blockquote><p>更多可替换元素内容可以参阅 <em>MDN</em>：<em>https://developer.mozilla.org/zh-CN/docs/Web/CSS/Replaced_element</em></p></blockquote><h2>常见的替换元素</h2><ul><li><p>图片标签 <em>img</em></p></li><li><p>内联框架 <em>iframe</em></p></li><li><p>音频视频标签</p></li></ul><h2>真题解答</h2><ul><li><p>什么是可替换元素，什么是非可替换元素，它们各自有什么特点？</p></li></ul><blockquote><p>可替换元素是指这样一种元素，它在页面中的大部分展现效果不由 <em>CSS</em> 决定。</p><p><br></p><p>比如 <em>img</em> 元素就是一个可替换元素，它在页面中显示出的效果主要取决于你连接的是什么图片，图片是什么它就展示什么，<em>CSS</em> 虽然可以控制图片的尺寸位置，但永远无法控制图片本身。</p><p><br></p><p>再比如，<em>select</em> 元素也是一个典型的可替换元素，它在页面上呈现的是用户操作系统上的下拉列表样式，因此，它的展现效果是由操作系统决定的。所以，同一个 <em>select</em> 元素，放到不同操作系统的电脑上会呈现不同的外观。</p><p><br></p><p><em>img、video、audio</em>、大部分表单元素都属于可替换元素。</p><p><br></p><p>非可替换元素就是指的普通元素，它具体在页面上呈现什么，完全由 <em>CSS</em> 来决定。</p></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666074773186",
+    typeId: ObjectId("634d7f707797638ec96fe2e9")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e48b72fac4881713db298"),
+    interviewTitle: "页面可见性 API 可以有哪些用途？",
+    interviewContent: "<h1>页面可见性</h1><h2>经典真题</h2><ul><li><p>页面可见性（<em>Page Visibility</em>）<em>API</em> 可以有哪些用途？</p></li></ul><h2>页面可见性介绍</h2><p>长期以来我们一直缺少一个判断用户是否正在浏览某个指定标签页的方法。</p><p><br></p><p>用户是否去看别的网站了？他们切换回来了么？</p><p><br></p><p>现在，<em>HTML5</em> 里页面可见性接口就提供给了程序员一个方法，让他们使用 <em>visibilitychange</em> 页面事件来判断当前页面可见性的状态，并针对性的执行某些任务。同时还有新的 <em>document.hidden</em> 属性可以使用。</p><p><br></p><p>常用的 <em>API</em> 如下：</p><ul><li><p><strong><em>document.hidden</em></strong>：这个新出现的 <em>document.hidden</em> 属性，它显示页面是否为用户当前观看的页面，值为 <em>ture</em> 或 <em>false</em>。</p></li><li><p><strong><em>document.visibilityState</em></strong>：<em>visibilityState</em> 的值要么是 <em>visible</em> ，表明页面为浏览器当前激活 <em>tab</em>，而且窗口不是最小化状态；要么是 <em>hidden</em> ，表示页面不是当前激活 <em>tab</em> 页面，或者窗口最小化了；或者 <em>prerender</em> ，表示页面在重新生成，对用户不可见。</p></li><li><p><strong><em>visibilitychange</em></strong> 事件：监听页面可见性变化事件</p></li></ul><p>下面是一个页面可见性的具体示例：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;body&gt;\n    &lt;p&gt;页面可见性示例&lt;/p&gt;\n    &lt;script&gt;\n        document.addEventListener(\"visibilitychange\", function () {\n            if(document.visibilityState === \"hidden\"){\n                document.title = \"小样去哪儿了？快回来\"\n            }\n            if(document.visibilityState === \"visible\"){\n                document.title = \"页面可见性示例\"\n            }\n        });\n    &lt;/script&gt;\n&lt;/body&gt;</code></pre></div><blockquote><p>更多有关页面可见性的内容可以参阅 <em>MDN</em>：<em>https://developer.mozilla.org/zh-CN/docs/Web/API/Page_Visibility_API</em></p></blockquote><h2>真题解答</h2><ul><li><p>页面可见性（<em>Page Visibility</em>）<em>API</em> 可以有哪些用途？</p></li></ul><blockquote><p>所谓页面可见性，就是获取当前页面的可见状态。因为对于用户来讲可以打开好多标签页面来回切换，然而始终只有一个页面处于显示状态。所以我们可以通过页面可见性（<em>Page Visibility</em>）<em>API</em> 来判断当前页面是显示状态还是隐藏状态。</p><p><br></p><p>常用的 <em>API</em> 有三个，<em>document.hidden</em> 返回一个布尔值，如果是 <em>true</em>，表示当前页面隐藏，<em>false</em> 则表示页面可见。不同页面之间来回切换，会触发 <em>visibilitychange</em> 事件，还有一个 <em>document.visibilityState</em>，表示页面所处的状态。</p><p><br></p><p>常见的用途：</p><ul><li><p>网站有图片轮播效果，只有在用户观看轮播的时候，才会自动展示下一张幻灯片。</p></li><li><p>显示信息仪表盘的应用程序不希望在页面不可见时轮询服务器进行更新。</p></li><li><p>页面想要检测是否正在渲染，以便可以准确的计算网页浏览量</p></li><li><p>当设备进入待机模式时，网站想要关闭设备声音（用户按下电源键关闭屏幕）</p></li></ul></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666074807077",
+    typeId: ObjectId("634d7f707797638ec96fe2e9")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e49a12fac4881713db29f"),
+    interviewTitle: "请简述 px 和 em 的区别 ？",
+    interviewContent: "<h1><em>CSS</em> 单位总结</h1><h2>经典真题</h2><ul><li><p><em>px</em> 和 <em>em</em> 的区别</p></li></ul><h2><em>CSS</em> 中的哪些单位</h2><p>首先，在 <em>CSS</em> 中，单位分为两大类，<strong>绝对长度单位</strong>和<strong>相对长度单位</strong>。</p><h3>绝对长度单位</h3><p>我们先来说这个，绝对长度单位最好理解，和我们现实生活中是一样的。在我们现实生活中，常见的长度单位有米（<em>m</em>）、厘米（<em>cm</em>）、毫米（<em>mm</em>），每一种单位的长度都是固定，比如 <em>5cm</em>，你走到任何地方 <em>5cm</em> 的长度都是一致的</p><p><br></p><p>例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"container\"&gt;&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.container{\n  width: 5cm;\n  height: 5cm;\n  background-color: pink;\n}</code></pre></div><p>在上面的代码中，我们设置了盒子的宽高都是 <em>5cm</em>，这里用的就是绝对长度单位。</p><p><br></p><p>常见的绝对单位长度如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-14-073818.png\" alt=\"image-20210914153818508\" contenteditable=\"false\"><br></p><p><br></p><p>这些值中的大多数在用于打印时比用于屏幕输出时更有用。例如，我们通常不会在屏幕上使用 <em>cm</em>。</p><p><br></p><p>惟一一个经常使用的值，估计就是 <em>px</em>(像素)。</p><h3>相对长度单位</h3><p>相对长度单位相对于其他一些东西，比如父元素的字体大小，或者视图端口的大小。使用相对单位的好处是，经过一些仔细的规划，我们可以使文本或其他元素的大小与页面上的其他内容相对应。</p><p><br></p><p>下表列出了 <em>web</em> 开发中一些最有用的单位。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-14-074021.png\" alt=\"image-20210914154021389\" contenteditable=\"false\"><br></p><p><br></p><p>上面的单位中，常用的有 <em>em、rem、vw、vh</em>，其中 <em>vw</em> 和 <em>vh</em> 代表的是视口的宽度和高度，例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"container\"&gt;&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">*{\n  margin: 0;\n  padding: 0;\n}\n.container {\n  width: 50vw;\n  height: 100vh;\n  background-color: pink;\n}</code></pre></div><p>在上面的代码中，我们设置了容器的宽度为 <em>50vw</em>，也就是占视口的一半，而高度我们设置的是 <em>100vh</em>，就是占满整个视图。</p><p><br></p><p>接下来来看一下 <em>em</em> 和 <em>rem</em>。</p><p><br></p><p><em>em</em> 和 <em>rem</em> 相对于 <em>px</em> 更具有灵活性，他们是相对长度单位，意思是长度不是定死了的，更适用于响应式布局。</p><p><br></p><p>对于 <em>em</em> 和 <em>rem</em> 的区别一句话概括：<strong><em>em</em> 相对于父元素，<em>rem</em> 相对于根元素。</strong></p><p><br></p><p>来看关于 <em>em</em> 和 <em>rem</em> 示例。</p><p><br></p><p><em>em</em> 示例</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div&gt;\n  我是父元素div\n  &lt;p&gt;\n    我是子元素p\n    &lt;span&gt;我是孙元素span&lt;/span&gt;\n  &lt;/p&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">* {\n  margin: 0;\n  padding: 0;\n}\n\ndiv {\n  font-size: 40px;\n  width: 10em;\n  /* 400px */\n  height: 10em;\n  outline: solid 1px black;\n  margin: 10px;\n}\n\np {\n  font-size: 0.5em;\n  /* 20px */\n  width: 10em;\n  /* 200px */\n  height: 10em;\n  outline: solid 1px red;\n}\n\nspan {\n  font-size: 0.5em;\n  width: 10em;\n  height: 10em;\n  outline: solid 1px blue;\n  display: block;\n}</code></pre></div><p>效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-14-075220.png\" alt=\"image-20210914155219732\" contenteditable=\"false\"><br></p><p><br></p><p><em>rem</em> 示例</p><p><br></p><p><em>rem</em> 是全部的长度都相对于根元素，根元素是谁？</p><p><br></p><p>那就是 <em>html</em>元素。通常做法是给 <em>html</em> 元素设置一个字体大小，然后其他元素的长度单位就为 <em>rem</em>。</p><p><br></p><p>例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div&gt;\n  我是父元素div\n  &lt;p&gt;\n    我是子元素p\n    &lt;span&gt;我是孙元素span&lt;/span&gt;\n  &lt;/p&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">* {\n  margin: 0;\n  padding: 0;\n}\n\nhtml {\n  font-size: 10px;\n}\n\ndiv {\n  font-size: 4rem;\n  /* 40px */\n  width: 30rem;\n  /* 300px */\n  height: 30rem;\n  /* 300px */\n  outline: solid 1px black;\n  margin: 10px;\n}\n\np {\n  font-size: 2rem;\n  /* 20px */\n  width: 15rem;\n  /* 150px */\n  height: 15rem;\n  /* 150px */\n  outline: solid 1px red;\n}\n\nspan {\n  font-size: 1.5rem;\n  width: 10rem;\n  height: 10rem;\n  outline: solid 1px blue;\n  display: block;\n}</code></pre></div><p>所以当用 <em>rem</em> 做响应式时，直接在媒体中改变 <em>html</em> 的 <em>font-size</em>，此时用 <em>rem</em> 作为单位的元素的大小都会相应改变，很方便。</p><p><br></p><p>看到这里我想大家都能够更深刻的体会了 <em>em</em> 和 <em>rem</em> 的区别了，其实就是参照物不同。</p><h2>真题解答</h2><ul><li><p><em>px</em> 和 <em>em</em> 的区别</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p><em>px</em> 即 <em>pixel</em> 像素，是相对于屏幕分辨率而言的，是一个绝对单位，但是具有一定的相对性。因为在同一设备上每个设备像素所代表的物理长度是固定不变的（绝对性），但在不同设备间每个设备像素所代表的物理长度是可以变化的（相对性）。</p><p><br></p><p><em>em</em> 是相对长度单位，具体的大小要相对于父元素来计算，例如父元素的字体大小为 <em>40px</em>，那么子元素 <em>1em</em> 就代表字体大小和父元素一样为 <em>40px</em>，<em>0.5em</em> 就代表字体大小为父元素的一半即 <em>20px</em>。</p></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666075041417",
+    typeId: ObjectId("634d7fc47797638ec96fe2ee")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e49d12fac4881713db2a7"),
+    interviewTitle: "怎么让一个 div 水平垂直居中",
+    interviewContent: "<h1>居中方式总结</h1><h2>经典真题</h2><ul><li><p>怎么让一个 <em>div</em> 水平垂直居中</p></li></ul><h2>盒子居中</h2><p>首先题目问到了如何进行居中，那么居中肯定分 <em>2</em> 个方向，一个是水平方向，一个是垂直方向。</p><h3>水平方向居中</h3><p>水平方向居中很简单，有 <em>2</em> 种常见的方式：</p><ol><li><p>设置盒子 <em>margin : 0 auto</em>：这种居中方式的原理在于设置 <em>margin-left</em> 为 <em>auto</em> 时，<em>margin-left</em> 就会被设置为能有多大就设置多大，所以盒子会跑到最右边，而设置 <em>margin-right</em> 为 <em>auto</em> 时，同理盒子就会跑到最左边。所以，当我们设置左右的 <em>margin</em> 都是 <em>auto</em> 的时候，盒子就跑到了中间，从而形成了水平居中。</p></li><li><p>第二种常见的方式就是通过 <em>display : flex</em> 设置盒子的外层盒子是一个弹性盒，然后通过 <em>justify-content : center</em> 使得内部的盒子居中。</p></li></ol><h3>垂直方向居中</h3><p>关于盒子的垂直方向居中，方法就比较多了，这里介绍几种：</p><ol><li><p>通过 <em>verticle-align:middle</em> 实现垂直居中</p></li></ol><p>通过 <em>vertical-align:middle</em> 实现垂直居中是最常使用的方法，但是有一点需要格外注意，<em>vertical</em> 生效的前提是元素的 <em>display：inline-block</em>。并且在使用 <em>vertical-align:middle</em> 的时候需要一个兄弟元素做参照物，让它垂直于兄弟元素的中心点。<em>vertical-align</em> 对齐的方法是寻找兄弟元素中最高的元素作为参考。</p><p><br></p><p>代码示例如下：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"container\"&gt;\n  &lt;div class=\"item\"&gt;&lt;/div&gt;\n  &lt;div class=\"brotherBox\"&gt;&lt;/div&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.container{\n  width: 500px;\n  height: 300px;\n  background-color: pink;\n  text-align: center;\n}\n.item{\n  width: 100px;\n  height: 100px;\n  background-color: skyblue;\n  vertical-align: middle;\n  margin: 0 auto;\n  display: inline-block;\n}\n.brotherBox{\n  height: 100%;\n  /* width: 2px; */\n  background: red;\n  display: inline-block;\n  vertical-align: middle;\n}</code></pre></div><ol start=\"2\"><li><p>通过伪元素 :<em>before</em> 实现垂直居中</p></li></ol><p>平白无故添加一个无意义的参考元素不怎么好，我们可以去除作为参考的兄弟元素，转为给父元素添加一个伪元素，如下：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"container\"&gt;\n  &lt;div class=\"item\"&gt;&lt;/div&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.container{\n  width: 500px;\n  height: 300px;\n  background-color: pink;\n  text-align: center;\n}\n.container::before{\n  content : '';\n  display: inline-block;\n  vertical-align: middle;\n  height: 100%;\n}\n.item{\n  width: 100px;\n  height: 100px;\n  background-color: skyblue;\n  vertical-align: middle;\n  margin: 0 auto;\n  display: inline-block;\n}</code></pre></div><ol start=\"3\"><li><p>通过绝对定位实现垂直居中</p></li></ol><p>这种方式需要设置父元素为相对定位，子元素为绝对定位，然后配合 <em>margin-left</em> 为负的盒子高度一半来实现垂直居中</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"container\"&gt;\n  &lt;div class=\"item\"&gt;&lt;/div&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.container{\n  width: 500px;\n  height: 300px;\n  background-color: pink;\n  position: relative;\n}\n.item{\n  width: 100px;\n  height: 100px;\n  background-color: skyblue;\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  margin-left: -50px;\n  margin-top: -50px;\n}</code></pre></div><ol start=\"4\"><li><p>通过 <em>transform</em> 实现垂直居中</p></li></ol><p>可以通过定位配合 <em>transform</em> 也可以实现垂直居中</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"container\"&gt;\n  &lt;div class=\"item\"&gt;&lt;/div&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.container{\n  width: 500px;\n  height: 300px;\n  background-color: pink;\n  position: relative;\n}\n.item{\n  width: 100px;\n  height: 100px;\n  background-color: skyblue;\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  transform: translateX(-50px) translateY(-50px);\n}</code></pre></div><ol start=\"5\"><li><p>使用弹性盒子居中</p></li></ol><p>通过设置父元素为弹性盒子，然后使用 <em>justify-content: center</em> 和 <em>align-items: center</em> 来设置内部盒子水平垂直居中</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"container\"&gt;\n  &lt;div class=\"item\"&gt;&lt;/div&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.container{\n  width: 500px;\n  height: 300px;\n  background-color: pink;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.item{\n  width: 100px;\n  height: 100px;\n  background-color: skyblue;\n}</code></pre></div><p>以上就是比较常见的盒子居中的解决方案，当然目前来讲最推荐的就是使用弹性盒子，这是目前最常用的一种方式，也是最推荐的一种方式。</p><h2>真题解答</h2><ul><li><p>怎么让一个 <em>div</em> 水平垂直居中</p></li></ul><blockquote><p>参考答案：</p><ol><li><p>通过 <em>verticle-align:middle</em> 实现垂直居中</p></li><li><p>通过父元素设置伪元素 :<em>before</em> ，然后设置子元素  <em>verticle-align:middle</em> 实现垂直居中</p></li><li><p>通过绝对定位实现垂直居中</p></li><li><p>通过 <em>transform</em> 实现垂直居中</p></li><li><p>使用弹性盒子居中</p></li></ol></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666075089866",
+    typeId: ObjectId("634d7fc47797638ec96fe2ee")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e4a2c2fac4881713db2b4"),
+    interviewTitle: "隐藏页面中的某个元素的方法有哪些？",
+    interviewContent: "<h1>隐藏元素方式总结</h1><h2>经典真题</h2><ul><li><p>隐藏页面中的某个元素的方法有哪些？</p></li></ul><h2>隐藏元素方案汇总</h2><p>首先什么叫隐藏元素，大家第一反应就是 <em>display:none</em>，元素就被隐藏了。</p><p><br></p><p>没错，这确实是隐藏元素的一种，但是太过于片面。我们隐藏元素实际上可以分为 <em>3</em> 大类：</p><ul><li><p>完全隐藏：元素从渲染树中消失，不占据空间。</p></li><li><p>视觉上的隐藏：屏幕中不可见，占据空间。</p></li><li><p>语义上的隐藏：读屏软件不可读，但正常占据空间。</p></li></ul><h3>完全隐藏</h3><p><strong><em>display</em> 属性</strong></p><p><br></p><p>首先就是设置 <em>display</em> 为 <em>none</em>，这样元素就被隐藏了，并且是不占据空间的。</p><p><br></p><p><strong><em>hidden</em> 属性</strong></p><p><br></p><p>这是 <em>HTML5</em> 新增属性，相当于 <em>display: none</em>，直接写在元素上面，例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div hidden&gt;&lt;/div&gt;</code></pre></div><h3>视觉上隐藏</h3><p>视觉上的隐藏，就是说元素还占据着位置，只是视觉上不可见而已。</p><p><br></p><p><strong><em>opacity</em> 属性</strong></p><p><br></p><p>这是大家比较熟知的一种方式，将透明度设置为 <em>0</em>，视觉上就会变得不可见。</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">opacity:0</code></pre></div><p><strong><em>visibility:hidden</em></strong></p><p><br></p><p>这也是大家比较熟知的一种方式，通过 <em>CSS</em> 中的 <em>visibility</em> 属性来隐藏元素，使其不可见，但是仍然会占位</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">visibility:hidden</code></pre></div><p><strong>绝对定位</strong></p><p><br></p><p>这种方式以前用的比较多，设置 <em>posoition</em> 为 <em>absolute</em> 或 <em>fixed</em>，\b通过设置 <em>top、left</em> 等值，将其移出可视区域。例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">position: absolute;\nleft: -999px;\ntop: -999px;</code></pre></div><p><strong>设置 <em>margin</em></strong></p><p><br></p><p>通过设置 <em>margin</em> 值，将其移出可视区域范围（可视区域占位）。例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">margin-left: -99999px;</code></pre></div><p><strong>设置宽高为 <em>0</em></strong></p><p><br></p><p>这也是比较常见的一种方式，简单说就是将元素的 <em>margin、border、padding、height</em> 和 <em>width</em> 等影响元素盒模型的属性设置成 <em>0</em>，如果元素内有子元素或内容，还应该设置其 <em>overflow:hidden</em> 来隐藏其子元素</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">width: 0px;\nheight: 0px;\noverflow: hidden</code></pre></div><p><strong>裁剪元素</strong></p><p><br></p><p>隐藏元素的另一种方法是通过剪裁它们实现，具体是通过 <em>clip-path</em> 属性，这个属性比较新，浏览器兼容性也会比较差，但是了解一下还是非常有必要的。例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">clip-path: polygon(0px 0px,0px 0px,0px 0px,0px 0px);</code></pre></div><h3>语义上隐藏</h3><p><strong><em>aria-hidden</em> 属性</strong></p><p><br></p><p>通过设置 <em>aria-hidden</em> 属性为 <em>true</em> 使读屏软件不可读，但是元素仍然占据空间并且可见。</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">&lt;div aria-hidden=\"true\"&gt;&lt;/div&gt;</code></pre></div><h2>真题解答</h2><ul><li><p>隐藏页面中的某个元素的方法有哪些？</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p>隐藏元素可以分为 <em>3</em> 大类：</p><ul><li><p>完全隐藏：元素从渲染树中消失，不占据空间。</p></li><li><p>视觉上的隐藏：屏幕中不可见，占据空间。</p></li><li><p>语义上的隐藏：读屏软件不可读，但正常占据空。</p></li></ul><p>完全隐藏的方式有：设置 <em>display:none</em>、为元素设置 <em>hidden</em> 属性。</p><p><br></p><p>视觉上隐藏的方式有：设置 <em>opacity</em> 属性为 <em>0</em>、绝对定位的 <em>left</em> 和 <em>top</em> 值设置为 <em>-999px</em>、设置 <em>margin-left</em> 值为 <em>-999px</em>、设置宽高为 <em>0</em>、裁剪元素。</p><p><br></p><p>语义上的隐藏方式为将 <em>aria-hidden</em> 属性设置为 <em>true</em> 使读屏软件不可读。</p></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666075180920",
+    typeId: ObjectId("634d7fc47797638ec96fe2ee")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e4a5c2fac4881713db2bb"),
+    interviewTitle: "清除浮动的方法有哪些？",
+    interviewContent: "<h1>浮动</h1><h2>经典真题</h2><ul><li><p>清除浮动的方法</p></li><li><p>以下选项能够清除浮动的是（ ）</p></li></ul><blockquote><p>A. 空 <em>div</em></p><p><br></p><p>B. <em>hover</em> 伪选择器</p><p><br></p><p>C. <em>clear</em> 属性</p><p><br></p><p>D. <em>overflow</em> 属性</p></blockquote><h2>关于浮动，你需要知道的东西</h2><h3>浮动出现的背景</h3><p>浮动属性产生之初是为了实现“文字环绕”的效果，让文字环绕图片，从而使网页实现类似 <em>word</em> 中“图文混排”的效果。来看下面的例子：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"container\"&gt;\n  &lt;img src=\"./ok.png\" alt=\"\" width=\"200\"&gt;\n  &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus quos est rerum repellat alias maiores\n    nobis harum recusandae corrupti assumenda qui aut ipsam deserunt dolorem modi, culpa hic ex illo repellendus\n    atque. Numquam iste porro perspiciatis. Harum esse magni exercitationem, perspiciatis libero soluta quo ea\n    dolorem. Delectus tempore magnam vitae voluptatibus, non quasi laudantium, aliquam consequuntur perspiciatis\n    maiores esse neque animi voluptate. Animi pariatur debitis quam aliquam recusandae quis ut nisi totam sint\n    consectetur distinctio, quos saepe cum quo iure natus delectus! Ad, dolore. Ut temporibus ea autem fugiat\n    laboriosam quidem iste rerum laborum. Repellendus recusandae sequi id excepturi alias?&lt;/p&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.container {\n  width: 800px;\n  border: 1px solid;\n}</code></pre></div><p>效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-18-031725.png\" alt=\"image-20210918111724895\" contenteditable=\"false\"><br></p><p><br></p><p>由于 <em>p</em> 段落是块级元素，所以独占一行，图片和段落是分开的。</p><p><br></p><p>接下来我们设置图片浮动：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.container {\n  width: 800px;\n  border: 1px solid;\n}\nimg{\n  float: left;\n}</code></pre></div><p>效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-18-032006.png\" alt=\"image-20210918112006064\" contenteditable=\"false\"><br></p><p><br></p><p>当我们设置了图片浮动后，就出现了类似 “<em>word</em>” 的文字环绕效果。</p><p><br></p><p>这实际上也是浮动最初被设计出来的目的。</p><h3>浮动实现布局</h3><p>到了后面，浮动渐渐被应用到了页面布局上。因为 <em>HTML</em> 里面的元素，要么是行内元素，要么是块级元素，这种方式是没办法做页面布局的，例如我想实现两个块级元素在一行。此时开发人员就想到了浮动，因为任何东西都可以浮动，而不仅仅是图像，所以浮动的使用范围扩大了，能够用来进行布局。</p><h4>两列布局</h4><p>下面我们来看一下使用浮动实现的两列布局：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;h1&gt;2 column layout example&lt;/h1&gt;\n&lt;div&gt;\n  &lt;h2&gt;First column&lt;/h2&gt;\n  &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem\n    placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet\n    nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,\n    tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada\n    et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus\n    sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius\n    commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;\n&lt;/div&gt;\n\n&lt;div&gt;\n  &lt;h2&gt;Second column&lt;/h2&gt;\n  &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est,\n    posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam\n    lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis\n    finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in\n    interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">body {\n  width: 90%;\n  max-width: 900px;\n  margin: 0 auto;\n}\n\ndiv:nth-of-type(1) {\n  width: 48%;\n  float: left;\n}\n\ndiv:nth-of-type(2) {\n  width: 48%;\n  float: right;\n}</code></pre></div><p>效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-18-050209.png\" alt=\"image-20210918130208288\" contenteditable=\"false\"><br></p><p><br></p><p>在上面的代码中，我们让两个 <em>div</em> 一个左浮动一个右浮动，从而实现了两列布局的效果。</p><h4>三列布局</h4><p>现在我们已经有了一个两列布局工作，添加一个第三列（或更多）并不是太难。</p><p><br></p><p>下面是一个使用浮动实现的三列布局。</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;h1&gt;3 column layout example&lt;/h1&gt;\n&lt;div&gt;\n  &lt;h2&gt;First column&lt;/h2&gt;\n  &lt;p&gt; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem\n    placerat vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet\n    nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum,\n    tristique sit amet orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada\n    et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus\n    sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius\n    commodo et a urna. Ut id ornare felis, eget fermentum sapien.&lt;/p&gt;\n&lt;/div&gt;\n\n&lt;div&gt;\n  &lt;h2&gt;Second column&lt;/h2&gt;\n  &lt;p&gt;Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est,\n    posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam\n    lorem. Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis\n    finibus. Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in\n    interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/p&gt;\n&lt;/div&gt;\n&lt;div&gt;\n  &lt;h2&gt;Third column&lt;/h2&gt;\n  &lt;p&gt;Nam consequat scelerisque mattis. Duis pulvinar dapibus magna, eget congue purus mollis sit amet. Sed euismod\n    lacus sit amet ex tempus, a semper felis ultrices. Maecenas a efficitur metus. Nullam tempus pharetra\n    pharetra. Morbi in leo mauris. Nullam gravida ligula eros, lacinia sagittis lorem fermentum ut. Praesent\n    dapibus eros vel mi pretium, nec convallis nibh blandit. Sed scelerisque justo ac ligula mollis laoreet. In\n    mattis, risus et porta scelerisque, augue neque hendrerit orci, sit amet imperdiet risus neque vitae lectus.\n    In tempus lectus a quam posuere vestibulum. Duis quis finibus mi. Nullam commodo mi in enim maximus\n    fermentum. Mauris finibus at lorem vel sollicitudin.&lt;/p&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">body {\n  width: 90%;\n  max-width: 900px;\n  margin: 0 auto;\n}\n\ndiv:nth-of-type(1) {\n  width: 36%;\n  float: left;\n}\n\ndiv:nth-of-type(2) {\n  width: 30%;\n  float: left;\n  margin-left: 4%;\n}\n\ndiv:nth-of-type(3) {\n  width: 26%;\n  float: right;\n}</code></pre></div><p>效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-18-050610.png\" alt=\"image-20210918130610163\" contenteditable=\"false\"><br></p><h3>浮动的特性</h3><p>在上面，我们已经实现了两列布局和三列布局，可以看出，浮动确实能够拿来布局。</p><p><br></p><p>接下来我们就需要具体研究一下浮动有哪些特性了。</p><ol><li><p><strong>脱离标准流</strong></p></li></ol><p>浮动的第一个特点就是脱离标准流，例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"one\"&gt;&lt;/div&gt;\n&lt;div class=\"two\"&gt;&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.one {\n  width: 80px;\n  height: 80px;\n  background-color: red;\n  float: left;\n}\n\n.two {\n  width: 150px;\n  height: 150px;\n  background-color: blue;\n}</code></pre></div><p>效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-18-051127.png\" alt=\"image-20210918131127272\" contenteditable=\"false\"><br></p><p><br></p><p>由于红色的 <em>div</em> 浮动脱离了标准流，所以蓝色的 <em>div</em> 自然而然就往上走了。</p><ol start=\"2\"><li><p><strong>浮动的元素互相贴靠</strong></p></li></ol><p>如果有多个浮动的元素，那么会相互贴靠，如果宽度不够，会重启一行。</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.two {\n  width: 150px;\n  height: 150px;\n  background-color: blue;\n  float: left;\n}</code></pre></div><p>还是上面的 <em>DOM</em> 结构，我们让 <em>two</em> 这个盒子也浮动，效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-18-051424.png\" alt=\"image-20210918131424633\" contenteditable=\"false\"><br></p><p><br></p><p>如果宽度不足以让后面的盒子贴靠，那么后面浮动的元素会被排列到下一行：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.two {\n  width: 850px;\n  height: 150px;\n  background-color: blue;\n  float: left;\n}</code></pre></div><p>效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-18-051627.png\" alt=\"image-20210918131627324\" contenteditable=\"false\"><br></p><p><br></p><p>在上面的示例中，我们将蓝色盒子的宽度修改为了 <em>850px</em>，当我们缩小浏览器时，由于宽度不够蓝色盒子重新排列到了第二排。</p><ol start=\"3\"><li><p><strong>宽度收缩</strong></p></li></ol><p>在没有设置宽度的情况下，块级元素在标准流时很多时独占一行，宽度也会占满整个容器，但是一旦被设置为浮动后，宽度就会收缩。</p><p><br></p><p>例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div&gt;this is a test&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div{\n  background-color: red;\n  float: left;\n}</code></pre></div><p>本来 <em>div</em> 是占满整行的，但是当我们设置了浮动后，由于 <em>div</em> 又没有设置宽度，所以宽度就收缩了。</p><h3>清除浮动</h3><p>有些时候，浮动会带来副作用，所以我们需要清除浮动带来的副作用。</p><p><br></p><p>例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;ul&gt;\n  &lt;li&gt;导航1&lt;/li&gt;\n  &lt;li&gt;导航2&lt;/li&gt;\n  &lt;li&gt;导航3&lt;/li&gt;\n&lt;/ul&gt;\n&lt;ul&gt;\n  &lt;li&gt;游戏&lt;/li&gt;\n  &lt;li&gt;动漫&lt;/li&gt;\n  &lt;li&gt;音乐&lt;/li&gt;\n&lt;/ul&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">li {\n  float: left;\n  width: 100px;\n  height: 20px;\n  background-color: pink;\n}</code></pre></div><p>效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-18-052700.png\" alt=\"image-20210918132700157\" contenteditable=\"false\"><br></p><p><br></p><p>在上面的示例中，我们本来是打算做两个导航栏的，但是由于浮动的贴靠性质，导致所有的 <em>li</em> 都在一行了。</p><p><br></p><p>这个时候我们就需要一些方式来清除浮动。</p><ol><li><p><strong>给父元素设置高度</strong></p></li></ol><p>在上面的示例中，由于 <em>li</em> 的父元素 <em>ul</em> 没有高度，所以导致明明不是同一个父元素下的浮动子元素，也会相互贴靠。</p><p><br></p><p>此时我们就给 <em>li</em> 的父元素 <em>ul</em> 设置一个高度即可。例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">ul{\n  height: 50px;\n}\nli {\n  float: left;\n  width: 100px;\n  height: 20px;\n  background-color: pink;\n}</code></pre></div><p>效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-18-053639.png\" alt=\"image-20210918133638708\" contenteditable=\"false\"><br></p><p><br></p><p>需要注意给父元素设置高度时，这个高度值一定要大于浮动子元素的高度，这样才能关注浮动。例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">ul{\n  height: 30px;\n}\nli {\n  float: left;\n  width: 100px;\n  height: 70px;\n  background-color: pink;\n}</code></pre></div><p>效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-18-053929.png\" alt=\"image-20210918133928678\" contenteditable=\"false\"><br></p><p><br></p><p>在上面的示例中，虽然我们给父元素 <em>ul</em> 设置了高度，但是这个高度值是小于浮动元素 <em>li</em> 的高度的，此时我们会发现仍然有贴靠的现象。</p><p><br></p><p>因此，<strong>如果一个元素要浮动，那么它的祖先元素一定要有高度。有高度的盒子，才能关住浮动</strong>。</p><p><br></p><p>只要浮动在一个有高度的盒子中，那么这个浮动就不会影响后面的浮动元素。所以就是清除浮动带来的影响了。</p><ol start=\"2\"><li><p><strong><em>clear</em> 属性</strong></p></li></ol><p>在实际开发中，由于盒子的高度能够被内容撑开，所以很多时候我们不会设置高度。</p><p><br></p><p>那么这个时候又该如何清除浮动呢？</p><p><br></p><p>在 <em>CSS</em> 中有一个叫做 <em>clear</em> 的属性，该属性定义了元素的哪边上不允许出现浮动元素。</p><p><br></p><p>在 <em>CSS1</em> 和 <em>CSS2</em> 中，这是通过自动为清除元素（即设置了 <em>clear</em> 属性的元素）增加上外边距实现的。</p><p><br></p><p>在 <em>CSS2.1</em> 中，会在元素上外边距之上增加清除空间，而外边距本身并不改变。不论哪一种改变，最终结果都一样，如果声明为左边或右边清除，会使元素的上外边框边界刚好在该边上浮动元素的下外边距边界之下。</p><p><br></p><p><em>clear</em> 属性的取值如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-18-061612.png\" alt=\"image-20210918141612213\" contenteditable=\"false\"><br></p><p><br></p><p>接下来我们来用 <em>clear</em> 属性清除浮动：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;ul&gt;\n  &lt;li&gt;导航1&lt;/li&gt;\n  &lt;li&gt;导航2&lt;/li&gt;\n  &lt;li&gt;导航3&lt;/li&gt;\n&lt;/ul&gt;\n&lt;ul class=\"two\"&gt;\n  &lt;li&gt;游戏&lt;/li&gt;\n  &lt;li&gt;动漫&lt;/li&gt;\n  &lt;li&gt;音乐&lt;/li&gt;\n&lt;/ul&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.two{\n  clear: left;\n}\nli {\n  float: left;\n  width: 100px;\n  height: 20px;\n  background-color: pink;\n}</code></pre></div><p>效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-18-063311.png\" alt=\"image-20210918143310665\" contenteditable=\"false\"><br></p><p><br></p><p>可以看到，浮动的副作用确实是清除了，但是这种方式有一个问题，那就是 <em>margin</em> 属性失效了。</p><p><br></p><p>例如我们在 <em>two</em> 的样式里面添加一个 <em>margin-top</em>，会发现该 <em>margin</em> 属性的设置并不起效果。</p><ol start=\"3\"><li><p><strong>隔墙法</strong></p></li></ol><p>隔墙法的核心思想就是在两个浮动的元素之间添加一个空的 <em>div</em> 作为一堵“墙”，从而让后面的浮动元素，不去追前面的浮动元素。</p><p><br></p><p>例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;ul&gt;\n  &lt;li&gt;导航1&lt;/li&gt;\n  &lt;li&gt;导航2&lt;/li&gt;\n  &lt;li&gt;导航3&lt;/li&gt;\n&lt;/ul&gt;\n&lt;div class=\"clearfix\"&gt;&lt;/div&gt;\n&lt;ul class=\"two\"&gt;\n  &lt;li&gt;游戏&lt;/li&gt;\n  &lt;li&gt;动漫&lt;/li&gt;\n  &lt;li&gt;音乐&lt;/li&gt;\n&lt;/ul&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.two {\n  margin-top: 10px;\n}\n\n.clearfix {\n  clear: both;\n}\n\nli {\n  float: left;\n  width: 100px;\n  height: 20px;\n  background-color: pink;\n}</code></pre></div><p>效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-18-064154.png\" alt=\"image-20210918144154274\" contenteditable=\"false\"><br></p><p><br></p><p>通过上面的示例我们可以看到，<em>margin</em> 已经恢复正常。</p><ol start=\"4\"><li><p><strong>内墙法</strong></p></li></ol><p>通过隔墙法，后面又衍生出了内墙法。内墙法的出现，可以让浮动的元素也能撑开父元素的高。</p><p><br></p><p>正常情况下，没有高的父元素，里面的子元素一旦浮动，高度也就没有了，例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div&gt;\n  &lt;p&gt;&lt;/p&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div{\n  background-color: green;\n}\np{\n  width: 100px;\n  height: 100px;\n  background-color: red;\n}</code></pre></div><p>当前效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-18-065913.png\" alt=\"image-20210918145912989\" contenteditable=\"false\"><br></p><p><br></p><p>一旦我们设置 <em>p</em> 元素为浮动，由于脱离了标准流，所以父元素的高也就消失了。</p><p><br></p><p>此时就可以使用内墙法来给父元素撑起高，如下：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div&gt;\n  &lt;p&gt;&lt;/p&gt;\n  &lt;div class=\"clearfix\"&gt;&lt;/div&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div{\n  background-color: green;\n}\np{\n  width: 100px;\n  height: 100px;\n  background-color: red;\n  float: left;\n}\n.clearfix{\n  clear: both;\n}</code></pre></div><p>效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-18-070839.png\" alt=\"image-20210918150838625\" contenteditable=\"false\"><br></p><p><br></p><p>下面是使用内墙法清除浮动的示例：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div&gt;\n  &lt;ul&gt;\n    &lt;li&gt;导航1&lt;/li&gt;\n    &lt;li&gt;导航2&lt;/li&gt;\n    &lt;li&gt;导航3&lt;/li&gt;\n  &lt;/ul&gt;\n  &lt;div class=\"clearfix\"&gt;&lt;/div&gt;\n&lt;/div&gt;\n&lt;ul class=\"two\"&gt;\n  &lt;li&gt;游戏&lt;/li&gt;\n  &lt;li&gt;动漫&lt;/li&gt;\n  &lt;li&gt;音乐&lt;/li&gt;\n&lt;/ul&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.two {\n  margin-top: 10px;\n}\n\n.clearfix {\n  clear: both;\n}\n\nli {\n  float: left;\n  width: 100px;\n  height: 20px;\n  background-color: pink;\n}</code></pre></div><p>效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-18-071359.png\" alt=\"image-20210918151358700\" contenteditable=\"false\"><br></p><p><br></p><p>在上面的代码中，我们使用内墙法清除了浮动，并且父元素的高度也被撑起来了，<em>margin</em> 也是正常的。</p><ol start=\"5\"><li><p><strong><em>overflow</em> 属性</strong></p></li></ol><p><em>overflow</em> 属性本来是用作处理溢出内容的显示方式的。</p><p><br></p><p>当给父元素添加 <em>overflow:hidden</em> 之后，父元素就会形成一个 <em>BFC</em>，一块独立的显示区域，不受外界影响，所以通过这种方式也能够去除浮动的副作用。</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;ul&gt;\n  &lt;li&gt;导航1&lt;/li&gt;\n  &lt;li&gt;导航2&lt;/li&gt;\n  &lt;li&gt;导航3&lt;/li&gt;\n&lt;/ul&gt;\n&lt;ul class=\"two\"&gt;\n  &lt;li&gt;游戏&lt;/li&gt;\n  &lt;li&gt;动漫&lt;/li&gt;\n  &lt;li&gt;音乐&lt;/li&gt;\n&lt;/ul&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.two {\n  margin-top: 10px;\n}\n\nul {\n  overflow: hidden;\n}\n\nli {\n  float: left;\n  width: 100px;\n  height: 20px;\n  background-color: pink;\n}</code></pre></div><p>在上面的代码中，我们设置两个父元素 <em>ul</em> 都为 <em>overflow:hidden</em> 之后，两个父元素形成了 <em>BFC</em>，我们可以看到父元素的高度也被撑开了，<em>margin</em> 也是正常的。</p><ol start=\"6\"><li><p><strong>伪类清除法</strong></p></li></ol><p>最后要介绍的，是目前最流行的浮动清除方式，伪类清除法。</p><p><br></p><p>该方法的核心思想就是为父元素设置一个伪元素，其实就是无形的添加了一堵墙，然后在伪元素中设置一系列的属性。例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;ul class=\"one\"&gt;\n  &lt;li&gt;导航1&lt;/li&gt;\n  &lt;li&gt;导航2&lt;/li&gt;\n  &lt;li&gt;导航3&lt;/li&gt;\n&lt;/ul&gt;\n&lt;ul class=\"two\"&gt;\n  &lt;li&gt;游戏&lt;/li&gt;\n  &lt;li&gt;动漫&lt;/li&gt;\n  &lt;li&gt;音乐&lt;/li&gt;\n&lt;/ul&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.two {\n  margin-top: 10px;\n}\n\n.one::after {\n  content: \"\";\n  display: block;\n  height: 0;\n  clear: both;\n  visibility: hidden;\n}\n\nli {\n  float: left;\n  width: 100px;\n  height: 20px;\n  background-color: pink;\n}</code></pre></div><p>在上面的代码中，我们为第一个 <em>ul</em> 设置了 <em>after</em> 伪元素，并在伪元素中设置了诸如 <em>clear:both、visibility: hidden</em> 等一系列属性，这实际上就等同于在两个 <em>ul</em> 之间添加了一堵无形的墙。</p><h3>浮动的现状</h3><p>上面介绍了很多清除浮动的方法，一会儿外墙法、一会儿内墙法、一会儿 <em>overflow</em>，这些其实都是时代的眼泪。</p><p><br></p><p>目前来讲，除非要考虑古老的 <em>IE6/IE7</em>，否则布局压根儿就不会考虑浮动，有更好的弹性盒模型和网格布局供我们使用。</p><p><br></p><p>浮动目前仅仅也就在要制作文字环绕效果时，能发挥一席之地的作用。</p><p><br></p><p>然而，文字环绕这种 <em>90</em> 年代看着还不错的设计，现在又有几个设计师会这样设计网页呢？</p><h2>真题解答</h2><ul><li><p>清除浮动的方法</p></li></ul><blockquote><p>参考答案：</p><ul><li><p><em>clear</em> 清除浮动（添加空 <em>div</em> 法）在浮动元素下方添加空 <em>div</em>，并给该元素写 <em>css</em> 样式 <em>{clear:both;height:0;overflow:hidden;}</em></p></li><li><p>给浮动元素父级设置高度</p></li><li><p>父级同时浮动（需要给父级同级元素添加浮动）</p></li><li><p>父级设置成 <em>inline-block</em>，其 <em>margin: 0 auto</em> 居中方式失效</p></li><li><p>给父级添加 <em>overflow:hidden</em> 清除浮动方法</p></li><li><p>万能清除法 <em>after</em> 伪类清浮动（现在主流方法，推荐使用）</p></li></ul></blockquote><ul><li><p>以下选项能够清除浮动的是（ B ）</p></li></ul><blockquote><p>A. 空 <em>div</em></p><p><br></p><p>B. <em>hover</em> 伪选择器</p><p><br></p><p>C. <em>clear</em> 属性</p><p><br></p><p>D. <em>overflow</em> 属性</p></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666075228016",
+    typeId: ObjectId("634d7fc47797638ec96fe2ee")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e4ab32fac4881713db2c0"),
+    interviewTitle: "position有哪些值，各自的用法如何？",
+    interviewContent: "<h1>定位总结</h1><h2>经典真题</h2><ul><li><p>介绍下 <em>positon</em> 属性</p></li><li><p><em>position</em> 有哪些值，各自的用法如何？</p></li><li><p>相对定位、绝对定位、固定定位的区别</p></li></ul><h2><em>CSS</em> 中的定位</h2><p>经常有同学混淆定位与布局，两者傻傻分不清。</p><p><br></p><p>布局是针对整个页面来讲的，你采用什么布局，两栏布局、三栏布局，目标是整个页面。</p><p><br></p><p>而定位是针对某一个元素来讲的，把这个元素定位到什么位置。</p><p><br></p><p>目前在 <em>CSS</em> 中，有 <em>5</em> 种定位方案，分别是：</p><ul><li><p><em>static</em> 静态定位</p></li><li><p><em>relative</em> 相对定位</p></li><li><p><em>absolute</em> 绝对定位</p></li><li><p><em>fixed</em> 固定定位</p></li><li><p><em>sticky</em> 粘性定位</p></li></ul><p>下面我们依次来介绍这几种定位。</p><h3><em>static</em> 静态定位</h3><p>所谓静态定位，就是我们的标准流。</p><p><br></p><p>在标准流里面，块级元素独占一行，内嵌元素共享一行。静态定位是 <em>HTML</em> 元素的默认值，静态定位的元素不会受到 <em>top，bottom，left，right</em> 的影响。</p><h3><em>relative</em> 相对定位</h3><p>所谓相对定位，就是相对自己原来的位置进行定位。相对定位的最大特点就是不脱离标准流，相对于自己原来的位置上进行一定的偏移。</p><p><br></p><p>来看一个示例：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"one\"&gt;one&lt;/div&gt;\n&lt;div class=\"two\"&gt;two&lt;/div&gt;\n&lt;div class=\"three\"&gt;three&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">*{\n  margin: 0;padding: 0;\n}\ndiv{\n  width: 100px;\n  height: 100px;\n  outline: 1px solid;\n  line-height: 100px;\n  text-align: center;\n}\n.two{\n  position: relative;\n  left: 50px;\n  top: 50px;\n}</code></pre></div><p>效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-16-022649.png\" alt=\"image-20210916102648561\" contenteditable=\"false\"><br></p><p><br></p><p>可以看到，我们对 <em>two</em> 这个盒子设置了 <em>left</em> 值为 <em>50px</em>，<em>top</em> 值为 <em>50px</em>，而由于是相对这个位置进行偏移，所以 <em>two</em> 这个盒子向右下进行了移动。</p><p><br></p><p>使用相对定位的作用主要有两个：</p><ul><li><p>微调元素</p></li><li><p>做绝对定位的参考，子绝父相</p></li></ul><h3><em>absolute</em> 绝对定位</h3><p>所谓绝对定位，就是相对于离自己最近的，并且定了位的元素进行偏移。使用了绝对定位后的盒子，会脱离标准流，设置的 <em>margin</em> 也会失效。</p><p><br></p><p>下面是一个绝对定位的示例：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"one\"&gt;one&lt;/div&gt;\n&lt;div class=\"two\"&gt;two&lt;/div&gt;\n&lt;div class=\"three\"&gt;three&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">*{\n  margin: 0;padding: 0;\n}\ndiv{\n  width: 100px;\n  height: 100px;\n  outline: 1px solid;\n  line-height: 100px;\n  text-align: center;\n}\n.two{\n  position: absolute;\n  left: 50px;\n  top: 50px;\n}</code></pre></div><p>效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-16-022924.png\" alt=\"image-20210916102923743\" contenteditable=\"false\"><br></p><p><br></p><p>在浏览器中可以看到，第 <em>3</em> 个 <em>div</em> 往上面移动了，从而证明了绝对定位是脱离标准流的。</p><p><br></p><p>绝对定位后的盒子，其 <em>display</em> 属性会变为 <em>block</em>，例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;a href=\"#\"&gt;百度一下&lt;/a&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">*{\n  margin: 0;padding: 0;\n}\na{\n  outline: 1px solid;\n  width: 100px;\n  height: 100px;\n  position: absolute;\n  top: 50px;\n  left: 50px;\n}</code></pre></div><p>在浏览器中的浏览效果如下：原本不能设置宽高的行内元素，在进行了绝对定位以后，<em>display</em> 属性变为了 <em>block</em>，所以可以设置宽高了。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-16-023159.png\" alt=\"image-20210916103159181\" contenteditable=\"false\"><br></p><p><br></p><p>这里要重点强调一下绝对定位的参考点问题。默认情况下，绝对定位的参考点，如果用 <em>top</em> 来进行描述，那么定位参考点就是页面的左上角，而不是浏览器的左上角，如下图：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-16-023254.png\" alt=\"image-20210916103254157\" contenteditable=\"false\"><br></p><p><br></p><p>如果是使用 <em>bottom</em> 来进行描述，那么就是浏览器首屏窗口尺寸，对应的页面左下角，如下图：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-16-023329.png\" alt=\"image-20210916103329049\" contenteditable=\"false\"><br></p><p><br></p><p>下面是一道爱立信 <em>2014</em> 年的校园春招题目，该题目就是考察关于绝对定位默认参考点的相关知识，如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-16-023403.png\" alt=\"image-20210916103403155\" contenteditable=\"false\"><br></p><p><br></p><p>该题目的答案如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-16-023443.png\" alt=\"image-20210916103442461\" contenteditable=\"false\"><br></p><p><br></p><p>上面介绍的是绝对定位里参考点的默认情况，但是这种情况一般使用得非常的少。更多的则是使用接下来我们将要介绍的参照标准。</p><p><br></p><p>前面我们在介绍相对定位的时候，有提到子绝父相这个名字。事实上，当我们对一个元素设置绝对定位的时候，往往会将它的父级元素设置为相对定位。</p><p><br></p><p>这样的好处在于该元素的父级元素没有脱离标准流，该元素将会以这个相对定位了的父元素作为参考点，在父元素的范围内进行移动，方便我们对元素的位置进行掌控。如下图：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-16-023532.png\" alt=\"image-20210916103531326\" contenteditable=\"false\"><br></p><p><br></p><p>在该图中，容器盒子设置为相对定位，红色盒子为绝对定位。红色盒子将无视父元素的 <em>padding</em> 区域，以父元素的 <em>border</em> <strong>内侧</strong>作为自己定位的参考点。</p><p><br></p><p>需要大家记住的是当父级元素出现有定位时，绝对定位的参考点永远都是<strong>离自己最近的，并且定了位的祖先元素的左上角</strong>，下面我们来举例子进行说明，如下：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"one\"&gt;\n  &lt;div class=\"two\"&gt;\n    &lt;div class=\"three\"&gt;&lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">*{\n  margin: 0;padding: 0;\n}\n.one{\n  width: 200px;\n  height: 200px;\n  outline: 1px solid;\n  position: absolute;\n  top: 100px;\n  left: 100px;\n}\n.two{\n  width: 100px;\n  height: 100px;\n  outline: 1px solid red;\n  position: absolute;\n  top: 50px;\n  left: 50px;\n}\n.three{\n  width: 50px;\n  height: 50px;\n  background-color: pink;\n  position: absolute;\n  top: 0;\n  left: 0;\n}</code></pre></div><p>在浏览器中的浏览效果如下：这里 <em>three</em> 盒子就是以 <em>two</em> 盒子的左上角作为的参考点</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-16-023731.png\" alt=\"image-20210916103730739\" contenteditable=\"false\"><br></p><p><br></p><p>如果我们对代码稍作修改，取消 <em>two</em> 盒子的定位，那么 <em>three</em> 盒子就会以 <em>one</em> 盒子的左上角来作为参考点，如下：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.two{\n  width: 100px;\n  height: 100px;\n  outline: 1px solid red;\n  margin: 50px 0 0 50px; /* 使用margin来让该盒子进行一些偏离 */      \n}</code></pre></div><p>在浏览器中的浏览效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-16-023917.png\" alt=\"image-20210916103916507\" contenteditable=\"false\"><br></p><h3><em>fixed</em> 固定定位</h3><p>所谓固定定位，可以看作是一种特殊的绝对定位，所以自然而然固定定位也是会脱离标准流的。</p><p><br></p><p>固定定位的特点是相对于浏览器窗口进行定位的。</p><p><br></p><p>换句话说，对一个盒子进行固定定位以后，无论页面如何滚动，这个盒子的显示位置都是不会变化的。</p><p><br></p><p>固定定位在 <em>PC</em> 端中经常用于显示在页面中位置固定不变的页面 <em>header</em>，以及移动端中位置固定不变的 <em>header</em> 和 <em>footer</em>。</p><h3><em>sticky</em> 粘性定位</h3><p>在 <em>CSS3</em> 中，新增了一种定位方式：<em>sticky</em>。</p><p><br></p><p><em>sticky</em>，中文的字面意思是“粘，粘贴”的意思，所以这种定位方式可以称之为粘性定位。</p><p><br></p><p>目前大部分浏览器都已经支持了这种定位方式。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-16-024626.png\" alt=\"image-20210916104626067\" contenteditable=\"false\"><br></p><p><br></p><p>要设置一个元素的定位方式为粘性定位，首先需要将 <em>position</em> 属性设置为 <em>sticky</em>。</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">position: sticky;   /* 设置定位方式为粘性定位 */</code></pre></div><p>接下来有如下几个需要注意的点：</p><ul><li><p>父元素的 <em>overflow</em> 必须是 <em>visible</em>，不能是 <em>hidden</em> 或者 <em>auto</em>，因为父节点定位设置为 <em>overflow:hidden</em> 则父容器无法进行滚动。</p></li><li><p>父元素的高度不能低于 <em>sticky</em> 元素的高度 。</p></li><li><p>如果父元素没有设置定位（<em>position:relative | absolute | fixed</em>），则相对于 <em>viewprot</em> 进行定位，否则以定位的父元素为参考点。</p></li><li><p>设置阀值：需要指定 <em>top</em>、<em>right</em>、<em>bottom</em> 或 <em>left</em> 四个阈值其中之一，才可使粘性定位生效。否则其行为与相对定位相同。并且 <em>top</em> 和 <em>bottom</em> 同时设置时，<em>top</em> 生效的优先级高；<em>left</em> 和 <em>right</em> 同时设置时，<em>left</em> 的优先级高。</p></li></ul><p>下面是一个粘性定位的示例：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;h1&gt;我是标题，题题，题，...&lt;/h1&gt;\n&lt;nav&gt;\n  &lt;h3&gt;导航A&lt;/h3&gt;\n  &lt;h3&gt;导航B&lt;/h3&gt;\n  &lt;h3&gt;导航C&lt;/h3&gt;\n&lt;/nav&gt;\n&lt;article&gt;\n  &lt;p&gt;今晚的爱奇艺尖叫之夜中，唐嫣上台领取年度戏剧女艺人奖，主持人朱丹希望她分享婚后甜蜜，可唐嫣已经下台，引发网友质疑场面尴尬。刚刚，朱丹发文回应，表示唐嫣没有不礼貌，自己也没有尴尬。随后，唐嫣也评论：“美丽的误会”\n  &lt;/p&gt;\n  &lt;p&gt;韩寒：我的生活有两个节点，一个是出书，另一个就是写博客。出书让我有了收入，博客让我有了跟读者的连接。我从小就被贴过很多标签，每多一个标签就更接近真实的我。微博也一样，每一次更新都跟随着时代的风向，与时代同行。&lt;/p&gt;\n  &lt;p&gt;《游戏人生》作者榎宫祐 表示，近日有朋友想成为漫画家，过来找他商量。&lt;br&gt;\n    他：“漫画家相当于无职啊，月收入又低，如果请助手花费更大。”（为了让朋友知道现实，又不否定梦想的小心翼翼的说法）&lt;br&gt;\n    朋友：“可是我有一栋公寓用来收租唉......”&lt;br&gt;\n    他：“那你想怎么活就怎么活吧！” ​​​​&lt;/p&gt;\n  &lt;p&gt;【湖北一小学三年级才教数学，校长回应争议：实验班的成绩远高于对比班】湖北赤壁一小学施行三年级才上数学课的教学设置，引起关注。该校校长表示，数学是一个抽象思维的功课，6岁的小孩是形象思维发展的最佳期，应该把数学往后移，按照知识发展规律。从三年级开始学数学，用3年时间学完原本5年的课程是可行的，并且经过3年的实验，实验班的成绩都要远高于对比班。\n  &lt;/p&gt;\n  &lt;p&gt;刘国梁：暮然回首这一路走来⋯⋯感恩国家队30年的培养，把我从一个13岁的孩子，培养成大满贯、总教练、再到乒协主席🏓️[心]感谢这么多年跟我一起努力征战国际赛场的教练员和运动员，是你们辛勤的付出取得的荣耀造就了今天的自己[抱抱][心]感动的是亿万国人和球迷粉丝，这么多年不离不弃的支持，才有了今日国乒的新辉煌。赢不狂.输不慌.陪国乒.战东京！\n  &lt;/p&gt;\n&lt;/article&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">body {\n  height: 5000px;\n  /* 为了让页面可以滑动 */\n}\n\nnav {\n  display: flex;\n  justify-content: start;\n  width: 100%;\n  position: sticky;\n  /* 设置定位方式为粘性定位 */\n  top: 20px;\n  /* 设置阀值，滚动到 top 值为 20px 的时候不再能够滚动*/\n}\n\nnav h3 {\n  outline: 1px solid #fff;\n  background-color: #333;\n  color: #fff;\n  text-align: center;\n  padding: 10px;\n}</code></pre></div><h2>真题解答</h2><ul><li><p><em>position</em> 有哪些值，各自的用法如何？</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p>目前在 <em>CSS</em> 中，有 <em>5</em> 种定位方案，分别是：</p><ol><li><p><em>static</em>：该关键字指定元素使用正常的布局行为，即元素在文档常规流中当前的布局位置。</p></li><li><p><em>relative</em>：相对定位的元素是在文档中的正常位置偏移给定的值，但是不影响其他元素的偏移。</p></li><li><p><em>absolute</em>：相对定位的元素并未脱离文档流，而绝对定位的元素则脱离了文档流。在布置文档流中其它元素时，绝对定位元素不占据空间。绝对定位元素相对于最近的非 <em>static</em> 祖先元素定位。</p></li><li><p><em>fixed</em>：固定定位与绝对定位相似，但元素的包含块为 <em>viewport</em> 视口。该定位方式常用于创建在滚动屏幕时仍固定在相同位置的元素。</p></li><li><p><em>sticky</em>：粘性定位可以被认为是相对定位和固定定位的混合。元素在跨越特定阈值前为相对定位，之后为固定定位。</p></li></ol></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666075315765",
+    typeId: ObjectId("634d7fc47797638ec96fe2ee")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e4b092fac4881713db2cb"),
+    interviewTitle: "介绍下 BFC 及其应用",
+    interviewContent: "<h1><em>BFC</em></h1><h2>经典真题</h2><ul><li><p>介绍下 <em>BFC</em> 及其应用</p></li><li><p>介绍下 <em>BFC、IFC、GFC</em> 和 <em>FFC</em></p></li></ul><h2>搞懂各种 <em>FC</em></h2><p>一看到 <em>BFC、IFC、GFC</em> 和 <em>FFC</em>，大家可能会想到 <em>KFC</em>。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-13-054223.png\" alt=\"image-20210913134223247\" contenteditable=\"false\"><br></p><p><br></p><p>然而这里所说的 <em>xFC</em> 和 <em>KFC</em> 没有任何关系。</p><p><br></p><p>那么这些 <em>FC</em> 究竟是啥呢？</p><p><br></p><p>不着急，我们先搞懂一个，后面的陆陆续续也就融会贯通了。</p><p><br></p><p>我们首先就来看这个 <em>BFC</em>，英语全称 <em>Block formatting contexts</em>，翻译成中文就是“块级格式化上下文”。</p><p><br></p><p>简单来说，就是页面中的一块渲染区域，并且有一套属于自己的渲染规则，它决定了元素如何对齐内容进行布局，以及与其他元素的关系和相互作用。 当涉及到可视化布局的时候，<em>BFC</em> 提供了一个环境，<em>HTML</em> 元素在这个环境中按照一定规则进行布局。</p><p><br></p><p>再简短一点，那就是：<strong><em>BFC</em> 是一个独立的布局环境，<em>BFC</em> 内部的元素布局与外部互不影响</strong></p><p><br></p><p>这就好比你在你自己家里面，你想怎么摆放你的家具都可以，你家的家具布局并不会影响邻居家的家具布局。</p><p><br></p><p>当然，虽然说 <em>BFC</em> 是一个独立的布局环境，里外不影响，但也不是意味着布局没有章法，基本的规矩还是要有的。</p><p><br></p><p>例如，<em>BFC</em> 的布局规则有如下几条：</p><ol><li><p>内部的 <em>Box</em> 会在垂直方向一个接着一个地放置。</p></li><li><p><em>Box</em> 垂直方向上的距离由 <em>margin</em> 决定。属于同一个 <em>BFC</em> 的两个相邻的 <em>Box</em> 的 <em>margin</em> 会发生重叠。</p></li><li><p>每个盒子的左外边框紧挨着包含块的左边框，即使浮动元素也是如此。</p></li><li><p><em>BFC</em> 的区域不会与浮动 <em>Box</em> 重叠。</p></li><li><p><em>BFC</em> 就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素，反之亦然。</p></li><li><p>计算 <em>BFC</em> 的高度时，浮动子元素也参与计算。</p></li></ol><p>诶？？</p><p><br></p><p>这好像在我们的 <em>body</em> 元素里面，盒子天然就是这样的布局规则呀？</p><p><br></p><p>没错，实际上在一个标准流中 <em>body</em> 元素就是一个天然的 <em>BFC</em>。</p><p><br></p><p>那么如果其他区域，我想单独设置成一个 <em>BFC</em>，该怎么办呢？这里记录了一些常见的方式：</p><table><thead><tr><th><p>元素或属性</p></th><th><p>属性值</p></th></tr></thead><tbody><tr><td><p>根元素</p></td><td><p><br></p></td></tr><tr><td><p>float</p></td><td><p>left、right</p></td></tr><tr><td><p>postion</p></td><td><p>absolute、fixed</p></td></tr><tr><td><p>overflow</p></td><td><p>auto、scroll、hidden</p></td></tr><tr><td><p>display</p></td><td><p>inline-block、table-cell</p></td></tr></tbody></table><blockquote><p>上面只记录了一些常见的方式，完整的 <em>BFC</em> 触发方式可以参阅：<em>https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context</em></p></blockquote><p>那么块级格式化上下文有啥具体的用处呢？我们来看几个场景</p><ol><li><p>解决浮动元素令父元素高度坍塌的问题</p></li></ol><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"father\"&gt;\n   &lt;div class=\"son\"&gt;&lt;/div&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.father{\n  border: 5px solid;\n}\n.son{\n  width: 100px;\n  height: 100px;\n  background-color: blue;\n  float: left;\n}</code></pre></div><p>在上面的代码中，父元素的高度是靠子元素撑起来的，但是一旦我们给子元素设置了浮动，那么父元素的高度就塌陷了。如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-13-060809.png\" alt=\"image-20210913140809007\" contenteditable=\"false\"><br></p><p><br></p><p>此时我们就可以将父元素设置成一个 <em>BFC</em>，例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.father{\n  border: 5px solid;\n  overflow: hidden; \n  /* 将父元素设置为一个 BFC */\n}\n.son{\n  width: 100px;\n  height: 100px;\n  background-color: blue;\n  float: left;\n}</code></pre></div><p>效果：可以看到由于父元素变成 <em>BFC</em>，高度并没有产生塌陷了，其原因是在计算 <em>BFC</em> 的高度时，浮动子元素也参与计算</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-13-060948.png\" alt=\"image-20210913140948390\" contenteditable=\"false\"><br></p><ol start=\"2\"><li><p>非浮动元素被浮动元素覆盖</p></li></ol><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"box1\"&gt;&lt;/div&gt;\n&lt;div class=\"box2\"&gt;&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.box1{\n  width: 100px;\n  height: 50px;\n  background-color: red;\n  float: left;\n}\n.box2{\n  width: 50px;\n  height: 50px;\n  background-color: blue;\n}</code></pre></div><p>在上面的代码中，由于 <em>box1</em> 设置了浮动效果，所以会脱离标准流，自然而然 <em>box2</em> 会往上面跑，结果就被高度和自己一样的 <em>box1</em> 给挡住了。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-13-061556.png\" alt=\"image-20210913141555490\" contenteditable=\"false\"><br></p><p><br></p><p>接下来我们设置 <em>box2</em> 为 <em>BFC</em>，如下：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.box1{\n  width: 100px;\n  height: 50px;\n  background-color: red;\n  float: left;\n}\n.box2{\n  width: 50px;\n  height: 50px;\n  background-color: blue;\n  overflow: hidden;\n}</code></pre></div><p>效果：由于 <em>BFC</em> 的区域不会与浮动 <em>box</em> 重叠，所以即使 <em>box1</em> 因为浮动脱离了标准流，<em>box2</em> 也不会被 <em>box1</em> 遮挡</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-13-061805.png\" alt=\"image-20210913141805543\" contenteditable=\"false\"><br></p><p><br></p><p>基于此特点，我们就可以制作两栏自适应布局，方法就是给固定栏设置固定宽度，给不固定栏开启 <em>BFC</em>。</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"left\"&gt;导航栏&lt;/div&gt;\n&lt;div class=\"right\"&gt;这是右侧&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">*{\n  margin: 0;\n  padding: 0;\n}\n.left {\n  width: 200px;\n  height: 100vh;\n  background-color: skyblue;\n  float: left;\n}\n\n.right {\n  width: calc(100% - 200px); \n  height: 100vh;\n  background-color: yellowgreen;\n}</code></pre></div><p>效果：在上面的代码中，我们要设置两栏布局，左边栏宽度固定，右边栏自适应。结果我们发现右侧出现了空白</p><p><br></p><p>究其原因就是右侧区域与浮动盒子重叠了</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-13-063034.png\" alt=\"image-20210913143033581\" contenteditable=\"false\"><br></p><p><br></p><p>修改 <em>.right</em> 部分的代码，添加 <em>overflow:hidden</em> 使其成为一个 <em>BFC</em>：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.right {\n  width: calc(100% - 200px); \n  height: 100vh;\n  background-color: yellowgreen;\n  overflow: hidden;\n}</code></pre></div><p>效果：因为 <em>BFC</em> 的区域不会与浮动 <em>Box</em> 重叠，所以右侧空白没有了</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-13-063330.png\" alt=\"image-20210913143330616\" contenteditable=\"false\"><br></p><ol start=\"3\"><li><p>外边距垂直方向重合的问题</p></li></ol><p><em>BFC</em> 还能够解决 <em>margin</em> 折叠的问题，例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"box1\"&gt;&lt;/div&gt;\n&lt;div class=\"box2\"&gt;&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">* {\n  margin: 0;\n  padding: 0;\n}\n\n.box1{\n  width: 100px;\n  height: 100px;\n  background-color: red;\n  margin-bottom: 10px;\n}\n.box2{\n  width: 100px;\n  height: 100px;\n  background-color: blue;\n  margin-top: 10px;\n}</code></pre></div><p>效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-13-063850.png\" alt=\"image-20210913143849932\" contenteditable=\"false\"><br></p><p><br></p><p>此时我们可以在 box2 外部再包含一个 div，并且将这个 div 设置为 <em>BFC</em>，如下：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"box1\"&gt;&lt;/div&gt;\n&lt;div class=\"container\"&gt;\n  &lt;div class=\"box2\"&gt;&lt;/div&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">* {\n  margin: 0;\n  padding: 0;\n}\n\n.box1{\n  width: 100px;\n  height: 100px;\n  background-color: red;\n  margin-bottom: 10px;\n}\n.box2{\n  width: 100px;\n  height: 100px;\n  background-color: blue;\n  margin-top: 10px;\n}\n.container{\n  overflow: hidden;\n}</code></pre></div><p>效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-13-064106.png\" alt=\"image-20210913144106258\" contenteditable=\"false\"><br></p><p><br></p><p><em>OK</em>，到这里你应该明白什么是 <em>BFC</em> 以及 <em>BFC</em> 的触发规则和其使用场景了。</p><p><br></p><p>明白了 <em>BFC</em>，那么其他的 <em>IFC、GFC</em> 和 <em>FFC</em> 也就大同小异了。</p><ul><li><p><em>IFC</em>（<em>Inline formatting context</em>）：翻译成中文就是“行内格式化上下文”，也就是一块区域以行内元素的形式来格式化</p></li><li><p><em>GFC</em>（<em>GrideLayout formatting contexts</em>）：翻译成中文就是“网格布局格式化上下文”，将一块区域以 <em>grid</em> 网格的形式来格式化</p></li><li><p><em>FFC</em>（<em>Flex formatting contexts</em>）：翻译成中文就是“弹性格式化上下文“，将一块区域以弹性盒的形式来格式化</p></li></ul><blockquote><p>更多关于格式化上下文的内容，可以参阅 <em>MDN</em>：</p><p><br></p><p><em>BFC</em>：<em>https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Block_formatting_context</em></p><p><br></p><p><em>IFC</em>：<em>https://developer.mozilla.org/zh-CN/docs/Web/CSS/Inline_formatting_context</em></p></blockquote><h2>真题解答</h2><ul><li><p>介绍下 <em>BFC</em> 及其应用</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p>所谓 <em>BFC</em>，指的是一个独立的布局环境，<em>BFC</em> 内部的元素布局与外部互不影响。</p><p><br></p><p>触发 <em>BFC</em> 的方式有很多，常见的有：</p><ul><li><p>设置浮动</p></li><li><p><em>overflow</em> 设置为 <em>auto、scroll、hidden</em></p></li><li><p><em>positon</em> 设置为 <em>absolute、fixed</em></p></li></ul><p>常见的 <em>BFC</em> 应用有：</p><ul><li><p>解决浮动元素令父元素高度坍塌的问题</p></li><li><p>解决非浮动元素被浮动元素覆盖问题</p></li><li><p>解决外边距垂直方向重合的问题</p></li></ul></blockquote><ul><li><p>介绍下 <em>BFC、IFC、GFC</em> 和 <em>FFC</em></p></li></ul><blockquote><p>参考答案：</p><ul><li><p><em>BFC</em>：块级格式上下文，指的是一个独立的布局环境，<em>BFC</em> 内部的元素布局与外部互不影响。</p></li><li><p><em>IFC</em>：行内格式化上下文，将一块区域以行内元素的形式来格式化。</p></li><li><p><em>GFC</em>：网格布局格式化上下文，将一块区域以 <em>grid</em> 网格的形式来格式化</p></li><li><p><em>FFC</em>：弹性格式化上下文，将一块区域以弹性盒的形式来格式化</p></li></ul></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666075401295",
+    typeId: ObjectId("634d7fc47797638ec96fe2ee")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e4bcc2fac4881713db2e0"),
+    interviewTitle: "请简述 CSS 中属性的计算过程是怎样的",
+    interviewContent: "<h1>CSS 属性计算过程</h1><p>你是否了解 CSS 的属性计算过程呢？</p><p><br></p><p>有的同学可能会讲，CSS属性我倒是知道，例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">p{\n  color : red;\n}</code></pre></div><p>上面的 CSS 代码中，p 是元素选择器，color 就是其中的一个 CSS 属性。</p><p><br></p><p>但是要说 CSS 属性的计算过程，还真的不是很清楚。</p><p><br></p><p>没关系，通过此篇文章，能够让你彻底明白什么是 CSS 属性的计算流程。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-13-060434.png\" alt=\"image-20220813140434032\" contenteditable=\"false\"><br></p><p><br></p><p>首先，不知道你有没有考虑过这样的一个问题，假设在 HTML 中有这么一段代码：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;body&gt;\n  &lt;h1&gt;这是一个h1标题&lt;/h1&gt;\n&lt;/body&gt;</code></pre></div><p>上面的代码也非常简单，就是在 body 中有一个 h1 标题而已，该 h1 标题呈现出来的外观是如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-13-060724.png\" alt=\"image-20220813140724136\" contenteditable=\"false\"><br></p><p><br></p><p>目前我们没有设置该 h1 的任何样式，但是却能看到该 h1 有一定的默认样式，例如有默认的字体大小、默认的颜色。</p><p><br></p><p>那么问题来了，我们这个 h1 元素上面除了有默认字体大小、默认颜色等属性以外，究竟还有哪些属性呢？</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-15-014216.png\" alt=\"image-20220815094215982\" contenteditable=\"false\"><br></p><p><br></p><p>答案是**该元素上面会有 CSS 所有的属性。**你可以打开浏览器的开发者面板，选择【元素】，切换到【计算样式】，之后勾选【全部显示】，此时你就能看到在此 h1 上面所有 CSS 属性对应的值。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-13-061516.png\" alt=\"image-20220813141516153\" contenteditable=\"false\"><br></p><p><br></p><p>换句话说，<strong>我们所书写的任何一个 HTML 元素，实际上都有完整的一整套 CSS 样式</strong>。这一点往往是让初学者比较意外的，因为我们平时在书写 CSS 样式时，往往只会书写必要的部分，例如前面的：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">p{\n  color : red;\n}</code></pre></div><p>这往往会给我们造成一种错觉，认为该 p 元素上面就只有 color 属性。而真实的情况确是，任何一个 HTML 元素，都有一套完整的 CSS 样式，只不过你没有书写的样式，<strong>大概率可能</strong>会使用其默认值。例如上图中 h1 一个样式都没有设置，全部都用的默认值。</p><p><br></p><p>但是注意，我这里强调的是“大概率可能”，难道还有我们“没有设置值，但是不使用默认值”的情况么？</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-15-014459.png\" alt=\"image-20220815094458940\" contenteditable=\"false\"><br></p><p><br></p><p>嗯，确实有的，所以我才强调你要了解“CSS 属性的计算过程”。</p><p><br></p><p>总的来讲，属性值的计算过程，分为如下这么 <em>4</em> 个步骤：</p><ul><li><p>确定声明值</p></li><li><p>层叠冲突</p></li><li><p>使用继承</p></li><li><p>使用默认值</p></li></ul><h2>确定声明值</h2><p>首先第一步，是确定声明值。所谓声明值就是作者自己所书写的 CSS 样式，例如前面的：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">p{\n  color : red;\n}</code></pre></div><p>这里我们声明了 p 元素为红色，那么就会应用此属性设置。</p><p><br></p><p>当然，除了作者样式表，一般浏览器还会存在“用户代理样式表”，简单来讲就是浏览器内置了一套样式表。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-13-063500.png\" alt=\"image-20220813143500066\" contenteditable=\"false\"><br></p><p><br></p><p>在上面的示例中，作者样式表中设置了 color 属性，而用户代理样式表（浏览器提供的样式表）中设置了诸如 display、margin-block-start、margin-block-end、margin-inline-start、margin-inline-end 等属性对应的值。</p><p><br></p><p>这些值目前来讲也没有什么冲突，因此最终就会应用这些属性值。</p><h2>层叠冲突</h2><p>在确定声明值时，可能出现一种情况，那就是声明的样式规则发生了冲突。</p><p><br></p><p>此时会进入解决层叠冲突的流程。而这一步又可以细分为下面这三个步骤：</p><ul><li><p>比较源的重要性</p></li><li><p>比较优先级</p></li><li><p>比较次序</p></li></ul><p>来来来，我们一步一步来看。</p><h3>比较源的重要性</h3><p>当不同的 CSS 样式来源拥有相同的声明时，此时就会根据样式表来源的重要性来确定应用哪一条样式规则。</p><p><br></p><p>那么问题来了，咱们的样式表的源究竟有几种呢？</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-23-100047.png\" alt=\"image-20220823180047075\" contenteditable=\"false\"><br></p><p><br></p><p>整体来讲有三种来源：</p><ul><li><p>浏览器会有一个基本的样式表来给任何网页设置默认样式。这些样式统称<strong>用户代理样式</strong>。</p></li><li><p>网页的作者可以定义文档的样式，这是最常见的样式表，称之为<strong>页面作者样式</strong>。</p></li><li><p>浏览器的用户，可以使用自定义样式表定制使用体验，称之为<strong>用户样式</strong>。</p></li></ul><p>对应的重要性顺序依次为：页面作者样式 &gt; 用户样式 &gt; 用户代理样式</p><p><br></p><p>更详细的来源重要性比较，可以参阅 <em>MDN</em>：<em>https://developer.mozilla.org/zh-CN/docs/Web/CSS/Cascade</em></p><p><br></p><p>我们来看一个示例。</p><p><br></p><p>例如现在有<strong>页面作者样式表</strong>和<strong>用户代理样式表</strong>中存在属性的冲突，那么会以作者样式表优先。</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">p{\n  color : red;\n  display: inline-block;\n}</code></pre></div><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-13-064222.png\" alt=\"image-20220813144222152\" contenteditable=\"false\"><br></p><p><br></p><p>可以明显的看到，作者样式表和用户代理样式表中同时存在的 display 属性的设置，最终作者样式表干掉了用户代理样式表中冲突的属性。这就是第一步，根据不同源的重要性来决定应用哪一个源的样式。</p><h3>比较优先级</h3><p>那么接下来，如果是在在同一个源中有样式声明冲突怎么办呢？此时就会进行样式声明的优先级比较。</p><p><br></p><p>例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"test\"&gt;\n  &lt;h1&gt;test&lt;/h1&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.test h1{\n  font-size: 50px;\n}\n\nh1 {\n  font-size: 20px;\n}</code></pre></div><p>在上面的代码中，同属于<strong>页面作者样式</strong>，源的重要性是相同的，此时会以选择器的权重来比较重要性。</p><p><br></p><p>很明显，上面的选择器的权重要大于下面的选择器，因此最终标题呈现为 <em>50px</em>。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-16-071546.png\" alt=\"image-20210916151546500\" contenteditable=\"false\"><br></p><p><br></p><p>可以看到，落败的作者样式在 <em>Elements&gt;Styles</em> 中会被划掉。</p><p><br></p><p>有关选择器权重的计算方式，不清楚的同学，可以进入此传送门：<em>https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity</em></p><h3>比较次序</h3><p>经历了上面两个步骤，大多数的样式声明能够被确定下来。但是还剩下最后一种情况，那就是样式声明既是同源，权重也相同。</p><p><br></p><p>此时就会进入第三个步骤，比较样式声明的次序。</p><p><br></p><p>举个例子：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">h1 {\n  font-size: 50px;\n}\n\nh1 {\n  font-size: 20px;\n}</code></pre></div><p>在上面的代码中，同样都是<strong>页面作者样式</strong>，<strong>选择器的权重也相同</strong>，此时位于下面的样式声明会层叠掉上面的那一条样式声明，最终会应用 <em>20px</em> 这一条属性值。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-23-103928.png\" alt=\"image-20220823183928330\" contenteditable=\"false\"><br></p><p><br></p><p>至此，样式声明中存在冲突的所有情况，就全部被解决了。</p><h2>使用继承</h2><p>层叠冲突这一步完成后，解决了相同元素被声明了多条样式规则究竟应用哪一条样式规则的问题。</p><p><br></p><p>那么如果没有声明的属性呢？此时就使用默认值么？</p><p><br></p><p><em>No、No、No</em>，别急，此时还有第三个步骤，那就是使用继承而来的值。</p><p><br></p><p>例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div&gt;\n  &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div {\n  color: red;\n}</code></pre></div><p>在上面的代码中，我们针对 div 设置了 color 属性值为红色，而针对 p 元素我们没有声明任何的属性，但是由于 color 是可以继承的，因此 p 元素从最近的 div 身上继承到了 color 属性的值。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-13-065102.png\" alt=\"image-20220813145102293\" contenteditable=\"false\"><br></p><p><br></p><p>这里有两个点需要同学们注意一下。</p><p><br></p><p>首先第一个是我强调了是<strong>最近的</strong> div 元素，看下面的例子：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"test\"&gt;\n  &lt;div&gt;\n    &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;\n  &lt;/div&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div {\n  color: red;\n}\n.test{\n  color: blue;\n}</code></pre></div><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-13-065653.png\" alt=\"image-20220813145652726\" contenteditable=\"false\"><br></p><p><br></p><p>因为这里并不涉及到选中 p 元素声明 color 值，而是从父元素上面继承到 color 对应的值，因此这里是<strong>谁近就听谁</strong>的，初学者往往会产生混淆，又去比较权重，但是这里根本不会涉及到权重比较，因为压根儿就没有选中到 p 元素。</p><p><br></p><p>第二个就是哪些属性能够继承？</p><p><br></p><p>关于这一点的话，大家可以在 MDN 上面很轻松的查阅到。例如我们以 text-align 为例，如下图所示：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-13-070148.png\" alt=\"image-20220813150147885\" contenteditable=\"false\"><br></p><h2>使用默认值</h2><p>好了，目前走到这一步，如果属性值都还不能确定下来，那么就只能是使用默认值了。</p><p><br></p><p>如下图所示：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-13-070825.png\" alt=\"image-20220813150824752\" contenteditable=\"false\"><br></p><p><br></p><p>前面我们也说过，一个 HTML 元素要在浏览器中渲染出来，必须具备所有的 CSS 属性值，但是绝大部分我们是不会去设置的，用户代理样式表里面也不会去设置，也无法从继承拿到，因此最终都是用默认值。</p><p><br></p><p>好了，这就是关于 CSS 属性计算过程的所有知识了。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-14-154655.png\" alt=\"image-20220814234654914\" contenteditable=\"false\"><br></p><h2>一道面试题</h2><p>好了，学习了今天的内容，让我来用一道面试题测试测试大家的理解程度。</p><p><br></p><p>下面的代码，最终渲染出来的效果，a 元素是什么颜色？p 元素又是什么颜色？</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div&gt;\n  &lt;a href=\"\"&gt;test&lt;/a&gt;\n  &lt;p&gt;test&lt;/p&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div {\n  color: red;\n}</code></pre></div><p>大家能说出为什么会呈现这样的结果么？</p><p><br></p><p>解答如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-13-071941.png\" alt=\"image-20220813151941113\" contenteditable=\"false\"><br></p><p><br></p><p>实际上原因很简单，因为 a 元素在用户代理样式表中已经设置了 color 属性对应的值，因此会应用此声明值。而在 p 元素中无论是作者样式表还是用户代理样式表，都没有对此属性进行声明，然而由于 color 属性是可以继承的，因此最终 p 元素的 color 属性值通过继承来自于父元素。</p><p><br></p><p>你答对了么？-）</p><div contenteditable=\"false\"><hr></div><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666075596460",
+    typeId: ObjectId("634d7fc47797638ec96fe2ee")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e4c932fac4881713db2ea"),
+    interviewTitle: "请简述一下 CSS 中的层叠规则",
+    interviewContent: "<h1><em>CSS</em> 层叠继承规则总结</h1><h2>经典真题</h2><ul><li><p>请简述一下 <em>CSS</em> 中的层叠规则</p></li></ul><h2><em>CSS</em> 中的层叠继承规则</h2><p>在前面《<em>CSS</em>属性的计算过程》中，我们介绍了每一个元素都有都有所有的属性，每一个属性都会通过一系列的计算过程得到最终的值。</p><p><br></p><p>这里来回顾一下计算过程，大致有以下几个步骤：</p><ul><li><p>确定声明值</p></li><li><p>层叠冲突</p></li><li><p>使用继承</p></li><li><p>使用默认值</p></li></ul><p>其中的第二步和第三步层叠和继承会有一些需要注意的知识点，这里我们一起来看一下。</p><h2>层叠规则</h2><p><em>CSS</em> 是 <em>Cascading Style Sheets</em> 的缩写，这暗示层叠（<em>cascade</em>）的概念是很重要的。</p><p><br></p><p>在最基本的层面上，它表明 <em>CSS</em> 规则的顺序很重要，但它比那更复杂。</p><p><br></p><p>什么选择器在层叠中胜出取决于三个因素（这些都是按重量级顺序排列的，前面的的一种会否决后一种）：</p><ul><li><p>重要性（<em>Importance</em>）</p></li><li><p>专用性（<em>Specificity</em>）</p></li><li><p>源代码次序（<em>Source order</em>）</p></li></ul><h3>重要性</h3><p>在 <em>CSS</em> 中，有一个特别的语法可以让一条规则总是优先于其他规则： <em>!important</em> 。</p><p><br></p><p>知道 <em>!important</em> 存在是很有用的，这样当你在别人的代码中遇到它时，你就知道它是什么了。</p><p><br></p><p>但是！建议你千万不要使用它，除非你绝对必须使用它。您可能不得不使用它的一种情况是，当您在修改某个组件样式时，你不能编辑该组件核心的 <em>CSS</em> 模块，又或者你确实想要重写一种不能以其他方式覆盖的样式。</p><p><br></p><p>但是，如果你能避免的话，不要使用它。由于 <em>!important</em> 改变了层叠正常工作的方式，因此调试 <em>CSS</em> 问题，尤其是在大型样式表中，会变得非常困难。</p><h3>专用性</h3><p>专用性基本上是衡量选择器的具体程度的一种方法，主要是指它能匹配多少元素。</p><p><br></p><p>元素选择器具有很低的专用性。类选择器具有更高的专用性，所以将战胜元素选择器。<em>ID</em> 选择器有甚至更高的专用性, 所以将战胜类选择器，战胜 <em>ID</em> 选择器的方法则是 <em>style</em> 中的样式或者 <em>!important</em>。</p><p><br></p><p>一个选择器具有的专用性的量可以用四种不同的值（或组件）来衡量的，它们可以被认为是千位，百位，十位和个位，在四个列中的四个简单数字：</p><ul><li><p>千位：如果声明是在 <em>style</em> 属性中该列加 <em>1</em> 分（这样的声明没有选择器，所以它们的专用性总是 <em>1000</em>）否则为 <em>0</em>。</p></li><li><p>百位：在整个选择器中每包含一个 <em>ID</em> 选择器就在该列中加 <em>1</em> 分。</p></li><li><p>十位：在整个选择器中每包含一个类选择器、属性选择器、或者伪类就在该列中加 <em>1</em> 分。</p></li><li><p>个位：在整个选择器中每包含一个元素选择器或伪元素就在该列中加 <em>1</em> 分。</p></li></ul><blockquote><p>注：通用选择器（*）, 复合选择器（+、&gt;、~、空格）和否定伪类（:not）在专用性中无影响。</p></blockquote><p>举个例子：</p><table><thead><tr><th><p><strong>选择器</strong></p></th><th><p>千位</p></th><th><p>百位</p></th><th><p>十位</p></th><th><p>个位</p></th><th><p>合计值</p></th></tr></thead><tbody><tr><td><p>h1</p></td><td><p>0</p></td><td><p>0</p></td><td><p>0</p></td><td><p>1</p></td><td><p>0001</p></td></tr><tr><td><p>#indentifier</p></td><td><p>0</p></td><td><p>1</p></td><td><p>0</p></td><td><p>0</p></td><td><p>0100</p></td></tr><tr><td><p>h1 + p::first-letter</p></td><td><p>0</p></td><td><p>0</p></td><td><p>0</p></td><td><p>3</p></td><td><p>0003</p></td></tr><tr><td><p>li &gt; a[href*=” zh-CN”] &gt; .inline-warning</p></td><td><p>0</p></td><td><p>0</p></td><td><p>2</p></td><td><p>2</p></td><td><p>0022</p></td></tr><tr><td><p>没有选择器, 规则在一个元素的 <em>style</em> 属性里</p></td><td><p>1</p></td><td><p>0</p></td><td><p>0</p></td><td><p>0</p></td><td><p>1000</p></td></tr></tbody></table><h3>源代码次序</h3><p>如果多个相互竞争的选择器具有相同的重要性和专用性，那么第三个因素将帮助决定哪一个规则获胜，也就是说，选择哪一个选择器取决于源码顺序。</p><p><br></p><p>例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">p {\n    color: red;\n}\n\n\np {\n    color: blue;\n}</code></pre></div><p>不过有一点大家需要注意的是，当多个 <em>CSS</em> 规则匹配相同的元素时，它们都被应用到该元素中。只不过后面因为层叠规则被层叠掉了而已。打开 <em>Elements &gt; Styles</em> 我们就能看到：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-18-014022.png\" alt=\"image-20210918094021662\" contenteditable=\"false\"><br></p><h2>继承规则</h2><p>所谓继承，就是应用于某个元素的一些属性值将由该元素的子元素继承，而有些则不会。</p><p><br></p><p>究竟哪些属性能够被子元素继承，可以参阅：<em>https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference</em></p><p><br></p><p><em>CSS</em> 为处理继承提供了四种特殊的通用属性值：</p><ul><li><p><em>inherit</em>：该值将应用到选定元素的属性值设置为与其父元素一样。</p></li><li><p><em>initial</em>：该值将应用到选定元素的属性值设置为与浏览器默认样式表中该元素设置的值一样。如果浏览器默认样式表中没有设置值，并且该属性是自然继承的，那么该属性值就被设置为 <em>inherit</em>。</p></li><li><p><em>unset</em>：该值将属性重置为其自然值，即如果属性是自然继承的，那么它就表现得像 <em>inherit</em>，否则就是表现得像 <em>initial</em>。</p></li><li><p><em>revert</em>：如果当前的节点没有应用任何样式，则将该属性恢复到它所拥有的值。换句话说，属性值被设置成自定义样式所定义的属性（如果被设置）， 否则属性值被设置成用户代理的默认样式。</p></li></ul><blockquote><p>注： <em>initial</em> 和 <em>unset</em> 不被 <em>IE</em> 支持。</p></blockquote><p><strong>继承的就近原则</strong></p><p><br></p><p>由于属性值是由继承而来，所以属性值会继承离自己近的那个元素的属性。例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"one\"&gt;\n  &lt;div class=\"two\"&gt;\n    &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;\n  &lt;/div&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.two {\n  color: blue;\n}\n\n.one {\n  color: red;\n}</code></pre></div><p>在上面的示例中，<em>two</em> 比 <em>one</em> 更加接近 <em>p</em>，所以最终采用的是 <em>two</em> 的 <em>color</em> 值。段落呈现蓝色。</p><h2>真题解答</h2><ul><li><p>请简述一下 <em>CSS</em> 中的层叠规则</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p><em>CSS</em> 中当属性值发生冲突时，通过层叠规则来计算出最终的属性值，层叠规则可以分为 <em>3</em> 块：</p><ul><li><p>重要性（<em>Importance</em>）：<em>!important</em>  设置该条属性值最重要，但是一般不推荐使用。</p></li><li><p>专用性（<em>Specificity</em>）：专用性主要是指它能匹配多少元素，匹配得越少专用性越高。</p></li><li><p>源代码次序（<em>Source order</em>）：在重要性和专用性都一致的情况下，属性值取决于源代码的先后顺序。</p></li></ul></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666075795223",
+    typeId: ObjectId("634d7fc47797638ec96fe2ee")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e4cd32fac4881713db2ee"),
+    interviewTitle: "CSS引用的方式有哪些？link和@import的区别？",
+    interviewContent: "<h1><em>import</em> 指令</h1><h2>经典真题</h2><ul><li><p><em>CSS</em> 引用的方式有哪些？<em>link</em> 和 <em>@import</em> 的区别？</p></li></ul><h2>来看看 <em>import</em> 指令是啥</h2><p><em>import</em> 指令是用来导入 <em>CSS</em> 样式的。</p><p><br></p><p>什么？导入样式不是已经有 <em>link</em> 标签了么？</p><p><br></p><p>没错，<em>link</em> 标签可以导入外部 <em>CSS</em> 样式，<em>import</em> 仍然可以导入外部 <em>CSS</em> 样式。</p><p><br></p><p>我们首先来看一下 <em>import</em> 的基本用法</p><ol><li><p>在 <em>HTML</em> 文件中导入外部样式</p></li></ol><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;style&gt;\n  @import url('./index.css');\n&lt;/style&gt;</code></pre></div><p>要在 <em>HTML</em> 源代码直接应用 <em>@import</em> 引入外部 <em>CSS</em> 文件，须要将 <em>@import</em> 放入 <em>style</em> 标签</p><ol start=\"2\"><li><p>在 <em>CSS</em> 文件中引入另一个 <em>CSS</em> 文件</p></li></ol><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">@import url('./index.css');\n/* 后面书写其他样式 */</code></pre></div><p>除了 <em>HTML</em> 源代码中使用 <em>style</em> 标签来运用 <em>@import</em>，在 <em>CSS</em> 文件代码中依旧可以或许使用 <em>@import</em>，这个时候就不须要 <em>style</em> 标签，而是直接应用 <em>@import</em> 就可，这样便可实现一个（多个）<em>CSS</em> 文件中引入套入别的一个（多个）<em>CSS</em> 文件。</p><ol start=\"3\"><li><p><em>@import</em> 规则还支持媒体查询，因此可以允许依赖媒体的导入</p></li></ol><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">@import \"printstyle.css\" print;\n/* 只在媒体为 print 时导入 \"printstyle.css\" 样式表 */</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">@import \"mobstyle.css\" screen and (max-width: 768px);\n/* 只在媒体为 screen 且视口最大宽度 768 像素时导入 \"mobstyle.css\" 样式表 */</code></pre></div><p>看完了 <em>@import</em> 的基本使用后，接下来我们来看一下它和 <em>link</em> 的区别：</p><ol><li><p>link属于 <em>HTML</em> 标签，而 <em>@import</em> 完全是 <em>CSS</em> 提供的一种方式。</p><p><br></p><p><em>link</em> 标签除了可以加载 <em>CSS</em> 外，还可以做很多其它的事情，比如定义 <em>RSS</em>，定义 <em>rel</em> 连接属性等，<em>@import</em> 就只能加载 <em>CSS</em> 了。</p></li><li><p><strong>加载顺序的差别。</strong></p><p><br></p><p>比如，在 <em>a.css</em> 中使用 <em>import</em> 引用 <em>b.css</em>，只有当使用当使用 <em>import</em> 命令的宿主 <em>css</em> 文件 <em>a.css</em> 被下载、解析之后，浏览器才会知道还有另外一个 <em>b.css</em> 需要下载，这时才去下载，然后下载后开始解析、构建 <em>render tree</em> 等一系列操作.</p></li><li><p><strong>兼容性的差别。</strong></p><p><br></p><p>由于 <em>@import</em> 是 <em>CSS2.1</em> 提出的所以老的浏览器不支持，<em>@import</em> 只有在 <em>IE5</em> 以上的才能识别，而 <em>link</em> 标签无此问题。</p></li><li><p><strong>当使用 <em>JS</em> 控制 <em>DOM</em> 去改变样式的时候，只能使用 <em>link</em> 标签，因为 <em>@import</em> 不是 <em>DOM</em> 可以控制的</strong>。</p><p><br></p><p>对于可换皮肤的网站而言，可以通过改变 <em>link</em> 标签这两个的 <em>href</em> 值来改变应用不用的外部样式表，但是对于 <em>import</em> 是无法操作的，毕竟不是标签。</p></li></ol><p>另外，从性能优化的角度来讲，尽量要避免使用 <em>@import</em>。</p><p><br></p><p>使用 <em>@import</em> 引入 <em>CSS</em> 会影响浏览器的并行下载。使用 <em>@import</em> 引用的 <em>CSS</em> 文件只有在引用它的那个 <em>CSS</em> 文件被下载、解析之后，浏览器才会知道还有另外一个 <em>CSS</em> 需要下载，这时才去下载，然后下载后开始解析、构建 <em>Render Tree</em> 等一系列操作。</p><p><br></p><p>多个 <em>@import</em> 会导致下载顺序紊乱。在 <em>IE</em> 中，<em>@import</em> 会引发资源文件的下载顺序被打乱，即排列在 <em>@import</em> 后面的 <em>JS</em> 文件先于 <em>@import</em> 下载，并且打乱甚至破坏 <em>@import</em> 自身的并行下载。</p><h2>真题解答</h2><ul><li><p><em>CSS</em> 引用的方式有哪些？<em>link</em> 和 <em>@import</em> 的区别？</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p><em>CSS</em> 引用的方式有：</p><ul><li><p>外联，通过 <em>link</em> 标签外部链接样式表</p></li><li><p>内联，在 <em>head</em> 标记中使用 <em>style</em> 标记定义样式</p></li><li><p>嵌入，在元素的开始标记里通过 <em>style</em> 属性定义样式</p></li></ul><p><em>link</em> 和 <em>@import</em> 的区别：</p><ol><li><p>**<em>link</em> 属于 <em>HTML</em> 标签，而 <em>@import</em> 完全是 <em>CSS</em> 提供的一种方式。</p><p><br></p><p><em>link</em> 标签除了可以加载 <em>CSS</em> 外，还可以做很多其它的事情，比如定义 <em>RSS</em>，定义 <em>rel</em> 连接属性等，<em>@import</em> 就只能加载 <em>CSS</em> 了。</p></li><li><p><strong>加载顺序的差别。</strong></p><p><br></p><p>比如，在 <em>a.css</em> 中使用 <em>import</em> 引用 <em>b.css</em>，只有当使用当使用 <em>import</em> 命令的宿主 <em>css</em> 文件 <em>a.css</em> 被下载、解析之后，浏览器才会知道还有另外一个 <em>b.css</em> 需要下载，这时才去下载，然后下载后开始解析、构建 <em>render tree</em> 等一系列操作.</p></li><li><p><strong>兼容性的差别。</strong></p><p><br></p><p>由于 <em>@import</em> 是 <em>CSS2.1</em> 提出的所以老的浏览器不支持，<em>@import</em> 只有在 <em>IE5</em> 以上的才能识别，而 <em>link</em> 标签无此问题。</p></li><li><p><strong>当使用 <em>JS</em> 控制 <em>DOM</em> 去改变样式的时候，只能使用 <em>link</em> 标签，因为 <em>@import</em> 不是 <em>DOM</em> 可以控制的</strong>。</p><p><br></p><p>对于可换皮肤的网站而言，可以通过改变 <em>link</em> 便签这两个的 <em>href</em> 值来改变应用不用的外部样式表，但是对于 <em>import</em> 是无法操作的，毕竟不是标签。</p></li></ol></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666075859958",
+    typeId: ObjectId("634d7fc47797638ec96fe2ee")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e4d382fac4881713db303"),
+    interviewTitle: "CSS 的计算属性知道吗？",
+    interviewContent: "<h1><em>CSS3</em> 的 <em>calc</em> 函数</h1><h2>经典真题</h2><ul><li><p><em>CSS</em> 的计算属性知道吗？</p></li></ul><h2><em>CSS3</em> 中的 <em>calc</em> 函数</h2><p><em>calc</em> 是英文单词 <em>calculate</em>（计算）的缩写，是 <em>CSS3</em> 的一个新增的功能。</p><p><br></p><p><em>MDN</em> 的解释为可以用在任何长度、数值、时间、角度、频率等处，语法如下：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">/* property: calc(expression) */\nwidth: calc(100% - 80px);</code></pre></div><p>可以用常见的 + - * / 符号来进行运算，但需要注意的是 + 和 - 必须用空格隔开，原因很简单，如果 - 号和计算的数字挨在一起，则浏览器在解析时会认为这可能是一个负值。</p><p><br></p><p>例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">width: calc(100% -8px); /* 这样会出错,结果为0 */</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">width: calc(100% - 8px); /* 当 + -  符号用空格隔开时,运算成功 */</code></pre></div><p>接下来我们来看一下 <em>calc</em> 函数的具体使用示例，如下：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"container\"&gt;\n  &lt;div class=\"item\"&gt;&lt;/div&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">* {\n  margin: 0;\n  padding: 0;\n}\n\n.container{\n  width: 500px;\n  height: 250px;\n  background-color: skyblue;\n  margin: 10px;\n  position: relative;\n}\n.item{\n  width: 100px;\n  height: 100px;\n  background-color: pink;\n  position: absolute;\n  left: calc(50% - 50px);\n  top: calc(50% - 50px);\n}</code></pre></div><p>效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-14-094033.png\" alt=\"image-20210914174033014\" contenteditable=\"false\"><br></p><p><br></p><p>更多关于 <em>calc</em> 函数信息可以参阅：<em>https://developer.mozilla.org/zh-CN/docs/Web/CSS/calc()</em></p><h2>真题解答</h2><ul><li><p><em>CSS</em> 的计算属性知道吗？</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p>即 <em>calc( )</em> 函数，主要用于指定元素的长度，支持所有 <em>CSS</em> 长度单位，运算符前后都需要保留一个空格。</p><p><br></p><p>比如： <em>width: calc(100% - 50px);</em></p></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666075960908",
+    typeId: ObjectId("634d7fc47797638ec96fe2ee")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e4d632fac4881713db307"),
+    interviewTitle: "是否了解过 CSS3 的媒体查询？",
+    interviewContent: "<h1><em>CSS3</em> 的媒介(<em>media</em>)查询</h1><h2>经典真题</h2><ul><li><p>如何使用媒体查询实现视口宽度大于 <em>320px</em> 小于 <em>640px</em> 时 <em>div</em> 元素宽度变成 <em>30%</em></p></li></ul><h2>媒体查询</h2><p>媒体查询英文全称 <em>Media Query</em>，顾名思义就是会查询用户所使用的媒体或者媒介。</p><p><br></p><p>在现在，网页的浏览终端是越来越多了。用户可以通过不同的终端来浏览网页，例如：<em>PC</em>，平板电脑，手机，电视等。尽管我们无法保证一个网站在不同屏幕尺寸和不同设备上看起来一模一样，但是至少要让我们的Web页面能适配用户的终端。</p><p><br></p><p>在 <em>CSS3</em> 中的 <em>Media Query</em> （媒体查询）模块就是用来让一个页面适应不同的终端的。</p><p><br></p><p>**<em>Media Type</em> 设备类型</p><p><br></p><p>首先我们来认识一下 <em>CSS</em> 中所支持的媒体类型。</p><p><br></p><p>在 <em>CSS2</em> 中常碰到的就是 <em>all</em>（全部）、<em>screen</em>（屏幕）和 <em>print</em>（页面打印或打印预览模式）。然而媒体的类型其实远不止这 <em>3</em> 种。</p><p><br></p><p>在 <em>W3C</em> 中共列出了 <em>10</em> 种媒体类型，如下表所示：</p><table><thead><tr><th><p>值</p></th><th><p>设备类型</p></th></tr></thead><tbody><tr><td><p>All</p></td><td><p>所有设备</p></td></tr><tr><td><p>Braille</p></td><td><p>盲人用点字法触觉回馈设备</p></td></tr><tr><td><p>Embossed</p></td><td><p>盲文打印机</p></td></tr><tr><td><p>Handheld</p></td><td><p>便携设备</p></td></tr><tr><td><p>Print</p></td><td><p>打印用纸或打印预览视图</p></td></tr><tr><td><p>Projection</p></td><td><p>各种投影设备</p></td></tr><tr><td><p>Screen</p></td><td><p>电脑显示器</p></td></tr><tr><td><p>Speech</p></td><td><p>语音或音频合成器</p></td></tr><tr><td><p>Tv</p></td><td><p>电视机类型设备</p></td></tr><tr><td><p>Tty</p></td><td><p>使用固定密度字母栅格的媒介，比如电传打字机和终端</p></td></tr></tbody></table><p>当然，虽然上面的表列出来了这么多，但是常用的也就是 <em>all</em>（全部）、<em>screen</em>（屏幕）和 <em>print</em>（页面打印或打印预览模式）这三种媒体类型。</p><p><br></p><p><strong>媒体类型引用方法</strong></p><p><br></p><p>引用媒体类型的方法有和很多，常见的媒体类型引用方法有：<em>link</em> 标签、<em>xml</em> 方式、<em>@import</em> 和 <em>CSS3</em> 新增的 <em>@media</em>。</p><ol><li><p><em>link</em> 方法</p></li></ol><p><em>link</em> 方法引入媒体类型其实就是在 <em>link</em> 标签引用样式的时候，通过 <em>link</em> 标签中的 <em>media</em> 属性来指定不同的媒体类型，如下：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;link rel=\"stylesheet\" href=\"index.css\" media=\"screen\" /&gt;\n&lt;link rel=\"stylesheet\" href=\"print.css\" media=\"print\" /&gt;</code></pre></div><ol start=\"2\"><li><p><em>xml</em> 方式</p></li></ol><p><em>xml</em> 方式和 <em>link</em> 方式比较相似，也是通过 <em>media</em> 属性来指定，如下：</p><div data-language=\"xml\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"xml\">&lt;? xml-stylesheet rel=\"stylesheet\" media=\"screen\" href=\"style.css\" ?&gt;</code></pre></div><ol start=\"3\"><li><p><em>@import</em></p></li></ol><p><em>@import</em> 引入媒体类型主要有两种方式，一种是在 CSS 样式表中通过 <em>@import</em> 调用另一个样式文件，另外一种是在 <em>style</em> 标签中引入。</p><blockquote><p>注意：<em>IE6</em> 和 <em>IE7</em> 中不支持该方式</p></blockquote><p>在样式文件中引入媒体类型：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">@import url('./index.css') screen</code></pre></div><p>在 <em>style</em> 标签中引入媒体类型：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;style&gt;\n  @import url('./index.css') screen\n&lt;/style&gt;</code></pre></div><ol start=\"4\"><li><p><em>@meida</em> 的方式</p></li></ol><p><em>@media</em> 是 <em>CSS3</em> 中新引进的一个特性，称为媒体查询。<em>@media</em> 引入媒体也有两种方式，如下：</p><p><br></p><p>在样式文件中引入媒体类型：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">@media screen{\n  /* 具体样式 */\n}</code></pre></div><p>在 <em>style</em> 标签中引入媒体类型：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;style&gt;\n  @media screen{\n    /* 具体样式 */\n  }\n&lt;/style&gt;</code></pre></div><p>虽然上面介绍了 <em>4</em> 种引入方式，但是最常见的就是第 <em>1</em> 种和第 <em>4</em> 种。</p><p><br></p><p><strong>媒体查询具体语法</strong></p><p><br></p><p>接下来我们来看一下媒体查询的具体语法。</p><p><br></p><p>这里我们可以将 <em>Media Query</em> 看成一个公式：</p><div data-language=\"markdown\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"markdown\">Media Type（判断条件）+ CSS（符合条件的样式规则）</code></pre></div><p>这里举例如下：</p><p><br></p><p><em>link</em> 的方式</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;link rel=\"stylesheet\" media=\"screen and (max-width:600px)\" href=\"style.css\" /&gt;</code></pre></div><p><em>@media</em> 的方式</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">@meida screen and (max-width:600px){\n  /* 具体样式 */\n}</code></pre></div><p>上面的两个例子中都是使用 <em>width</em> 来进行的样式判断，但是实际上还有很多特性都可以被用来当作样式判断的条件。</p><p><br></p><p>具体如下表：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-16-085040.png\" alt=\"image-20210916165039143\" contenteditable=\"false\"><br></p><p><br></p><p>有了 <em>Media Query</em>，我们能在不同的条件下使用不同的样式，使页面在不同的终端设备下达到不同的渲染效果。</p><p><br></p><p>这里有一个具体的公式如下：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">@media 媒体类型 and (媒体特性) {\n\t/* 具体样式 */\n}</code></pre></div><p>来看几个具体示例。</p><ol><li><p>最大宽度 <em>max-width</em></p></li></ol><p>该特性是指媒体类型小于或等于指定宽度时，样式生效，例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">@media screen and (max-width:480px) {\n\t/* 具体样式 */\n}</code></pre></div><p>当屏幕宽度小于或等于 <em>480px</em> 时，样式生效</p><ol start=\"2\"><li><p>最小宽度 <em>min-width</em></p></li></ol><p>该特性和上面相反，及媒体类型大于或等于指定宽度时，样式生效，例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">@media screen and (min-width:480px) {\n\t/* 具体样式 */\n}</code></pre></div><p>当屏幕宽度大于或等于 <em>480px</em> 时，样式生效</p><ol start=\"3\"><li><p>多个媒体特性混合使用</p></li></ol><p>当需要多个媒体特性时，使用 <em>and</em> 关键字将媒体特性结合在一起，例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">@media screen and (min-width:480px) and (max-width:900px){\n\t/* 具体样式 */\n}</code></pre></div><p>当屏幕大于等于 <em>480px</em> 并且小于等于 <em>900px</em> 时，样式生效。</p><ol start=\"4\"><li><p>设备屏幕的输出宽度 <em>Device Width</em></p></li></ol><p>在智能设备上，例如 <em>iphone、ipad</em> 等，可以通过 <em>min-device-width</em> 和 <em>max-device-width</em> 来设置媒体特性，例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">@media screen and (max-device-height:480px) {\n\t/* 具体样式 */\n}</code></pre></div><p>在智能设备上，当屏幕小于等于 <em>480px</em> 时样式生效</p><ol start=\"5\"><li><p><em>not</em> 关键字</p></li></ol><p><em>not</em> 关键词可以用来排除某种制定的媒体特性，示例如下：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">@media not print and (max-width:900px) {\n\t/* 具体样式 */\n}</code></pre></div><p>样式代码将被用于除了打印设备和屏幕宽度小于或等于 <em>900px</em> 的所有设备中。</p><ol start=\"6\"><li><p>未指明 <em>Media Type</em></p></li></ol><p>如果在媒体查询中没有明确的指定 <em>Media Type</em>，那么其默认值为 <em>all</em></p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">@media (max-width: 900px){\n  /* 具体样式 */\n}</code></pre></div><p>上面的样式适用于屏幕尺寸小于或等于 <em>900px</em> 的所有设备。</p><p><br></p><p>更多关于媒体查询的内容可以参阅 <em>MDN</em>：<em>https://developer.mozilla.org/zh-CN/docs/Web/CSS/Media_Queries/Using_media_queries</em></p><h2>真题解答</h2><ul><li><p>如何使用媒体查询实现视口宽度大于 <em>320px</em> 小于 <em>640px</em> 时 <em>div</em> 元素宽度变成 <em>30%</em></p></li></ul><blockquote><p>参考答案：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">@media screen and (min-width: 320px) and (max-width: 640px){\n\tdiv{\n   width: 30%;\n }\n}</code></pre></div></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666076003117",
+    typeId: ObjectId("634d7fc47797638ec96fe2ee")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e4dc52fac4881713db315"),
+    interviewTitle: "CSS3 中 transition 和 animation 的作用？",
+    interviewContent: "<h1>过渡和动画事件</h1><h2>经典真题</h2><ul><li><p><em>CSS3</em> 中 <em>transition</em> 和 <em>animation</em> 的属性分别有哪些（哔哩哔哩）</p></li><li><p><em>CSS</em> 动画如何实现？</p></li></ul><h2><em>CSS3</em> 过渡</h2><p><em>CSS3</em> 新增了过渡属性，可以使用从一个状态变化到另一个状态时，变化更加的平滑。</p><p><br></p><p><em>CSS3</em> 的过渡功能像是一种黄油，<em>W3C</em> 标准中是这样描述 <em>transition</em> 的：</p><p><br></p><p><em>CSS3</em> 的 <em>transition</em> 允许 <em>CSS</em> 的属性值在一定的时间区间内平滑的过渡。这种效果可以在鼠标单击，获得焦点，对元素任何改变中触发，并平滑地以动画效果改变 <em>CSS</em> 的属性值。</p><p><br></p><p>先看一个快速入门示例，如下：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div&gt;&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div {\n  width: 100px;\n  height: 100px;\n  background-color: skyblue;\n}\ndiv:hover{\n  height: 300px;\n}</code></pre></div><p>在上面的代码中，我们让 <em>div</em> 被 <em>hover</em> 的时候，改变其高度，但是我们可以看到效果非常的生硬。</p><p><br></p><p>此时我们就可以添加一个 <em>CSS3</em> 新增的属性 <em>transition</em>，使其两个状态变化之间产生一个过渡效果。</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div {\n  width: 100px;\n  height: 100px;\n  background-color: skyblue;\n  transition: all .5s;\n  /* 添加过渡效果 */\n}\ndiv:hover{\n  height: 300px;\n}</code></pre></div><p>上面就是一个快速入门示例，接下来我们来看一下 <em>transition</em> 的具体语法。</p><p><br></p><p><em>transition</em> 属性是 <em>transition-property，transition-duration，transition-timing-function</em> 和 <em>transition-delay</em> 的一个简写属性。</p><ul><li><p><em>transition-property</em>：指定过渡的 <em>CSS</em> 属性</p></li><li><p><em>transition-duration</em>：指定过渡所需的完成时间</p></li><li><p><em>transition-timing-function</em>：指定过渡函数</p></li><li><p><em>transition-delay</em>：指定过渡的延迟时间</p></li></ul><p><strong><em>transition-property</em></strong></p><p><br></p><p>该属性用来指定过渡动画 <em>CSS</em> 属性名称，该属性的语法如下：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">transition-property: none | all ｜ property</code></pre></div><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-15-014159.png\" alt=\"image-20210915094158901\" contenteditable=\"false\"><br></p><p><br></p><p>需要特别说明的是，并不是所有的属性都可以进行过渡，只有属性是具有一个中点值的属性才能够进行过渡效果。因为这样才能通过不停的修改中间值从而实现过渡效果。例如 <em>display:none|block</em> 就没有中间值，所以无法应用过渡。</p><p><br></p><p>能够过渡的属性类型有颜色属性、具有长度值或百分比的属性、阴影、变形系列属性，具体支持过渡的属性可以参阅下表：</p><table><thead><tr><th><p>支持过渡的属性</p></th><th><p><br></p></th><th><p><br></p></th><th><p><br></p></th></tr></thead><tbody><tr><td><p>background-color</p></td><td><p>background-position</p></td><td><p>border-bottom-color</p></td><td><p>border-bottom-width</p></td></tr><tr><td><p>border-left-color</p></td><td><p>border-left-width</p></td><td><p>border-right-color</p></td><td><p>border-right-width</p></td></tr><tr><td><p>border-spacing</p></td><td><p>border-top-color</p></td><td><p>border-top-width</p></td><td><p>bottom</p></td></tr><tr><td><p>clip</p></td><td><p>color</p></td><td><p>font-size</p></td><td><p>font-weight</p></td></tr><tr><td><p>height</p></td><td><p>left</p></td><td><p>letter-spacing</p></td><td><p>line-height</p></td></tr><tr><td><p>margin-bottom</p></td><td><p>margin-left</p></td><td><p>margin-right</p></td><td><p>margin-top</p></td></tr><tr><td><p>max-height</p></td><td><p>max-width</p></td><td><p>min-height</p></td><td><p>min-width</p></td></tr><tr><td><p>opacity</p></td><td><p>outline-color</p></td><td><p>outline-width</p></td><td><p>padding-bottom</p></td></tr><tr><td><p>padding-left</p></td><td><p>padding-right</p></td><td><p>padding-top</p></td><td><p>right</p></td></tr><tr><td><p>text-indent</p></td><td><p>text-shadow</p></td><td><p>vertical-align</p></td><td><p>visibility</p></td></tr><tr><td><p>width</p></td><td><p>word-spacing</p></td><td><p>z-index</p></td><td><p><br></p></td></tr></tbody></table><p><strong><em>transition-duration</em></strong></p><p><br></p><p>该属性主要用于设置一个属性过渡到另一个属性所需要的时间，单位为秒(<em>s</em>)或者毫秒(<em>ms</em>)。默认值为 <em>0</em>，代表变换是即时的。</p><p><br></p><p><strong><em>transition-timing-function</em></strong></p><p><br></p><p>该属性用于设置过渡的速度，有如下的取值：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-15-014104.png\" alt=\"image-20210915094104556\" contenteditable=\"false\"><br></p><p><br></p><p><strong><em>transition-delay</em></strong></p><p><br></p><p>过渡延迟多久触发，单位为秒或者毫秒。但是值可以是正整数，负整数和 <em>0</em>。</p><p><br></p><p>正整数和 <em>0</em> 都比较好理解，这里主要说一下负整数。负整数的计算会从整体过渡时间中去做减法运算，举个例子：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div {\n  width: 100px;\n  height: 100px;\n  background-color: skyblue;\n  transition: all 5s -2s;\n  /* 设置为 -2s，相当于已经执行了 2s */\n}\ndiv:hover{\n  height: 300px;\n}</code></pre></div><p><strong>多个元素过渡</strong></p><p><br></p><p>如果要对多个 <em>CSS3</em> 属性应用过渡效果，直接用逗号分离开即可，这种主要是针对每个属性过渡的时间不同的情况下。</p><p><br></p><p>例如下面的例子：背景颜色过渡时间为 <em>2s</em>，而宽度的过渡时间为 <em>5s</em>：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div {\n  width: 100px;\n  height: 100px;\n  background-color: skyblue;\n  transition: background-color 2s, height 5s;\n}\ndiv:hover{\n  height: 300px;\n  background-color: pink;\n}</code></pre></div><p>当然，如果每个属性的过渡时间都一样的话，那么直接使用 <em>all</em> 会更简洁一些。</p><p><br></p><p>**<em>hover</em> 时期不同的过渡设置</p><p><br></p><p>我们可以在 <em>hover</em> 时对状态的变化设置一个过渡效果，鼠标移开元素恢复时设置另一个过渡效果。例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div {\n  width: 100px;\n  height: 100px;\n  background-color: skyblue;\n  transition: all 5s\n    /* 鼠标移走时的过渡 */\n}\ndiv:hover{\n  height: 300px;\n  background-color: pink;\n  transition: all 2s;\n  /* 鼠标 hover 时状态变化的过渡 */\n}</code></pre></div><p><strong>过渡事件</strong></p><p><br></p><p>有些时候，在 <em>JS</em> 中的某些操作需要过渡效果结束后再执行，此时事件类型中给我们提供了一个 <em>transitionend</em> 事件方便我们监听过渡效果是否结束，例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div id=\"oDiv\"&gt;&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div {\n  width: 100px;\n  height: 100px;\n  background-color: skyblue;\n  transition: all 3s\n}</code></pre></div><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var div = document.getElementById(\"oDiv\");\ndiv.onclick = function(){\n  div.style.height = \"400px\";\n}\ndiv.ontransitionend = function(){\n  console.log(\"过渡结束后触发\");\n}</code></pre></div><h2><em>CSS3</em> 动画</h2><p>在 <em>CSS3</em> 中新增了一个 <em>animation</em> 模块，可以制作出类似于 <em>flash</em> 一样的动画出来。</p><p><br></p><p>我们首先还是来看一个快速入门示例，如下：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div&gt;&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">*{\n  margin: 0;\n  padding: 0;\n}\ndiv {\n  width: 100px;\n  height: 100px;\n  background-color: skyblue;\n  position: absolute;\n  animation: test 5s;\n}\n@keyframes test{\n  0% {\n    left: 0;\n    top: 0;\n  }\n  25% {\n    left: 400px;\n    top: 0;\n  }\n  40% {\n    left: 400px;\n    top: 200px;\n  }\n  65% {\n    left: 0;\n    top: 200px;\n  }\n  100% {\n    left: 0;\n    top: 0;\n  }\n}</code></pre></div><p>在上面的代码示例中，我们声明了一个名为 <em>test</em> 的动画，然后在 <em>div</em> 中运用了这个动画，整个动画的播放时间为 <em>5s</em>。</p><p><br></p><p>接下来我们来看一下 <em>CSS3</em> 中动画的具体细节。</p><p><br></p><p>使用 <em>CSS3</em> 的 <em>animation</em> 制作动画包含两个部分：首先是用关键帧声明一个动画，其次是在 <em>animation</em> 调用关键帧声明的动画。</p><p><br></p><p><strong>声明动画</strong></p><p><br></p><p>在 <em>CSS3</em> 中，使用 <em>@keyframes</em> 来声明一个动画，语法为：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">@keyframes animationname {keyframes-selector {css-styles;}}</code></pre></div><p>属性对应的说明如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-15-021257.png\" alt=\"image-20210915101256811\" contenteditable=\"false\"><br></p><p><br></p><p>在上面的示例中，我们声明动画的代码为：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">@keyframes test{\n  0% {\n    left: 0;\n    top: 0;\n  }\n  25% {\n    left: 400px;\n    top: 0;\n  }\n  40% {\n    left: 400px;\n    top: 200px;\n  }\n  65% {\n    left: 0;\n    top: 200px;\n  }\n  100% {\n    left: 0;\n    top: 0;\n  }\n}</code></pre></div><p>这里我们就声明了一个名为 <em>test</em> 的动画，设置了 <em>5</em> 个时间段，分别是 <em>0%、25%、40%、65%</em> 和 <em>100%</em>，每个时间段都有对应的不同 <em>CSS</em> 样式，当动画执行时，从一个时间段到另一个时间段会自动运用过渡效果，所以我们可以看到整个流程是非常平滑的。</p><p><br></p><p><strong>使用动画</strong></p><p><br></p><p><em>@keyframes</em> 只是用来声明一个动画，如果一个声明的动画不被调用，那么这个动画是没有任何意义的。</p><p><br></p><p>在 <em>CSS3</em> 中通过 <em>animation</em> 属性来调用动画。</p><p><br></p><p>语法如下：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">animation: name duration timing-function delay iteration-count direction fill-mode play-state;</code></pre></div><ul><li><p><em>animation-name</em>：指定要绑定到选择器的关键帧的名称</p></li><li><p><em>animation-duration</em>：动画指定需要多少秒或毫秒完成</p></li><li><p><em>animation-timing-function</em>：设置动画将如何完成一个周期</p></li><li><p><em>animation-delay</em>：设置动画在启动前的延迟间隔</p></li><li><p><em>animation-iteration-count</em>：定义动画的播放次数</p></li><li><p><em>animation-direction</em>：指定是否应该轮流反向播放动画</p></li><li><p><em>animation-fill-mode</em>：规定当动画不播放时（当动画完成时，或当动画有一个延迟未开始播放时），要应用到元素的样式</p></li><li><p><em>animation-play-state</em>：指定动画是否正在运行或已暂停</p></li></ul><p>前面 <em>4</em> 个属性没什么好说，大体上和前面介绍的 transition 的属性很像，这里我们主要看一下后面几个属性。</p><p><br></p><p><strong><em>animation-iteration-count</em></strong></p><p><br></p><p><em>animation-iteration-count</em> 属性定义动画应该播放多少次，如果想要一直播放，那么次数就是无限次，所以属性值为 <em>infinite</em>。</p><p><br></p><p><strong><em>animation-direction</em></strong></p><p><br></p><p>正常情况下，动画播放完毕以后，会立刻回到起始的状态。例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">@keyframes test{\n  0% {\n    left: 0;\n    top: 0;\n  }\n  50% {\n    left: 400px;\n    top: 0;\n  }\n  100% {\n    left: 400px;\n    top: 200px;\n  }\n}</code></pre></div><p>对上面快速入门的示例稍作修改，我们就会发现，动画播放完毕后立马就回到起始状态了。</p><p><br></p><p>那么 <em>animation-direction</em> 就可以设置动画是否要反向播放回去。该属性对应的可设置值有：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">animation-direction: normal|reverse|alternate|alternate-reverse|initial|inherit;</code></pre></div><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-15-024829.png\" alt=\"image-20210915104829295\" contenteditable=\"false\"><br></p><p><br></p><p>需要注意的是，如果动画被设置为只播放一次，该属性将不起作用。</p><p><br></p><p>另外，无论动画正向播放还是反向播放，都会算一次次数，例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div {\n  width: 100px;\n  height: 100px;\n  background-color: skyblue;\n  position: absolute;\n  animation: test 5s 5 alternate;\n}\n@keyframes test{\n  0% {\n    left: 0;\n    top: 0;\n  }\n  50% {\n    left: 400px;\n    top: 0;\n  }\n  100% {\n    left: 400px;\n    top: 200px;\n  }\n}</code></pre></div><p>在上面的代码中，我们设置一共播放 <em>5</em> 次，那么整个动画就会正向播放 <em>3</em> 次，反向播放 <em>2</em> 次。</p><p><br></p><p><strong><em>animation-fill-mode</em></strong></p><p><br></p><p><em>animation-fill-mode</em> 属性规定当动画不播放时（当动画完成时，或当动画有一个延迟未开始播放时），要应用到元素的样式。</p><p><br></p><p>一般主要用于设置动画播放完毕后的状态。</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">animation-fill-mode: none|forwards|backwards|both|initial|inherit;</code></pre></div><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-15-025723.png\" alt=\"image-20210915105722895\" contenteditable=\"false\"><br></p><p><br></p><p>用得最多的值就是 <em>forwards</em>，定义动画播放完后保持结束时候的样子。默认值为 <em>none</em>，表示动画将按预期进行和结束，在动画完成其最后一帧时，动画会反转到初始帧处。当取值为 <em>backwards</em> 时，会在动画结束时迅速应用动画的初始帧。</p><p><br></p><p><strong><em>animation-play-state</em></strong></p><p><br></p><p><em>animation-play-state</em> 属性规定动画正在运行还是暂停，语法为：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">animation-play-state: paused|running;</code></pre></div><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-15-030119.png\" alt=\"image-20210915110118784\" contenteditable=\"false\"><br></p><p><br></p><p>该属性一般配合着 <em>JS</em> 一起使用，从而达到对动画播放状态的一个控制。例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;button id=\"playAnimate\"&gt;播放动画&lt;/button&gt;\n&lt;button id=\"pauseAnimate\"&gt;暂停动画&lt;/button&gt;\n&lt;div id=\"oDiv\"&gt;&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">*{\n  margin: 0;\n  padding: 0;\n}\ndiv {\n  width: 100px;\n  height: 100px;\n  background-color: skyblue;\n  position: absolute;\n  animation: test 2s 5 alternate paused;\n}\n@keyframes test{\n  0% {\n    left: 0;\n    top: 30px;\n  }\n  50% {\n    left: 400px;\n    top: 30px;\n  }\n  100% {\n    left: 400px;\n    top: 200px;\n  }\n}</code></pre></div><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var oDiv = document.getElementById(\"oDiv\");\nvar playAnimate = document.getElementById(\"playAnimate\");\nvar pauseAnimate = document.getElementById(\"pauseAnimate\");\nplayAnimate.onclick = function(){\n  oDiv.style.animationPlayState = \"running\"\n}\npauseAnimate.onclick = function(){\n  oDiv.style.animationPlayState = \"paused\"\n}</code></pre></div><p>在上面的示例中，我们就通过 <em>JS</em> 来控制 <em>animation-play-state</em> 从而切换动画播放与暂停这两个状态。</p><p><br></p><p><strong>动画对应事件</strong></p><p><br></p><p>同样，动画也有对应的事件，与过渡只提供有 <em>transitionend</em> 事件不同的是，在 <em>CSS</em> 动画播放时，会发生以下三个事件：</p><ul><li><p><em>animationstart</em>：<em>CSS</em> 动画开始后触发</p></li><li><p><em>animationiteration</em>：<em>CSS</em> 动画重复播放时触发</p></li><li><p><em>animationend</em>：<em>CSS</em> 动画完成后触发</p></li></ul><h2>真题解答</h2><ul><li><p><em>CSS3</em> 中 <em>transition</em> 和 <em>animation</em> 的属性分别有哪些（哔哩哔哩）</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p><em>transition</em> 过渡动画：</p><ul><li><p><em>transition-property</em>：指定过渡的 <em>CSS</em> 属性</p></li><li><p><em>transition-duration</em>：指定过渡所需的完成时间</p></li><li><p><em>transition-timing-function</em>：指定过渡函数</p></li><li><p><em>transition-delay</em>：指定过渡的延迟时间</p></li></ul><p><em>animation</em> 关键帧动画：</p><ul><li><p><em>animation-name</em>：指定要绑定到选择器的关键帧的名称</p></li><li><p><em>animation-duration</em>：动画指定需要多少秒或毫秒完成</p></li><li><p><em>animation-timing-function</em>：设置动画将如何完成一个周期</p></li><li><p><em>animation-delay</em>：设置动画在启动前的延迟间隔</p></li><li><p><em>animation-iteration-count</em>：定义动画的播放次数</p></li><li><p><em>animation-direction</em>：指定是否应该轮流反向播放动画</p></li><li><p><em>animation-fill-mode</em>：规定当动画不播放时（当动画完成时，或当动画有一个延迟未开始播放时），要应用到元素的样式</p></li><li><p><em>animation-play-state</em>：指定动画是否正在运行或已暂停</p></li></ul></blockquote><ul><li><p><em>CSS</em> 动画如何实现？</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p>即 <em>animation</em> 属性，对元素某个或多个属性的变化进行控制，可以设置多个关键帧。属性包含了动画的名称、完成时间（以毫秒计算）、周期、间隔、播放次数、是否反复播放、不播放时应用的样式、动画暂停或运行。</p><p><br></p><p>它不需要触发任何事件就可以随着时间变化来改变元素的样式。</p><p><br></p><p><strong>使用 <em>CSS</em> 做动画</strong>：</p><ul><li><p><em>@keyframes</em> 规定动画。</p></li><li><p><em>animation</em> 所有动画属性的简写属性。</p></li><li><p><em>animation-name</em> 规定 <em>@keyframes</em> 动画的名称。</p></li><li><p><em>animation-duration</em> 规定动画完成一个周期所花费的秒或毫秒。默认是 0。</p></li><li><p><em>animation-timing-function</em> 规定动画的速度曲线。默认是 <em>ease</em>。</p></li><li><p><em>animation-fill-mode</em> 规定当动画不播放时（当动画完成时，或当动画有一个延迟未开始播放时），要应用到元素的样式。</p></li><li><p><em>animation-delay</em> 规定动画何时开始。默认是 <em>0</em>。</p></li><li><p><em>animation-iteration-count</em> 规定动画被播放的次数。默认是 <em>1</em>。</p></li><li><p><em>animation-direction</em> 规定动画是否在下一周期逆向地播放。默认是 <em>normal</em>。</p></li><li><p><em>animation-play-state</em> 规定动画是否正在运行或暂停。默认是 <em>running</em>。</p></li></ul></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666076101701",
+    typeId: ObjectId("634d7fc47797638ec96fe2ee")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e4e802fac4881713db323"),
+    interviewTitle: "描述一下渐进增强和优雅降级之间的不同",
+    interviewContent: "<h1>渐进增强和优雅降级</h1><h2>经典真题</h2><ul><li><p>说说渐进增强和优雅降级?</p></li><li><p>你能描述一下渐进增强和优雅降级之间的不同吗?</p></li></ul><h2>渐进增强和优雅降级</h2><p>渐进增强，英语全称 <em>progressive enhancement</em>，指的是针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。</p><p><br></p><p>优雅降级，英语全称 <em>graceful degradation</em>，一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。</p><p><br></p><p>这两个概念其实并不是一个新的概念，就是以前提到的\"向上兼容\"和\"向下兼容\"。渐进增强相当于向上兼容，优雅降级相当于向下兼容。向下兼容指的是高版本支持低版本，或者说后期开发的版本能兼容早期开发的版本。</p><p><br></p><p>在确定用户群体的前提下，渐进增强：针对低版本浏览器进行页面构建，保证基本功能，再针对高级浏览器进行效果、交互等改进和追加功能，达到更好的用户体验。</p><p><br></p><p>优雅降级：一开始就构建完整的功能，再针对低版本浏览器进行兼容。</p><p><br></p><p>区别：优雅降级是从复杂的现状开始并试图减少用户体验的供给，而渐进增强则是从一个基础的、能够起到作用的版本开始再不断扩充，以适应未来环境的需要。</p><p><br></p><p>例如看下面这两段代码的书写顺序，看上去只是书写顺序的不同，实则表示了我们开发的着重点：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.transition { /*渐进增强写法*/\n  -webkit-transition: all .5s;\n     -moz-transition: all .5s;\n       -o-transition: all .5s;\n          transition: all .5s;\n}\n.transition { /*优雅降级写法*/\n          transition: all .5s;\n       -o-transition: all .5s;\n     -moz-transition: all .5s;\n  -webkit-transition: all .5s;\n}</code></pre></div><p>前缀 <em>CSS3</em>（-webkit-、-moz-、-o-）和正常 <em>CSS3</em> 在浏览器中的支持情况是这样的：</p><ol><li><p><strong>很久以前</strong>：浏览器前缀 <em>CSS3</em> 和正常 <em>CSS3</em> 都不支持</p></li><li><p><strong>不久之前</strong>：浏览器<strong>只支持</strong>前缀 <em>CSS3</em>，<strong>不支持</strong>正常 <em>CSS3</em></p></li><li><p><strong>现在</strong>：浏览器<strong>既支持</strong>前缀 <em>CSS3</em>，<strong>又支持</strong>正常 <em>CSS3</em></p></li><li><p><strong>未来</strong>：浏览器<strong>不支持</strong>前缀 <em>CSS3</em>，<strong>仅支持</strong>正常 <em>CSS3</em></p></li></ol><p>渐进增强的写法，优先考虑老版本浏览器的可用性，最后才考虑新版本的可用性。在时期 <em>3</em> 前缀 <em>CSS3</em> 和正常 <em>CSS3</em> 都可用的情况下，正常 <em>CSS3</em> 会覆盖前缀 <em>CSS3</em>。</p><p><br></p><p>优雅降级的写法，优先考虑新版本浏览器的可用性，最后才考虑老版本的可用性。在时期 <em>3</em> 前缀 <em>CSS3</em> 和正常 <em>CSS3</em> 都可用的情况下，前缀 <em>CSS3</em> 会覆盖正常的 <em>CSS3</em>。</p><p><br></p><p>绝大多少的大公司都是采用渐进增强的方式，因为业务优先，提升用户体验永远不会排在最前面。</p><ul><li><p>例如新浪微博网站这样亿级用户的网站，前端的更新绝不可能追求某个特效而不考虑低版本用户是否可用。一定是确保低版本到高版本的可访问性再渐进增强。</p></li><li><p>如果开发的是一面面向青少面的软件或网站，你明确这个群体的人总是喜欢尝试新鲜事物，喜欢炫酷的特效，喜欢把软件更新至最新版本，这种情况再考虑优雅降级。</p></li></ul><h2>真题解答</h2><ul><li><p>说说渐进增强和优雅降级?</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p>渐进增强，英语全称 <em>progressive enhancement</em>，指的是针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。</p><p><br></p><p>优雅降级，英语全称 <em>graceful degradation</em>，一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。</p></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666076288659",
+    typeId: ObjectId("634d7fc47797638ec96fe2ee")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e4eba2fac4881713db327"),
+    interviewTitle: "请简述一下 CSS3 中新增的变形如何使用？",
+    interviewContent: "<h1><em>CSS3</em> 变形</h1><h2>经典真题</h2><ul><li><p>请简述一下 <em>CSS3</em> 中新增的变形如何使用？</p></li></ul><h2><em>CSS3</em> 变形相关知识</h2><h3>变形介绍</h3><p><em>CSS2.1</em> 中的页面都是静态的，多年来，<em>Web</em> 设计师依赖于图片、<em>Flash</em> 或者 <em>JavaScript</em> 才能完成修改页面的外观。<em>CSS3</em> 改变了设计师这种思维，借助 <em>CSS3</em> 可以轻松的倾斜、缩放、移动以及翻转元素。</p><p><br></p><p><em>2012</em> 年 <em>9</em> 月，<em>W3C</em> 组织发布了 <em>CSS3</em> 变形工作草案。允许 <em>CSS</em> 把元素变成 <em>2D</em> 或者 <em>3D</em> 空间，这其实就是 <em>CSS3</em> 的 <em>2D</em> 变形和 <em>3D</em> 变形。</p><p><br></p><p><em>CSS3</em> 变形是一些效果的集合，比如平移、旋转、缩放和倾斜效果，每个效果通过变形函数（<em>transform function</em>）来实现。在此之前，要想实现这些效果，必须依赖图片、<em>Flash</em> 或者 <em>JavaScript</em> 才能完成，而现在仅仅使用纯 <em>CSS</em> 就能够实现，大大的提高了开发效率以及页面的执行效率。</p><p><br></p><p>变形效果要通过变形函数来实现，语法如下：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">transform: none|transform-functions;</code></pre></div><p>那么 <em>CSS3</em> 中为我们提供了哪些变形函数呢？</p><p><br></p><p>这里我们整体可以划分出 <em>3</em> 大类：</p><ul><li><p>具有 <em>X/Y</em> 的函数：<em>translateX、translateY、sclaeX、scaleY、skewX、skewY</em></p></li><li><p><em>2D</em> 变形函数：<em>translate、sclae、rotate、skew、matrix</em></p></li><li><p><em>3D</em> 变形函数：<em>rotateX、rotateY、rotate3d、translateZ、translate3d、scaleZ、scale3d、matrix3d</em></p></li></ul><p>此时，你可能已经做好了逐一击破每个变形函数的思想准备了。</p><p><br></p><p>别急，在介绍每个变形函数之前，我们先来了解一下变形相关的属性。</p><h3>变形属性</h3><ol><li><p><strong><em>transform</em> 属性</strong></p></li></ol><p>第一个首当其冲的就是 <em>transform</em> 属性，该属性所对应的属性值就是一系列的变形函数，例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">transform: scale(1.5)</code></pre></div><p>上面的代码中，我们设置了 <em>transform</em> 属性，属性值为 <em>scale</em> 变形函数。</p><ol start=\"2\"><li><p><strong><em>transform-origin</em> 属性</strong></p></li></ol><p>接下来第二个是 <em>transform-origin</em> 属性，该属性用于设置元素的中心点位置。该属性语法如下：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">transform-origin: x-axis y-axis z-axis;</code></pre></div><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-19-080037.png\" alt=\"image-20210919160036555\" contenteditable=\"false\"><br></p><p><br></p><p>为了演示此属性的作用，我们先透支一点后面的知识。</p><p><br></p><p>这里我们以 <em>rotate</em> 为例。<em>rotate</em> 是变形函数中的一个，作用是旋转元素，其语法如下：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">rotate(angle)</code></pre></div><p>定义 <em>2D</em> 旋转，在参数中规定角度。</p><p><br></p><p>来看一个例子：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div&gt;&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div{\n  width: 150px;\n  height: 150px;\n  background-color: red;\n  margin: 200px;\n  transition: all 1s;\n}\ndiv:hover{\n  transform: rotate(45deg);\n}</code></pre></div><p>效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-19-080641.gif\" alt=\"2021-09-19 16.06.26\" contenteditable=\"false\"><br></p><p><br></p><p>在上面的示例中，我们设置 <em>div</em> 鼠标 <em>hover</em> 的时候进行变形，旋转 <em>45</em> 度，为了更加平滑，我们加入了 <em>transition</em> 过渡效果。</p><p><br></p><p>我们观察整个元素的旋转中心点，是在元素的最中央。</p><p><br></p><p>接下来我们可以使用 <em>transform-origin</em> 来修改这个中心点的位置。例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div{\n  width: 150px;\n  height: 150px;\n  background-color: red;\n  margin: 200px;\n  transition: all 1s;\n  transform-origin: bottom left;\n  /* 修改元素的中心点位置 */\n}\ndiv:hover{\n  transform: rotate(45deg);\n}</code></pre></div><p>效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-19-081002.gif\" alt=\"2021-09-19 16.09.46\" contenteditable=\"false\"><br></p><p><br></p><p>在上面的代码中，我们修改了元素的中心点位置为 <em>bottom、left</em>，也就是左下角。可以看到因为元素的中心点位置发生了变化，旋转的方式也随之发生了改变。</p><p><br></p><p><em>transform-origin</em> 的属性值除了像上面一样设置关键词以外，也可以是百分比、<em>em、px</em> 等具体的值。</p><p><br></p><p><em>transform-origin</em> 的第三个参数是定义 <em>Z</em> 轴的距离，这在后面介绍 <em>3D</em> 变形时再来介绍。</p><ol start=\"3\"><li><p><strong><em>transform-style</em> 属性</strong></p></li></ol><p><em>transform-style</em> 属性是 <em>3D</em> 空间一个重要属性，指定了嵌套元素如何在 <em>3D</em> 空间中呈现。语法如下：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">transform-style: flat | preserve-3d;</code></pre></div><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-19-091723.png\" alt=\"image-20210919171722656\" contenteditable=\"false\"><br></p><p><br></p><p>其中 <em>flat</em> 为默认值。</p><p><br></p><p>需要注意的是该属性需要设置在父元素上面，使其变成一个真正的 <em>3D</em> 图形。</p><p><br></p><p>当然光看属性说明是非常模糊的，一点都不直观，我们直接来看一个例子。</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"box\"&gt;\n  &lt;div class=\"up\"&gt;上&lt;/div&gt;\n  &lt;div class=\"down\"&gt;下&lt;/div&gt;\n  &lt;div class=\"left\"&gt;左&lt;/div&gt;\n  &lt;div class=\"right\"&gt;右&lt;/div&gt;\n  &lt;div class=\"forword\"&gt;前&lt;/div&gt;\n  &lt;div class=\"back\"&gt;后&lt;/div&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.box {\n  width: 250px;\n  height: 250px;\n  border: 1px dashed red;\n  margin: 100px auto;\n  position: relative;\n  border-radius: 50%;\n  transform-style: preserve-3d;\n  animation: gun 8s linear infinite;\n}\n\n.box&gt;div {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  text-align: center;\n  line-height: 250px;\n  font-size: 60px;\n  color: #daa520;\n}\n\n.left {\n  background-color: rgba(255, 0, 0, 0.3);\n  transform-origin: left;\n  transform: rotateY(90deg) translateX(-125px);\n}\n\n.right {\n  background: rgba(0, 0, 255, 0.3);\n  transform-origin: right;\n  /* 变换*/\n  transform: rotateY(90deg) translateX(125px);\n}\n.forward {\n  background: rgba(255, 255, 0, 0.3);\n  transform: translateZ(125px);\n}\n.back {\n  background: rgba(0, 255, 255, 0.3);\n  transform: translateZ(-125px);\n}\n.up {\n  background: rgba(255, 0, 255, 0.3);\n  transform: rotateX(90deg) translateZ(125px);\n}\n.down {\n  background: rgba(99, 66, 33, 0.3);\n  transform: rotateX(-90deg) translateZ(125px);\n}\n@keyframes gun {\n  0% {\n    transform: rotateX(0deg) rotateY(0deg);\n  }\n\n  100% {\n    transform: rotateX(360deg) rotateY(360deg);\n  }\n}</code></pre></div><p>效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-19-092030.gif\" alt=\"2021-09-19 17.20.08\" contenteditable=\"false\"><br></p><p><br></p><p>上面的 <em>CSS</em> 代码不用具体去关心，我们只看在 <em>box</em> 元素上面添加了一句 <em>transform-style: preserve-3d</em>，表示 <em>box</em> 里面的子元素都以 <em>3D</em> 的形式呈现。如果我们把这行代码去除掉或者值修改为 <em>flat</em>，效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-19-092331.gif\" alt=\"2021-09-19 17.23.06\" contenteditable=\"false\"><br></p><p><br></p><p>怎么样？是不是非常直观，一下子就知道 <em>transform-style</em> 属性的作用是什么了。该属性就是指定子元素是在 <em>3D</em> 空间还是 <em>2D</em> 平面中显示。</p><ol start=\"4\"><li><p><strong><em>perspective</em> 属性</strong></p></li></ol><p><em>perspective</em> 属性用于设置查看者的位置，可以将可视内容映射到一个视锥上，继而投到一个 <em>2D</em> 视平面上。如果不指定该属性，则 <em>Z</em> 轴空间中所有点将平铺到同一个 <em>2D</em> 视平面中，并且在变换结果中将不存在景深概念。</p><p><br></p><p>简单理解，就是视距，用来设置用户和元素 <em>3D</em> 空间 <em>Z</em> 平面之间的距离。而其效应由他的值来决定，值越小，用户与 <em>3D</em> 空间 <em>Z</em> 平面距离越近，视觉效果更令人印象深刻；反之，值越大，用户与 <em>3D</em> 空间 <em>Z</em> 平面距离越远，视觉效果就很小。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-19-094151.png\" alt=\"image-20210919174151244\" contenteditable=\"false\"><br></p><p><br></p><p>注意当为元素定义 <em>perspective</em> 属性时，其子元素会获得透视效果，而不是元素本身。</p><p><br></p><p>我们还是来看一个直观的例子来了解这个属性的作用。例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"container\"&gt;\n  &lt;div class=\"item\"&gt;&lt;/div&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.container{\n  width: 500px;\n  height: 500px;\n  border: 1px solid;\n  margin: 100px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.item{\n  width: 150px;\n  height: 150px;\n  background-color: red;\n  animation: rotateAnimation 5s infinite;\n}\n@keyframes rotateAnimation {\n  0%{\n    transform: rotateY(0deg);\n  }\n  100%{\n    transform: rotateY(360deg);\n  }\n}</code></pre></div><p>效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-19-095136.gif\" alt=\"2021-09-19 17.51.16\" contenteditable=\"false\"><br></p><p><br></p><p>在上面的代码中，我们虽然设置了 <em>div.item</em> 沿着 <em>Y</em> 轴进行旋转，但是由于没有设置 <em>perspective</em> 视距，所以看上去就像是 <em>div</em> 盒子在宽度伸缩一样，<em>3D</em> 效果并不明显。</p><p><br></p><p>此时我们可以给父元素 <em>div.container</em> 设置 <em>perspective</em> 视距，例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.container{\n  ...\n  perspective: 1200px;\n}</code></pre></div><p>效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-19-095428.gif\" alt=\"2021-09-19 17.54.08\" contenteditable=\"false\"><br></p><p><br></p><p>很明显，加入  <em>perspective</em> 视距后，<em>3D</em> 旋转效果更佳的真实。</p><p><br></p><p>关于 <em>perspective</em> 的取值，接受一个长度单位大于 <em>0</em>，其单位不能为百分比的值。大致能够分为如下 <em>3</em> 种情况：</p><ul><li><p><em>none</em> 或者不设置：没有 <em>3D</em> 空间。</p></li><li><p>取值越小：<em>3D</em> 效果越明显，也就是眼睛越靠近真 <em>3D</em>。</p></li><li><p>取值无穷大或者为 <em>0</em>：与取值为 <em>none</em> 的效果一样。</p></li></ul><ol start=\"5\"><li><p><strong><em>perspective-origin</em> 属性</strong></p></li></ol><p>如果理解了上面的 <em>perspective</em> 属性，那么这个 <em>perspective-origin</em> 就非常好理解了，该属性用来决定 <em>perspective</em> 属性的源点角度。</p><p><br></p><p>其语法如下：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">perspective-origin: x-axis y-axis;</code></pre></div><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-19-124302.png\" alt=\"image-20210919204301259\" contenteditable=\"false\"><br></p><p><br></p><p>举个例子：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.container{\n  ...\n  perspective: 600px;\n  perspective-origin: top;\n}</code></pre></div><p>效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-19-124520.gif\" alt=\"2021-09-19 20.45.00\" contenteditable=\"false\"><br></p><p><br></p><p>由于我们设置的 <em>perspective-origin</em> 的值为 <em>top</em>，所以会呈现一种俯视的效果。如果将其值修改为 <em>bottom</em>，则会是仰视的即视感，如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-19-124646.gif\" alt=\"2021-09-19 20.46.34\" contenteditable=\"false\"><br></p><ol start=\"6\"><li><p><strong><em>backface-visibility</em> 属性</strong></p></li></ol><p><em>backface-visibility</em> 属性决定元素旋转背面是否可见。对于未旋转的元素，该元素的正面面向观看者。当其旋转 <em>180</em> 度时会导致元素的背面面向观众。</p><p><br></p><p>该属性是设置在旋转的元素上面，语法如下：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">backface-visibility: visible|hidden;</code></pre></div><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-19-125232.png\" alt=\"image-20210919205231265\" contenteditable=\"false\"><br></p><p><br></p><p>来看一个具体的例子：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.item{\n  ...\n  backface-visibility: hidden;\n}</code></pre></div><p>效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-19-133845.gif\" alt=\"2021-09-19 21.38.25\" contenteditable=\"false\"><br></p><p><br></p><p>在上面的代码中，我们在子元素 <em>div.item</em> 上设置了 <em>backface-visibility: hidden</em>，当此元素旋转 <em>180</em> 度到背面时，我们可以发现此时是无法看到背面的。</p><h3><em>2D</em> 变形</h3><p>介绍完 <em>CSS3</em> 中变形的相关属性后，接下来我们就该来看一下具体的变形函数了。</p><p><br></p><p>整个 CSS3 为我们提供了相当丰富的变形函数，有 <em>2D</em> 的，有 <em>3D</em> 的。这里我们先来看 <em>2D</em> 的变形函数。</p><h4><em>2D</em> 位移</h4><p><em>2D</em> 位移对应有 <em>3</em> 个变形函数，分别是 <em>translate、translateX、translateY</em></p><p><br></p><p>用法也非常简单，<em>translate</em> 方法从其当前位置移动元素（根据为 <em>X</em> 轴和 <em>Y</em> 轴指定的参数）。</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div {\n  transform: translate(50px, 100px);\n}</code></pre></div><p>上面的例子把 <em>div</em> 元素从其当前位置向右移动 <em>50</em> 个像素，并向下移动 <em>100</em> 个像素：效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-19-134634.png\" alt=\"Translate\" contenteditable=\"false\"><br></p><h4><em>2D</em> 缩放</h4><p><em>2D</em> 缩放对应的也有 <em>3</em> 个变形函数，分别是 <em>sclae、sclaeX、sclaeY</em></p><p><br></p><p>该方法能够按照倍数放大或缩小元素的大小（根据给定的宽度和高度参数）。默认值为 <em>1</em>，小于这个值就是缩小，大于这个值就是放大。</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div {\n  transform: scale(2, 3);\n}</code></pre></div><p>上面的例子把 <em>div</em> 元素增大为其原始宽度的两倍和其原始高度的三倍，效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-19-135001.png\" alt=\"Scale\" contenteditable=\"false\"><br></p><h4><em>2D</em> 旋转</h4><p><em>2D</em> 旋转对应的只有 <em>1</em> 个变形函数 <em>rotate</em>，这个我们在前面也已经用过了。</p><p><br></p><p>该变形函数只接受一个值代表旋转的角度值，取值可正可负，正值代表顺时针旋转，负值代表逆时针旋转。</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div {\n  transform: rotate(20deg);\n}</code></pre></div><p>上面的例子把 <em>div</em> 元素顺时针旋转 <em>20</em> 度，效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-19-135300.png\" alt=\"Rotate\" contenteditable=\"false\"><br></p><h4><em>2D</em> 倾斜</h4><p><em>2D</em> 倾斜对应的变形函数也是 <em>3</em> 个，分别是 <em>skew、skewX、skewY</em></p><p><br></p><p>语法如下：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">skew(ax, ay)</code></pre></div><ul><li><p><em>ax</em>：指定元素水平方向（<em>X</em> 轴方向）倾斜角度</p></li><li><p><em>ay</em>：指定元素垂直方向（<em>Y</em> 轴方向）倾斜角度</p></li></ul><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div&gt;&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div{\n  width: 150px;\n  height: 150px;\n  background-color: red;\n  margin: 150px;\n  transition: all 1s;\n}\ndiv:hover{\n  transform: skew(20deg);\n}</code></pre></div><p>效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-19-140231.gif\" alt=\"2021-09-19 22.02.15\" contenteditable=\"false\"><br></p><h3><em>2D</em> 矩阵</h3><p>虽然 <em>CSS3</em> 为我们提供了上述的变形函数方便我们进行元素的变形操作，但是毕竟函数个数有限，有些效果是没有提供的，例如镜像翻转的效果。此时就轮到 <em>2D</em> 矩阵函数 <em>matrix</em> 登场了。</p><p><br></p><p><em>matrix</em> 有六个参数：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">matrix(a,b,c,d,e,f)</code></pre></div><p>六个参数对应的矩阵：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-19-141132.png\" alt=\"image-20210919221131755\" contenteditable=\"false\"><br></p><p><br></p><p>这六个参数组成的矩阵与原坐标矩阵相乘计算坐标。计算方式如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-19-141105.png\" alt=\"image-20210919221104828\" contenteditable=\"false\"><br></p><p><br></p><p>什么意思呢 ？<em>x</em> 和 <em>y</em> 是元素中每一个像素的初始原点的坐标，而 <em>x'</em> 和 <em>y'</em> 是通过矩阵变化后得到的新原点坐标。通过中间 <em>3 x 3</em> 变换矩阵，对原先的坐标施加变换，从而得到新的坐标。</p><p><br></p><p><em>x' = ax+cy+e</em>，表示变换后的<strong>水平</strong>坐标</p><p><br></p><p><em>y' = bx+dy+f</em>，表示变换后的<strong>垂直</strong>位置</p><p><br></p><p>在 <em>CSS3</em> 中，上面我们所介绍的所有 <em>2D</em> 变形函数都能够通过这个 <em>matrix</em> 矩阵函数来替代。</p><p><br></p><p><strong>矩阵实现偏移</strong></p><p><br></p><p>我们首先来看通过矩阵实现偏移效果。</p><p><br></p><p>偏移效果前后 <em>x、y</em> 与 <em>x'、y'</em> 所对应的坐标公式为：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>x' = x + 偏移量\ny' = y + 偏移量</code></pre></div><p>套用上面的公式那么各个参数的取值就应该是：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>a = 1; b = 0;\nc = 0; d = 1;\ne = x 偏移量; f = y 偏移量\nx' = ax+cy+e = 1x + 0y + x 偏移量 = x + x 偏移量\ny' = bx+dy+f = 0x + 1y + y 偏移量 = y + y 偏移量</code></pre></div><p>所以换成 <em>matrix</em> 函数就应该是：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>matrix(1, 0, 0, 1, x 偏移量, y 偏移量)</code></pre></div><p>下面来做一个测试：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div&gt;&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div{\n  width: 150px;\n  height: 150px;\n  background-color: red;\n  margin: 150px;\n  transition: all 1s;\n}\ndiv:hover{\n  /* transform: translate(100px, 200px); */\n  transform: matrix(1, 0, 0, 1, 100, 200);\n}</code></pre></div><p>在上面的示例中，使用 <em>translate</em> 和 <em>matrix</em> 两个变形函数的效果一致。</p><p><br></p><p><strong>矩阵实现缩放</strong></p><p><br></p><p>缩放之后  <em>x、y</em> 与 <em>x'、y'</em> 所对应的坐标公式为：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>x' = x * x 缩放倍数\ny’ = y * y 缩放倍数</code></pre></div><p>套用上面的公式那就是：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>a = x缩放倍数; b = 0;\nc = 0; d = y 缩放倍数;\ne = 0; f = 0;\nx' = ax+cy+e = x缩放倍数 * x + 0y + 0 = x缩放倍数 * x\ny' = bx+dy+f = 0x + y 缩放倍数 * y + 0 = y 缩放倍数 * y</code></pre></div><p>所以换成 <em>matrix</em> 函数就应该是：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">matrix(x 缩放倍数, 0, 0, y 缩放倍数, 0, 0);</code></pre></div><p>例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div&gt;&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div{\n  width: 150px;\n  height: 150px;\n  background-color: red;\n  margin: 150px;\n  transition: all 1s;\n}\ndiv:hover{\n  /* transform: scale(2, 2); */\n  transform: matrix(2, 0, 0, 2, 0, 0);\n}</code></pre></div><p>上面的代码我们分别使用 <em>scale</em> 和矩阵实现了相同的缩放效果。</p><p><br></p><p><strong>矩阵实现旋转</strong></p><p><br></p><p>旋转需要实现</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>水平倾斜角度 =  - 垂直倾斜角度</code></pre></div><p>旋转我们用到的变形函数是 <em>rotate(θ)</em>，其中 <em>θ</em> 为旋转的角度。套用上面的公式：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>x' = xcosθ - ysinθ + 0 = xcosθ - ysinθ;\ny' = xsinθ + ycosθ + 0 = xsinθ + ycosθ</code></pre></div><p>转换为 <em>matrix</em> 的代码为：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">matrix(cos(θ), sin(θ), -sin(θ), cos(θ), 0, 0)</code></pre></div><p>例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div&gt;&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div{\n  width: 150px;\n  height: 150px;\n  background-color: red;\n  margin: 150px;\n  transition: all 1s;\n}\ndiv:hover{\n  /* transform: rotate(45deg); */\n  transform: matrix(0.7, 0.7, -0.7, 0.7, 0, 0);\n}</code></pre></div><p>上面的代码使用了 <em>rotate</em> 和 <em>matrix</em> 来实现旋转 <em>45</em> 度的效果。其中 <em>sin45</em> 和 <em>cos45</em> 的值都为 <em>0.7</em>。</p><p><br></p><p><strong>矩阵实现倾斜</strong></p><p><br></p><p><em>skew(θx, θy)</em> 将一个元素按指定的角度在 <em>X</em> 轴和 <em>Y</em> 轴上倾斜。</p><p><br></p><p>倾斜对应的公式为：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>x' = x + ytan(θx) + 0 = x + ytan(θx)\ny' = xtan(θy) + y + 0 = xtan(θy) + y</code></pre></div><p>转换为 <em>matrix</em> 的代码为：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">matrix(1,tan(θy),tan(θx),1,0,0)</code></pre></div><p>例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div&gt;&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div {\n  width: 150px;\n  height: 150px;\n  background-color: red;\n  margin: 150px;\n  transition: all 1s;\n}\n\ndiv:hover {\n  /* transform: skew(20deg); */\n  transform: matrix(1, 0, 0.4, 1, 0, 0);\n}</code></pre></div><p>上面的示例中分别使用 <em>skew</em> 和矩阵 <em>matrix</em> 实现了一致的倾斜效果。</p><p><br></p><p><strong>矩阵实现镜像变形</strong></p><p><br></p><p>前面介绍的效果，<em>CSS3</em> 中都提供了对应的变形函数，但是矩阵真正发挥威力是在没有对应的变形函数时，例如这里要讲的镜像变形。</p><p><br></p><p>我们先来看一下各种镜像变化 <em>x、y</em> 与 <em>x'、y'</em> 所对应的关系：</p><p><br></p><p>水平镜像，就是 <em>y</em> 坐标不变，<em>x</em> 坐标变负</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>x' = -x;\ny' = y;</code></pre></div><p>所以：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>a = -1; b = 0; \nc = 0; d = 1; \ne = 0; f = 0;</code></pre></div><p>具体示例如下：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div&gt;&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div {\n  width: 300px;\n  height: 200px;\n  margin: 150px;\n  transition: all 1s;\n  background: url('./ok.png') no-repeat;\n  background-position: center;\n  background-size: contain;\n}\n\ndiv:hover {\n  transform: matrix(-1, 0, 0, 1, 0, 0);\n}</code></pre></div><p>效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-20-011654.gif\" alt=\"2021-09-20 09.16.38\" contenteditable=\"false\"><br></p><p><br></p><p>垂直镜像，就是 <em>x</em> 坐标不变，<em>y</em> 坐标变负</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>x' = x;\ny' = -y;</code></pre></div><p>所以：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>a = 1; b = 0; \nc = 0; d = -1; \ne = 0; f = 0;</code></pre></div><p>例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">...\ndiv:hover {\n  transform: matrix(1, 0, 0, -1, 0, 0);\n}</code></pre></div><p>效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-20-011934.gif\" alt=\"2021-09-20 09.19.11\" contenteditable=\"false\"><br></p><p><br></p><p>水平镜像 + 倒立就是 y 坐标变负，x 坐标变负</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>x' = -x;\ny' = -y;</code></pre></div><p>所以：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>a = -1; b = 0; \nc = 0; d = -1; \ne = 0; f = 0;</code></pre></div><p>例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">...\ndiv:hover {\n  transform: matrix(-1, 0, 0, -1, 0, 0);\n}</code></pre></div><p>效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-20-013005.gif\" alt=\"2021-09-20 09.29.45\" contenteditable=\"false\"><br></p><p><br></p><p><em>90</em> 度旋转 + 镜像就是：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>x' = y;\ny' = x;</code></pre></div><p>所以：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>a = 0; b = 1; \nc = 1; d = 0; \ne = 0; f = 0;</code></pre></div><p>例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">...\ndiv:hover {\n  transform: matrix(0, 1, 1, 0, 0, 0);\n}</code></pre></div><p>效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-20-013140.gif\" alt=\"2021-09-20 09.31.24\" contenteditable=\"false\"><br></p><p><br></p><p><em>-90</em> 度旋转 + 镜像就是：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>x' = -y;\ny' = -x;</code></pre></div><p>所以：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>a = 0; b = -1; \nc = -1; d = -0; \ne = 0; f = 0;</code></pre></div><p>例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">...\ndiv:hover {\n  transform: matrix(0, -1, -1, 0, 0, 0);\n}</code></pre></div><p>效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-20-013304.gif\" alt=\"2021-09-20 09.32.47\" contenteditable=\"false\"><br></p><p><br></p><p>通过上面一系列的示例，我们可以发现，使用矩阵 <em>matrix</em> 函数确实更佳灵活，能够写出各种变形效果。</p><h3><em>3D</em> 变形</h3><p>使用二维变形能够改变元素在水平和垂直轴线，然而还有一个轴沿着它，可以改变元素。使用三维变形，可以改变元素在 <em>Z</em> 轴位置。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-20-024408.png\" alt=\"image-20210920104407743\" contenteditable=\"false\"><br></p><p><br></p><p>三维变换使用基于二维变换的相同属性，如果熟悉二维变换就会发现，<em>3D</em> 变形的功能和 <em>2D</em> 变换的功能类似。CSS3 中的 3D 变换只要包含以下几类：</p><ul><li><p><strong><em>3D</em> 位移</strong>：包括 <em>translateZ</em> 和 <em>translate3d</em> 两个变形函数。</p></li><li><p><strong><em>3D</em> 旋转</strong>：包括 <em>rotateX、rotateY、rotateZ</em> 和 <em>rotate3d</em> 这四个变形函数。</p></li><li><p><strong><em>3D</em> 缩放</strong>：包括 <em>scaleZ</em> 和 <em>sclae3d</em> 两个变形函数。</p></li><li><p><strong><em>3D</em> 矩阵</strong>：和 <em>2D</em> 变形一样，也有一个 <em>3D</em> 矩阵功能函数 <em>matrix3d</em></p></li></ul><h4><em>3D</em> 位移</h4><p>我们直接来看合成变形函数 <em>translate3d</em>，其语法如下：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">translate3d(tx, ty, tz)</code></pre></div><ul><li><p><em>tx</em>：在 <em>X</em> 轴的位移距离。</p></li><li><p><em>ty</em>：在 <em>Y</em> 轴的位移距离。</p></li><li><p><em>tz</em>：在 <em>Z</em> 轴的位移距离。值越大，元素离观察者越近，值越小，元素离观察者越远</p></li></ul><p>来看一个具体的示例：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"container\"&gt;\n  &lt;div class=\"item\"&gt;&lt;/div&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.container{\n  width: 400px;\n  height: 400px;\n  border: 1px solid;\n  margin: 150px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  perspective: 1000px;\n}\n.item {\n  width: 300px;\n  height: 200px;\n  transition: all 1s;\n  background: url('./ok.png') no-repeat;\n  background-position: center;\n  background-size: contain;\n}\n\n.item:hover {\n  transform: translate3d(100px, 100px, -500px)\n}</code></pre></div><p>在上面的代码中，我们设置 <em>div.item</em> 被 <em>hover</em> 的时候进行 <em>3D</em> 位移，也就是 <em>X、Y、Z</em> 轴同时进行移动。注意这里要设置父元素的透视效果，也就是设置 <em>perspective</em> 值，否则看不出 <em>Z</em> 轴的移动效果。效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-20-024039.gif\" alt=\"2021-09-20 10.40.24\" contenteditable=\"false\"><br></p><h4><em>3D</em> 旋转</h4><p>在三维变形中，可以让元素在任何轴旋转，对应的变形函数有 <em>rotateX、rotateY、rotateZ</em> 以及 <em>rotate3d</em>。</p><p><br></p><p>其中 <em>rotate3d</em> 就是前面 <em>3</em> 个变形函数的复合函数。不过出了 <em>x、y、z</em> 这三条轴的参数以外，还接受第四个参数 <em>a</em>，表示旋转角度。</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">rotate3d(x, y, z, a)</code></pre></div><ul><li><p><em>x</em>：可以是 <em>0</em> 到 <em>1</em> 之间的数值，表示旋转轴 <em>X</em> 坐标方向的矢量。</p></li><li><p><em>y</em>：可以是 <em>0</em> 到 <em>1</em> 之间的数值，表示旋转轴 <em>Y</em> 坐标方向的矢量。</p></li><li><p><em>z</em>：可以是 <em>0</em> 到 <em>1</em> 之间的数值，表示旋转轴 <em>Z</em> 坐标方向的矢量。</p></li><li><p><em>a</em>：表示旋转角度。正的角度值表示顺时针旋转，负值表示逆时针旋转。</p></li></ul><p>下面我们以 <em>rotateX</em> 变形函数为例：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"container\"&gt;\n  &lt;div class=\"item\"&gt;&lt;/div&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.container{\n  width: 400px;\n  height: 400px;\n  border: 1px solid;\n  margin: 150px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  perspective: 1000px;\n}\n.item {\n  width: 150px;\n  height: 150px;\n  background-color: red;\n  transition: all 1s;\n}\n\n.item:hover {\n  transform: rotateX(45deg)\n}</code></pre></div><p>效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-21-132328.gif\" alt=\"2021-09-21 21.23.14\" contenteditable=\"false\"><br></p><h4><em>3D</em> 缩放</h4><p><em>3D</em> 缩放主要有 <em>sclaeZ</em> 和 <em>scale3d</em>，其中 <em>scale3d</em> 就是 <em>scaleX</em>、<em>scaleY</em> 以及 <em>scaleZ</em> 的复合变形函数。其语法如下：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">scale(sx, sy, sz)</code></pre></div><ul><li><p><em>sx</em>：<em>X</em> 轴上的缩放比例</p></li><li><p><em>sy</em>：<em>Y</em> 轴上的缩放比例</p></li><li><p><em>sz</em>：<em>Z</em> 轴上的缩放比例</p></li></ul><p>但是 <em>scaleX</em> 和 <em>scaleY</em> 变形效果很明显，但是 <em>scaleZ</em>  却基本看不出有什么效果。原因很简单，<em>scaleZ</em> 是 <em>Z</em> 轴上面的缩放，也就是厚度上面的变化，所以如果不是立方体结构，基本上是看不出来 <em>Z</em> 轴上面的缩放效果的。</p><p><br></p><p>一般来讲，我们不会将 <em>scaleZ</em> 和 <em>scale3d</em> 单独使用，因为 <em>scaleZ</em> 和 <em>scale3d</em> 这两个变形函数在单独使用时没有任何效果，需要配合其他的变形函数一起使用时才会有效果。</p><p><br></p><p>这里我们以前面那个立方体为例，如下：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"box\"&gt;\n  &lt;div class=\"up\"&gt;上&lt;/div&gt;\n  &lt;div class=\"down\"&gt;下&lt;/div&gt;\n  &lt;div class=\"left\"&gt;左&lt;/div&gt;\n  &lt;div class=\"right\"&gt;右&lt;/div&gt;\n  &lt;div class=\"forword\"&gt;前&lt;/div&gt;\n  &lt;div class=\"back\"&gt;后&lt;/div&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.box {\n  width: 250px;\n  height: 250px;\n  border: 1px dashed red;\n  margin: 100px auto;\n  position: relative;\n  border-radius: 50%;\n  transform-style: preserve-3d;\n  transition: all 1s;\n  transform: rotateX(45deg) rotateY(45deg);\n}\n\n.box:hover{\n  transform: rotateX(45deg) rotateY(45deg) scaleZ(.5);\n}\n\n.box&gt;div {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  text-align: center;\n  line-height: 250px;\n  font-size: 60px;\n  color: #daa520;\n}\n\n.left {\n  background-color: rgba(255, 0, 0, 0.3);\n  transform-origin: left;\n  transform: rotateY(90deg) translateX(-125px);\n}\n\n.right {\n  background: rgba(0, 0, 255, 0.3);\n  transform-origin: right;\n  /* 变换*/\n  transform: rotateY(90deg) translateX(125px);\n}\n\n.forward {\n  background: rgba(255, 255, 0, 0.3);\n  transform: translateZ(125px);\n}\n\n.back {\n  background: rgba(0, 255, 255, 0.3);\n  transform: translateZ(-125px);\n}\n\n.up {\n  background: rgba(255, 0, 255, 0.3);\n  transform: rotateX(90deg) translateZ(125px);\n}\n\n.down {\n  background: rgba(99, 66, 33, 0.3);\n  transform: rotateX(-90deg) translateZ(125px);\n}</code></pre></div><p>效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-21-143413.gif\" alt=\"2021-09-21 22.33.57\" contenteditable=\"false\"><br></p><h3><em>3D</em> 矩阵</h3><p><em>CSS3</em> 中的 <em>3D</em> 矩阵比 <em>2D</em> 矩阵复杂，从二维到三维，在矩阵里 3*3 变成 4*4，即 <em>9</em> 到 <em>16</em>。</p><p><br></p><p>对于 <em>3D</em> 矩阵而言，本质上很多东西与 <em>2D</em> 是一致的，只是复杂程度不一样而已。</p><p><br></p><p>对于 <em>3D</em> 缩放效果，其矩阵如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-21-145039.png\" alt=\"image-20210921225039133\" contenteditable=\"false\"><br></p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">matrix3d(sx, 0, 0, 0, 0, sy, 0, 0, 0, 0, sz, 0, 0, 0, 0, 1)</code></pre></div><p>倾斜是二维变形，不能在三维空间变形。元素可能会在 <em>X</em> 轴和 <em>Y</em> 轴倾斜，然后转化为三维，但它们不能在 <em>Z</em> 轴倾斜。</p><p><br></p><p>这里举几个 <em>3D</em> 矩阵的例子：</p><p><br></p><p><em>translate3d(tx,ty,tz)</em> 等价于 <em>matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,tx,ty,tz,1)</em></p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-21-145544.png\" alt=\"image-20210921225544059\" contenteditable=\"false\"><br></p><p><br></p><p><em>scale3d(sx,sy,sz)</em> 等价于 <em>matrix3d(sx,0,0,0,0,sy,0,0,0,0,sz,0,0,0,0,1)</em></p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-21-145618.png\" alt=\"image-20210921225617731\" contenteditable=\"false\"><br></p><p><br></p><p><em>rotate3d(x,y,z,a)</em> 真是得搬出高中数学书好好复习一下了，第四个参数 <em>alpha</em> 用于 <em>sc</em> 和 <em>sq</em> 中</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-21-145731.png\" alt=\"image-20210921225731310\" contenteditable=\"false\"><br></p><p><br></p><p>等价于...你自己从上到下，从左到右依次将参数搬入 <em>matrix3d</em> 中吧。</p><p><br></p><p>当然除非是库函数需要，否则我严重怀疑是否会有人放着 <em>rotate3d</em> 不用，偏要去挑战用 <em>matrix3d</em> 模拟 <em>rotate3d</em>。</p><h2>真题解答</h2><ul><li><p>请简述一下 <em>CSS3</em> 中新增的变形如何使用？</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p>在 <em>CSS3</em> 中的变形分为 <em>2D</em> 变形和 <em>3D</em> 变形。</p><p><br></p><p>整体可以划分出 <em>3</em> 大类：</p><ul><li><p>具有 <em>X/Y</em> 的函数：<em>translateX、translateY、sclaeX、scaleY、skewX、skewY</em></p></li><li><p><em>2D</em> 变形函数：<em>translate、sclae、rotate、skew、matrix</em></p></li><li><p><em>3D</em> 变形函数：<em>rotateX、rotateY、rotate3d、translateZ、translate3d、scaleZ、scale3d、matrix3d</em></p></li></ul><p>另外，还有一些重要的变形属性，例如：</p><ul><li><p><strong><em>transform</em> 属性</strong></p></li><li><p><strong><em>transform-origin</em> 属性</strong></p></li><li><p><strong><em>transform-style</em> 属性</strong></p></li><li><p><strong><em>perspective</em> 属性</strong></p></li><li><p><strong><em>perspective-origin</em> 属性</strong></p></li><li><p><strong><em>backface-visibility</em> 属性</strong></p></li></ul></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666076346351",
+    typeId: ObjectId("634d7fc47797638ec96fe2ee")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e4eef2fac4881713db32c"),
+    interviewTitle: "什么是渐进式渲染 ？",
+    interviewContent: "<h1>渐进式渲染</h1><h2>经典真题</h2><ul><li><p>什么是渐进式渲染 ？</p></li></ul><h2>渐进式渲染</h2><p>渐进式渲染，英文全称 <em>progressive rendering</em>，也被称之为惰性渲染，指的是为了提高用户感知的加载速度，以尽快的速度来呈现页面的技术。</p><p><br></p><p>在以前互联网带宽较小的时期，这种技术更为普遍。如今，移动终端的盛行，而移动网络往往不稳定，渐进式渲染在现代前端开发中仍然有用武之地。</p><p><br></p><p>有一点需要弄明白的是，这不是指的某一项技术，而是各种技术的一种集合。</p><p><br></p><p>例如：</p><p><br></p><p><strong>骨架屏</strong></p><p><br></p><p>在加载网络数据时，为了提升用户体验，通常会使用一个转圈圈的 <em>loading</em> 动画，或者使用 <em>Skeleton Screen</em> 占位。相比与 <em>loading</em> 动画，<em>Skeleton Screen</em> 的效果要更生动</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-13-081721.png\" alt=\"image-20210913161720022\" contenteditable=\"false\"><br></p><p><br></p><p><strong>图片懒加载</strong></p><p><br></p><p>所谓图片懒加载，顾名思义，就是先加载部分图片，剩余的图片等到需要的时候再加载。这在电商网站中尤其常见。</p><p><br></p><p>比如一个电商网站，首屏通常会有很多的数据，清晰度较高的 <em>banner</em> 或轮播。页面非首屏部分会员很多商品夹杂着大量的图片。这是时候选择懒加载以保证首屏的流畅十分重要。</p><p><br></p><p><strong>图片占位符</strong></p><p><br></p><p>在网页加载的时候，某些图片还在请求中或者还未请求，这个时候就先找一个临时代替的图像，放在最终图像的位置上，但是这只是临时替代的图形，当图片数据准备好以后，会重新渲染真正的图形数据。</p><p><br></p><p><strong>拆分网页资源</strong></p><p><br></p><p>大部分用户不会用到一个网站的所有页面，但我们通常的做法却是把所有的功能都打包进一个很大的文件里面。一个 <em>bundle.js</em> 文件的大小可能会有几  <em>M</em>，一个打包后的  <em>style.css</em>  会包含网站的一切样式，从  <em>CSS</em>  结构定义到网站在各个版本的样式：移动端、平板、桌面、打印版等等。</p><p><br></p><p>但用户并不是一开始就需要所有的资源，所有我们可以对资源进行拆分，首先加载那些关键的资源，其他的资源等到需要的时候再去加载它。</p><p><br></p><p>更多的关于渐进式渲染的内容，可以参阅 <em>MDN</em>：<em>https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps/Loading</em></p><h2>真题解答</h2><ul><li><p>什么是渐进式渲染 ？</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p>渐进式渲染，英文全称 <em>progressive rendering</em>，也被称之为惰性渲染，指的是为了提高用户感知的加载速度，以尽快的速度来呈现页面的技术。但是这并不是某一项技术的特指，而是一系列技术的集合。</p><p><br></p><p>例如：</p><ul><li><p>骨架屏</p></li><li><p>图片懒加载</p></li><li><p>图片占位符</p></li><li><p>资源拆分</p></li></ul></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666076399623",
+    typeId: ObjectId("634d7fc47797638ec96fe2ee")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e4f152fac4881713db330"),
+    interviewTitle: "总结一下如何提升或者优化 CSS 的渲染性能",
+    interviewContent: "<h1><em>CSS</em> 渲染性能优化</h1><h2>经典真题</h2><ul><li><p>总结一下如何提升或者优化 <em>CSS</em> 的渲染性能</p></li></ul><h2><em>CSS</em> 渲染性能优化</h2><p>很多人往往不重视性能优化这一块，觉得功能做出来就行了。</p><p><br></p><p>诚然，在软件开发过程中，功能确实是优先要考虑的，但是当功能完善后，接下来就需要考虑性能问题了。</p><p><br></p><p>我们可以从两个方面来看性能优化的意义：</p><ol><li><p>用户角度</p><p>网站优化能够让页面加载得更快，响应更加及时，极大提升用户体验。</p></li><li><p>服务商角度</p><p>优化会减少页面资源请求数，减小请求资源所占带宽大小，从而节省可观的带宽资源。</p></li></ol><p>网站优化的目标就是减少网站加载时间，提高响应速度。</p><p><br></p><p>那么网站加载速度和用户体验又有着怎样的关系呢？我们来看下面这张图：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-16-041118.png\" alt=\"image-20210916121117684\" contenteditable=\"false\"><br></p><p><br></p><p><em>Google</em> 和亚马逊的研究表明，<em>Google</em> 页面加载的时间从 <em>0.4</em> 秒提升到 <em>0.9</em> 秒导致丢失了 <em>20%</em> 流量和广告收入，对于亚马逊，页面加载时间每增加 <em>100ms</em> 就意味着 <em>1%</em> 的销售额损失。</p><p><br></p><p>可见，页面的加载速度对于用户有着至关重要的影响。</p><p><br></p><p>一个好的交互效果可能是这样的：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-16-041314.png\" alt=\"image-20210916121313325\" contenteditable=\"false\"><br></p><p><br></p><p>当然，性能优化是来自方方面面的。</p><p><br></p><p>这里我们主要来看 <em>CSS</em> 方面能够进行哪些性能优化。</p><p><br></p><p>1.使用 <code data-backticks=\"1\">id selector</code> 非常的高效。在使用 <code data-backticks=\"1\">id selector</code> 的时候需要注意一点：因为 <code data-backticks=\"1\">id</code> 是唯一的，所以不需要既指定 <code data-backticks=\"1\">id</code> 又指定 <code data-backticks=\"1\">tagName</code>：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">/* Bad  */\np#id1 {color:red;}  \n\n/* Good  */\n#id1 {color:red;}</code></pre></div><p>2.避免深层次的 <code data-backticks=\"1\">node</code> ，譬如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">/* Bad  */\ndiv &gt; div &gt; div &gt; p {color:red;} \n/* Good  */\np-class{color:red;}</code></pre></div><p>3.不要使用 <code data-backticks=\"1\">attribute selector</code>，如：p[att1=”val1”]。这样的匹配非常慢。更不要这样写：<code data-backticks=\"1\">p[id=\"id1\"]</code>。这样将 <code data-backticks=\"1\">id selector</code> 退化成 <code data-backticks=\"1\">attribute selector</code>。</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">/* Bad  */\np[id=\"jartto\"]{color:red;}  \np[class=\"blog\"]{color:red;}  \n/* Good  */\n#jartto{color:red;}  \n.blog{color:red;}</code></pre></div><p>4.通常将浏览器前缀置于前面，将标准样式属性置于最后，类似：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.foo {\n  -moz-border-radius: 5px;\n  border-radius: 5px;\n}</code></pre></div><p>这里推荐参阅 <em>CSS</em> 规范-优化方案：<em>http://nec.netease.com/standard/css-optimize.html</em></p><p><br></p><p>5.遵守 <em>CSSLint</em> 规则</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">font-faces        　　　　  　　　不能使用超过5个web字体\nimport        　　　　　　　 　　  禁止使用@import\nregex-selectors        　　　　  禁止使用属性选择器中的正则表达式选择器\nuniversal-selector    　　 　　  禁止使用通用选择器*\nunqualified-attributes    　　　禁止使用不规范的属性选择器\nzero-units            　　 　　　0后面不要加单位\noverqualified-elements    　　　使用相邻选择器时，不要使用不必要的选择器\nshorthand        　　　　　　　　 简写样式属性\nduplicate-background-images    相同的url在样式表中不超过一次</code></pre></div><p>更多的 <em>CSSLint</em> 规则可以参阅：<em>https://github.com/CSSLint/csslint</em></p><p><br></p><p>6.不要使用 <code data-backticks=\"1\">@import</code></p><p><br></p><p>使用 <code data-backticks=\"1\">@import</code> 引入 <code data-backticks=\"1\">CSS</code> 会影响浏览器的并行下载。使用 <code data-backticks=\"1\">@import</code> 引用的 <code data-backticks=\"1\">CSS</code> 文件只有在引用它的那个 <code data-backticks=\"1\">CSS</code> 文件被下载、解析之后，浏览器才会知道还有另外一个 <code data-backticks=\"1\">CSS</code> 需要下载，这时才去下载，然后下载后开始解析、构建 <code data-backticks=\"1\">Render Tree</code> 等一系列操作。</p><p><br></p><p>多个 <code data-backticks=\"1\">@import</code> 会导致下载顺序紊乱。在 <code data-backticks=\"1\">IE</code> 中，<code data-backticks=\"1\">@import</code> 会引发资源文件的下载顺序被打乱，即排列在 <code data-backticks=\"1\">@import</code> 后面的 <code data-backticks=\"1\">JS</code> 文件先于 <code data-backticks=\"1\">@import</code> 下载，并且打乱甚至破坏 <code data-backticks=\"1\">@import</code> 自身的并行下载。</p><p><br></p><p>7.避免过分重排（<em>Reflow</em>）</p><p>所谓重排就是浏览器重新计算布局位置与大小。常见的重排元素：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">width \nheight \npadding \nmargin \ndisplay \nborder-width \nborder \ntop \nposition \nfont-size \nfloat \ntext-align \noverflow-y \nfont-weight \noverflow \nleft \nfont-family \nline-height \nvertical-align \nright \nclear \nwhite-space \nbottom \nmin-height</code></pre></div><p>8.依赖继承。如果某些属性可以继承，那么自然没有必要在写一遍。</p><h2>真题解答</h2><ul><li><p>总结一下如何提升或者优化 <em>CSS</em> 的渲染性能</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p><em>CSS</em> 渲染性能的优化来自方方面面，这里列举一些常见的方式：</p><ol><li><p>使用 <em>id</em> 选择器非常高效，因为 <em>id</em> 是唯一的</p></li><li><p>避免深层次的选择器嵌套</p></li><li><p>尽量避免使用属性选择器，因为匹配速度慢</p></li><li><p>使用渐进增强的方案</p></li><li><p>遵守 <em>CSSLint</em> 规则</p></li><li><p>不要使用 <code data-backticks=\"1\">@import</code></p></li><li><p>避免过分重排（<em>Reflow</em>）</p></li><li><p>依赖继承</p></li><li><p>值缩写</p></li><li><p>避免耗性能的属性</p></li><li><p>背景图优化合并</p></li><li><p>文件压缩</p></li></ol></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666076437700",
+    typeId: ObjectId("634d7fc47797638ec96fe2ee")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e4f782fac4881713db334"),
+    interviewTitle: "是否了解过 CSS3 中的遮罩",
+    interviewContent: "<h1><em>CSS3</em> 遮罩</h1><p>本文主要包含以下内容：</p><ul><li><p><em>CSS3</em> 遮罩介绍</p></li><li><p>遮罩各属性介绍</p></li></ul><h2><em>CSS3</em> 遮罩介绍</h2><p><em>CSS mask</em> 遮罩属性的历史非常久远了，远到比 <em>CSS3 border-radius</em> 等属性还要久远，最早是出现在 <em>Safari</em> 浏览器上的，差不多可以追溯到 <em>2009</em> 年。</p><p><br></p><p>不过那个时候，遮罩只能作为实验性的属性，做一些特效使用。毕竟那个年代还是 <em>IE</em> 浏览器的时代，属性虽好，但价值有限。</p><p><br></p><p>但是如今情况却大有变化，除了 <em>IE</em> 浏览器不支持，<em>Firefox、Chrome、Edge</em> 以及移动端等都已经全线支持，其实际应用价值已不可同日而语。</p><p><br></p><p>尤其 <em>Firefox</em> 浏览器，从版本 <em>53</em> 开始，已经全面支持了 <em>CSS3 mask</em> 属性。并且 <em>mask</em> 属性规范已经进入候选推荐规范之列，会说以后进入既定规范标准已经是板上钉钉的事情，大家可以放心学习，将来必有用处。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-25-145725.png\" alt=\"image-20211025225724975\" contenteditable=\"false\"><br></p><p><br></p><p>（图为 <em>caniuse</em> 上各浏览器对 <em>CSS mask</em> 的支持情况）</p><h2>快速入门示例</h2><p>下面，我们来看一个 <em>CSS mask</em> 的快速入门示例。</p><p><br></p><p>首先需要准备两张图片，图片素材如下：</p><p><br></p><p>一张 <em>jpg</em> 图片：<em>zelda.jpg</em></p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-25-151154.png\" alt=\"image-20211025231154694\" contenteditable=\"false\"><br></p><p><br></p><p>一张 <em>png</em> 图片：<em>mask.png</em>，该 <em>png</em> 图片背景为透明（这里划重点）</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-25-151236.png\" alt=\"image-20211025231236440\" contenteditable=\"false\"><br></p><p><br></p><p>接下来准备我们的测试目录：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-25-151518.png\" alt=\"image-20211025231518012\" contenteditable=\"false\"><br></p><p><br></p><p><em>index.html</em> 代码如下：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div class=\"mask\"&gt;&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">* {\n  margin: 0;\n  padding: 0;\n}\n\ndiv {\n  width: 1200px;\n  height: 600px;\n  outline: 1px solid;\n  margin: 50px auto;\n  background: url('./zelda.jpg') no-repeat center/cover;\n}\n\n/*  \n  虽然 .mask 和 div 都是选择中的相同的元素\n  这里为了单独观察 mask 相关设置，\n  和 mask 不相关的属性设置放入到了 div 选择器中 \n*/\n.mask {\n  -webkit-mask-image: url('./mask.png');\n}</code></pre></div><p>在上面的代码中，我们为 <em>div</em> 设置了一个铺满整个盒子的背景图，然后为该盒子设置了遮罩效果。由于 <em>mask.png</em> 无法占满整个盒子，所以出现了重复的效果，<strong><em>mask.png</em> 遮罩图片透明的部分不会显示底部图片的信息，而非透明部分则会显示底层图片信息</strong>。</p><p><br></p><p>效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-25-151805.png\" alt=\"image-20211025231804573\" contenteditable=\"false\"><br></p><p><br></p><p>除了设置透明的 <em>png</em> 图片，还可以设置透明的渐变。例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.mask {\n  -webkit-mask-image: linear-gradient(transparent 10%, white);\n}</code></pre></div><p>在上面的代码中，我们设置了一个从上到下的线性透明渐变，效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-26-013708.png\" alt=\"image-20211026093708467\" contenteditable=\"false\"><br></p><p><br></p><p>可以看到，无论是设置图片还是渐变，一定要有透明的部分，否则无法起到遮罩的效果，例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.mask {\n  -webkit-mask-image: linear-gradient(red,blue);\n}</code></pre></div><p>上面的代码中，我们设置的是一个红到蓝的渐变，没有任何的透明部分，所以遮罩层不会起作用，底图会原封不动的显示出来。</p><h2>遮罩各属性介绍</h2><p>在上面的快速入门示例中，我们用到的是 <em>mask-image</em> 属性，但是除了该属性外，<em>CSS mask</em> 还有很多其他的属性，如下：</p><ul><li><p><em>mask-image</em></p></li><li><p><em>mask-mode</em></p></li><li><p><em>mask-repeat</em></p></li><li><p><em>mask-position</em></p></li><li><p><em>mask-clip</em></p></li><li><p><em>mask-origin</em></p></li><li><p><em>mask-size</em></p></li><li><p><em>mask-type</em></p></li><li><p><em>mask-composite</em></p></li></ul><p>下面我们来针对每个属性进行介绍。</p><h4><em>mask-image</em></h4><p>该属性在上面的快速入门示例中我们已经体验过了，默认值为 <em>none</em>，表示没有遮罩图片。</p><p><br></p><p>可以设置的值为透明图片，或透明渐变。</p><h4><em>mask-repeat</em></h4><p>表示遮罩层是否允许重复，默认值为 <em>repeat</em> 允许重复，可选值与 <em>background-repeat</em> 相同。</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.mask {\n  -webkit-mask-image: url('./mask.png');\n  -webkit-mask-repeat: no-repeat;\n}</code></pre></div><p>上面的代码中，我们设置遮罩层的重复行为是 <em>x、y</em> 轴都不重复，效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-26-015113.png\" alt=\"image-20211026095112536\" contenteditable=\"false\"><br></p><p><br></p><p>（红框是为了表示整张图片的大小，并非浏览器实际显示情况）</p><h4><em>mask-position</em></h4><p>该属性用于设置遮罩层的位置，默认值为<em>0 0</em> 在最左上角，可选值与 <em>background-position</em> 相同。</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.mask {\n  -webkit-mask-image: url('./mask.png');\n  -webkit-mask-repeat: no-repeat;\n  -webkit-mask-position: center;\n}</code></pre></div><p>效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-26-015730.png\" alt=\"image-20211026095730053\" contenteditable=\"false\"><br></p><p><br></p><p>（红框是为了表示整张图片的大小，并非浏览器实际显示情况）</p><h4><em>mask-size</em></h4><p>该属性用于设置遮罩层的大小，默认值为 <em>auto</em>，可选值与 <em>background-size</em> 相同，如下表：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-26-021622.png\" alt=\"image-20211026101622232\" contenteditable=\"false\"><br></p><p><br></p><p>例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.mask {\n  -webkit-mask-image: url('./mask.png');\n  -webkit-mask-repeat: no-repeat;\n  -webkit-mask-position: center;\n  -webkit-mask-size: contain;\n}</code></pre></div><p>效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-26-021901.png\" alt=\"image-20211026101900926\" contenteditable=\"false\"><br></p><p><br></p><p>（红框是为了表示整张图片的大小，并非浏览器实际显示情况）</p><h4><em>mask-origin</em></h4><p>默认值为 <em>border-box</em>，可选值与 <em>background-origin</em> 相同，可以设置如下的属性值：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-26-020115.png\" alt=\"image-20211026100114147\" contenteditable=\"false\"><br></p><p><br></p><p>下面为了显示其效果，我们需要稍微对其他样式做一些改变，如下：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">div {\n  width: 1200px;\n  height: 600px;\n  border: 100px solid;\n  margin: 50px auto;\n  background: url('./zelda.jpg') no-repeat center/cover;\n}\n\n/*  \n虽然 .mask 和 div 都是选择中的相同的元素\n这里为了单独观察 mask 相关设置，\n和 mask 不相关的属性设置放入到了 div 选择器中 \n*/\n.mask {\n  -webkit-mask-image: url('./mask.png');\n  -webkit-mask-repeat: no-repeat;\n}</code></pre></div><p>在上面的代码中，我们为该 <em>div</em> 设置了一个宽度为 <em>100px</em> 的 <em>border</em>，由于 <em>mask-origin</em> 的默认值为 <em>border-box</em>，所以我们可以看到如下的效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-26-020928.png\" alt=\"image-20211026100927087\" contenteditable=\"false\"><br></p><p><br></p><p>（红框是为了表示整张图片的大小，并非浏览器实际显示情况）</p><p><br></p><p>此时如果设置 <em>mask-origin</em> 的值为 <em>centent-box</em>，遮罩层图像就会相对于内容框来定位。</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.mask {\n  -webkit-mask-image: url('./mask.png');\n  -webkit-mask-repeat: no-repeat;\n  -webkit-mask-origin: content-box;\n}</code></pre></div><p>效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-26-021239.png\" alt=\"image-20211026101238881\" contenteditable=\"false\"><br></p><p><br></p><p>（外层的黑框表示该 <em>div</em> 的 <em>border</em>，红框表示该 <em>div</em> 的内容区域，并非浏览器实际显示情况）</p><h4><em>mask-clip</em></h4><p>默认值为 <em>border-box</em>，可选值与 <em>background-clip</em> 相同，可以设置如下属性值：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-26-025300.png\" alt=\"image-20211026105259969\" contenteditable=\"false\"><br></p><p><br></p><p>我们同样为 <em>div</em> 设置一个宽度为 <em>100px</em> 的 <em>border</em>，由于默认值为 <em>border-box</em>，所以我们看到的效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-26-025412.png\" alt=\"image-20211026100927087\" contenteditable=\"false\"><br></p><p><br></p><p>（红框是为了表示整张图片的大小，并非浏览器实际显示情况）</p><p><br></p><p>接下来设置 <em>mask-clip</em> 为 <em>content-box</em></p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.mask {\n  -webkit-mask-image: url('./mask.png');\n  -webkit-mask-repeat: no-repeat;\n  -webkit-mask-clip: content-box;\n}</code></pre></div><p>由于 <em>mask-origin</em> 默认值为 <em>border-box</em>，所以遮罩层以边框盒来定位，之后我们设置了 <em>mask-clip</em> 为 <em>content-box</em>，表示以内容框来进行裁剪。效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-26-025533.png\" alt=\"image-20211026105532851\" contenteditable=\"false\"><br></p><p><br></p><p>（外层的黑框表示该 <em>div</em> 的 <em>border</em>，红框表示该 <em>div</em> 的内容区域，并非浏览器实际显示情况）</p><h4><em>mask-mode</em></h4><p><em>mask-mode</em> 属性默认值为 <em>match-source</em>，作用是根据资源的类型自动采用合适的遮罩模式。</p><p><br></p><p>例如，如果遮罩效果使用的是 <em>SVG</em> 中的 &lt;<em>mask</em>&gt; 元素，则此时的 <em>mask-mode</em> 属性的值为 <em>luminance</em>，表示基于亮度来判断是否要进行遮罩。</p><p><br></p><p>如果是其他场景，则计算值是 <em>alpha</em>，表示基于透明度判断是否要进行遮罩。</p><p><br></p><p>因此 <em>mask-mode</em> 可选值为 <em>alpha、luminance、match-source</em>。</p><p><br></p><p>使用搜索引擎搜索遮罩素材的时候，往往搜索的结果都是白底的 <em>JPG</em> 图片，因此使用默认的遮罩模式是没有预期的遮罩效果的。此时就非常适合设置遮罩模式为 <em>luminance</em>。</p><p><br></p><p>另外，目前仅 <em>Firefox</em> 浏览器支持 <em>mask-mode</em> 属性，<em>Chrome</em> 浏览器并不提供支持，但是可以使用非标准的 <em>mask-source-type</em> 属性来进行替代（没有私有前缀）。</p><p><br></p><p>下面来看一个简单的示例。首先我们需要扩充我们的遮罩素材，准备了一张 <em>mask2.jpg</em> 的遮罩图片，该素材首先是 <em>jpg</em> 格式的，其次并没有透明区域，仅有一些白底区域。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-26-032617.png\" alt=\"image-20211026112617175\" contenteditable=\"false\"><br></p><p><br></p><p>接下来设置如下的代码：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.mask {\n  -webkit-mask-image: url('./mask2.jpg');\n  -webkit-mask-repeat: no-repeat;\n  -webkit-mask-position: center;\n  mask-mode: luminance;\n}</code></pre></div><p>在上面的代码中，我们设置 <em>mask-mode</em> 的值为 <em>luminance</em>，表示基于亮度来判断是否进行遮罩。</p><p><br></p><p>在 <em>Firefox</em> 浏览器中的效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-26-032916.png\" alt=\"image-20211026112915034\" contenteditable=\"false\"><br></p><p><br></p><p>（红框是为了表示整张图片的大小，并非浏览器实际显示情况）</p><h4><em>mask-type</em></h4><p><em>mask-type</em> 属性的功能和 <em>mask-mode</em> 属性类似，都是设置不同的遮罩模式，但还是有一个很大的区别，就是 <em>mask-type</em> 属性只能作用于 <em>SVG</em> 元素上，因为其本质上是由 <em>SVG</em> 属性演变而来的，<em>Chrome</em> 等浏览器也都支持该属性。而 <em>mask-mode</em> 是一个针对所有元素类型的 <em>CSS</em> 属性，<em>Chrome</em> 等浏览器并不支持该属性，目前仅只有 <em>Firefox</em> 浏览器对其提供支持。</p><p><br></p><p>由于 <em>mask-type</em> 属性只能作用于 <em>SVG</em> 元素上，因此默认值表现为 <em>SVG</em> 元素默认遮罩模式，也就是默认值是 <em>luminance</em> 亮度遮罩模式。如果需要支持透明度遮罩模式，可以这么设置：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">mask-type: alpha;</code></pre></div><h4><em>mask-composite</em></h4><p><em>mask-composite</em> 属性表示同时使用多张图片进行遮罩时的合成方式。默认值为 <em>add</em>，可选值为 <em>add、subtract、intersect、exclude</em>。</p><ul><li><p><em>mask-composite: add</em>：表示遮罩累加，这是默认值</p></li><li><p><em>mask-composite: subtract</em>：表示遮罩相减，也就是遮罩图片重合的区域不显示，这就意味着，遮罩层图片越多，遮罩区域越小。</p></li><li><p><em>mask-composite: intersect</em>：表示遮罩相交，也就是遮罩图片重合的区域才显示遮罩。</p></li><li><p><em>mask-composite: exclude</em>：表示遮罩排除，也就是遮罩图片重合的区域会被当作透明。</p></li></ul><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666076536138",
+    typeId: ObjectId("634d7fc47797638ec96fe2ee")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e4fb82fac4881713db33b"),
+    interviewTitle: "什么是 CSS 中的包含块？",
+    interviewContent: "<h1>你不知道的 CSS 之包含块</h1><p>一说到 CSS 盒模型，这是很多小伙伴耳熟能详的知识，甚至有的小伙伴还能说出 border-box 和 content-box 这两种盒模型的区别。</p><p><br></p><p>但是一说到 CSS 包含块，有的小伙伴就懵圈了，什么是包含块？好像从来没有听说过这玩意儿。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-14-142005.png\" alt=\"image-20220814222004395\" contenteditable=\"false\"><br></p><p><br></p><p>好吧，如果你对包含块的知识一无所知，那么系好安全带，咱们准备出发了。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-13-060434.png\" alt=\"image-20220813140434032\" contenteditable=\"false\"><br></p><p><br></p><p>包含块英语全称为<strong>containing block</strong>，实际上平时你在书写 CSS 时，大多数情况下你是感受不到它的存在，因此你不知道这个知识点也是一件很正常的事情。但是这玩意儿是确确实实存在的，在 CSS 规范中也是明确书写了的：</p><p><br></p><p><em>https://drafts.csswg.org/css2/#containing-block-details</em></p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-14-142459.png\" alt=\"image-20220814222458695\" contenteditable=\"false\"><br></p><p><br></p><p>并且，如果你不了解它的运作机制，有时就会出现一些你认为的莫名其妙的现象。</p><p><br></p><p>那么，这个包含块究竟说了什么内容呢？</p><p><br></p><p>说起来也简单，<strong>就是元素的尺寸和位置，会受它的包含块所影响。对于一些属性，例如 width, height, padding, margin，绝对定位元素的偏移值（比如 position 被设置为 absolute 或 fixed），当我们对其赋予百分比值时，这些值的计算值，就是通过元素的包含块计算得来。</strong></p><p><br></p><p>来吧，少年，让我们从最简单的 case 开始看。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-14-143153.png\" alt=\"image-20220814223152726\" contenteditable=\"false\"><br></p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;body&gt;\n  &lt;div class=\"container\"&gt;\n    &lt;div class=\"item\"&gt;&lt;/div&gt;\n  &lt;/div&gt;\n&lt;/body&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.container{\n  width: 500px;\n  height: 300px;\n  background-color: skyblue;\n}\n.item{\n  width: 50%;\n  height: 50%;\n  background-color: red;\n}</code></pre></div><p>请仔细阅读上面的代码，然后你认为 div.item 这个盒子的宽高是多少？</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-14-143451.png\" alt=\"image-20220814223451349\" contenteditable=\"false\"><br></p><p><br></p><p>相信你能够很自信的回答这个简单的问题，div.item 盒子的 width 为 250px，height 为 150px。</p><p><br></p><p>这个答案确实是没有问题的，但是如果我追问你是怎么得到这个答案的，我猜不了解包含块的你大概率会说，因为它的父元素 div.container 的 width 为 500px，50% 就是 250px，height 为 300px，因此 50% 就是 150px。</p><p><br></p><p>这个答案实际上是不准确的。正确的答案应该是，<strong>div.item 的宽高是根据它的包含块来计算的</strong>，而这里包含块的大小，正是这个元素最近的祖先块元素的内容区。</p><p><br></p><p>因此正如我前面所说，<strong>很多时候你都感受不到包含块的存在。</strong></p><p><br></p><p>包含块分为两种，一种是根元素（HTML 元素）所在的包含块，被称之为初始包含块（<strong>initial containing block</strong>）。对于浏览器而言，初始包含块的的大小等于视口 viewport 的大小，基点在画布的原点（视口左上角）。它是作为元素绝对定位和固定定位的参照物。</p><p><br></p><p>另外一种是对于非根元素，对于非根元素的包含块判定就有几种不同的情况了。大致可以分为如下几种：</p><ul><li><p>如果元素的 positiion 是 relative 或 static ，那么包含块由离它最近的块容器（block container）的内容区域（content area）的边缘建立。</p></li><li><p>如果 position 属性是 fixed，那么包含块由视口建立。</p></li><li><p>如果元素使用了 absolute 定位，则包含块由它的最近的 position 的值不是 static （也就是值为fixed、absolute、relative 或 sticky）的祖先元素的内边距区的边缘组成。</p></li></ul><p>前面两条实际上都还比较好理解，第三条往往是初学者容易比较忽视的，我们来看一个示例：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;body&gt;\n    &lt;div class=\"container\"&gt;\n      &lt;div class=\"item\"&gt;\n        &lt;div class=\"item2\"&gt;&lt;/div&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/body&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.container {\n  width: 500px;\n  height: 300px;\n  background-color: skyblue;\n  position: relative;\n}\n.item {\n  width: 300px;\n  height: 150px;\n  border: 5px solid;\n  margin-left: 100px;\n}\n.item2 {\n  width: 100px;\n  height: 100px;\n  background-color: red;\n  position: absolute;\n  left: 10px;\n  top: 10px;\n}</code></pre></div><p>首先阅读上面的代码，然后你能在脑海里面想出其大致的样子么？或者用笔和纸画一下也行。</p><p><br></p><p>公布正确答案：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-14-153548.png\" alt=\"image-20220814233548188\" contenteditable=\"false\"><br></p><p><br></p><p>怎么样？有没有和你所想象的对上？</p><p><br></p><p>其实原因也非常简单，根据上面的第三条规则，对于 div.item2 来讲，它的包含块应该是 div.container，而非 div.item。</p><p><br></p><p>如果你能把上面非根元素的包含块判定规则掌握，那么关于包含块的知识你就已经掌握 80% 了。</p><p><br></p><p>实际上对于非根元素来讲，包含块还有一种可能，那就是如果 position 属性是 absolute 或 fixed，包含块也可能是由满足以下条件的最近父级元素的内边距区的边缘组成的：</p><ul><li><p>transform 或 perspective 的值不是 none</p></li><li><p>will-change 的值是 transform 或 perspective</p></li><li><p>filter 的值不是 none 或 will-change 的值是 filter(只在 Firefox 下生效).</p></li><li><p>contain 的值是 paint (例如: contain: paint;)</p></li></ul><p>我们还是来看一个示例：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;body&gt;\n  &lt;div class=\"container\"&gt;\n    &lt;div class=\"item\"&gt;\n      &lt;div class=\"item2\"&gt;&lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/body&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.container {\n  width: 500px;\n  height: 300px;\n  background-color: skyblue;\n  position: relative;\n}\n.item {\n  width: 300px;\n  height: 150px;\n  border: 5px solid;\n  margin-left: 100px;\n  transform: rotate(0deg); /* 新增代码 */\n}\n.item2 {\n  width: 100px;\n  height: 100px;\n  background-color: red;\n  position: absolute;\n  left: 10px;\n  top: 10px;\n}</code></pre></div><p>我们对于上面的代码只新增了一条声明，那就是 transform: rotate(0deg)，此时的渲染效果却发生了改变，如下图所示：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-14-154347.png\" alt=\"image-20220814234347149\" contenteditable=\"false\"><br></p><p><br></p><p>可以看到，此时对于 div.item2 来讲，包含块就变成了 div.item。</p><p><br></p><p>好了，到这里，关于包含块的知识就基本讲完了。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-14-154655.png\" alt=\"image-20220814234654914\" contenteditable=\"false\"><br></p><p><br></p><p>我们再把 CSS 规范中所举的例子来看一下。</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;html&gt;\n  &lt;head&gt;\n    &lt;title&gt;Illustration of containing blocks&lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body id=\"body\"&gt;\n    &lt;div id=\"div1\"&gt;\n      &lt;p id=\"p1\"&gt;This is text in the first paragraph...&lt;/p&gt;\n      &lt;p id=\"p2\"&gt;\n        This is text\n        &lt;em id=\"em1\"&gt;\n          in the\n          &lt;strong id=\"strong1\"&gt;second&lt;/strong&gt;\n          paragraph.\n        &lt;/em&gt;\n      &lt;/p&gt;\n    &lt;/div&gt;\n  &lt;/body&gt;\n&lt;/html&gt;</code></pre></div><p>上面是一段简单的 HTML 代码，在没有添加任何 CSS 代码的情况下，你能说出各自的包含块么？</p><p><br></p><p>对应的结果如下：</p><table><thead><tr><th><p>元素</p></th><th><p>包含块</p></th></tr></thead><tbody><tr><td><p>html</p></td><td><p>initial C.B. (UA-dependent)</p></td></tr><tr><td><p>body</p></td><td><p>html</p></td></tr><tr><td><p>div1</p></td><td><p>body</p></td></tr><tr><td><p>p1</p></td><td><p>div1</p></td></tr><tr><td><p>p2</p></td><td><p>div1</p></td></tr><tr><td><p>em1</p></td><td><p>p2</p></td></tr><tr><td><p>strong1</p></td><td><p>p2</p></td></tr></tbody></table><p>首先 HTML 作为根元素，对应的包含块就是前面我们所说的初始包含块，而对于 body 而言，这是一个 static 定位的元素，因此该元素的包含块参照第一条为 html，以此类推 div1、p1、p2 以及 em1 的包含块也都是它们的父元素。</p><p><br></p><p>不过 strong1 比较例外，它的包含块确实 p2，而非 em1。为什么会这样？建议你再把非根元素的第一条规则读一下：</p><ul><li><p>如果元素的 positiion 是 relative 或 static ，那么包含块由离它最近的**块容器（block container）**的内容区域（content area）的边缘建立。</p></li></ul><p>没错，因为 em1 不是块容器，而包含块是<strong>离它最近的块容器</strong>的内容区域，所以是 p2。</p><p><br></p><p>接下来添加如下的 CSS：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">#div1 { \n  position: absolute; \n  left: 50px; top: 50px \n}</code></pre></div><p>上面的代码我们对 div1 进行了定位，那么此时的包含块会发生变化么？你可以先在自己思考一下。</p><p><br></p><p>答案如下：</p><table><thead><tr><th><p>元素</p></th><th><p>包含块</p></th></tr></thead><tbody><tr><td><p>html</p></td><td><p>initial C.B. (UA-dependent)</p></td></tr><tr><td><p>body</p></td><td><p>html</p></td></tr><tr><td><p>div1</p></td><td><p>initial C.B. (UA-dependent)</p></td></tr><tr><td><p>p1</p></td><td><p>div1</p></td></tr><tr><td><p>p2</p></td><td><p>div1</p></td></tr><tr><td><p>em1</p></td><td><p>p2</p></td></tr><tr><td><p>strong1</p></td><td><p>p2</p></td></tr></tbody></table><p>可以看到，这里 div1 的包含块就发生了变化，变为了初始包含块。这里你可以参考前文中的这两句话：</p><ul><li><p>初始包含块（<strong>initial containing block</strong>）。对于浏览器而言，初始包含块的的大小等于视口 viewport 的大小，基点在画布的原点（视口左上角）。它是作为元素绝对定位和固定定位的参照物。</p></li><li><p>如果元素使用了 absolute 定位，则包含块由它的最近的 position 的值不是 static （也就是值为fixed、absolute、relative 或 sticky）的祖先元素的内边距区的边缘组成。</p></li></ul><p>是不是一下子就理解了。没错，因为我们对 div1 进行了定位，因此它会应用非根元素包含块计算规则的第三条规则，寻找离它最近的 position 的值不是 static 的祖先元素，不过显然 body 的定位方式为 static，因此 div1 的包含块最终就变成了初始包含块。</p><p><br></p><p>接下来我们继续修改我们的 CSS：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">#div1 { \n  position: absolute; \n  left: 50px; \n  top: 50px \n}\n#em1  { \n  position: absolute; \n  left: 100px; \n  top: 100px \n}</code></pre></div><p>这里我们对 em1 同样进行了 absolute 绝对定位，你想一想会有什么样的变化？</p><p><br></p><p>没错，聪明的你大概应该知道，em1 的包含块不再是 p2，而变成了 div1，而 strong1 的包含块也不再是 p2 了，而是变成了 em1。</p><p><br></p><p>如下表所示：</p><table><thead><tr><th><p>元素</p></th><th><p>包含块</p></th></tr></thead><tbody><tr><td><p>html</p></td><td><p>initial C.B. (UA-dependent)</p></td></tr><tr><td><p>body</p></td><td><p>html</p></td></tr><tr><td><p>div1</p></td><td><p>initial C.B. (UA-dependent)</p></td></tr><tr><td><p>p1</p></td><td><p>div1</p></td></tr><tr><td><p>p2</p></td><td><p>div1</p></td></tr><tr><td><p>em1</p></td><td><p>div1（因为定位了，参阅非根元素包含块确定规则的第三条）</p></td></tr><tr><td><p>strong1</p></td><td><p>em1（因为 em1 变为了块容器，参阅非根元素包含块确定规则的第一条）</p></td></tr></tbody></table><p>好了，这就是 CSS 规范中所举的例子。如果你全都能看明白，以后你还能跟别人说你是看过这一块知识对应的 CSS 规范的人。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-15-013519.png\" alt=\"image-20220815093518833\" contenteditable=\"false\"><br></p><p><br></p><p>另外，关于包含块的知识，在 MDN 上除了解说了什么是包含块以外，也举出了很多简单易懂的示例。</p><p><br></p><p>具体你可以移步到：<em>https://developer.mozilla.org/zh-CN/docs/Web/CSS/Containing_block</em></p><p><br></p><p>好了，这就是有关包含块的所有内容了，你学会了么？-）</p><div contenteditable=\"false\"><hr></div><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666076600871",
+    typeId: ObjectId("634d7fc47797638ec96fe2ee")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e500b2fac4881713db346"),
+    interviewTitle: "let const var 的区别是什么？",
+    interviewContent: "<h1><em>let、var、const</em> 的区别</h1><h2>经典真题</h2><ul><li><p><em>let const var</em> 的区别？什么是块级作用域？如何用？</p></li></ul><h2>声明变量关键字汇总</h2><p>在 <em>JavaScript</em> 中，一共存在 <em>3</em> 种声明变量的方式：</p><ul><li><p><em>var</em></p></li><li><p><em>let</em></p></li><li><p><em>const</em></p></li></ul><p>之所以有 <em>3</em> 种方式，这是由于历史原因造成的。最初声明变量的关键字就是 <em>var</em>，但是为了解决作用域的问题，所以后面新增了 <em>let</em> 和 <em>const</em> 的方式。</p><h3>作用域</h3><p>首先我们来了解一下作用域。</p><p><br></p><p><em>ES5</em> 中的作用域有：全局作用域、函数作用域，<em>ES6</em> 中新增了块级作用域。块作用域由 { } 包括，<em>if</em>  语句和  <em>for</em>  语句里面的 { } 也属于块作用域。</p><p><br></p><p>关于作用域的更多内容，可以参阅《作用域和作用域链》章节。</p><h3><em>var</em> 关键字</h3><ol><li><p>没有块级作用域的概念</p></li></ol><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">//Global Scope\n{\n  var a = 10;\n}\nconsole.log(a);  //10</code></pre></div><p>上面代码中，在 <em>Global Scope</em>（全局作用域）中，且在 <em>Block Scope</em>（块级作用域） { } 中，<em>a</em> 输出结果为 <em>10</em>，由此可以看出 <em>var</em> 声明的变量不存在 <em>Block Scope</em> 的概念</p><ol start=\"2\"><li><p>有全局作用域、函数作用域的概念</p></li></ol><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">//Global Scope\nvar a = 10;\nfunction checkscope(){\n    //Local Scope\n    var b = 20;\n    console.log(a);  //10\n    console.log(b);  //20\n}\ncheckscope();\nconsole.log(b);  //ReferenceError: b is not defined</code></pre></div><p>上面代码中，在 <em>Global Scope</em> 中用 <em>var</em> 声明了 <em>a</em>，在 <em>checkscope</em> 函数中的 <em>Local Scope</em>（本地作用域、函数作用域）中打印出了 <em>10</em>，但是在 <em>Global Scope</em> 中打印的变量 <em>b</em> 报错了。</p><ol start=\"3\"><li><p>不初始化值默认为 <em>undefined</em></p></li></ol><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">//Global Scope\nvar a;\nconsole.log(a);  //undefined</code></pre></div><p>上面代码中，在 <em>Global Scope</em> 中用 <em>var</em> 声明了 <em>a</em>，但没有初始化值，它的值默认为 <em>undefined</em>，这里是 <em>undefined</em> 是 <em>undefined</em> 类型，而不是字符串。</p><ol start=\"4\"><li><p>存在变量提升</p></li></ol><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">//Global Scope\nconsole.log(a);  //undefined\nvar a = 10;\n\ncheckscope();\nfunction checkscope(){\n    //Local Scope\n    console.log(a);  //undefined\n    var a;\n}</code></pre></div><p>上面代码中，先打印了 <em>a</em>，然后用 <em>var</em> 声明变量 <em>a</em>。变量提升是因为 <em>js</em> 需要经历编译和执行阶段。而 <em>js</em> 在编译阶段的时候，会搜集所有的变量声明并且提前声明变量。</p><p><br></p><p>可以将这个过程形象地想象成所有的声明（变量）都会被“移动”到各自作用域的最顶端，这个过程被称为提升。</p><p><br></p><p>至于 <em>checkscope</em> 函数中的变量 <em>a</em> 为什么输出 <em>undefined</em>，可以参阅《作用域和作用域链》章节。</p><ol start=\"5\"><li><p>全局作用域用 <em>var</em> 声明的变量会挂载到 <em>window</em> 对象下</p></li></ol><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">//Global Scope\nvar a = 10;\nconsole.log(a);  //10\nconsole.log(window.a);  //10\nconsole.log(this.a);  //10</code></pre></div><p>上面代码中，打印出了 <em>3</em> 个 <em>10</em>，访问 <em>a</em> 和 <em>window.a</em> 或是 <em>this.a</em> 都是等价的。</p><p><br></p><p>举个例子：比如我要访问 <em>location</em> 对象，使用 <em>location</em> 可以访问，使用 <em>window.location</em> 也可以访问，只不过 <em>window</em> 对象可以省略不写，就像 <em>new Array( )</em> 和 <em>new window.Array( )</em> 是等价的。</p><ol start=\"6\"><li><p>同一作用域中允许重复声明</p></li></ol><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">//Global Scope\nvar a = 10;\nvar a = 20;\nconsole.log(a);  //20\n\ncheckscope();\nfunction checkscope(){\n    //Local Scope\n    var b = 10;\n    var b = 20;\n    console.log(b);  //20\n}</code></pre></div><p>上面代码中，在 <em>Global Scope</em> 中声明了 <em>2</em> 次 <em>a</em>，以最后一次声明有效，打印为 <em>20</em>。同理，在 <em>Local Scope</em> 也是一样的。</p><h3><em>let</em> 关键字</h3><ol><li><p>有块级作用域的概念</p></li></ol><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">{\n   //Block Scope\n   let a = 10;\n}\nconsole.log(a);  //ReferenceError: a is not defined</code></pre></div><p>上面代码中，打印 <em>a</em> 报错，说明存在 <em>Block Scope</em> 的概念。</p><ol start=\"2\"><li><p>不存在变量提升</p></li></ol><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">{\n  //Block Scope\n  console.log(a);  //ReferenceError: Cannot access 'a' before initialization\n  let a = 10;\n}</code></pre></div><p>上面代码中，打印 <em>a</em> 报错：无法在初始化之前访问。说明不存在变量提升。</p><ol start=\"3\"><li><p>暂时性死区</p></li></ol><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">{\n  //Block Scope\n  console.log(a);  //ReferenceError: Cannot access 'a' before initialization\n  let a = 20;\n}\n\nif (true) {\n  //TDZ开始\n  console.log(a);  //ReferenceError: Cannot access 'a' before initialization\n\n  let a; //TDZ结束\n  console.log(a);  //undefined\n\n  a = 123;\n  console.log(a);  //123\n}</code></pre></div><p>上面代码中，使用 <em>let</em> 声明的变量 <em>a</em>，导致绑定这个块级作用域，所以在 <em>let</em> 声明变量前，打印的变量 <em>a</em> 报错。</p><p><br></p><p>这是因为使用 <em>let/const</em> 所声明的变量会存在暂时性死区。</p><p><br></p><p>什么叫做暂时性死区域呢？</p><p><br></p><p><em>ES6</em> 标准中对 <em>let/const</em> 声明中的解释 <a href=\"https://link.segmentfault.com/?enc=K6pZVwgVNQb0IBQ9LTOuJg%3D%3D.p07UoPCGl5RslJ9ZnW9Nr36NFqs2pU%2FnSfWZUPIH3S1TUXzWdj22pH0lUMFVGVUwJkDpSHrYe8uKlYek%2FK4HBDYkJhc%2Fe2xiWo5V6teR%2BXY%3D\">第13章</a>，有如下一段文字：</p><blockquote><p><em>The variables are created when their containing Lexical Environment is instantiated but may not be accessed inany way until the variable’s LexicalBinding is evaluated.</em></p></blockquote><p>翻译成人话就是：</p><blockquote><p>当程序的控制流程在新的作用域（<em>module、function</em> 或 <em>block</em> 作用域）进行实例化时，在此作用域中用 <em>let/const</em> 声明的变量会先在作用域中被创建出来，但因此时还未进行词法绑定，所以是不能被访问的，如果访问就会抛出错误。因此，在这运行流程进入作用域创建变量，到变量可以被访问之间的这一段时间，就称之为暂时死区。</p></blockquote><p>再简单理解就是：</p><blockquote><p><em>ES6</em> 规定，<em>let/const</em> 命令会使区块形成封闭的作用域。若在声明之前使用变量，就会报错。</p><p>总之，在代码块内，使用 <em>let/const</em> 命令声明变量之前，该变量都是不可用的。</p><p>这在语法上，称为 <strong>“暂时性死区”</strong>（ <em>temporal dead zone</em>，简称 <strong><em>TDZ</em></strong>）。</p></blockquote><p>其实上面不存在变量提升的例子中，其实也是暂时性死区，因为它有暂时性死区的概念，所以它压根就不存在变量提升了。</p><ol start=\"4\"><li><p>同一块作用域中不允许重复声明</p></li></ol><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">{\n  //Block Scope\n  let A;\n  var A;  //SyntaxError: Identifier 'A' has already been declared\n}\n{\n  //Block Scope\n  var A;\n  let A;  //SyntaxError: Identifier 'A' has already been declared\n}\n{\n  //Block Scope\n  let A;\n  let A;  //SyntaxError: Identifier 'A' has already been declared\n}</code></pre></div><h3><em>const</em> 关键字</h3><ol><li><p>必须立即初始化，不能留到以后赋值</p></li></ol><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">// Block Scope \nconst a; // SyntaxError: Missing initializer in const declaration } </code></pre></div><p>上面代码中，用 <em>const</em> 声明的变量 <em>a</em> 没有进行初始化，所以报错。</p><ol start=\"2\"><li><p>常量的值不能改变</p></li></ol><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">//Block Scope \n{\n  const a = 10; \n\ta = 20; // TypeError: Assignment to constant variable\n}</code></pre></div><p>上面代码中，用 <em>const</em> 声明了变量 <em>a</em> 且初始化为 <em>10</em>，然后试图修改 <em>a</em> 的值，报错。</p><p><br></p><p><em>const</em> 实际上保证的，并不是变量的值不得改动，而是变量指向的那个内存地址所保存的数据不得改动。</p><h3>特点总结</h3><ul><li><p><em>var</em> 关键字</p></li></ul><ol><li><p>没有块级作用域的概念</p></li><li><p>有全局作用域、函数作用域的概念</p></li><li><p>不初始化值默认为 <em>undefined</em></p></li><li><p>存在变量提升</p></li><li><p>全局作用域用 <em>var</em> 声明的变量会挂载到 <em>window</em> 对象下</p></li><li><p>同一作用域中允许重复声明</p></li></ol><ul><li><p><em>let</em> 关键字</p></li></ul><ol><li><p>有块级作用域的概念</p></li><li><p>不存在变量提升</p></li><li><p>暂时性死区</p></li><li><p>同一块作用域中不允许重复声明</p></li></ol><ul><li><p><em>const</em> 关键字</p></li></ul><ol><li><p>与 <em>let</em> 特性一样，仅有 <em>2</em> 个差别</p></li><li><p>区别 1：必须立即初始化，不能留到以后赋值</p></li><li><p>区别 2：常量的值不能改变</p></li></ol><h2>真题解答</h2><ul><li><p><em>let const var</em> 的区别？什么是块级作用域？如何用？</p></li></ul><blockquote><p>参考答案：</p><ol><li><p><em>var</em> 定义的变量，没有块的概念，可以跨块访问, 不能跨函数访问，有变量提升。</p></li><li><p><em>let</em> 定义的变量，只能在块作用域里访问，不能跨块访问，也不能跨函数访问，无变量提升，不可以重复声明。</p></li><li><p><em>const</em> 用来定义常量，使用时必须初始化(即必须赋值)，只能在块作用域里访问，而且不能修改，无变量提升，不可以重复声明。</p></li></ol><p>最初在 <em>JS</em> 中作用域有：全局作用域、函数作用域。没有块作用域的概念。</p><p><br></p><p><em>ES6</em> 中新增了块级作用域。块作用域由 { } 包括，<em>if</em> 语句和 <em>for</em> 语句里面的 { } 也属于块作用域。</p><p><br></p><p>在以前没有块作用域的时候，在 <em>if</em> 或者 <em>for</em> 循环中声明的变量会泄露成全局变量，其次就是 { } 中的内层变量可能会覆盖外层变量。块级作用域的出现解决了这些问题。</p></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666076683659",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e504b2fac4881713db352"),
+    interviewTitle: "JS 的基本数据类型有哪些？",
+    interviewContent: "<h1>值和引用</h1><h2>经典真题</h2><ul><li><p><em>JS</em> 的基本数据类型有哪些？基本数据类型和引用数据类型的区别</p></li></ul><h2>值和引用相关内容</h2><p>在 <em>JavaScript</em> 中，数据类型整体上来讲可以分为两大类：<strong>基本类型</strong>和<strong>引用数据类型</strong></p><p><br></p><p>基本数据类型，一共有 <em>6</em> 种：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"text\">string，symbol，number，boolean，undefined，null</code></pre></div><p>其中 <em>symbol</em> 类型是在 <em>ES6</em> 里面新添加的基本数据类型。</p><p><br></p><p>引用数据类型，就只有 <em>1</em> 种：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">object</code></pre></div><p>基本数据类型的值又被称之为原始值或简单值，而引用数据类型的值又被称之为复杂值或引用值。</p><p><br></p><p>那么两者之间具体有什么区别呢？我们一点一点来看：</p><h4>1. 简单值（原始值）</h4><p><strong>简单值是表示 <em>JavaScript</em> 中可用的数据或信息的最底层形式或最简单形式。简单类型的值被称为简单值，是因为它们是</strong>不可细化的。</p><p><br></p><p>也就是说，数字是数字，字符串是字符串，布尔值是 <em>true</em> 或 <em>false</em>，<em>null</em> 和 <em>undefined</em> 就是 <em>null</em> 和 <em>undefined</em>。这些值本身很简单，不能够再进行拆分。</p><p><br></p><p>由于简单值的数据大小是固定的，所以<strong>简单值的数据是存储于内存中的栈区里面的。</strong></p><p><br></p><p>要简单理解栈的存取方式，我们可以通过类比乒乓球盒子来分析。如下图：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-30-025405.png\" alt=\"img\" contenteditable=\"false\"><br></p><p><br></p><p>下面是具体的代码示例：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var str = \"Hello World\";\nvar num = 10;\nvar bol = true;\nvar myNull = null;\nvar undef = undefined;\nconsole.log(typeof str); // string\nconsole.log(typeof num); // number\nconsole.log(typeof bol); // boolean\nconsole.log(typeof myNull); // object\nconsole.log(typeof undef); // undefined</code></pre></div><p>这里面 <em>null</em> 比较特殊，打印出来是 <em>object</em>，这是由于历史原因所遗留下来的问题。</p><p><br></p><p>是来源于 <em>JavaScript</em> 从第一个版本开始时的一个 <em>bug</em>，并且这个 <em>bug</em> 无法被修复。因为修复会破坏现有的代码。</p><p><br></p><p>具体原因是因为不同的对象在底层都表现为二进制，在 <em>JavaScript</em> 中二进制前三位都为 <em>0</em> 的话会被判断为 <em>object</em> 类型，<em>null</em> 的二进制全部为 <em>0</em>，自然前三位也是 <em>0</em>，所以执行 <em>typeof</em> 值会返回 <em>object</em>。</p><p><br></p><p>例外，当我们打印 <em>null == undefined</em> 的时候，返回的是 <em>true</em>，这也是面试时经常会被问到的一个问题。</p><p><br></p><p>这两个值都表示“无”的意思。</p><p><br></p><p>通常情况下， 当我们试图访问某个不存在的或者没有赋值的变量时，就会得到一个 <em>undefined</em> 值。<em>Javascript</em> 会自动将声明是没有进行初始化的变量设为 <em>undifined</em>。</p><p><br></p><p>而 <em>null</em> 值表示空，<em>null</em> 不能通过 <em>Javascript</em> 来自动赋值，也就是说必须要我们自己手动来给某个变量赋值为 <em>null</em>。</p><p><br></p><p>那么为什么 <em>JavaScript</em> 要设置两个表示\"无\"的值呢？</p><p><br></p><p>这其实也是因为历史原因。</p><p><br></p><p><em>1995</em> 年 <em>JavaScript</em> 诞生时，最初像 <em>Java</em> 一样，只设置了 <em>null</em> 作为表示\"无\"的值。根据 <em>C</em> 语言的传统，<em>null</em> 被设计成可以自动转为 <em>0</em>。</p><p><br></p><p>但是，<em>JavaScript</em> 的设计者，觉得这样做还不够，主要有以下两个原因。</p><ol><li><p><em>null</em> 像在 <em>Java</em> 里一样，被当成一个对象。但是，<em>JavaScript</em> 的数据类型分成原始类型（<em>primitive</em>）和复合类型（<em>complex</em>）两大类，作者觉得表示“无”的值最好不是对象。</p></li><li><p><em>JavaScript</em> 的最初版本没有包括错误处理机制，发生数据类型不匹配时，往往是自动转换类型或者默默地失败。作者觉得，如果 <em>null</em> 自动转为 <em>0</em>，很不容易发现错误。</p></li></ol><p>因此，作者又设计了一个 <em>undefined</em>。<strong>这里注意：先有 <em>null</em> 后有 <em>undefined</em> 出来，<em>undefined</em> 是为了填补之前的坑。</strong></p><p><br></p><p><em>JavaScript</em> 的最初版本是这样区分的：</p><p><br></p><p><em>null</em> 是一个表示“无”的对象（空对象指针），转为数值时为 <em>0</em>；</p><p><br></p><p>典型用法是：</p><ul><li><p>作为函数的参数，表示该函数的参数不是对象。</p></li><li><p>作为对象原型链的终点。</p></li></ul><p><em>undefined</em> 是一个表示\"无\"的原始值，转为数值时为 <em>NaN</em>。</p><p><br></p><p>典型用法是：</p><ul><li><p>变量被声明了，但没有赋值时，就等于 <em>undefined</em>。</p></li><li><p>调用函数时，应该提供的参数没有提供，该参数等于 <em>undefined</em>。</p></li><li><p>对象没有赋值的属性，该属性的值为 <em>undefined</em>。</p></li><li><p>函数没有返回值时，默认返回 <em>undefined</em>。</p></li></ul><h4>2. 复杂值（引用值）</h4><p>在 <em>JavaScript</em> 中，对象就是一个复杂值。因为对象可以向下拆分，拆分成多个简单值或者复杂值。</p><p><br></p><p><strong>复杂值在内存中的大小是未知的，因为复杂值可以包含任何值，而不是一个特定的已知值，所以复杂值的数据都是存储于堆区里面。</strong></p><p><br></p><p>如下图所示：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-30-025509.png\" alt=\"img\" contenteditable=\"false\"><br></p><p><br></p><p>下面是具体的代码示例：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">// 简单值\nvar a1 = 0;\nvar a2 = \"this is str\";\nvar a3 = null\n\n// 复杂值\nvar c = [1, 2, 3];\nvar d = {m: 20};</code></pre></div><h4>3. 访问方式</h4><p><strong>按值访问</strong></p><p><br></p><p>简单值是作为不可细化的值进行存储和使用的，引用它们会转移其值。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var str = \"Hello\";\nvar str2 = str;\nstr = null;\nconsole.log(str,str2); // null \"Hello\"</code></pre></div><p><strong>引用访问</strong></p><p><br></p><p>复杂值是通过引用进行存储和操作的，而不是实际的值。创建一个包含复杂对象的变量时，其值是内存中的一个引用地址。引用一个复杂对象时，使用它的名称（即变量或对象属性）通过内存中的引用地址获取该对象值。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var obj = {};\nvar obj2 = obj;\nobj.name = \"zhangsan\";\nconsole.log(obj.name); // zhangsan\nconsole.log(obj2.name); // zhangsan</code></pre></div><h4>4. 比较方式</h4><p>简单值采用值比较，而复杂值采用引用比较。复杂值只有在引用相同的对象（即有相同的地址）时才相等。即使是包含相同对象的两个变量也彼此不相等，因为它们并不指向同一个对象。</p><p><br></p><p>示例 1:</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var a = 10;\nvar b = 10;\nvar c = new Number(10);\nvar d = c;\nconsole.log(a === b); // true\nconsole.log(a === c); // false\nconsole.log(a === c); // false\nconsole.log(a == c); // true\nd = 10;\nconsole.log(d == c); // true\nconsole.log(d === c); // false</code></pre></div><p>示例 2:</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var obj = {name : 'zhangsan'};\nvar obj2 = {name : 'zhangsan'};\nconsole.log(obj == obj2); // false\nconsole.log(obj === obj2); // false\nvar obj3 = {name : 'zhangsan'};\nvar obj4 = obj3;\nconsole.log(obj3 == obj4); // true\nconsole.log(obj3 === obj4); // ture</code></pre></div><h4>5. 动态属性</h4><p>对于复杂值，可以为其添加属性和方法，也可以改变和删除其属性和方法。但简单值不可以：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var str = 'test';\nstr.abc = true;\nconsole.log(str.abc); // undefined\nvar obj = {};\nobj.abc = true;\nconsole.log(obj.abc); // true</code></pre></div><p>复杂值支持动态对象属性，因为我们可以定义对象，然后创建引用，再更新对象，并且所有指向该对象的变量都会获得更新。</p><p><br></p><p>一个新变量指向现有的复杂对象，并没有复制该对象。这就是复杂值有时被称为引用值的原因。复杂值可以根据需求有任意多个引用，即使对象改变，它们也总是指向同一个对象</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var obj = {name : 'zhangsan'};\nvar obj2 = obj;\nvar obj3 = obj2;\nobj.name = 'abc';\nconsole.log(obj.name, obj2.name, obj3.name);\n// abc abc abc</code></pre></div><h4>6. 变量赋值</h4><p>最后说一下关于变量的赋值，其实是可以分为直接赋值和引用赋值的。直接赋值，就是指将简单值赋值给变量，而引用赋值是指将一个复杂值的引用赋值给变量，这个引用指向堆区实际存在的数据。</p><p><br></p><p><strong>直接赋值</strong></p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var a = 3;\nvar b = a;\nb = 5;\nconsole.log(a); // 3</code></pre></div><p><strong>引用赋值</strong></p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var a = {value : 1};\nvar b = a;\nb.value = 10;\nconsole.log(a.value); // 10</code></pre></div><h2>真题解答</h2><ul><li><p><em>JS</em> 的基本数据类型有哪些？基本数据类型和引用数据类型的区别</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p>在 <em>JavaScript</em> 中，数据类型整体上来讲可以分为两大类：<strong>基本类型</strong>和<strong>引用数据类型</strong></p><p><br></p><p>基本数据类型，一共有 <em>6</em> 种：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"text\">string，symbol，number，boolean，undefined，null</code></pre></div><p>其中 <em>symbol</em> 类型是在 <em>ES6</em> 里面新添加的基本数据类型。</p><p><br></p><p>引用数据类型，就只有 <em>1</em> 种：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">object</code></pre></div><p>基本数据类型的值又被称之为原始值或简单值，而引用数据类型的值又被称之为复杂值或引用值。</p><p><br></p><p>两者的区别在于：</p><p><br></p><p><strong>原始值是表示 <em>JavaScript</em> 中可用的数据或信息的最底层形式或最简单形式。简单类型的值被称为原始值，是因为它们是</strong>不可细化的。</p><p><br></p><p>也就是说，数字是数字，字符是字符，布尔值是 <em>true</em> 或 <em>false</em>，<em>null</em> 和 <em>undefined</em> 就是 <em>null</em> 和 <em>undefined</em>。这些值本身很简单，不能够再进行拆分。由于原始值的数据大小是固定的，所以<strong>原始值的数据是存储于内存中的栈区里面的。</strong></p><p><br></p><p>在 <em>JavaScript</em> 中，对象就是一个引用值。因为对象可以向下拆分，拆分成多个简单值或者复杂值。<strong>引用值在内存中的大小是未知的，因为引用值可以包含任何值，而不是一个特定的已知值，所以引用值的数据都是存储于堆区里面。</strong></p><p><br></p><p>最后总结一下两者的区别：</p><ol><li><p>访问方式</p><ul><li><p>原始值：访问到的是值</p></li><li><p>引用值：访问到的是引用地址</p></li></ul></li><li><p>比较方式</p><ul><li><p>原始值：比较的是值</p></li><li><p>引用值：比较的是地址</p></li></ul></li><li><p>动态属性</p><ul><li><p>原始值：无法添加动态属性</p></li><li><p>引用值：可以添加动态属性</p></li></ul></li><li><p>变量赋值</p><ul><li><p>原始值：赋值的是值</p></li><li><p>引用值：赋值的是地址</p></li></ul></li></ol></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666076747778",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e50802fac4881713db356"),
+    interviewTitle: "是否了解 JS 中的包装类型？",
+    interviewContent: "<h1>包装类型</h1><h2>经典真题</h2><ul><li><p>是否了解 <em>JavaScript</em> 中的包装类型？</p></li></ul><h2>包装类型</h2><p>在 <em>ES</em> 中，数据的分类分为<strong>基本数据类型</strong>和<strong>引用类型</strong>。</p><p><br></p><p>按照最新 <em>ES</em> 标准定义，基本数据类型（<em>primitive value</em>）包括 <em>undefined、null、boolean、number、symbol、string</em>。</p><p><br></p><p>引用类型包括 <em>Object、Array、Date、RegExp</em> 等。</p><p><br></p><p>基本数据类型和引用类型这两个类型其中一个很明显的区别是，引用类型有自己内置的方法，也可以自定义其他方法用来操作数据，而基本数据类型不能像引用类型那样有自己的内置方法对数据进行更多的操作。</p><p><br></p><p>但基本数据类型真的就不能使用方法吗？对于部分基本类型来说确实是这样的。</p><p><br></p><p>但是有 <em>3</em> 个是 <em>ES</em> 提供了对应的特殊引用类型（包装类型）<em>Boolean、Number、String</em>。</p><p><br></p><p>基本包装类型，和其他引用类型一样，拥有内置的方法可以对数据进行额外操作。如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var str = 'hello'; // string 基本类型\nvar s2 = str.charAt(0);\nconsole.log(s2); // h</code></pre></div><p>上面的 <em>string</em> 是一个基本类型，但是它却能调用 <em>charAt( )</em> 的方法。</p><p><br></p><p>其主要是因为在执行第二行代码时，后台会自动进行下面的步骤：</p><ol><li><p>自动创建 <em>String</em> 类型的一个实例（和基本类型的值不同，这个实例就是一个基本包装类型的对象）</p></li><li><p>调用实例（对象）上指定的方法</p></li><li><p>销毁这个实例</p></li></ol><p>用代码的方式解释就是如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">//我们平常写程序的过程：\nvar str = 'hello'; // string 基本类型\nvar s2 = str.charAt(0); // 在执行到这一句的时候 后台会自动完成以下动作 ：\n(\n    var _str = new String('hello'); // 1 找到对应的包装对象类型，然后通过包装对象创建出一个和基本类型值相同的对象\n    var s2 = _str.charAt(0); // 2 然后这个对象就可以调用包装对象下的方法，并且返回结给 s2.\n    _str = null;  //    3 之后这个临时创建的对象就被销毁了， str =null; \n)\nconsole.log(s2); // h \nconsole.log(str); // hello</code></pre></div><p>基本类型的值虽然没有方法可以调用，但是后台临时创建的包装对象上有内置方法可以让我们调用方法，因此这样我们就可以对字符串、数值、布尔值这三种基本数据类型的数据进行更多操作。</p><p><br></p><p>而什么时候后台会自动创建一个对应的基本包装类型的对象，取决于当前执行的代码是否是为了获取他的值。</p><p><br></p><p>每当读取一个基本类型的值，也就是当我们需要从内存中获取到他的值时（这个访问过程称为读取模式），这时后台就会自动创建一个基本包装类型的对象。例如：</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">var test = 'hhh'\nconsole.log(test) // 读取模式，后台自动创建基本包装类型对象\nvar test2 = test // 赋值给变量 test2，也需要读取 test 的值，同上</code></pre></div><p>基本包装类型的对象和引用类型的对象最大的一个区别是，对象的生存期不同，导致的一个结果就是，基本包装类型无法自定义自己的方法。</p><p><br></p><p>对于引用类型的数据，在执行流离开当前作用域之前都会保存在内存中，而对于自动创建的基本包装类型的对象，只存在于一行代码的执行瞬间，执行完毕就会立即被销毁。</p><p>如下：</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">var str = 'test'\nstr.test = 'hhh'\nconsole.log(str.test) //undefined</code></pre></div><p>上面第二行代码给自动创建的 <em>String</em> 实例对象添加了 <em>test</em> 属性，虽然此刻代码执行时他是生效的，但是在这行代码执行完毕后该 <em>String</em> 实例就会立刻被销毁，<em>String</em> 实例的 <em>test</em> 属性也就不存在了。</p><p><br></p><p>当执行第三行代码时，由于是读取模式，又重新创建了新的 <em>String</em> 实例，而这个新创建的 <em>String</em> 实例没有 <em>test</em> 属性，结果也就是 <em>undefined</em>。</p><p><br></p><p>用代码的方式解释就是如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var str = 'hello';\nstr.number = 10; //假设我们想给字符串添加一个属性 number ，后台会有如下步骤\n(\n    var _str = new String('hello'); // 1 找到对应的包装对象类型，然后通过包装对象创建出一个和基本类型值相同的对象\n    _str.number = 10; // 2 通过这个对象调用包装对象下的方法 但结果并没有被任何东西保存\n    _str =null; // 3 这个对象又被销毁\n)\nconsole.log(str.number); // undefined  当执行到这一句的时候，因为基本类型本来没有属性，后台又会重新重复上面的步骤\n(\n   var str = new String('hello');// 1 找到基本包装对象，然后又新开辟一个内存，创建一个值为 hello 对象\n   str.number = undefined;// 2 因为包装对象下面没有 number 这个属性，所以又会重新添加，因为没有值，所以值是未定义;然后弹出结果\n   str =null; // 3 这个对象又被销毁\n)</code></pre></div><p>那么我们怎么才能给基本类型添加方法或者属性呢？</p><p><br></p><p>答案是在基本包装对象的原型下面添加，每个对象都有原型。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">//给字符串添加方法  要写到对应的包装对象的原型下才行\nvar str = 'hello';\nString.prototype.last= fuction(){ \n    return this.charAt(this.length);\n}; \nstr.last(); // 5 执行到这一句，后台依然会偷偷的干这些事\n(\n    var _str = new String('hello');// 找到基本包装对象，new一个和字符串值相同的对象，\n    _str.last();  // 通过这个对象找到了包装对象下的方法并调用 \n    _str =null; //  这个对象被销毁\n)</code></pre></div><h2>真题解答</h2><ul><li><p>是否了解 <em>JavaScript</em> 中的包装类型？</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p>包装对象，就是当基本类型以对象的方式去使用时，<em>JavaScript</em> 会转换成对应的包装类型，相当于 <em>new</em> 一个对象，内容和基本类型的内容一样，然后当操作完成再去访问的时候，这个临时对象会被销毁，然后再访问时候就是 <em>undefined</em>。</p><p><br></p><p><em>number、string、boolean</em> 都有对应的包装类型。</p><p><br></p><p>因为有了基本包装类型，所以 <em>JavaScript</em>  中的基本类型值可以被当作对象来访问。</p><p><br></p><p>基本类型特征：</p><ol><li><p>每个包装类型都映射到同名的基本类型</p></li><li><p>在读取模式下访问基本类型值时，就会创建对应的基本包装类型的一个对象，从而方便了数据操作</p></li><li><p>操作基本类型值的语句一经执行完毕，就会立即销毁新创建的包装对象</p></li></ol></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666076800550",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e50ef2fac4881713db362"),
+    interviewTitle: "JS 中如何进行数据类型的转换？",
+    interviewContent: "<h1>数据类型的转换</h1><h2>经典真题</h2><ul><li><p><em>JavaScript</em> 中如何进行数据类型的转换？</p></li></ul><h2>数据类型转换介绍</h2><p><em>JavaScript</em> 是一种动态类型语言，变量没有类型限制，可以随时赋予任意值。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var x = y ? 1 : 'a';</code></pre></div><p>上面代码中，变量<code data-backticks=\"1\">x</code>到底是数值还是字符串，取决于另一个变量<code data-backticks=\"1\">y</code>的值。<code data-backticks=\"1\">y</code>为<code data-backticks=\"1\">true</code>时，<code data-backticks=\"1\">x</code>是一个数值；<code data-backticks=\"1\">y</code>为<code data-backticks=\"1\">false</code>时，<code data-backticks=\"1\">x</code>是一个字符串。这意味着，<code data-backticks=\"1\">x</code>的类型没法在编译阶段就知道，必须等到运行时才能知道。</p><p><br></p><p>虽然变量的数据类型是不确定的，但是各种运算符对数据类型是有要求的。如果运算符发现，运算子的类型与预期不符，就会自动转换类型。比如，减法运算符预期左右两侧的运算子应该是数值，如果不是，就会自动将它们转为数值。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">'4' - '3' // 1</code></pre></div><p>上面代码中，虽然是两个字符串相减，但是依然得到数值 <code data-backticks=\"1\">1</code>，原因就在于 <em>JavaScript</em> 将运算子自动转为了数值。</p><p><br></p><p>所以接下来我们就来看一下 <em>JavaScript</em> 中如何进行数据类型转换。</p><h2>强制转换（显式转换）</h2><p>强制转换主要指使用<code data-backticks=\"1\">Number()</code>、<code data-backticks=\"1\">String()</code>和<code data-backticks=\"1\">Boolean()</code>三个函数，手动将各种类型的值，分别转换成数字、字符串或者布尔值。</p><h4><em>Number( )</em></h4><p>使用<code data-backticks=\"1\">Number</code>函数，可以将任意类型的值转化成数值。</p><p><br></p><p>下面分成两种情况讨论，一种是参数是原始类型的值，另一种是参数是对象。</p><p><br></p><p><strong>（1）原始类型值</strong></p><p><br></p><p>原始类型值的转换规则如下。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">// 数值：转换后还是原来的值\nNumber(324) // 324\n\n// 字符串：如果可以被解析为数值，则转换为相应的数值\nNumber('324') // 324\n\n// 字符串：如果不可以被解析为数值，返回 NaN\nNumber('324abc') // NaN\n\n// 空字符串转为0\nNumber('') // 0\n\n// 布尔值：true 转成 1，false 转成 0\nNumber(true) // 1\nNumber(false) // 0\n\n// undefined：转成 NaN\nNumber(undefined) // NaN\n\n// null：转成0\nNumber(null) // 0</code></pre></div><p><code data-backticks=\"1\">Number</code>函数将字符串转为数值，要比<code data-backticks=\"1\">parseInt</code>函数严格很多。基本上，只要有一个字符无法转成数值，整个字符串就会被转为<code data-backticks=\"1\">NaN</code>。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">parseInt('42 cats') // 42\nNumber('42 cats') // NaN</code></pre></div><p>上面代码中，<code data-backticks=\"1\">parseInt</code>逐个解析字符，而<code data-backticks=\"1\">Number</code>函数整体转换字符串的类型。</p><p><br></p><p>另外，<code data-backticks=\"1\">parseInt</code>和<code data-backticks=\"1\">Number</code>函数都会自动过滤一个字符串前导和后缀的空格。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">parseInt('\\t\\v\\r12.34\\n') // 12\nNumber('\\t\\v\\r12.34\\n') // 12.34</code></pre></div><p><strong>（2）对象</strong></p><p><br></p><p>简单的规则是，<code data-backticks=\"1\">Number</code>方法的参数是对象时，将返回<code data-backticks=\"1\">NaN</code>，除非是包含单个数值的数组。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">Number({a: 1}) // NaN\nNumber([1, 2, 3]) // NaN\nNumber([5]) // 5</code></pre></div><p>之所以会这样，是因为<code data-backticks=\"1\">Number</code>背后的转换规则比较复杂。</p><p><br></p><p>第一步，调用对象自身的<code data-backticks=\"1\">valueOf</code>方法。如果返回原始类型的值，则直接对该值使用<code data-backticks=\"1\">Number</code>函数，不再进行后续步骤。</p><p><br></p><p>第二步，如果<code data-backticks=\"1\">valueOf</code>方法返回的还是对象，则改为调用对象自身的<code data-backticks=\"1\">toString</code>方法。如果<code data-backticks=\"1\">toString</code>方法返回原始类型的值，则对该值使用<code data-backticks=\"1\">Number</code>函数，不再进行后续步骤。</p><p><br></p><p>第三步，如果<code data-backticks=\"1\">toString</code>方法返回的是对象，就报错。</p><p><br></p><p>请看下面的例子。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var obj = {x: 1};\nNumber(obj) // NaN\n\n// 等同于\nif (typeof obj.valueOf() === 'object') {\n  Number(obj.toString());\n} else {\n  Number(obj.valueOf());\n}</code></pre></div><p>上面代码中，<code data-backticks=\"1\">Number</code>函数将<code data-backticks=\"1\">obj</code>对象转为数值。背后发生了一连串的操作，首先调用<code data-backticks=\"1\">obj.valueOf</code>方法, 结果返回对象本身；于是，继续调用<code data-backticks=\"1\">obj.toString</code>方法，这时返回字符串<code data-backticks=\"1\">[object Object]</code>，对这个字符串使用<code data-backticks=\"1\">Number</code>函数，得到<code data-backticks=\"1\">NaN</code>。</p><p><br></p><p>默认情况下，对象的<code data-backticks=\"1\">valueOf</code>方法返回对象本身，所以一般总是会调用<code data-backticks=\"1\">toString</code>方法，而<code data-backticks=\"1\">toString</code>方法返回对象的类型字符串（比如<code data-backticks=\"1\">[object Object]</code>）。所以，会有下面的结果。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">Number({}) // NaN</code></pre></div><p>如果<code data-backticks=\"1\">toString</code>方法返回的不是原始类型的值，结果就会报错。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var obj = {\n  valueOf: function () {\n    return {};\n  },\n  toString: function () {\n    return {};\n  }\n};\n\nNumber(obj)\n// TypeError: Cannot convert object to primitive value</code></pre></div><p>上面代码的<code data-backticks=\"1\">valueOf</code>和<code data-backticks=\"1\">toString</code>方法，返回的都是对象，所以转成数值时会报错。</p><p><br></p><p>从上例还可以看到，<code data-backticks=\"1\">valueOf</code>和<code data-backticks=\"1\">toString</code>方法，都是可以自定义的。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">Number({\n  valueOf: function () {\n    return 2;\n  }\n})\n// 2\n\nNumber({\n  toString: function () {\n    return 3;\n  }\n})\n// 3\n\nNumber({\n  valueOf: function () {\n    return 2;\n  },\n  toString: function () {\n    return 3;\n  }\n})\n// 2</code></pre></div><p>上面代码对三个对象使用<code data-backticks=\"1\">Number</code>函数。第一个对象返回<code data-backticks=\"1\">valueOf</code>方法的值，第二个对象返回<code data-backticks=\"1\">toString</code>方法的值，第三个对象表示<code data-backticks=\"1\">valueOf</code>方法先于<code data-backticks=\"1\">toString</code>方法执行。</p><h4><em>String( )</em></h4><p><code data-backticks=\"1\">String</code>函数可以将任意类型的值转化成字符串，转换规则如下。</p><p><br></p><p><strong>（1）原始类型值</strong></p><ul><li><p><strong>数值</strong>：转为相应的字符串。</p></li><li><p><strong>字符串</strong>：转换后还是原来的值。</p></li><li><p><strong>布尔值</strong>：<code data-backticks=\"1\">true</code>转为字符串<code data-backticks=\"1\">\"true\"</code>，<code data-backticks=\"1\">false</code>转为字符串<code data-backticks=\"1\">\"false\"</code>。</p></li><li><p><strong>undefined</strong>：转为字符串<code data-backticks=\"1\">\"undefined\"</code>。</p></li><li><p><strong>null</strong>：转为字符串<code data-backticks=\"1\">\"null\"</code>。</p></li></ul><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">String(123) // \"123\"\nString('abc') // \"abc\"\nString(true) // \"true\"\nString(undefined) // \"undefined\"\nString(null) // \"null\"</code></pre></div><p><strong>（2）对象</strong></p><p><br></p><p><code data-backticks=\"1\">String</code>方法的参数如果是对象，返回一个类型字符串；如果是数组，返回该数组的字符串形式。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">String({a: 1}) // \"[object Object]\"\nString([1, 2, 3]) // \"1,2,3\"</code></pre></div><p><code data-backticks=\"1\">String</code>方法背后的转换规则，与<code data-backticks=\"1\">Number</code>方法基本相同，只是互换了<code data-backticks=\"1\">valueOf</code>方法和<code data-backticks=\"1\">toString</code>方法的执行顺序。</p><ol><li><p>先调用对象自身的<code data-backticks=\"1\">toString</code>方法。如果返回原始类型的值，则对该值使用<code data-backticks=\"1\">String</code>函数，不再进行以下步骤。</p></li><li><p>如果<code data-backticks=\"1\">toString</code>方法返回的是对象，再调用原对象的<code data-backticks=\"1\">valueOf</code>方法。如果<code data-backticks=\"1\">valueOf</code>方法返回原始类型的值，则对该值使用<code data-backticks=\"1\">String</code>函数，不再进行以下步骤。</p></li><li><p>如果<code data-backticks=\"1\">valueOf</code>方法返回的是对象，就报错。</p></li></ol><p>下面是一个例子。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">String({a: 1})\n// \"[object Object]\"\n\n// 等同于\nString({a: 1}.toString())\n// \"[object Object]\"</code></pre></div><p>上面代码先调用对象的<code data-backticks=\"1\">toString</code>方法，发现返回的是字符串<code data-backticks=\"1\">[object Object]</code>，就不再调用<code data-backticks=\"1\">valueOf</code>方法了。</p><p><br></p><p>如果<code data-backticks=\"1\">toString</code>法和<code data-backticks=\"1\">valueOf</code>方法，返回的都是对象，就会报错。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var obj = {\n  valueOf: function () {\n    return {};\n  },\n  toString: function () {\n    return {};\n  }\n};\n\nString(obj)\n// TypeError: Cannot convert object to primitive value</code></pre></div><p>下面是通过自定义<code data-backticks=\"1\">toString</code>方法，改变返回值的例子。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">String({\n  toString: function () {\n    return 3;\n  }\n})\n// \"3\"\n\nString({\n  valueOf: function () {\n    return 2;\n  }\n})\n// \"[object Object]\"\n\nString({\n  valueOf: function () {\n    return 2;\n  },\n  toString: function () {\n    return 3;\n  }\n})\n// \"3\"</code></pre></div><p>上面代码对三个对象使用<code data-backticks=\"1\">String</code>函数。第一个对象返回<code data-backticks=\"1\">toString</code>方法的值（数值3），第二个对象返回的还是<code data-backticks=\"1\">toString</code>方法的值（<code data-backticks=\"1\">[object Object]</code>），第三个对象表示<code data-backticks=\"1\">toString</code>方法先于<code data-backticks=\"1\">valueOf</code>方法执行。</p><h4><em>Boolean( )</em></h4><p><code data-backticks=\"1\">Boolean()</code>函数可以将任意类型的值转为布尔值。</p><p><br></p><p>它的转换规则相对简单：除了以下五个值的转换结果为<code data-backticks=\"1\">false</code>，其他的值全部为<code data-backticks=\"1\">true</code>。</p><ul><li><p><code data-backticks=\"1\">undefined</code></p></li><li><p><code data-backticks=\"1\">null</code></p></li><li><p><code data-backticks=\"1\">0</code>（包含<code data-backticks=\"1\">-0</code>和<code data-backticks=\"1\">+0</code>）</p></li><li><p><code data-backticks=\"1\">NaN</code></p></li><li><p><code data-backticks=\"1\">''</code>（空字符串）</p></li></ul><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">Boolean(undefined) // false\nBoolean(null) // false\nBoolean(0) // false\nBoolean(NaN) // false\nBoolean('') // false</code></pre></div><p>当然，<code data-backticks=\"1\">true</code>和<code data-backticks=\"1\">false</code>这两个布尔值不会发生变化。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">Boolean(true) // true\nBoolean(false) // false</code></pre></div><p>注意，所有对象（包括空对象）的转换结果都是<code data-backticks=\"1\">true</code>，甚至连<code data-backticks=\"1\">false</code>对应的布尔对象<code data-backticks=\"1\">new Boolean(false)</code>也是<code data-backticks=\"1\">true</code>（详见《原始类型值的包装对象》一章）。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">Boolean({}) // true\nBoolean([]) // true\nBoolean(new Boolean(false)) // true</code></pre></div><p>所有对象的布尔值都是<code data-backticks=\"1\">true</code>，这是因为 JavaScript 语言设计的时候，出于性能的考虑，如果对象需要计算才能得到布尔值，对于<code data-backticks=\"1\">obj1 &amp;&amp; obj2</code>这样的场景，可能会需要较多的计算。为了保证性能，就统一规定，对象的布尔值为<code data-backticks=\"1\">true</code>。</p><h2>自动转换（隐式转换）</h2><p>下面介绍自动转换，它是以强制转换为基础的。</p><p><br></p><p>遇到以下三种情况时，JavaScript 会自动转换数据类型，即转换是自动完成的，用户不可见。</p><p><br></p><p>第一种情况，不同类型的数据互相运算。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">123 + 'abc' // \"123abc\"</code></pre></div><p>第二种情况，对非布尔值类型的数据求布尔值。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">if ('abc') {\n  console.log('hello')\n}  // \"hello\"</code></pre></div><p>第三种情况，对非数值类型的值使用一元运算符（即<code data-backticks=\"1\">+</code>和<code data-backticks=\"1\">-</code>）。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">+ {foo: 'bar'} // NaN\n- [1, 2, 3] // NaN</code></pre></div><p>自动转换的规则是这样的：预期什么类型的值，就调用该类型的转换函数。比如，某个位置预期为字符串，就调用<code data-backticks=\"1\">String()</code>函数进行转换。如果该位置既可以是字符串，也可能是数值，那么默认转为数值。</p><p><br></p><p>由于自动转换具有不确定性，而且不易除错，建议在预期为布尔值、数值、字符串的地方，全部使用<code data-backticks=\"1\">Boolean()</code>、<code data-backticks=\"1\">Number()</code>和<code data-backticks=\"1\">String()</code>函数进行显式转换。</p><h4>自动转换为布尔值</h4><p>JavaScript 遇到预期为布尔值的地方（比如<code data-backticks=\"1\">if</code>语句的条件部分），就会将非布尔值的参数自动转换为布尔值。系统内部会自动调用<code data-backticks=\"1\">Boolean()</code>函数。</p><p><br></p><p>因此除了以下五个值，其他都是自动转为<code data-backticks=\"1\">true</code>。</p><ul><li><p><code data-backticks=\"1\">undefined</code></p></li><li><p><code data-backticks=\"1\">null</code></p></li><li><p><code data-backticks=\"1\">+0</code>或<code data-backticks=\"1\">-0</code></p></li><li><p><code data-backticks=\"1\">NaN</code></p></li><li><p><code data-backticks=\"1\">''</code>（空字符串）</p></li></ul><p>下面这个例子中，条件部分的每个值都相当于<code data-backticks=\"1\">false</code>，使用否定运算符后，就变成了<code data-backticks=\"1\">true</code>。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">if ( !undefined\n  &amp;&amp; !null\n  &amp;&amp; !0\n  &amp;&amp; !NaN\n  &amp;&amp; !''\n) {\n  console.log('true');\n} // true</code></pre></div><p>下面两种写法，有时也用于将一个表达式转为布尔值。它们内部调用的也是<code data-backticks=\"1\">Boolean()</code>函数。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">// 写法一\nexpression ? true : false\n\n// 写法二\n!! expression</code></pre></div><h4>自动转换为字符串</h4><p>JavaScript 遇到预期为字符串的地方，就会将非字符串的值自动转为字符串。具体规则是，先将复合类型的值转为原始类型的值，再将原始类型的值转为字符串。</p><p><br></p><p>字符串的自动转换，主要发生在字符串的加法运算时。当一个值为字符串，另一个值为非字符串，则后者转为字符串。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">'5' + 1 // '51'\n'5' + true // \"5true\"\n'5' + false // \"5false\"\n'5' + {} // \"5[object Object]\"\n'5' + [] // \"5\"\n'5' + function (){} // \"5function (){}\"\n'5' + undefined // \"5undefined\"\n'5' + null // \"5null\"</code></pre></div><p>这种自动转换很容易出错。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">var obj = {\n  width: '100'\n};\n\nobj.width + 20 // \"10020\"</code></pre></div><p>上面代码中，开发者可能期望返回<code data-backticks=\"1\">120</code>，但是由于自动转换，实际上返回了一个字符<code data-backticks=\"1\">10020</code>。</p><h4>自动转换为数值</h4><p>JavaScript 遇到预期为数值的地方，就会将参数值自动转换为数值。系统内部会自动调用<code data-backticks=\"1\">Number()</code>函数。</p><p><br></p><p>除了加法运算符（<code data-backticks=\"1\">+</code>）有可能把运算子转为字符串，其他运算符都会把运算子自动转成数值。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">'5' - '2' // 3\n'5' * '2' // 10\ntrue - 1  // 0\nfalse - 1 // -1\n'1' - 1   // 0\n'5' * []    // 0\nfalse / '5' // 0\n'abc' - 1   // NaN\nnull + 1 // 1\nundefined + 1 // NaN</code></pre></div><p>上面代码中，运算符两侧的运算子，都被转成了数值。</p><blockquote><p>注意：<code data-backticks=\"1\">null</code>转为数值时为<code data-backticks=\"1\">0</code>，而<code data-backticks=\"1\">undefined</code>转为数值时为<code data-backticks=\"1\">NaN</code>。</p></blockquote><p>一元运算符也会把运算子转成数值。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">+'abc' // NaN\n-'abc' // NaN\n+true // 1\n-false // 0</code></pre></div><h2>真题解答</h2><ul><li><p><em>JavaScript</em> 中如何进行数据类型的转换？</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p>类型转换可以分为两种，<strong>隐性转换</strong>和<strong>显性转换</strong>。</p><p><br></p><p><strong>1. 隐性转换</strong></p><p><br></p><p>当不同数据类型之间进行相互运算，或者当对非布尔类型的数据求布尔值的时候，会发生隐性转换。</p><p><br></p><p>预期为数字的时候：算术运算的时候，我们的结果和运算的数都是数字，数据会转换为数字来进行计算。</p><table><thead><tr><th><p>类型</p></th><th><p>转换前</p></th><th><p>转换后</p></th></tr></thead><tbody><tr><td><p>number</p></td><td><p>4</p></td><td><p>4</p></td></tr><tr><td><p>string</p></td><td><p>\"1\"</p></td><td><p>1</p></td></tr><tr><td><p>string</p></td><td><p>\"abc\"</p></td><td><p>NaN</p></td></tr><tr><td><p>string</p></td><td><p>\"\"</p></td><td><p>0</p></td></tr><tr><td><p>boolean</p></td><td><p>true</p></td><td><p>1</p></td></tr><tr><td><p>boolean</p></td><td><p>false</p></td><td><p>0</p></td></tr><tr><td><p>undefined</p></td><td><p>undefined</p></td><td><p>NaN</p></td></tr><tr><td><p>null</p></td><td><p>null</p></td><td><p>0</p></td></tr></tbody></table><p>预期为字符串的时候：如果有一个操作数为字符串时，使用<code data-backticks=\"1\">+</code>符号做相加运算时，会自动转换为字符串。</p><p><br></p><p>预期为布尔的时候：前面在介绍布尔类型时所提到的 9 个值会转为 false，其余转为 true</p><p><br></p><p><strong>2. 显性转换</strong></p><p><br></p><p>所谓显性转换，就是只程序员强制将一种类型转换为另外一种类型。显性转换往往会使用到一些转换方法。常见的转换方法如下：</p><ul><li><p>转换为数值类型：<code data-backticks=\"1\">Number()</code>，<code data-backticks=\"1\">parseInt()</code>，<code data-backticks=\"1\">parseFloat()</code></p></li><li><p>转换为布尔类型：<code data-backticks=\"1\">Boolean()</code></p></li><li><p>转换为字符串类型：<code data-backticks=\"1\">toString()</code>，<code data-backticks=\"1\">String()</code></p></li></ul><p>当然，除了使用上面的转换方法，我们也可以通过一些快捷方式来进行数据类型的显性转换，如下：</p><ul><li><p>转换字符串：直接和一个空字符串拼接，例如：<code data-backticks=\"1\">a = \"\" + 数据</code></p></li><li><p>转换布尔：!!数据类型，例如：<code data-backticks=\"1\">!!\"Hello\"</code></p></li><li><p>转换数值：数据*1 或 /1，例如：<code data-backticks=\"1\">\"Hello * 1\"</code></p></li></ul></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666076911315",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e51332fac4881713db369"),
+    interviewTitle: "JS 中支持哪些运算符？",
+    interviewContent: "<h1>运算符</h1><h2>经典真题</h2><ul><li><p>下面代码中，<em>a</em> 在什么情况下会执行输出语句打印 <em>1</em> ？</p></li></ul><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var a = ?;\nif(a == 1 &amp;&amp; a == 2 &amp;&amp; a == 3){\n \tconsole.log(1);\n}</code></pre></div><h2>1. 算术运算符</h2><p><em>JavaScript</em> 共提供 <em>10</em> 个算术运算符，用来完成基本的算术运算。</p><ul><li><p><strong>加法运算符</strong>：<code data-backticks=\"1\">x + y</code></p></li><li><p><strong>减法运算符</strong>： <code data-backticks=\"1\">x - y</code></p></li><li><p><strong>乘法运算符</strong>： <code data-backticks=\"1\">x * y</code></p></li><li><p><strong>除法运算符</strong>：<code data-backticks=\"1\">x / y</code></p></li><li><p><strong>指数运算符</strong>：<code data-backticks=\"1\">x ** y</code></p></li><li><p><strong>余数运算符</strong>：<code data-backticks=\"1\">x % y</code></p></li><li><p><strong>自增运算符</strong>：<code data-backticks=\"1\">++x</code> 或者 <code data-backticks=\"1\">x++</code></p></li><li><p><strong>自减运算符</strong>：<code data-backticks=\"1\">--x</code> 或者 <code data-backticks=\"1\">x--</code></p></li><li><p><strong>数值运算符</strong>： <code data-backticks=\"1\">+x</code></p></li><li><p><strong>负数值运算符</strong>：<code data-backticks=\"1\">-x</code></p></li></ul><p>减法、乘法、除法运算法比较单纯，就是执行相应的数学运算。</p><p><br></p><p>下面介绍其他几个算术运算符，重点是加法运算符。</p><h4>加法运算符</h4><p><strong>（1）基本规则</strong></p><p><br></p><p>加法运算符（<code data-backticks=\"1\">+</code>）是最常见的运算符，用来求两个数值的和。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">1 + 1 // 2</code></pre></div><p>JavaScript 允许非数值的相加。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">true + true // 2\n1 + true // 2</code></pre></div><p>上面代码中，第一行是两个布尔值相加，第二行是数值与布尔值相加。这两种情况，布尔值都会自动转成数值，然后再相加。</p><p><br></p><p>比较特殊的是，如果是两个字符串相加，这时加法运算符会变成连接运算符，返回一个新的字符串，将两个原字符串连接在一起。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">'a' + 'bc' // \"abc\"</code></pre></div><p>如果一个运算子是字符串，另一个运算子是非字符串，这时非字符串会转成字符串，再连接在一起。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">1 + 'a' // \"1a\"\nfalse + 'a' // \"falsea\"</code></pre></div><p>加法运算符是在运行时决定，到底是执行相加，还是执行连接。也就是说，运算子的不同，导致了不同的语法行为，这种现象称为“重载”（overload）。由于加法运算符存在重载，可能执行两种运算，使用的时候必须很小心。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">'3' + 4 + 5 // \"345\"\n3 + 4 + '5' // \"75\"</code></pre></div><p>上面代码中，由于从左到右的运算次序，字符串的位置不同会导致不同的结果。</p><p><br></p><p>除了加法运算符，其他算术运算符（比如减法、除法和乘法）都不会发生重载。它们的规则是：所有运算子一律转为数值，再进行相应的数学运算。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">1 - '2' // -1\n1 * '2' // 2\n1 / '2' // 0.5</code></pre></div><p>上面代码中，减法、除法和乘法运算符，都是将字符串自动转为数值，然后再运算。</p><p><br></p><p><strong>（2）对象相加</strong></p><p><br></p><p>如果运算子是对象，必须先转成原始类型的值，然后再相加。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">var obj = { p: 1 };\nobj + 2 // \"[object Object]2\"</code></pre></div><p>上面代码中，对象<code data-backticks=\"1\">obj</code>转成原始类型的值是<code data-backticks=\"1\">[object Object]</code>，再加<code data-backticks=\"1\">2</code>就得到了上面的结果。</p><p><br></p><p>对象转成原始类型的值，规则如下。</p><p><br></p><p>首先，自动调用对象的<code data-backticks=\"1\">valueOf</code>方法。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">var obj = { p: 1 };\nobj.valueOf() // { p: 1 }</code></pre></div><p>一般来说，对象的<code data-backticks=\"1\">valueOf</code>方法总是返回对象自身，这时再自动调用对象的<code data-backticks=\"1\">toString</code>方法，将其转为字符串。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">var obj = { p: 1 };\nobj.valueOf().toString() // \"[object Object]\"</code></pre></div><p>对象的<code data-backticks=\"1\">toString</code>方法默认返回<code data-backticks=\"1\">[object Object]</code>，所以就得到了最前面那个例子的结果。</p><p><br></p><p>知道了这个规则以后，就可以自己定义<code data-backticks=\"1\">valueOf</code>方法或<code data-backticks=\"1\">toString</code>方法，得到想要的结果。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">var obj = {\n  valueOf: function () {\n    return 1;\n  }\n};\n\nobj + 2 // 3</code></pre></div><p>上面代码中，我们定义<code data-backticks=\"1\">obj</code>对象的<code data-backticks=\"1\">valueOf</code>方法返回<code data-backticks=\"1\">1</code>，于是<code data-backticks=\"1\">obj + 2</code>就得到了<code data-backticks=\"1\">3</code>。这个例子中，由于<code data-backticks=\"1\">valueOf</code>方法直接返回一个原始类型的值，所以不再调用<code data-backticks=\"1\">toString</code>方法。</p><p><br></p><p>下面是自定义<code data-backticks=\"1\">toString</code>方法的例子。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">var obj = {\n  toString: function () {\n    return 'hello';\n  }\n};\n\nobj + 2 // \"hello2\"</code></pre></div><p>上面代码中，对象<code data-backticks=\"1\">obj</code>的<code data-backticks=\"1\">toString</code>方法返回字符串<code data-backticks=\"1\">hello</code>。前面说过，只要有一个运算子是字符串，加法运算符就变成连接运算符，返回连接后的字符串。</p><p><br></p><p>这里有一个特例，如果运算子是一个<code data-backticks=\"1\">Date</code>对象的实例，那么会优先执行<code data-backticks=\"1\">toString</code>方法。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">var obj = new Date();\nobj.valueOf = function () { return 1 };\nobj.toString = function () { return 'hello' };\n\nobj + 2 // \"hello2\"</code></pre></div><p>上面代码中，对象<code data-backticks=\"1\">obj</code>是一个<code data-backticks=\"1\">Date</code>对象的实例，并且自定义了<code data-backticks=\"1\">valueOf</code>方法和<code data-backticks=\"1\">toString</code>方法，结果<code data-backticks=\"1\">toString</code>方法优先执行。</p><h4>余数运算符</h4><p>余数运算符（<code data-backticks=\"1\">%</code>）返回前一个运算子被后一个运算子除，所得的余数。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">12 % 5 // 2</code></pre></div><p>需要注意的是，运算结果的正负号由第一个运算子的正负号决定。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">-1 % 2 // -1\n1 % -2 // 1</code></pre></div><p>所以，为了得到负数的正确余数值，可以先使用绝对值函数。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">// 错误的写法\nfunction isOdd(n) {\n  return n % 2 === 1;\n}\nisOdd(-5) // false\nisOdd(-4) // false\n\n// 正确的写法\nfunction isOdd(n) {\n  return Math.abs(n % 2) === 1;\n}\nisOdd(-5) // true\nisOdd(-4) // false</code></pre></div><p>余数运算符还可以用于浮点数的运算。但是，由于浮点数不是精确的值，无法得到完全准确的结果。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">6.5 % 2.1\n// 0.19999999999999973</code></pre></div><h4>自增和自减运算符</h4><p>自增和自减运算符，是一元运算符，只需要一个运算子。它们的作用是将运算子首先转为数值，然后加上1或者减去1。它们会修改原始变量。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">var x = 1;\n++x // 2\nx // 2\n\n--x // 1\nx // 1</code></pre></div><p>上面代码的变量<code data-backticks=\"1\">x</code>自增后，返回<code data-backticks=\"1\">2</code>，再进行自减，返回<code data-backticks=\"1\">1</code>。这两种情况都会使得，原始变量<code data-backticks=\"1\">x</code>的值发生改变。</p><p><br></p><p>运算之后，变量的值发生变化，这种效应叫做运算的副作用（side effect）。自增和自减运算符是仅有的两个具有副作用的运算符，其他运算符都不会改变变量的值。</p><p><br></p><p>自增和自减运算符有一个需要注意的地方，就是放在变量之后，会先返回变量操作前的值，再进行自增/自减操作；放在变量之前，会先进行自增/自减操作，再返回变量操作后的值。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">var x = 1;\nvar y = 1;\n\nx++ // 1\n++y // 2</code></pre></div><p>上面代码中，<code data-backticks=\"1\">x</code>是先返回当前值，然后自增，所以得到<code data-backticks=\"1\">1</code>；<code data-backticks=\"1\">y</code>是先自增，然后返回新的值，所以得到<code data-backticks=\"1\">2</code>。</p><h4>数值运算符，负数值运算符</h4><p>数值运算符（<code data-backticks=\"1\">+</code>）同样使用加号，但它是一元运算符（只需要一个操作数），而加法运算符是二元运算符（需要两个操作数）。</p><p><br></p><p>数值运算符的作用在于可以将任何值转为数值（与<code data-backticks=\"1\">Number</code>函数的作用相同）。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">+true // 1\n+[] // 0\n+{} // NaN</code></pre></div><p>上面代码表示，非数值经过数值运算符以后，都变成了数值（最后一行<code data-backticks=\"1\">NaN</code>也是数值）。具体的类型转换规则，参见《数据类型转换》一章。</p><p><br></p><p>负数值运算符（<code data-backticks=\"1\">-</code>），也同样具有将一个值转为数值的功能，只不过得到的值正负相反。连用两个负数值运算符，等同于数值运算符。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">var x = 1;\n-x // -1\n-(-x) // 1</code></pre></div><p>上面代码最后一行的圆括号不可少，否则会变成自减运算符。</p><p><br></p><p>数值运算符号和负数值运算符，都会返回一个新的值，而不会改变原始变量的值。</p><h4>指数运算符</h4><p>指数运算符（<code data-backticks=\"1\">**</code>）完成指数运算，前一个运算子是底数，后一个运算子是指数。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">2 ** 4 // 16</code></pre></div><p>注意，指数运算符是右结合，而不是左结合。即多个指数运算符连用时，先进行最右边的计算。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">// 相当于 2 ** (3 ** 2)\n2 ** 3 ** 2\n// 512</code></pre></div><p>上面代码中，由于指数运算符是右结合，所以先计算第二个指数运算符，而不是第一个。</p><h4>赋值运算符</h4><p>赋值运算符（Assignment Operators）用于给变量赋值。</p><p><br></p><p>最常见的赋值运算符，当然就是等号（<code data-backticks=\"1\">=</code>）。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">// 将 1 赋值给变量 x\nvar x = 1;\n\n// 将变量 y 的值赋值给变量 x\nvar x = y;</code></pre></div><p>赋值运算符还可以与其他运算符结合，形成变体。下面是与算术运算符的结合。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">// 等同于 x = x + y\nx += y\n\n// 等同于 x = x - y\nx -= y\n\n// 等同于 x = x * y\nx *= y\n\n// 等同于 x = x / y\nx /= y\n\n// 等同于 x = x % y\nx %= y\n\n// 等同于 x = x ** y\nx **= y</code></pre></div><p>下面是与位运算符的结合（关于位运算符，请见后文的介绍）。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">// 等同于 x = x &gt;&gt; y\nx &gt;&gt;= y\n\n// 等同于 x = x &lt;&lt; y\nx &lt;&lt;= y\n\n// 等同于 x = x &gt;&gt;&gt; y\nx &gt;&gt;&gt;= y\n\n// 等同于 x = x &amp; y\nx &amp;= y\n\n// 等同于 x = x | y\nx |= y\n\n// 等同于 x = x ^ y\nx ^= y</code></pre></div><p>这些复合的赋值运算符，都是先进行指定运算，然后将得到值返回给左边的变量。</p><h2>2. 比较运算符</h2><p>比较运算符用于比较两个值的大小，然后返回一个布尔值，表示是否满足指定的条件。</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>2 &gt; 1 // true</code></pre></div><p>上面代码比较<code data-backticks=\"1\">2</code>是否大于<code data-backticks=\"1\">1</code>，返回<code data-backticks=\"1\">true</code>。</p><blockquote><p>注意，比较运算符可以比较各种类型的值，不仅仅是数值。</p></blockquote><p>JavaScript 一共提供了8个比较运算符。</p><ul><li><p><code data-backticks=\"1\">&gt;</code> 大于运算符</p></li><li><p><code data-backticks=\"1\">&lt;</code> 小于运算符</p></li><li><p><code data-backticks=\"1\">&lt;=</code> 小于或等于运算符</p></li><li><p><code data-backticks=\"1\">&gt;=</code> 大于或等于运算符</p></li><li><p><code data-backticks=\"1\">==</code> 相等运算符</p></li><li><p><code data-backticks=\"1\">===</code> 严格相等运算符</p></li><li><p><code data-backticks=\"1\">!=</code> 不相等运算符</p></li><li><p><code data-backticks=\"1\">!==</code> 严格不相等运算符</p></li></ul><p>这八个比较运算符分成两类：相等比较和非相等比较。两者的规则是不一样的，对于非相等的比较，算法是先看两个运算子是否都是字符串，如果是的，就按照字典顺序比较（实际上是比较 Unicode 码点）；否则，将两个运算子都转成数值，再比较数值的大小。</p><h4>非相等运算符：字符串的比较</h4><p>字符串按照字典顺序进行比较。</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>'cat' &gt; 'dog' // false\n'cat' &gt; 'catalog' // false</code></pre></div><p>JavaScript 引擎内部首先比较首字符的 Unicode 码点。如果相等，再比较第二个字符的 Unicode 码点，以此类推。</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>'cat' &gt; 'Cat' // true'</code></pre></div><p>上面代码中，小写的<code data-backticks=\"1\">c</code>的 Unicode 码点（<code data-backticks=\"1\">99</code>）大于大写的<code data-backticks=\"1\">C</code>的 Unicode 码点（<code data-backticks=\"1\">67</code>），所以返回<code data-backticks=\"1\">true</code>。</p><p><br></p><p>由于所有字符都有 Unicode 码点，因此汉字也可以比较。</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>'大' &gt; '小' // false</code></pre></div><p>上面代码中，“大”的 Unicode 码点是22823，“小”是23567，因此返回<code data-backticks=\"1\">false</code>。</p><h4>非相等运算符：非字符串的比较</h4><p>如果两个运算子之中，至少有一个不是字符串，需要分成以下两种情况。</p><p><br></p><p><strong>（1）原始类型值</strong></p><p><br></p><p>如果两个运算子都是原始类型的值，则是先转成数值再比较。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">5 &gt; '4' // true\n// 等同于 5 &gt; Number('4')\n// 即 5 &gt; 4\n\ntrue &gt; false // true\n// 等同于 Number(true) &gt; Number(false)\n// 即 1 &gt; 0\n\n2 &gt; true // true\n// 等同于 2 &gt; Number(true)\n// 即 2 &gt; 1</code></pre></div><p>上面代码中，字符串和布尔值都会先转成数值，再进行比较。</p><p><br></p><p>这里需要注意与<code data-backticks=\"1\">NaN</code>的比较。任何值（包括<code data-backticks=\"1\">NaN</code>本身）与<code data-backticks=\"1\">NaN</code>使用非相等运算符进行比较，返回的都是<code data-backticks=\"1\">false</code>。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">1 &gt; NaN // false\n1 &lt;= NaN // false\n'1' &gt; NaN // false\n'1' &lt;= NaN // false\nNaN &gt; NaN // false\nNaN &lt;= NaN // false</code></pre></div><p><strong>（2）对象</strong></p><p><br></p><p>如果运算子是对象，会转为原始类型的值，再进行比较。</p><p><br></p><p>对象转换成原始类型的值，算法是先调用<code data-backticks=\"1\">valueOf</code>方法；如果返回的还是对象，再接着调用<code data-backticks=\"1\">toString</code>方法，详细解释参见《数据类型的转换》一章。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">var x = [2];\nx &gt; '11' // true\n// 等同于 [2].valueOf().toString() &gt; '11'\n// 即 '2' &gt; '11'\n\nx.valueOf = function () { return '1' };\nx &gt; '11' // false\n// 等同于 [2].valueOf() &gt; '11'\n// 即 '1' &gt; '11'</code></pre></div><p>两个对象之间的比较也是如此。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">[2] &gt; [1] // true\n// 等同于 [2].valueOf().toString() &gt; [1].valueOf().toString()\n// 即 '2' &gt; '1'\n\n[2] &gt; [11] // true\n// 等同于 [2].valueOf().toString() &gt; [11].valueOf().toString()\n// 即 '2' &gt; '11'\n\n{ x: 2 } &gt;= { x: 1 } // true\n// 等同于 { x: 2 }.valueOf().toString() &gt;= { x: 1 }.valueOf().toString()\n// 即 '[object Object]' &gt;= '[object Object]'</code></pre></div><h4>严格相等运算符</h4><p><em>JavaScript</em> 提供两种相等运算符：<code data-backticks=\"1\">==</code>和<code data-backticks=\"1\">===</code>。</p><p><br></p><p>简单说，它们的区别是相等运算符（<code data-backticks=\"1\">==</code>）比较两个值是否相等，严格相等运算符（<code data-backticks=\"1\">===</code>）比较它们是否为“同一个值”。如果两个值不是同一类型，严格相等运算符（<code data-backticks=\"1\">===</code>）直接返回<code data-backticks=\"1\">false</code>，而相等运算符（<code data-backticks=\"1\">==</code>）会将它们转换成同一个类型，再用严格相等运算符进行比较。</p><p><br></p><p><strong>（1）不同类型的值</strong></p><p><br></p><p>如果两个值的类型不同，直接返回<code data-backticks=\"1\">false</code>。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">1 === \"1\" // false\ntrue === \"true\" // false</code></pre></div><p>上面代码比较数值的<code data-backticks=\"1\">1</code>与字符串的“1”、布尔值的<code data-backticks=\"1\">true</code>与字符串<code data-backticks=\"1\">\"true\"</code>，因为类型不同，结果都是<code data-backticks=\"1\">false</code>。</p><p><br></p><p><strong>（2）同一类的原始类型值</strong></p><p><br></p><p>同一类型的原始类型的值（数值、字符串、布尔值）比较时，值相同就返回<code data-backticks=\"1\">true</code>，值不同就返回<code data-backticks=\"1\">false</code>。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">1 === 0x1 // true</code></pre></div><p>上面代码比较十进制的<code data-backticks=\"1\">1</code>与十六进制的<code data-backticks=\"1\">1</code>，因为类型和值都相同，返回<code data-backticks=\"1\">true</code>。</p><p><br></p><p>需要注意的是，<code data-backticks=\"1\">NaN</code>与任何值都不相等（包括自身）。另外，正<code data-backticks=\"1\">0</code>等于负<code data-backticks=\"1\">0</code>。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">NaN === NaN  // false\n+0 === -0 // true</code></pre></div><p><strong>（3）复合类型值</strong></p><p><br></p><p>两个复合类型（对象、数组、函数）的数据比较时，不是比较它们的值是否相等，而是比较它们是否指向同一个地址。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">{} === {} // false\n[] === [] // false\n(function () {} === function () {}) // false</code></pre></div><p>上面代码分别比较两个空对象、两个空数组、两个空函数，结果都是不相等。原因是对于复合类型的值，严格相等运算比较的是，它们是否引用同一个内存地址，而运算符两边的空对象、空数组、空函数的值，都存放在不同的内存地址，结果当然是<code data-backticks=\"1\">false</code>。</p><p><br></p><p>如果两个变量引用同一个对象，则它们相等。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var v1 = {};\nvar v2 = v1;\nv1 === v2 // true</code></pre></div><p>注意，对于两个对象的比较，严格相等运算符比较的是地址，而大于或小于运算符比较的是值。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var obj1 = {};\nvar obj2 = {};\n\nobj1 &gt; obj2 // false\nobj1 &lt; obj2 // false\nobj1 === obj2 // false</code></pre></div><p>上面的三个比较，前两个比较的是值，最后一个比较的是地址，所以都返回<code data-backticks=\"1\">false</code>。</p><p><br></p><p><strong>（4）undefined 和 null</strong></p><p><br></p><p><code data-backticks=\"1\">undefined</code>和<code data-backticks=\"1\">null</code>与自身严格相等。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">undefined === undefined // true\nnull === null // true</code></pre></div><p>由于变量声明后默认值是<code data-backticks=\"1\">undefined</code>，因此两个只声明未赋值的变量是相等的。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var v1;\nvar v2;\nv1 === v2 // true</code></pre></div><h4>严格不相等运算符</h4><p>严格相等运算符有一个对应的“严格不相等运算符”（<code data-backticks=\"1\">!==</code>），它的算法就是先求严格相等运算符的结果，然后返回相反值。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">1 !== '1' // true\n// 等同于\n!(1 === '1')</code></pre></div><p>上面代码中，感叹号<code data-backticks=\"1\">!</code>是求出后面表达式的相反值。</p><h4>相等运算符</h4><p>相等运算符用来比较相同类型的数据时，与严格相等运算符完全一样。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">1 == 1.0\n// 等同于\n1 === 1.0</code></pre></div><p>比较不同类型的数据时，相等运算符会先将数据进行类型转换，然后再用严格相等运算符比较。下面分成几种情况，讨论不同类型的值互相比较的规则。</p><p><br></p><p><strong>（1）原始类型值</strong></p><p><br></p><p>原始类型的值会转换成数值再进行比较。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">1 == true // true\n// 等同于 1 === Number(true)\n\n0 == false // true\n// 等同于 0 === Number(false)\n\n2 == true // false\n// 等同于 2 === Number(true)\n\n2 == false // false\n// 等同于 2 === Number(false)\n\n'true' == true // false\n// 等同于 Number('true') === Number(true)\n// 等同于 NaN === 1\n\n'' == 0 // true\n// 等同于 Number('') === 0\n// 等同于 0 === 0\n\n'' == false  // true\n// 等同于 Number('') === Number(false)\n// 等同于 0 === 0\n\n'1' == true  // true\n// 等同于 Number('1') === Number(true)\n// 等同于 1 === 1\n\n'\\n  123  \\t' == 123 // true\n// 因为字符串转为数字时，省略前置和后置的空格</code></pre></div><p>上面代码将字符串和布尔值都转为数值，然后再进行比较。</p><p><br></p><p><strong>（2）对象与原始类型值比较</strong></p><p><br></p><p>对象（这里指广义的对象，包括数组和函数）与原始类型的值比较时，对象转换成原始类型的值，再进行比较。</p><p><br></p><p>具体来说，先调用对象的<code data-backticks=\"1\">valueOf()</code>方法，如果得到原始类型的值，就按照上一小节的规则，互相比较；如果得到的还是对象，则再调用<code data-backticks=\"1\">toString()</code>方法，得到字符串形式，再进行比较。</p><p><br></p><p>下面是数组与原始类型值比较的例子。</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>// 数组与数值的比较\n[1] == 1 // true\n\n// 数组与字符串的比较\n[1] == '1' // true\n[1, 2] == '1,2' // true\n\n// 对象与布尔值的比较\n[1] == true // true\n[2] == true // false</code></pre></div><p>上面例子中，JavaScript 引擎会先对数组<code data-backticks=\"1\">[1]</code>调用数组的<code data-backticks=\"1\">valueOf()</code>方法，由于返回的还是一个数组，所以会接着调用数组的<code data-backticks=\"1\">toString()</code>方法，得到字符串形式，再按照上一小节的规则进行比较。</p><p><br></p><p>下面是一个更直接的例子。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const obj = {\n  valueOf: function () {\n    console.log('执行 valueOf()');\n    return obj;\n  },\n  toString: function () {\n    console.log('执行 toString()');\n    return 'foo';\n  }\n};\n\nobj == 'foo'\n// 执行 valueOf()\n// 执行 toString()\n// true</code></pre></div><p>上面例子中，<code data-backticks=\"1\">obj</code>是一个自定义了<code data-backticks=\"1\">valueOf()</code>和<code data-backticks=\"1\">toString()</code>方法的对象。这个对象与字符串<code data-backticks=\"1\">'foo'</code>进行比较时，会依次调用<code data-backticks=\"1\">valueOf()</code>和<code data-backticks=\"1\">toString()</code>方法，最后返回<code data-backticks=\"1\">'foo'</code>，所以比较结果是<code data-backticks=\"1\">true</code>。</p><p><br></p><p><strong>（3）undefined 和 null</strong></p><p><br></p><p><code data-backticks=\"1\">undefined</code>和<code data-backticks=\"1\">null</code>只有与自身比较，或者互相比较时，才会返回<code data-backticks=\"1\">true</code>；与其他类型的值比较时，结果都为<code data-backticks=\"1\">false</code>。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">undefined == undefined // true\nnull == null // true\nundefined == null // true\n\nfalse == null // false\nfalse == undefined // false\n\n0 == null // false\n0 == undefined // false</code></pre></div><p><strong>（4）相等运算符的缺点</strong></p><p><br></p><p>相等运算符隐藏的类型转换，会带来一些违反直觉的结果。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">0 == ''             // true\n0 == '0'            // true\n\n2 == true           // false\n2 == false          // false\n\nfalse == 'false'    // false\nfalse == '0'        // true\n\nfalse == undefined  // false\nfalse == null       // false\nnull == undefined   // true\n\n' \\t\\r\\n ' == 0     // true</code></pre></div><p>上面这些表达式都不同于直觉，很容易出错。因此建议不要使用相等运算符（<code data-backticks=\"1\">==</code>），最好只使用严格相等运算符（<code data-backticks=\"1\">===</code>）。</p><h4>不相等运算符</h4><p>相等运算符有一个对应的“不相等运算符”（<code data-backticks=\"1\">!=</code>），它的算法就是先求相等运算符的结果，然后返回相反值。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">1 != '1' // false\n\n// 等同于\n!(1 == '1')</code></pre></div><h2>3. 布尔运算符（逻辑运算符）</h2><p>布尔运算符用于将表达式转为布尔值，一共包含四个运算符。</p><ul><li><p>取反运算符：<code data-backticks=\"1\">!</code></p></li><li><p>且（并）运算符：<code data-backticks=\"1\">&amp;&amp;</code></p></li><li><p>或运算符：<code data-backticks=\"1\">||</code></p></li><li><p>三元运算符：<code data-backticks=\"1\">?:</code></p></li></ul><h4>取反运算符（!）</h4><p>取反运算符是一个感叹号，用于将布尔值变为相反值，即<code data-backticks=\"1\">true</code>变成<code data-backticks=\"1\">false</code>，<code data-backticks=\"1\">false</code>变成<code data-backticks=\"1\">true</code>。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">!true // false\n!false // true</code></pre></div><p>对于非布尔值，取反运算符会将其转为布尔值。可以这样记忆，以下六个值取反后为<code data-backticks=\"1\">true</code>，其他值都为<code data-backticks=\"1\">false</code>。</p><ul><li><p><code data-backticks=\"1\">undefined</code></p></li><li><p><code data-backticks=\"1\">null</code></p></li><li><p><code data-backticks=\"1\">false</code></p></li><li><p><code data-backticks=\"1\">0</code></p></li><li><p><code data-backticks=\"1\">NaN</code></p></li><li><p>空字符串（<code data-backticks=\"1\">''</code>）</p></li></ul><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">!undefined // true\n!null // true\n!0 // true\n!NaN // true\n!\"\" // true\n\n!54 // false\n!'hello' // false\n![] // false\n!{} // false</code></pre></div><p>上面代码中，不管什么类型的值，经过取反运算后，都变成了布尔值。</p><p><br></p><p>如果对一个值连续做两次取反运算，等于将其转为对应的布尔值，与<code data-backticks=\"1\">Boolean</code>函数的作用相同。这是一种常用的类型转换的写法。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">!!x\n// 等同于\nBoolean(x)</code></pre></div><p>上面代码中，不管<code data-backticks=\"1\">x</code>是什么类型的值，经过两次取反运算后，变成了与<code data-backticks=\"1\">Boolean</code>函数结果相同的布尔值。所以，两次取反就是将一个值转为布尔值的简便写法。</p><h4>且运算符（&amp;&amp;）</h4><p>且运算符（<code data-backticks=\"1\">&amp;&amp;</code>）往往用于多个表达式的求值。</p><p><br></p><p>它的运算规则是：如果第一个运算子的布尔值为<code data-backticks=\"1\">true</code>，则返回第二个运算子的值（注意是值，不是布尔值）；如果第一个运算子的布尔值为<code data-backticks=\"1\">false</code>，则直接返回第一个运算子的值，且不再对第二个运算子求值。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">'t' &amp;&amp; '' // \"\"\n't' &amp;&amp; 'f' // \"f\"\n't' &amp;&amp; (1 + 2) // 3\n'' &amp;&amp; 'f' // \"\"\n'' &amp;&amp; '' // \"\"\n\nvar x = 1;\n(1 - 1) &amp;&amp; ( x += 1) // 0\nx // 1</code></pre></div><p>上面代码的最后一个例子，由于且运算符的第一个运算子的布尔值为<code data-backticks=\"1\">false</code>，则直接返回它的值<code data-backticks=\"1\">0</code>，而不再对第二个运算子求值，所以变量<code data-backticks=\"1\">x</code>的值没变。</p><p><br></p><p>这种跳过第二个运算子的机制，被称为“短路”。有些程序员喜欢用它取代<code data-backticks=\"1\">if</code>结构，比如下面是一段<code data-backticks=\"1\">if</code>结构的代码，就可以用且运算符改写。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">if (i) {\n  doSomething();\n}\n\n// 等价于\n\ni &amp;&amp; doSomething();</code></pre></div><p>上面代码的两种写法是等价的，但是后一种不容易看出目的，也不容易除错，建议谨慎使用。</p><p><br></p><p>且运算符可以多个连用，这时返回第一个布尔值为<code data-backticks=\"1\">false</code>的表达式的值。如果所有表达式的布尔值都为<code data-backticks=\"1\">true</code>，则返回最后一个表达式的值。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">true &amp;&amp; 'foo' &amp;&amp; '' &amp;&amp; 4 &amp;&amp; 'foo' &amp;&amp; true\n// ''\n\n1 &amp;&amp; 2 &amp;&amp; 3\n// 3</code></pre></div><p>上面代码中，例一里面，第一个布尔值为<code data-backticks=\"1\">false</code>的表达式为第三个表达式，所以得到一个空字符串。例二里面，所有表达式的布尔值都是<code data-backticks=\"1\">true</code>，所以返回最后一个表达式的值<code data-backticks=\"1\">3</code>。</p><h4>或运算符（||）</h4><p>或运算符（<code data-backticks=\"1\">||</code>）也用于多个表达式的求值。它的运算规则是：如果第一个运算子的布尔值为<code data-backticks=\"1\">true</code>，则返回第一个运算子的值，且不再对第二个运算子求值；如果第一个运算子的布尔值为<code data-backticks=\"1\">false</code>，则返回第二个运算子的值。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">'t' || '' // \"t\"\n't' || 'f' // \"t\"\n'' || 'f' // \"f\"\n'' || '' // \"\"</code></pre></div><p>短路规则对这个运算符也适用。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var x = 1;\ntrue || (x = 2) // true\nx // 1</code></pre></div><p>上面代码中，或运算符的第一个运算子为<code data-backticks=\"1\">true</code>，所以直接返回<code data-backticks=\"1\">true</code>，不再运行第二个运算子。所以，<code data-backticks=\"1\">x</code>的值没有改变。这种只通过第一个表达式的值，控制是否运行第二个表达式的机制，就称为“短路”（short-cut）。</p><p><br></p><p>或运算符可以多个连用，这时返回第一个布尔值为<code data-backticks=\"1\">true</code>的表达式的值。如果所有表达式都为<code data-backticks=\"1\">false</code>，则返回最后一个表达式的值。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">false || 0 || '' || 4 || 'foo' || true\n// 4\n\nfalse || 0 || ''\n// ''</code></pre></div><p>上面代码中，例一里面，第一个布尔值为<code data-backticks=\"1\">true</code>的表达式是第四个表达式，所以得到数值4。例二里面，所有表达式的布尔值都为<code data-backticks=\"1\">false</code>，所以返回最后一个表达式的值。</p><p><br></p><p>或运算符常用于为一个变量设置默认值。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function saveText(text) {\n  text = text || '';\n  // ...\n}\n\n// 或者写成\nsaveText(this.text || '')</code></pre></div><p>上面代码表示，如果函数调用时，没有提供参数，则该参数默认设置为空字符串。</p><h4>三元条件运算符（?:）</h4><p>三元条件运算符由问号（?）和冒号（:）组成，分隔三个表达式。它是 JavaScript 语言唯一一个需要三个运算子的运算符。如果第一个表达式的布尔值为<code data-backticks=\"1\">true</code>，则返回第二个表达式的值，否则返回第三个表达式的值。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">'t' ? 'hello' : 'world' // \"hello\"\n0 ? 'hello' : 'world' // \"world\"</code></pre></div><p>上面代码的<code data-backticks=\"1\">t</code>和<code data-backticks=\"1\">0</code>的布尔值分别为<code data-backticks=\"1\">true</code>和<code data-backticks=\"1\">false</code>，所以分别返回第二个和第三个表达式的值。</p><p><br></p><p>通常来说，三元条件表达式与<code data-backticks=\"1\">if...else</code>语句具有同样表达效果，前者可以表达的，后者也能表达。但是两者具有一个重大差别，<code data-backticks=\"1\">if...else</code>是语句，没有返回值；三元条件表达式是表达式，具有返回值。所以，在需要返回值的场合，只能使用三元条件表达式，而不能使用<code data-backticks=\"1\">if..else</code>。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">console.log(true ? 'T' : 'F');</code></pre></div><p>上面代码中，<code data-backticks=\"1\">console.log</code>方法的参数必须是一个表达式，这时就只能使用三元条件表达式。如果要用<code data-backticks=\"1\">if...else</code>语句，就必须改变整个代码写法了。</p><h2>4. 位运算符</h2><p>按位运算符是将操作数换算成 <em>32</em> 位的二进制整数，然后按每一位来进行运算。例如：</p><p><br></p><p><em>5</em> 的 <em>32</em> 位为：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>00000000000000000000000000000101</code></pre></div><p><em>100</em> 的 <em>32</em> 位为：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>00000000000000000000000001100100</code></pre></div><p><em>15</em> 的 <em>32</em> 位为：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>00000000000000000000000000001111</code></pre></div><h4>按位非</h4><p>按位非运算符<code data-backticks=\"1\">~</code>会把数字转为32位二进制整数，然后反转每一位。所有的 1 变为 0，所有的 0 变为 1</p><p><br></p><p>例如：</p><p><br></p><p>5 的 32 位为：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>00000000000000000000000000000101</code></pre></div><p>~5 的 32 位为：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>11111111111111111111111111111010  </code></pre></div><p>转换出来就为 -6</p><p><br></p><p>按位非，实质上是对操作数求负，然后减去1。</p><h4>按位与</h4><p>按位或运算符<code data-backticks=\"1\">&amp;</code>会把两个数字转为 32 位二进制整数，并对两个数的每一位执行按位与运算。按位与的规则如下表：</p><table><thead><tr><th><p>第一个数字</p></th><th><p>第二个数字</p></th><th><p>结果</p></th></tr></thead><tbody><tr><td><p>1</p></td><td><p>1</p></td><td><p>1</p></td></tr><tr><td><p>1</p></td><td><p>0</p></td><td><p>0</p></td></tr><tr><td><p>0</p></td><td><p>1</p></td><td><p>0</p></td></tr><tr><td><p>0</p></td><td><p>0</p></td><td><p>0</p></td></tr></tbody></table><p>具体示例：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">console.log(12 &amp; 10); // 8</code></pre></div><p>12 的 32 位二进制表示为：1100</p><p>10 的 32 位二进制表示为：1010</p><p><br></p><p>按位与的结果为：1000</p><h4>按位或</h4><p>按位或运算符<code data-backticks=\"1\">|</code>会把两个数字转为 32 位二进制整数，并对两个数的每一位执行按位或运算。按位或的规则如下表：</p><table><thead><tr><th><p>第一个数字</p></th><th><p>第二个数字</p></th><th><p>结果</p></th></tr></thead><tbody><tr><td><p>1</p></td><td><p>1</p></td><td><p>1</p></td></tr><tr><td><p>1</p></td><td><p>0</p></td><td><p>1</p></td></tr><tr><td><p>0</p></td><td><p>1</p></td><td><p>1</p></td></tr><tr><td><p>0</p></td><td><p>0</p></td><td><p>0</p></td></tr></tbody></table><p>具体示例：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">console.log(12 | 10); // 14</code></pre></div><p>12 的 32 位二进制表示为：1100</p><p>10 的 32 位二进制表示为：1010</p><p><br></p><p>按位或的结果为：1110</p><h4>按位异或</h4><p>按位或运算符<code data-backticks=\"1\">^</code>会把两个数字转为 32 位二进制整数，并对两个数的每一位执行按位异或运算。运算规则为两位不同返回 1，两位相同返回 0，如下表：</p><table><thead><tr><th><p>第一个数字</p></th><th><p>第二个数字</p></th><th><p>结果</p></th></tr></thead><tbody><tr><td><p>1</p></td><td><p>1</p></td><td><p>0</p></td></tr><tr><td><p>1</p></td><td><p>0</p></td><td><p>1</p></td></tr><tr><td><p>0</p></td><td><p>1</p></td><td><p>1</p></td></tr><tr><td><p>0</p></td><td><p>0</p></td><td><p>0</p></td></tr></tbody></table><p>具体示例：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">console.log(12 ^ 10); // 6</code></pre></div><p>12 的 32 位二进制表示为：1100</p><p>10 的 32 位二进制表示为：1010</p><p><br></p><p>按位异或的结果为：0110</p><p><br></p><p>按位异或如果是非整数值，如果两个操作数中只有一个为真，就返回 1，如果两个操作数都是真，或者都是假，就返回 0，示例如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">console.log(true ^ \"Hello\"); // 1\nconsole.log(false ^ \"Hello\"); // 0\nconsole.log(true ^ true); // 0\nconsole.log(\"Hello\" ^ \"Hello\"); // 0\nconsole.log(false ^ false); // 0\nconsole.log(true ^ false); // 1</code></pre></div><p>注意这里的 Hello 被转换为了 NaN</p><h4>按位移位</h4><p>按位移位运算符<code data-backticks=\"1\">&lt;&lt;</code>和<code data-backticks=\"1\">&gt;&gt;</code>会将所有位向左或者向右移动指定的数量，实际上就是高效率地将数字乘以或者除以 2 的指定数的次方。</p><p><br></p><p><code data-backticks=\"1\">&lt;&lt;</code>：乘以 2 的指定数次方</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">console.log(2&lt;&lt;2); // 8</code></pre></div><p>2 乘以 2 的 2 次方</p><p><br></p><p>00000010 转换为 00001000</p><p><br></p><p><code data-backticks=\"1\">&gt;&gt;</code>：除以 2 的指定数次方</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">console.log(16&gt;&gt;1); // 8</code></pre></div><p>16 除以 2 的 1 次方</p><p><br></p><p>00010000转换为00001000</p><h2>5. 其他运算符</h2><h4><em>void</em> 运算符</h4><p><em>void</em> 运算符的作用是执行一个表达式，然后不返回任何值，或者说返回 <em>undefined</em>。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">void 0 // undefined\nvoid(0) // undefined</code></pre></div><p>上面是 <em>void</em> 运算符的两种写法，都正确。建议采用后一种形式，即总是使用圆括号。</p><p><br></p><p>因为 <em>void</em> 运算符的优先性很高，如果不使用括号，容易造成错误的结果。</p><p><br></p><p>比如，<em>“void 4 + 7”</em> 实际上等同于 <em>“(void 4) + 7”</em>。</p><p><br></p><p>下面是 <em>void</em> 运算符的一个例子。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var x = 3;\nvoid (x = 5) //undefined\nx // 5</code></pre></div><p>这个运算符的主要用途是浏览器的书签工具（<em>Bookmarklet</em>），以及在超级链接中插入代码防止网页跳转。</p><p><br></p><p>请看下面的代码。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">&lt;script&gt;\nfunction f() {\n  console.log('Hello World');\n}\n&lt;/script&gt;\n&lt;a href=\"http://example.com\" onclick=\"f(); return false;\"&gt;点击&lt;/a&gt;</code></pre></div><p>上面代码中，点击链接后，会先执行 <em>onclick</em> 的代码，由于 <em>onclick</em> 返回 <em>false</em>，所以浏览器不会跳转到 <em>example.com</em>。</p><p><br></p><p><em>void</em> 运算符可以取代上面的写法。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">&lt;a href=\"javascript: void(f())\"&gt;文字&lt;/a&gt;</code></pre></div><p>下面是一个更实际的例子，用户点击链接提交表单，但是不产生页面跳转。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">&lt;a href=\"javascript: void(document.form.submit())\"&gt;\n  提交\n&lt;/a&gt;</code></pre></div><h4>逗号运算符</h4><p>逗号运算符用于对两个表达式求值，并返回后一个表达式的值。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">'a', 'b' // \"b\"\n\nvar x = 0;\nvar y = (x++, 10);\nx // 1\ny // 10</code></pre></div><p>上面代码中，逗号运算符返回后一个表达式的值。</p><p><br></p><p>逗号运算符的一个用途是，在返回一个值之前，进行一些辅助操作。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">var value = (console.log('Hi!'), true);\n// Hi!\n\nvalue // true</code></pre></div><p>上面代码中，先执行逗号之前的操作，然后返回逗号后面的值。</p><h2>6. 运算顺序</h2><h4>优先级</h4><p><em>JavaScript</em> 各种运算符的优先级别（<em>Operator Precedence</em>）是不一样的。优先级高的运算符先执行，优先级低的运算符后执行。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">4 + 5 * 6 // 34</code></pre></div><p>上面的代码中，乘法运算符（ * ）的优先性高于加法运算符（ + ），所以先执行乘法，再执行加法，相当于下面这样。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">4 + (5 * 6) // 34</code></pre></div><p>如果多个运算符混写在一起，常常会导致令人困惑的代码。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var x = 1;\nvar arr = [];\n\nvar y = arr.length &lt;= 0 || arr[0] === undefined ? x : arr[0];</code></pre></div><p>上面代码中，变量 <em>y</em> 的值就很难看出来，因为这个表达式涉及 <em>5</em> 个运算符，到底谁的优先级最高，实在不容易记住。</p><p><br></p><p>根据语言规格，这五个运算符的优先级从高到低依次为：小于等于（ &lt;= )、严格相等（ === ）、或（ || ）、三元（ ?: ）、等号（ = ）。因此上面的表达式，实际的运算顺序如下。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var y = ((arr.length &lt;= 0) || (arr[0] === undefined)) ? x : arr[0];</code></pre></div><p>记住所有运算符的优先级，是非常难的，也是没有必要的。</p><h4>圆括号的作用</h4><p>圆括号可以用来提高运算的优先级，因为它的优先级是最高的，即圆括号中的表达式会第一个运算。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">(4 + 5) * 6 // 54</code></pre></div><p>上面代码中，由于使用了圆括号，加法会先于乘法执行。</p><p><br></p><p>运算符的优先级别十分繁杂，且都是硬性规定，因此建议总是使用圆括号，保证运算顺序清晰可读，这对代码的维护和除错至关重要。</p><p><br></p><p>顺便说一下，圆括号不是运算符，而是一种语法结构。它一共有两种用法：一种是把表达式放在圆括号之中，提升运算的优先级；另一种是跟在函数的后面，作用是调用函数。</p><p><br></p><p>注意，因为圆括号不是运算符，所以不具有求值作用，只改变运算的优先级。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var x = 1;\n(x) = 2;</code></pre></div><p>上面代码的第二行，如果圆括号具有求值作用，那么就会变成 <em>1 = 2</em>，这是会报错了。但是，上面的代码可以运行，这验证了圆括号只改变优先级，不会求值。</p><p><br></p><p>这也意味着，如果整个表达式都放在圆括号之中，那么不会有任何效果。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">(expression)\n// 等同于\nexpression</code></pre></div><p>函数放在圆括号中，会返回函数本身。如果圆括号紧跟在函数的后面，就表示调用函数。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function f() {\n  return 1;\n}\n\n(f) // function f(){return 1;}\nf() // 1</code></pre></div><p>上面代码中，函数放在圆括号之中会返回函数本身，圆括号跟在函数后面则是调用函数。</p><p><br></p><p>圆括号之中，只能放置表达式，如果将语句放在圆括号之中，就会报错。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">(var a = 1)\n// SyntaxError: Unexpected token var</code></pre></div><h4>左结合和右结合</h4><p>对于优先级别相同的运算符，同时出现的时候，就会有计算顺序的问题。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">a OP b OP c</code></pre></div><p>上面代码中，<em>OP</em> 表示运算符。它可以有两种解释方式。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">// 方式一\n(a OP b) OP c\n\n// 方式二\na OP (b OP c)</code></pre></div><p>上面的两种方式，得到的计算结果往往是不一样的。</p><p><br></p><p>方式一是将左侧两个运算数结合在一起，采用这种解释方式的运算符，称为“左结合”（<em>left-to-right associativity</em>）运算符；</p><p><br></p><p>方式二是将右侧两个运算数结合在一起，这样的运算符称为“右结合”运算符（<em>right-to-left associativity</em>）。</p><p><br></p><p><em>JavaScript</em> 语言的大多数运算符是“左结合”，请看下面加法运算符的例子。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">x + y + z\n\n// 引擎解释如下\n(x + y) + z</code></pre></div><p>上面代码中，<em>x</em> 与 <em>y</em> 结合在一起，它们的预算结果再与 <em>z</em> 进行运算。</p><p><br></p><p>少数运算符是“右结合”，其中最主要的是赋值运算符（ = ）和三元条件运算符（ ?: ）。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">w = x = y = z;\nq = a ? b : c ? d : e ? f : g;</code></pre></div><p>上面代码的解释方式如下。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">w = (x = (y = z));\nq = a ? b : (c ? d : (e ? f : g));</code></pre></div><p>上面的两行代码，都是右侧的运算数结合在一起。</p><p><br></p><p>另外，指数运算符（**）也是右结合。</p><div data-language=\"javascript\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"javascript\">2 ** 3 ** 2\n// 相当于 2 ** (3 ** 2)\n// 512</code></pre></div><h2>真题解答</h2><ul><li><p>下面代码中，<em>a</em> 在什么情况下会执行输出语句打印 <em>1</em> ？</p></li></ul><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var a = ?;\nif(a == 1 &amp;&amp; a == 2 &amp;&amp; a == 3){\n \tconsole.log(1);\n}</code></pre></div><blockquote><p>参考答案：</p><p><br></p><p>方法一：利用 <em>toString( )</em> 方法</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var a = {\n i: 1,\n toString() {\n     return a.i++;\n }\n}\nif (a == 1 &amp;&amp; a == 2 &amp;&amp; a == 3) {\n console.log('1');\n}</code></pre></div><p>方法二：利用 <em>valueOf( )</em> 方法</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var a = {\n i: 1,\n valueOf() {\n     return a.i++\n }\n}\nif (a == 1 &amp;&amp; a == 2 &amp;&amp; a == 3) {\n console.log('1');\n}</code></pre></div></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666076979038",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e516c2fac4881713db374"),
+    interviewTitle: "说一说你对 JS 中原型与原型链的理解？",
+    interviewContent: "<h1>原型和原型链</h1><h2>经典真题</h2><ul><li><p>说一说你对 <em>JavaScript</em> 中原型与原型链的理解？（美团 <em>2019</em>年）</p></li><li><p>对一个构造函数实例化后，它的原型链指向什么？</p></li></ul><h2>原型与原型链介绍</h2><p>在 <em>Brendan Eich</em> 设计 <em>JavaScript</em> 时，借鉴了 <em>Self</em> 和 <em>Smalltalk</em> 这两门基于原型的语言。</p><p><br></p><p>之所以选择基于原型的对象系统，是因为 <em>Brendan Eich</em> 一开始就没有打算在 <em>JavaScript</em> 中加入类的概念，因为 <em>JavaScript</em> 的设计初衷就是为非专业的开发人员（例如网页设计者）提供一个方便的工具。由于大部分网页设计者都没有任何的编程背景，所以在设计 <em>JavaScript</em> 时也是尽可能使其简单、易学。</p><p><br></p><p>这因为如此，<em>JavaScript</em> 中的原型以及原型链成为了这门语言最大的一个特点，在面试的时候，面试官也经常会围绕原型和原型链展开提问。</p><p><br></p><p><em>JavaScript</em> 是一门基于原型的语言，<strong>对象的产生是通过原型对象而来的</strong>。</p><p><br></p><p><em>ES5</em> 中提供了 <em>Object.create</em> 方法，可以用来克隆对象。</p><p><br></p><p>示例如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const person = {\n    arms: 2,\n    legs: 2,\n    walk() {\n        console.log('walking');\n    }\n}\nconst zhangsan = Object.create(person);\nconsole.log(zhangsan.arms); // 2\nconsole.log(zhangsan.legs); // 2\nzhangsan.walk(); // walking\nconsole.log(zhangsan.__proto__ === person); // true</code></pre></div><p>在上面的示例中，我们通过 <em>Object.create</em> 方法来对 <em>person</em> 对象进行克隆，克隆出来了一个名为 <em>zhangsan</em> 的对象，所以 <em>person</em> 对象就是 <em>zhangsan</em> 这个对象的原型对象。</p><p><br></p><p><em>person</em> 对象上面的属性和方法，<em>zhangsan</em> 这个对象上面都有。</p><p><br></p><p>通过 __<em>proto</em>__ 属性，我们可以访问到一个对象的原型对象。</p><p><br></p><p>从上面的代码可以看出，当我们打印<code data-backticks=\"1\">zhangsan.__proto__ === person</code>，返回的是 <em>true</em> ，因为对于 <em>zhangsan</em> 这个对象而言，它的原型对象就是 <em>person</em> 这个对象。</p><p><br></p><p>我们在使用 <em>Object.create</em> 方法来克隆对象的时候，还可以传入第 <em>2</em> 个参数，第 <em>2</em> 个参数是一个 <em>JSON</em> 对象，该对象可以书写新对象的<strong>新属性</strong>以及<strong>属性特性</strong>。</p><p><br></p><p>通过这种方式，基于对象创建的新对象，可以继承祖辈对象的属性和方法，这其实就是一个继承的关系，来看一个示例：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const person = {\n    arms: 2,\n    legs: 2,\n    walk() {\n        console.log('walking');\n    }\n}\nconst zhangsan = Object.create(person, {\n    name: {\n        value: \"zhangsan\",\n    },\n    age: {\n        value: 18,\n    },\n    born: {\n        value: \"chengdu\"\n    }\n});\nconst zhangxiaosan = Object.create(zhangsan, {\n    name: {\n        value: \"zhangxiaosan\"\n    },\n    age: {\n        value: 1\n    }\n})\nconsole.log(zhangxiaosan.name); // zhangxiaosan\nconsole.log(zhangxiaosan.age); // 1\nconsole.log(zhangxiaosan.born); // chengdu\nconsole.log(zhangxiaosan.arms); // 2\nconsole.log(zhangxiaosan.legs); // 2\nzhangxiaosan.walk(); // walking\nconsole.log(zhangsan.isPrototypeOf(zhangxiaosan)); // true\nconsole.log(person.isPrototypeOf(zhangxiaosan)); // true</code></pre></div><p>该例中，<em>zhangsan</em> 这个对象是从 <em>person</em> 这个对象克隆而来的，而 <em>zhangxiaosan</em> 这个对象又是从 <em>zhangsan</em> 这个对象克隆而来，以此<strong>形成了一条原型链</strong>。无论是 <em>person</em> 对象，还是 <em>zhangsan</em> 对象上面的属性和方法，<em>zhangxiaosan</em> 这个对象都能继承到。</p><p><br></p><p>来看下面的图：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-08-10-050603.png\" alt=\"image-20210810130602385\" contenteditable=\"false\"><br></p><p><br></p><p>这就是 <em>JavaScript</em> 中最原始的创建对象的方式，一个对象是通过克隆另外一个对象所得到的。就像克隆羊多莉一样，通过克隆可以创造一个一模一样的对象，被克隆的对象是新对象的原型对象。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-08-10-051614.png\" alt=\"image-20210810131613519\" contenteditable=\"false\"><br></p><p><br></p><p>但是，随着 <em>JavaScript</em> 语言的发展，这样创建对象的方式还是太过于麻烦了。开发者还是期望 <em>JavaScript</em> 能够像 <em>Java、C#</em> 等标准面向对象语言一样，通过类来批量的生成对象。于是出现了通过构造函数来模拟类的形式。</p><p><br></p><p>来看下面的例子：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function Computer(name, price) {\n    // 属性写在类里面 \n    this.name = name;\n    this.price = price;\n}\n// 方法挂在原型对象上面\nComputer.prototype.showSth = function () {\n    console.log(`这是一台${this.name}电脑`);\n}\n\nconst apple = new Computer(\"苹果\", 12000);\nconsole.log(apple.name); // 苹果\nconsole.log(apple.price); // 12000\napple.showSth(); // 这是一台苹果电脑\n\nconst huawei = new Computer(\"华为\", 7000);\nconsole.log(huawei.name); // 华为\nconsole.log(huawei.price); // 7000\nhuawei.showSth(); // 这是一台华为电脑</code></pre></div><p>在上面的例子中，我们书写了一个 <em>Computer</em> 的函数，我们称之为构造函数，为了区分普通函数和构造函数，一般构造函数的函数名<strong>首字母会大写</strong>。</p><p><br></p><p>区别于普通函数的直接调用，构造函数一般通过配合 <em>new</em> 关键字一起使用，每当我们 <em>new</em> 一次，就会生成一个新的对象，而在构造函数中的 <em>this</em> 就指向这个新生成的对象。</p><p><br></p><p>在上面的例子中，我们 <em>new</em> 了两次，所以生成了两个对象，我们把这两个对象分别存储到 <em>apple</em> 和 <em>huawei</em> 这两个变量里面。</p><p><br></p><p>有一个非常有意思的现象，就是我们在书写 <em>Computer</em> 构造函数的实例方法的时候，并没有将这个方法书写在构造函数里面，而是写在了 <em>Computer.prototype</em> 上面，那么这个 <em>Computer.prototype</em> 是啥呢？</p><p><br></p><p>这个  <em>Computer.prototype</em>  实际上就是 <em>Computer</em> 实例对象的原型对象。要搞清楚这个，看下面的图：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-27-063331.png\" alt=\"image-20211027143330933\" contenteditable=\"false\"><br></p><p><br></p><p>这是最重要的一个三角关系，也是我往往要求学生记下来的三角关系。</p><p><br></p><p>通过上图，我们可以得出以下的结论：</p><ul><li><p><em>JavaScript</em> 中每个对象都有一个原型对象。可以通过 __<em>proto</em>__ 属性来访问到对象的原型对象。</p></li><li><p>构造函数的 <em>prototype</em> 属性指向一个对象，这个对象是该构造函数实例化出来的对象的原型对象。</p></li><li><p>原型对象的 <em>constructor</em> 属性也指向其构造函数。</p></li><li><p>实例对象的 <em>constructor</em> 属性是从它的原型对象上面访问到。</p></li></ul><p>实践才是检验真理的唯一标准。接下来我们在代码中来验证一下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function Computer(name, price) {\n    // 属性写在类里面 \n    this.name = name;\n    this.price = price;\n}\n// 方法挂在原型对象上面\nComputer.prototype.showSth = function () {\n    console.log(`这是一台${this.name}电脑`);\n}\n\nconst apple = new Computer(\"苹果\", 12000);\n\nconsole.log(apple.__proto__ === Computer.prototype); // true\nconsole.log(apple.__proto__.constructor === Computer); // true</code></pre></div><p>在上面的代码中，<em>apple</em> 是从 <em>Computer</em> 这个构造函数中实例化出来的对象，我们通过  __<em>proto</em>__  来访问到 <em>apple</em> 的原型对象，而这个原型对象和 <em>Computer.prototype</em> 是等价的。另外， 我们也发现 <em>apple</em> 和它原型对象的 <em>constructor</em> 属性都指向 <em>Computer</em> 这个构造函数。</p><p><br></p><p>接下来我们还可以来验证内置的构造函数是不是也是这样的关系，如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function Computer(name, price) {\n    // 属性写在类里面 \n    this.name = name;\n    this.price = price;\n}\n// 方法挂在原型对象上面\nComputer.prototype.showSth = function () {\n    console.log(`这是一台${this.name}电脑`);\n}\n\nconst apple = new Computer(\"苹果\", 12000);\n\nconsole.log(apple.__proto__ === Computer.prototype); // true\nconsole.log(apple.__proto__.constructor === Computer); // true\n\n// 数组的三角关系\nvar arr = [];\nconsole.log(arr.__proto__ === Array.prototype); // true\n\n// 其实所有的构造函数的原型对象都相同\nconsole.log(Computer.__proto__ === Array.__proto__); // true\nconsole.log(Computer.__proto__ === Date.__proto__); // true\nconsole.log(Computer.__proto__ === Number.__proto__);  // true\nconsole.log(Computer.__proto__ === Function.__proto__);  // true\nconsole.log(Computer.__proto__ === Object.__proto__);  // true\nconsole.log(Computer.__proto__); // {}</code></pre></div><p>通过上面的代码，我们发现所有的构造函数，无论是自定义的还是内置的，它们的原型对象都是同一个对象。</p><p><br></p><p>如果你能够把上面的三角关系理清楚，恭喜你，你已经把整个原型和原型链的知识掌握一大部分。</p><p><br></p><p>如果你还想继续往下深究，那么上面的图可以扩展成这样：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-23-093053.jpg\" alt=\"WechatIMG195\" contenteditable=\"false\"><br></p><p><br></p><p>在 <em>JavaScript</em> 中，每一个对象，都有一个原型对象。而原型对象上面也有一个自己的原型对象，一层一层向上找，最终会到达 <em>null</em>。</p><p><br></p><p>我们可以在上面代码的基础上，继续进行验证，如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function Computer(name, price) {\n    // 属性写在类里面 \n    this.name = name;\n    this.price = price;\n}\n// 方法挂在原型对象上面\nComputer.prototype.showSth = function () {\n    console.log(`这是一台${this.name}电脑`);\n}\n\nvar apple = new Computer(\"苹果\", 12000);\n\nconsole.log(apple.__proto__.__proto__); // [Object: null prototype] {}\nconsole.log(apple.__proto__.__proto__.__proto__); // null\nconsole.log(apple.__proto__.__proto__ === Object.prototype); // true</code></pre></div><p>可以看到，在上面的代码中，我们顺着原型链一层一层往上找，最终到达了 <em>null</em>。</p><p><br></p><p>但是目前来看我们这个图还是不完整，既然构造函数的原型对象也是对象，那么必然该对象也有自己的原型，所以完整的图其实如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2022-08-23-093129.jpg\" alt=\"WechatIMG194\" contenteditable=\"false\"><br></p><p><br></p><p>下面可以简单验证一下，如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">// 自定义构造函数函数\nfunction Computer() {}\n\nconsole.log(Computer.__proto__.__proto__.__proto__); // null\nconsole.log(Computer.__proto__.constructor.__proto__ === Computer.__proto__); // true\nconsole.log(Computer.__proto__.__proto__.constructor.__proto__ === Computer.__proto__); // true\n<br></code></pre></div><h2>真题解答</h2><ul><li><p>说一说你对 <em>JavaScript</em> 中原型与原型链的理解？（美团 <em>2019</em>年）</p></li></ul><blockquote><p>参考答案：</p><ul><li><p>每个对象都有一个 __<em>proto</em>__  属性，该属性指向自己的原型对象</p></li><li><p>每个构造函数都有一个 <em>prototype</em> 属性，该属性指向实例对象的原型对象</p></li><li><p>原型对象里的 <em>constructor</em> 指向构造函数本身</p></li></ul><p>如下图：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-27-063331.png\" alt=\"image-20211027143330933\" contenteditable=\"false\"><br></p><p><br></p><p>每个对象都有自己的原型对象，而原型对象本身，也有自己的原型对象，从而形成了一条原型链条。</p><p><br></p><p>当试图访问一个对象的属性时，它不仅仅在该对象上搜寻，还会搜寻该对象的原型，以及该对象的原型的原型，依次层层向上搜索，直到找到一个名字匹配的属性或到达原型链的末尾。</p></blockquote><ul><li><p>对一个构造函数实例化后，它的原型链指向什么？</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p>指向该构造函数实例化出来对象的原型对象。</p><p><br></p><p>对于构造函数来讲，可以通过 <em>prototype</em> 访问到该对象。</p><p><br></p><p>对于实例对象来讲，可以通过隐式属性 __<em>proto</em>__ 来访问到。</p></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666077036383",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e51992fac4881713db378"),
+    interviewTitle: "谈谈你对 JS 执行上下文栈理解",
+    interviewContent: "<h1>执行栈和执行上下文</h1><h2>经典真题</h2><ul><li><p>谈谈你对 <em>JavaScript</em> 执行上下文栈理解</p></li></ul><h2>执行上下文</h2><p>执行上下文，英文全称为 <em>Execution Context</em>，一句话概括就是“代码（全局代码、函数代码）执行前进行的准备工作”，也称之为“执行上下文环境”。</p><p><br></p><p>运行 <em>JavaScript</em> 代码时，当代码执行进入一个环境时，就会为该环境创建一个执行上下文，它会在你运行代码前做一些准备工作，如确定作用域，创建局部变量对象等。</p><p><br></p><p>具体做了什么我们后面再说，先来看下 <em>JavaScript</em> 执行环境有哪些？</p><p><br></p><p><strong><em>JavaScript</em> 中执行环境</strong></p><ol><li><p>全局环境</p></li><li><p>函数环境</p></li><li><p><em>eval</em> 函数环境 （已不推荐使用）</p></li></ol><p>那么与之对应的执行上下文类型同样有 <em>3</em> 种：</p><ol><li><p>全局执行上下文</p></li><li><p>函数执行上下文</p></li><li><p><em>eval</em> 函数执行上下文</p></li></ol><p><em>JavaScript</em> 运行时首先会进入全局环境，对应会生成全局上下文。程序代码中基本都会存在函数，那么<strong>调用函数</strong>，就会进入函数执行环境，对应就会生成该函数的执行上下文。</p><p><br></p><p>由于代码中会声明多个函数，对应的函数执行上下文也会存在多个。在 <em>JavaScript</em> 中，通过栈的存取方式来管理执行上下文，我们可称其为执行栈，或函数调用栈（<em>Call Stack</em>）。</p><h2>栈数据结构</h2><p>先来简单复习一下栈这种数据结构。</p><p><br></p><p>要简单理解栈的存取方式，我们可以通过类比乒乓球盒子来分析。如下图：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-02-060310.png\" alt=\"img\" contenteditable=\"false\"><br></p><p><br></p><p>栈遵循**“先进后出，后进先出”**的规则，或称 <strong><em>LIFO</em></strong> （”<em>Last In First Out</em>“）规则。</p><p><br></p><p>如图所示，我们只能从栈顶取出或放入乒乓球，最先放进盒子的总是最后才能取出。</p><p><br></p><p>栈中**“放入/取出”<strong>，也可称为</strong>“入栈/出栈”**。</p><p><br></p><p>总结栈数据结构的特点：</p><ol><li><p>后进先出，先进后出</p></li><li><p>出口在顶部，且仅有一个</p></li></ol><p><strong>执行栈（函数调用栈）</strong></p><p><br></p><p>理解完栈的存取方式，我们接着分析 <em>JavaScript</em> 中如何通过栈来管理多个执行上下文。</p><p><br></p><p>程序执行进入一个执行环境时，它的执行上下文就会被创建，并被推入执行栈中（入栈）；程序执行完成时，它的执行上下文就会被销毁，并从栈顶被推出（出栈），控制权交由下一个执行上下文。</p><p><br></p><p>因为 <em>JavaScript</em> 在执行代码时最先进入全局环境，所以<strong>处于栈底的永远是全局环境的执行上下文</strong>。而处于<strong>栈顶的是当前正在执行函数的执行上下文</strong>。</p><p><br></p><p>当函数调用完成后，它就会从栈顶被推出，理想的情况下，闭包会阻止该操作，闭包可以参阅《闭包》章节。</p><p><br></p><p>而全局环境只有一个，对应的全局执行上下文也只有一个，只有当页面被关闭之后它才会从执行栈中被推出，否则一直存在于栈底。</p><p><br></p><p>下面我们来看一段具体的代码示例：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function foo () { \n    function bar () {        \n      return 'I am bar';\n    }\n    return bar();\n}\nfoo();</code></pre></div><p>对应图解如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-02-060848.png\" alt=\"image-20211002140848188\" contenteditable=\"false\"><br></p><p><br></p><p><strong>执行上下文的数量限制（堆栈溢出）</strong></p><p><br></p><p>执行上下文可存在多个，虽然没有明确的数量限制，但如果超出栈分配的空间，会造成堆栈溢出。常见于递归调用，没有终止条件造成死循环的场景。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">// 递归调用自身\nfunction foo() {\n    foo();\n}\nfoo();\n// 报错： Uncaught RangeError: Maximum call stack size exceeded</code></pre></div><h2>执行上下文生命周期</h2><p>前面我们有说到，运行 <em>JavaScript</em> 代码时，当代码执行进入一个环境时，就会为该环境创建一个执行上下文，它会在你运行代码前做一些准备工作。接下来我们就来看一下具体会做哪些准备工作。</p><p><br></p><p>具体要做的事，和执行上下文的生命周期有关。</p><p><br></p><p>执行上下文的生命周期有两个阶段：</p><ol><li><p>创建阶段（<strong>进入</strong>执行上下文）：函数被调用时，进入函数环境，为其创建一个执行上下文，此时进入创建阶段。</p></li><li><p>执行阶段（代码<strong>执行</strong>）：执行函数中代码时，此时执行上下文进入执行阶段。</p></li></ol><p><strong>创建阶段</strong></p><p><br></p><p>创建阶段要做的事情主要如下：</p><ol><li><p>创建变量对象（<em>VO：variable object</em>）</p><ul><li><p>确定函数的形参（<strong>并赋值</strong>）</p></li><li><p>函数环境会初始化创建 <em>Arguments</em>对象（<strong>并赋值</strong>）</p></li><li><p>确定普通字面量形式的函数声明（<strong>并赋值</strong>）</p></li><li><p>变量声明，函数表达式声明（<strong>未赋值</strong>）</p></li></ul></li><li><p>确定 <em>this</em> 指向（<strong><em>this</em> 由调用者确定</strong>）</p></li><li><p>确定作用域（<strong>词法环境决定，哪里声明定义，就在哪里确定</strong>）</p></li></ol><p>这里有必要说一下变量对象。</p><p><br></p><p>当处于执行上下文的建立阶段时，我们可以将整个上下文环境看作是一个对象。该对象拥有 <em>3</em> 个属性，如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">executionContextObj = {\n    variableObject : {}, // 变量对象，里面包含 Arguments 对象，形式参数，函数和局部变量\n    scopeChain : {},// 作用域链，包含内部上下文所有变量对象的列表\n    this : {}// 上下文中 this 的指向对象\n}</code></pre></div><p>可以看到，这里执行上下文抽象成为了一个对象，拥有 <em>3</em> 个属性，分别是<strong>变量对象</strong>，<strong>作用域链</strong>以及 <strong><em>this</em> 指向</strong>，这里我们重点来看一下变量对象里面所拥有的东西。</p><p><br></p><p>在函数的建立阶段，首先会建立 <em>Arguments</em> 对象。然后确定形式参数，检查当前上下文中的函数声明，每找到一个函数声明，就在 <em>variableObject</em> 下面用函数名建立一个属性，属性值就指向该函数在内存中的地址的一个引用。</p><p><br></p><p>如果上述函数名已经存在于 <em>variableObject</em>（简称 <em>VO</em>） 下面，那么对应的属性值会被新的引用给覆盖。</p><p><br></p><p>最后，是确定当前上下文中的局部变量，如果遇到和函数名同名的变量，则会忽略该变量。</p><p><br></p><p><strong>执行阶段</strong></p><ol><li><p>变量对象赋值</p><ul><li><p>变量赋值</p></li><li><p>函数表达式赋值</p></li></ul></li><li><p>调用函数</p></li><li><p>顺序执行其它代码</p></li></ol><p>两个阶段要做的事情介绍完毕，接下来我们来通过代码来演示一下这两个阶段做的每一件事以及变量对象是如何变化的。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const foo = function(i){\n    var a = \"Hello\";\n    var b = function privateB(){};\n    function c(){}\n}\nfoo(10);</code></pre></div><p>首先在建立阶段的变量对象如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">fooExecutionContext = {\n    variavleObject : {\n        arguments : {0 : 10,length : 1}, // 确定 Arguments 对象\n        i : 10, // 确定形式参数\n        c : pointer to function c(), // 确定函数引用\n        a : undefined, // 局部变量 初始值为 undefined\n        b : undefined  // 局部变量 初始值为 undefined\n    },\n    scopeChain : {},\n    this : {}\n}</code></pre></div><p>由此可见，在建立阶段，除了 <em>Arguments</em>，函数的声明，以及形式参数被赋予了具体的属性值外，其它的变量属性默认的都是 <em>undefined</em>。并且普通形式声明的函数的提升是在变量的上面的。</p><p><br></p><p>一旦上述建立阶段结束，引擎就会进入代码执行阶段，这个阶段完成后，上述执行上下文对象如下，变量会被赋上具体的值。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">fooExecutionContext = {\n    variavleObject : {\n        arguments : {0 : 10,length : 1},\n        i : 10,\n        c : pointer to function c(),\n        a : \"Hello\",// a 变量被赋值为 Hello\n        b : pointer to function privateB() // b 变量被赋值为 privateB() 函数\n    },\n    scopeChain : {},\n    this : {}\n}</code></pre></div><p>我们看到，只有在代码执行阶段，局部变量才会被赋予具体的值。在建立阶段局部变量的值都是 <em>undefined</em>。</p><p><br></p><p>这其实也就解释了变量提升的原理。</p><p><br></p><p>接下来我们再通过一段代码来加深对函数这两个阶段的过程的理解，代码如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">(function () {\n    console.log(typeof foo);\n    console.log(typeof bar);\n    var foo = \"Hello\";\n    var bar = function () {\n        return \"World\";\n    }\n\n    function foo() {\n        return \"good\";\n    }\n    console.log(foo, typeof foo);\n})()</code></pre></div><p>这里，我们定义了一个 <em>IIFE</em>，该函数在建立阶段的变量对象如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">fooExecutionContext = {\n    variavleObject : {\n        arguments : {length : 0},\n        foo : pointer to function foo(),\n        bar : undefined\n    },\n    scopeChain : {},\n    this : {}\n}</code></pre></div><p>首先确定 <em>Arguments</em> 对象，接下来是形式参数，由于本例中不存在形式参数，所以接下来开始确定函数的引用，找到 <em>foo</em> 函数后，创建 <em>foo</em> 标识符来指向这个 <em>foo</em> 函数，之后同名的 <em>foo</em> 变量不会再被创建，会直接被忽略。</p><p><br></p><p>然后创建 <em>bar</em> 变量，不过初始值为 <em>undefined</em>。</p><p><br></p><p>建立阶段完成之后，接下来进入代码执行阶段，开始一句一句的执行代码，结果如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">(function () {\n    console.log(typeof foo); // function\n    console.log(typeof bar); // undefined\n    var foo = \"Hello\"; // foo 被重新赋值 变成了一个字符串\n    var bar = function () {\n        return \"World\";\n    }\n\n    function foo() {\n        return \"good\";\n    }\n    console.log(foo, typeof foo); //Hello string\n})()</code></pre></div><h2>真题解答</h2><ul><li><p>谈谈你对 <em>JavaScript</em> 执行上下文栈理解</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p><strong>什么是执行上下文？</strong></p><p><br></p><p>简而言之，执行上下文是评估和执行 <em>JavaScript</em> 代码的环境的抽象概念。每当 <em>Javascript</em> 代码在运行的时候，它都是在执行上下文中运行。</p><p><br></p><p><strong>执行上下文的类型</strong></p><p><br></p><p><em>JavaScript</em> 中有三种执行上下文类型。</p><ul><li><p>**全局执行上下文：**这是默认或者说基础的上下文，任何不在函数内部的代码都在全局上下文中。它会执行两件事，创建一个全局的 <em>window</em> 对象（浏览器的情况下），并且设置 <em>this</em> 的值等于这个全局对象。一个程序中只会有一个全局执行上下文。</p></li><li><p>**函数执行上下文：**每当一个函数被调用时, 都会为该函数创建一个新的上下文。每个函数都有它自己的执行上下文，不过是在函数被调用时创建的。函数上下文可以有任意多个。每当一个新的执行上下文被创建，它会按定义的顺序（将在后文讨论）执行一系列步骤。</p></li><li><p>**<em>Eval</em> 函数执行上下文：**执行在 <em>eval</em> 函数内部的代码也会有它属于自己的执行上下文。</p></li></ul><p><strong>调用栈</strong></p><p><br></p><p>调用栈是解析器（如浏览器中的的 <em>JavaScript</em> 解析器）的一种机制，可以在脚本调用多个函数时，跟踪每个函数在完成执行时应该返回控制的点。（如什么函数正在执行，什么函数被这个函数调用，下一个调用的函数是谁）</p><ul><li><p>当脚本要调用一个函数时，解析器把该函数添加到栈中并且执行这个函数。</p></li><li><p>任何被这个函数调用的函数会进一步添加到调用栈中，并且运行到它们被上个程序调用的位置。</p></li><li><p>当函数运行结束后，解释器将它从堆栈中取出，并在主代码列表中继续执行代码。</p></li><li><p>如果栈占用的空间比分配给它的空间还大，那么则会导致“栈溢出”错误。</p></li></ul></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666077081802",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e51c72fac4881713db37c"),
+    interviewTitle: "谈谈你对作用域和作用域链的理解",
+    interviewContent: "<h1>作用域和作用域链</h1><h2>经典真题</h2><ul><li><p>谈谈你对作用域和作用域链的理解？</p></li></ul><h2>作用域（<em>Scope</em>）</h2><h3>什么是作用域</h3><p>作用域是在运行时代码中的某些特定部分中变量，函数和对象的可访问性。</p><p><br></p><p>换句话说，作用域决定了代码区块中变量和其他资源的可见性。</p><p><br></p><p>可能这两句话并不好理解，我们先来看个例子：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function outFun2() {\n    var inVariable = \"内层变量2\";\n}\noutFun2();\nconsole.log(inVariable); // Uncaught ReferenceError: inVariable is not defined</code></pre></div><p>从上面的例子可以体会到作用域的概念，变量 <em>inVariable</em> 在全局作用域没有声明，所以在全局作用域下取值会报错。</p><p><br></p><p>我们可以这样理解：<strong>作用域就是一个独立的地盘，让变量不会外泄、暴露出去</strong>。也就是说<strong>作用域最大的用处就是隔离变量，不同作用域下同名变量不会有冲突。</strong></p><p><br></p><p><strong><em>ES6</em> 之前 <em>JavaScript</em> 没有块级作用域，只有全局作用域和函数作用域</strong>。</p><p><br></p><p><em>ES6</em> 的到来，为我们提供了“块级作用域”，可通过新增命令 <em>let</em> 和 <em>const</em> 来体现。</p><h3>全局作用域和函数作用域</h3><p><strong>（1）全局作用域</strong></p><p><br></p><p>在代码中任何地方都能访问到的对象拥有全局作用域，一般来说以下几种情形拥有全局作用域：</p><ul><li><p>最外层函数和在最外层函数外面定义的变量拥有全局作用域</p></li></ul><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var outVariable = \"我是最外层变量\"; //最外层变量\nfunction outFun() { //最外层函数\n    var inVariable = \"内层变量\";\n    function innerFun() { //内层函数\n        console.log(inVariable);\n    }\n    innerFun();\n}\nconsole.log(outVariable); // 我是最外层变量\noutFun(); // 内层变量\nconsole.log(inVariable); // inVariable is not defined\ninnerFun(); // innerFun is not defined</code></pre></div><ul><li><p>所有未定义直接赋值的变量自动声明为拥有全局作用域</p></li></ul><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function outFun2() {\n    variable = \"未定义直接赋值的变量\";\n    var inVariable2 = \"内层变量2\";\n}\noutFun2();//要先执行这个函数，否则根本不知道里面是啥\nconsole.log(variable); //未定义直接赋值的变量\nconsole.log(inVariable2); //inVariable2 is not defined</code></pre></div><ul><li><p>所有 <em>window</em> 对象的属性拥有全局作用域</p></li></ul><p>一般情况下，<em>window</em> 对象的内置属性都拥有全局作用域，例如 <em>window.name、window.location、window.top</em> 等等。</p><p><br></p><p>全局作用域有个弊端：如果我们写了很多行 <em>JS</em> 代码，变量定义都没有用函数包括，那么它们就全部都在全局作用域中。这样就会污染全局命名空间， 容易引起命名冲突。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">// 张三写的代码中\nvar data = {a: 100}\n\n// 李四写的代码中\nvar data = {x: true}</code></pre></div><p>这就是为何  <em>jQuery、Zepto</em> 等库的源码，所有的代码都会放在 <em>(function(){....})( )</em> 中。</p><p><br></p><p>因为放在里面的所有变量，都不会被外泄和暴露，不会污染到外面，不会对其他的库或者 <em>JS</em> 脚本造成影响。这是函数作用域的一个体现。</p><p><br></p><p><strong>（2）函数作用域</strong></p><p><br></p><p>函数作用域，是指声明在函数内部的变量，和全局作用域相反，局部作用域一般只在固定的代码片段内可访问到，最常见的例如函数内部。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function doSomething(){\n    var stuName=\"zhangsan\";\n    function innerSay(){\n        console.log(stuName);\n    }\n    innerSay();\n}\nconsole.log(stuName); // 脚本错误\ninnerSay(); // 脚本错误</code></pre></div><p><strong>作用域是分层的，内层作用域可以访问外层作用域的变量，反之则不行</strong>。</p><p><br></p><p>我们看个例子，用泡泡来比喻作用域可能好理解一点：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-01-151740.png\" alt=\"image-20211001231740498\" contenteditable=\"false\"><br></p><p><br></p><p>最后输出的结果为 <em>2、4、12</em></p><ul><li><p>泡泡 <em>1</em> 是全局作用域，有标识符 <em>foo</em>；</p></li><li><p>泡泡 <em>2</em> 是作用域 <em>foo</em>，有标识符 <em>a、bar、b</em>；</p></li><li><p>泡泡 <em>3</em> 是作用域 <em>bar</em>，仅有标识符 <em>c</em>。</p></li></ul><p>值得注意的是：<strong>块语句（大括号“｛  ｝”中间的语句），如  <em>if</em>  和 <em>switch</em> 条件语句或  <em>for</em>  和  <em>while</em>  循环语句，不像函数，它们不会创建一个新的作用域</strong>。在块语句中定义的变量将保留在它们已经存在的作用域中。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">if (true) {\n    // 'if' 条件语句块不会创建一个新的作用域\n    var name = 'Hammad'; // name 依然在全局作用域中\n}\nconsole.log(name); // logs 'Hammad'</code></pre></div><p><em>JS</em> 的初学者经常需要花点时间才能习惯变量提升，而如果不理解这种特有行为，就可能导致 <em>bug</em> 。</p><p><br></p><p>正因为如此， <em>ES6</em> 引入了块级作用域，让变量的生命周期更加可控。</p><h3>块级作用域</h3><p>块级作用域可通过新增命令 <em>let</em> 和 <em>const</em> 声明，所声明的变量在指定块的作用域外无法被访问。</p><p><br></p><p>块级作用域在如下情况被创建：</p><ol><li><p>在一个函数内部</p></li><li><p>在一个代码块（由一对花括号包裹）内部</p></li></ol><p><em>let</em> 声明的语法与 <em>var</em> 的语法一致。你基本上可以用 <em>let</em> 来代替 <em>var</em> 进行变量声明，但会将变量的作用域限制在当前代码块中。块级作用域有以下几个特点：</p><ul><li><p>声明变量不会提升到代码块顶部</p></li></ul><p><em>let、const</em> 声明并不会被提升到当前代码块的顶部，因此你需要手动将 <em>let、const</em> 声明放置到顶部，以便让变量在整个代码块内部可用。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function getValue(condition) {\n    if (condition) {\n        let value = \"blue\";\n        return value;\n    } else {\n        // value 在此处不可用\n        return null;\n    }\n    // value 在此处不可用\n}</code></pre></div><ul><li><p>禁止重复声明</p></li></ul><p>如果一个标识符已经在代码块内部被定义，那么在此代码块内使用同一个标识符进行 <em>let</em> 声明就会导致抛出错误。例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var count = 30;\nlet count = 40; // Uncaught SyntaxError: Identifier 'count' has already been declared</code></pre></div><p>在本例中， <em>count</em> 变量被声明了两次：一次使用 <em>var</em> ，另一次使用 <em>let</em>。</p><p><br></p><p>因为 <em>let</em> 不能在同一作用域内重复声明一个已有标识符，此处的 <em>let</em> 声明就会抛出错误。但如果在嵌套的作用域内使用 <em>let</em> 声明一个同名的新变量，则不会抛出错误。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var count = 30;\n// 不会抛出错误\nif (condition) {\n    let count = 40;\n    // 其他代码\n}</code></pre></div><ul><li><p>循环中的绑定块作用域的妙用</p></li></ul><p>开发者可能最希望实现 <em>for</em> 循环的块级作用域了，因为可以把声明的计数器变量限制在循环内。</p><p><br></p><p>例如，以下代码在 <em>JS</em> 经常见到：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;button&gt;测试1&lt;/button&gt;\n&lt;button&gt;测试2&lt;/button&gt;\n&lt;button&gt;测试3&lt;/button&gt;</code></pre></div><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var btns = document.getElementsByTagName('button')\nfor (var i = 0; i &lt; btns.length; i++) {\n  btns[i].onclick = function () {\n    console.log('第' + (i + 1) + '个')\n  }\n}</code></pre></div><p>我们要实现这样的一个需求: 点击某个按钮, 提示\"点击的是第 <em>n</em> 个按钮\"。</p><p><br></p><p>此处我们先不考虑事件代理，万万没想到，点击任意一个按钮，后台都是弹出“第四个”。</p><p><br></p><p>这是因为 <em>i</em> 是全局变量，执行到点击事件时，此时 <em>i</em> 的值为 <em>3</em>。</p><p><br></p><p>那该如何修改，最简单的是用 <em>let</em> 声明 <em>i</em></p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">for (let i = 0; i &lt; btns.length; i++) {\n  btns[i].onclick = function () {\n    console.log('第' + (i + 1) + '个')\n  }\n}</code></pre></div><h2>作用域链</h2><h3>什么是自由变量</h3><p>首先认识一下什么叫做<strong>自由变量</strong> 。</p><p><br></p><p>如下代码中，<em>console.log(a)</em> 要得到 <em>a</em> 变量，但是在当前的作用域中没有定义 <em>a</em>（可对比一下 <em>b</em>）。当前作用域没有定义的变量，这成为自由变量 。</p><p><br></p><p>自由变量的值如何得到 ？</p><p><br></p><p>需要向父级作用域寻找（注意：这种说法并不严谨，下文会重点解释）。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var a = 100\nfunction fn() {\n    var b = 200\n    console.log(a) // 这里的 a 在这里就是一个自由变量\n    console.log(b)\n}\nfn()</code></pre></div><h3>什么是作用域链</h3><p>如果父级也没呢？</p><p><br></p><p>再一层一层向上寻找，直到找到全局作用域还是没找到，就宣布放弃。这种一层一层的关系，就是作用域链 。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var a = 100\nfunction f1() {\n    var b = 200\n    function f2() {\n        var c = 300\n        console.log(a) // 100 自由变量，顺作用域链向父作用域找\n        console.log(b) // 200 自由变量，顺作用域链向父作用域找\n        console.log(c) // 300 本作用域的变量\n    }\n    f2()\n}\nf1()</code></pre></div><h3>关于自由变量的取值</h3><p>关于自由变量的值，上文提到要到父作用域中取，其实有时候这种解释会产生歧义。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var x = 10\nfunction fn() {\n    console.log(x)\n}\nfunction show(f) {\n    var x = 20;\n    (function () {\n        f() // 10，而不是 20\n    })()\n}\nshow(fn)</code></pre></div><p>在 <em>fn</em> 函数中，取自由变量 <em>x</em> 的值时，要到哪个作用域中取 ？</p><p><br></p><p>要到创建 <em>fn</em> 函数的那个作用域中取，<strong>无论 <em>fn</em> 函数将在哪里调用</strong>。</p><p><br></p><p>所以，不要在用以上说法了。相比而言，用这句话描述会更加贴切：<strong>要到创建这个函数的那个域”。作用域中取值，这里强调的是“创建”，而不是“调用”</strong>，切记切记，其实这就是所谓的\"静态作用域\"。</p><p><br></p><p>再来看一个例子：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const food = \"rice\";\nconst eat = function () {\n    console.log(`eat ${food}`);\n};\n(function () {\n    const food = \"noodle\";\n    eat(); // eat rice\n})();</code></pre></div><p>在本示例中，最终打印的结果为 <em>eat rice</em>。因为对于 <em>eat( )</em> 函数来说，创建该函数时它的父级上下文为全局上下文，所以 <em>food</em> 的值为 <em>rice</em>。</p><p><br></p><p>如果我们将代码稍作修改，改成如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const food = \"rice\";\n(function () {\n    const food = \"noodle\";\n    const eat = function () {\n        console.log(`eat ${food}`);\n    };\n    eat(); // eat noodle\n})();</code></pre></div><p>这个时候，打印出来的值就为 <em>eat noodle</em>。因为对于 <em>eat( )</em> 函数来讲，创建它的时候父级上下文为 <em>IIFE</em>，所以 <em>food</em> 的值为 <em>noodle</em>。</p><h2>作用域与执行上下文</h2><p>许多开发人员经常混淆作用域和执行上下文的概念，误认为它们是相同的概念，但事实并非如此。</p><p><br></p><p>我们知道 <em>JavaScript</em> 属于解释型语言，<em>JavaScript</em> 的执行分为：解释和执行两个阶段，这两个阶段所做的事并不一样。</p><p><br></p><p><strong>解释阶段</strong></p><ul><li><p>词法分析</p></li><li><p>语法分析</p></li><li><p>作用域规则确定</p></li></ul><p><strong>执行阶段</strong></p><ul><li><p>创建执行上下文</p></li><li><p>执行函数代码</p></li><li><p>垃圾回收</p></li></ul><p><em>JavaScript</em> 解释阶段便会确定作用域规则，因此作用域在函数定义时就已经确定了，而不是在函数调用时确定，但是执行上下文是函数执行之前创建的。</p><p><br></p><p>执行上下文最明显的就是 <em>this</em> 的指向是执行时确定的。而作用域访问的变量是编写代码的结构确定的。</p><p><br></p><p>作用域和执行上下文之间最大的区别是：</p><p><br></p><p><strong>执行上下文在运行时确定，随时可能改变，作用域在定义时就确定，并且不会改变</strong>。</p><h2>真题解答</h2><ul><li><p>谈谈你对作用域和作用域链的理解？</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p><strong>什么是作业域 ？</strong></p><p><br></p><p><em>ES5</em> 中只存在两种作用域：全局作用域和函数作用域。</p><p><br></p><p>在 <em>JavaScript</em> 中，我们将作用域定义为一套规则，这套规则用来管理引擎如何在当前作用域以及嵌套子作用域中根据标识符名称进行变量（变量名或者函数名）查找。<em>ES6</em> 新增了块级作用域。</p><p><br></p><p><strong>什么是作用域链 ？</strong></p><p><br></p><p>当访问一个变量时，编译器在执行这段代码时，会首先从当前的作用域中查找是否有这个标识符，如果没有找到，就会去父作用域查找，如果父作用域还没找到继续向上查找，直到全局作用域为止。</p><p><br></p><p>而作用域链，就是有当前作用域与上层作用域的一系列变量对象组成，它保证了当前执行的作用域对符合访问权限的变量和函数的有序访问。</p><p><br></p><p>作用域链有一个非常重要的特性，<strong>那就是作用域中的值是在函数创建的时候，就已经被存储了，是静态的</strong>。</p><p><br></p><p>所谓静态，就是说作用域中的值一旦被确定了，永远不会变。**函数可以永远不被调用，但是作用域中的值在函数创建的时候就已经被写入了，**并且存储在函数作用域链对象里面。</p></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666077127179",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e51fb2fac4881713db380"),
+    interviewTitle: "JS 中 this 的指向有哪些？",
+    interviewContent: "<h1><em>this</em> 指向</h1><h2>经典真题</h2><ul><li><p><em>this</em> 的指向哪几种 ？</p></li></ul><h2><em>this</em> 指向总结</h2><p><em>this</em> 关键字是一个非常重要的语法点。毫不夸张地说，不理解它的含义，大部分开发任务都无法完成。</p><p><br></p><p><em>this</em> 可以用在构造函数之中，表示实例对象。除此之外，<em>this</em> 还可以用在别的场合。<strong>但不管是什么场合，<em>this</em> 都有一个共同点：它总是返回一个对象</strong>。</p><p><br></p><p>关于 <em>this</em> 的指向，有一种广为流传的说法就是“谁调用它，<em>this</em> 就指向谁”。</p><p><br></p><p>这样的说法没有太大的问题，但是并不是太全面。总结起来，<em>this</em> 的指向规律有如下几条：</p><ul><li><p>在函数体中，非显式或隐式地简单调用函数时，在严格模式下，函数内的 <em>this</em> 会被绑定到 <em>undefined</em> 上，在非严格模式下则会被绑定到全局对象 <em>window/global</em> 上。</p></li><li><p>一般使用 <em>new</em> 方法调用构造函数时，构造函数内的 <em>this</em> 会被绑定到新创建的对象上。</p></li><li><p>一般通过 <em>call/apply/bind</em> 方法显式调用函数时，函数体内的 <em>this</em> 会被绑定到指定参数的对象上。</p></li><li><p>一般通过上下文对象调用函数时，函数体内的 <em>this</em> 会被绑定到该对象上。</p></li><li><p>在箭头函数中，<em>this</em> 的指向是由外层（函数或全局）作用域来决定的。</p></li></ul><p>当然，真实环境多种多样，下面我们就来根据实战例题逐一梳理。</p><h3>全局环境中的 <em>this</em></h3><p>例题 <em>1</em>：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function f1() {\n    console.log(this);\n}\n\nfunction f2() {\n    'use strict'\n    console.log(this);\n}\n\nf1(); // window or global\nf2(); // undefined</code></pre></div><p>这种情况相对简单、直接，函数在浏览器全局环境下被简单调用，在非严格模式下 <em>this</em> 指向 <em>window</em>，在通过 <em>use strict</em> 指明严格模式的情况下指向 <em>undefined</em>。</p><p><br></p><p>虽然上面的题目比较基础，但是需要注意上面题目的变种，例如</p><p><br></p><p>例题 <em>2</em>：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const foo = {\n    bar : 10,\n    fn : function(){\n        console.log(this); // window or global\n        console.log(this.bar); // undefined\n    }\n}\nvar fn1 = foo.fn;\nfn1();</code></pre></div><p>这里的 <em>this</em> 仍然指向 <em>window</em>。虽然 <em>fn</em> 函数在 <em>foo</em> 对象中作为该对象的一个方法，但是在赋值给 <em>fn1</em> 之后，<em>fn1</em> 仍然是在 <em>window</em> 的全局环境下执行的。因此上面的代码仍然会输出 <em>window</em> 和 <em>undefined</em>。</p><p><br></p><p>还是上面这道题目，如果改成如下的形式</p><p><br></p><p>例题 <em>3</em>：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const foo = {\n    bar : 10,\n    fn : function(){\n        console.log(this); // { bar: 10, fn: [Function: fn] }\n        console.log(this.bar); // 10\n    }\n}\nfoo.fn();</code></pre></div><p>这时，<em>this</em> 指向的是最后调用它的对象，在 <em>foo.fn( )</em> 语句中，this 指向的是 <em>foo</em> 对象。</p><h3>上下文对象调用中的 <em>this</em></h3><p>例题 <em>4</em>：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const student = {\n    name: 'zhangsan',\n    fn: function () {\n        return this;\n    }\n}\nconsole.log(student.fn() === student); // true</code></pre></div><p>在上面的代码中，<em>this</em> 指向当前的对象 <em>student</em>，所以最终会返回 <em>true</em>。</p><p><br></p><p>当存在更复杂的调用关系时，如以下代码中的嵌套关系，<em>this</em> 将指向最后调用它的对象，例如</p><p><br></p><p>例题 <em>5</em>：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const student = {\n    name: 'zhangsan',\n    son: {\n        name: 'zhangxiaosan',\n        fn: function () {\n            return this.name\n        }\n    }\n}\nconsole.log(student.son.fn()); // zhangxiaosan</code></pre></div><p>在上面的代码中，<em>this</em> 会指向最后调用它的对象，因此输出的是 <em>zhangxiaosan</em>。</p><p><br></p><p>至此，<em>this</em> 的上下文对象调用已经介绍得比较清楚了。我们再来看一道比较高阶的题目</p><p><br></p><p>例题 <em>6</em>：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const o1 = {\n    text: 'o1',\n    fn: function () {\n        return this.text;\n    }\n}\n\nconst o2 = {\n    text: 'o2',\n    fn: function () {\n        return o1.fn();\n    }\n}\n\nconst o3 = {\n    text: 'o3',\n    fn: function () {\n        var fn = o1.fn;\n        return fn();\n    }\n}\n\nconsole.log(o1.fn()); // o1\nconsole.log(o2.fn()); // o1\nconsole.log(o3.fn()); // undefined</code></pre></div><p>答案是 <em>o1、o1、undefined</em>。</p><p><br></p><p>这里主要讲一下为什么第三个是 <em>undefined</em>。这里将 <em>o1.fn</em> 赋值给了 <em>fn</em>，所以 <em>fn</em> 等价于 <em>function () { return this.text; }</em>，然后该函数在调用的时候，是直接 <em>fn( )</em> 的形式调用的，并不是以对象的形式，相当于还是全局调用，指向 <em>window</em>，所以打印出 <em>undefined</em>。</p><h3><em>this</em> 指向绑定事件的元素</h3><p><em>DOM</em> 元素绑定事件时，事件处理函数里面的 <em>this</em> 指向绑定了事件的元素。</p><p><br></p><p>这个地方一定要注意它和 <em>target</em> 的区别，<em>target</em> 是指向触发事件的元素。</p><p><br></p><p>示例如下：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;ul id=\"color-list\"&gt;\n  &lt;li&gt;red&lt;/li&gt;\n  &lt;li&gt;yellow&lt;/li&gt;\n  &lt;li&gt;blue&lt;/li&gt;\n  &lt;li&gt;green&lt;/li&gt;\n  &lt;li&gt;black&lt;/li&gt;\n  &lt;li&gt;white&lt;/li&gt;\n&lt;/ul&gt;</code></pre></div><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">// this 是绑定事件的元素\n// target 是触发事件的元素 和 srcElememnt 等价\nlet colorList = document.getElementById(\"color-list\");\ncolorList.addEventListener(\"click\", function (event) {\n  console.log('this:', this);\n  console.log('target:', event.target);\n  console.log('srcElement:', event.srcElement);\n})</code></pre></div><p>当我点击如下位置时打印出来的信息如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-28-033304.png\" alt=\"image-20210928113303839\" contenteditable=\"false\"><br></p><p><br></p><p>有些时候我们会遇到一些困扰，比如在 <em>div</em> 节点的事件函数内部，有一个局部的 <em>callback</em> 方法，该方法被作为普通函数调用时，<em>callback</em> 内部的 <em>this</em> 是指向全局对象 <em>window</em> 的</p><p><br></p><p>例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div id=\"div1\"&gt;我是一个div&lt;/div&gt;</code></pre></div><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">window.id = 'window';\ndocument.getElementById('div1').onclick = function(){\n  console.log(this.id); // div1\n  const callback = function(){\n    console.log(this.id); // 因为是普通函数调用，所以 this 指向 window\n  }\n  callback();\n}</code></pre></div><p>此时有一种简单的解决方案，可以用一个变量保存 <em>div</em> 节点的引用，如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">window.id = 'window';\ndocument.getElementById('div1').onclick = function(){\n  console.log(this.id); // div1\n  const that = this; // 保存当前 this 的指向\n  const callback = function(){\n    console.log(that.id); // div1\n  }\n  callback();\n}</code></pre></div><h3>改变 <em>this</em> 指向</h3><h4>1. <em>call、apply、bind</em> 方法修改 <em>this</em> 指向</h4><p>由于 <em>JavaScript</em>  中 <em>this</em> 的指向受函数运行环境的影响，指向经常改变，使得开发变得困难和模糊，所以在封装 <em>sdk</em> 或者写一些复杂函数的时候经常会用到 <em>this</em> 指向绑定，以避免出现不必要的问题。</p><p><br></p><p><em>call、apply、bind</em> 基本都能实现这一功能，起到确定 <em>this</em> 指向的作用</p><p><br></p><p><strong><em>Function.prototype.call( )</em></strong></p><p><br></p><p><em>call</em> 方法可以指定 <em>this</em> 的指向（即函数执行时所在的的作用域），然后再指定的作用域中，执行函数。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var obj = {};\nvar f = function(){\n\treturn this;\n};\nconsole.log(f() === window);  // this 指向 window\nconsole.log(f.call(obj) === obj) // 改变this 指向 obj</code></pre></div><p>上面代码中，全局环境运行函数 <em>f</em> 时，<em>this</em> 指向全局环境（浏览器为 <em>window</em> 对象）；</p><p><br></p><p><em>call</em> 方法可以改变 <em>this</em> 的指向，指定 <em>this</em> 指向对象 <em>obj</em>，然后在对象 <em>obj</em> 的作用域中运行函数 <em>f</em>。</p><p><br></p><p><em>call</em> 方法的参数，应该是对象 <em>obj</em>，如果参数为空或 <em>null、undefind</em>，则默认传参全局对象。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var n = 123;\nvar obj = { n: 456 };\n\nfunction a() {\n  console.log(this.n);\n}\n\na.call() // 123\na.call(null) // 123\na.call(undefined) // 123\na.call(window) // 123\na.call(obj) // 456</code></pre></div><p>上面代码中，<em>a</em> 函数中的 <em>this</em> 关键字，如果指向全局对象，返回结果为 <em>123</em>。</p><p><br></p><p>如果使用 <em>call</em> 方法将 <em>this</em> 关键字指向 <em>obj</em> 对象，返回结果为 <em>456</em>。可以看到，如果 <em>call</em> 方法没有参数，或者参数为 <em>null</em> 或 <em>undefined</em>，则等同于指向全局对象。</p><p><br></p><p>如果 <em>call</em> 传参不是以上类型，则转化成对应的包装对象，然后传入方法。</p><p><br></p><p>例如，<em>5</em> 转成 <em>Number</em> 实例，绑定 <em>f</em> 内部 <em>this</em></p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var f = function () {\n  return this;\n};\n\nf.call(5); // Number {[[PrimitiveValue]]: 5}</code></pre></div><p><em>call</em> 可以接受多个参数，第一个参数是 <em>this</em> 指向的对象，之后的是函数回调所需的参数。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function add(a, b) {\n  return a + b;\n}\n\nadd.call(this, 1, 2) // 3</code></pre></div><p><em>call</em> 方法的一个应用是调用对象的原生方法。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var obj = {};\nobj.hasOwnProperty('toString') // false\n\n// 覆盖掉继承的 hasOwnProperty 方法\nobj.hasOwnProperty = function () {\n  return true;\n};\nobj.hasOwnProperty('toString') // true\n\nObject.prototype.hasOwnProperty.call(obj, 'toString') // false</code></pre></div><p>上面代码中 <em>hasOwnProperty</em> 是 <em>obj</em> 继承来的方法，用来判断对象是否包含自身特点（非继承）属性，但是 <em>hasOwnProperty</em> 并不是保留字，如果被对象覆盖，会造成结果错误。</p><p><br></p><p><em>call</em> 方法可以解决这个问题，它将 <em>hasOwnProperty</em> 方法的原始定义放到 <em>obj</em> 对象上执行，这样无论 <em>obj</em> 上有没有同名方法，都不会影响结果。</p><p><br></p><p><strong><em>Function.prototype.apply( )</em></strong></p><p><br></p><p><em>apply</em> 和 <em>call</em> 作用类似，也是改变 <em>this</em> 指向，然后调用该函数，唯一区别是 <em>apply</em> 接收数组作为函数执行时的参数。语法如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">func.apply(thisValue, [arg1, arg2, ...])</code></pre></div><p><em>apply</em> 方法的第一个参数也是 <em>this</em> 所要指向的那个对象，如果设为 <em>null</em> 或 <em>undefined</em>，则等同于指定全局对象。</p><p><br></p><p>第二个参数则是一个数组，该数组的所有成员依次作为参数，传入原函数。</p><p><br></p><p>原函数的参数，在 <em>call</em> 方法中必须一个个添加，但是在 <em>apply</em> 方法中，必须以数组形式添加。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function f(x, y){\n  console.log(x + y);\n}\n\nf.call(null, 1, 1) // 2\nf.apply(null, [1, 1]) // 2</code></pre></div><p>利用这一特性，可以实现很多小功能。比如，输出数组的最大值：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var a = [24,30,2,33,1]\nMath.max.apply(null,a)  //33</code></pre></div><p>还可以将数组中的空值，转化成 <em>undefined</em>。</p><p><br></p><p>通过 <em>apply</em> 方法，利用 <em>Array</em> 构造函数将数组的空元素变成 <em>undefined</em>。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var a = ['a',,'b'];\nArray.apply(null,a) //['a',undefind,'b']</code></pre></div><p>空元素与 <em>undefined</em> 的差别在于，数组的 <em>forEach</em> 方法会跳过空元素，但是不会跳过 <em>undefined</em>。因此，遍历内部元素的时候，会得到不同的结果。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var a = ['a', , 'b'];\n\nfunction print(i) {\n  console.log(i);\n}\n\na.forEach(print)\n// a\n// b\n\nArray.apply(null, a).forEach(print)\n// a\n// undefined\n// b</code></pre></div><p>配合数组对象的 <em>slice</em> 方法，可以将一个类似数组的对象（比如 <em>arguments</em> 对象）转为真正的数组。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">Array.prototype.slice.apply({0: 1, length: 1}) // [1]\nArray.prototype.slice.apply({0: 1}) // []\nArray.prototype.slice.apply({0: 1, length: 2}) // [1, undefined]\nArray.prototype.slice.apply({length: 1}) // [undefined]</code></pre></div><p>上面代码的 <em>apply</em> 方法的参数都是对象，但是返回结果都是数组，这就起到了将对象转成数组的目的。</p><p><br></p><p>从上面代码可以看到，这个方法起作用的前提是，被处理的对象必须有 <em>length</em> 属性，以及相对应的数字键。</p><p><br></p><p><strong><em>Function.prototype.bind( )</em></strong></p><p><br></p><p><em>bind</em> 用于将函数体内的 <em>this</em> 绑定到某个对象，然后返回一个新函数</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var d = new Date();\nd.getTime() // 1481869925657\n\nvar print = d.getTime;\nprint() // Uncaught TypeError: this is not a Date object.</code></pre></div><p>报错是因为 <em>d.getTime</em> 赋值给 <em>print</em> 后，<em>getTime</em> 内部的 <em>this</em> 指向方式变化，已经不再指向 <em>date</em> 对象实例了。</p><p><br></p><p>解决方法：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var print = d.getTime.bind(d);\nprint() // 1481869925657</code></pre></div><p><em>bind</em> 接收的参数就是所要绑定的对象</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var counter = {\n  count: 0,\n  inc: function () {\n    this.count++;\n  }\n};\n\nvar func = counter.inc.bind(counter);\nfunc();\ncounter.count // 1</code></pre></div><p>绑定到其他对象</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var counter = {\n  count: 0,\n  inc: function () {\n    this.count++;\n  }\n};\n\nvar obj = {\n  count: 100\n};\nvar func = counter.inc.bind(obj);\nfunc();\nobj.count // 101</code></pre></div><p><em>bind</em> 还可以接收更多的参数，将这些参数绑定到原函数的参数</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var add = function (x, y) {\n  return x * this.m + y * this.n;\n}\n\nvar obj = {\n  m: 2,\n  n: 2\n};\n\nvar newAdd = add.bind(obj, 5);\nnewAdd(5) // 20</code></pre></div><p>上面代码中，<em>bind</em> 方法除了绑定 <em>this</em> 对象，还将 <em>add</em> 函数的第一个参数 <em>x</em> 绑定成 <em>5</em>，然后返回一个新函数 <em>newAdd</em>，这个函数只要再接受一个参数 <em>y</em> 就能运行了。</p><p><br></p><p>如果 <em>bind</em> 方法的第一个参数是 <em>null</em> 或 <em>undefined</em>，等于将 <em>this</em> 绑定到全局对象，函数运行时 <em>this</em> 指向顶层对象（浏览器为 <em>window</em>）。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function add(x, y) {\n  return x + y;\n}\n\nvar plus5 = add.bind(null, 5);\nplus5(10) // 15</code></pre></div><p>上面代码中，函数 <em>add</em> 内部并没有 <em>this</em>，使用 <em>bind</em> 方法的主要目的是绑定参数 <em>x</em>，以后每次运行新函数 <em>plus5</em>，就只需要提供另一个参数 <em>y</em> 就够了。</p><p><br></p><p>而且因为 <em>add</em> 内部没有 <em>this</em>，所以 <em>bind</em> 的第一个参数是 <em>null</em>，不过这里如果是其他对象，也没有影响。</p><p><br></p><p><em>bind</em> 方法有一些使用注意点。</p><p><br></p><p>（1）每一次返回一个新函数</p><p><br></p><p><em>bind</em> 方法每运行一次，就返回一个新函数，这会产生一些问题。比如，监听事件的时候，不能写成下面这样。</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>element.addEventListener('click', o.m.bind(o));</code></pre></div><p>上面代码中，<em>click</em> 事件绑定 <em>bind</em> 方法生成的一个匿名函数。这样会导致无法取消绑定，所以，下面的代码是无效的。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">element.removeEventListener('click', o.m.bind(o));</code></pre></div><p>正确的方法是写成下面这样：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var listener = o.m.bind(o);\nelement.addEventListener('click', listener);\n//  ...\nelement.removeEventListener('click', listener);</code></pre></div><p>（2）结合回调函数使用</p><p><br></p><p>回调函数是 <em>JavaScript</em> 最常用的模式之一，但是一个常见的错误是，将包含 <em>this</em> 的方法直接当作回调函数。解决方法就是使用 <em>bind</em> 方法，将 <em>counter.inc</em> 绑定 <em>counter</em>。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var counter = {\n  count: 0,\n  inc: function () {\n    'use strict';\n    this.count++;\n  }\n};\n\nfunction callIt(callback) {\n  callback();\n}\n\ncallIt(counter.inc.bind(counter));\ncounter.count // 1</code></pre></div><p>上面代码中，<em>callIt</em> 方法会调用回调函数。这时如果直接把 <em>counter.inc</em> 传入，调用时 <em>counter.inc</em> 内部的 <em>this</em> 就会指向全局对象。使用 <em>bind</em> 方法将 <em>counter.inc</em> 绑定 <em>counter</em> 以后，就不会有这个问题，<em>this</em> 总是指向 <em>counter</em>。</p><p><br></p><p>还有一种情况比较隐蔽，就是某些数组方法可以接受一个函数当作参数。这些函数内部的 <em>this</em> 指向，很可能也会出错。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var obj = {\n  name: '张三',\n  times: [1, 2, 3],\n  print: function () {\n    this.times.forEach(function (n) {\n      console.log(this.name);\n    });\n  }\n};\n\nobj.print()\n// 没有任何输出</code></pre></div><p>上面代码中，<em>obj.print</em> 内部 <em>this.times</em> 的 <em>this</em> 是指向 <em>obj</em> 的，这个没有问题。</p><p><br></p><p>但是，<em>forEach</em> 方法的回调函数内部的 <em>this.name</em> 却是指向全局对象，导致没有办法取到值。稍微改动一下，就可以看得更清楚。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">obj.print = function () {\n  this.times.forEach(function (n) {\n    console.log(this === window);\n  });\n};\n\nobj.print()\n// true\n// true\n// true</code></pre></div><p>解决这个问题，也是通过 <em>bind</em> 方法绑定 <em>this</em>。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">obj.print = function () {\n  this.times.forEach(function (n) {\n    console.log(this.name);\n  }.bind(this));\n};\n\nobj.print()\n// 张三\n// 张三\n// 张三</code></pre></div><p>（3）结合 <em>call</em> 方法使用</p><p><br></p><p>利用 <em>bind</em> 方法，可以改写一些 <em>JavaScript</em> 原生方法的使用形式，以数组的 <em>slice</em> 方法为例。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">[1, 2, 3].slice(0, 1) // [1]\n// 等同于\nArray.prototype.slice.call([1, 2, 3], 0, 1) // [1]</code></pre></div><p>上面的代码中，数组的 <em>slice</em> 方法从 <em>[1, 2, 3]</em> 里面，按照指定位置和长度切分出另一个数组。这样做的本质是在 <em>[1, 2, 3]</em> 上面调用 <em>Array.prototype.slice</em> 方法，因此可以用 <em>call</em> 方法表达这个过程，得到同样的结果。</p><p><br></p><p><em>call</em> 方法实质上是调用 <em>Function.prototype.call</em> 方法，因此上面的表达式可以用 <em>bind</em> 方法改写。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var slice = Function.prototype.call.bind(Array.prototype.slice);\nslice([1, 2, 3], 0, 1) // [1]</code></pre></div><p>上面代码的含义就是，将 <em>Array.prototype.slice</em> 变成 <em>Function.prototype.call</em> 方法所在的对象，调用时就变成了 <em>Array.prototype.slice.call</em>。类似的写法还可以用于其他数组方法。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var push = Function.prototype.call.bind(Array.prototype.push);\nvar pop = Function.prototype.call.bind(Array.prototype.pop);\n\nvar a = [1 ,2 ,3];\npush(a, 4)\na // [1, 2, 3, 4]\n\npop(a)\na // [1, 2, 3]</code></pre></div><p>如果再进一步，将 <em>Function.prototype.call</em> 方法绑定到 <em>Function.prototype.bind</em> 对象，就意味着 <em>bind</em> 的调用形式也可以被改写。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function f() {\n  console.log(this.v);\n}\n\nvar o = { v: 123 };\nvar bind = Function.prototype.call.bind(Function.prototype.bind);\nbind(f, o)() // 123</code></pre></div><p>上面代码的含义就是，将 <em>Function.prototype.bind</em> 方法绑定在 <em>Function.prototype.call</em> 上面，所以 <em>bind</em> 方法就可以直接使用，不需要在函数实例上使用。</p><h4>2. 箭头函数的 <em>this</em> 指向</h4><p>当我们的 <em>this</em> 是以函数的形式调用时，<em>this</em> 指向的是全局对象。</p><p><br></p><p>不过对于箭头函数来讲，却比较特殊。箭头函数的 <em>this</em> 指向始终为外层的作用域。</p><p><br></p><p>先来看一个普通函数作为对象的一个方法被调用时，<em>this</em> 的指向，如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const obj = {\n    x : 10,\n    test : function(){\n        console.log(this); // 指向 obj 对象\n        console.log(this.x); // 10\n    }\n}\nobj.test();\n// { x: 10, test: [Function: test] }\n// 10</code></pre></div><p>可以看到，普通函数作为对象的一个方法被调用时，<em>this</em> 指向当前对象。</p><p><br></p><p>在上面的例子中，就是 <em>obj</em> 这个对象，<em>this.x</em> 的值为 <em>10</em>。</p><p><br></p><p>接下来是箭头函数以对象的方式被调用的时候的 <em>this</em> 的指向，如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var x = 20;\nconst obj = {\n    x: 10,\n    test: () =&gt; {\n        console.log(this); // {}\n        console.log(this.x); // undefined\n    }\n}\nobj.test();\n// {}\n// undefined</code></pre></div><p>这里的结果和上面不一样，<em>this</em> 打印出来为 { }，而 <em>this.x</em> 的值为 <em>undefined</em>。</p><p><br></p><p>为什么呢？</p><p><br></p><p>实际上刚才我们有讲过，箭头函数的 <em>this</em> 指向与普通函数不一样，它的 <em>this</em> 指向始终是指向的外层作用域。所以这里的 <em>this</em> 实际上是指向的全局对象。</p><p><br></p><p>如果证明呢？</p><p><br></p><p>方法很简单，将这段代码放入浏览器运行，在浏览器中用 <em>var</em> 所声明的变量会成为全局对象 <em>window</em> 的一个属性，如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-28-052059.png\" alt=\"image-20210928132058878\" contenteditable=\"false\"><br></p><p><br></p><p>接下来我们再来看一个例子，来证明箭头函数的 <em>this</em> 指向始终是指向的外层作用域。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var name = \"JavaScript\";\nconst obj = {\n    name: \"PHP\",\n    test: function () {\n        const i = function () {\n            console.log(this.name);\n            // i 是以函数的形式被调用的，所以 this 指向全局\n            // 在浏览器环境中打印出 JavaScript，node 里面为 undeifned\n        }\n        i();\n    }\n}\nobj.test(); // JavaScript</code></pre></div><p>接下来我们将 i 函数修改为箭头函数，如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var name = \"JavaScript\";\nconst obj = {\n    name : \"PHP\",\n    test : function(){\n        const i = ()=&gt;{\n            console.log(this.name);\n            // 由于 i 为一个箭头函数，所以 this 是指向外层的\n            // 所以 this.name 将会打印出 PHP\n        }\n        i();\n    }\n}\nobj.test();// PHP</code></pre></div><p>最后需要说一点的就是，箭头函数不能作为构造函数，如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const Test = (name, age) =&gt; {\n    this.name = name;\n    this.age = age;\n};\nconst test = new Test(\"xiejie\", 18);\n// TypeError: Test is not a constructor</code></pre></div><h2>真题解答</h2><ul><li><p><em>this</em> 的指向哪几种 ？</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p>总结起来，<em>this</em> 的指向规律有如下几条：</p><ul><li><p>在函数体中，非显式或隐式地简单调用函数时，在严格模式下，函数内的 <em>this</em> 会被绑定到 <em>undefined</em> 上，在非严格模式下则会被绑定到全局对象 <em>window/global</em> 上。</p></li><li><p>一般使用 <em>new</em> 方法调用构造函数时，构造函数内的 <em>this</em> 会被绑定到新创建的对象上。</p></li><li><p>一般通过 <em>call/apply/bind</em> 方法显式调用函数时，函数体内的 <em>this</em> 会被绑定到指定参数的对象上。</p></li><li><p>一般通过上下文对象调用函数时，函数体内的 <em>this</em> 会被绑定到该对象上。</p></li><li><p>在箭头函数中，<em>this</em> 的指向是由外层（函数或全局）作用域来决定的。</p></li></ul></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666077179833",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e52302fac4881713db384"),
+    interviewTitle: "是否了解 JS 中的垃圾回收站机制",
+    interviewContent: "<h1>垃圾回收与内存泄漏</h1><h2>经典真题</h2><ul><li><p>请介绍一下 <em>JavaScript</em> 中的垃圾回收站机制</p></li></ul><h2>什么是内存泄露</h2><p>程序的运行需要内存。只要程序提出要求，操作系统或者运行时（<em>runtime</em>）就必须供给内存。</p><p><br></p><p>对于持续运行的服务进程（<em>daemon</em>），必须及时释放不再用到的内存。否则，内存占用越来越高，轻则影响系统性能，重则导致进程崩溃。</p><p><br></p><p>也就是说，不再用到的内存，如果没有及时释放，就叫做内存泄漏（<em>memory leak</em>）。</p><h2><em>JavaScript</em> 中的垃圾回收</h2><p>浏览器的 <em>Javascript</em> 具有自动垃圾回收机制（<em>GC</em>：<em>Garbage Collecation</em>），也就是说，执行环境会负责管理代码执行过程中使用的内存。其原理是：<strong>垃圾收集器会定期（周期性）找出那些不在继续使用的变量，然后释放其内存</strong>。</p><p><br></p><p>但是这个过程不是实时的，因为其开销比较大并且 <em>GC</em> 时停止响应其他操作，所以垃圾回收器会按照固定的时间间隔周期性的执行。</p><p><br></p><p>不再使用的变量也就是生命周期结束的变量，当然只可能是局部变量，全局变量的生命周期直至浏览器卸载页面才会结束。局部变量只在函数的执行过程中存在，而在这个过程中会为局部变量在栈或堆上分配相应的空间，以存储它们的值，然后在函数中使用这些变量，直至函数结束，而闭包中由于内部函数的原因，外部函数并不能算是结束。</p><p><br></p><p>下面是一段示例代码：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function fn1() {\n    var obj = {name: 'zhangsan', age: 10};\n}\nfunction fn2() {\n    var obj = {name:'zhangsan', age: 10};\n    return obj;\n}\n\nvar a = fn1();\nvar b = fn2();</code></pre></div><p>在上面的代码中，我们首先声明了两个函数，分别叫做 <em>fn1</em> 和 <em>fn2</em>。</p><p><br></p><p>当 <em>fn1</em> 被调用时，进入 <em>fn1</em> 的环境，会开辟一块内存存放对象 <em>{name: 'zhangsan', age: 10}</em>。而当调用结束后，出了 <em>fn1</em> 的环境，那么该块内存会被  <em>JavaScript</em> 引擎中的垃圾回收器自动释放；</p><p><br></p><p>在 <em>fn2</em> 被调用的过程中，返回的对象被全局变量 <em>b</em> 所指向，所以该块内存并不会被释放。</p><p><br></p><p>这里问题就出现了：到底哪个变量是没有用的？</p><p><br></p><p>所以垃圾收集器必须跟踪到底哪个变量没用，对于不再有用的变量打上标记，以备将来收回其内存。</p><p><br></p><p>用于标记的无用变量的策略可能因实现而有所区别，通常情况下有两种实现方式：<strong>标记清除</strong>和<strong>引用计数</strong>。</p><p><br></p><p>引用计数不太常用，标记清除较为常用。</p><h2>标记清除</h2><p><em>JavaScript</em> 中最常用的垃圾回收方式就是标记清除。</p><p><br></p><p>当变量进入环境时，例如，在函数中声明一个变量，就将这个变量标记为“进入环境”。</p><p><br></p><p>从逻辑上讲，永远不能释放进入环境的变量所占用的内存，因为只要执行流进入相应的环境，就可能会用到它们。</p><p><br></p><p>而当变量离开环境时，则将其标记为“离开环境”。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function test(){\n  var a = 10 ; // 被标记 ，进入环境 \n  var b = 20 ; // 被标记 ，进入环境\n}\ntest(); // 执行完毕 之后 a、b 又被标离开环境，被回收。</code></pre></div><p>垃圾回收器在运行的时候会给存储在内存中的所有变量都加上标记（当然，可以使用任何标记方式）。</p><p><br></p><p>然后，它会去掉环境中的变量以及被环境中的变量引用的变量的标记（闭包）。而在此之后再被加上标记的变量将被视为准备删除的变量，原因是环境中的变量已经无法访问到这些变量了。</p><p><br></p><p>最后，垃圾回收器完成内存清除工作，销毁那些带标记的值并回收它们所占用的内存空间。</p><p><br></p><p>到目前为止，<em>IE9+、Firefox、Opera、Chrome、Safari</em> 的 <em>JS</em> 实现使用的都是标记清除的垃圾回收策略或类似的策略，只不过垃圾收集的时间间隔互不相同。</p><h2>引用计数</h2><p>引用计数的含义是跟踪记录每个值被引用的次数。</p><p><br></p><p>当声明了一个变量并将一个引用类型值赋给该变量时，则这个值的引用次数就是 <em>1</em>。如果同一个值又被赋给另一个变量，则该值的引用次数加 <em>1</em>。</p><p><br></p><p>相反，如果包含对这个值引用的变量又取得了另外一个值，则这个值的引用次数减 <em>1</em>。当这个值的引用次数变成 <em>0</em> 时，则说明没有办法再访问这个值了，因而就可以将其占用的内存空间回收回来。</p><p><br></p><p>这样，当垃圾回收器下次再运行时，它就会释放那些引用次数为 <em>0</em> 的值所占用的内存。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function test() {\n    var a = {};\t// a 指向对象的引用次数为 1\n    var b = a;\t// a 指向对象的引用次数加 1，为 2\n    var c = a;\t// a 指向对象的引用次数再加 1，为 3\n    var b = {};\t// a 指向对象的引用次数减 1，为 2\n}</code></pre></div><p><em>Netscape Navigator3</em> 是最早使用引用计数策略的浏览器，但很快它就遇到一个严重的问题：<strong>循环引用</strong>。</p><p><br></p><p>循环引用指的是对象 <em>A</em> 中包含一个指向对象B的指针，而对象 <em>B</em> 中也包含一个指向对象 <em>A</em> 的引用。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function fn() {\n    var a = {};\n    var b = {};\n    a.pro = b;\n    b.pro = a;\n}\nfn();</code></pre></div><p>以上代码 <em>a</em> 和 <em>b</em> 的引用次数都是 <em>2</em>，<em>fn</em> 执行完毕后，两个对象都已经离开环境，在标记清除方式下是没有问题的，但是在引用计数策略下，因为 <em>a</em> 和 <em>b</em> 的引用次数不为 <em>0</em>，所以不会被垃圾回收器回收内存，如果 <em>fn</em> 函数被大量调用，就会造成内存泄露。在 <em>IE7</em> 与 <em>IE8</em> 上，内存直线上升。</p><h2>真题解答</h2><ul><li><p>请介绍一下 <em>JavaScript</em> 中的垃圾回收站机制</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p><em>JavaScript</em> 具有自动垃圾回收机制。垃圾收集器会按照固定的时间间隔周期性的执行。</p><p><br></p><p><em>JavaScript</em> 常见的垃圾回收方式：<strong>标记清除</strong>、<strong>引用计数</strong>方式。</p><p><br></p><p>1、标记清除方式：</p><ul><li><p>工作原理：当变量进入环境时，将这个变量标记为“进入环境”。当变量离开环境时，则将其标记为“离开环境”。标记“离开环境”的就回收内存。</p></li><li><p>工作流程：</p></li><li><p>垃圾回收器，在运行的时候会给存储在内存中的所有变量都加上标记；</p></li><li><p>去掉环境中的变量以及被环境中的变量引用的变量的标记；</p></li><li><p>被加上标记的会被视为准备删除的变量；</p></li><li><p>垃圾回收器完成内存清理工作，销毁那些带标记的值并回收他们所占用的内存空间。</p></li></ul><p>2、引用计数方式：</p><ul><li><p>工作原理：跟踪记录每个值被引用的次数。</p></li><li><p>工作流程：</p></li><li><p>声明了一个变量并将一个引用类型的值赋值给这个变量，这个引用类型值的引用次数就是 <em>1</em>；</p></li><li><p>同一个值又被赋值给另一个变量，这个引用类型值的引用次数加 <em>1</em>；</p></li><li><p>当包含这个引用类型值的变量又被赋值成另一个值了，那么这个引用类型值的引用次数减 <em>1</em>；</p></li><li><p>当引用次数变成 <em>0</em> 时，说明没办法访问这个值了；</p></li><li><p>当垃圾收集器下一次运行时，它就会释放引用次数是 <em>0</em> 的值所占的内存。</p></li></ul></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666077232238",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e52672fac4881713db388"),
+    interviewTitle: "JS 中的闭包是指什么？",
+    interviewContent: "<h1>闭包</h1><h2>经典真题</h2><ul><li><p>闭包是什么？闭包的应用场景有哪些？怎么销毁闭包？</p></li></ul><h2>什么是闭包</h2><p>闭包，是 <em>JavaScript</em> 中一个非常重要的知识点，也是我们前端面试中较高几率被问到的知识点之一。</p><p><br></p><p>打开《<em>JavaScript</em> 高级程序设计》和《 <em>JavaScript</em> 权威指南》，会发现里面针对闭包的解释各执一词，在网络上搜索关于闭包的内容，也发现众说纷纭，这就导致了这个知识点本身显得有点神秘，甚至还有一点玄幻。</p><p><br></p><p>那么这个知识点真的有那么深奥么？</p><p><br></p><p>非也！其实要理解 <em>JavaScript</em> 中的闭包，非常容易，但是在此之前你需要先知道以下两个知识点：</p><ul><li><p><em>JavaScript</em> 中的作用域和作用域链</p></li><li><p><em>JavaScript</em> 中的垃圾回收</p></li></ul><p>这里我们来简单回顾一下这两个知识点：</p><p><br></p><p><strong>1. <em>JavaScript</em> 中的作用域和作用域链</strong></p><ul><li><p>作用域就是一个独立的地盘，让变量不会外泄、暴露出去，不同作用域下同名变量不会有冲突。</p></li><li><p>作用域在定义时就确定，并且不会改变。</p></li><li><p>如果在当前作用域中没有查到值，就会向上级作用域去查，直到查到全局作用域，这么一个查找过程形成的链条就叫做作用域链。</p></li></ul><p><strong>2. <em>JavaScript</em> 中的垃圾回收</strong></p><ul><li><p><em>Javascript</em> 执行环境会负责管理代码执行过程中使用的内存，其中就涉及到一个垃圾回收机制</p></li><li><p>垃圾收集器会定期（周期性）找出那些不再继续使用的变量，只要该变量不再使用了，就会被垃圾收集器回收，然后释放其内存。如果该变量还在使用，那么就不会被回收。</p></li></ul><p><em>OK</em>，有了这 <em>2</em> 个知识点的铺垫后，接下来我们再来看什么是闭包。</p><blockquote><p>闭包不是一个具体的技术，而是一种现象，是指在定义函数时，周围环境中的信息可以在函数中使用。换句话说，执行函数时，只要在函数中使用了外部的数据，就创建了闭包。</p><p><br></p><p>而作用域链，正是实现闭包的手段。</p></blockquote><p>什么？只要在函数中使用了外部的数据，就创建了闭包？</p><p><br></p><p>真的是这样么？下面我们可以证明一下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-12-27-065017.png\" alt=\"image-20211227145016552\" contenteditable=\"false\"><br></p><p><br></p><p>在上面的代码中，我们在函数 <em>a</em> 中定义了一个变量 <em>i</em>，然后打印这个 <em>i</em> 变量。对于 <em>a</em> 这个函数来讲，自己的函数作用域中存在 <em>i</em> 这个变量，所以我们在调试时可以看到 <em>Local</em> 中存在变量 <em>i</em>。</p><p><br></p><p>下面我们将上面的代码稍作修改，如下图：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-12-27-065522.png\" alt=\"image-20211227145521272\" contenteditable=\"false\"><br></p><p><br></p><p>在上面的代码中，我们将声明 <em>i</em> 这个变量的动作放到了 <em>a</em> 函数外面，也就是说 <em>a</em> 函数在自己的作用域已经找不到这个 <em>i</em> 变量了，它会怎么办？</p><p><br></p><p>学习了作用域链的你肯定知道，它会顺着作用域链一层一层往外找。然而上面在介绍闭包时说过，如果出现了这种情况，也就是函数使用了外部的数据的情况，就会创建闭包。</p><p><br></p><p>仔细观察调试区域，我们会发现此时的 <em>i</em> 就放在 <em>Closure</em> 里面的，从而证实了我们前面的说法。</p><p><br></p><p>所以你看，闭包其实也没有那么难理解，当你觉得一个词对你来说特别难的时候，你还可以使用拆词法，这也是我比较推荐的屡试不爽的一种方法。</p><p><br></p><p>“闭”可以理解为“封闭，闭环”，“包”可以理解为“一个类似于包裹的空间”，因此闭包实际上可以看作是一个封闭的空间，那么这个空间用来干啥呢？实际上就是用来存储变量的。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-12-27-083947.png\" alt=\"image-20211227163947135\" contenteditable=\"false\"><br></p><p><br></p><p>那么是一个函数下所有的变量声明都会被放入到闭包这个封闭的空间里面么？</p><p><br></p><p>倒也不是，放不放入到闭包中，要看其他地方有没有对这个变量进行引用，例如：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-12-27-084334.png\" alt=\"image-20211227164333723\" contenteditable=\"false\"><br></p><p><br></p><p>在上面的代码中，函数 c 中一个变量都没有创建，却要打印 <em>i、j、k</em> 和 <em>x</em>，这些变量分别存在于 <em>a、b</em> 函数以及全局作用域中，因此创建了 <em>3</em> 个闭包，全局闭包里面存储了 <em>i</em> 的值，闭包 <em>a</em> 中存储了变量 <em>j</em> 和 <em>k</em> 的值，闭包 <em>b</em> 中存储了变量 <em>x</em> 的值。</p><p><br></p><p>但是你仔细观察，你就会发现函数 <em>b</em> 中的 <em>y</em> 变量并没有被放在闭包中，所以要不要放入闭包取决于该变量有没有被引用。</p><p><br></p><p>当然，此时的你可能会有这样的一个新问题，那么多闭包，那岂不是占用内存空间么？</p><p><br></p><p>实际上，如果是自动形成的闭包，是会被销毁掉的。例如：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-12-27-094043.png\" alt=\"image-20211227174043786\" contenteditable=\"false\"><br></p><p><br></p><p>在上面的代码中，我们在第 <em>16</em> 行尝试打印输出变量 <em>k</em>，显然这个时候是会报错的，在第 <em>16</em> 行打一个断点调试就可以清楚的看到，此时已经没有任何闭包存在，垃圾回收器会自动回收没有引用的变量，不会有任何内存占用的情况。</p><p><br></p><p>当然，这里我指的是自动产生闭包的情况，关于闭包，有时我们需要根据需求手动的来制造一个闭包。</p><p><br></p><p>来看下面的例子：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function eat(){\n    var food = \"鸡翅\";\n    console.log(food);\n}\neat(); // 鸡翅\nconsole.log(food); // 报错</code></pre></div><p>在上面的例子中，我们声明了一个名为 <em>eat</em> 的函数，并对它进行调用。</p><p><br></p><p><em>JavaScript</em> 引擎会创建一个 <em>eat</em> 函数的执行上下文，其中声明 <em>food</em> 变量并赋值。</p><p><br></p><p>当该方法执行完后，上下文被销毁，<em>food</em> 变量也会跟着消失。这是因为 <em>food</em> 变量属于 <em>eat</em> 函数的局部变量，它作用于 <em>eat</em> 函数中，会随着 <em>eat</em> 的执行上下文创建而创建，销毁而销毁。所以当我们再次打印 <em>food</em> 变量时，就会报错，告诉我们该变量不存在。</p><p><br></p><p>但是我们将此代码稍作修改：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function eat(){\n    var food = '鸡翅';\n    return function(){\n        console.log(food);\n    }\n}\nvar look = eat();\nlook(); // 鸡翅\nlook(); // 鸡翅</code></pre></div><p>在这个例子中，<em>eat</em> 函数返回一个函数，并在这个内部函数中访问 <em>food</em> 这个局部变量。调用 <em>eat</em> 函数并将结果赋给 <em>look</em> 变量，这个 <em>look</em> 指向了 <em>eat</em> 函数中的内部函数，然后调用它，最终输出 <em>food</em> 的值。</p><p><br></p><p>为什么能访问到 <em>food</em>，原因很简单，上面我们说过，垃圾回收器只会回收没有被引用到的变量，但是一旦一个变量还被引用着的，垃圾回收器就不会回收此变量。在上面的示例中，照理说 <em>eat</em> 调用完毕 <em>food</em> 就应该被销毁掉，但是我们向外部返回了 <em>eat</em> 内部的匿名函数，而这个匿名函数有引用了 <em>food</em>，所以垃圾回收器是不会对其进行回收的，这也是为什么在外面调用这个匿名函数时，仍然能够打印出 <em>food</em> 变量的值。</p><p><br></p><p>至此，闭包的一个优点或者特点也就体现出来了，那就是：</p><ul><li><p>通过闭包可以让外部环境访问到函数内部的局部变量。</p></li><li><p>通过闭包可以让局部变量持续保存下来，不随着它的上下文环境一起销毁。</p></li></ul><p>通过此特性，我们可以解决一个全局变量污染的问题。早期在 <em>JavaScript</em> 还无法进行模块化的时候，在多人协作时，如果定义过多的全局变量 有可能造成全局变量命名冲突，使用闭包来解决功能对变量的调用将变量写到一个独立的空间里面，从而能够一定程度上解决全局变量污染的问题。</p><p><br></p><p>例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var name = \"GlobalName\";\n// 全局变量\nvar init = (function () {\n    var name = \"initName\";\n    function callName() {\n        console.log(name);\n        // 打印 name\n    }\n    return function () {\n        callName();\n        // 形成接口\n    }\n}());\ninit(); // initName\nvar initSuper = (function () {\n    var name = \"initSuperName\";\n    function callName() {\n        console.log(name);\n        // 打印 name\n    }\n    return function () {\n        callName();\n        // 形成接口\n    }\n}());\ninitSuper(); // initSuperName</code></pre></div><p>好了，在此小节的最后，我们来对闭包做一个小小的总结：</p><ul><li><p>闭包是一个封闭的空间，里面存储了在其他地方会引用到的该作用域的值，在 <em>JavaScript</em> 中是通过作用域链来实现的闭包。</p></li><li><p>只要在函数中使用了外部的数据，就创建了闭包，这种情况下所创建的闭包，我们在编码时是不需要去关心的。</p></li><li><p>我们还可以通过一些手段手动创建闭包，从而让外部环境访问到函数内部的局部变量，让局部变量持续保存下来，不随着它的上下文环境一起销毁。</p></li></ul><h2>闭包经典问题</h2><p>聊完了闭包，接下来我们来看一个闭包的经典问题。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">for (var i = 1; i &lt;= 3; i++) {\n    setTimeout(function () {\n        console.log(i);\n    }, 1000);\n}</code></pre></div><p>在上面的代码中，我们预期的结果是过 <em>1</em> 秒后分别输出 <em>i</em> 变量的值为 <em>1，2，3</em>。但是，执行的结果是：<em>4，4，4</em>。</p><p><br></p><p>实际上，问题就出在闭包身上。你看，循环中的 <em>setTimeout</em> 访问了它的外部变量 <em>i</em>，形成闭包。</p><p><br></p><p>而 <em>i</em> 变量只有 <em>1</em> 个，所以循环 <em>3</em> 次的 <em>setTimeout</em> 中都访问的是同一个变量。循环到第 <em>4</em> 次，<em>i</em> 变量增加到 <em>4</em>，不满足循环条件，循环结束，代码执行完后上下文结束。但是，那 <em>3</em> 个 <em>setTimeout</em> 等 <em>1</em> 秒钟后才执行，由于闭包的原因，所以它们仍然能访问到变量 <em>i</em>，不过此时 <em>i</em> 变量值已经是 <em>4</em> 了。</p><p><br></p><p>要解决这个问题，我们可以让 <em>setTimeout</em> 中的匿名函数不再访问外部变量，而是访问自己内部的变量，如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">for (var i = 1; i &lt;= 3; i++) {\n    (function (index) {\n        setTimeout(function () {\n            console.log(index);\n        }, 1000);\n    })(i)\n}</code></pre></div><p>这样 <em>setTimeout</em> 中就可以不用访问 <em>for</em> 循环声明的变量 <em>i</em> 了。而是采用调用函数传参的方式把变量 <em>i</em> 的值传给了 <em>setTimeout</em>，这样它们就不再创建闭包，因为在我自己的作用域里面能够找到 <em>i</em> 这个变量。</p><p><br></p><p>当然，解决这个问题还有个更简单的方法，就是使用 <em>ES6</em> 中的 <em>let</em> 关键字。</p><p><br></p><p>它声明的变量有块作用域，如果将它放在循环中，那么每次循环都会有一个新的变量 <em>i</em>，这样即使有闭包也没问题，因为每个闭包保存的都是不同的 <em>i</em> 变量，那么刚才的问题也就迎刃而解。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">for (let i = 1; i &lt;= 3; i++) {\n    setTimeout(function () {\n        console.log(i);\n    }, 1000);\n}</code></pre></div><h2>真题解答</h2><ul><li><p>闭包是什么？闭包的应用场景有哪些？怎么销毁闭包？</p></li></ul><blockquote><p>闭包是一个封闭的空间，里面存储了在其他地方会引用到的该作用域的值，在 <em>JavaScript</em> 中是通过作用域链来实现的闭包。</p><p><br></p><p>只要在函数中使用了外部的数据，就创建了闭包，这种情况下所创建的闭包，我们在编码时是不需要去关心的。</p><p><br></p><p>我们还可以通过一些手段手动创建闭包，从而让外部环境访问到函数内部的局部变量，让局部变量持续保存下来，不随着它的上下文环境一起销毁。</p><p><br></p><p>使用闭包可以解决一个全局变量污染的问题。</p><p><br></p><p>如果是自动产生的闭包，我们无需操心闭包的销毁，而如果是手动创建的闭包，可以把被引用的变量设置为 <em>null</em>，即手动清除变量，这样下次 <em>JavaScript</em> 垃圾回收器在进行垃圾回收时，发现此变量已经没有任何引用了，就会把设为 <em>null</em> 的量给回收了。</p></blockquote><div contenteditable=\"false\"><hr></div><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666077287842",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e529a2fac4881713db38c"),
+    interviewTitle: "如何注册 DOM 事件和移除事件",
+    interviewContent: "<h1><em>DOM</em> 事件的注册和移除</h1><h2>经典真题</h2><ul><li><p>总结一下 <em>DOM</em> 中如何注册事件和移除事件</p></li></ul><h2><em>DOM</em> 注册事件</h2><p>使用 <em>JavaScript</em> 为 <em>DOM</em> 元素注册事件的方式有多种。但是并不是一开始就设计了多种方式，而是随着技术的发展，发展前一种方式有所缺陷，所以设计了新的 <em>DOM</em> 元素注册事件的方式。</p><p><br></p><p>这里我们就一起来总结一下 <em>DOM</em> 中注册事件的方式有哪些。</p><h3><em>HTML</em> 元素中注册事件</h3><p><em>HTML</em> 元素中注册的事件，又被称之为行内事件监听器。这是在浏览器中处理事件最原始的方法。</p><p><br></p><p>具体的示例如下：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;button onclick=\"test('张三')\"&gt;点击我&lt;/button&gt;</code></pre></div><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function test(name) {\n  console.log(`我知道你已经点击了，${name}`);\n}</code></pre></div><p>在上面的代码中，我们为 <em>button</em> 元素添加了 <em>onclick</em> 属性，然后绑定了一个名为 <em>test</em> 的事件处理器。</p><p><br></p><p>在 <em>JavaScript</em> 中只需要书写对应的 <em>test</em> 事件处理函数即可。</p><p><br></p><p>但是有一点需要注意，就是这种方法已经过时了，原因如下：</p><ul><li><p><em>JavaScript</em> 代码与 <em>HTML</em> 标记混杂在一起，破坏了结构和行为分离的理念。</p></li><li><p>每个元素只能为每种事件类型绑定一个事件处理器。</p></li><li><p>事件处理器的代码隐藏于标记中，很难找到事件是在哪里声明的。</p></li></ul><p>但是如果是做简单的事件测试，那么这种写法还是非常方便快捷的。</p><h3><em>DOM0</em> 级方式注册事件</h3><p>这种方式是首先取到要为其绑定事件的元素节点对象，然后给这些节点对象的事件处理属性赋值一个函数。</p><p><br></p><p>这样就可以达到 <em>JavaScript</em> 代码和 <em>HTML</em> 代码相分离的目的。</p><p><br></p><p>具体的示例如下：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;button id=\"test\"&gt;点击我&lt;/button&gt;</code></pre></div><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var test = document.getElementById(\"test\");\ntest.onclick = function(){\n  console.log(\"this is a test\");\n}</code></pre></div><p>这种方式虽然相比 <em>HTML</em> 元素中注册事件有所改进，但是它也有一个缺点，那就是它依然存在每个元素只能绑定一个函数的局限性。</p><p><br></p><p>下面我们尝试使用这种方式为同一个元素节点绑定 <em>2</em> 个事件，如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var test = document.getElementById(\"test\");\ntest.onclick = function(){\n  console.log(\"this is a test\");\n}\ntest.onclick = function(){\n  console.log(\"this is a test,too\");\n}</code></pre></div><p>当我们为该 <em>DOM</em> 元素绑定 <em>2</em> 个相同类型的事件时，后面的事件处理函数就会把前面的事件处理函数给覆盖掉。</p><h3><em>DOM2</em> 级方式注册事件</h3><p><em>DOM2</em> 级再次对事件的绑定方式进行了改进。</p><p><br></p><p><em>DOM2</em> 级通过 <em>addEventListener</em> 方法来为一个 <em>DOM</em> 元素添加多个事件处理函数。</p><p><br></p><p>该方法接收 <em>3</em> 个参数：事件名、事件处理函数、布尔值。</p><p><br></p><p>如果这个布尔值为 <em>true</em>，则在捕获阶段处理事件，如果为 <em>false</em>，则在冒泡阶段处理事件。若最后的布尔值不填写，则和 <em>false</em> 效果一样，也就是说默认为 <em>false</em>，在冒泡阶段进行事件的处理。</p><p><br></p><p>接下来我们来看下面的示例：这里我们为 <em>button</em> 元素绑定了 <em>2</em> 个事件处理程序，并且 <em>2</em> 个事件处理程序都是通过点击来触发。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var test = document.getElementById(\"test\");\ntest.addEventListener(\"click\", function () {\n  console.log(\"this is a test\");\n}, false);\ntest.addEventListener(\"click\", function () {\n  console.log(\"this is a test,too\");\n}, false);</code></pre></div><p>在上面的代码中，我们通过 <em>addEventListener</em> 为按钮绑定了 <em>2</em> 个点击的事件处理程序，<em>2</em> 个事件处理程序都会执行。</p><p><br></p><p>另外需要注意的是，在 <em>IE</em> 中和 <em>addEventListener</em> 方法与之对应的是 <em>attachEvent</em> 方法。</p><h2><em>DOM</em> 移除事件</h2><p>通过 <em>DOM0</em> 级来添加的事件，删除的方法很简单，只需要将 <em>DOM</em> 元素的事件处理属性赋值为 <em>null</em> 即可。</p><p><br></p><p>例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var test = document.getElementById(\"test\");\ntest.onclick = function(){\n  console.log(\"this is a test\");\n  test.onclick = null;\n}</code></pre></div><p>在上面的代码中，我们通过 <em>DOM0</em> 级的方式为 <em>button</em> 按钮绑定了点击事件，但是在事件处理函数中又移除了该事件。所以该事件只会生效一次。</p><p><br></p><p>如果是通过 <em>DOM2</em> 级来添加的事件，我们可以使用 <em>removeEventLister</em> 方法来进行事件的删除。</p><p><br></p><p>需要注意的是，如果要通过该方法移除<strong>某一类事件类型的一个事件</strong>的话，在通过 <em>addEventListener</em> 来绑定事件时的写法就要稍作改变。</p><p><br></p><p>先单独将绑定函数写好，然后 <em>addEventListener</em> 进行绑定时第 <em>2</em> 个参数传入要绑定的函数名即可。</p><p><br></p><p>示例如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var test = document.getElementById(\"test\");\n//DOM 2级添加事件\nfunction fn1() {\n  console.log(\"this is a test\");\n  test.removeEventListener(\"click\", fn1); // 只删除第一个点击事件\n}\nfunction fn2() {\n  console.log(\"this is a test,too\");\n}\ntest.addEventListener(\"click\", fn1, false);\ntest.addEventListener(\"click\", fn2, false);</code></pre></div><p>在上面的代码中，我们为 <em>button</em> 元素绑定了两个 <em>click</em> 事件，之后在第一个事件处理函数中，对 <em>fn1</em> 事件处理函数进行了移除。所以第一次点击时，<em>fn1</em> 和 <em>fn2</em> 都会起作用，之后因为 <em>fn1</em> 被移除，所以只会 <em>fn2</em> 有作用。</p><h2>真题解答</h2><ul><li><p>总结一下 <em>DOM</em> 中如何注册事件和移除事件</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p>注册事件的方式常见的有 <em>3</em> 种方式：</p><ul><li><p><em>HTML</em> 元素中注册的事件：这种方式又被称之为行内事件监听器。这是在浏览器中处理事件最原始的方法。</p></li><li><p><em>DOM0</em> 级方式注册事件：这种方式是首先取到要为其绑定事件的元素节点对象，然后给这些节点对象的事件处理属性赋值一个函数。</p></li><li><p><em>DOM2</em> 级方式注册事件：<em>DOM2</em> 级通过 <em>addEventListener</em> 方法来为一个 <em>DOM</em> 元素添加多个事件处理函数。</p><p><br></p><p>该方法接收 <em>3</em> 个参数：事件名、事件处理函数、布尔值。</p><p><br></p><p>如果这个布尔值为 <em>true</em>，则在捕获阶段处理事件，如果为 <em>false</em>，则在冒泡阶段处理事件。若最后的布尔值不填写，则和 <em>false</em> 效果一样，也就是说默认为 <em>false</em>，在冒泡阶段进行事件的处理。</p></li></ul><p>关于移除注册的事件，如果是 <em>DOM0</em> 级方式注册的事件，直接将值设置为 <em>null</em> 即可。如果是 <em>DOM2</em> 级注册的事件，可以使用 <em>removeEventListener</em> 方法来移除事件。</p></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666077338867",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e52c62fac4881713db390"),
+    interviewTitle: "谈一谈事件委托以及冒泡原理",
+    interviewContent: "<h1><em>DOM</em> 事件的传播机制</h1><h2>经典真题</h2><ul><li><p>谈一谈事件委托以及冒泡原理</p></li></ul><h2>事件与事件流</h2><p>事件最早是在 <em>IE3</em> 和 <em>NetscapeNavigator2</em> 中出现的，当时是作为分担服务器运算负担的一种手段。</p><p><br></p><p>要实现和网页的互动，就需要通过 <em>JavaScript</em> 里面的事件来实现。</p><p><br></p><p>每次用户与一个网页进行交互，例如点击链接，按下一个按键或者移动鼠标时，就会触发一个事件。我们的程序可以检测这些事件，然后对此作出响应。从而形成一种交互。</p><p><br></p><p>这样可以使我们的页面变得更加的有意思，而不仅仅像以前一样只能进行浏览。</p><p><br></p><p>在早期拨号上网的年代，如果所有的功能都放在服务器端进行处理的话，效率是非常低的。</p><p><br></p><p>所以 <em>JavaScript</em> 最初被设计出来就是用来解决这些问题的。通过允许一些功能在客户端处理，以节省到服务器的往返时间。</p><p><br></p><p><em>JavaScript</em> 中采用一个叫做事件监听器的东西来监听事件是否发生。这个事件监听器类似于一个通知，当事件发生时，事件监听器会让我们知道，然后程序就可以做出相应的响应。</p><p><br></p><p>通过这种方式，就可以避免让程序不断地去检查事件是否发生，让程序在等待事件发生的同时，可以继续做其他的任务。</p><h3>事件流</h3><p>当浏览器发展到第 <em>4</em> 代时（<em>IE4</em> 及 <em>Netscape4</em>），浏览器开发团队遇到了一个很有意思的问题：页面的哪一部分会拥有某个特定的事件？</p><p><br></p><p>想象在一张纸上的一组同心圆。如果把手指放在圆心上，那么手指指向的不是一个圆，而是纸上的所有圆。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-02-094941.png\" alt=\"image-20211002174941387\" contenteditable=\"false\"><br></p><p><br></p><p>好在两家公司的浏览器开发团队在看待浏览器事件方面还是一致的。</p><p><br></p><p>如果单击了某个按钮，他们都认为单击事件不仅仅发生在按钮上，甚至也单击了整个页面。</p><p><br></p><p>但有意思的是，<em>IE</em> 和 <em>Netscape</em> 开发团队居然提出了差不多是完全相反的事件流的概念。</p><p><br></p><p><em>IE</em> 的事件流是事件冒泡流，而 <em>Netscape</em> 的事件流是事件捕获流。</p><h3>事件冒泡流</h3><p><em>IE</em> 的事件流叫做事件冒泡（<em>event bubbling</em>），即事件开始时由最具体的元素（文档中嵌套层次最深的那个节点）接收，然后逐级向上传播到较为不具体的节点（文档）。</p><p><br></p><p>以下列 <em>HTML</em> 结构为例，来说明事件冒泡。如下：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;!DOCTYPE html&gt;\n&lt;html lang=\"en\"&gt;\n    &lt;head&gt;\n        &lt;meta charset=\"UTF-8\"&gt;\n        &lt;title&gt;Document&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;div&gt;&lt;/div&gt;\n    &lt;/body&gt;\n&lt;/html&gt;</code></pre></div><p>如果单击了页面中的 <em>div</em> 元素，那么这个 <em>click</em> 事件沿 <em>DOM</em> 树向上传播，在每一级节点上都会发生，按照如下顺序进行传播：</p><ol><li><p><em>div</em></p></li><li><p><em>body</em></p></li><li><p><em>html</em></p></li><li><p><em>document</em></p></li></ol><p>所有现代浏览器都支持事件冒泡，但在具体实现在还是有一些差别。</p><p><br></p><p><em>IE9、Firefox、Chrome、Safari</em> 将事件一直冒泡到 <em>window</em> 对象。</p><p><br></p><p>我们可以通过下面的代码，来查看文档具体的冒泡顺序，示例如下：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div id=\"box\" style=\"height:100px;width:300px;background-color:pink;\"&gt;&lt;/div&gt;\n&lt;button id=\"reset\"&gt;还原&lt;/button&gt;</code></pre></div><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">// IE8 以下浏览器返回 div body html document\n// 其他浏览器返回 div body html document window\nreset.onclick = function () {\n  history.go();\n}\nbox.onclick = function () {\n  box.innerHTML += 'div\\n';\n}\ndocument.body.onclick = function () {\n  box.innerHTML += 'body\\n';\n}\ndocument.documentElement.onclick = function () {\n  box.innerHTML += 'html\\n';\n}\ndocument.onclick = function () {\n  box.innerHTML += 'document\\n';\n}\nwindow.onclick = function () {\n  box.innerHTML += 'window\\n';\n}</code></pre></div><p>在上面的示例中，我们为 <em>div</em> 以及它的祖先元素绑定了点击事件，由于事件冒泡的存在，当我们点击 <em>div</em> 时，所有祖先元素的点击事件也会被触发。</p><p><br></p><p>如下图所示：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-02-092307.png\" alt=\"image-20211002172307085\" contenteditable=\"false\"><br></p><h3>事件捕获流</h3><p><em>Netscape Communicator</em> 团队提出的另一种事件流叫做事件捕获（<em>event captruing</em>）。</p><p><br></p><p>事件捕获的思想是不太具体的节点应该更早接收到事件，而最具体的节点应该最后接收到事件。</p><p><br></p><p>事件捕获的思想是在事件到达预定目标之前就捕获它。</p><p><br></p><p>以同样的 <em>HTML</em> 结构为例来说明事件捕获，如下：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;!DOCTYPE html&gt;\n&lt;html lang=\"en\"&gt;\n    &lt;head&gt;\n        &lt;meta charset=\"UTF-8\"&gt;\n        &lt;title&gt;Document&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n        &lt;div&gt;&lt;/div&gt;    \n    &lt;/body&gt;\n&lt;/html&gt;</code></pre></div><p>在事件捕获过程中，<em>document</em> 对象首先接收到 <em>click</em> 事件，然后事件沿 <em>DOM</em> 树依次向下，一直传播到事件的实际目标，即 <em>div</em> 元素：</p><ol><li><p><em>document</em></p></li><li><p><em>html</em></p></li><li><p><em>body</em></p></li><li><p><em>div</em></p></li></ol><p><em>IE9、Firefox、Chrome、Safari</em> 等现代浏览器都支持事件捕获，但是也是从 <em>window</em> 对象开始捕获。</p><p><br></p><p>下面我们来演示一个事件捕获流的示例：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div id=\"box\" style=\"height:100px;width:300px;background-color:pink;\"&gt;&lt;/div&gt;\n&lt;button id=\"reset\"&gt;还原&lt;/button&gt;</code></pre></div><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">// IE8 以下浏览器不支持\n// 其他浏览器返回 window document html body div\nreset.onclick = function () {\n  history.go();\n}\nbox.addEventListener('click', function () {\n  box.innerHTML += 'div\\n'\n}, true)\ndocument.body.addEventListener('click', function () {\n  box.innerHTML += 'body\\n';\n}, true);\ndocument.documentElement.addEventListener('click', function () {\n  box.innerHTML += 'html\\n';\n}, true);\ndocument.addEventListener('click', function () {\n  box.innerHTML += 'document\\n';\n}, true);\nwindow.addEventListener('click', function () {\n  box.innerHTML += 'window\\n';\n}, true);</code></pre></div><p>在上面的示例中，我们为 <em>div</em> 以及它所有的祖先元素绑定了点击事件，使用的 <em>addEventListener</em> 的方式来绑定的事件，并将第 <em>2</em> 个参数设置为了 <em>true</em> 表示使用事件捕获的方式来触发事件。</p><p><br></p><p>效果如下图所示：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-02-093549.png\" alt=\"image-20211002173549252\" contenteditable=\"false\"><br></p><h3>标准 <em>DOM</em> 事件流</h3><p><em>DOM</em> 标准采用的是<strong>捕获 + 冒泡</strong>的方式。</p><p><br></p><p>两种事件流都会触发 <em>DOM</em> 的所有对象，从 <em>document</em> 对象开始，也在 <em>document</em> 对象结束。</p><p><br></p><p>换句话说，起点和终点都是 <em>document</em> 对象（很多浏览器可以一直捕获 + 冒泡到 <em>window</em> 对象）</p><p><br></p><p><em>DOM</em> 事件流示意图：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-02-094149.png\" alt=\"image-20211002174148423\" contenteditable=\"false\"><br></p><p><br></p><p><em>DOM</em> 标准规定事件流包括三个阶段：<strong>事件捕获阶段</strong>、<strong>处于目标阶段</strong>和<strong>事件冒泡阶段</strong>。</p><ul><li><p>**事件捕获阶段：**实际目标 <em>div</em> 在捕获阶段不会触发事件。捕获阶段从 <em>window</em> 开始，然后到 <em>document、html</em>，最后到 <em>body</em> 意味着捕获阶段结束。</p></li><li><p>**处于目标阶段：**事件在 <em>div</em> 上发生并处理，但是本次事件处理会被看成是冒泡阶段的一部分。</p></li><li><p>**冒泡阶段：**事件又传播回文档。</p></li></ul><h2>事件委托</h2><p>上面介绍了事件冒泡流，事件冒泡一个最大的好处就是可以实现事件委托。</p><p><br></p><p>事件委托，又被称之为事件代理。在 <em>JavaScript</em> 中，添加到页面上的事件处理程序数量将直接关系到页面整体的运行性能。导致这一问题的原因是多方面的。</p><p><br></p><p>首先，每个函数都是对象，都会占用内存。内存中的对象越多，性能就越差。其次，必须事先指定所有事件处理程序而导致的 <em>DOM</em> 访问次数，会延迟整个页面的交互就绪时间。</p><p><br></p><p>对事件处理程序过多问题的解决方案就是事件委托。</p><p><br></p><p>事件委托利用了事件冒泡，只指定一个事件处理程序，就可以管理某一类型的所有事件。</p><p><br></p><p>例如，<em>click</em> 事件会一直冒泡到 <em>document</em> 层次。也就是说，我们可以为整个页面指定一个 <em>onclick</em> 事件处理程序，而不必给每个可单击的元素分别添加事件处理程序。</p><p><br></p><p>举一个具体的例子，例如现在我的列表项有如下内容：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;ul id=\"color-list\"&gt;\n  &lt;li&gt;red&lt;/li&gt;\n  &lt;li&gt;yellow&lt;/li&gt;\n  &lt;li&gt;blue&lt;/li&gt;\n  &lt;li&gt;green&lt;/li&gt;\n  &lt;li&gt;black&lt;/li&gt;\n  &lt;li&gt;white&lt;/li&gt;\n&lt;/ul&gt;</code></pre></div><p>如果我们想把事件监听器绑定到所有的 <em>li</em> 元素上面，这样它们被单击的时候就弹出一些文字，为此我们需要给每一个元素来绑定一个事件监听器。</p><p><br></p><p>虽然上面的例子中好像问题也不大，但是想象一下如果这个列表有 <em>100</em> 个元素，那我们就需要添加 <em>100</em> 个事件监听器，这个工作量还是很恐怖的。</p><p><br></p><p>这个时候我们就可以利用事件代理来帮助我们解决这个问题。</p><p><br></p><p>将事件监听器绑定到父元素 <em>ul</em> 上，这样即可对所有的 <em>li</em> 元素添加事件，如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var colorList = document.getElementById(\"color-list\");\ncolorList.addEventListener(\"click\",function(){\n  alert(\"Hello\");\n})</code></pre></div><p>现在我们单击列表中的任何一个 <em>li</em> 都会弹出东西，就好像这些 <em>li</em> 元素就是 <em>click</em> 事件的目标一样。</p><p><br></p><p>并且如果我们之后再为这个 <em>ul</em> 添加新的 <em>li</em> 元素的话，新的 <em>li</em> 元素也会自动添加上相同的事件。</p><p><br></p><p>但是，这个时候也存在一个问题，虽然我们使用事件代理避免了为每一个 <em>li</em> 元素添加相同的事件，但是如果用户没有点击 <em>li</em>，而是点击的 <em>ul</em>，同样也会触发事件。</p><p><br></p><p>这也很正常，因为我们事件就是绑定在 <em>ul</em> 上面的。</p><p><br></p><p>此时我们可以对点击的节点进行一个小小的判断，从而保证用户只在点击 <em>li</em> 的时候才触发事件，如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var colorList = document.getElementById(\"color-list\");\ncolorList.addEventListener(\"click\", function (event) {\n  if (event.target.nodeName === 'LI') {\n    alert('点击 li');\n  }\n})</code></pre></div><h2>真题解答</h2><ul><li><p>谈一谈事件委托以及冒泡原理</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p>事件委托，又被称之为事件代理。在 <em>JavaScript</em> 中，添加到页面上的事件处理程序数量将直接关系到页面整体的运行性能。导致这一问题的原因是多方面的。</p><p><br></p><p>首先，每个函数都是对象，都会占用内存。内存中的对象越多，性能就越差。其次，必须事先指定所有事件处理程序而导致的 <em>DOM</em> 访问次数，会延迟整个页面的交互就绪时间。</p><p><br></p><p>对事件处理程序过多问题的解决方案就是事件委托。</p><p><br></p><p>事件委托利用了事件冒泡，只指定一个事件处理程序，就可以管理某一类型的所有事件。例如，<em>click</em> 事件会一直冒泡到 <em>document</em> 层次。也就是说，我们可以为整个页面指定一个 <em>onclick</em> 事件处理程序，而不必给每个可单击的元素分别添加事件处理程序。</p><p><br></p><p>事件冒泡（<em>event bubbling</em>），是指事件开始时由最具体的元素（文档中嵌套层次最深的那个节点）接收，然后逐级向上传播到较为不具体的节点（文档）。</p></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666077382338",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e530c2fac4881713db394"),
+    interviewTitle: "如何阻止默认事件？",
+    interviewContent: "<h1>阻止事件默认行为</h1><h2>经典真题</h2><ul><li><p>如何阻止默认事件？</p></li></ul><h2>什么是默认行为</h2><p>所谓默认行为，一般是指 <em>HTML</em> 元素所自带的行为。例如点击一个 <em>a</em> 元素表示的是跳转：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;a href=\"https://www.baidu.com\"&gt;百度一下&lt;/a&gt;</code></pre></div><p>在上面的代码中，设置了 <em>a</em> 元素的 <em>href</em> 属性指向百度，当用户点击该 <em>a</em> 元素时，就会跳转至百度。</p><p><br></p><p>在例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;form action=\"\"&gt;&lt;/form&gt;</code></pre></div><p>上面的代码中我们书写了一个 <em>form</em> 元素，该元素有一个 <em>action</em> 属性，指的是表单内容要提交的地址。而当用户点击表单元素中嵌套的提交按钮时，就会进行一个默认的提交操作。</p><p><br></p><p>这些，就是 <em>HTML</em> 元素中的默认行为。</p><p><br></p><p>但是有些时候，我们是不需要这些默认行为的，例如，用户在填写了一个表单后，提交信息时我们采用 <em>ajax</em> 来异步发送到服务器，此时就不需要表单 <em>form</em> 元素默认的提交跳转这个行为了。</p><p><br></p><p>所以此时，我们就需要阻止默认行为。</p><h2>阻止默认行为的方式汇总</h2><p>下面我们来对阻止默认行为的方式进行一个总结。</p><p><br></p><p><strong>（1）<em>cancelable</em> 属性</strong></p><p><br></p><p>首先要介绍的是 <em>cancelable</em> 属性，该属性返回一个布尔值，表示事件是否可以取消。</p><p><br></p><p>该属性为只读属性。返回 <em>true</em> 时，表示可以取消。否则，表示不可取消。</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;a id=\"test\" href=\"https://www.baidu.com\"&gt;百度&lt;/a&gt;</code></pre></div><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var test = document.getElementById(\"test\");\ntest.onclick = function (event) {\n  test.innerHTML = event.cancelable; // true\n}</code></pre></div><p>在上面的代码中，我们为 <em>a</em> 元素绑定了一个点击事件，点击之后通过 <em>event</em> 对象的 <em>cancelable</em> 属性来查看该元素的默认行为是否能阻止。</p><p><br></p><p>最终返回的是 <em>true</em>，说明是能够阻止的。</p><p><br></p><p><strong>（2）<em>preventDefault</em> 方法</strong></p><p><br></p><p><em>preventDefault</em> 方法是 <em>DOM</em> 中最常见，也是最标准的取消浏览器默认行为的方式，无返回值。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var test = document.getElementById(\"test\");\ntest.onclick = function(event){\n  event.preventDefault();\n}</code></pre></div><p>在上面的代码中，我们仍然是通过 <em>event</em> 对象来调用的 <em>preventDefault</em> 方法，从而阻止了 <em>a</em> 元素的默认跳转行为。</p><p><br></p><p><strong>（3）<em>returnValue</em> 属性</strong></p><p><br></p><p>这种方式使用的人比较少，知道这种方式的人也比较少。</p><p><br></p><p>首先 <em>returnValue</em> 是一个 <em>event</em> 对象上面的属性。该属性可读可写，默认值是 <em>true</em>，将其设置为 <em>false</em> 就可以取消事件的默认行为，与 <em>preventDefault</em> 方法的作用相同。</p><p><br></p><p>该属性最早是在 <em>IE</em> 的事件对象中，实现了这种取消默认行为的方式，但是现在大多数浏览器都实现了该方式。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var test = document.getElementById(\"test\");\ntest.onclick = function(event){\n  event.returnValue = false;\n}</code></pre></div><p><strong>（4）<em>return false</em></strong></p><p><br></p><p><em>return false</em> 是一条语句，该语句写在事件处理函数中也可以阻止默认行为。</p><p><br></p><p>但是需要注意的是，如果该条语句写在 <em>jQuery</em> 代码中，能够同时阻止默认行为和阻止冒泡，但是在原生 <em>JavaScript</em> 中只能阻止默认行为。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var test = document.getElementById(\"test\");\ntest.onclick = function(){\n  return false;\n}</code></pre></div><p><strong>（5）<em>defaultPrevented</em> 方法</strong></p><p><br></p><p><em>defaultPrevented</em> 属性也是 <em>event</em> 对象上面的一个属性。该属性表示默认行为是否被阻止，返回 <em>true</em> 表示被阻止，返回 <em>false</em> 表示未被阻止。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var test = document.getElementById(\"test\");\ntest.onclick = function (event) {\n  // 采用两种不同的方式来阻止浏览器默认行为，这是为了照顾其兼容性\n  if (event.preventDefault) {\n    event.preventDefault();\n  } else {\n    event.returnValue = false;\n  }\n  // 将是否阻止默认行为的结果赋值给 &lt;a&gt; 标签的文本内容\n  test.innerHTML = event.defaultPrevented;\n}</code></pre></div><p>在上面的代码中，我们点击 <em>a</em> 元素时，使用 <em>preventDefault</em> 方法阻止了浏览器默认行为。</p><p><br></p><p>之后访问 <em>event.defaultPrevented</em> 属性会得到 <em>true</em>，说明默认行为已经被阻止。</p><h2>真题解答</h2><ul><li><p>如何阻止默认事件？</p></li></ul><blockquote><p>参考答案：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">// 方法一：全支持\nevent.preventDefault();\n// 方法二：该特性已经从 Web 标准中删除，虽然一些浏览器目前仍然支持它，但也许会在未来的某个时间停止支持，请尽量不要使用该特性。\nevent.returnValue = false;\n// 方法三：不建议滥用，jQuery 中可以同时阻止冒泡和默认事件\nreturn false;</code></pre></div></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666077452551",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e53492fac4881713db398"),
+    interviewTitle: "什么是递归？你是否使用过递归？",
+    interviewContent: "<h1>递归</h1><h2>经典真题</h2><ul><li><p>使用递归完成 <em>1</em> 到 <em>100</em> 的累加</p></li></ul><h2>递归</h2><p><em>A recursive method is a method that calls itself.</em></p><p><br></p><p>递归调用是一种特殊的调用形式，指的是方法自己调用自己的形式。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-19-063739.png\" alt=\"image-20211019143738665\" contenteditable=\"false\"><br></p><p><br></p><p>下面是一个递归的示例：</p><div data-language=\"java\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"java\">function neverEnd() {\n    console.log(\"This is the method that never ends!\");\n    neverEnd();\n}</code></pre></div><p><em>method</em> 会先输出 <em>This is the method that never ends!</em> 然后再调用自己，导致无限递归（<em>infinite recursion</em>）。当然这一般是我们需要避免的状况。</p><p><br></p><p>在进行递归操作的时候，我们需要满足以下几个条件：</p><ul><li><p>递归调用必须有结束条件</p></li><li><p>每次调用的时候都需要根据需求改变传递的参数内容</p></li></ul><p>下面是递归的一个示例，求某个数的阶乘。</p><div data-language=\"java\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"java\">function factorial(x) {\n    if (x === 1) {\n        return 1;\n    } else {\n        return x * factorial(x - 1);\n    }\n}\nconsole.log(factorial(5)); // 120</code></pre></div><p>整个递归的计算过程如下：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>===&gt; factorial(5)\n===&gt; 5 * factorial(4)\n===&gt; 5 * (4 * factorial(3))\n===&gt; 5 * (4 * (3 * factorial(2)))\n===&gt; 5 * (4 * (3 * (2 * factorial(1))))\n===&gt; 5 * (4 * (3 * (2 * 1)))\n===&gt; 5 * (4 * (3 * 2))\n===&gt; 5 * (4 * 6)\n===&gt; 5 * 24\n===&gt; 120</code></pre></div><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-19-063535.png\" alt=\"image-20211019143535293\" contenteditable=\"false\"><br></p><p><br></p><p>使用递归时需要注意如下事项：</p><ul><li><p>递归函数的优点是定义简单，逻辑清晰。理论上，所有的递归函数都可以用循环的方式来实现。</p></li><li><p>使用递归时需要注意防止栈溢出。在计算机中，函数调用是通过栈（<em>stack</em>）这种数据结构实现的，每当一个函数调用，栈就会加一层，每当函数返回，栈就会减一层。由于栈的大小不是无限的，所以递归调用的次数过多，会导致栈溢出。</p></li></ul><p>下面再来看几个递归的示例：</p><p><br></p><p>示例 <em>1</em>：使用递归来计算从 <em>x</em> 加到 <em>y</em> 的结果</p><div data-language=\"go\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"go\">function calc(i, j) {\n    if (i == j) {\n        return i;\n    }\n    return calc(i, j - 1) + j;\n}\nconsole.log(calc(1, 100)); // 5050</code></pre></div><p>示例 <em>2</em>：使用递归来计算斐波那契数列</p><div data-language=\"go\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"go\">function calc(i) {\n    if (i == 1) {\n        return 1;\n    } else if (i == 2) {\n        return 2;\n    } else {\n        return calc(i - 1) + calc(i - 2);\n    }\n}\nconsole.log(calc(7)); // 21</code></pre></div><h2>真题解答</h2><ul><li><p>使用递归完成 <em>1</em> 到 <em>100</em> 的累加</p></li></ul><blockquote><p>参考答案：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function calc(i, j) {\n if (i == j) {\n     return i;\n }\n return calc(i, j - 1) + j;\n}\nconsole.log(calc(1, 100)); // 5050</code></pre></div></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666077513144",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e536b2fac4881713db39c"),
+    interviewTitle: "JS 中对象的属性描述符有哪些？分别有什么作用？",
+    interviewContent: "<h1>属性描述符</h1><h2>经典真题</h2><ul><li><p><em>JavaScript</em> 中对象的属性描述符有哪些？分别有什么作用？</p></li></ul><h2>属性描述符详解</h2><p>在 <em>JavaScript</em> 中，对象的属性可以分为两种：</p><ul><li><p>数据属性：它的本质就是一个数据</p></li><li><p>存取器属性：它的本质是一个函数，但是可以将它当作普通属性来使用，当给该属性赋值时，会运行相应的 <em>setter</em> 函数，当获取该属性的值时，会运行相应的 <em>getter</em> 函数。除了存取器，还有一些其他的关键字，用以表示当前属性是否可写、是否有默认值、是否可枚举等，这些关键字就是属性描述符。</p></li></ul><p>属性描述符是 <em>ECMAScript</em> 5 新增的语法，它其实就是一个内部对象，用来描述对象的属性的特性。</p><h3>属性描述符的结构</h3><p>在定义对象、定义属性时，我们曾经介绍过属性描述符，属性描述符实际上就是一个对象。</p><p><br></p><p>属性描述符一共有 <em>6</em> 个，可以选择使用。</p><ul><li><p><em>value</em>：设置属性值，默认值为 <em>undefined</em>。</p></li><li><p><em>writable</em>：设置属性值是否可写，默认值为 <em>true</em>。</p></li><li><p><em>enumerable</em>：设置属性是否可枚举，即是否允许使用 <em>for/in</em> 语句或 <em>Object.keys( )</em> 函数遍历访问，默认为 <em>true</em>。</p></li><li><p><em>configurable</em>：设置是否可设置属性特性，默认为 <em>true</em>。如果为 <em>false</em>，将无法删除该属性，不能够修改属性值，也不能修改属性的属性描述符。</p></li><li><p><em>get</em>：取值函数，默认为 <em>undefined</em>。</p></li><li><p><em>set</em>：存值函数，默认为 <em>undefined</em>。</p></li></ul><p>注意这几个属性不是都可以一起设置，具体如下图：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-21-031647.png\" alt=\"image-20211021111647398\" contenteditable=\"false\"><br></p><p><br></p><p><strong>示例 1</strong></p><p><br></p><p>下面示例演示了使用 <em>value</em> 读写属性值的基本用法。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var obj = {};  //定义空对象\nObject.defineProperty(obj, 'x', {value : 100});  //添加属性x，值为100\nconsole.log(Object.getOwnPropertyDescriptor(obj, 'x').value);  //返回100</code></pre></div><p><strong>示例 2</strong></p><p><br></p><p>下面示例演示了使用 <em>writable</em> 属性禁止修改属性 <em>x</em>。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var obj = {};\nObject.defineProperty(obj, 'x', {\n    value : 1,  //设置属性默认值为1\n    writable : false  //禁止修改属性值\n});\nobj.x = 2;  //修改属性x的值\nconsole.log(obj.x);  // 1 说明修改失败</code></pre></div><p>在正常模式下，如果 <em>writable</em> 为 <em>false</em>，重写属性值不会报错，但是操作失败，而在严格模式下则会抛出异常。</p><p><br></p><p><strong>示例 3</strong></p><p><br></p><p><em>configurable</em> 可以禁止修改属性描述符，当其值为 <em>false</em> 时，<em>value、writable、enumerable</em> 和 <em>configurable</em> 禁止修改，同时禁止删除属性。</p><p><br></p><p>在下面示例中，当设置属性 <em>x</em> 禁止修改配置后，下面操作都是不允许的，其中 <em>obj.x=5;</em> 若操作失败，则后面 <em>4</em> 个操作方法都将抛出异常。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var obj = Object.defineProperty({}, 'x', {\n    configurable : false  // 禁止配置\n});\nobj.x = 5;  //试图修改其值\nconsole.log(obj.x);  //修改失败，返回undefined\nObject.defineProperty(obj, 'x', {value : 2});  //抛出异常\nObject.defineProperty(obj, 'x', {writable: true});  //抛出异常\nObject.defineProperty(obj, 'x', {enumerable: true});  //抛出异常\nObject.defineProperty(obj, 'x', {configurable: true});  //抛出异常</code></pre></div><p>当 <em>configurable</em> 为 <em>false</em> 时，如果把 <em>writable=true</em> 改为 <em>false</em> 是允许的。只要 <em>writable</em> 或 <em>configurable</em> 有一个为 <em>true</em>，则 <em>value</em> 也允许修改。</p><h3><em>get</em> 和 <em>set</em> 函数</h3><p>除了使用点语法或中括号语法访问属性的 <em>value</em> 外，还可以使用访问器，包括 <em>set</em> 和 <em>get</em> 两个函数。</p><p><br></p><p>其中，<em>set( )</em> 函数可以设置 <em>value</em> 属性值，而 <em>get( )</em> 函数可以读取 <em>value</em> 属性值。</p><p><br></p><p>借助访问器，可以为属性的 <em>value</em> 设计高级功能，如禁用部分特性、设计访问条件、利用内部变量或属性进行数据处理等。</p><p><br></p><p><strong>示例 1</strong></p><p><br></p><p>下面示例设计对象 <em>obj</em> 的 <em>x</em> 属性值必须为数字。为属性 <em>x</em> 定义了 <em>get</em> 和 <em>set</em> 特性，<em>obj.x</em> 取值时，就会调用 <em>get</em>；赋值时，就会调用 <em>set</em>。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var obj = Object.create(Object.prototype, {\n    _x : {  //数据属性\n        value : 1,  //初始值\n        writable : true\n    },\n    x : {  //访问器属性\n        get : function () {  //getter\n            return this._x;  //返回_x属性值\n        },\n        set : function (value) {  //setter\n            if (typeof value != \"number\"){\n              throw new Error('请输入数字');\n            }\n            this._x = value;  //赋值\n        }\n    }\n});\nconsole.log(obj.x);  //1\nobj.x = \"2\";  //抛出异常</code></pre></div><p><strong>示例 2</strong></p><p><br></p><p><em>JavaScript</em> 也支持一种简写方法。针对示例 <em>1</em>，通过以下方式可以快速定义属性。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var obj = {\n    _x : 1,  // 定义 _x 属性\n    get x() { return this._x },  //定义 x 属性的 getter\n    set x(value) {  //定义 x 属性的 setter\n        if (typeof value != \"number\"){\n          throw new Error('请输入数字');\n        }\n        this._x = value;  // 赋值\n    }\n};\nconsole.log(obj.x);  //1\nobj.x = 2;\nconsole.log(obj.x);  //2</code></pre></div><p>取值函数 <em>get( )</em> 不能接收参数，存值函数 <em>set( )</em> 只能接收一个参数，用于设置属性的值。</p><h3>操作属性描述符</h3><p>属性描述符是一个内部对象，无法直接读写，可以通过下面几个函数进行操作。</p><ul><li><p><em>Object.getOwnPropertyDescriptor( )</em>：可以读出指定对象私有属性的属性描述符。</p></li><li><p><em>Object.defineProperty( )</em>：通过定义属性描述符来定义或修改一个属性，然后返回修改后的描述符。</p></li><li><p><em>Object.defineProperties( )</em>：可以同时定义多个属性描述符。</p></li><li><p><em>Object.getOwnPropertyNames( )</em>：获取对象的所有私有属性。</p></li><li><p><em>Object.keys( )</em>：获取对象的所有本地可枚举的属性。</p></li><li><p><em>propertyIsEnumerable( )</em>：对象实例方法，直接调用，判断指定的属性是否可枚举。</p></li></ul><p><strong>示例 1</strong></p><p><br></p><p>在下面示例中，定义 <em>obj</em> 的 <em>x</em> 属性允许配置特性，然后使用 <em>Object.getOwnPropertyDescriptor( )</em> 函数获取对象 <em>obj</em> 的 <em>x</em> 属性的属性描述符。修改属性描述符的 <em>set</em> 函数，重设检测条件，允许非数值型数字赋值。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var obj = Object.create(Object.prototype, {\n    _x: {  //数据属性\n        value: 1,  //初始值\n        writable: true\n    },\n    x: {  //访问器属性\n        configurable: true,  //允许修改配置\n        get: function () {  //getter\n            return this._x;  //返回_x属性值\n        },\n        set: function (value) {\n            if (typeof value != \"number\") {\n                throw new Error('请输入数字');\n            }\n            this._x = value;  //赋值\n        }\n    }\n});\nvar des = Object.getOwnPropertyDescriptor(obj, \"x\");  //获取属性x的属性描述符\ndes.set = function (value) {\n    //修改属性x的属性描述符set函数\n    //允许非数值型的数字，也可以进行赋值\n    if (typeof value != \"number\" &amp;&amp; isNaN(value * 1)) {\n        throw new Error('请输入数字');\n    }\n    this._x = value;\n}\nobj = Object.defineProperty(obj, \"x\", des);\nconsole.log(obj.x);  //1\nobj.x = \"2\";  //把一个给数值型数字赋值给属性x\nconsole.log(obj.x);  //2</code></pre></div><p><strong>示例 2</strong></p><p><br></p><p>下面示例先定义一个扩展函数，使用它可以把一个对象包含的属性以及丰富的信息复制给另一个对象。</p><p><br></p><p>【实现代码】</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function extend (toObj, fromObj) {  //扩展对象\n    for (var property in fromObj) {  //遍历对象属性\n        if (!fromObj.hasOwnProperty(property)) continue;  //过滤掉继承属性\n        Object.defineProperty(  //复制完整的属性信息\n            toObj,  //目标对象\n            property,  //私有属性\n            Object.getOwnPropertyDescriptor(fromObj, property)  //获取属性描述符\n        );\n    }\n    return toObj;  //返回目标对象\n}</code></pre></div><p>【应用代码】</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var obj = {};  //新建对象\nobj.x = 1;  //定义对象属性\nextend(obj, { get y() { return 2} })  //定义读取器对象\nconsole.log(obj.y);  //2</code></pre></div><h3>控制对象状态</h3><p><em>JavaScript</em> 提供了 <em>3</em> 种方法，用来精确控制一个对象的读写状态，防止对象被改变。</p><ul><li><p><em>Object.preventExtensions</em>：阻止为对象添加新的属性。</p></li><li><p><em>Object.seal</em>：阻止为对象添加新的属性，同时也无法删除旧属性。等价于属性描述符的 <em>configurable</em> 属性设为 <em>false</em>。注意，该方法不影响修改某个属性的值。</p></li><li><p><em>Object.freeze</em>：阻止为一个对象添加新属性、删除旧属性、修改属性值。</p></li></ul><p>同时提供了 <em>3</em> 个对应的辅助检查函数，简单说明如下：</p><ul><li><p><em>Object.isExtensible</em>：检查一个对象是否允许添加新的属性。</p></li><li><p><em>Object.isSealed</em>：检查一个对象是否使用了 <em>Object.seal</em> 方法。</p></li><li><p><em>Object.isFrozen</em>：检查一个对象是否使用了 <em>Object.freeze</em> 方法。</p></li></ul><p><strong>示例</strong></p><p><br></p><p>下面代码分别使用 <em>Object.preventExtensions、Object.seal</em> 和 <em>Object.freeze</em> 函数控制对象的状态，然后再使用 <em>Object.isExtensible、Object.isSealed</em> 和 <em>Object.isFrozen</em> 函数检测对象的状态。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var obj1 = {};\nconsole.log(Object.isExtensible(obj1));  //true\nObject.preventExtensions(obj1);\nconsole.log(Object.isExtensible(obj1));  //false\nvar obj2 = {};\nconsole.log(Object.isSealed(obj2));  //true\nObject.seal(obj2);\nconsole.log(Object.isSealed(obj2));  //false\nvar obj3 = {};\nconsole.log(Object.isFrozen(obj3));  //true\nObject.freeze(obj3);\nconsole.log(Object.isFrozen(obj3));  //false</code></pre></div><h2>真题解答</h2><ul><li><p><em>JavaScript</em> 中对象的属性描述符有哪些？分别有什么作用？</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p>属性描述符一共有 <em>6</em> 个，可以选择使用。</p><ul><li><p><em>value</em>：设置属性值，默认值为 <em>undefined</em>。</p></li><li><p><em>writable</em>：设置属性值是否可写，默认值为 <em>true</em>。</p></li><li><p><em>enumerable</em>：设置属性是否可枚举，即是否允许使用 <em>for/in</em> 语句或 <em>Object.keys( )</em> 函数遍历访问，默认为 <em>true</em>。</p></li><li><p><em>configurable</em>：设置是否可设置属性特性，默认为 <em>true</em>。如果为 <em>false</em>，将无法删除该属性，不能够修改属性值，也不能修改属性的属性描述符。</p></li><li><p><em>get</em>：取值函数，默认为 <em>undefined</em>。</p></li><li><p><em>set</em>：存值函数，默认为 <em>undefined</em>。</p></li></ul><p>使用属性描述符的时候，<em>get</em> 和 <em>set</em> 以及 <em>value</em> 和 <em>writable</em> 这两组是互斥的，设置了 <em>get</em> 和 <em>set</em> 就不能设置 <em>value</em> 和 <em>writable</em>，反之设置了 <em>value</em> 和 <em>writable</em> 也就不可以设置 <em>get</em> 和 <em>set</em>。</p></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666077547067",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e53aa2fac4881713db3a0"),
+    interviewTitle: "class 和构造函数区别有哪些？",
+    interviewContent: "<h1><em>class</em> 和构造函数区别</h1><h2>经典真题</h2><ul><li><p>根据下面 <em>ES6</em> 构造函数的书写方式，要求写出 <em>ES5</em> 的</p></li></ul><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">class Example { \n  constructor(name) { \n    this.name = name;\n  }\n  init() { \n    const fun = () =&gt; { console.log(this.name) }\n    fun(); \n  } \n}\nconst e = new Example('Hello');\ne.init();</code></pre></div><h2>回顾 <em>class</em> 的写法</h2><p>上面的这道面试题，典型的就是考察 <em>ES6</em> 中新增的 <em>class</em> 和以前构造函数上面的区别是什么，以及如果通过 <em>ES5</em> 去模拟的话，具体如何实现。</p><p><br></p><p>那么在此之前，我们就先来回顾一下 <em>ES6</em> 中的 <em>class</em> 写法。</p><p><br></p><p>代码如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">class Computer {\n    // 构造器\n    constructor(name, price) {\n        this.name = name;\n        this.price = price;\n    }\n    // 原型方法\n    showSth() {\n        console.log(`这是一台${this.name}电脑`);\n    }\n    // 静态方法\n    static comStruct() {\n        console.log(\"电脑由显示器，主机，键鼠组成\");\n    }\n}</code></pre></div><p>上面的代码非常的简单，我们定义了一个名为 <em>Computer</em> 的类，该类存在 <em>name、price</em> 这两个实例属性，一个 <em>showSth</em> 的原型方法以及一个 <em>comStruct</em> 的静态方法。</p><p><br></p><p>我们可以简单的实例化一个对象出来，例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var apple = new Computer(\"苹果\", 15000);\nconsole.log(apple.name); // 苹果\nconsole.log(apple.price); // 15000\napple.showSth(); // 这是一台苹果电脑\nComputer.comStruct(); // 电脑由显示器，主机，键鼠组成</code></pre></div><p>在上面的代码中，我们从 <em>Computer</em> 类中实例化出来了一个 <em>apple</em> 的实例对象，然后简单访问了该对象的属性和方法。</p><h2>回顾构造函数的写法</h2><p>那么，在 <em>ES6</em> 出现之前，我们是如何实现类似于其他语言中的“类”的呢？</p><p><br></p><p>没错，我们是通过的构造函数，然后将方法挂在原型上面。例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function Computer(name, price){\n    this.name = name;\n    this.price = price;\n}\nComputer.prototype.showSth = function(){\n    console.log(`这是一台${this.name}电脑`);\n}\nComputer.comStruct = function(){\n    console.log(\"电脑由显示器，主机，键鼠组成\");\n}\n\nvar apple = new Computer(\"苹果\", 15000);\nconsole.log(apple.name); // 苹果\nconsole.log(apple.price); // 15000\napple.showSth(); // 这是一台苹果电脑\nComputer.comStruct(); // 电脑由显示器，主机，键鼠组成</code></pre></div><p>上面的代码就是我们经常在 <em>ES5</em> 中所书写的代码，通过构造函数来模拟类，实例方法挂在原型上面，静态方法就挂在构造函数上。</p><p><br></p><p>仿佛 <em>ES6</em> 的 <em>class</em> 写法就是上面构造函数写法的一种语法糖，但是事实真的如此么？</p><h2><em>class</em> 和构造函数区别上的细则</h2><p>接下来我们来详细比较一下两种写法在细节上面的一些差异。</p><p><br></p><p>首先我们书写两个“类”，一个用 <em>ES5</em> 的构造函数书写，一个用 <em>ES6</em> 的类的写法来书写，如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">class Computer1 {\n    // 构造器\n    constructor(name, price) {\n        this.name = name;\n        this.price = price;\n    }\n    // 原型方法\n    showSth() {\n        console.log(`这是一台${this.name}电脑`);\n    }\n    // 静态方法\n    static comStruct() {\n        console.log(\"电脑由显示器，主机，键鼠组成\");\n    }\n}\n\nfunction Computer2(name, price){\n    this.name = name;\n    this.price = price;\n}\nComputer2.prototype.showSth = function(){\n    console.log(`这是一台${this.name}电脑`);\n}\nComputer2.comStruct = function(){\n    console.log(\"电脑由显示器，主机，键鼠组成\");\n}</code></pre></div><p>我们知道，构造函数也是函数，既然是函数，那么就可以通过函数调用的形式来调用该函数，例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var i = Computer2();\nconsole.log(i); // undefined</code></pre></div><p>运行上面的代码，代码不会报错，因为没有使用 <em>new</em> 的方式来调用，所以不会生成一个对象，返回值就为 <em>undefined</em>。</p><p><br></p><p>但是如果我们这样来调用 <em>ES6</em> 书写的类，会直接报错：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">Computer1();\n// TypeError: Class constructor Computer1 cannot be invoked without 'new'</code></pre></div><p>可以看到，<em>ES6</em> 所书写的 <em>class</em> ，虽然我们认为背后就是构造函数实现的，但是明显是做了特殊处理的，必须通过 <em>new</em> 关键字来调用。</p><p><br></p><p>接下来，我们来针对两种写法，各自实例化一个对象，代码如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var apple = new Computer2(\"苹果\", 15000);\nfor(var i in apple){\n    console.log(i); \n}\nconsole.log('-------');\nvar huawei = new Computer1(\"华为\", 12000);\nfor(var i in huawei){\n    console.log(i); \n}</code></pre></div><p>在上面的代码中， <em>apple</em> 对象是 <em>ES5</em> 构造函数的形式创建的实例，<em>huawei</em> 是 <em>ES6</em> 类的形式创建的实例。有了这两个对象后，我们遍历这两个对象的键，结果如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">name\nprice\nshowSth\n-------\nname\nprice</code></pre></div><p>可以看到，<em>ES6</em> 中的原型方法是不可被枚举的，说明 <em>ES6</em> 对此也是做了特殊处理的。</p><p><br></p><p>另外，<em>ES6</em> 的 <em>class</em> 中的所有代码均处于严格模式之下，这里我们也可以进行一个简单的验证。例如，对两种方式的 <em>showSth</em> 原型方法稍作修改，如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">class Computer1 {\n    ...\n    // 原型方法\n    showSth(i,i) {\n        console.log(`这是一台${this.name}电脑`);\n    }\n   \t...\n}\nfunction Computer2(name, price){\n   ...\n}\nComputer2.prototype.showSth = function(j,j){\n    i = 10;\n    console.log(`这是一台${this.name}电脑`);\n}\n...</code></pre></div><p>在上面的代码中，我们为各自的 <em>showSth</em> 方法添加了重复的形式参数。我们知道，在严格模式中方法书写重复形参是不被允许的。</p><p><br></p><p>所以在运行代码时，<em>ES6</em> 的 <em>class</em> 声明方式会报错，错误信息如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">// SyntaxError: Duplicate parameter name not allowed in this context</code></pre></div><p>还有就是，如果是 <em>ES6</em> 形式所声明的类，原型上的方法是不允许通过 <em>new</em> 来调用的。</p><p><br></p><p>这里我们也可以做一个简单的测试，如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function Computer2(name, price){\n    this.name = name;\n    this.price = price;\n}\nComputer2.prototype.showSth = function(){\n    i = 10;\n    console.log(`这是一台${this.name}电脑`);\n}\nComputer2.comStruct = function(){\n    console.log(\"电脑由显示器，主机，键鼠组成\");\n}\n\nvar apple = new Computer2(\"苹果\", 15000);\nvar i = new apple.showSth(); // 这是一台undefined电脑\nconsole.log(i); // {}</code></pre></div><p>在上面的代码中，我们首先实例化了一个 <em>apple</em> 对象，在该对象的原型上面拥有一个 <em>showSth</em> 的实例方法，然后我们对其进行了 <em>new</em> 操作，可以看到返回了一个对象。</p><p><br></p><p>但是如果是 <em>ES6</em> 形式所声明的类，上面的做法将不被允许。示例如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">class Computer1 {\n    // 构造器\n    constructor(name, price) {\n        this.name = name;\n        this.price = price;\n    }\n    // 原型方法\n    showSth() {\n        console.log(`这是一台${this.name}电脑`);\n    }\n    // 静态方法\n    static comStruct() {\n        console.log(\"电脑由显示器，主机，键鼠组成\");\n    }\n}\nvar huawei = new Computer1(\"华为\", 12000);\nvar i = new huawei.showSth(); // TypeError: huawei.showSth is not a constructor\nconsole.log(i);</code></pre></div><p>在上面的代码中，我们企图对 <em>Computer1</em> 实例对象 <em>huawei</em> 的原型方法 <em>showSth</em> 进行 <em>new</em> 操作，可以看到，这里报出了 <em>TypeError</em>。</p><h2><em>Babel</em> 中具体的实现</h2><p>通过上面的各种例子，我们可以知道 <em>ES6</em> 中的 <em>class</em> 实现并不是我们单纯所想象的就是之前 <em>ES5</em> 写构造函数的写法，虽然本质上是构造函数，但是内部是做了各种处理的。</p><p><br></p><p>这里，我们就来使用 <em>Babel</em> 对下面的代码进行转义，转义之前的代码如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">class Computer {\n    // 构造器\n    constructor(name, price) {\n        this.name = name;\n        this.price = price;\n    }\n    // 原型方法\n    showSth() {\n        console.log(`这是一台${this.name}电脑`);\n    }\n    // 静态方法\n    static comStruct() {\n        console.log(\"电脑由显示器，主机，键鼠组成\");\n    }\n}</code></pre></div><p>转义后的代码如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">\"use strict\";\nfunction _classCallCheck(instance, Constructor) {\n    if (!(instance instanceof Constructor)) {\n        throw new TypeError(\"Cannot call a class as a function\");\n    }\n}\n\nfunction _defineProperties(target, props) {\n    for (var i = 0; i &lt; props.length; i++) {\n        var descriptor = props[i];\n        descriptor.enumerable = descriptor.enumerable || false;\n        descriptor.configurable = true;\n        if (\"value\" in descriptor)\n            descriptor.writable = true;\n        Object.defineProperty(target, descriptor.key, descriptor);\n    }\n}\n\nfunction _createClass(Constructor, protoProps, staticProps) {\n    if (protoProps)\n        _defineProperties(Constructor.prototype, protoProps);\n    if (staticProps)\n        _defineProperties(Constructor, staticProps);\n    return Constructor;\n}\n\nvar Computer = /*#__PURE__*/function () {\n    // 构造器\n    function Computer(name, price) {\n        _classCallCheck(this, Computer);\n\n        this.name = name;\n        this.price = price;\n    } // 原型方法\n\n\n    _createClass(Computer, [{\n        key: \"showSth\",\n        value: function showSth() {\n            console.log(\"\\u8FD9\\u662F\\u4E00\\u53F0\".concat(this.name, \"\\u7535\\u8111\"));\n        } // 静态方法\n\n    }], [{\n        key: \"comStruct\",\n        value: function comStruct() {\n            console.log(\"电脑由显示器，主机，键鼠组成\");\n        }\n    }]);\n\n    return Computer;\n}();\nvar apple = new Computer(\"苹果\", 15000);\nconsole.log(apple.name); // 苹果\nconsole.log(apple.price); // 15000\napple.showSth(); // 这是一台苹果电脑\nComputer.comStruct(); // 电脑由显示器，主机，键鼠组成</code></pre></div><p>可以看到，果然没有我们想象的那么简单，接下来我们就来一点一点剖析转义的结果。</p><p><br></p><p>首先整体来讲分为下面几块：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">\"use strict\";\nfunction _classCallCheck(instance, Constructor) { ... }\n\nfunction _defineProperties(target, props) { ... }\n\nfunction _createClass(Constructor, protoProps, staticProps) { ... }\n\nvar Computer = /*#__PURE__*/function () { ... }();</code></pre></div><p>我们一块一块的来看。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function _classCallCheck(instance, Constructor) {\n    if (!(instance instanceof Constructor)) {\n        throw new TypeError(\"Cannot call a class as a function\");\n    }\n}</code></pre></div><p>第一个方法叫做 <em>classCallCheck</em>，从名字上面我们也可以看出，这个方法是核对构造方法的调用形式的，接收两个参数，一个是实例对象，另一个是构造函数，通过 <em>instanceof</em> 来看参数 <em>instance</em> 是否是 <em>Constructor</em> 的实例，如果不是就抛出错误。</p><p><br></p><p>接下来是 <em>_defineProperties</em> 方法，我们对此方法稍作了修改，打印 <em>target</em> 和 <em>props</em> 的值</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function _defineProperties(target, props) {\n    console.log(\"target:::\",target);\n    console.log(\"props:::\",props);\n    for (var i = 0; i &lt; props.length; i++) {\n        var descriptor = props[i];\n        descriptor.enumerable = descriptor.enumerable || false;\n        descriptor.configurable = true;\n        if (\"value\" in descriptor)\n            descriptor.writable = true;\n        Object.defineProperty(target, descriptor.key, descriptor);\n    }\n}</code></pre></div><p>结果如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">target::: {}\nprops::: [ { key: 'showSth', value: [Function: showSth] } ]\ntarget::: [Function: Computer]\nprops::: [ { key: 'comStruct', value: [Function: comStruct] } ]</code></pre></div><p>可以看出，该方法就是设置对象方法的属性描述符，包含是否可遍历呀，是否可写呀等信息，设置完成后将方法挂在 <em>target</em> 对象上面。</p><p><br></p><p>下一个是 <em>_createClass</em> 函数，我们仍然将三个参数打印出来</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function _createClass(Constructor, protoProps, staticProps) {\n    console.log(\"Constructor::\",Constructor);\n    console.log(\"protoProps::\",protoProps);\n    console.log(\"staticProps::\",staticProps);\n    if (protoProps)\n        _defineProperties(Constructor.prototype, protoProps);\n    if (staticProps)\n        _defineProperties(Constructor, staticProps);\n    return Constructor;\n}</code></pre></div><p>结果如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">Constructor:: [Function: Computer]\nprotoProps:: [ { key: 'showSth', value: [Function: showSth] } ]\nstaticProps:: [ { key: 'comStruct', value: [Function: comStruct] } ]</code></pre></div><p>可以看出，接收的三个参数一次为构造函数、原型上的方法，静态方法。接下来在该方法里面所做的事情也就非常清晰了。</p><p><br></p><p>最后就是我们的构造函数了：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var Computer = /*#__PURE__*/function () {\n    // 构造器\n    function Computer(name, price) {\n        // 进行调用确认\n        _classCallCheck(this, Computer);\n\t\t\t\t// 添加实例属性\n        this.name = name;\n        this.price = price;\n    } // 原型方法\n\n\t\t// 将实例方法和静态方法添加到构造函数上面\n    _createClass(Computer, [{\n        key: \"showSth\",\n        value: function showSth() {\n            console.log(\"\\u8FD9\\u662F\\u4E00\\u53F0\".concat(this.name, \"\\u7535\\u8111\"));\n        } // 静态方法\n\n    }], [{\n        key: \"comStruct\",\n        value: function comStruct() {\n            console.log(\"电脑由显示器，主机，键鼠组成\");\n        }\n    }]);\n\n    return Computer;\n}();</code></pre></div><p>明白了 <em>_createClass</em> 方法的作用后，该方法的代码也就非常的清晰了。</p><h2>真题解答</h2><ul><li><p>根据下面 <em>ES6</em> 构造函数的书写方式，要求写出 <em>ES5</em> 的</p></li></ul><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">class Example { \n  constructor(name) { \n    this.name = name;\n  }\n  init() { \n    const fun = () =&gt; { console.log(this.name) }\n    fun(); \n  } \n}\nconst e = new Example('Hello');\ne.init();</code></pre></div><blockquote><p>参考答案：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">\"use strict\";\n\nfunction _classCallCheck(instance, Constructor) {\n    if (!(instance instanceof Constructor)) {\n        throw new TypeError(\"Cannot call a class as a function\");\n    }\n}\n\nfunction _defineProperties(target, props) {\n    for (var i = 0; i &lt; props.length; i++) {\n        var descriptor = props[i];\n        descriptor.enumerable = descriptor.enumerable || false;\n        descriptor.configurable = true;\n        if (\"value\" in descriptor)\n            descriptor.writable = true;\n        Object.defineProperty(target, descriptor.key, descriptor);\n    }\n}\n\nfunction _createClass(Constructor, protoProps, staticProps) {\n    if (protoProps)\n        _defineProperties(Constructor.prototype, protoProps);\n    if (staticProps)\n        _defineProperties(Constructor, staticProps);\n    return Constructor;\n}\n\nvar Example = /*#__PURE__*/function () {\n   function Example(name) {\n        _classCallCheck(this, Example);\n\n        this.name = name;\n   }\n\n   _createClass(Example, [{\n        key: \"init\",\n        value: function init() {\n            var _this = this;\n\n            var fun = function fun() {\n                console.log(_this.name);\n            };\n\n            fun();\n        }\n   }]);\n\n   return Example;\n}();\n\nvar e = new Example('Hello');\ne.init();</code></pre></div><p>这里可以解释出 <em>_classCallCheck、_defineProperties、_createClass</em> 这几个方法各自的作用是什么。</p></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666077610811",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e53fc2fac4881713db3a4"),
+    interviewTitle: "为什么 0.1+0.2==0.3 得到的值为 false",
+    interviewContent: "<h1>浮点数精度问题</h1><h2>经典真题</h2><ul><li><p>为什么 <em>console.log(0.2+0.1==0.3)</em>  得到的值为 <em>false</em></p></li></ul><h2>浮点数精度常见问题</h2><p>在 <em>JavaScript</em> 中整数和浮点数都属于 <em>number</em> 数据类型，所有数字都是以 <em>64</em> 位浮点数形式储存，即便整数也是如此。 所以我们在打印 <em>1.00</em> 这样的浮点数的结果是 <em>1</em> 而非 <em>1.00</em> 。</p><p><br></p><p>在一些特殊的数值表示中，例如金额，这样看上去有点别扭，但是至少值是正确了。</p><p><br></p><p>然而要命的是，当浮点数做数学运算的时候，你经常会发现一些问题，举几个例子：</p><p><br></p><p><strong>场景一</strong>：进行浮点值运算结果的判断</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">// 加法 \nconsole.log(0.1 + 0.2); // 0.30000000000000004\nconsole.log(0.7 + 0.1); // 0.7999999999999999\nconsole.log(0.2 + 0.4); // 0.6000000000000001\nconsole.log(2.22 + 0.1); // 2.3200000000000003\n \n// 减法\nconsole.log(1.5 - 1.2); // 0.30000000000000004\nconsole.log(0.3 - 0.2); // 0.09999999999999998\n \n// 乘法 \nconsole.log(19.9 * 100); // 1989.9999999999998\nconsole.log(19.9 * 10 * 10); // 1990\nconsole.log(9.7 * 100); // 969.9999999999999\nconsole.log(39.7 * 100); // 3970.0000000000005\n \n// 除法 \nconsole.log(0.3 / 0.1); // 2.9999999999999996\nconsole.log(0.69 / 10); // 0.06899999999999999</code></pre></div><p><strong>场景二</strong>：将小数乘以 <em>10</em> 的 <em>n</em> 次方取整</p><p><br></p><p>比如将钱币的单位，从元转化成分，经常写出来的是 <em>parseInt(yuan*100, 10)</em></p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">console.log(parseInt(0.58 * 100, 10)); // 57</code></pre></div><p><strong>场景三</strong>：四舍五入保留 <em>n</em> 位小数</p><p><br></p><p>例如我们会写出  <em>(number).toFixed(2)</em>，但是看下面的例子：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">console.log((1.335).toFixed(2)); // 1.33</code></pre></div><p>在上面的例子中，我们得出的结果是 <em>1.33</em>，而不是预期结果 <em>1.34</em>。</p><h2>为什么会有这样的问题</h2><p>似乎是不可思议。小学生都会算的题目，<em>JavaScript</em> 不会？</p><p><br></p><p>我们来看看其真正的原因，到底为什么会产生精度丢失的问题呢？</p><p><br></p><p>计算机底层只有 <em>0</em> 和 <em>1</em>， 所以所有的运算最后实际上都是二进制运算。</p><p><br></p><p>十进制整数利用辗转相除的方法可以准确地转换为二进制数，但浮点数呢？</p><p><br></p><p><img src=\"https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9fc493d0e2e84274b8445d8c5df405ae~tplv-k3u1fbpfcp-watermark.awebp\" alt=\"img\" contenteditable=\"false\"><br></p><p><br></p><p><em>JavaScript</em> 里的数字是采用 <em>IEEE 754</em> 标准的 <em>64</em> 位双精度浮点数。</p><p><br></p><p>先看下面一张图：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-29-060439.png\" alt=\"preview\" contenteditable=\"false\"><br></p><p><br></p><p>该规范定义了浮点数的格式，对于 <em>64</em> 位的浮点数在内存中的表示，最高的 <em>1</em> 位是符号位，接着的 <em>11</em> 位是指数，剩下的 <em>52</em> 位为有效数字，具体如下：</p><ul><li><p>符号位 <em>S</em>：第 <em>1</em> 位是正负数符号位（<em>sign</em>），<em>0</em> 代表正数，<em>1</em> 代表负数</p></li><li><p>指数位 <em>E</em>：中间的 <em>11</em> 位存储指数（<em>exponent</em>），用来表示次方数</p></li><li><p>尾数位 <em>M</em>：最后的 <em>52</em> 位是尾数（<em>mantissa</em>），储存小数部分，超出的部分自动进一舍零</p></li></ul><p>也就是说，浮点数最终在运算的时候实际上是一个符合该标准的二进制数</p><p><br></p><p>符号位决定了一个数的正负，指数部分决定了数值的大小，小数部分决定了数值的精度。</p><p><br></p><p><em>IEEE 754</em> 规定，有效数字第一位默认总是 <em>1</em>，不保存在 <em>64</em> 位浮点数之中。也就是说，有效数字总是 <em>1.xx…xx</em> 的形式，其中 <em>xx…xx</em> 的部分保存在 <em>64</em> 位浮点数之中，最长可能为 <em>52</em> 位。因此，<em>JavaScript</em> 提供的有效数字最长为 <em>53</em> 个二进制位（<em>64</em> 位浮点的后 <em>52</em> 位 + 有效数字第一位的 <em>1</em>）。</p><p><br></p><p>既然限定位数，必然有截断的可能。</p><p><br></p><p>我们可以看一个例子：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">console.log(0.1 + 0.2); // 0.30000000000000004</code></pre></div><p>为了验证该例子，我们得先知道怎么将浮点数转换为二进制，整数我们可以用除 <em>2</em> 取余的方式，小数我们则可以用乘 <em>2</em> 取整的方式。</p><p><br></p><p><em>0.1</em> 转换为二进制：</p><p><br></p><p><em>0.1 * 2</em>，值为 <em>0.2</em>，小数部分 <em>0.2</em>，整数部分 <em>0</em></p><p><br></p><p><em>0.2 * 2</em>，值为 <em>0.4</em>，小数部分 <em>0.4</em>，整数部分 <em>0</em></p><p><br></p><p><em>0.4 * 2</em>，值为0.8，小数部分0.8，整数部分0</p><p><br></p><p><em>0.8 * 2</em>，值为 <em>1.6</em>，小数部分 <em>0.6</em>，整数部分 <em>1</em></p><p><br></p><p><em>0.6 * 2</em>，值为 <em>1.2</em>，小数部分 <em>0.2</em>，整数部分 <em>1</em></p><p><br></p><p><em>0.2 * 2</em>，值为 <em>0.4</em>，小数部分 <em>0.4</em>，整数部分 <em>0</em></p><p><br></p><p>从 <em>0.2</em> 开始循环</p><p><br></p><p><em>0.2</em>  转换为二进制可以直接参考上述，肯定最后也是一个循环的情况</p><p><br></p><p>所以最终我们能得到两个循环的二进制数：</p><p><br></p><p><em>0.1：0.0001 1001 1001 1001 1001 1001 1001 1001 1001 1001 1001 1001 1100 ...</em></p><p><br></p><p><em>0.2：0.0011 0011 0011 0011 0011 0011 0011 0011 0011 0011 0011 0011 0011 ...</em></p><p><br></p><p>这两个的和的二进制就是：</p><p><br></p><p><em>sum：0.0100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 1100 ...</em></p><p><br></p><p>最终我们只能得到和的近似值（按照 <em>IEEE 754</em> 标准保留 <em>52</em> 位，按 <em>0</em> 舍 <em>1</em> 入来取值），然后转换为十进制数变成：</p><p><br></p><p>sum ≈ 0.30000000000000004</p><p><br></p><p>再例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">console.log((1.335).toFixed(2)); // 1.33</code></pre></div><p>因为 <em>1.335</em> 其实是 <em>1.33499999999999996447286321199</em>，<em>toFixed</em> 虽然是四舍五入，但是是对 <em>1.33499999999999996447286321199</em> 进行四五入，所以得出 <em>1.33</em>。</p><p><br></p><p>在 <em>Javascript</em> 中，整数精度同样存在问题，先来看看问题：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">console.log(19571992547450991); // 19571992547450990\nconsole.log(19571992547450991===19571992547450992); // true</code></pre></div><p>同样的原因，在 <em>JavaScript</em> 中  <em>number</em> 类型统一按浮点数处理，整数是按最大 <em>54</em> 位来算，</p><ul><li><p>最大( <em>253 - 1</em>，<em>Number.MAX_SAFE_INTEGER</em>、<em>9007199254740991</em>)</p></li><li><p>最小( <em>-(253 - 1)</em>，<em>Number.MIN_SAFE_INTEGER</em>、<em>-9007199254740991</em>)</p></li></ul><p>所以只要超过这个范围，就会存在被舍去的精度问题。</p><p><br></p><p>当然这个问题并不只是在 <em>Javascript</em> 中才会出现，几乎所有的编程语言都采用了 <em>IEEE-754</em> 浮点数表示法，任何使用二进制浮点数的编程语言都会有这个问题。</p><p><br></p><p>只不过在很多其他语言中已经封装好了方法来避免精度的问题，而 <em>JavaScript</em> 是一门弱类型的语言，从设计思想上就没有对浮点数有个严格的数据类型，所以精度误差的问题就显得格外突出。</p><p><br></p><p>通常这种对精度要求高的计算都应该交给后端去计算和存储，因为后端有成熟的库来解决这种计算问题。</p><p><br></p><p>前端也有几个不错的类库：</p><p><br></p><p><strong><em>Math.js</em></strong></p><p><br></p><p><em>Math.js</em> 是专门为 <em>JavaScript</em> 和 <em>Node.js</em> 提供的一个广泛的数学库。它具有灵活的表达式解析器，支持符号计算，配有大量内置函数和常量，并提供集成解决方案来处理不同的数据类型。</p><p><br></p><p>像数字，大数字（超出安全数的数字），复数，分数，单位和矩阵。 功能强大，易于使用。</p><p><br></p><p><strong><em>decimal.js</em></strong></p><p><br></p><p>为 <em>JavaScript</em> 提供十进制类型的任意精度数值。</p><p><br></p><p><strong><em>big.js</em></strong></p><p><br></p><p>不仅能够支持处理 <em>Long</em> 类型的数据，也能够准确的处理小数的运算。</p><h2>真题解答</h2><ul><li><p>为什么 <em>console.log(0.2+0.1==0.3)</em>  得到的值为 <em>false</em></p></li></ul><blockquote><p>参考答案：</p><p><br></p><p>因为浮点数的计算存在 <em>round-off</em>  问题，也就是浮点数不能够进行精确的计算。并且：</p><ul><li><p>不仅 <em>JavaScript</em>，所有遵循 <em>IEEE 754</em> 规范的语言都是如此；</p></li><li><p>在 <em>JavaScript</em> 中，所有的 <em>Number</em> 都是以 <em>64-bit</em> 的双精度浮点数存储的；</p></li><li><p>双精度的浮点数在这 <em>64</em> 位上划分为 <em>3</em> 段，而这 <em>3</em> 段也就确定了一个浮点数的值，<em>64bit</em> 的划分是“<em>1-11-52</em>”的模式，具体来说：</p><ul><li><p>就是 <em>1</em> 位最高位（最左边那一位）表示符号位，<em>0</em> 表示正，<em>1</em> 表示负；</p></li><li><p><em>11</em> 位表示指数部分；</p></li><li><p><em>52</em> 位表示尾数部分，也就是有效域部分</p></li></ul></li></ul></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666077692003",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e542e2fac4881713db3a8"),
+    interviewTitle: "什么是 JS 的严格模式？",
+    interviewContent: "<h1>严格模式</h1><h2>经典真题</h2><ul><li><p><em>use strict</em> 是什么意思 ? 使用它区别是什么？</p></li></ul><h2>什么是严格模式</h2><p>严格模式是从 <em>ES5</em> 开始新增的一种方式，是采用具有限制性 <em>JavaScript</em> 变体的一种方式，从而使代码隐式地脱离“马虎模式/稀松模式/懒散模式“（<em>sloppy</em>）模式。</p><p><br></p><p>设立\"严格模式\"的目的，主要有以下几个：</p><ul><li><p>消除 <em>Javascript</em> 语法的一些不合理、不严谨之处，减少一些怪异行为;</p></li><li><p>消除代码运行的一些不安全之处，保证代码运行的安全；</p></li><li><p>提高编译器效率，增加运行速度；</p></li><li><p>为未来新版本的 <em>Javascript</em> 做好铺垫。</p></li></ul><p>“严格模式”体现了 <em>Javascript</em> 更合理、更安全、更严谨的发展方向，支持严格模式的浏览器有：<em>Internet Explorer 10 +、 Firefox 4+ Chrome 13+、 Safari 5.1+、 Opera 12+</em>。</p><p><br></p><p>在“严格模式下”，同样的代码，可能会有不一样的运行结果。一些在“正常模式”下可以运行的语句，在“严格模式”下将不能运行。</p><p><br></p><p>掌握这些内容，有助于更细致深入地理解 <em>Javascript</em>，让你变成一个更好的程序员。</p><h2>开启严格模式</h2><p>进入“严格模式”的标志，是下面这行语句：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">\"use strict\";</code></pre></div><p>老版本的浏览器会把它当作一行普通字符串，加以忽略。</p><p><br></p><p>“严格模式”有两种调用方法，适用于不同的场合。</p><p><br></p><p><strong>针对整个脚本文件</strong></p><p><br></p><p>将 <em>“use strict”</em> 放在脚本文件的第一行，则整个脚本都将以“严格模式”运行。</p><p><br></p><p>如果这行语句不在第一行，则无效，整个脚本以“正常模式”运行。如果不同模式的代码文件合并成一个文件，这一点需要特别注意。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">\"use strict\";\nconsole.log(\"这是严格模式。\");</code></pre></div><p>在上面的代码中，我们第一行书写了 <em>“use strict”</em>，所以整个代码会进入到严格模式执行。</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;script&gt;\n  \"use strict\";\n  console.log(\"这是严格模式。\");\n&lt;/script&gt;\n\n&lt;script&gt;\n  console.log(\"这是正常模式。\");\n&lt;/script&gt;</code></pre></div><p>上面的代码表示，一个网页中依次有两段 <em>Javascript</em> 代码。前一个 <em>script</em> 标签是严格模式，后一个不是。</p><p><br></p><p><strong>针对单个函数</strong></p><p><br></p><p>将 <em>“use strict”</em> 放在函数体的第一行，则整个函数以“严格模式”运行。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function strict(){\n  \"use strict\";\n  return \"这是严格模式。\";\n}\n\nfunction notStrict() {\n  return \"这是正常模式。\";\n}</code></pre></div><p><strong>脚本文件的变通写法</strong></p><p><br></p><p>因为第一种调用方法不利于文件合并，所以更好的做法是，借用第二种方法，将整个脚本文件放在一个立即执行的匿名函数之中。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">(function (){\n  \"use strict\";\n  // some code here\n})();</code></pre></div><h2>严格模式和普通模式区别</h2><p>接下来，我们就来看一下严格模式下对 <em>Javascript</em> 的语法和行为，都做了哪些改变。</p><p><br></p><p><strong>没有使用 <em>var</em> 声明的变量不能使用</strong></p><p><br></p><p>在普通模式下，我们可以使用一个未声明的变量，此时该变量会成为一个全局变量。但是这种使用方式在严格模式下会报错。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">\"use strict\"\na=10; // ReferenceError: a is not defined\nconsole.log(a)\nfunction sum(){\n\tvar a=10;\n\tconsole.log(a)\n}\nsum()</code></pre></div><p><strong>删除变量和不存在的属性会报错</strong></p><p><br></p><p>在普通模式下，删除变量或者不允许删除的属性虽然也会失败，但是是“静默失败”，也就是说虽然失败了，但是不会给出任何提示。这样其实会产生很多隐藏问题，也给程序员的调错带来了难度。</p><p><br></p><p>在严格模式下则会保存，例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">\"use strict\"\nvar i = 10;\ndelete i; // SyntaxError: Delete of an unqualified identifier in strict mode.\nconsole.log(i); // 10</code></pre></div><p><strong>函数中相同的形参名会报错</strong></p><p><br></p><p>在普通模式下，函数中两个形参名相同也不会报错，只不过后面的形参所接收到的值会覆盖前面的同名形参。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function a(b,b){\n    console.log(b); // 2\n}\na(1, 2)   </code></pre></div><p>但是在严格模式下，相同的形参名会报错。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">\"use strict\"\n// SyntaxError: Duplicate parameter name not allowed in this context\nfunction a(b,b){\n    console.log(b);\n}\na(1, 2)   </code></pre></div><p><strong>对象不能有重名的属性</strong></p><p><br></p><p>正常模式下，如果对象有多个重名属性，最后赋值的那个属性会覆盖前面的值。严格模式下，这属于语法错误。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">\"use strict\";\nvar o = {\n  p: 1,\n  p: 2\n}; // 语法错误</code></pre></div><p><strong>禁止八进制表示法</strong></p><p><br></p><p>正常模式下，整数的第一位如果是 <em>0</em>，表示这是八进制数，比如 <em>010</em> 等于十进制的 <em>8</em>。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var i = 010;\nconsole.log(i); // 8</code></pre></div><p>严格模式禁止这种表示法，整数第一位为 <em>0</em>，将报错。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">\"use strict\"\nvar i = 010; // SyntaxError: Octal literals are not allowed in strict mode.\nconsole.log(i);</code></pre></div><p><strong>函数内部 <em>this</em> 值为 <em>undefined</em></strong></p><p><br></p><p>在普通模式下，函数中的 <em>this</em> 在以函数的形式被调用时，指向全局对象。而在严格模式中，得到的值为 <em>undefined</em>。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">\"use strict\"\nfunction a(){\n    console.log(this); // undefined\n}\na();</code></pre></div><p><strong>创设 <em>eval</em> 作用域</strong></p><p><br></p><p>正常模式下，<em>Javascript</em> 语言有两种变量作用域（<em>scope</em>）：全局作用域和函数作用域。</p><p><br></p><p>严格模式创设了第三种作用域：<em>eval</em> 作用域。</p><p><br></p><p>正常模式下，<em>eval</em> 语句的作用域，取决于它处于全局作用域，还是处于函数作用域。</p><p><br></p><p>严格模式下，<em>eval</em> 语句本身就是一个作用域，不再能够生成全局变量了，它所生成的变量只能用于 <em>eval</em> 内部。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">\"use strict\";\nvar x = 2;\nconsole.info(eval(\"var x = 5; x\")); // 5\nconsole.info(x); // 2</code></pre></div><p><strong>保留字</strong></p><p><br></p><p>为了向将来 <em>Javascript</em> 的新版本过渡，严格模式新增了一些保留字：<em>implements, interface, let, package, private, protected, public, static, yield</em>。使用这些词作为变量名将会报错。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">\"use strict\";\nvar public = \"hello world\" // SyntaxError: Unexpected strict mode reserved word\nconsole.log(public);</code></pre></div><p>更多关于严格模式的内容，可以参阅 ：</p><p><br></p><p><em>MDN</em>：<em>https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode</em></p><p><br></p><p>《<em>Javascript</em> 严格模式详解 <em>By</em> 阮一峰》：<em>http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html</em></p><h2>真题解答</h2><ul><li><p><em>use strict</em> 是什么意思 ? 使用它区别是什么？</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p><em>use strict</em> 代表开启严格模式，这种模式使得 <em>Javascript</em> 在更严格的条件下运行，实行更严格解析和错误处理。</p><p><br></p><p>开启“严格模式”的优点：</p><ul><li><p>消除 <em>Javascript</em> 语法的一些不合理、不严谨之处，减少一些怪异行为;</p></li><li><p>消除代码运行的一些不安全之处，保证代码运行的安全；</p></li><li><p>提高编译器效率，增加运行速度；</p></li><li><p>为未来新版本的 <em>Javascript</em> 做好铺垫。</p></li></ul><p>回答一些具体的严格模式下和普通模式之间的区别。</p></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666077742387",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e54a72fac4881713db3be"),
+    interviewTitle: "什么是函数防抖和节流？",
+    interviewContent: "<h1>函数防抖和节流</h1><h2>经典真题</h2><ul><li><p>防抖，节流是什么，如何实现 （字节）</p></li></ul><h2>什么是函数防抖和节流</h2><p><em>JavaScript</em> 中的函数大多数情况下都是由用户主动调用触发的，除非是函数本身的实现不合理，否则一般不会遇到跟性能相关的问题。</p><p><br></p><p>但是在一些少数情况下，函数的触发不是由用户直接控制的。在这些场景下，函数有可能被非常频繁地调用，而造成大的性能问题。解决性能问题的处理办法就有<strong>函数防抖</strong>和<strong>函数节流</strong>。</p><p><br></p><p>下面是函数被频繁调用的常见的几个场景：</p><ul><li><p><em>mousemove</em> 事件：如果要实现一个拖拽功能，需要一路监听 <em>mousemove</em> 事件，在回调中获取元素当前位置，然后重置 <em>DOM</em> 的位置来进行样式改变。如果不加以控制，每移动一定像素而触发的回调数量非常惊人，回调中又伴随着 DOM 操作，继而引发浏览器的重排与重绘，性能差的浏览器可能就会直接假死。</p></li><li><p><em>window.onresize</em> 事件：为 <em>window</em> 对象绑定了 <em>resize</em> 事件，当浏览器窗口大小被拖动而改变的时候，这个事件触发的频率非常之高。如果在 <em>window.onresize</em> 事件函数里有一些跟 <em>DOM</em> 节点相关的操作，而跟 <em>DOM</em> 节点相关的操作往往是非常消耗性能的，这时候浏览器可能就会吃不消而造成卡顿现象。</p></li><li><p>射击游戏的 <em>mousedown/keydown</em> 事件（单位时间只能发射一颗子弹）</p></li><li><p>搜索联想（<em>keyup</em> 事件）</p></li><li><p>监听滚动事件判断是否到页面底部自动加载更多（<em>scroll</em> 事件）</p></li></ul><p>对于这些情况的解决方案就是函数防抖（<em>debounce</em>）或函数节流（<em>throttle</em>），<strong>其核心就是限制某一个方法的频繁触发</strong>。</p><h2>函数防抖</h2><p>我们首先来看函数防抖。<strong>函数防抖，是指防止函数在极短的时间内反复调用，造成资源的浪费</strong>。</p><p><br></p><p>考虑一下电梯关门的场景，现代的大部分电梯都可以通过红外，感知到是否有人进入，为了避免夹到人，同时为了等待后面的人，电梯关门的时间往往有这么一种规则：**始终保证电梯门在最后一个人进入后 <em>3</em> 秒后关闭。**如果有人进入后，还没有等到 <em>3</em> 秒又有人进来了，电梯门会以最后一次进入的时间为计时起点，重新等待3秒。</p><p><br></p><p>再考虑一个页面上的场景，页面上的某些事件触发频率非常高，比如滚动条滚动、窗口尺寸变化、鼠标移动等，如果我们需要注册这类事件，不得不考虑效率问题，又特别是事件处理中涉及到了大量的操作，比如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">window.onresize = function(){\n    // 大量的 DOM 操作\n}</code></pre></div><p>当窗口尺寸发生变化时，哪怕只变化了一点点，都有可能造成成百上千次对处理函数的调用，这对网页性能的影响是极其巨大的。</p><p><br></p><p>于是，我们可以考虑，每次窗口尺寸变化、滚动条滚动、鼠标移动时，不要立即执行相关操作，而是等一段时间，以窗口尺寸停止变化、滚动条不再滚动、鼠标不再移动为计时起点，一段时间后再去执行操作，就像电梯关门那样。</p><p><br></p><p>再考虑一个搜索的场景（例如百度），当我在一个文本框中输入文字（键盘按下事件）时，需要将文字发送到服务器，并从服务器得到搜索结果，这样的话，用户直接输入搜索文字就可以了，不用再去点搜索按钮，可以提升用户体验，类似于下面的效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-01-014859.gif\" alt=\"5be978627ac99\" contenteditable=\"false\"><br></p><p><br></p><p>上面的效果，我没有点击搜索按钮，也没有按回车键，只是写了一些搜索的文字而已。</p><p><br></p><p>可是如何来实现上面的场景呢？</p><p><br></p><p>如果文本框的文字每次被改变（键盘按下事件），我都要把数据发送到服务器，得到搜索结果，这是非常恐怖的！</p><p><br></p><p>想想看，我搜索 <em>“google”</em> 这样的单词，至少需要按 <em>6</em> 次按键，就这一个词，我需要向服务器请求 <em>6</em> 次，并让服务器去搜索 <em>6</em> 次，但我只需要最后一次的结果就可以了。如果考虑用户按错的情况，发送请求的次数更加恐怖。这样就造成了大量的带宽被占用，浪费了很多资源。</p><p><br></p><p>如何避免这样的问题呢？</p><p><br></p><p>仔细观察，你会发现，真正的搜索行为，并不是每次按键都会触发的，只有当用户停止按键一段事件后才会触发。</p><p><br></p><p>于是，为了满足这种类型场景，我们可以开发一个通用的函数，这个函数要满足以下功能：</p><ol><li><p>调用该函数后，不立即做事，而是一段时间后去做事</p></li><li><p>如果在等待时间内调用了该函数，重新计时</p></li></ol><p>这样的功能，就叫做函数防抖，其实就是防止函数短时间内被调用多次。</p><p><br></p><p>要完成该函数，需要给予两个条件：</p><ol><li><p>告诉我一段时间后要做什么事（这里应该是一个回调函数，即函数作为参数）</p></li><li><p>告诉我要等待多长时间（毫秒）</p></li></ol><p>下面我们就来封装这么一个函数防抖的通用函数：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">/**\n * 函数防抖\n * @param {function} func 一段时间后，要调用的函数\n * @param {number} wait 等待的时间，单位毫秒\n */\nfunction debounce(func, wait) {\n    // 设置变量，记录 setTimeout 得到的 id\n    var timerId = null;\n    return function (...args) {\n        if (timerId) {\n            // 如果有值，说明目前正在等待中，清除它\n            clearTimeout(timerId);\n        }\n        // 重新开始计时\n        timerId = setTimeout(() =&gt; {\n            func(...args);\n        }, wait);\n    }\n}</code></pre></div><p>下面来进行一个测试，测试如下：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;input type=\"text\" id=\"txt\"&gt;</code></pre></div><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var txt = document.getElementById(\"txt\");\n// 调用 debounce 函数来将事件处理函数变为一个防抖函数\nvar debounceHandle = debounce(function(event){\n  console.log(event.target.value);\n}, 500)\ntxt.onkeyup = (event)=&gt;{\n  debounceHandle(event);\n}</code></pre></div><p>效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-01-020722.gif\" alt=\"2021-10-01 10.06.44\" contenteditable=\"false\"><br></p><h2>函数节流</h2><p>函数节流的目的，也是为了防止一个函数短时间内被频繁的触发。</p><p><br></p><p>和函数防抖的原理不同，函数节流的核心思想是让连续的函数执行，变为固定时间段间断地执行。</p><p><br></p><p>这里做一个形象的的比喻：</p><p><br></p><p>前面我们所介绍的函数防抖，是指频繁触发的情况下，只有足够的空闲时间，才执行代码一次。比如生活中的坐公交，就是一定时间内，如果有人陆续刷卡上车，司机就不会开车。只有别人没刷卡了，司机才开车。</p><p><br></p><p>而这里我们要介绍的函数节流，指一定时间内函数只执行一次。比如人的眨眼睛，就是一定时间内眨一次。这是函数节流最形象的解释。</p><p><br></p><p>关于节流的实现，有 <em>2</em> 种主流的实现方式，一种是<strong>使用时间戳</strong>，一种是<strong>设置定时器</strong>。</p><p><br></p><p><strong>（1）使用时间戳</strong></p><p><br></p><p>触发事件时，取出当前的时间戳，然后减去之前的时间戳（最一开始值设为 <em>0</em>），如果大于设置的时间周期，就执行函数，然后更新时间戳为当前的时间戳，如果小于，就不执行。</p><p><br></p><p>下面是封装使用时间戳的函数节流的通用函数：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">/**\n * \n * @param {要进行节流的函数} func \n * @param {间隔时间} wait \n * @returns \n */\nfunction throttle(func, wait) {\n    var args; // 存储函数参数\n    var previous = 0; // 一开始的默认时间\n    return function () {\n        var now = new Date(); // 获取最新的时间戳\n        args = arguments; // 获取参数\n        // 进行时间戳的判断，如果超出规定时间，则执行\n        if (now - previous &gt; wait) {\n            func.apply(null, args);\n            previous = now;\n        }\n    }\n}</code></pre></div><p>下面来实际使用测试一下：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;input type=\"text\" id=\"txt\"&gt;</code></pre></div><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var txt = document.getElementById(\"txt\");\n// 调用 throttle 函数来将事件处理函数变为一个节流函数\nvar throttleHandle = throttle(function (event) {\n  console.log(event.target.value);\n}, 1000)\ntxt.onkeyup = (event) =&gt; {\n  throttleHandle(event);\n}</code></pre></div><p>效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-01-022740.gif\" alt=\"2021-10-01 10.27.15\" contenteditable=\"false\"><br></p><p><br></p><p><strong>（2）设置定时器</strong></p><p><br></p><p>第二种方式是设置定时器，触发事件时设置一个定时器，再触发事件的时候，如果定时器存在，就不执行，直到定时器执行，然后执行函数，清空定时器，这样就可以设置下个定时器。</p><p><br></p><p>下面是封装使用定时器的函数节流的通用函数：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">/**\n * \n * @param {要节流执行的函数} func \n * @param {节流的时间间隔} wait \n * @returns \n */\nfunction throttle(func, wait) {\n    // timeout 存储计时器返回值\n    // args 存储参数\n    var timeout, args;\n    return function () {\n        args = arguments;\n        // 如果 timeout 有值，说明上一次的执行间隔时间还没过\n        if (!timeout) {\n            // 进入此 if 说明时间间隔已经过了\n            // 先执行一次要执行的函数\n            func.apply(null, args)\n            // 然后重新设置时间间隔\n            timeout = setTimeout(function () {\n                timeout = null;\n            }, wait);\n        }\n    }\n}</code></pre></div><h2>真题解答</h2><ul><li><p>防抖，节流是什么，如何实现 （字节）</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p>我们在平时开发的时候，会有很多场景会频繁触发事件，比如说搜索框实时发请求，<em>onmousemove、resize、onscroll</em> 等，有些时候，我们并不能或者不想频繁触发事件，这时候就应该用到函数防抖和函数节流。</p><p><br></p><p>函数防抖(<em>debounce</em>)，指的是短时间内多次触发同一事件，只执行最后一次，或者只执行最开始的一次，中间的不执行。</p><p><br></p><p>具体实现如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">/**\n * 函数防抖\n * @param {function} func 一段时间后，要调用的函数\n * @param {number} wait 等待的时间，单位毫秒\n */\nfunction debounce(func, wait) {\n    // 设置变量，记录 setTimeout 得到的 id\n    var timerId = null;\n    return function (...args) {\n        if (timerId) {\n            // 如果有值，说明目前正在等待中，清除它\n            clearTimeout(timerId);\n        }\n        // 重新开始计时\n        timerId = setTimeout(() =&gt; {\n            func(...args);\n        }, wait);\n    }\n}</code></pre></div><p>函数节流(<em>throttle</em>)，指连续触发事件但是在 <em>n</em> 秒中只执行一次函数。即 <em>2n</em> 秒内执行 <em>2</em> 次... 。</p><p><br></p><p>节流如字面意思，会稀释函数的执行频率。</p><p><br></p><p>下面是使用时间戳方式的具体实现：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">/**\n * \n * @param {要进行节流的函数} func \n * @param {间隔时间} wait \n * @returns \n */\nfunction throttle(func, wait) {\n    var args; // 存储函数参数\n    var previous = 0; // 一开始的默认时间\n    return function () {\n        var now = new Date(); // 获取最新的时间戳\n        args = arguments; // 获取参数\n        // 进行时间戳的判断，如果超出规定时间，则执行\n        if (now - previous &gt; wait) {\n            func.apply(null, args);\n            previous = now;\n        }\n    }\n}</code></pre></div></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666077863826",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e54d82fac4881713db3c2"),
+    interviewTitle: "是否了解 WeakMap 和 WeakSet？",
+    interviewContent: "<h1><em>WeakSet</em> 和 <em>WeakMap</em></h1><h2>经典真题</h2><ul><li><p>是否了解 <em>WeakMap、WeakSet</em>（美团 <em>19</em> 年）</p></li></ul><h2>从对象开始说起</h2><p>首先我们从大家都熟悉的对象开始说起。</p><p><br></p><p>对于对象的使用，大家其实是非常熟悉的，所以我们这里仅简单的过一遍。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const algorithm = { site: \"leetcode\" };\nconsole.log(algorithm.site); // leetcode\n\nfor (const key in algorithm) {\n  console.log(key, algorithm[key]);\n}\n\n// site leetcode\ndelete algorithm.site;\nconsole.log(algorithm.site); // undefined</code></pre></div><p>在上面的代码中，我们有一个 <em>algorithm</em> 对象，它的 <em>key</em> 和 <em>value</em> 是一个字符串类型的值，之后通过点（ . ）进行值的访问。</p><p><br></p><p>另外，<em>for-in</em> 循环也很适合在对象中循环。可以使用中括号（ [ ] ）访问其键对应的值。但是不能使用 <em>for-of</em> 循环，因为对象是不可迭代的。</p><p><br></p><p>对象的属性可以用 <em>delete</em> 关键字来删除。</p><p><br></p><p>好的，我们已经快速讨论了有关对象的一些事项：</p><ul><li><p>如何添加属性</p></li><li><p>如何遍历对象</p></li><li><p>如何删除属性</p></li></ul><p>关于对象的讨论暂时就到这儿。</p><h2><em>Map</em></h2><p><em>Map</em> 是 <em>JavaScript</em> 中新的集合对象，其功能类似于对象。但是，与常规对象相比，存在一些主要差异。</p><p><br></p><p>首先，让我们看一个创建 <em>Map</em> 对象的简单示例。</p><h3>添加属性</h3><p>首先，通过 <em>Map</em> 构造函数，我们可以创建一个 <em>Map</em> 实例对象出来，如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const map = new Map();\n// Map(0) {}</code></pre></div><p><em>Map</em> 有一种特殊的方法可在其中添加称为 <em>set</em> 的属性。它有两个参数：键是第一个参数，值是第二个参数。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">map.set('name', 'john');\n// Map(1) {\"name\" =&gt; \"john\"}</code></pre></div><p>但是，它不允许你在其中添加现有数据。如果 <em>Map</em> 对象中已经存在与新数据的键对应的值，则不会添加新数据。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">map.set('phone', 'iPhone');\n// Map(2) {\"name\" =&gt; \"john\", \"phone\" =&gt; \"iPhone\"}\nmap.set('phone', 'iPhone');\n// Map(2) {\"name\" =&gt; \"john\", \"phone\" =&gt; \"iPhone\"}</code></pre></div><p>但是可以用其他值覆盖现有数据。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">map.set('phone', 'Galaxy');\n// Map(2) {\"name\" =&gt; \"john\", \"phone\" =&gt; \"Galaxy\"}</code></pre></div><p>二维数组和 <em>Map</em> 对象之间可以很方便的相互转换。例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var arr = [\n    [1, 2],\n    [3, 4],\n    [5, 6],\n];\n\nvar map = new Map(arr);\nconsole.log(map); //Map { 1 =&gt; 2, 3 =&gt; 4, 5 =&gt; 6 }\nconsole.log(Array.from(map)); //[ [ 1, 2 ], [ 3, 4 ], [ 5, 6 ] ]</code></pre></div><h3>获取属性和长度</h3><p>可以通过 <em>get</em> 方法或者 <em>Map</em> 对象某一条属性的值：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const map = new Map();\nmap.set('name', 'john');\nmap.set('phone', 'iPhone');\nconsole.log(map.get('phone')); // iPhone</code></pre></div><p>可以通过 <em>has</em> 方法来查询是否具有某一条属性：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const map = new Map();\nmap.set('name', 'john');\nmap.set('phone', 'iPhone');\nconsole.log(map.has('phone')); // true</code></pre></div><p>可以通过 <em>size</em> 属性获取 <em>Map</em> 对象的长度：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const map = new Map();\nmap.set('name', 'john');\nmap.set('phone', 'iPhone');\nconsole.log(map.size); // 2</code></pre></div><h3>遍历 <em>Map</em> 对象</h3><p><em>Map</em> 是一个可迭代的对象，这意味着可以使用 <em>for-of</em> 语句将其映射。</p><p><br></p><p><em>Map</em> 以数组形式提供数据，要获取键或值则需要解构数组或以索引的方式来进行访问。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">for (const item of map) {\n  console.dir(item);\n}\n// Array(2) [\"name\", \"john\"]\n// Array(2) [\"phone\", \"Galaxy\"]</code></pre></div><p>要仅获取键或值，还有一些方法可供使用。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">map.keys();\n// MapIterator {\"name\", \"phone\"}\nmap.values();\n// MapIterator {\"john\", \"Galaxy\"}\nmap.entries();\n// MapIterator {\"name\" =&gt; \"john\", \"phone\" =&gt; \"Galaxy\"}</code></pre></div><p>也可以使用 <em>forEach</em> 方法，例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const map = new Map();\nmap.set('name', 'john');\nmap.set('phone', 'iPhone');\nmap.forEach(item=&gt;{\n    console.log(item);\n})\n// john\n// iPhone</code></pre></div><p>可以使用展开操作符(  ...  )来获取 <em>Map</em> 的全部数据，因为展开操作符还可以在幕后与可迭代对象一起工作。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const simpleSpreadedMap = [...map];\n// [Array(2), Array(2)]</code></pre></div><h3>删除属性</h3><p>从 <em>Map</em> 对象中删除数据也很容易，你所需要做的就是调用 <em>delete</em>。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">map.delete('phone');\n// true\nmap.delete('fake');\n// false</code></pre></div><p><em>delete</em> 返回布尔值，该布尔值指示 <em>delete</em> 函数是否成功删除了数据。如果是，则返回 <em>true</em>，否则返回 <em>false</em>。</p><p><br></p><p>如果要清空整个 <em>Map</em> 对象，可以使用 <em>clear</em> 方法，如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const map = new Map();\nmap.set('name', 'john');\nmap.set('phone', 'iPhone');\nconsole.log(map); // Map(2) { 'name' =&gt; 'john', 'phone' =&gt; 'iPhone' }\nmap.clear();\nconsole.log(map); // Map(0) {}</code></pre></div><h3><em>Map</em> 和 <em>Object</em> 的区别</h3><p>关于 <em>Map</em> 和 <em>Object</em> 的区别，可以参阅下表：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-09-30-103632.png\" alt=\"image-20210930183632548\" contenteditable=\"false\"><br></p><h2><em>WeakMap</em></h2><p><em>WeakMap</em> 起源于 <em>Map</em>，因此它们彼此非常相似。但是，<em>WeakMap</em> 具有很大的不同。</p><p><br></p><p><em>WeakMap</em> 的名字是怎么来的呢？</p><p><br></p><p>嗯，是因为它与它的引用链接所指向的数据对象的连接或关系没有 <em>Map</em> 的连接或关系那么强，所以它是弱的。</p><p><br></p><p>那么，这到底是什么意思呢？</p><p><br></p><p><strong>差异 <em>1</em>：<em>key</em> 必须是对象</strong></p><p><br></p><p>可以将任何值作为键传入 <em>Map</em> 对象，但 <em>WeakMap</em> 不同，它只接受一个对象作为键，否则，它将返回一个错误。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const John = { name: 'John' };\nconst weakMap = new WeakMap();\nweakMap.set(John, 'student');\n// WeakMap {{...} =&gt; \"student\"}\nweakMap.set('john', 'student');\n// Uncaught TypeError: Invalid value used as weak map key</code></pre></div><p><strong>差异 <em>2</em>：并非 <em>Map</em> 中的所有方法都支持</strong></p><p><br></p><p><em>WeakMap</em> 可以使用的方法如下：</p><ul><li><p><em>delete</em></p></li><li><p><em>get</em></p></li><li><p><em>has</em></p></li><li><p><em>set</em></p></li></ul><p>还有一个最大的不同是 <em>WeakMap</em> 不支持迭代对象的方法。</p><p><br></p><p><strong>差异 <em>3</em>：当 <em>GC</em> 清理引用时，数据会被删除</strong></p><p><br></p><p>这是和 <em>Map</em> 相比最大的不同。</p><p><br></p><p>例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">let John = { major: \"math\" };\n\nconst map = new Map();\nconst weakMap = new WeakMap();\n\nmap.set(John, 'John');\nweakMap.set(John, 'John');\n\nJohn = null;\n/* John 被垃圾收集 */</code></pre></div><p>当 <em>John</em> 对象被垃圾回收时，<em>Map</em> 对象将保持引用链接，而 <em>WeakMap</em> 对象将丢失链接。</p><p><br></p><p>所以当你使用 <em>WeakMap</em> 时，你应该考虑这个特点。</p><h2><em>Set</em></h2><p><em>Set</em> 也非常类似于 <em>Map</em>，但是 <em>Set</em> 对于单个值更有用。</p><h3>添加属性</h3><p>使用 <em>add</em> 方法可以添加属性。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const set = new Set();\n\nset.add(1);\nset.add('john');\nset.add(BigInt(10));\n// Set(4) {1, \"john\", 10n}</code></pre></div><p>与 <em>Map</em> 一样，<em>Set</em> 也不允许添加相同的值。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">set.add(5);\n// Set(1) {5}\n\nset.add(5);\n// Set(1) {5}</code></pre></div><p>对于原始数据类型（<em>boolean、number、string、null、undefined</em>），如果储存相同值则只保存一个，对于引用类型,引用地址完全相同则只会存一个。</p><ul><li><p><em>+0</em> 与 <em>-0</em> 在存储判断唯一性的时候是恒等的，所以不可以重复。</p></li><li><p><em>undefined</em> 和 <em>undefined</em> 是恒等的，所以不可以重复。</p></li><li><p><em>NaN</em> 与 <em>NaN</em> 是不恒等的，但是在 <em>Set</em> 中只能存一个不能重复。</p></li></ul><h3>遍历对象</h3><p>由于 <em>Set</em> 是一个可迭代的对象，因此可以使用 <em>for-of</em> 或 <em>forEach</em> 语句。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">for (const val of set) {\n  console.dir(val);\n}\n// 1\n// 'John'\n// 10n\n// 5\n\nset.forEach(val =&gt; console.dir(val));\n// 1\n// 'John'\n// 10n\n// 5</code></pre></div><h3>删除属性</h3><p>这一部分和 <em>Map</em> 的删除完全一样。如果数据被成功删除，它返回 <em>true</em>，否则返回 <em>false</em>。</p><p><br></p><p>当然也可以使用 clear 方法清空 <em>Set</em> 集合。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">set.delete(5); \n// true\nset.delete(function(){});\n// false;\n\nset.clear();</code></pre></div><p>如果你不想将相同的值添加到数组表单中，则 <em>Set</em> 可能会非常有用。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">/* With Set */\nconst set = new Set();\nset.add(1);\nset.add(2);\nset.add(2);\nset.add(3);\nset.add(3);\n// Set {1, 2, 3}\n\n// Converting to Array\nconst arr = [ ...set ];\n// [1, 2, 3]\n\nObject.prototype.toString.call(arr);\n// [object Array]\n\n/* Without Set */\nconst hasSameVal = val =&gt; ar.some(v === val);\nconst ar = [];\n\nif (!hasSameVal(1)) ar.push(1);\nif (!hasSameVal(2)) ar.push(2);\nif (!hasSameVal(3)) ar.push(3);</code></pre></div><h3>应用场景</h3><p>接下来来看一下 <em>Set</em> 常见的应用场景：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">//数组去重\n...new Set([1,1,2,2,3])\n\n//并集\nvar arr1 = [1, 2, 3]\nvar arr2 = [2, 3, 4]\nvar newArr = [...new Set([...arr1, ...arr2])]\n//交集\nvar arr1 = [1, 2, 3]\nvar arr2 = [2, 3, 4]\nvar set1 = new Set(arr1)\nvar set2 = new Set(arr2)\nvar newArr = []\nset1.forEach(item =&gt; {\n    set2.has(item) ? newArr.push(item) : ''\n})\nconsole.log(newArr)\n//差集\nvar arr1 = [1, 2, 3]\nvar arr2 = [2, 3, 4]\nvar set1 = new Set(arr1)\nvar set2 = new Set(arr2)\nvar newArr = []\nset1.forEach(item =&gt; {\n    set2.has(item) ? '' : newArr.push(item)\n})\nset2.forEach(item =&gt; {\n    set1.has(item) ? '' : newArr.push(item)\n})\nconsole.log(newArr)</code></pre></div><h2><em>WeakSet</em></h2><p><em>WeakSet</em> 和 <em>Set</em> 区别如下：</p><ul><li><p><em>WeakSet</em> 只能储存对象引用，不能存放值，而 <em>Set</em> 对象都可以</p></li><li><p><em>WeakSet</em> 对象中储存的对象值都是被弱引用的，即垃圾回收机制不考虑 <em>WeakSet</em> 对该对象的引用，如果没有其他的变量或者属性引用这个对象值，则这个对象将会被垃圾回收掉。（不考虑该对象还存在与 <em>WeakSet</em> 中），所以 <em>WeakSet</em> 对象里有多少个成员元素，取决于垃圾回收机制有没有运行，运行前后成员个数可能不一致，遍历结束之后，有的成员可能取不到，被垃圾回收了。因此 <em>ES6</em> 规定，<em>WeakSet</em> 对象是无法被遍历的，也没有办法拿到它包含的所有元素。</p></li></ul><p><em>WeakSet</em> 能够使用的方法如下：</p><ul><li><p><em>add(value)</em> 方法：在 <em>WeakSet</em> 中添加一个元素。如果添加的元素已存在，则不会进行操作。</p></li><li><p><em>delete(value)</em> 方法：删除元素 <em>value</em></p></li><li><p><em>has(value)</em> 方法：判断 <em>WeakSet</em> 对象中是否包含 <em>value</em></p></li><li><p><em>clear( )</em> 方法：清空所有元素</p></li></ul><p>下面来看一下 <em>WeakSet</em> 的代码示例，与 <em>WeakMap</em> 一样，<em>WeakSet</em> 也将丢失对内部数据的访问链接（如果内部数据已被垃圾收集）。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">let John = { major: \"math\" };\n\nconst set = new Set();\nconst weakSet = new WeakSet();\n\nset.add(John);\n// Set {{...}}\nweakSet.add(John);\n// WeakSet {{...}}\n\nJohn = null;\n/* John 被垃圾收集 */</code></pre></div><p>一旦对象 <em>John</em> 被垃圾回收，<em>WeakSet</em> 就无法访问其引用 <em>John</em> 的数据。而且 <em>WeakSet</em> 不支持 <em>for-of</em> 或 <em>forEach</em>，因为它不可迭代。</p><h2>比较总结</h2><ul><li><p><em>Map</em></p><ul><li><p>键名唯一不可重复</p></li><li><p>类似于集合，键值对的集合，任何值都可以作为一个键或者一个值</p></li><li><p>可以遍历，可以转换各种数据格式，方法 <em>get、set、has、delete</em></p></li></ul></li><li><p><em>WeakMap</em></p><ul><li><p>只接受对象为键名，不接受其他类型的值作为键名，键值可以是任意</p></li><li><p>键名是拖引用，键名所指向的对象，会被垃圾回收机制回收</p></li><li><p>不能遍历，方法 <em>get、set、has、delete</em></p></li></ul></li><li><p><em>Set</em></p><ul><li><p>成员唯一，无序且不会重复</p></li><li><p>类似于数组集合，键值和键名是一致的（只有键值。没有键名）</p></li><li><p>可以遍历，方法有 <em>add、delete、has</em></p></li></ul></li><li><p><em>WeakSet</em></p><ul><li><p>只能存储对应引用，不能存放值</p></li><li><p>成员都是弱引用，会被垃圾回收机制回收</p></li><li><p>不能遍历，方法有 <em>add、delete、has</em></p></li></ul></li></ul><h2>真题解答</h2><ul><li><p>是否了解 <em>WeakMap、WeakSet</em>（美团 <em>19</em> 年）</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p><em>WeakSet</em> 对象是一些对象值的集合, 并且其中的每个对象值都只能出现一次。在 <em>WeakSet</em> 的集合中是唯一的</p><p><br></p><p>它和 <em>Set</em> 对象的区别有两点:</p><ul><li><p>与 <em>Set</em> 相比，<em>WeakSet</em> 只能是<strong>对象的集合</strong>，而不能是任何类型的任意值。</p></li><li><p><em>WeakSet</em> 持弱引用：集合中对象的引用为弱引用。 如果没有其他的对 <em>WeakSet</em> 中对象的引用，那么这些对象会被当成垃圾回收掉。 这也意味着 <em>WeakSet</em> 中没有存储当前对象的列表。 正因为这样，<em>WeakSet</em> 是不可枚举的。</p></li></ul><p><em>WeakMap</em> 对象也是键值对的集合。它的<strong>键必须是对象类型</strong>，值可以是任意类型。它的键被弱保持，也就是说，当其键所指对象没有其他地方引用的时候，它会被 <em>GC</em> 回收掉。<em>WeakMap</em> 提供的接口与 <em>Map</em> 相同。</p><p><br></p><p>与 <em>Map</em> 对象不同的是，<em>WeakMap</em> 的键是不可枚举的。不提供列出其键的方法。列表是否存在取决于垃圾回收器的状态，是不可预知的。</p></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666077912853",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e55042fac4881713db3c6"),
+    interviewTitle: "深拷贝和浅拷贝的区别？如何实现 ？",
+    interviewContent: "<h1>深浅拷贝</h1><h2>经典真题</h2><ul><li><p>深拷贝和浅拷贝的区别？如何实现</p></li></ul><h2>深拷贝和浅拷贝概念</h2><p>首先，我们需要明确深拷贝和浅拷贝的概念。</p><ul><li><p><strong>浅拷贝</strong>：只是拷贝了基本类型的数据，而引用类型数据，复制后也是会发生引用，我们把这种拷贝叫做浅拷贝(浅复制)。浅拷贝只复制指向某个对象的指针（引用地址），而不复制对象本身，新旧对象还是共享同一块内存。</p></li><li><p><strong>深拷贝</strong>：在堆中重新分配内存，并且把源对象所有属性都进行新建拷贝，以保证深拷贝的对象的引用图不包含任何原有对象或对象图上的任何对象，拷贝后的对象与原来的对象是完全隔离，互不影响。</p></li></ul><h2>浅拷贝方法</h2><p>接下来我们来看一下对象有哪些浅拷贝方法。</p><p><br></p><p><strong>1. 直接赋值</strong></p><p><br></p><p>直接赋值是最常见的一种浅拷贝方式。例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var stu = {\n    name: 'xiejie',\n    age: 18\n}\n// 直接赋值\nvar stu2 = stu;\nstu2.name = \"zhangsan\";\nconsole.log(stu); // { name: 'zhangsan', age: 18 }\nconsole.log(stu2); // { name: 'zhangsan', age: 18 }</code></pre></div><p><strong>2. <em>Object.assign</em> 方法</strong></p><p><br></p><p>我们先来看一下 <em>Object.assign</em> 方法的基本用法。</p><p><br></p><p>该方法用于将所有可枚举属性的值从一个或多个源对象分配到目标对象。</p><p><br></p><p>如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var stu = {\n    name: 'xiejie'\n}\nvar stu2 = Object.assign(stu, { age: 18 }, { gender: 'male' })\nconsole.log(stu2); // { name: 'xiejie', age: 18, gender: 'male' }</code></pre></div><p>在上面的代码中，我们有一个对象 <em>stu</em>，然后使用 <em>Object.assign</em> 方法将后面两个对象的属性值分配到 <em>stu</em> 目标对象上面。</p><p><br></p><p>最终得到 <em>{ name: 'xiejie', age: 18, gender: 'male' }</em> 这个对象。</p><p><br></p><p>通过这个方法，我们就可以实现一个对象的拷贝。例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const stu = {\n    name: 'xiejie',\n    age: 18\n}\nconst stu2 = Object.assign({}, stu)\nstu2.name = 'zhangsan';\nconsole.log(stu); // { name: 'xiejie', age: 18 }\nconsole.log(stu2); // { name: 'zhangsan', age: 18 }</code></pre></div><p>在上面的代码中，我们使用 <em>Object.assign</em> 方法来对 <em>stu</em> 方法进行拷贝，并且可以看到修改拷贝后对象的值，并没有影响原来的对象，这仿佛实现了一个深拷贝。</p><p><br></p><p>然而，<em>Object.assign</em> 方法事实上是一个浅拷贝。</p><p><br></p><p>当对象的属性值对应的是一个对象时，该方法拷贝的是对象的属性的引用，而不是对象本身。</p><p><br></p><p>例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const stu = {\n    name: 'xiejie',\n    age: 18,\n    stuInfo: {\n        No: 1,\n        score: 100\n    }\n}\nconst stu2 = Object.assign({}, stu)\nstu2.name = 'zhangsan';\nstu2.stuInfo.score = 90;\nconsole.log(stu); // { name: 'xiejie', age: 18, stuInfo: { No: 1, score: 90 } }\nconsole.log(stu2); // { name: 'zhangsan', age: 18, stuInfo: { No: 1, score: 90 } }</code></pre></div><p><strong>3. <em>ES6</em> 扩展运算符</strong></p><p><br></p><p>首先我们还是来回顾一下 <em>ES6</em> 扩展运算符的基本用法。</p><p><br></p><p>ES6 扩展运算符可以将数组表达式或者 <em>string</em> 在语法层面展开，还可以在构造字面量对象时，将对象表达式按 <em>key-value</em> 的方式展开。</p><p><br></p><p>例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var arr = [1, 2, 3];\nvar arr2 = [3, 5, 8, 1, ...arr]; // 展开数组\nconsole.log(arr2); // [3, 5, 8, 1, 1, 2, 3]\n\nvar stu = {\n    name: 'xiejie',\n    age: 18\n}\nvar stu2 = { ...stu, score: 100 }; // 展开对象\nconsole.log(stu2); // { name: 'xiejie', age: 18, score: 100 }</code></pre></div><p>接下来我们来使用扩展运算符来实现对象的拷贝，如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const stu = {\n    name: 'xiejie',\n    age: 18\n}\nconst stu2 = {...stu}\nstu2.name = 'zhangsan';\nconsole.log(stu); // { name: 'xiejie', age: 18 }\nconsole.log(stu2); // { name: 'zhangsan', age: 18 }</code></pre></div><p>但是和 <em>Object.assign</em> 方法一样，如果对象中某个属性对应的值为引用类型，那么直接拷贝的是引用地址。如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const stu = {\n    name: 'xiejie',\n    age: 18,\n    stuInfo: {\n        No: 1,\n        score: 100\n    }\n}\nconst stu2 = {...stu}\nstu2.name = 'zhangsan';\nstu2.stuInfo.score = 90;\nconsole.log(stu); // { name: 'xiejie', age: 18, stuInfo: { No: 1, score: 90 } }\nconsole.log(stu2); // { name: 'zhangsan', age: 18, stuInfo: { No: 1, score: 90 } }</code></pre></div><p><strong>4. 数组的 <em>slice</em> 和 <em>concat</em> 方法</strong></p><p><br></p><p>在 <em>javascript</em> 中，数组也是一种对象，所以也会涉及到深浅拷贝的问题。</p><p><br></p><p>在 <em>Array</em> 中的 <em>slice</em> 和 <em>concat</em> 方法，不修改原数组，只会返回一个浅复制了原数组中的元素的一个新数组。</p><p><br></p><p>例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">// concat 拷贝数组\nvar arr1 = [1, true, 'Hello'];\nvar arr2 = arr1.concat();\nconsole.log(arr1); // [ 1, true, 'Hello' ]\nconsole.log(arr2); // [ 1, true, 'Hello' ]\n\narr2[0] = 2;\nconsole.log(arr1); // [ 1, true, 'Hello' ]\nconsole.log(arr2); // [ 2, true, 'Hello' ]</code></pre></div><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">// slice 拷贝数组\nvar arr1 = [1, true, 'Hello'];\nvar arr2 = arr1.slice();\nconsole.log(arr1); // [ 1, true, 'Hello' ]\nconsole.log(arr2); // [ 1, true, 'Hello' ]\n\narr2[0] = 2;\nconsole.log(arr1); // [ 1, true, 'Hello' ]\nconsole.log(arr2); // [ 2, true, 'Hello' ]</code></pre></div><p>但是，这两个方法仍然是浅拷贝。如果一旦涉及到数组里面的元素是引用类型，那么这两个方法是直接拷贝的引用地址。如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">// concat 拷贝数组\nvar arr1 = [1, true, 'Hello', { name: 'xiejie', age: 18 }];\nvar arr2 = arr1.concat();\nconsole.log(arr1); // [ 1, true, 'Hello', { name: 'xiejie', age: 18 } ]\nconsole.log(arr2); // [ 1, true, 'Hello', { name: 'xiejie', age: 18 } ]\n\narr2[0] = 2;\narr2[3].age = 19;\nconsole.log(arr1); // [ 1, true, 'Hello', { name: 'xiejie', age: 19 } ]\nconsole.log(arr2); // [ 2, true, 'Hello', { name: 'xiejie', age: 19 } ]</code></pre></div><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">// concat 拷贝数组\nvar arr1 = [1, true, 'Hello', { name: 'xiejie', age: 18 }];\nvar arr2 = arr1.slice();\nconsole.log(arr1); // [ 1, true, 'Hello', { name: 'xiejie', age: 18 } ]\nconsole.log(arr2); // [ 1, true, 'Hello', { name: 'xiejie', age: 18 } ]\n\narr2[0] = 2;\narr2[3].age = 19;\nconsole.log(arr1); // [ 1, true, 'Hello', { name: 'xiejie', age: 19 } ]\nconsole.log(arr2); // [ 2, true, 'Hello', { name: 'xiejie', age: 19 } ]</code></pre></div><p><strong>5.  <em>jQuery</em> 中的 <em>$.extend</em></strong></p><p><br></p><p>在 <em>jQuery</em> 中，<em>$.extend(deep,target,object1,objectN)</em> 方法可以进行深浅拷贝。各参数说明如下：</p><ul><li><p><em>deep</em>：如过设为 <em>true</em> 为深拷贝，默认是 <em>false</em> 浅拷贝</p></li><li><p><em>target</em>：要拷贝的目标对象</p></li><li><p><em>object1</em>：待拷贝到第一个对象的对象</p></li><li><p><em>objectN</em>：待拷贝到第N个对象的对象</p></li></ul><p>来看一个具体的示例：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">&lt;body&gt;\n    &lt;script src=\"https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js\"&gt;&lt;/script&gt;\n    &lt;script&gt;\n        const obj = {\n            name: 'wade',\n            age: 37,\n            friend: {\n                name: 'james',\n                age: 34\n            }\n        }\n        const cloneObj = {};\n        // deep 默认为 false 为浅拷贝\n        $.extend(cloneObj, obj);\n        obj.friend.name = 'rose';\n        console.log(obj);\n        console.log(cloneObj);\n    &lt;/script&gt;\n&lt;/body&gt;</code></pre></div><p>效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-08-31-053219.png\" alt=\"image-20210831133219541\" contenteditable=\"false\"><br></p><h2>深拷贝方法</h2><p>说完了浅拷贝，接下来我们来看如何实现深拷贝。</p><p><br></p><p>总结一下，大致有如下的方式。</p><p><br></p><p><strong>1. <em>JSON.parse(JSON.stringify)</em></strong></p><p><br></p><p>这是一个广为流传的深拷贝方式，用 <em>JSON.stringify</em> 将对象转成 <em>JSON</em> 字符串，再用 <em>JSON.parse</em> 方法把字符串解析成对象，一去一来，新的对象产生了，而且对象会开辟新的栈，实现深拷贝。</p><p><br></p><p>示例如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const stu = {\n    name: 'xiejie',\n    age: 18,\n    stuInfo: {\n        No: 1,\n        score: 100\n    }\n}\nconst stu2 = JSON.parse(JSON.stringify(stu));\nstu2.name = 'zhangsan';\nstu2.stuInfo.score = 90;\nconsole.log(stu); // { name: 'xiejie', age: 18, stuInfo: { No: 1, score: 100 } }\nconsole.log(stu2); // { name: 'zhangsan', age: 18, stuInfo: { No: 1, score: 90 } }</code></pre></div><p>这种方式看似能够解决问题，但是这种方法也有一个缺点，那就是不能处理函数。</p><p><br></p><p>这是因为 <em>JSON.stringify</em> 方法是将一个 <em>javascript</em> 值（对象或者数组）转换为一个 <em>JSON</em> 字符串，而 <em>JSON</em> 字符串是不能够接受函数的。同样，正则对象也一样，在 <em>JSON.parse</em> 解析时会发生错误。</p><p><br></p><p>例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const stu = {\n    name: 'xiejie',\n    age: 18,\n    stuInfo: {\n        No: 1,\n        score: 100,\n        saySth: function () {\n            console.log('我是一个学生');\n        }\n    }\n}\nconst stu2 = JSON.parse(JSON.stringify(stu));\nstu2.name = 'zhangsan';\nstu2.stuInfo.score = 90;\nconsole.log(stu); // { name: 'xiejie', age: 18, stuInfo: { No: 1, score: 100, saySth: [Function: saySth] }}\nconsole.log(stu2); // { name: 'zhangsan', age: 18, stuInfo: { No: 1, score: 90 } }</code></pre></div><p>可以看到，在原对象中有方法，拷贝之后，新对象中没有方法了。</p><p><br></p><p><strong>2. <em>$.extend(deep,target,object1,objectN)</em></strong></p><p><br></p><p>前面在介绍浅拷贝时提到了 <em>jQuery</em> 的这个方法，该方法既能实现浅拷贝，也能实现深拷贝。要实现深拷贝，只需要将第一个参数设置为 <em>true</em> 即可。例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">&lt;body&gt;\n    &lt;script src=\"https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js\"&gt;&lt;/script&gt;\n    &lt;script&gt;\n        const obj = {\n            name: 'wade',\n            age: 37,\n            friend: {\n                name: 'james',\n                age: 34\n            }\n        }\n        const cloneObj = {};\n        // deep 设为 true 为深拷贝\n        $.extend(true, cloneObj, obj);\n        obj.friend.name = 'rose';\n        console.log(obj);\n        console.log(cloneObj);\n    &lt;/script&gt;\n&lt;/body&gt;</code></pre></div><p>效果：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-08-31-054115.png\" alt=\"image-20210831134114926\" contenteditable=\"false\"><br></p><p><br></p><p><strong>3. 手写递归方法</strong></p><p><br></p><p>最终，还是只有靠我们自己手写递归方法来实现深拷贝。</p><p><br></p><p>示例如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function deepClone(target) {\n    var result;\n    // 判断是否是对象类型\n    if (typeof target === 'object') {\n        // 判断是否是数组类型\n        if (Array.isArray(target)) {\n            result = []; // 如果是数组,创建一个空数组\n            // 遍历数组的键\n            for (var i in target) {\n                // 递归调用\n                result.push(deepClone(target[i]))\n            }\n        } else if (target === null) {\n            // 再判断是否是 null\n            // 如果是，直接等于 null\n            result = null;\n        } else if (target.constructor === RegExp) {\n            // 判断是否是正则对象\n            // 如果是,直接赋值拷贝\n            result = target;\n        } else if (target.constructor === Date) {\n            // 判断是否是日期对象\n            // 如果是,直接赋值拷贝\n            result = target;\n        } else {\n            // 则是对象\n            // 创建一个空对象\n            result = {};\n            // 遍历该对象的每一个键\n            for (var i in target) {\n                // 递归调用\n                result[i] = deepClone(target[i]);\n            }\n        }\n    } else {\n        // 表示不是对象类型，则是简单数据类型  直接赋值\n        result = target;\n    }\n    // 返回结果\n    return result;\n}</code></pre></div><p>在上面的代码中，我们封装了一个名为 <em>deepClone</em> 的方法，在该方法中，通过递归调用的形式来深度拷贝一个对象。</p><p><br></p><p>下面是 <em>2</em> 段测试代码：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">// 测试1\nconst stu = {\n    name: 'xiejie',\n    age: 18,\n    stuInfo: {\n        No: 1,\n        score: 100,\n        saySth: function () {\n            console.log('我是一个学生');\n        }\n    }\n}\nconst stu2 = deepClone(stu)\nstu2.name = 'zhangsan';\nstu2.stuInfo.score = 90;\nconsole.log(stu); // { name: 'xiejie', age: 18, stuInfo: { No: 1, score: 100, saySth: [Function: saySth] }}\nconsole.log(stu2); // { name: 'xiejie', age: 18, stuInfo: { No: 1, score: 90, saySth: [Function: saySth] }}</code></pre></div><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">// 测试2\nvar arr1 = [1, true, 'Hello', { name: 'xiejie', age: 18 }];\nvar arr2 = deepClone(arr1)\nconsole.log(arr1); // [ 1, true, 'Hello', { name: 'xiejie', age: 18 } ]\nconsole.log(arr2); // [ 1, true, 'Hello', { name: 'xiejie', age: 18 } ]\n\narr2[0] = 2;\narr2[3].age = 19;\nconsole.log(arr1); // [ 1, true, 'Hello', { name: 'xiejie', age: 18 } ]\nconsole.log(arr2); // [ 2, true, 'Hello', { name: 'xiejie', age: 19 } ]</code></pre></div><h2>真题解答</h2><ul><li><p>深拷贝和浅拷贝的区别？如何实现</p></li></ul><blockquote><p>参考答案：</p><ul><li><p><strong>浅拷贝</strong>：只是拷贝了基本类型的数据，而引用类型数据，复制后也是会发生引用，我们把这种拷贝叫做浅拷贝（浅复制）</p><p><br></p><p>浅拷贝只复制指向某个对象的指针，而不复制对象本身，新旧对象还是共享同一块内存。</p></li><li><p><strong>深拷贝</strong>：在堆中重新分配内存，并且把源对象所有属性都进行新建拷贝，以保证深拷贝的对象的引用图不包含任何原有对象或对象图上的任何对象，拷贝后的对象与原来的对象是完全隔离，互不影响。</p></li></ul><p><strong>浅拷贝方法</strong></p><ol><li><p>直接赋值</p></li><li><p><em>Object.assign</em> 方法：可以把任意多个的源对象自身的可枚举属性拷贝给目标对象，然后返回目标对象。当拷贝的 <em>object</em> 只有一层的时候，是深拷贝，但是当拷贝的对象属性值又是一个引用时，换句话说有多层时，就是一个浅拷贝。</p></li><li><p><em>ES6</em> 扩展运算符，当 <em>object</em> 只有一层的时候，也是深拷贝。有多层时是浅拷贝。</p></li><li><p><em>Array.prototype.concat</em> 方法</p></li><li><p><em>Array.prototype.slice</em> 方法</p></li><li><p><em>jQuery</em> 中的 <em>$.extend</em>：在 <em>jQuery</em> 中，<em>$.extend(deep,target,object1,objectN)</em> 方法可以进行深浅拷贝。<em>deep</em> 如过设为 <em>true</em> 为深拷贝，默认是 <em>false</em> 浅拷贝。</p></li></ol><p><strong>深拷贝方法</strong></p><ol><li><p><em>$.extend(deep,target,object1,objectN)</em>，将 <em>deep</em> 设置为 <em>true</em></p></li><li><p><em>JSON.parse(JSON.stringify)</em>：用 <em>JSON.stringify</em> 将对象转成 <em>JSON</em> 字符串，再用 <em>JSON.parse</em> 方法把字符串解析成对象，一去一来，新的对象产生了，而且对象会开辟新的栈，实现深拷贝。这种方法虽然可以实现数组或对象深拷贝，但不能处理函数。</p></li><li><p>手写递归</p></li></ol><p>示例代码如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function deepCopy(oldObj, newobj) {\n    for (var key in oldObj) {\n        var item = oldObj[key];\n        // 判断是否是对象\n        if (item instanceof Object) {\n            if (item instanceof Function) {\n                newobj[key] = oldObj[key];\n            } else {\n                newobj[key] = {};  //定义一个空的对象来接收拷贝的内容\n                deepCopy(item, newobj[key]); //递归调用\n            }\n\n            // 判断是否是数组\n        } else if (item instanceof Array) {\n            newobj[key] = [];  //定义一个空的数组来接收拷贝的内容\n            deepCopy(item, newobj[key]); //递归调用\n        } else {\n            newobj[key] = oldObj[key];\n        }\n    }\n}</code></pre></div></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666077956733",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e55352fac4881713db3ca"),
+    interviewTitle: "什么是函数柯里化？",
+    interviewContent: "<h1>函数柯里化</h1><h2>经典真题</h2><ul><li><p>什么是函数柯里化？</p></li></ul><h2>什么是函数柯里化</h2><p>在计算机科学中，柯里化（英语：<em>Currying</em>），又译为卡瑞化或加里化，是把接受多个参数的函数变换成接受一个单一参数（最初函数的第一个参数）的函数，并且返回接受余下的参数而且返回结果的新函数的技术。</p><p><br></p><p>这个技术由克里斯托弗·斯特雷奇以逻辑学家哈斯凯尔·加里命名的，尽管它是 <em>Moses Schönfinkel</em> 和戈特洛布·弗雷格发明的。</p><p><br></p><p>在直觉上，柯里化声称如果你固定某些参数，你将得到接受余下参数的一个函数。</p><p><br></p><p>我们姑且叫它返回函数，在调用返回函数的时候，它将判断当前的参数和之前被柯里化函数固定的参数拼起来之后，是否达到了原本函数的参数个数。</p><p><br></p><p>如果是，则执行原本的函数，得到结果；如果没有达到，则要继续调用柯里化函数来固定目前的参数。</p><p><br></p><p>在理论计算机科学中，柯里化提供了在简单的理论模型中，比如：只接受一个单一参数的 <em>lambda</em> 演算中，研究带有多个参数的函数的方式。</p><p><br></p><p>函数柯里化的对偶是<em>Uncurrying</em>，一种使用匿名单参数函数来实现多参数函数的方法。</p><h2>柯里化快速入门</h2><p>接下来，我们来通过一个简单的示例，让大家快速体会函数柯里化。</p><p><br></p><p>假设我们有一个求取两个数之和的函数：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function add(x, y) {\n    return x + y;\n}\nconsole.log(add(1, 2)); // 3\nconsole.log(add(5, 7)); // 12</code></pre></div><p>在上面的示例中，我们有一个 <em>add</em> 函数，接收两个形参，返回两形参的和。</p><p><br></p><p>在调用的时候，我们每次也需要传递两个参数。</p><p><br></p><p>现在，我们对其进行柯里化，如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function add(x) {\n    return function (y) {\n        return x + y;\n    }\n}\nconsole.log(add(1)(2)); // 3\nconsole.log(add(5)(7)); // 3</code></pre></div><p>在上面的代码中，我们对 <em>add</em> 函数进行了柯里化改造，只接受一个参数，但是返回的也不是值了，而是返回一个函数，这个函数也接收一个参数，然后利用闭包的特性，可以访问到最开始传入的 <em>x</em> 的值，最终返回 <em>x</em> 和 <em>y</em> 的和。</p><p><br></p><p>所以，通过上面的这个示例，我们能够体会到前面所说的柯里化函数的特点：</p><p><br></p><p>一个柯里化的函数首先会接受一些参数，接受了这些参数之后，该函数并不会立即求值，而是继续返回另外一个函数，刚才传入的参数在函数形成的闭包中被保存起来。待到函数被真正需要求值的时候，之前传入的所有参数都会被一次性用于求值。</p><h2>函数柯里化实际应用</h2><p>通过上面的例子，我们体验到了什么是柯里化函数。</p><p><br></p><p>但是问题来了，费这么大劲封装一层，到底有什么用处呢？</p><p><br></p><p>没有好处想让我们程序员多干事情是不可能滴，这辈子都不可能。</p><p><br></p><p>所以接下来我们就来看一下函数柯里化的一个实际应用。</p><p><br></p><p><strong>参数复用</strong></p><p><br></p><p>就是将相同的参数固定下来。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">// 正常正则验证字符串 reg.test(txt)\n\n// 函数封装后\nfunction check(reg, txt) {\n    return reg.test(txt)\n}\n\n// 即使是相同的正则表达式，也需要重新传递一次\nconsole.log(check(/\\d+/g, 'test1')); // true\nconsole.log(check(/\\d+/g, 'testtest')); // false\nconsole.log(check(/[a-z]+/g, 'test')); // true\n\n// Currying后\nfunction curryingCheck(reg) {\n    return function (txt) {\n        return reg.test(txt)\n    }\n}\n\n// 正则表达式通过闭包保存了起来\nvar hasNumber = curryingCheck(/\\d+/g)\nvar hasLetter = curryingCheck(/[a-z]+/g)\n\nconsole.log(hasNumber('test1')); // true\nconsole.log(hasNumber('testtest'));  // false\nconsole.log(hasLetter('21212')); // false</code></pre></div><p>上面的示例是一个正则的校验，正常来说直接调用 <em>check</em> 函数就可以了，但是如果我有很多地方都要校验是否有数字，其实就是需要将第一个参数 <em>reg</em> 进行复用，这样别的地方就能够直接调用 <em>hasNumber、hasLetter</em> 等函数，让参数能够复用，调用起来也更方便。</p><p><br></p><p><strong>提前确认</strong></p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">/**\n * \n * @param {要绑定事件的 DOM 元素} element \n * @param {绑定什么事件} event \n * @param {事件处理函数} handler \n */\nvar on = function (element, event, handler) {\n    if (document.addEventListener) {\n        if (element &amp;&amp; event &amp;&amp; handler) {\n            element.addEventListener(event, handler, false);\n        }\n    } else {\n        if (element &amp;&amp; event &amp;&amp; handler) {\n            element.attachEvent('on' + event, handler);\n        }\n    }\n}\n\non(div, 'click', function(){})\n\n\nvar on = (function () {\n    if (document.addEventListener) {\n        return function (element, event, handler) {\n            if (element &amp;&amp; event &amp;&amp; handler) {\n                element.addEventListener(event, handler, false);\n            }\n        };\n    } else {\n        return function (element, event, handler) {\n            if (element &amp;&amp; event &amp;&amp; handler) {\n                element.attachEvent('on' + event, handler);\n            }\n        };\n    }\n})();\n\non(div, 'click', function(){})\n\n//换一种写法可能比较好理解一点，上面就是把 isSupport 这个参数给先确定下来了\nvar on = function (isSupport, element, event, handler) {\n    isSupport = isSupport || document.addEventListener;\n    if (isSupport) {\n        return element.addEventListener(event, handler, false);\n    } else {\n        return element.attachEvent('on' + event, handler);\n    }\n}\non(true, div, 'click', function(){})\non(true, div, 'click', function(){})\non(true, div, 'click', function(){})</code></pre></div><p>我们在做项目的过程中，封装一些 <em>DOM</em> 操作可以说再常见不过，上面第一种写法也是比较常见，但是我们看看第二种写法，它相对于第一种写法就是自执行然后返回一个新的函数，这样其实就是提前确定了会走哪一个方法，避免每次都进行判断。</p><h2>封装通用柯里化函数</h2><p>接下来我们来封装一个通用的柯里化函数。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function curry() {\n    var fn = arguments[0]; // 获取要执行的函数\n    var args = [].slice.call(arguments, 1); // 获取传递的参数，构成一个参数数组\n    // 如果传递的参数已经等于执行函数所需的参数数量\n    if (args.length === fn.length) {\n        return fn.apply(this, args)\n    }\n    // 参数不够向外界返回的函数\n    function _curry(){\n        // 推入之前判断\n        // 将新接收到的参数推入到参数数组中\n        args.push(...arguments);\n        if(args.length === fn.length){\n            return fn.apply(this, args)\n        }\n        return _curry;\n    }\n    return _curry;\n}</code></pre></div><p>对上面的代码进行测试：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">// 测试 1\nfunction add(a, b, c) {\n    return a + b + c;\n}\n\nconsole.log(curry(add)(1)(2)(3)); // 6\nconsole.log(curry(add, 1)(2)(3)); // 6\nconsole.log(curry(add, 1, 2, 3)); // 6\nconsole.log(curry(add, 1)(3, 4)); // 8\n\nvar addCurrying = curry(add)(2);\nconsole.log(addCurrying(7)(8)); // 17\n\n// 测试 2\nfunction check(reg, txt) {\n    return reg.test(txt)\n}\nvar hasNumber = curry(check)(/\\d+/g);\nconsole.log(hasNumber('test1'));// true</code></pre></div><h2>一道经典的柯里化面试题</h2><p>实现一个 <em>add</em> 方法，使计算结果能够满足如下预期：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">add(1)(2)(3) = 6;\nadd(1, 2, 3)(4) = 10;\nadd(1)(2)(3)(4)(5) = 15;</code></pre></div><p>要完成上面的需求，我们就可以使用柯里化函数：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">function add() {\n    // 第一次执行时，定义一个数组专门用来存储所有的参数\n    var _args = Array.prototype.slice.call(arguments);\n\n    // 在内部声明一个函数，利用闭包的特性保存 _args 并收集所有的参数值\n    var _adder = function () {\n        _args.push(...arguments);\n        return _adder;\n    };\n\n    // 这个是最后输出的时候被调用的，return 后面如果是函数体，\n    // 为了输出函数体字符串会自动调用 toString 方法\n    // 利用 toString 隐式转换的特性，当最后执行时隐式转换，并计算最终的值返回\n    _adder.toString = function () {\n        return _args.reduce(function (a, b) {\n            return a + b;\n        });\n    }\n\n    // 这个 return 是第一次调用的时候返回上面的函数体，\n    // 这样后面所有的括号再执行的时候就是执行 _adder 函数体\n    return _adder;\n}\nconsole.log(add(1)(2)(3).toString()); // 6\nconsole.log(add(1, 2, 3)(4).toString()); // 10\nconsole.log(add(1)(2)(3)(4)(5).toString()); // 15\nconsole.log(add(2, 6)(1).toString()); // 9</code></pre></div><h2>真题详解</h2><ul><li><p>什么是函数柯里化？</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p>柯里化（<em>currying</em>）又称部分求值。一个柯里化的函数首先会接受一些参数，接受了这些参数之后，该函数并不会立即求值，而是继续返回另外一个函数，刚才传入的参数在函数形成的闭包中被保存起来。待到函数被真正需要求值的时候，之前传入的所有参数都会被一次性用于求值。</p><p><br></p><p>举个例子，就是把原本：</p><p><br></p><p><em>function(arg1,arg2)</em> 变成 <em>function(arg1)(arg2)</em></p><p><em>function(arg1,arg2,arg3)</em> 变成 <em>function(arg1)(arg2)(arg3)</em></p><p><em>function(arg1,arg2,arg3,arg4)</em> 变成 <em>function(arg1)(arg2)(arg3)(arg4)</em></p><p><br></p><p>总而言之，就是将：</p><p><br></p><p><em>function(arg1,arg2,…,argn)</em> 变成 <em>function(arg1)(arg2)…(argn)</em></p></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666078005854",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e556b2fac4881713db3ce"),
+    interviewTitle: "Node.js 中的事件循环和浏览器环境的事件循环有何不同？",
+    interviewContent: "<h1><em>Node</em> 事件循环</h1><h2>经典真题</h2><ul><li><p>请简述一下 <em>Node.js</em> 中的事件循环，和浏览器环境的事件循环有何不同？</p></li></ul><h2><em>Node.js</em> 与浏览器的事件循环有何区别？</h2><h3>进程与线程</h3><p>我们经常说 <em>JavaScript</em> 是一门单线程语言，指的是一个进程里只有一个主线程，那到底什么是线程？什么是进程？</p><p><br></p><p>首先需要把这个问题搞明白。</p><p><br></p><p>进程是 <em>CPU</em> 资源分配的最小单位，而线程是 <em>CPU</em> 调度的最小单位。举个例子，看下面的图：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-15-032136.png\" alt=\"image-20211015112136231\" contenteditable=\"false\"><br></p><ul><li><p>进程好比图中的工厂，有单独的专属自己的工厂资源。</p></li><li><p>线程好比图中的工人，多个工人在一个工厂中协作工作，工厂与工人是 <em>1:n</em> 的关系。也就是说<strong>一个进程由一个或多个线程组成，线程是一个进程中代码的不同执行路线</strong>。</p></li><li><p>工厂的空间是工人们共享的，这象征<strong>一个进程的内存空间是共享的，每个线程都可用这些共享内存</strong>。</p></li><li><p>多个工厂之间独立存在。</p></li></ul><p>接下来我们回过头来看多进程和多线程的概念：</p><ul><li><p>多进程：在同一个时间里，同一个计算机系统中如果允许两个或两个以上的进程处于运行状态。多进程带来的好处是明显的，比如你可以听歌的同时，打开编辑器敲代码，编辑器和听歌软件的进程之间丝毫不会相互干扰。</p></li><li><p>多线程：程序中包含多个执行流，即在一个程序中可以同时运行多个不同的线程来执行不同的任务，也就是说允许单个程序创建多个并行执行的线程来完成各自的任务。</p></li></ul><p>以 <em>Chrome</em> 浏览器中为例，当你打开一个 <em>Tab</em> 页时，其实就是创建了一个进程。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-15-032547.png\" alt=\"image-20211015112546949\" contenteditable=\"false\"><br></p><p><br></p><p>一个进程中可以有多个线程，比如渲染线程、<em>JS</em> 引擎线程、<em>HTTP</em> 请求线程等等。当你发起一个请求时，其实就是创建了一个线程，当请求结束后，该线程可能就会被销毁。</p><h3>浏览器内核</h3><p>简单来说浏览器内核是通过取得页面内容、整理信息（应用 <em>CSS</em> ）、计算和组合最终输出可视化的图像结果，通常也被称为渲染引擎。</p><p><br></p><p>浏览器内核是多线程，在内核控制下各线程相互配合以保持同步，一个浏览器通常由以下常驻线程组成：</p><ul><li><p><em>GUI</em> 渲染线程</p></li><li><p><em>JavaScript</em> 引擎线程</p></li><li><p>定时触发器线程</p></li><li><p>事件触发线程</p></li><li><p>异步 <em>http</em> 请求线程</p></li></ul><h4><em>GUI</em> 渲染线程</h4><ul><li><p>主要负责页面的渲染，解析 <em>HTML</em>、<em>CSS</em>，构建 <em>DOM</em> 树，布局和绘制等。</p></li><li><p>当界面需要重绘或者由于某种操作引发回流时，将执行该线程。</p></li><li><p>该线程与 <em>JS</em> 引擎线程互斥，当执行 <em>JS</em> 引擎线程时，<em>GUI</em> 渲染会被挂起，当任务队列空闲时，主线程才会去执行 <em>GUI</em> 渲染。</p></li></ul><h4><em>JavaScript</em> 引擎线程</h4><ul><li><p>该线程当然是主要负责处理  <em>JavaScript</em>  脚本，执行代码。</p></li><li><p>也是主要负责执行准备好待执行的事件，即定时器计数结束，或者异步请求成功并正确返回时，将依次进入任务队列，等待 <em>JS</em> 引擎线程的执行。</p></li><li><p>当然，该线程与 <em>GUI</em> 渲染线程互斥，当 <em>JS</em> 引擎线程执行 <em>JavaScript</em> 脚本时间过长，将导致页面渲染的阻塞。</p></li></ul><h4>定时触发器线程</h4><ul><li><p>负责执行异步定时器一类的函数的线程，如：<em>setTimeout、setInterval</em>。</p></li><li><p>主线程依次执行代码时，遇到定时器，会将定时器交给该线程处理，当计数完毕后，事件触发线程会将计数完毕后的事件加入到任务队列的尾部，等待 <em>JS</em> 引擎线程执行。</p></li></ul><h4>事件触发线程</h4><ul><li><p>主要负责将准备好的事件交给 <em>JS</em> 引擎线程执行。</p></li></ul><p>比如 <em>setTimeout</em> 定时器计数结束， <em>ajax</em> 等异步请求成功并触发回调函数，或者用户触发点击事件时，该线程会将整装待发的事件依次加入到任务队列的队尾，等待 <em>JS</em> 引擎线程的执行。</p><h4>异步 <em>http</em> 请求线程</h4><ul><li><p>负责执行异步请求一类的函数的线程，如：<em>Promise、fetch、ajax</em> 等。</p></li><li><p>主线程依次执行代码时，遇到异步请求，会将函数交给该线程处理，当监听到状态码变更，如果有回调函数，事件触发线程会将回调函数加入到任务队列的尾部，等待 <em>JS</em> 引擎线程执行。</p></li></ul><h3>浏览器中的事件循环</h3><h4>宏任务和微任务</h4><p>事件循环中的异步队列有两种：宏任务（ <em>macro</em> ）队列和微任务（ <em>micro</em> ）队列。</p><p><br></p><p><strong>宏任务队列有一个，微任务队列只有一个</strong>。</p><ul><li><p>常见的宏任务有：<em>setTimeout、setInterval、requestAnimationFrame、script</em>等。</p></li><li><p>常见的微任务有：<em>new Promise( ).then(回调)、MutationObserver</em> 等。</p></li></ul><h4>事件循环流程</h4><p>一个完整的事件循环过程，可以概括为以下阶段：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-15-041213.png\" alt=\"image-20211015121213384\" contenteditable=\"false\"><br></p><ul><li><p>一开始执行栈空，我们可以把<strong>执行栈认为是一个存储函数调用的栈结构，遵循先进后出的原则</strong>。微任务队列空，宏任务队列里有且只有一个 <em>script</em> 脚本（整体代码）。</p></li><li><p>全局上下文（ <em>script</em> 标签）被推入执行栈，同步代码执行。在执行的过程中，会判断是同步任务还是异步任务，通过对一些接口的调用，可以产生新的宏任务与微任务，它们会分别被推入各自的任务队列里。同步代码执行完了，<em>script</em> 脚本会被移出宏任务队列，这个过程本质上是队列的宏任务的执行和出队的过程。</p></li><li><p>上一步我们出队的是一个宏任务，这一步我们处理的是微任务。但需要注意的是：当一个宏任务执行完毕后，会执行所有的微任务，也就是将整个微任务队列清空。</p></li><li><p>执行渲染操作，更新界面</p></li><li><p>检查是否存在 <em>Web worker</em> 任务，如果有，则对其进行处理</p></li><li><p>上述过程循环往复，直到两个队列都清空</p></li></ul><p>宏任务和微任务的执行流程，总结起来就是：</p><p><br></p><p><strong>当某个宏任务执行完后，会查看是否有微任务队列。如果有，先执行微任务队列中的所有任务，如果没有，会读取宏任务队列中排在最前的任务，执行宏任务的过程中，遇到微任务，依次加入微任务队列。栈空后，再次读取微任务队列里的任务，依次类推。</strong></p><p><br></p><p>执行流程如下图所示：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-15-034206.png\" alt=\"image-20211015114206131\" contenteditable=\"false\"><br></p><p><br></p><p>这里我们可以来看两道具体的代码题目加深理解：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">console.log('script start');\nsetTimeout(function() {\n    console.log('setTimeout');\n}, 0);\n\nPromise.resolve().then(function() {\n    console.log('promise1');\n}).then(function() {\n    console.log('promise2');\n});\n\nconsole.log('script end');</code></pre></div><p>上面的代码输出的结果为：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">script start\nscript end\npromise1\npromise2\nsetTimeout</code></pre></div><p>原因很简单，首先会执行同步的任务，输出 <em>script start</em> 以及 <em>script end</em>。接下来是处理异步任务，异步任务分为宏任务队列和微任务队列，在执行宏任务队列中的每个宏任务之前先把微任务清空一遍，由于 <em>promise</em> 是微任务，所以会先被执行，而 <em>setTimeout</em> 由于是一个宏任务，会在微任务队列被清空后再执行。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">Promise.resolve().then(()=&gt;{\n  console.log('Promise1')\n  setTimeout(()=&gt;{\n    console.log('setTimeout2')\n  },0)\n})\nsetTimeout(()=&gt;{\n  console.log('setTimeout1')\n  Promise.resolve().then(()=&gt;{\n    console.log('Promise2')\n  })\n},0)</code></pre></div><p>上面的代码输出的结果为：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">Promise1\nsetTimeout1\nPromise2\nsetTimeout2</code></pre></div><p>一开始执行栈的同步任务（这属于宏任务）执行完毕，会去查看是否有微任务队列，上题中存在（有且只有一个），然后执行微任务队列中的所有任务输出 <em>Promise1</em>，同时会生成一个宏任务 <em>setTimeout2</em>。</p><p><br></p><p>然后去查看宏任务队列，宏任务 <em>setTimeout1</em> 在 <em>setTimeout2</em> 之前，先执行宏任务 <em>setTimeout1</em>，输出 <em>setTimeout1</em>。在执行宏任务 <em>setTimeout1</em> 时会生成微任务 <em>Promise2</em> ，放入微任务队列中，接着先去清空微任务队列中的所有任务，输出 <em>Promise2</em>。</p><p><br></p><p>清空完微任务队列中的所有任务后，就又会去宏任务队列取一个，这回执行的是 <em>setTimeout2</em>。</p><h3><em>Node.js</em> 中的事件循环</h3><h4><em>Node.js</em> 事件循环介绍</h4><p><em>Node.js</em> 中的事件循环和浏览器中的是完全不相同的东西。</p><p><br></p><p><em>Node.js</em> 采用 <em>V8</em> 作为 <em>JS</em> 的解析引擎，而 <em>I/O</em> 处理方面使用了自己设计的 <em>libuv</em>，<em>libuv</em> 是一个基于事件驱动的跨平台抽象层，封装了不同操作系统一些底层特性，对外提供统一的 <em>API</em>，事件循环机制也是它里面的实现。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-15-041258.png\" alt=\"image-20211015121258759\" contenteditable=\"false\"><br></p><p><br></p><p>可以看出 <em>Node.JS</em> 的事件循环比浏览器端复杂很多。<em>Node.js</em> 的运行机制如下:</p><ul><li><p><em>V8</em> 引擎解析 <em>JavaScript</em> 脚本。</p></li><li><p>解析后的代码，调用 <em>Node API</em>。</p></li><li><p><em>libuv</em> 库负责 <em>Node API</em> 的执行。它将不同的任务分配给不同的线程，形成一个事件循环，以异步的方式将任务的执行结果返回给 <em>V8</em> 引擎。</p></li><li><p><em>V8</em> 引擎再将结果返回给用户。</p></li></ul><p>整个架构图如下所示：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-29-080543.png\" alt=\"image-20211029160543365\" contenteditable=\"false\"><br></p><h4>事件循环的 <em>6</em> 个阶段</h4><p>其中 <em>libuv</em> 引擎中的事件循环分为 <em>6</em> 个阶段，它们会按照顺序反复运行。每当进入某一个阶段的时候，都会从对应的回调队列中取出函数去执行。当队列为空或者执行的回调函数数量到达系统设定的阈值，就会进入下一阶段。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-15-054611.jpg\" alt=\"node\" contenteditable=\"false\"><br></p><p><br></p><p>从上图中，大致看出 <em>Node.js</em> 中的事件循环的顺序：</p><p><br></p><p>外部输入数据 –-&gt; 轮询阶段（ <em>poll</em> ）-–&gt; 检查阶段（ <em>check</em> ）-–&gt; 关闭事件回调阶段（ <em>close callback</em> ）–-&gt; 定时器检测阶段（ <em>timer</em> ）–-&gt; <em>I/O</em> 事件回调阶段（ <em>I/O callbacks</em> ）-–&gt;闲置阶段（ <em>idle、prepare</em> ）–-&gt;轮询阶段（按照该顺序反复运行）...</p><p><br></p><p>以上 <em>6</em> 个阶段所做的事情如下：</p><ul><li><p><em>timers</em> 阶段：这个阶段执行 <em>timer</em>（ <em>setTimeout、setInterval</em> ）的回调</p></li><li><p><em>I/O callbacks</em> 阶段：处理一些上一轮循环中的少数未执行的 <em>I/O</em> 回调</p></li><li><p><em>idle、prepare</em> 阶段：仅 <em>Node.js</em> 内部使用</p></li><li><p><em>poll</em> 阶段：获取新的 <em>I/O</em> 事件, 适当的条件下 <em>Node.js</em> 将阻塞在这里</p></li><li><p><em>check</em> 阶段：执行 <em>setImmediate( )</em> 的回调</p></li><li><p><em>close callbacks</em> 阶段：执行 <em>socket</em> 的 <em>close</em> 事件回调</p></li></ul><p>注意：<strong>上面六个阶段都不包括 <em>process.nextTick( )</em></strong></p><p><br></p><p>接下去我们详细介绍 <em>timers、poll、check</em> 这 <em>3</em> 个阶段，因为日常开发中的绝大部分异步任务都是在这 <em>3</em> 个阶段处理的。</p><p><br></p><p><strong><em>timer</em> 阶段</strong></p><p><br></p><p><em>timers</em> 阶段会执行 <em>setTimeout</em> 和 <em>setInterval</em> 回调，并且是由 <em>poll</em> 阶段控制的。同样，<strong>在 <em>Node.js</em> 中定时器指定的时间也不是准确时间，只能是尽快执行</strong>。</p><p><br></p><p><strong><em>poll</em> 阶段</strong></p><p><br></p><p><em>poll</em> 是一个至关重要的阶段，这一阶段中，系统会做两件事情：</p><ul><li><p>回到 <em>timer</em> 阶段执行回调</p></li><li><p>执行 <em>I/O</em> 回调</p></li></ul><p>并且在进入该阶段时如果没有设定了 <em>timer</em> 的话，会发生以下两件事情：</p><ul><li><p>如果 <em>poll</em> 队列不为空，会遍历回调队列并同步执行，直到队列为空或者达到系统限制</p></li><li><p>如果 <em>poll</em> 队列为空时，会有两件事发生：</p><ul><li><p>如果有 <em>setImmediate</em> 回调需要执行，<em>poll</em> 阶段会停止并且进入到 <em>check</em> 阶段执行回调</p></li><li><p>如果没有 <em>setImmediate</em> 回调需要执行，会等待回调被加入到队列中并立即执行回调，这里同样会有个超时时间设置防止一直等待下去</p></li></ul></li></ul><p>当然设定了 <em>timer</em> 的话且 <em>poll</em> 队列为空，则会判断是否有 <em>timer</em> 超时，如果有的话会回到 <em>timer</em> 阶段执行回调。</p><p><br></p><p>假设 <em>poll</em> 被堵塞，那么即使 <em>timer</em> 已经到时间了也只能等着，这也是为什么上面说定时器指定的时间并不是准确的时间。例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const start = Date.now();\nsetTimeout(function f1() {\n    console.log(\"setTimeout\", Date.now() - start);\n}, 200);\n\nconst fs = require('fs');\n\nfs.readFile('./index.js', 'utf-8', function f2() {\n    console.log('readFile');\n    const start = Date.now();\n    // 强行延时 500 毫秒\n    while (Date.now() - start &lt; 500) { }\n})</code></pre></div><p><strong><em>check</em> 阶段</strong></p><p><br></p><p><em>setImmediate( )</em> 的回调会被加入 <em>check</em> 队列中，从事件循环的阶段图可以知道，<em>check</em> 阶段的执行顺序在 <em>poll</em> 阶段之后。</p><p><br></p><p>我们先来看个例子：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">console.log('start')\nsetTimeout(() =&gt; {\n  console.log('timer1')\n  Promise.resolve().then(function() {\n    console.log('promise1')\n  })\n}, 0)\nsetTimeout(() =&gt; {\n  console.log('timer2')\n  Promise.resolve().then(function() {\n    console.log('promise2')\n  })\n}, 0)\nPromise.resolve().then(function() {\n  console.log('promise3')\n})\nconsole.log('end')\n// 输出结果：start =&gt; end =&gt; promise3 =&gt; timer1 =&gt; promise1 =&gt; timer2 =&gt; promise2</code></pre></div><p>一开始执行同步任务，依次打印出 <em>start end</em>，并将 <em>2</em> 个 <em>timer</em> 依次放入 <em>timer</em> 队列，之后会立即执行微任务队列，所以打印出 <em>promise3</em>。</p><p><br></p><p>然后进入 <em>timers</em> 阶段，执行 <em>timer1</em> 的回调函数，打印 <em>timer1</em>，发现有一个 <em>promise.then</em> 回调将其加入到微任务队列并且立即执行，之后同样的步骤执行 <em>timer2</em>，打印 <em>timer2</em> 以及 <em>promise2</em>。</p><h4>一些注意点</h4><p><strong><em>setTimeout</em> 和 <em>setImmediate</em> 区别</strong></p><p><br></p><p>二者非常相似，区别主要在于调用时机不同。</p><ul><li><p><em>setImmediate</em> 设计在 <em>poll</em> 阶段完成时执行，即 <em>check</em> 阶段</p></li><li><p><em>setTimeout</em> 设计在 <em>poll</em> 阶段为空闲时，且设定时间到达后执行，但它在 <em>timer</em> 阶段执行</p></li></ul><p>来看一个具体的示例：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">setTimeout(function timeout () {\n  console.log('timeout');\n},0);\nsetImmediate(function immediate () {\n  console.log('immediate');\n});</code></pre></div><p>对于以上代码来说，<em>setTimeout</em> 可能执行在前，也可能执行在后。首先 <em>setTimeout(fn, 0) === setTimeout(fn, 1)</em>，这是由源码决定的，进入事件循环也是需要成本的，如果在准备时候花费了大于 <em>1ms</em> 的时间，那么在 <em>timer</em> 阶段就会直接执行 <em>setTimeout</em> 回调。如果准备时间花费小于 <em>1ms</em>，那么就是 <em>setImmediate</em> 回调先执行了。</p><p><br></p><p>但当二者在异步 <em>I/O callback</em> 内部调用时，总是先执行 <em>setImmediate</em>，再执行 <em>setTimeout</em>，例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">const fs = require('fs')\nfs.readFile(__filename, () =&gt; {\n    setTimeout(() =&gt; {\n        console.log('timeout');\n    }, 0)\n    setImmediate(() =&gt; {\n        console.log('immediate')\n    })\n})\n// immediate\n// timeout</code></pre></div><p>在上述代码中，<em>setImmediate</em> 永远先执行。因为两个代码写在 <em>I/O</em> 回调中，<em>I/O</em> 回调是在 <em>poll</em> 阶段执行，当回调执行完毕后队列为空，发现存在 <em>setImmediate</em> 回调，所以就直接跳转到 <em>check</em> 阶段去执行回调了。</p><p><br></p><p><strong><em>process.nextTick</em></strong></p><p><br></p><p>这个函数其实是独立于事件循环之外的，它有一个自己的队列。当每个阶段完成后，如果存在 <em>nextTick</em> 队列，就会清空队列中的所有回调函数，并且优先于其他 <em>microtask</em> 执行。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">setTimeout(() =&gt; {\n console.log('timer1')\n Promise.resolve().then(function() {\n   console.log('promise1')\n })\n}, 0)\nprocess.nextTick(() =&gt; {\n console.log('nextTick')\n process.nextTick(() =&gt; {\n   console.log('nextTick')\n   process.nextTick(() =&gt; {\n     console.log('nextTick')\n     process.nextTick(() =&gt; {\n       console.log('nextTick')\n     })\n   })\n })\n})\n// nextTick =&gt; nextTick =&gt; nextTick =&gt; nextTick =&gt; timer1 =&gt; promise1</code></pre></div><p><strong><em>Promise.then</em></strong></p><p><br></p><p><em>Promise.then</em> 也是独立于事件循环之外的，有一个自己的队列，但是优先级要比 <em>process.nextTick</em> 要低，所以当微任务中同时存在 <em>process.nextTick</em> 和 <em>Promise.then</em> 时，会优先执行前者。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">setTimeout(()=&gt;{\n    console.log('timer1')\n    Promise.resolve().then(function() {\n        console.log('promise1')\n    })\n    process.nextTick(() =&gt; {\n        console.log('nexttick');\n    })\n}, 0)\nsetTimeout(()=&gt;{\n    console.log('timer2')\n    Promise.resolve().then(function() {\n        console.log('promise2')\n    })\n}, 0)\n// timer1、nexttick、promise1、timer2、promise2</code></pre></div><h4><em>Node.js</em> 与浏览器的事件队列的差异</h4><p>浏览器环境下，就两个队列，一个宏任务队列，一个微任务队列。微任务的任务队列是每个宏任务执行完之后执行。（因为在浏览器环境中，script 标签也算是一个宏任务）</p><p><br></p><p>在 <em>Node.js</em> 中，每个任务队列的每个任务执行完毕之后，就会清空这个微任务队列。</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-10-15-060748.png\" alt=\"eventloop\" contenteditable=\"false\"><br></p><h2>真题解答</h2><ul><li><p>请简述一下 <em>Node.js</em> 中的事件循环，和浏览器环境的事件循环有何不同？</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p><em>Node.JS</em> 的事件循环分为 <em>6</em> 个阶段：</p><ul><li><p><em>timers</em> 阶段：这个阶段执行 <em>timer</em>（ <em>setTimeout、setInterval</em> ）的回调</p></li><li><p><em>I/O callbacks</em> 阶段：处理一些上一轮循环中的少数未执行的 <em>I/O</em> 回调</p></li><li><p><em>idle、prepare</em> 阶段：仅 <em>Node.js</em> 内部使用</p></li><li><p><em>poll</em> 阶段：获取新的 <em>I/O</em> 事件, 适当的条件下 <em>Node.js</em> 将阻塞在这里</p></li><li><p><em>check</em> 阶段：执行 <em>setImmediate( )</em> 的回调</p></li><li><p><em>close callbacks</em> 阶段：执行 <em>socket</em> 的 <em>close</em> 事件回调</p></li></ul><p>事件循环的执行顺序为：</p><p><br></p><p>外部输入数据 –-&gt; 轮询阶段（ <em>poll</em> ）-–&gt; 检查阶段（ <em>check</em> ）-–&gt; 关闭事件回调阶段（ <em>close callback</em> ）–-&gt; 定时器检测阶段（ <em>timer</em> ）–-&gt; <em>I/O</em> 事件回调阶段（ <em>I/O callbacks</em> ）-–&gt;闲置阶段（ <em>idle、prepare</em> ）–-&gt;轮询阶段（按照该顺序反复运行）...</p><p><br></p><p>浏览器和 <em>Node.js</em> 环境下，微任务任务队列的执行时机不同</p><ul><li><p>在 <em>Node.js</em> 中，每个任务队列的每个任务执行完毕之后，就会清空这个微任务队列。</p></li><li><p>浏览器环境下，就两个队列，一个宏任务队列，一个微任务队列。微任务的任务队列是每个宏任务执行完之后执行。</p></li></ul></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666078059098",
+    typeId: ObjectId("634d809b7797638ec96fe307")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e55942fac4881713db3d2"),
+    interviewTitle: "JS 中的 eval 方法是什么？",
+    interviewContent: "<h1><em>eval</em></h1><h2>经典真题</h2><ul><li><p><em>JavaScript</em> 中的 <em>eval</em> 方法是啥？一般什么场景下使用？</p></li></ul><h2>关于 <em>eval</em> 你所需要知道的内容</h2><h3><em>eval</em> 的基本用法</h3><p>首先我们来看一下 <em>eval( )</em> 函数的基本用法。</p><p><br></p><p><em>eval( )</em> 函数接收一个字符串作为参数，该字符串一个表示 <em>JavaScript</em> 表达式、语句或一系列语句的字符串。表达式可以包含变量与已存在对象的属性。</p><p><br></p><p>示例如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">eval('console.log(\"Hello!\")'); // Hello!\n\nvar str = `\n    var a = 1;\n    var b = 2;\n    if(a &gt; b) {\n        console.log('a &gt; b');\n    } else {\n        console.log('a&lt;b');\n    }\n`;\neval(str); // a&lt;b\n\nconsole.log(eval('2 + 2')); // 4（ number 类型 ）\n\n\nconsole.log(eval(new String('Hello'))); // [String: 'Hello']\n\n\nconsole.log(eval('2 + 2') === eval('4')); // true\n\n\nconsole.log(eval('2 + 2') === eval(new String('2 + 2'))); // false</code></pre></div><p>通过上面的代码我们可以发现，<em>eval( )</em> 会将传入的字符串作为 <em>JavaScript</em> 来进行执行。</p><p><br></p><p>如果 <em>eval( )</em> 的参数不是字符串， <em>eval( )</em> 会将参数原封不动地返回。例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">console.log(eval(true)); // true\nconsole.log(eval(5)); // 5</code></pre></div><p>如果传入的字符串不是 <em>JavaScript</em> 代码，那么也会将此字符串原封不动的返回。例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var Hello = 5;\nconsole.log(eval('Hello')); // 5</code></pre></div><h3><em>eval</em> 作用域</h3><p><em>eval</em> 里面的代码在当前词法环境中执行，因此它可以看到外部变量：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">let a = 1;\n\nfunction f() {\n  let a = 2;\n\n  eval('console.log(a)'); // 2\n}\n\nf();</code></pre></div><p>它也可以改变外部变量：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">let x = 5;\neval(\"x = 10\");\nconsole.log(x); // 10, value modified</code></pre></div><p>在严格模式下， <em>eval</em> 有自己的词法环境。因此，在 <em>eval</em> 内部声明的函数和变量在外部不可见：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">eval(\"let x = 5; function f() {}\");\n\nconsole.log(typeof x); // undefined (no such variable)</code></pre></div><p>如果没有 <em>use strict</em>，<em>eval</em> 没有自己的词法环境，所以我们会在外面看到 <em>x</em> 和 <em>f</em>  :</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">eval(\"var x = 5; function f() {}\");\n\nconsole.log(x); // 5\nconsole.log(typeof x); // number </code></pre></div><h3>永远不要使用 <em>eval</em></h3><p>明白了 <em>eval( )</em> 函数的基本用法后，你心里一定会有这么一个疑问，那就是这玩意儿用来干嘛？</p><p><br></p><p>在现代编程中，<em>eval</em> 的使用非常谨慎。人们常说“ <em>eval is evil（eval 是邪恶的）</em> ”。</p><p><br></p><p>原因很简单：很久很久以前，<em>JavaScript</em> 是一种弱得多的语言，很多事情只能用 <em>eval</em> 来完成。但那段时间已经过去十年了。</p><p><br></p><p>现在，几乎没有理由使用 <em>eval</em>。如果有人使用了它，那么一个更好的选择是用现代语言结构或 <em>JavaScript</em> 模块替换它。</p><p><br></p><p>总结起来，有如下的理由让我们不要使用 <em>eval</em>：</p><ul><li><p><em>eval</em> 是一个危险的函数， 它使用与调用者相同的权限执行代码。如果你用 <em>eval</em> 运行的字符串代码被恶意方（不怀好意的人）修改，您最终可能会在您的网页/扩展程序的权限下，在用户计算机上运行恶意代码。（不安全）</p></li><li><p><em>eval</em> 通常比其他替代方法更慢，因为它必须调用 <em>JS</em> 解释器，而许多其他结构则可被现代 <em>JS</em> 引擎进行优化。使用 <em>eval</em> 往往比普通 <em>JavaScript</em> 代码慢几个数量级。（性能不好）</p></li><li><p>产生混乱的代码逻辑</p></li></ul><h2>真题解答</h2><ul><li><p><em>JavaScript</em> 中的 <em>eval</em> 方法是啥？一般什么场景下使用？</p></li></ul><blockquote><p>参考答案：</p><p><br></p><p><em>eval</em> 是 <em>JavaScript</em> 中的一个全局函数，它将指定的字符串计算为 <em>JavaScript</em> 代码并执行它。</p><p><br></p><p>在现代 <em>JavaScript</em> 编程中，我们应该尽量避免使用 <em>eval</em>，之前所有使用 <em>eval</em> 的地方都有更好的方式来进行代替，所以在现代 <em>JavaScript</em> 编程中，<em>eval</em> 没有什么使用场景存在，也就是说，并不存在某些场景必须要使用 <em>eval</em> 才能实现的。</p></blockquote><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666078100765",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("interviews").insert([ {
+    _id: ObjectId("634e55e32fac4881713db3de"),
+    interviewTitle: "JS 操作 DOM 时如何获取尺寸和位置？",
+    interviewContent: "<h1>尺寸和位置</h1><p>在 <em>JavaScript</em> 中操作 <em>DOM</em> 节点使其运动的时候，常常会涉及到各种宽高以及位置坐标等概念，如果不能很好地理解这些属性所代表的意义，就会在书写代码时遇到不小的问题。而由于这些属性概念较多，加上浏览器之间实现方式不同，常常会造成概念混淆。</p><p><br></p><p>本章，我们就一起来总结一下使用 <em>JavaScript</em> 操作 <em>DOM</em> 时，尺寸和宽高相关的属性。</p><p><br></p><p>主要分为以下两部分：</p><ul><li><p><em>DOM</em> 对象相关尺寸和位置属性</p><ul><li><p>只读属性</p><ul><li><p><em>clientWidth</em> 和 <em>clientHeight</em> 属性</p></li><li><p><em>offsetWidth</em> 和 <em>offsetHeight</em> 属性</p></li><li><p><em>clientTop</em> 和 <em>clientLeft</em> 属性</p></li><li><p><em>offsetLeft</em> 和 <em>offsetTop</em> 属性</p></li><li><p><em>scrollHeight</em> 和 <em>scrollWidth</em> 属性</p></li></ul></li><li><p>可读可写属性</p><ul><li><p><em>scrollTop</em> 和 <em>scrollLeft</em> 属性</p></li><li><p><em>domObj.style.xxx</em> 属性</p></li></ul></li></ul></li><li><p><em>event</em> 事件对象相关尺寸和位置属性</p><ul><li><p><em>clientX</em> 和 <em>clientY</em> 属性</p></li><li><p><em>screenX</em> 和 <em>screenY</em> 属性</p></li><li><p><em>offsetX</em> 和 <em>offsetY</em> 属性</p></li><li><p><em>pageX</em> 和 <em>pageY</em> 属性</p></li></ul></li></ul><h2><em>DOM</em> 对象相关尺寸和位置属性</h2><p>在 <em>DOM</em> 对象所提供的尺寸和位置相关属性中，可以分为<strong>只读属性</strong>和<strong>可读可写属性</strong>。</p><h3>只读属性</h3><p>所谓的只读属性指的是 <em>DOM</em> 节点的固有属性，该属性只能通过 <em>JavaScript</em> 去获取而不能通过 <em>JavaScript</em> 去设置，而且获取的值是只有数字并不带单位的（ <em>px、em</em> 等 ）</p><p><br></p><p>常见的只读属性有：</p><ul><li><p><em>clientWidth</em> 和 <em>clientHeight</em> 属性</p></li><li><p><em>offsetWidth</em> 和 <em>offsetHeight</em> 属性</p></li><li><p><em>clientTop</em> 和 <em>clientLeft</em> 属性</p></li><li><p><em>offsetLeft</em> 和 <em>offsetTop</em> 属性</p></li><li><p><em>scrollHeight</em> 和 <em>scrollWidth</em> 属性</p></li></ul><p>下面我们来一组一组进行介绍。</p><h4><em>clientWidth</em> 和 <em>clientHeight</em> 属性</h4><p>该属性指的是元素的可视部分宽度和高度，即 <em>padding + content</em>，例如：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div id=\"container\" class=\"container\"&gt;&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.container{\n  width: 200px;\n  height: 200px;\n  background-color: red;\n  border: 1px solid;\n  overflow: auto;\n  padding: 10px;\n  margin: 20px;\n}</code></pre></div><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var container = document.getElementById(\"container\");\nconsole.log(\"clientWidth:\",container.clientWidth); // 220\nconsole.log(\"clientHeight:\",container.clientHeight); // 220</code></pre></div><h4><em>offsetWidth</em> 和 <em>offsetHeight</em> 属性</h4><p>这一对属性指的是元素的 <em>border+padding+content</em> 的宽度和高度。例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var container = document.getElementById(\"container\");\nconsole.log(\"offsetWidth:\", container.offsetWidth); // 222\nconsole.log(\"offsetWidth:\", container.offsetWidth); // 222</code></pre></div><p>可以看到该属性和 <em>clientWidth</em> 以及 <em>clientHeight</em> 相比，多了设定的边框 <em>border</em> 的宽度和高度。</p><h4><em>clientTop</em> 和 <em>clientLeft</em> 属性</h4><p>这一对属性是用来读取元素的 <em>border</em> 的宽度和高度的。例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var container = document.getElementById(\"container\");\nconsole.log(\"clientTop:\", container.clientTop); // 1\nconsole.log(\"clientLeft:\", container.clientLeft); // 1</code></pre></div><h4><em>offsetLeft</em> 和 <em>offsetTop</em> 属性</h4><p>首先需要介绍一下 <em>offsetParent</em> 属性，该属性是获取当前元素的离自己最近的并且定了位的祖先元素，该祖先元素就是当前元素的 <em>offsetParent</em>。</p><p><br></p><p>如果从该元素向上寻找，找不到这样一个祖先元素，那么当前元素的 <em>offsetParent</em> 就是 <em>body</em> 元素。</p><p><br></p><p><em>offsetLeft</em> 和 <em>offsetTop</em> 指的是当前元素，相对于其 <em>offsetParent</em> 左边距离和上边距离，即当前元素的 <em>border</em> 到包含它的 <em>offsetParent</em> 的 <em>border</em> 的距离。</p><p><br></p><p>下面我们来具体举例说明：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var container = document.getElementById(\"container\");\nconsole.log(container.offsetParent); // body</code></pre></div><p>可以看到，我们直接访问 <em>container</em> 盒子的 <em>offsetParent</em> 属性，因为不存在定了位的祖先元素，所以显示出来的是 <em>body</em> 元素。</p><p><br></p><p>接下来我们对上面的代码进行改造：</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div id=\"container\" class=\"container\"&gt;\n  &lt;div id=\"item\" class=\"item\"&gt;&lt;/div&gt;\n&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.container {\n  width: 200px;\n  height: 200px;\n  background-color: red;\n  border: 1px solid;\n  overflow: auto;\n  padding: 10px;\n  margin: 20px;\n  position: relative;\n}\n.item{\n  width: 50px;\n  height: 50px;\n  background-color: blue;\n  position: absolute;\n  left: 100px;\n  top: 100px;\n}</code></pre></div><p>当前效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-11-05-063813.png\" alt=\"image-20211105143812415\" contenteditable=\"false\"><br></p><p><br></p><p>接下来我们来获取 <em>item</em> 盒子的 <em>offsetLeft</em> 以及 <em>offsetTop</em> 属性值。</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var container = document.getElementById(\"container\");\nvar item = document.getElementById(\"item\");\nconsole.log(item.offsetParent); // container 盒子 dom 对象\nconsole.log(item.offsetLeft); // 100\nconsole.log(item.offsetTop); // 100</code></pre></div><p>接下来我们不对 <em>item</em> 子元素进行定位，而是使用 <em>margin</em> 的方式来设置子盒子的位置，如下：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.item{\n  width: 50px;\n  height: 50px;\n  background-color: blue;\n  margin: 50px;\n}</code></pre></div><p>然后再次获取 <em>item</em> 盒子的 <em>offsetLeft</em> 以及 <em>offsetTop</em> 属性值，如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var container = document.getElementById(\"container\");\nvar item = document.getElementById(\"item\");\nconsole.log(item.offsetParent); // container 盒子 dom 对象\nconsole.log(item.offsetLeft); // 60\nconsole.log(item.offsetTop); // 60</code></pre></div><p>可以看到，打印出来的是 <em>60</em>，因为我们设置的 <em>margin</em> 的值为 <em>50</em>，但是其定了位的父元素还设置了 <em>10</em> 像素的 <em>padding</em>，所以加起来就是 <em>60</em>。</p><h4><em>scrollHeight</em> 和 <em>scrollWidth</em> 属性</h4><p>顾名思义，这两个属性指的是当元素内部的内容超出其宽度和高度的时候，元素内部内容的实际宽度和高度。</p><p><br></p><p>如果当前元素的内容没有超过其高度或者宽度，那么返回的就是元素的可视部分宽度和高度，即和 <em>clientWidth</em> 和 <em>clientHeight</em> 属性值相同。</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div id=\"container\" class=\"container\"&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla repellat porro atque culpa rem sunt sed! Voluptates vel incidunt accusamus reiciendis aut, adipisci ut. Hic, impedit officia.Quis, animi beatae. Facere dolorum quasi laborum, rem facilis illum necessitatibus sint doloribus beatae\nexercitationem sapiente! Quod vel cupiditate quam libero, delectus natus.&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.container {\n  width: 200px;\n  height: 200px;\n  background-color: red;\n  border: 1px solid;\n  overflow: auto;\n  padding: 10px;\n  margin: 20px;\n}</code></pre></div><p>上面的代码中，我们为 <em>container</em> 盒子加入了一些文字，使其能够产生滚动效果，接下来访问 <em>scrollHeight</em> 和 <em>scrollWidth</em> 属性，如下：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var container = document.getElementById(\"container\");\nconsole.log(\"scrollWidth:\", container.scrollWidth); // scrollWidth: 220\nconsole.log(\"scrollHeight\", container.scrollHeight); // scrollHeight 372</code></pre></div><p>如果 <em>container</em> 盒子不具备滚动的条件，那么返回的值和 <em>clientWidth</em> 和 <em>clientHeight</em> 属性值是相同的。</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div id=\"container\" class=\"container\"&gt;&lt;/div&gt;</code></pre></div><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var container = document.getElementById(\"container\");\nconsole.log(\"scrollWidth:\", container.scrollWidth); // scrollWidth: 220\nconsole.log(\"scrollHeight\", container.scrollHeight); // scrollHeight 220</code></pre></div><h3>可读可写属性</h3><p>所谓的可读可写属性指的是不仅能通过 <em>JavaScript</em> 获取该属性的值，还能够通过 <em>JavaScript</em> 为该属性赋值。</p><h4><em>scrollTop</em> 和 <em>scrollLeft</em> 属性</h4><p>这对属性是可读写的，指的是当元素其中的内容超出其宽高的时候，元素被卷起的高度和宽度。</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div id=\"container\" class=\"container\"&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla repellat porro atque culpa rem sunt sed! Voluptates vel incidunt accusamus reiciendis aut, adipisci ut. Hic, impedit officia.Quis, animi beatae. Facere dolorum quasi laborum, rem facilis illum necessitatibus sint doloribus beatae\nexercitationem sapiente! Quod vel cupiditate quam libero, delectus natus.&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">.container {\n  width: 200px;\n  height: 200px;\n  background-color: red;\n  border: 1px solid;\n  overflow: auto;\n  padding: 10px;\n  margin: 20px;\n}</code></pre></div><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var container = document.getElementById(\"container\");\ncontainer.onscroll = function () {\n  console.log(\"scrollTop:\", container.scrollTop);\n  console.log(\"scrollLeft\", container.scrollLeft);\n}</code></pre></div><p>在上面的代码中，我们的 <em>container</em> 盒子内容超出了容器的高度，我们为该盒子绑定了 <em>scroll</em> 事件，滚动的时候打印出 <em>scrollTop</em> 和 <em>scrollLeft</em>，即元素被卷起的高度和宽度。</p><p><br></p><p>效果如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-11-05-071632.gif\" alt=\"2021-11-05 15.15.58\" contenteditable=\"false\"><br></p><p><br></p><p>该属性因为是可读可写属性，所以可以通过赋值来让内容自动滚动到某个位置。例如很多网站右下角都有回到顶部的按钮，背后对应的 <em>JavaScript</em> 代码就是通过该属性来实现的。</p><h4><em>domObj.style.xxx</em> 属性</h4><p>对于一个 <em>DOM</em> 元素来讲，它的 <em>style</em> 属性返回的也是一个对象，并且这个对象中的任意一个属性是可读写的。例如 <em>domObj.style.top、domObj.style.wdith</em> 等，在读的时候，它们返回的值常常是带有单位的（如 <em>px</em> ）。</p><p><br></p><p>但是，对于这种方式，<strong>它只能够获取到该元素的行内样式，而并不能获取到该元素最终计算好的样式</strong>。如果想要获取计算好的样式，需要使用 *obj.currentstyle（ IE ）*和 <em>getComputedStyle</em>（ <em>IE</em> 之外的浏览器 ）</p><p><br></p><p>另一方面，由于 <em>domObj.style.xxx</em> 属性能够被赋值，所以 <em>JavaScript</em> 控制 <em>DOM</em> 元素运动的原理就是通过不断修改这些属性的值而达到其位置改变的，需要注意的是，<strong>给这些属性赋值的时候需要带单位的要带上单位，否则不生效</strong>。</p><h2><em>event</em> 事件对象相关尺寸和位置属性</h2><p>对于元素的运动的操作，通常还会涉及到事件里面的 <em>event</em> 对象，而 <em>event</em> 对象也存在很多位置属性，且由于浏览器兼容性问题会导致这些属性间相互混淆，这里也来进行一个总结。</p><h4><em>clientX</em> 和 <em>clientY</em> 属性</h4><p>这对属性是当事件发生时，鼠标点击位置相对于浏览器（可视区）的坐标，即浏览器左上角坐标的（ <em>0 , 0</em> ），该属性以浏览器左上角坐标为原点，计算鼠标点击位置距离其左上角的位置，</p><p><br></p><p>不管浏览器窗口大小如何变化，都不会影响点击位置的坐标。</p><div data-language=\"html\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"html\">&lt;div id=\"container\" class=\"container\"&gt;&lt;/div&gt;</code></pre></div><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">*{\n  margin: 0;\n  padding: 0;\n}\n.container {\n  width: 200px;\n  height: 200px;\n  background-color: red;\n  border: 1px solid;\n  overflow: auto;\n  padding: 10px;\n  margin: 20px;\n}</code></pre></div><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var container = document.getElementById(\"container\");\ncontainer.onclick = function (ev) {\n  var evt = ev || event;\n  console.log(evt.clientX + \":\" + evt.clientY);\n}</code></pre></div><p>在上面的代码中，我们为 <em>container</em> 盒子绑定了点击事件，获取该盒子的 <em>clientX</em> 以及 <em>clientY</em> 的值，接下来我们来进行点击测试：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-11-05-073614.png\" alt=\"image-20211105153614467\" contenteditable=\"false\"><br></p><p><br></p><p>我们分别点击该盒子的最左上角和最右下角，打印出来的值分别是（<em>20 , 20</em>）和 （<em>241 , 241</em>），可以看出这确实是以浏览器左上角坐标的（ <em>0 , 0</em> ）为原点来进行计算的。</p><h4><em>screenX</em> 和 <em>screenY</em> 属性</h4><p><em>screenX</em> 和 <em>screenY</em> 是事件发生时鼠标相对于屏幕的坐标，以设备屏幕的左上角为原点，事件发生时鼠标点击的地方即为该点的 <em>screenX</em> 和 <em>screenY</em> 值。例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var container = document.getElementById(\"container\");\ncontainer.onclick = function (ev) {\n  var evt = ev || event;\n  console.log(evt.screenX + \":\" + evt.screenY);\n}</code></pre></div><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-11-05-074500.png\" alt=\"image-20211105154500066\" contenteditable=\"false\"><br></p><p><br></p><p>我们将浏览器缩小，同样是点击 <em>container</em> 盒子的最左上角，打印出来的是（<em>368 , 365</em>），因为这是以屏幕最左上角为原点的。</p><h4><em>offsetX</em> 和 <em>offsetY</em> 属性</h4><p>这一对属性是指当事件发生时，鼠标点击位置相对于该事件源的位置，即点击该 <em>DOM</em> 元素，以该 <em>DOM</em> 左上角为原点来计算鼠标点击位置的坐标。例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var container = document.getElementById(\"container\");\ncontainer.onclick = function (ev) {\n  var evt = ev || event;\n  console.log(\"offsetX:\", evt.offsetX);\n  console.log(\"offsetY:\", evt.offsetY);\n}</code></pre></div><p>同样点击 <em>container</em> 元素的最左上角，打印出（ <em>0, 0</em> ）</p><h4><em>pageX</em> 和 <em>pageY</em> 属性</h4><p>顾名思义，该属性是事件发生时鼠标点击位置相对于页面的位置，通常浏览器窗口没有出现滚动条时，该属性和 <em>clientX</em> 及 <em>clientY</em> 是等价的。</p><p><br></p><p>例如：</p><div data-language=\"js\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"js\">var container = document.getElementById(\"container\");\ncontainer.onclick = function (ev) {\n  var evt = ev || event;\n  console.log(\"pageX:\", evt.pageX);\n  console.log(\"pageY:\", evt.pageY);\n  console.log(\"clientX:\", evt.clientX);\n  console.log(\"clientY:\", evt.clientY);\n}</code></pre></div><p>此时点击 <em>container</em> 盒子，得到的 <em>pageX、pageY</em> 的值和 <em>clientX、clientY</em> 完全相同。</p><p><br></p><p>但是当浏览器出现滚动条的时候，<em>pageX</em> 通常会大于 <em>clientX</em>，因为页面还存在被卷起来的部分的宽度和高度。</p><p><br></p><p>例如：</p><div data-language=\"css\" class=\"toastui-editor-ww-code-block\"><pre><code data-language=\"css\">...\nbody{\n  height: 5000px;\n}\n...</code></pre></div><p>我们为 <em>body</em> 添加一个 <em>height</em> 为 <em>500px</em>，使其能够产生滚动效果，此时两组属性的区别就出来了。如下：</p><p><br></p><p><img src=\"https://xiejie-typora.oss-cn-chengdu.aliyuncs.com/2021-11-05-080641.gif\" alt=\"2021-11-05 16.06.06\" contenteditable=\"false\"><br></p><div contenteditable=\"false\"><hr></div><p>-<em>EOF</em>-</p>",
+    onShelfDate: "1666078179523",
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+
+// ----------------------------
+// Collection structure for issues
+// ----------------------------
+db.getCollection("issues").drop();
+db.createCollection("issues");
+
+// ----------------------------
+// Documents of issues
+// ----------------------------
+db.getCollection("issues").insert([ {
+    _id: ObjectId("6357abfb37fe7a1aab3aeae8"),
+    issueTitle: "如果遇到组件使用到主题相关颜色一般怎么处理比较好?",
+    issueContent: "<p>在使用一些框架库时,部分属性是一些和主题相关的属性。比如一个 icon 组件,可能支持 color 属性。</p><p><code>&lt;icon :color=\"themColor\"&gt;&lt;/icon&gt;</code></p><p>如果主题的颜色是通过 css 声明的。例如</p><p><code>$themColor: rgba(25, 126, 66)</code></p><p>$themColor 一般也是在 css 中使用。那么要让 themColor 和 $themColor 一样可以通过新建一个文件引入比如</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>{\n  themColor: \"rgba(25, 126, 66)\"\n}</code></pre></div><p>但是这种方式就需要保证两个文件是同步的。遇到这种情况怎么处理会比较容易维护</p><p><br></p><p><br></p>",
+    scanNumber: Int32("17"),
+    commentNumber: Int32("4"),
+    issueStatus: true,
+    issueDate: "1666690043975",
+    userId: ObjectId("634e56402fac4881713db3e8"),
+    typeId: ObjectId("634d80417797638ec96fe2f9")
+} ]);
+db.getCollection("issues").insert([ {
+    _id: ObjectId("6357da7bd84d68f7b87e1208"),
+    issueTitle: "vue模板中如何判断一个变量值属于另一个变量数组的元素？",
+    issueContent: "<p>后端猿强学VUE，现在接口返回数据如下：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>{\n    \"errcode\": 0, \n    \"msg\": \"获取成功\", \n    \"data\": {\n        \"red_list\": [\n            1, \n            2, \n            3, \n            4, \n            5, \n            6, \n            7, \n            8, \n            9\n        ], \n        \"red_selected\": [\n            \"2\", \n            \"5\"\n        ]\n    }\n}</code></pre></div><p>请教大神在模板中该如何判断 red_list 里的某个数是在 red_selected 数组里的呢？</p><p>我现在的写法如下(重点关注 class 属性)，但是不行：</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>&lt;li v-for=\"item in data.red_list\" \nv-on:click=\"select(item, $event)\" :id=\"`red${item}`\" \n:class=\"[data.red_selected.indexOf(item) === -1 ? 'redC1' : 'redC']\"&gt;{{item}}\n&lt;/li&gt;</code></pre></div>",
+    scanNumber: Int32("3"),
+    commentNumber: Int32("1"),
+    issueStatus: true,
+    issueDate: "1666701947079",
+    userId: ObjectId("6357ae1537fe7a1aab3aeb0f"),
+    typeId: ObjectId("634d80417797638ec96fe2f9")
+} ]);
+db.getCollection("issues").insert([ {
+    _id: ObjectId("6357daf5d84d68f7b87e1221"),
+    issueTitle: "springboot集成redis主从切换问题？",
+    issueContent: "<p>求教:</p><p>redis是3主3从，配置成功。主库挂了，从库可以自动切换。</p><p>问题: 使用springboot集成了redis集群，当主库挂了，从库变成主库的时候大约2秒钟报错，从库变成主库切换完成以后，又正常了。好像是连接的这个库有什么，但是又找不到问题所在，求教大佬？</p><p><strong>错误信息</strong></p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>2022-10-24 13:46:34.974 ERROR 4425 --- [nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.data.redis.RedisSystemException: Error in execution; nested exception is io.lettuce.core.RedisCommandExecutionException: CLUSTERDOWN The cluster is down] with root cause\n\nio.lettuce.core.RedisCommandExecutionException: CLUSTERDOWN The cluster is down\n    at io.lettuce.core.ExceptionFactory.createExecutionException(ExceptionFactory.java:135) ~[lettuce-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]\n    at io.lettuce.core.ExceptionFactory.createExecutionException(ExceptionFactory.java:108) ~[lettuce-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]\n    at io.lettuce.core.protocol.AsyncCommand.completeResult(AsyncCommand.java:118) ~[lettuce-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]\n    at io.lettuce.core.protocol.AsyncCommand.complete(AsyncCommand.java:109) ~[lettuce-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]\n    at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:59) ~[lettuce-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]\n    at io.lettuce.core.cluster.ClusterCommand.complete(ClusterCommand.java:66) ~[lettuce-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]\n    at io.lettuce.core.protocol.CommandHandler.complete(CommandHandler.java:680) ~[lettuce-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]\n    at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:640) ~[lettuce-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]\n    at io.lettuce.core.protocol.CommandHandler.channelRead(CommandHandler.java:591) ~[lettuce-core-5.3.5.RELEASE.jar:5.3.5.RELEASE]\n    at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) ~[netty-transport-4.1.55.Final.jar:4.1.55.Final]\n    at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) ~[netty-transport-4.1.55.Final.jar:4.1.55.Final]\n    at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:357) ~[netty-transport-4.1.55.Final.jar:4.1.55.Final]\n    at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410) ~[netty-transport-4.1.55.Final.jar:4.1.55.Final]\n    at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:379) ~[netty-transport-4.1.55.Final.jar:4.1.55.Final]\n    at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:365) ~[netty-transport-4.1.55.Final.jar:4.1.55.Final]\n    at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919) ~[netty-transport-4.1.55.Final.jar:4.1.55.Final]\n    at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166) ~[netty-transport-4.1.55.Final.jar:4.1.55.Final]\n    at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719) ~[netty-transport-4.1.55.Final.jar:4.1.55.Final]\n    at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655) ~[netty-transport-4.1.55.Final.jar:4.1.55.Final]\n    at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581) ~[netty-transport-4.1.55.Final.jar:4.1.55.Final]\n    at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493) ~[netty-transport-4.1.55.Final.jar:4.1.55.Final]\n    at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989) ~[netty-common-4.1.55.Final.jar:4.1.55.Final]\n    at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.55.Final.jar:4.1.55.Final]\n    at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.55.Final.jar:4.1.55.Final]\n    at java.lang.Thread.run(Thread.java:748) [na:1.8.0_302]</code></pre></div><p><strong>配置类</strong></p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>@EnableCaching\n@Configuration\npublic class RedisConfig extends CachingConfigurerSupport {\n\n    @Autowired\n    private RedisProperties redisProperties;\n\n    public GenericObjectPoolConfig&lt;?&gt; genericObjectPoolConfig(RedisProperties.Pool properties) {\n        GenericObjectPoolConfig&lt;?&gt; config = new GenericObjectPoolConfig&lt;&gt;();\n        config.setMaxTotal(properties.getMaxActive());\n        config.setMaxIdle(properties.getMaxIdle());\n        config.setMinIdle(properties.getMinIdle());\n        if (properties.getTimeBetweenEvictionRuns() != null) {\n            config.setTimeBetweenEvictionRunsMillis(properties.getTimeBetweenEvictionRuns().toMillis());\n        }\n        if (properties.getMaxWait() != null) {\n            config.setMaxWaitMillis(properties.getMaxWait().toMillis());\n        }\n        return config;\n    }\n\n    @Bean(destroyMethod = \"destroy\")\n    public LettuceConnectionFactory lettuceConnectionFactory() {\n\n        //开启 自适应集群拓扑刷新和周期拓扑刷新\n        ClusterTopologyRefreshOptions clusterTopologyRefreshOptions = ClusterTopologyRefreshOptions.builder()\n                // 开启全部自适应刷新\n                .enableAllAdaptiveRefreshTriggers() // 开启自适应刷新,自适应刷新不开启,Redis集群变更时将会导致连接异常\n                // 自适应刷新超时时间(默认30秒)\n                //默认关闭开启后时间为30秒\n                .adaptiveRefreshTriggersTimeout(Duration.ofSeconds(10))\n                // 开周期刷新\n                // 默认关闭开启后时间为60秒 ClusterTopologyRefreshOptions\n                .enablePeriodicRefresh(Duration.ofSeconds(10))\n                // .DEFAULT_REFRESH_PERIOD 60  .enablePeriodicRefresh(Duration.ofSeconds(2)) = .enablePeriodicRefresh\n                // ().refreshPeriod(Duration.ofSeconds(2))\n                .build();\n\n        // https://github.com/lettuce-io/lettuce-core/wiki/Client-Options\n        ClientOptions clientOptions = ClusterClientOptions.builder()\n                .autoReconnect(true)\n                .maxRedirects(6)\n                .topologyRefreshOptions(clusterTopologyRefreshOptions)\n                .build();\n\n        LettuceClientConfiguration clientConfig = LettucePoolingClientConfiguration.builder()\n                .poolConfig(genericObjectPoolConfig(redisProperties.getLettuce().getPool()))\n                .readFrom(ReadFrom.MASTER_PREFERRED)\n                .clientOptions(clientOptions)\n                //默认RedisURI.DEFAULT_TIMEOUT 60\n                .commandTimeout(redisProperties.getTimeout())\n                .build();\n\n        Set&lt;RedisNode&gt; nodes = new HashSet&lt;RedisNode&gt;();\n        List&lt;String&gt; clusterNodes = redisProperties.getCluster().getNodes();\n        clusterNodes.forEach(address -&gt; nodes.add(new RedisNode(address.split(\":\")[0].trim(),\n                Integer.valueOf(address.split(\":\")[1]))));\n        RedisClusterConfiguration clusterConfiguration = new RedisClusterConfiguration();\n        clusterConfiguration.setClusterNodes(nodes);\n        clusterConfiguration.setPassword(RedisPassword.of(redisProperties.getPassword()));\n        clusterConfiguration.setMaxRedirects(redisProperties.getCluster().getMaxRedirects());\n\n        LettuceConnectionFactory lettuceConnectionFactory = new LettuceConnectionFactory(clusterConfiguration,\n                clientConfig);\n        //是否允许多个线程操作共用同一个缓存连接，默认true，false时每个操作都将开辟新的连接\n        lettuceConnectionFactory.setShareNativeConnection(false);\n        // 重置底层共享连接, 在接下来的访问时初始化\n        lettuceConnectionFactory.resetConnection();\n        return lettuceConnectionFactory;\n    }\n\n    @Bean\n    public RedisTemplate&lt;String, Object&gt; redisTemplate(RedisConnectionFactory factory) {\n        RedisTemplate&lt;String, Object&gt; redisTemplate = new RedisTemplate&lt;&gt;();\n        //解决乱码问题\n        RedisSerializer&lt;String&gt; stringSerializer = new StringRedisSerializer();\n        Jackson2JsonRedisSerializer&lt;Object&gt; jackson2JsonRedisSerializer =\n                new Jackson2JsonRedisSerializer&lt;&gt;(Object.class);\n        ObjectMapper om = new ObjectMapper();\n        om.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);\n        om.activateDefaultTyping(LaissezFaireSubTypeValidator.instance,\n                ObjectMapper.DefaultTyping.NON_FINAL, JsonTypeInfo.As.PROPERTY);\n        jackson2JsonRedisSerializer.setObjectMapper(om);\n        redisTemplate.setConnectionFactory(factory);\n        // key采用String的序列化方式\n        redisTemplate.setKeySerializer(stringSerializer);\n        // hash的key也采用String的序列化方式\n        redisTemplate.setHashKeySerializer(stringSerializer);\n        // value序列化方式采用jackson\n        redisTemplate.setValueSerializer(jackson2JsonRedisSerializer);\n        // hash的value序列化方式采用jackson\n        redisTemplate.setHashValueSerializer(jackson2JsonRedisSerializer);\n        redisTemplate.afterPropertiesSet();\n        return redisTemplate;\n    }\n\n\n\n    @Bean\n    public CacheManager cacheManager(RedisConnectionFactory factory) {\n        RedisSerializer&lt;String&gt; redisSerializer = new StringRedisSerializer();\n        Jackson2JsonRedisSerializer&lt;Object&gt; jackson2JsonRedisSerializer =\n                new Jackson2JsonRedisSerializer&lt;&gt;(Object.class);\n        //解决查询缓存转异常的问题\n        ObjectMapper om = new ObjectMapper();\n        om.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);\n        om.activateDefaultTyping(LaissezFaireSubTypeValidator.instance,\n                ObjectMapper.DefaultTyping.NON_FINAL, JsonTypeInfo.As.PROPERTY);\n        jackson2JsonRedisSerializer.setObjectMapper(om);\n        //配置序列化（解决乱码的问题），过期时间600秒\n        RedisCacheConfiguration config = RedisCacheConfiguration.defaultCacheConfig().\n                entryTtl(Duration.ofSeconds(600))\n                .serializeKeysWith(RedisSerializationContext.SerializationPair.fromSerializer(redisSerializer))\n                .serializeValuesWith(RedisSerializationContext.SerializationPair.fromSerializer(jackson2JsonRedisSerializer))\n                .disableCachingNullValues();\n        RedisCacheManager cacheManager = RedisCacheManager.builder(factory)\n                .cacheDefaults(config)\n                .build();\n        return cacheManager;\n    }\n\n\n}</code></pre></div><p><strong>yaml文件</strong></p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>spring:\n  #redis配置\n  redis:\n    lettuce:\n      pool:\n        max-active: 1024 # 连接池最大连接数（使用负值表示没有限制）\n        max-wait: 10000  # 连接池最大阻塞等待时间\n        max-idle: 10   # 连接池中的最大空闲连接\n        min-idle: 5   # 连接池中的最小空闲连接\n    database: 0\n    #过期时间\n    timeout: 15000\n    #密码\n    password: 123456\n    cluster:\n      refresh:\n        adaptive: true\n        period: 10000\n      nodes:\n        - 192.168.0.250:6381\n        - 192.168.0.250:6382\n        - 192.168.0.250:6383\n        - 192.168.0.251:6386\n        - 192.168.0.251:6387\n        - 192.168.0.251:6388\n      max-redirects: 3</code></pre></div><p><strong>POM.xml</strong></p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>&lt;dependency&gt;\n            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;\n            &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;\n            &lt;version&gt;2.7.0&lt;/version&gt;\n        &lt;/dependency&gt;\n        &lt;dependency&gt;\n            &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;\n            &lt;artifactId&gt;commons-pool2&lt;/artifactId&gt;\n            &lt;version&gt;2.9.0&lt;/version&gt;\n        &lt;/dependency&gt;</code></pre></div>",
+    scanNumber: Int32("0"),
+    commentNumber: Int32("0"),
+    issueStatus: true,
+    issueDate: "1666702069370",
+    userId: ObjectId("6357ae1537fe7a1aab3aeb0f"),
+    typeId: ObjectId("634e1b17386eea42f85fad04")
+} ]);
+db.getCollection("issues").insert([ {
+    _id: ObjectId("6357db34d84d68f7b87e122d"),
+    issueTitle: "js获取嵌套对象某个属性的值组成新数组?",
+    issueContent: "<p>我想获取每一层对象的id的值，放入一个数组中。</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>let arr = [\n  {\n    id:'1',\n    name:'aaaaa',\n    children:[\n      {\n        id:'1-1',\n        name:'bbbbb',\n        children:[\n          {\n            id:'1-2',\n            name:'ccccc',\n            children:[\n              {id:'1-3-1', name:'ddddd'},\n              {id:'1-4-1', name:'eeeee'}\n            ]\n          }\n        ]\n      }\n    ]\n  }\n]</code></pre></div>",
+    scanNumber: Int32("7"),
+    commentNumber: Int32("2"),
+    issueStatus: true,
+    issueDate: "1666702132079",
+    userId: ObjectId("6357ae8b37fe7a1aab3aeb1f"),
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("issues").insert([ {
+    _id: ObjectId("6357dd23d84d68f7b87e1286"),
+    issueTitle: "Springboot 上传接受文件上传参数 null，Configuration注入bean 失败？",
+    issueContent: "<p>新手 最近在做一个上传的功能</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>    @Resource\n    MinioUtils minioUtils;\n\n    @PostMapping(\"/upload\")\n    @ApiOperation(\"文件上传\")\n    @ResponseBody\n    public List&lt;String&gt; upload(@RequestParam(name = \"file\", required = false) MultipartFile[] file){\n        if(file == null || file.length == 0){\n            throw  new CustomException(CustomExceptionType.USER_INPUT_ERROR,\"上传文件不能为空\");\n        }\n        List&lt;String&gt; upload = minioUtils.uploads(file);\n        return upload;\n    }</code></pre></div><p>这是我文件上传的 代码， 接收到的file 一直是null 请问这个要怎么处理呢</p><p>我搜索了下 有些人说要注入一个BEAN</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>@Configuration\n@EnableAutoConfiguration(exclude={MultipartAutoConfiguration.class})\npublic class UploadConfig {\n\n\n    @Bean(name=\"multipartResolver\")\n    public MultipartResolver multipartResolver(){\n        return new CommonsMultipartResolver();\n    }\n}\n<br></code></pre></div><p>但是我注入的时候一直报错</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'multipartResolver' defined in class path resource [com/szhb/backend/config/UploadConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.multipart.MultipartResolver]: Factory method 'multipartResolver' threw exception; nested exception is java.lang.NoClassDefFoundError: org/apache/commons/fileupload/disk/DiskFileItemFactory\n    at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.12.jar:5.3.12]\n    at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:486) ~[spring-beans-5.3.12.jar:5.3.12]\n    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.12.jar:5.3.12]\n    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.12.jar:5.3.12]\n    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.12.jar:5.3.12]\n    at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.12.jar:5.3.12]\n    at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.12.jar:5.3.12]\n    at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.12.jar:5.3.12]\n    at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.12.jar:5.3.12]\n    at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.12.jar:5.3.12]\n    at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.12.jar:5.3.12]\n    at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.12.jar:5.3.12]\n    at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.12.jar:5.3.12]\n    at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.5.6.jar:2.5.6]\n    at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) [spring-boot-2.5.6.jar:2.5.6]\n    at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:434) [spring-boot-2.5.6.jar:2.5.6]\n    at org.springframework.boot.SpringApplication.run(SpringApplication.java:338) [spring-boot-2.5.6.jar:2.5.6]\n    at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343) [spring-boot-2.5.6.jar:2.5.6]\n    at org.springframework.boot.SpringApplication.run(SpringApplication.java:1332) [spring-boot-2.5.6.jar:2.5.6]\n    at com.szhb.backend.BackendApplication.main(BackendApplication.java:16) [classes/:na]\nCaused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.multipart.MultipartResolver]: Factory method 'multipartResolver' threw exception; nested exception is java.lang.NoClassDefFoundError: org/apache/commons/fileupload/disk/DiskFileItemFactory\n    at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.12.jar:5.3.12]\n    at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.12.jar:5.3.12]\n    ... 19 common frames omitted\nCaused by: java.lang.NoClassDefFoundError: org/apache/commons/fileupload/disk/DiskFileItemFactory\n    at org.springframework.web.multipart.commons.CommonsFileUploadSupport.newFileItemFactory(CommonsFileUploadSupport.java:205) ~[spring-web-5.3.12.jar:5.3.12]\n    at org.springframework.web.multipart.commons.CommonsFileUploadSupport.&lt;init&gt;(CommonsFileUploadSupport.java:77) ~[spring-web-5.3.12.jar:5.3.12]\n    at org.springframework.web.multipart.commons.CommonsMultipartResolver.&lt;init&gt;(CommonsMultipartResolver.java:97) ~[spring-web-5.3.12.jar:5.3.12]\n    at com.szhb.backend.config.UploadConfig.multipartResolver(UploadConfig.java:19) ~[classes/:na]\n    at com.szhb.backend.config.UploadConfig$$EnhancerBySpringCGLIB$$21d563eb.CGLIB$multipartResolver$0(&lt;generated&gt;) ~[classes/:na]\n    at com.szhb.backend.config.UploadConfig$$EnhancerBySpringCGLIB$$21d563eb$$FastClassBySpringCGLIB$$191b5c2e.invoke(&lt;generated&gt;) ~[classes/:na]\n    at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.12.jar:5.3.12]\n    at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.12.jar:5.3.12]\n    at com.szhb.backend.config.UploadConfig$$EnhancerBySpringCGLIB$$21d563eb.multipartResolver(&lt;generated&gt;) ~[classes/:na]\n    at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_291]\n    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_291]\n    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_291]\n    at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_291]\n    at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.12.jar:5.3.12]\n    ... 20 common frames omitted\nCaused by: java.lang.ClassNotFoundException: org.apache.commons.fileupload.disk.DiskFileItemFactory\n    at java.net.URLClassLoader.findClass(URLClassLoader.java:382) ~[na:1.8.0_291]\n    at java.lang.ClassLoader.loadClass(ClassLoader.java:418) ~[na:1.8.0_291]\n    at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355) ~[na:1.8.0_291]\n    at java.lang.ClassLoader.loadClass(ClassLoader.java:351) ~[na:1.8.0_291]\n    ... 34 common frames omitted</code></pre></div><p>大佬们帮我看看呢</p>",
+    scanNumber: Int32("1"),
+    commentNumber: Int32("0"),
+    issueStatus: true,
+    issueDate: "1666702627334",
+    userId: ObjectId("6357ae8b37fe7a1aab3aeb1f"),
+    typeId: ObjectId("634e1b17386eea42f85fad04")
+} ]);
+db.getCollection("issues").insert([ {
+    _id: ObjectId("6357deb1d84d68f7b87e12f4"),
+    issueTitle: "PHP详细学习路线谁能提供下",
+    issueContent: "<p>我像从前端转后台，谁能提供一下详细的PHP学习路线（不详细的谢过，我在网上看了很多路线都不是很全，所以很迷茫）望望高人指点~</p>",
+    scanNumber: Int32("3"),
+    commentNumber: Int32("2"),
+    issueStatus: true,
+    issueDate: "1666703025552",
+    userId: ObjectId("634e56402fac4881713db3e8"),
+    typeId: ObjectId("634e431a2fac4881713db242")
+} ]);
+db.getCollection("issues").insert([ {
+    _id: ObjectId("6357df8ad84d68f7b87e132a"),
+    issueTitle: "对于vue的多环境打包配置",
+    issueContent: "<p>在vue脚手架3.0中，对于线上多环境的配置</p><p><img src=\"https://segmentfault.com/img/bVbCfse\" alt=\"image.png\" contenteditable=\"false\"><br></p><p>在需要的多环境中，写入对应的变量值</p><p><img src=\"https://segmentfault.com/img/bVbCfsn\" alt=\"image.png\" contenteditable=\"false\"><br></p><p>在package.json的文件中添加，一个对应变量值。</p><p><br></p><p><br></p>",
+    scanNumber: Int32("3"),
+    commentNumber: Int32("0"),
+    issueStatus: true,
+    issueDate: "1666703242132",
+    userId: ObjectId("6357ae8b37fe7a1aab3aeb1f"),
+    typeId: ObjectId("634d80417797638ec96fe2f9")
+} ]);
+db.getCollection("issues").insert([ {
+    _id: ObjectId("6357e182d84d68f7b87e13ca"),
+    issueTitle: "python 加引号的 typing hint 是怎么回事？",
+    issueContent: "<p><code>pydantic/main.py</code></p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>@classmethod\ndef from_orm(cls: Type['Model'], obj: Any) -&gt; 'Model':\n    if not cls.__config__.orm_mode:\n        raise ConfigError('You must have the config attribute orm_mode=True to use from_orm')\n    obj = {ROOT_KEY: obj} if cls.__custom_root_type__ else cls._decompose_class(obj)\n    m = cls.__new__(cls)\n    values, fields_set, validation_error = validate_model(cls, obj)\n    if validation_error:\n        raise validation_error\n    object_setattr(m, '__dict__', values)\n    object_setattr(m, '__fields_set__', fields_set)\n    m._init_private_attributes()\n    return m\n<br></code></pre></div><p>看 pydantic 的时候，发现 <code>Type['Model']</code> 这种东西，用引号括起来这样 Model 不是从一个 class 变成 str 了吗？</p><p>关键是，vscode 还能正常提供代码智能提示</p><p><img src=\"https://segmentfault.com/img/bVc2RkL\" alt=\"图片.png\" contenteditable=\"false\"><br></p><p>什么原理？哪个 PEP 里面有说明？</p><p>为什么要加引号？是为了兼容低版本的 python 吗？比如兼容 python3.6 ？</p>",
+    scanNumber: Int32("6"),
+    commentNumber: Int32("1"),
+    issueStatus: true,
+    issueDate: "1666703746691",
+    userId: ObjectId("6357e0f1d84d68f7b87e13a2"),
+    typeId: ObjectId("6357e132d84d68f7b87e13a6")
+} ]);
+db.getCollection("issues").insert([ {
+    _id: ObjectId("6358ec5da5f3673044ad9269"),
+    issueTitle: "判读字符串中是否含有某个 标识 并将其 提出 如何解决？",
+    issueContent: "<p>判断字符串中是否含有 ${{}},这个标识，并将里面的字段提取出来</p><p>您好！</p><p>商品AAA，流转到你这里，请处理</p><p>SO号：${{so}}</p><p>DATA 日期：${{data}}</p><p>需要提出的数据是</p><p>so:</p><p>data:</p><p>这个变量数是不确定的</p>",
+    scanNumber: Int32("0"),
+    commentNumber: Int32("0"),
+    issueStatus: true,
+    issueDate: "1666772061336",
+    userId: ObjectId("634e56402fac4881713db3e8"),
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("issues").insert([ {
+    _id: ObjectId("6358ec86a5f3673044ad9286"),
+    issueTitle: "用require引入图片怎么仅识别路径别名，不做其他任何操作？",
+    issueContent: "<p>如题，原本是小文件返回base64，大文件hash文件名，但是我希望仅仅解析别名，不做任何操作，该怎么弄呢？</p><p>比如：</p><p>require(@/assets/images/logo.png)</p><p>返回</p><p>/src/assets/images/logo.png</p><p>而不是处理成base64或者返回一个hash过的文件名</p>",
+    scanNumber: Int32("0"),
+    commentNumber: Int32("0"),
+    issueStatus: true,
+    issueDate: "1666772102264",
+    userId: ObjectId("634e56402fac4881713db3e8"),
+    typeId: ObjectId("634d806d7797638ec96fe302")
+} ]);
+db.getCollection("issues").insert([ {
+    _id: ObjectId("6358eca0a5f3673044ad9294"),
+    issueTitle: "go中throw出来无法recover的错误如何捕获呢？",
+    issueContent: "<p>我使用的是gin框架</p><p><br></p><p>panic出来的错误可以recover()捕获，使用中间件可以自定义返回错误；</p><p>那些throw出来的例如【map并发读写】或者【栈内存耗尽】的错误怎样捕获呢？</p>",
+    scanNumber: Int32("1"),
+    commentNumber: Int32("0"),
+    issueStatus: true,
+    issueDate: "1666772128976",
+    userId: ObjectId("634e56402fac4881713db3e8"),
+    typeId: ObjectId("634d81077797638ec96fe30c")
+} ]);
+db.getCollection("issues").insert([ {
+    _id: ObjectId("6358ecd6a5f3673044ad92c2"),
+    issueTitle: "threejs 显示的模型，为什么细节缺失了？",
+    issueContent: "<p>同一个 gltf 文件：</p><ol><li><p>3D 工具显示出来的效果</p><p><br></p><p><img src=\"https://segmentfault.com/img/bVc3ga9\" alt=\"image.png\" contenteditable=\"false\"><br></p></li><li><p>threejs 显示出来的效果</p><p><br></p><p><img src=\"https://segmentfault.com/img/bVc3gbe\" alt=\"image.png\" contenteditable=\"false\"><br></p></li></ol><p>我怎么感觉缺少了很多很多细节，所有的同类型模型都这样，（其他类型的，树木之类的显示就还行）。是我哪里配置的问题么？</p>",
+    scanNumber: Int32("0"),
+    commentNumber: Int32("0"),
+    issueStatus: true,
+    issueDate: "1666772182734",
+    userId: ObjectId("634e56402fac4881713db3e8"),
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("issues").insert([ {
+    _id: ObjectId("6358ed41a5f3673044ad92ff"),
+    issueTitle: "vue中如果隐藏浏览器中的请求？",
+    issueContent: "<p>vue中如果隐藏浏览器中的请求</p>",
+    scanNumber: Int32("0"),
+    commentNumber: Int32("0"),
+    issueStatus: true,
+    issueDate: "1666772289779",
+    userId: ObjectId("6358cf7487dceb95c5f97913"),
+    typeId: ObjectId("634d80417797638ec96fe2f9")
+} ]);
+db.getCollection("issues").insert([ {
+    _id: ObjectId("6358ed67a5f3673044ad9310"),
+    issueTitle: "react+ ts + vite3 项目中怎么引用 commonjs 模块的业务组件？",
+    issueContent: "<p>react+ ts + vite3 项目中引用 commonjs 模块的 react 组件，在开发环境使用 vite-plugin-commonjs 插件，不会报错，但在打包是会报一下错误：</p><p><img src=\"https://segmentfault.com/img/bVc3ipO\" alt=\"image.png\" contenteditable=\"false\"><br></p><p>其中，commonModule.tsx 是 react 组件，使用 exports 进行导出</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>// common/commonModule.tsx\nfunction Common() {\n  return (\n    &lt;div className='App'&gt;\n      &lt;h1&gt;Commcon Module&lt;/h1&gt;\n    &lt;/div&gt;\n  )\n}\n\nexports.Common = Common</code></pre></div><p>引用 commonModule.tsx 组件</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>import { useState } from 'react'\nimport reactLogo from './assets/react.svg'\nimport './App.css'\n\nimport {Common} from './common/commonModule'\n\nfunction App() {\n  const [count, setCount] = useState(0)\n\n  return (\n    &lt;div className=\"App\"&gt;\n      &lt;div&gt;\n        &lt;a href=\"https://vitejs.dev\" target=\"_blank\"&gt;\n          &lt;img src=\"/vite.svg\" className=\"logo\" alt=\"Vite logo\" /&gt;\n        &lt;/a&gt;\n        &lt;a href=\"https://reactjs.org\" target=\"_blank\"&gt;\n          &lt;img src={reactLogo} className=\"logo react\" alt=\"React logo\" /&gt;\n        &lt;/a&gt;\n      &lt;/div&gt;\n      &lt;h1&gt;Vite + React&lt;/h1&gt;\n      &lt;Common /&gt;\n      &lt;div className=\"card\"&gt;\n        &lt;button onClick={() =&gt; setCount((count) =&gt; count + 1)}&gt;\n          count is {count}\n        &lt;/button&gt;\n        &lt;p&gt;\n          Edit &lt;code&gt;src/App.tsx&lt;/code&gt; and save to test HMR\n        &lt;/p&gt;\n      &lt;/div&gt;\n      &lt;p className=\"read-the-docs\"&gt;\n        Click on the Vite and React logos to learn more\n      &lt;/p&gt;\n    &lt;/div&gt;\n  )\n}\n\nexport default App</code></pre></div><p>vite.config.ts 配置如下</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>// vite.config.ts\nimport { defineConfig } from 'vite'\nimport react from '@vitejs/plugin-react'\nimport commonjs from 'vite-plugin-commonjs'\n\n// https://vitejs.dev/config/\nexport default defineConfig({\n  plugins: [\n    react(),\n    commonjs.default(),\n  ]\n})</code></pre></div><p>tsconfig.json 配置</p><div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>{\n  \"compilerOptions\": {\n    \"target\": \"ESNext\",\n    \"useDefineForClassFields\": true,\n    \"lib\": [\"DOM\", \"DOM.Iterable\", \"ESNext\"],\n    \"allowJs\": true,\n    \"skipLibCheck\": true,\n    \"esModuleInterop\": true,\n    \"allowSyntheticDefaultImports\": true,\n    \"strict\": true,\n    \"forceConsistentCasingInFileNames\": true,\n    \"module\": \"ESNext\",\n    \"moduleResolution\": \"Node\",\n    \"resolveJsonModule\": true,\n    \"isolatedModules\": false,\n    \"noEmit\": true,\n    \"jsx\": \"react-jsx\"\n  },\n  \"include\": [\"src\"],\n  \"references\": [{ \"path\": \"./tsconfig.node.json\" }]\n}\n<br></code></pre></div><p>使用 @originjs/vite-plugin-commonjs 插件，配置 build.commonjsOptions，optimizeDeps 这些试过都不行；这个场景在旧项目重构，使用 vite 的时候会遇到，请问哪位大神可以解答下原因，多谢！！</p>",
+    scanNumber: Int32("0"),
+    commentNumber: Int32("0"),
+    issueStatus: true,
+    issueDate: "1666772327301",
+    userId: ObjectId("6358cf7487dceb95c5f97913"),
+    typeId: ObjectId("634d804d7797638ec96fe2fd")
+} ]);
+db.getCollection("issues").insert([ {
+    _id: ObjectId("6359e297a5f3673044ad94d1"),
+    issueTitle: "a1和a2相等吗为什么？Array.from转换过后的数组和原数组相等吗？",
+    issueContent: "<div data-language=\"text\" class=\"toastui-editor-ww-code-block\"><pre><code>const a1 = [1, 2, 3, 4]; \nconst a2 = Array.from(a1); </code></pre></div><p>a1和a2相等吗为什么？</p>",
+    scanNumber: Int32("3"),
+    commentNumber: Int32("1"),
+    issueStatus: true,
+    issueDate: "1666835095823",
+    userId: ObjectId("6359e24fa5f3673044ad94ba"),
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("issues").insert([ {
+    _id: ObjectId("6359e2b8a5f3673044ad94e4"),
+    issueTitle: "flutter 接入融云做消息推送，有没有例子啊？",
+    issueContent: "<p>最近公司要用flutter接入融云做消息推送，文档太少，各位大佬有没有例子给一个参考一下？</p>",
+    scanNumber: Int32("3"),
+    commentNumber: Int32("0"),
+    issueStatus: true,
+    issueDate: "1666835128442",
+    userId: ObjectId("6359e24fa5f3673044ad94ba"),
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("issues").insert([ {
+    _id: ObjectId("6359e2d2a5f3673044ad94f7"),
+    issueTitle: "询问一个echarts缩略图的问题？",
+    issueContent: "<p><img src=\"https://segmentfault.com/img/bVc3jJW\" alt=\"image.png\" contenteditable=\"false\"><br></p><p><br></p><p>请问一下，我在vue中使用datazoom组件实现缩略，但是其位置一直是在折现图里，我如果想让其显示在折线图下方，该怎么做呢？（我试了很多次，其一直只能显示在折线图的范围里）</p>",
+    scanNumber: Int32("3"),
+    commentNumber: Int32("1"),
+    issueStatus: true,
+    issueDate: "1666835154939",
+    userId: ObjectId("6359e24fa5f3673044ad94ba"),
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("issues").insert([ {
+    _id: ObjectId("6359e2efa5f3673044ad950a"),
+    issueTitle: "事件对象和this关键字有什么共同点和不同点？",
+    issueContent: "<p>请问一下，事件对象和this关键字有什么共同点和不同点了。</p>",
+    scanNumber: Int32("7"),
+    commentNumber: Int32("2"),
+    issueStatus: true,
+    issueDate: "1666835183782",
+    userId: ObjectId("6359e24fa5f3673044ad94ba"),
+    typeId: ObjectId("634d7fcc7797638ec96fe2f1")
+} ]);
+db.getCollection("issues").insert([ {
+    _id: ObjectId("6359e31fa5f3673044ad9521"),
+    issueTitle: "springboot整合rabbitmq无法声明队列和交换机?",
+    issueContent: "<p>springboot整合rabbitmq无法声明队列和交换机</p><p><br></p><p><img src=\"https://segmentfault.com/img/bVc3jFe\" alt=\"image.png\" contenteditable=\"false\"><br></p>",
+    scanNumber: Int32("16"),
+    commentNumber: Int32("1"),
+    issueStatus: true,
+    issueDate: "1666835231367",
+    userId: ObjectId("6359e24fa5f3673044ad94ba"),
+    typeId: ObjectId("634e1b17386eea42f85fad04")
+} ]);
+db.getCollection("issues").insert([ {
+    _id: ObjectId("6363b8d65d1a8c89f786112a"),
+    issueTitle: "123123",
+    issueContent: "<p>1231231</p>",
+    scanNumber: Int32("2"),
+    commentNumber: Int32("0"),
+    issueStatus: true,
+    issueDate: "1667479766270",
+    userId: ObjectId("634e56402fac4881713db3e8"),
+    typeId: ObjectId("634d804d7797638ec96fe2fd")
+} ]);
+
+// ----------------------------
+// Collection structure for navs
+// ----------------------------
+db.getCollection("navs").drop();
+db.createCollection("navs");
+
+// ----------------------------
+// Documents of navs
+// ----------------------------
+db.getCollection("navs").insert([ {
+    _id: "676ba74b8ce153ec7f000001",
+    navTitle: "社区",
+    navLogo: null,
+    navLink: null,
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1672303743"),
+    navRemark: null,
+    navType: null,
+    lastModified: Int32("1730360655"),
+    navTag: "h3"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b4b3c4ac06f000002",
+    navTitle: "掘金",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACD0lEQVQ4jZWTPWhTcRTFf/f/XhNTG8wkmPdeLS0dFZwsilg/EERwExQKWigu2kFqQU1T//GLGkXBthREoYObk+DiII3g7i4i2JiCS0HaNK3Je9chSQ22lnqme8+95wz3A/4Fq2bT+H+QzmjgWfW36tnofE4dAG9cT7gxCo7wwbN6vLW2tcFrCUEF4aC00S1tdKP0gUq9tilUAFJWU/4dPdpkfasDflYHWvL+lNVUq6YlUPGtTnXlVTut5jmt8XX/YY0Ht/VRV17VtzrVqnFBtJ6I1kKdkRV6nSSjQR/7y/t0KNEOBl46SU6Fy7yrhczUNSogKt64jjgxztSWGVmYkE9c0h1BF/ecdkZqK3wREKednrDM4+IiY0zKWjqrB5wYT4h4a8SQBI65HcwFWT3PrKwWrVyvLjFoDHsxdFaXGCzmZJRJWQvG9YIboyBCv4Z0CEB6TE+6cWalDS9a5X6xgKUgtT1ZPSIGXcjJR6y6gZIzCW5plVJY4WLpgbwXrBqsRLvHtCfu8sJJ0h8u8aa8wtXFvHwH8Kz6BqadJGejZebWKgz9mJCvWDX1aTZM/GuaMLt4KDsZjip8psqARoiJ88ok6I3KPJv/yQ2eSqWpkfVVNQgAL6uXnRjTGlFFERzc6BdXSnfl+d+9Gw+q8Tjpm3o4yOl8kNNv6YweWhf+OaAt0DTJaJDOaNDKbR/bfOffVnrk9zizKkQAAAAASUVORK5CYII=",
+    navLink: "https://juejin.cn/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1658999654"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1658999654"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bb89af2145f000003",
+    navTitle: "CNode - Node.js专业中文社区",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACvUlEQVQ4jWVTz2+VRRQ9996Zr+/ZwOOlmlSKLT9aKCUI5hmChRQkgLJkgYkxIBsTVySuTIwxVVlI2JAY8R9wAZK4McYVUDAQsKkaZEEJKeWHsaYQurB9H++bmePivTYPPMlk5szMmTv33BnDs1AAbI2Xj+x5Y3TDYP/Zlb3d9ft3H4635qXVlkh7TwAY2b39vayUfayqmxkTxURSSJcW8vkvrl7+7UJbsLR0EgAMD7828sKyzlHn3JskkFJIpIgIaGYaY0KM8btH/zw6fuPG5ORS5KGhtb3dL3d/bt69b6YSQowizTUSSQQKCAGKmWlK6Uk9z799feuO4woA/YMDx8qdpaMAYggxiIiSoKpqlnknokqSJFJKhJmrmvqNlUrFOwAwMc1DHkgSgAGk994aRWPyab0x5jN7J8uyKgkUjfBHPf/3018u/vrT2PkrcADAlEjSRCQ0fRTJ6wunH9ybHr1zZ2a2Vlt/qlJ98ZOU0tTYhWsnANRb6dMBgKiKiAhAkhCQxe8Tt07Ozc3NHjoEO3fu9i3g9pE2vw1AXCzFcxAhCJSaZGrqf3sUQGonrRQAEgIwqarbNNB/EAAnJlAAyHbt3f7B8Ehtf0vMRa0BwMZN698qQrGNiQSoAFAql97uW9Ozo7d3VXndwOqvy6WOD525w32rV63tLGc3Z2efPAawaGI0Z2ZFSpEUktAYY/Le7/Ne9pFEKGKEUDo6siM9r/Qc6Hqp6/Se3UNfGQBUqyumVXXAeb8BAiUZRSAkEluAsMlB9d51Jqb46ubaD8885Z27tr1bLpU+c5kbjCGCZCSpIhJFxJkZQgw3F+brX165PP7985+JzdugsqU2/JF37piZVkOIdM4kxfT306Jx6tL5a98AmG+vZzssz1GfnnowtqJr2c/O3Eo17SuK4szMXzNHx6//+SOAoqUjAPwHaEhHGGqkUZkAAAAASUVORK5CYII=",
+    navLink: "https://cnodejs.org/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1720582445"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1720582445"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b22e6866ec2000004",
+    navTitle: "LINUX DO 社区",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACY0lEQVQ4jZ1Tz2tTQRic7/1I6Eu0TVrsIQ1I0hRpidjqQSRKXgWhgujNi+Kl9CAp/gvx7jUKQj15USzoxYJVG0oQfJQeJZrmZhCFtC/VatOXt+MhTahVizgw7LLsfDPffqwAAEkREe7uL66url4ulUr2+vpGEgCi0Ug1k8ksTUxMPBOR5/s1aB9s9lcq1UIuN9scHR1jJBKlZYWVZYVVJBLl6OgYc7nZZqVSLZDs7wrz+bxGctBxnMVs1qZlhf1YLO4lEsN+MplSyWRKJRLDfiwW9ywr7GezNh3HWSQ5mM/nNZDUi8ViIZ1OE8B2X19UhUJtZ8sKc5cqFAqrvr6oArCdTh9nsVgskNQNoHWuVqvNjI+Pt2x7MtBsNqFpmgDgLjsQpRSDwWDAdTdatVptBmg9Qb1en+N/ol6vz0mj0XgPIOV5XmcKGg6AiCgAME1TAFTEdV2fpCYiFBF0RvQXccekM0Zl7L3Afeu/wBCRNV2TlPI9gu0W/mjfDdFuQddNKGLNUEqVeg71jmz+EGgCwQHq3XiaIni4h7L1tVGSUpn2hDx8oX9ZAAMhXVQLhIjIr52QEAFJzYDsbPn+kSms8toFI3MMy24tfr/309ub+FD1YMGA3477m7sO4DtaiCfNRnjmbiaGZZ0Uufrgxsol++SJAN6l0PgImuJLIAiYQcA0AUMjRfnSgoajp/VvI/deXn909lZ54fZWt3j2Dgdct1zwnOkmF4fIeSEfo815IReH6DnTTdctF7J3ONB9Vez7mq/WOHWmd+WK//m1bezUkwDQCvRX9cHJpTeNU0/PD8vCXs1PqmRwvcpfrXsAAAAASUVORK5CYII=",
+    navLink: "https://linux.do/latest",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722395822"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1722395822"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b78e3392c50000005",
+    navTitle: "NodeSeek",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACNUlEQVQ4ja2Tv2tTURiG3+/ce+INt7QqjVPbxEIowUwSFRUhdnJ10NSl0KEJTsWsLp27FEL/gEqhf0LwlsCJpcTBIRCuPwiUlnYpLmmkbci595zPpToUtaA+8MIH7zO+H/CfoN/cl3qXyT96Ps+vUUqNM7MDgJRSE+VyWV50yuWyVEpNACBmdpRS4wBAzWbzKTMvAXhCRG+Y+WuxWFzK5/NXDw8P7wPgdDr9vtPp9JVSNSK6AWCemd8CqLnMXAUQMPOstfbB1NTUrUQicTeKonXf92eMMQjD8LPv+/Pb29uv+/1+SESzRNQA8Eowc85au8XMC57nrWWz2dORkZHNarU6Mzo6Gufz+XhxcTFnjNksFArfEonEGjMvGGMCZs4JAA4RnVprJzOZzA6AO1LKm5VKxYyNjYlcLidKpZKJ4zgL4Pb09PSOtXZSCHEGwHGJiAFIIrJxHBMAOxwOMTc3h6OjIzQaDbTbbSSTSZycnFhjjCAiS0QSAAtmPjPGpIQQewcHB0UAH5i5G4aho7XmXq/H3W7XcV33I4D2/v5+UQixZ4xJMfOZIKKmEKJERBvD4fBlq9W6NhgMnvu+3xFCOFJKJ5lMto+Pj1+0Wq3rcRxXiGjDdd1nAN4JY8wKERWiKNp1HGdLa72qtf4kpXwIYJaZH3ue94iZv2itVwE0oijatdbe01qvAADq9XoqCAL/fFSZ5eVl7+KQarXaFaVUBgCCIPDr9XrqDyv+iTjPpfz1M/0z3wGNHxVMNlXpLgAAAABJRU5ErkJggg==",
+    navLink: "https://www.nodeseek.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1724404036"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1724404036"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bd582e7428d000006",
+    navTitle: "SegmentFault 思否",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACtklEQVQ4jWWSS2iVZxCGn/m+7z8n/4k5IV7SGLoIVhSCQoh4KRRctMWFtpRCla5El1IQobS6MN2IiJeNCKVpu+iqBFFL8YZCrbpokwihBG2LNUHrBVORpAlJzvn/b8bFOTkEnOUwDzPvvK/Qv3sQ5zcRTRETEGFxmYEIgmCa1xvOCN6hcSjUYAXhdRhqLTMsVimnZQouyGQ2Sx4jeL8poKaIOEAa6xZvRyBmHOjZzqGe7axIywxPjMvbPx8hRtUAtgAYiLg6v8BanrGqrZOTW3bhxHHj6Z/8+uxvU42CiAQQwQwRJ2YRzTIwBReQkIBmvNm8FEGYqsyy7copstn/haYlABIWrra8QlpsZkPHGpYkTdyfes7Y9H84X6QjbW2oequlnWcuYao6B84h0r/XLK+wbnkXA+/to7utszH81Z0LXH48yvBHfZgZmUYKPnDij6t8cfN7QqkVBwbA4d4P6W7r5Pz4HT6+dJxv/7rF6Msn/Ds1wdmxYUSEXCNf3/uFG0/vQUhQM0LdK1JfAKASI7efP+DC/d+hWIIYOTpykU9WbSTTyL7bP0BehUKKmuIEAYucuXudycosn67ezMSebxjY8SVd5TcAZVntYTgRljaVkVBsOO7UFElSro0Ns+FcH6dHr/OyMs3O1Zvp37oHADVrGK0ohrHgvUMEi1XWr1zLZDbP/ovH+Py3ASoxo3d5FxRKRFNyVfJFoNXzEkAtiJfz739m7WlZzj4Y4p2Vayj6hMuPRmF+huZQJDhHW6FELWhmAmKYeT7o7TNMxqdfSHup1d7t7JZ5zfjxn0EODg4wU52jJW2hIy0z8uIhPz0asWrMhVr6TfhurxEV8nlDvLikWNNanYMQwIVaMlXroj04DEXwDofGIbzDJ80mScFUY82eYoq4UP+2Q3xAfADBUDG8A41DrwC5oDkGZQrSUAAAAABJRU5ErkJggg==",
+    navLink: "https://segmentfault.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1672390612"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1672390612"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b84f6c46710000007",
+    navTitle: "Stack Overflow",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABXklEQVQ4jbWQsUsCYRjGn/fuSu/Sk3ALmlzNtoagKRqSaHMKGkKhEOV0KWispSXPQaglAnNobOgfaCyIcgicmxO9zFPv/N5WwTs5gt7x+5739/2eDwgw/bK67HcnBQG4Ag3L0LJ/BoBFDuDzTiGUCAywDC3bNbRtANCrwxaBziRZanAGcjADwR8AX1uGesEZyFGzXwO43VsKn07GaJa5lY/GMefUAYooEvaELDnCEW9M2I1V7GdPg04hlLAM7dYqqut67ftLNwdpMB5dgRfXdVMgHIFpx9egfbwYk0eDA2LKAWJMkK6cUOhOGdkpZmoQiy29OmwFq1AKb5CgQyakAXqQJKpELn/eJzPK1JKhPhHjk4EmMzUVmU/coVLkeXff672pk155YXUsxikCJQFeYVCSgCiAV920N311b+r37FslH413S+qaV86rggfIBbG38RRAN+2ZHzsTMKvGv80vvziHGAusG84AAAAASUVORK5CYII=",
+    navLink: "https://stackoverflow.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1659941195"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1659941195"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bb3c1159944000008",
+    navTitle: "微信开放社区",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADFklEQVQ4jXWS7WuWZRjGf+d13fdzP49rc5urzTFDjFCWG875sv0BFQYrKJTeKSmUIChqGRhyg6xlRgODmEZfzN72IGEZpYREiIxWblYzskaRThPEaW3Py33f13X2wRVFdH46OT4cx3n+OKT7kL4oaKcBnMpUeaLYfzrelJTi9W2FhuCIr7ii3TYaK4h8+mAL9dFrKDly1uCy49L9gf/ZBLIUQFN36bd37Y1nOztatVBbFOhScKnq9qh/dBdfPNpOYCYxQCGEcvqJQan4qnqf4I1SOVfEI9ouke3KEleVQKxF7lKwmNShvkzqUqqZR6RiRJgVQUVQh5ntffWckRcmP0r/SLYGdWHkMj9W0exuAYcaRSRDDCiCeiftI9qS90mDZojP5a6e2iTTxBhivMar7uBq6ZQMnZkGYGSjpbH+Jmp/SJlrzpFEv/N/oyBceb6Bs08XFGReFYD9D+kNyogFEFDZMTB3W4C9fsf2wgEARh9oI6gZNuhahZJmfjc9b74O8Fx8Yd2i2qaPkzQ9+s2yww8LwMBg+YSIWfr9pZmb33qlZY6xx9+hENzH5YojEIsNIPpx5Z79x4LZluSYz1yjtSGZSw+bnQPJk2GY783nc4uXN9XH1y41ETr/iVPEClhjg4wAiFS9giBIwYikfWlSmiiXShPq0/Uvbbu8EHfxGar+cxaEsxTC85pl/XR89u0Te+TrcmVuQ5SvueLVHfz1l8kN/4EXx2rmV+FkUyvjq+r/gVYABgcry+L4/IJr0sDKZt25ZrnG3St0V1frvIsBWPe23t69Vxf/bfjvAAARv7t3DNUuVRUROTN9YcnqJUPF8upisiVYGA77so5V5qTvu/vl4l/94Mutb+B9kZ59Rw3odaiKAVKktm2o6Fe8r31hXTiczfiqCWVtPq8H2ftVSIzn+CM95OUx1D0LYFDNS2AMoTEWjdjYZjLltCvruI1MpIk6L/ohW9ZkHNpcizX7QKEmvJUTm58K1PAeng4ErOhU8ZY699O9MtV5oHRnflHhiC9J8eQ95mUAmn0LEowzUxkjMgZD45+Kw2+4aClogwAAAABJRU5ErkJggg==",
+    navLink: "https://developers.weixin.qq.com/community/homepage",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1698736108"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1698736108"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74be8e93e0972000009",
+    navTitle: "微信交流专区",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADFklEQVQ4jXWS7WuWZRjGf+d13fdzP49rc5urzTFDjFCWG875sv0BFQYrKJTeKSmUIChqGRhyg6xlRgODmEZfzN72IGEZpYREiIxWblYzskaRThPEaW3Py33f13X2wRVFdH46OT4cx3n+OKT7kL4oaKcBnMpUeaLYfzrelJTi9W2FhuCIr7ii3TYaK4h8+mAL9dFrKDly1uCy49L9gf/ZBLIUQFN36bd37Y1nOztatVBbFOhScKnq9qh/dBdfPNpOYCYxQCGEcvqJQan4qnqf4I1SOVfEI9ouke3KEleVQKxF7lKwmNShvkzqUqqZR6RiRJgVQUVQh5ntffWckRcmP0r/SLYGdWHkMj9W0exuAYcaRSRDDCiCeiftI9qS90mDZojP5a6e2iTTxBhivMar7uBq6ZQMnZkGYGSjpbH+Jmp/SJlrzpFEv/N/oyBceb6Bs08XFGReFYD9D+kNyogFEFDZMTB3W4C9fsf2wgEARh9oI6gZNuhahZJmfjc9b74O8Fx8Yd2i2qaPkzQ9+s2yww8LwMBg+YSIWfr9pZmb33qlZY6xx9+hENzH5YojEIsNIPpx5Z79x4LZluSYz1yjtSGZSw+bnQPJk2GY783nc4uXN9XH1y41ETr/iVPEClhjg4wAiFS9giBIwYikfWlSmiiXShPq0/Uvbbu8EHfxGar+cxaEsxTC85pl/XR89u0Te+TrcmVuQ5SvueLVHfz1l8kN/4EXx2rmV+FkUyvjq+r/gVYABgcry+L4/IJr0sDKZt25ZrnG3St0V1frvIsBWPe23t69Vxf/bfjvAAARv7t3DNUuVRUROTN9YcnqJUPF8upisiVYGA77so5V5qTvu/vl4l/94Mutb+B9kZ59Rw3odaiKAVKktm2o6Fe8r31hXTiczfiqCWVtPq8H2ftVSIzn+CM95OUx1D0LYFDNS2AMoTEWjdjYZjLltCvruI1MpIk6L/ohW9ZkHNpcizX7QKEmvJUTm58K1PAeng4ErOhU8ZY699O9MtV5oHRnflHhiC9J8eQ95mUAmn0LEowzUxkjMgZD45+Kw2+4aClogwAAAABJRU5ErkJggg==",
+    navLink: "https://developers.weixin.qq.com/community/develop/mixflow",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1659517933"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1659517933"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b284973867200000a",
+    navTitle: "CodePen动画库",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACSklEQVQ4jY2TMW/iQBCF36yNlDQkSnGUaJsUSFGCDBWhgdpNeqj4G8jJ/6DhJyB+BBVOkKhcgRQJ3TVOOqT1zrsiNiLKFbfdm52dHT29DySfSL6T9CQLklRVdc6xOs45qqqWsih730k+CcnfAH4BUADivUcQBAAgr6+vAIB2uw0APLsjAAPgD8qpXlW1KAotN2CSJAyCgEEQMEkSVgsURaHlNp4kpXwsIgIRkfV6jclkws/PT7m4uAAAHI9HXF1dcTabSRRF1acwxtCoqjHGiHNOptMpOp0Om82mpGmKbreLbreLNE3RbDal0+lwOp2iKAoxxoiqGqiq7nY77fV6aq3V5XJ5Mm8wGHAwGJz0crmktVYfHx91t9upqipIcj6fEwBbrRazLOPhcGAcx6zX66zX64zjmIfDgVmWsdVqEQDn8zlJMiQJ5xxub2/R6/Vwd3eH6+trWGuxXq8BAKPRCA8PD/j4+MB4PEZRFHDOgSRCABARAICqojTzpKtT1ata1WNEBLVaDVmWYbVaYbvdYrPZoNFoIIoiRFGERqOBzWaD7XaL1WqFLMtQq9W+hqiq7vd77ff7aq3VxWJxMm04HHI4HJ70YrGgtVb7/b7u9/svE733p7gmSUIR0TiOmec5R6MRx+Mx8zxnHMc0xmiSJKxi7r3/GaQ0TTGZTJjnuVxeXoIkjscjbm5uOJvNpN1ufwvSKcok1TlXAcPn52eGYcgwDPny8nIOlpL8FuUfMBljICLy9vYGEcH9/T1KRv4J0znO/j9w9uc4/wX830+B91x7dwAAAABJRU5ErkJggg==",
+    navLink: "https://codepen.io/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1659057801"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1659057801"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74be3704e0e1400000b",
+    navTitle: "鱼塘热榜",
+    navLogo: "",
+    navLink: "https://mo.fish/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1683787889"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1683787889"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b0aa52747a600000c",
+    navTitle: "摸摸鱼热榜",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACeUlEQVQ4jY1SW0hTcRz+fufsPs/ZcU3HnEReuuhMWaRlRCGUtQohurz5EEQGEUQXIui1F8HoISKooCB6kDIhooeCHiILtRBMyzUTycu85Nymbjs75//vwU2UTPwe//Bdft/3J6wPBHC4QXlGE+rNJf4izEe8fGE2bFiDJCwSQQA0D2hfzu4DTfb6M9WCTabYw2udanjh7n+InMA5ZR/ygaqyExfe1Tzpm971LMQqGq/3FwB7AU6rJOAcIKuHUCbK9q0myenmLBUwKYqfJgad3FnItKmR0TGgF3wx3goUAA3WHfuPW/11flNxpYuHuryR9nvneSTaKXg9R+Saw2e16ZF034e3VQASSwIKoMiKcslx+upRS3WgFKJRFo0mYe5ly89vbQ/KAM4A4vmAW3Ln3tSS7PZwNDpkyJRkdijyZaWppcFSUevT56IG6HqazY5B7f/4CoAOkAEAn+R8cpLoYiFgzTbNvSIapJNXDlp8teV6LCJwXWdksorqYA/FQ8H2TEgGQActhh4BEgAgOIBcc3nNIcvOwGa2EDNyIpBAXIBG+nDvwLimfc4swrItr5hMElFndHlLxBzJDMZARALZZPCZcUoFu9oApEH0T9lLAmZXXrk+1KOq4d8DguSM8XQ6zkd/JNWvbxLxYPDpaq7LYWAWOeU4dm6L+v7xnGa2h2CTZLPLs0kd6G4dB75nSl5DAABZJcHm2+Njzo0wuLxIdrxIhr98ugVwWuWrrDxBi0yFWWI+jvxiXSyqTGmhbsRfP7oxA/RnyP91BwAhGYt1p6N/pgRPqah3PDfPtjY3/5qYuJOdeE377Bkl27bf9wVOBUs32BvXQ1iOvy5p9MINcFVgAAAAAElFTkSuQmCC",
+    navLink: "https://momoyu.cc/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1677464873"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1677464873"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bb912aacd4b00000d",
+    navTitle: "知乎",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACcklEQVQ4jT3TTahVdRQF8N8+59yr5numZlmgQVQUUaOkkUKDoonRQIIgCMLyQYOa5CxMigZBDjIsIiyKjIqmFk0alDxq0CTpSUEiWYZUfqX3Xt85578bnFeDDXuyF2utvVbYn2PFS8aeFtbXI/oKFWqhQb0ylTQSav8Ib/vZC42pV8x5XidV9DNcI2MkhMxOBJCIaGVJ8+btdbsS9uZljTUqqVbvukd+cZLJFGNpLMT/jGikBqtQudzora1CKRPVw9vkwYfY+TFlAxrxyyW2rmf1eJDQhzhzlb+uSo35RqcgdPLRu0RTc/Qxevx6niMn2L+ds1OudOLODeL14/LFYzTrqKITZcrNm8WOW9j1AUtnefUbHjzEyXP8ORXbj7DjXb48JTeOhVZET5UdCssz7jvAsUVKEWcuMPmDi5PBwOmM9gpXe5kpdWQnGzkATGbs3sEN93PbJrmwTdy7SV7AtGWULKesioiCjuhFE5XMZbFlHXdfT92wcQ2/XVDmGtEWSiF6tEKuPLRFJ6tMjFg6ze435MKHXJzx/nfiucPy6BJrR3TLw0FfBsY6sheVHFBHYzTsfYDzE3loF089IrqW1Q2lZUSsbVYYdERHI2SEaK9w041i306eeE+c+pvPFsSTH8lrV/H9s6Ivcut6XlscjM2WJggtW67j02f4/DiffEu28uBXnPidO17m8OPywNf8cIZZhTFdq4rYkxezmNu8gVs3icWfpEpEkP2wq1doVysRbhRjhFmVvbesVp09JxZ/lOoh+2nwRAymRUU16E9FpVbrvNm4ZJ9KrbGnasyV8l/vkEMjFZFl0KwWKudNvOO0ff8CDNsVBiQlEB0AAAAASUVORK5CYII=",
+    navLink: "https://www.zhihu.com/hot",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1679624451"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1679624451"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b66fef8371900000e",
+    navTitle: "V2EX",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACeElEQVQ4jW1Tu0osQRA9Vd3Ts8i6zAbLysAo+gVmgkbiJ3h/wcRM8ANEwdTQ4F5EMN7YzMQfMDMcNVrWQGTXGXr6UTfZGfbCPVFR3fU4p6qoLMvs/f39d4zx2DkXRYSJCCJCWAERiYgAQDTGMDNPtra2TnRZln9Go9Hx5uZm6PV6HGP8J/DfHAQAbK2NHx8fv8qyJC0ix0VRxMFgoLz3MMZ0ESICIkIIASIizIwQAg0GA1UURZzNZsfaORfTNCXvvXjv8f39TSslEWNEv9+HMYastVBKiXMOaZqScy5qAOScozRN8fDwgMvLS2RZhhACiAjOOWxvb+P29hZFUaCqKkqSBDFGAAADQIwRRITPz098fX3h5+cHi8UC8/kcTdPg5eUFp6enmM1mMMbAey9tl9yqLSJYX19HnucYj8cYj8fY2NjAcDjEcDjE6+srzs7OsFgsoLWmpS5Ej4+PcnBwsCoWlmPsfFdXV3h6eoL3Hvv7+7i5uQEAPD8/Q7fVAcB733FbRZIkSNMUSilorbv/RAQtIgghIMsy3N3d4f7+vhOxTVrXNQBgb28P19fXYGY45wAAmplluTxiraWqqtDr9To6SikAwO7uLi4uLqC1hrVWlFJERKJbrk3T0Gg0Qp7n6Pf73WScc8jzHOfn51hbW0Nd19Bak4hARKABCDNjPp/j6OgIh4eH1HJsYYxBCAFVVYGZZeVd2BjD1lpJ01S896SUEq21KKXAzFBKoWkaeO9FKSUiQsYYsdZKkiTMIjKZTqdc17VorSWEQCGErotWB601ERElSSJ1Xct0OmUAEyrLMnt7e+vOud3O/53z0oxJkjCAyc7OzslfOIN4GbBMJ0wAAAAASUVORK5CYII=",
+    navLink: "https://www.v2ex.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1666313674"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1666313674"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bab0caad78100000f",
+    navTitle: "壹念视觉 - 优秀设计师交流学习 - 设计灵感来源平台",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACKUlEQVQ4jW2TP09UQRTFf/fOe7sr4J9ELCxIbCygQiiksbNUjDYaQ6iMjZ0WkqgEShMTEr+BHYl+ARJNjImtEqM0qEHlrRgpYFnZsLtvjsXbBURuMrk3d+ZMzrlzBvaFhHXrrU8M6Tfjyhi/fJExzeAHzxwa7SrXWlVeKyOvZeQ3r9K+dZ2G1nirda4cCureqipz2kCKaPEVOjdEBOKdSeLiAtI60k+e/MOkW+SrPFAd7Xyl+fgRrb4eciC6E+/dJr6cp7W9TFN1pIz7AJrB3QxphUGch2yTLy3jMSeMjWLuECOUS1ApE0KKs0GOM60fnLUZogPgTHgvFW0ThwfxqVnsaB/EiJlh5QSSAMFxtYj00ANMFFCAlBHayBxTxHa+E7+sYIDcUVrGDBQC4BhtRMIogKtonSDHJMxSVP+DZWsIMDeskqIkwQBDGDlG4LiKfSLGFoYkRALVddjcLBiYobSEpQF14CIgcuoGKiQ0WaSEKUcEbHUN2rFgEBw7UkEeOk8dEQlGzvu9GeTMq0GOYQRUzfYsUioV2qUO2HEatBDzxQyE2RneKfI0nCRBxM8reyZLUjjWB6f6wXpx7ycg5myADxKWWKHdWGKq1eZ0OsCN7Bc5YICXUuJGDXv2nPgtw88P82byEtMSZob+s3X2kdnzIzSAJtBKAs1KuaiBGnD3sO/gnXwBWAV0cLmj4Cjxwsa7ErvD6uR2Glho5dQ6EnYjRqzD6sX+/l8H2QPnQ8rKYwAAAABJRU5ErkJggg==",
+    navLink: "http://www.ynsj001.com/sitelink?navId=11&navTitle=%E7%BD%91%E5%9D%80%E5%AF%BC%E8%88%AA&active=#74",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1681465379"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1681465379"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bb03ff62f62000010",
+    navTitle: "程序员盒子 (coderutil) - 程序员一站式编程导航, 助力程序员编程学习提效，官网",
+    navLogo: "",
+    navLink: "https://www.coderutil.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1677209034"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1677209034"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b0d9c805d13000011",
+    navTitle: "i黑马—创业创新服务平台",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABtElEQVQ4jZ2TT0hUURTGf+c+5wXOKGaEOZFkGlK4klrJ+DcMlCBCisJFm9q5E9cRRAjiqk1/Ni1yWavJWpT1BhUiQZCphQ2CFYJBm+a9mlHfaTG+4fWYofJbnXO/73znXO49QgSJtp4BFR0DGQSOAgWErCppYvrA+5jZDOslCGpPpZplRx6hDEdNAyjkRbnl5pyZUgoWQPx43xFRloCz1Yr3utkIQ7FDLY3b3zfmgglMbXuPI9AdCPNrbysaJE72hse57uacxybenroWLv5nCFOHT/clDMj4fxeX0OQW/SsGOLNPAwT6DWD2a6DQWlORUEWk9MKF4jaFQrHKBFo0gB8lvmxulePZZy9Jdg2T7Kr4PT4bhOXo6dLyajkeHennWLKp2hUcy25s+QlyKUz8yHtcvXgegAO2zeUL59j1fd6tZMOyrbht3TTup8yswmKYeb3wnidPX5Tzgw11rG98jbaf/PbhTd4C1K5vfY7oKEJDwM/NL+J5v+jsaOPGxB3SrxbCo9/zcs5d/limju6k+NbDvy6T6G13LTMdLJNERfETqUHEjCHaCzTvCbMCaT+m96Pr/BvLao1Lhk6FVwAAAABJRU5ErkJggg==",
+    navLink: "http://www.iheima.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1663303807"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1663303807"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74ba889cdd98d000012",
+    navTitle: "虎嗅网",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACTElEQVQ4jW2TTW9NURSGn7Wdc+itklvShBsGPkKkMZc08TEwYqQiphLEz8DElIlEoglGbU0wanzEiFZu/wIjrnIrbdyj7T5n79fAvtWKNVrZ+32yV9Z+XwAkGakkjUl6KOmTJB9C8Kl/KGlsg26d6R80JN2V5PW3ojaXT5rGRtAleCaJwtraWiUpPJ2aDtOTU1GSqqryIYSQNDOJcc7MInAHOJtesKIoMsB1Ol9svt2m0+koy7LcOeckeeAscMfMopN0ArgB1GaW93o9e/LoUVxYWNDPnz0baAxIMfLi2fM4356PZpZLqoEbkk444DqQSQIwSZqenLKvnQ5l2VNRbLWVlRW1221ijCD6y8uAaxlwEhDgAMUY2dPay779+/G+oshzmsPDdvP2rT4ow1xiTmVAK10YYGam1dVVhoaGaLX28mFujuZwU9u2DTB+cVx5UVjSArQy/inDcM5ZXVe6dPkyWZbT7S7agYMHyPLcYow459b1DvjcHw0ghJrtjUHNvpvlyePHOnXmNEWec2F83MwMM1vXAp8d8DaNFAGixI6dO+W9Z/Fb10ZGRpibnWXNe+nPkklaA9464EH6QgD9WPyhQ4cOW1VXOnLsKM1mEwEr5S9ezszEsiyV4Bp44MzsPXA/fUvsdr8zenxUdVVx7vx5nHPs2r2Lq1eu8ObVaxqNRg1sAe6b2fu+lQf7Vl5eXgq9Xs+XZdm3bYwxhuWlJR83W3lQ0t9tJm/fk1RrA/lPoHwI4d6mMCV4PZpVVY1JmpD0MWXDp37if3H+DQQN25hVYxWYAAAAAElFTkSuQmCC",
+    navLink: "https://www.huxiu.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1663303770"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1663303770"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b80e85d90c6000013",
+    navTitle: "万有导航丨一个互联网全职业的聚合资源网址导航",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAACL0lEQVQ4jW1Sv09TYRS9936vr/SRQq3GGPwRUOimQYNJkzqQaFzd3P0PxJVBDAMMyj/AQMLi4mCNiXF0ReNCotD0hyYQQkul9BXq6/u+exwqBKJnujknJye551AQBEEQVKtVAM4555yqxnE8NzfXarUAOGcBRHvrW69vbr/JC50CAABENDs7Oz8/b4zpk0QEJgaDSAAw84nBGFPf3Vl69TKdTvfpvsogMBgkvu9HUdTtdlUVgKqqi/2EBxKQAAoA0P5BYmR0dNRaWyqVRASAiNQbzSi2SYkQ7TMLEzGLDX/AdsQblOnpaSJaWFgol8siUqvVZmaeOad3Ri1tLsaHu8wctyqd7yvMHhFzqVQqFAqNRiOTyeRyuUql3Gz+GgxSxRdjt0bC3sANPz1iDyquW2cvJcFlmZiYKBaL+Xw+DMO1tbX9/dbdqal37z/cf7IcD01StNerf4H2/Au3SRJMys45EVHVcrncbDaz2ez4+LgxRolYnQ1/aq9tUhfVHjU+PjbJc56IOOeMMblc7qQQ55wIs5jE8PU+Ex9UAAWR1/8MjsHMzCwiRAq1xAIos0AdE5iNd9La6fqYmcgQE6BEIAJsB/pbkpkz0zgeAgB0tz8dVt8yC0uC2fSa6+iFJn3N+9fAzKRx6/Nz267ZzlZw9WGvtdHZWGHxk5cK3N/WmQQosYTflttfF4lZ/IzaQ0Tt1Nij7L2l/xj+hjB3NlY7m6t6tMOJoYErD4Ynn8rA+T+NS1rIb0gGsAAAAABJRU5ErkJggg==",
+    navLink: "https://wanyouw.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1663303827"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1663303827"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bd05e9c6ab0000014",
+    navTitle: "36氪_让一部分人先看到未来",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACS0lEQVQ4jaWTP2yNYRTGf+d93++mt72qrYiwSKqJf6lFRzMxGGtgqqQbgw4sVZ82TWPQxJ8YDAxiuhYjk8FiEATtIhIGIlWUq7e93/ueY/h6G9FJPNObnLzPc87znAP/CQEYnI4nKt1+V/Nb8WhuovKUYfPUJR2Yst1SZZjV4tfLF9k16pL+JnBbc6sJ3AqdTAbxR9uFfblVDL3X0cMUuEPUUfLcbSDYDE6MH7FBgacBQF2Sz9KJ0OkONj/rYtEqzoIY+UXbQPB9GTNwQCZKABjIF7vF5LwEwLgzd6n6gdwciIEJuQVyCwChpxMREDMQwQN0+Z5R3+X2xEZaKMTPlp9YUxcjJ7Y7COtuChis7MutgktjAGZ2Y35cPoE5EAXYP2t9oaknFcKr9+5Gm8DKPOxbVilGQle2I/5MX1ZjuPnnvAO5dfvl9DDr9UNpBfp7ud121WsLgCOm7pyuEtd8KZGX71rgWOjyQ8WSfYxNnXxXpelKeVxqGSb+OCL9Ggm+w/d1+HgaYGCx9EbRnb6Kgl1/Ne4vArGtYiICmlSwZBZfaKEg7szeadv+9joFgBpiIGp8Zdg84NoxYqq4ihczeekb4bAmnQ+bXF9mOtY20KGIISJ46pJ4g7m1GFVECkBU3OXnM7IgTq5YBISRwRnrL7fGgVAY6PoiLYEi1Cp9kmkrPXldcJ9h87Hl78ZlfVbd5ra4FK+WsWot1MgwOgHYj7iFXBpmjMYmE4X5U+Rlu3O5tAR3cuU7FxD3GEAID+ISEymlx2vpbDiuf8ZvCPML2bFlACQAAAAASUVORK5CYII=",
+    navLink: "https://www.36kr.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1672390632"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1672390632"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b204b493576000015",
+    navTitle: "TechWeb.com.cn - 领先的互联网消费互动媒体",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABEUlEQVQ4jWOUm+nOgA08nuuJVZyFgYFBW1hZX1QNTeJdgA6ayInLzy/ffcvCwMDgKGtaapbAwMBw6/3Dp59f6YmqCnMKMNgxvHz37fyNVwpSfBoKQgwMDMUTDl2++5YJbsDaW3tcV6cn7Ki99Po21Mgrz70KN2pHLF699zZcGRMDA8OPv78+/Pw8/cIqrI7+/5+he/GZ959+/Pj1F+qHOZfXzbm8DqtqCDhz/ZWw60yEDSQBkjWwHP11GU1I5P9nCMPy26NdD+dTasPAaGBkhtJMWGTRhdjEDVlFtCFsPn1tXn0tNAUsqNpZOVV8vt1cw8DA8O44JwMDg4S/++fLNxj+/UNY/3iyFFa33mgRxSoOALYeXENe/aeIAAAAAElFTkSuQmCC",
+    navLink: "http://www.techweb.com.cn/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1672390646"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1672390646"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bba62511d1d000016",
+    navTitle: "极客公园-Geek Things Up!",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAB6ElEQVQ4jVWSMW4qMRCGZzzjXQxKAQL6SKFBQhEHSJrUuUXuwQlSUdIgjkCZIreI0iAhJBANhKTY3ay960kxiMdzZXvG/8z8/hARAUBEmNlaq0cAQEQR0VAIoa7r870xRkSstdZaAIgx/oshGmOMMQAQQgghAAABgGYjYgihqioR0Tp1XXvvQwjMzMwqp3sWkSzLiKjX693c3BBRjNEYg4h5nu/3e0Rk5hgjOueIKM/zx8fHyWRye3v79va23W6ttTpYnufT6TTLsjRNRQRarVaj0XDOfXx8iMhyuYT/FzN3Op0kSRqNRqvVMohYVZVzzjlX1/VutwOAdrudJIk+qKrq6+tLvQEAVuPURCJK0xQRn5+fx+Px8XgMIaRp6r2fzWY/Pz/nca8b0Gefn5+bzSbP8+FwOJ/PvfeLxSLGiIiMiCqPiHVd6x+t1+uiKLIs+/7+LstSS2kaAwAR/f7+eu/VVhE5HA5asN/vp2nKzGVZEhEAkBJRFMVqtRoMBqPR6O7u7v7+/unp6eHh4eXlpdlsvr6+vr+/O+dEBK21SZLEGIuiIKJut9tut1UMEbWr0+nknDPGeO8REZMkYWZELMtSgbkQCQDGGOfcBSfU2DV8McaL10SkCRf4zrReA3sB+2J0VVWqDQB/FJUqNa0AP7sAAAAASUVORK5CYII=",
+    navLink: "https://www.geekpark.net/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1672390729"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1672390729"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b6b6e304181000017",
+    navTitle: "爱范儿 · 让未来触手可及",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABZ0lEQVQ4jZWSsWvCQBjF33eX9JoIHQIn6SDi4uRowN1N8E+R/mEuzo6ugpOISLuJ0snBmhRj7+uSQO6I2L7l4OPud++9OwLwjsciAFyslry64X8gXjH8q2odWFJKwRgDAMjzvIQLAKYO5AI4SRLV6XQ8Ywwvl8vrbre7OdatKJ5D5c1mkw8GA6WUoiiK5H6//0rTlAsX7PYgAbxVIVmWmSAIRL/fV1EUyUajQev1+nqnbBI1JdJisfi+XC6m2WzK8Xgc9nq9JwCGiKoQKsuhKp2IRJ7nPJ1OU621iOPYm0wmL77vk3MZA+AyguWCiOhwONy63a6fJMlzu932sizj1Wr1TUTC2grgw6GW9kwcx2I+n7+2Wi15Op3MaDT63G63VyKSzMxuiVa7QghxPp9vxhgMh8MgDEOhtRaz2SytdnHPAVfeG1prSUSQUuJ4PP5YnTkAF+TOHn/luo2FYypiPwSQG6HuYKlfhS6KluOjDtEAAAAASUVORK5CYII=",
+    navLink: "https://www.ifanr.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1672390807"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1672390807"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bb383c15d85000018",
+    navTitle: "摸鱼导航-摸鱼人的专属导航",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAACOUlEQVQ4jWVSy04UURQ8de/t7pkeeoSGEUQjCEoMQ1i4cOXWRElcuPIXjJ9g1D/Q+BuuTDTGxETdqAvji5hgwkZQXkEGmGGmp4e+fctFj8bH2Z2TqnNSVQd0TgCSIgJARETk/xYiBCCEIws4AJvn1hGQwBgR6WXWkZ7WRqtihQiMkCLiyHba2zlImmnPiZwYjIxSX3d2nZNyYMaPVIfCkgacEHmeK6XW9porjX1P69XdZlwJKVQiYeBvtpKxKEyzbCIenKoN0TlDQEgA663OzUevpkcGO4dZz7qcHAj80Wq4tNG4fen8dC0G6QADEQFKnmn17OxYfLk+1WgnRwfCJMu0iG90J0mb3V5gtAAgTWFEmuWzY8Pt7sSAb3RUiQKv7BkAZU8vzE1NxtUszwvHDEUgAgjp0tx92098ozdaHa20cww87WkVlX3nCryoPk+h0UnvPn/7cHG5pGCg7r14Z519trRy6/Hr1cZBYHThrEI/GikZffxI1ShNkcnh6o0L89fOna2PD1fLfmqtdQ4ARfqJkJJmtpGkcRgszE1/2dqNSv5ms32lfurp9atR4HWtJQmKEqAILq6UJoei0Pfuv3zfSNIHH5bvPHnjGTM/Xqsfq52pxSQB6Qf3eX17cX17oBQkme1ZqwRDYdA+tN/3WmOV8sxofGpkcDSqkDSF6N2k+3H9h1BaaUqBArqZ9ZTKHdfK3qetnYszJxfqp0mBc+73V/5ZJP+ZF2r7FxxJEvIXhr9etCArgORPlVorKTK1RV8AAAAASUVORK5CYII=",
+    navLink: "https://moyu.games/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1681466343"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1681466343"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b3147e32470000019",
+    navTitle: "网站开发 web.dev",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACDElEQVQ4jY3QvYudVRDH8c+c57k390owouCCigviogm+/B2yKAorwSKg2ZBCLGJvkcpGsNEq66pYBRcLXRNEE+zsLCxEBQNrKjHEF9gX733uc8bibhLQyGaamcPMfM9vfgFO5tOK56RvrMdlMoh0BxFO5VPCl4YW9CY6r1qP98mG6A8CFNULBhZM7amGhtas5on5cjYHAxrfmv8zRK/HwLpTefxOIMVafK73pqEbg1XVaH1gNZ8/CBI3DTudb2u9rjPb7zUaO2aOey8u/p+xMU83Ie8YeM1URRVaxV96K9bi0u0g5VaZ4Q9ndN5VpBDSDEeEc17Khdsp2AdEotiI3tRHwkQqQtGbqR40ct8ttf8CnJUlRR2u5hMxdj7SOKiRqpFW6xOLfvZiNs4KstwA7T+iOpmPOWQTSzr9vrbG1Kc+tELM/CcyAt54OZcuj3y2Ex6Pma4WzaAT2/faOrrs9AN3296dao7cI69c4cKGsOsHG/F7fHci7+/Gvm5bx/pO1xftaI+tRS49a28yIjvDMlB3trm4Ka9fM9D6ycRK2428crh1bGeqq412vMsvi1xYphu4q51QyTa1P34vr18VcViXraM6Z0pW12ZJLcrwb7n1MJvLTAei7WSGzETK8Xh+eKaQCH+WX39zfrfzcVu5+pD44hmmhxj0Msvc5gi6GY8u8ciTUtWY+krvrX8AqPniBAoc3KwAAAAASUVORK5CYII=",
+    navLink: "https://web.dev/about?hl=zh-cn",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722303990"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1722303990"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b408cd0465700001a",
+    navTitle: "阿虚同学的储物间",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAACZElEQVQ4jU2QTWtTURiE5z3n5uaaJk0/klqrtaip2DStRcWNoKgrUejGH+BGFNz7VwQ30oX/w02XuhBEUaR+YWya5Cb3Jrkf55z3dWGxnd3APMwwtNVs/TnoLdenDPxut59Z8T0KfOUYge8Nh8OXr3YebG9ba7XWANTVtVq1XEoys9Goa6+wVJ/OLARgFgGss4NBCAAQAABUUETzQi23mJ32Vldqpxcqy6dmwigVQW7ZOY6j6FgeXpJxfS5YO7/QGyRBUZ8oFtZnSqNxEo8SB6RG2u02ABAdNiSpMMuZxXIY204/yXKjtVxrni4WtCLKrbQ2t3BMqlxSgGTWLZ8sLZ6sftz7HWfaGDNJzfx0cHWzcXGtCYD+NxBBkSJARE7N+beuNZbmCv1h4oS6/ejpk8dblzeYnVLqEGCHn50UIIEwMwHOuWGcOiflqeLG5U0AzHI0KYzzbjjR+tCTgrEyTq2n+M7d2431K8ZYz9NHABG0OnyNABEUPO0pclR88/b7ve1Hj589j+IxEYkIADVX9S+dm2EBEVigtYri9NdBVKktBicqNnO7u+/evnsPgJkBeMyiSBkjSkFrKMjXdrqw0qrN16y1Is5Ivn/Q/bdHRPT11spw5HLLU4FyTD/CQi8v+743TqI0nWQmD4Kpz1/25muzZ5eXfN+nh/fvVH3nRIaZ+tZTceoKHhFpdmxNXq7MmDy1znb292/euP5654VGpdEdRO0hfg5Ulhvf08zCxohjApitMZnJknwSvf/w6eLqBR2UytHEdTpdzidgHo8iQIjY2jxNJqN4MI7DySjyg5Iwh/3+X8S1XlTKAOyBAAAAAElFTkSuQmCC",
+    navLink: "https://axutongxue.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1726819361"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1726819361"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b5efb70173100001b",
+    navTitle: "有趣网址之家 - 收藏全球最有趣的网站",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABHElEQVQ4jZWSQXKDMAxF9U0aA+YsuUmO0K46LHKfbJh21Rv1LBhDqPW7MGNCkmam3mg886WvJwnH41H+80wKJJ/rsmCXAgCSqvq4qjEANgkkATRNk35XYohICCEJ1gRVdc6dz+e6rgVLPZJCHYbhdDp574uieOBQliV/xmyCXZ36+YOBwjl8f73rxYuI2bvD64cSuZ81QUQAAoBQLz5OfSYAAKxU5vk079/qQIIkRczeLcX2jkv3yKgbaAPBS3V4+0zNUASF5RRi1Bhjot9A932vqstYKRSWhiJ0zpGc55kk0i0lh6qq8uJijM41XddZa6dpCiG0beu9v3XISDFGUpLn9WlsHG4GAsBam7c2juMKfa9O9+K9XzdgDIBfE9K3vqQx1xYAAAAASUVORK5CYII=",
+    navLink: "https://youquhome.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1726820048"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1726820048"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b5d027e6dcc00001c",
+    navTitle: "异次元软件世界 - 软件改变生活！",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACWklEQVQ4jY2TX0hTcRTHP/dud07dJprTtkqLelCuhZAVQY2hJGosjKZUD9GDUQRFBr71JL0UUWC+aS8lPWhiKBGJlfhoCCZeMoSk4d9N03nT/bn708NczlLw+/SD8/2e8z3n/I7AP5j0ac7u8cD9YU/YMaNGswDsZp3/ZIFhqLYk/WmxVRpM5QvJhxqP57UMqu3dYwFX/N+sKeRa2djXWGFpMAuC928CNR7Pa+xe/jQyo8k7aLeg1C4pLe7scrMgeEWA54Nq627FAKOzmvzs42o7gDjp05xvxgJ1ACZ9lJtlemyZ0f9E+RmJmEVKxHqUoGvCq1Xp7DVNj5WFiAzgliXuOvZwviidEc8a3vXEiIpyYrS5c3EcNrGyrvF1IQZALB7PEoc94cpkFUkUWF7TUOYCtNXnUXEQDlkivKi38mMpzOLvMDph09WXaa1SnN1YVRKRWJw7vX7eKSqPXFbOFEo8eL/I7Z4VwpGt+5lXo2ni9mMS6P++TuvQEvecuZwuTGOn1eptZp3/58qmC70o8KTGzNkjJi6/nGN61cfD6lzyTTqkVP9AvkkMiacKDEOp9rMzJcoKMrjV5WVKlRiYghtdXo7a07GaDcRSrJw4YOgXvvk059XXvz4DWKQo148beasE8ai6LdX2ZUa5VGLk1WiQ5VAi1nElp1oAaB7w9/YoQdcObW4LV7HxQ3NlVpUI0FhhaSi1S8puxcdsktJ0znINQAQwC4K3xZ1dflE29u2mcmtd4g5IvcYkJuaDFzrHQw3D05pjYeOP7DXrQmX7pX63bOyQbWmdqfw/Cxne8dCeVlcAAAAASUVORK5CYII=",
+    navLink: "https://www.iplaysoft.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730359669"),
+    navRemark: null,
+    navType: "社区",
+    lastModified: Int32("1730359669"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b57d4c98fcc00001d",
+    navTitle: "娱乐",
+    navLogo: null,
+    navLink: null,
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1682674170"),
+    navRemark: null,
+    navType: null,
+    lastModified: Int32("1730360750"),
+    navTag: "h3"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bc08157598100001e",
+    navTitle: "全民解析-全网vip视频免费解析",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACS0lEQVQ4jaXTP2idZRTH8c953vfemzS2Cipa0JqhOFVNOlVoSgfNkC3g4OAkkoBiiULp2jUEHMSE6iCC4FpEKtRFNA7dAqJiXUyLtS62YO9N7f3zHof3Cu4eOJzDOed5OPD7ngAyiATbeVrjdSzhmbbvBnYVH3srvvvvm/CvvZezuraENbWOMZppr6DG2Ej6yNB578Z9CLL40Iyhy+YsG2ikRqhMJyTSRCjmFANf6Vq17u9CNGVoszpiWd8QSlGXQgRVtJ9EqKugGhjWRyyXoU2iCTt5ysiusVALRTGa7lBjhC5SGgmpUaSO1LFUG1h7+YR65ajx1p7y+135xvPiiUN8/RuvHGdrj5OPi5eelo/NitsDzc4v6v3b1opw5sEDufFCU6/OC43YOctzj3L8Ed5Z5MlDrMyzsSD2/xIbC8rOaSmcKXqOffur+OlOyZV5efIpOhWbe/RHjJrW+8M2/nhXDkZiNoRwrFSBMZ/8zItHOb/IHwP2bnG424pgqmjgzRNc2eftb1p1yiTdNCM/uy5nK/Hqs3x6HQcc7lAXqsLD0/zsZfHaF/KHO1LtZmXl4oKexXt9k34jbg344Hvx5316vRaBK/s0yb2x/PIGisaMysTn4f08pdhFGAqp6EghTDCZUkgaC52pjKTGUnEurkmXzKlKx7j0NBEtf1HLMiNVMoooPQ3G5lTSJefiWiGLrgsGrjZzuk2SaQyZ7eqmtSbxkK6Bq7oukKUQjfU4MLTqwLZioqdWtBCnUMS0NnFg29Cq9ThoUf6f5/wPqMrzyjG8yPYAAAAASUVORK5CYII=",
+    navLink: "http://www.qmjx.vip/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1688712735"),
+    navRemark: null,
+    navType: "娱乐",
+    lastModified: Int32("1688712735"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bddbdde0eef00001f",
+    navTitle: "来漫画 - 斗破苍穹漫画,斗罗大陆漫画,我的英雄学院,海贼王,推荐爱漫画者上来漫画在线漫画网",
+    navLogo: "",
+    navLink: "https://www.laimanhua8.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1682674155"),
+    navRemark: null,
+    navType: "娱乐",
+    lastModified: Int32("1682674155"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b2aee705bd2000020",
+    navTitle: "中文家用游戏博物馆",
+    navLogo: "",
+    navLink: "http://famicn.com/index.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1663303507"),
+    navRemark: null,
+    navType: "娱乐",
+    lastModified: Int32("1663303507"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bf6f5b656e5000021",
+    navTitle: "手机看漫画_飒漫乐画_妃夕妍雪 - 看漫画手机版首页",
+    navLogo: "",
+    navLink: "https://m.manhuagui.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1681961290"),
+    navRemark: null,
+    navType: "娱乐",
+    lastModified: Int32("1681961290"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bb7e5f87a5c000022",
+    navTitle: "部落衝突(COC)最好城原创阵型10级大本营 2023",
+    navLogo: "",
+    navLink: "https://clashofclans-layouts.com/zh/plans/th_10/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1682411525"),
+    navRemark: null,
+    navType: "娱乐",
+    lastModified: Int32("1682411525"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b19146aa55c000023",
+    navTitle: "独播库",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACN0lEQVQ4jW2QzUtUURjGf++51xl1nDG1oo0QJpQatLACadNCaGFmRBFtgv6CNkGLCMJV25a56YMyiDICSSoCU2pRGaIRSJpmEZlh6szcuXM/zmlx0e7M+MA5m/fl9zzvIzc7O2v3OCsXMn7QahSGmIylgizyc9Wo2eUw+DyZ2fF9YGLCj+/Iw66OxpZV53E68I9SJgPGgBdCrmhkPmsYWUzV3jo/NTO/saM2PtniKRALkgloSos5uEv0lba8MzB4oL2jBFAiZWHCMPIuH4mojOju1kK2/87hfU1lAANKkerppa73JCqTAa0rQCJCRuueljXvBIB1pnlnTaPrn02E4W4QMn2naLp4iURbO9orEiwtYQoFRAREIgjYPiaf3tsxYlfk1BorlSLdfYyazkPk34yz/uAe7od3EAagotBVIq373ZWGMkBpXLuhkfrjfaS6jpB9Nsza/dv4X+dABFvrbfZarq6yxC0kiSSqvh5JVse6QJQxUnlCLIR2HJyP71kdvIs7/hrjulEPxhAoyfmpGqcSoBTa83CnJll/8oj8qxeEf34jytosEcBH5he3N//9D5AoV3FhjuXr/eRfPidc+gXGIFapj4YwEBm7Njqai02iaLmnQ5iiiyBR4zHX6ESDI+rtt6rMEEDlCZ4Xxd1CxhgcYWqhOnn13PSn75sAHe+uzNFAqMELYNlR1tgPsW+cnp6d2Jjbbt4qroga9kV9MYIuK9R4SLaAtbBqzOSisacvz8xk4yv/AGYs73svPCSxAAAAAElFTkSuQmCC",
+    navLink: "https://u.duboku.io/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1668401059"),
+    navRemark: null,
+    navType: "娱乐",
+    lastModified: Int32("1668401059"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b2969b56dc0000024",
+    navTitle: "陈情令-1 在线播放 - 小宝影院 - 在线视频",
+    navLogo: "",
+    navLink: "https://xiaobaotv.net/index.php/vod/play/id/14962/sid/1/nid/1.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1690081965"),
+    navRemark: null,
+    navType: "娱乐",
+    lastModified: Int32("1690081965"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bc16cfd76f3000025",
+    navTitle: "欧乐影院",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAIRlWElmTU0AKgAAAAgABQESAAMAAAABAAEAAAEaAAUAAAABAAAASgEbAAUAAAABAAAAUgEoAAMAAAABAAIAAIdpAAQAAAABAAAAWgAAAAAAAABIAAAAAQAAAEgAAAABAAOgAQADAAAAAQABAACgAgAEAAAAAQAAABCgAwAEAAAAAQAAABAAAAAAx28c8QAAAAlwSFlzAAALEwAACxMBAJqcGAAAABxpRE9UAAAAAgAAAAAAAAAIAAAAKAAAAAgAAAAIAAABrwnHnmoAAAF7SURBVDgRbFE9SwNBEN373JiQGGMQUZAglha2YqGFjYWdf0G7FIJY3w/QRrxCxCTYKNHk9M5PUNJYGBQEQRAtopWK+ImEeMftc+/iGQUXhh1m3nszb5eQfw5KQ/LfMgTkiYSSJgM8r4fEb/EPDoQIjQIHllLttYOubpz1xQmB3/PEPeJ3NPAB+XpnhLrb8Ulm0XNYFNilsAvqR7UQXn9cTg5yIU72N/FF/IEBuWq1djIzXMahAmZQ5hqR2adcZKoyrx6/ZEXc6DKu9Mi0L1K3U7fgCVRKqRAzwifYk8E26Juz2Tbw287VXGjpVid4WBRwl2ke8yzhdEIh3uN4QNuIpbGrApbiOkZ0JiBjgSjQiHg91xOr6NLda4a4z1nlEhcaB2siCdaH0VSGJbvMUN3PYksvjki0tp8c9SYFYk85NeOuEGavCnCsRP9P793qSLIifYGpMFZQ7rFD6NteLOGaSo1t031nq3k4zze112gaJv/FLQn2ZnScC4hfAAAA//8zAu0CAAABh0lEQVRVkctLAlEUxseZMScjGh9RREUIrSKSDApsU7mJ2rasRdCu/gRh/oYihQiiBwRGjo/RzAQzF0WbVkVGRW1cCL3ARY3j/Zo7o0EXLudyzvl+93z3Moy+oHR5ELV9Q7ZCj2WkGduHLIr1GPeDAgct1aaUkz67muxcJacikGknquxa05UWqmc+lX4HiQpvkHlCjm0qYs4+5EVRU+zxWto13Wysnw1t4nyQINsLLeOZM8SQGJYeELenkdAnSFqhRu0rRrFxAyIMB0hsLecvoTiukezIO3IzLgPcBKgJ5wQSAkHMgvoR/wBl2GFCGqjr2SCuAsBNAPWLqSDN4lZqMaoAY3jR4s5lkuA1pBh87fJ3z2Fh8WnLPV89GTvEpR8ojKKqeA8AcMhLPBDhTDylNazUko5JIrdkqvtsrbrHorLN4TUs4CXUWiytC0tUoANYKqbxD2AUGhDqDamB7sqO6H0MdfjuN9w9ek5vbgpNMZ3kH8CARBZ0smnJLJpfRR+RejYitWBu9hencbV7L48S2AAAAABJRU5ErkJggg==",
+    navLink: "https://www.olevod.com/index.php/vod/play/id/11035/sid/1/nid/21.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1690603039"),
+    navRemark: null,
+    navType: "娱乐",
+    lastModified: Int32("1690603039"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b94531806a2000026",
+    navTitle: "无耻之徒第三季-08 在线播放 - 小宝影院 - 在线视频",
+    navLogo: "",
+    navLink: "https://xiaobaotv.net/index.php/vod/play/id/10156/sid/1/nid/7.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1691308062"),
+    navRemark: null,
+    navType: "娱乐",
+    lastModified: Int32("1691308062"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b2e962fa466000027",
+    navTitle: "Decrypt IPA Store",
+    navLogo: "",
+    navLink: "https://decrypt.day/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1692369194"),
+    navRemark: null,
+    navType: "娱乐",
+    lastModified: Int32("1692369194"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b76c4f95751000028",
+    navTitle: "小霸王 - 在线游戏",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACZElEQVQ4jZWTTYiNYRTHf+d57vvee+ci42OaISGzMCywELIQZYqshBKymoQlUzbqWsqCjfEVE1loUj4yg8m30iCRGUbJqElNM6WmuXd6730/nmMx4yLXwqmzOc/5/zv/55w/VAnNY/4uItV6U3/1KSKCK91mE2kWpEN8PvBahBeTb1qNqAIGKD9ia/yAMX2KfnuKNnfR619liYLd3oGtDn48Mc3ofbYFDym4LlzfDcKGDkrcRFN36OM6SwE6fiORCXmIgGo3ewi5ggBK/MFhN5dh0JHgk1pjGHhSw5b0Rvr/IADQW7SMZjl1LaAmdCQ7LLZe4I2iZ2PIKnFrDm+e5UuUYre/np7KJypIKUXroZCaSyViBPvMoW0+rBC44CEIngsJqWWRF7AT6NE8ZkJCN0dH4Ej9KGkPjAiUgV4fWWwgAE1Ad5WhweLOT2c4CmjJbOaumRTSWOtTs1xwIVBWw0qxMk0saqxasWKY2N/FMu54wtz0EE0VCZGHeMBtHznj0ELkzH5B5yYQRIgRdJrFdGbQ1gBZ7QFZogqBV6K9IDSfyzJDi7i9C7ZL0+wNEpJoGtQan9Of2/T92Lt4wwwx6wv6cmwq9/S3JfDtUW4Znaza9/bkiYG44CJVjSfTqWrP977iwsc7d0/tZm3xVa6+yu2rVTDJsB7QRFVdFLg4iMNENew9GOrXy9rTpc2TCPl5tQZA8jjVYyJ5GC++yWAASWXEZqwng3izar2Cnf+8P8tgXjGal4onfplJ8gmgUeOTe0yZM5LU1ZUL4zaXG7qZFMpzZrZ/XNd9eId8ApU88m9D/W/8APzKGTowAWHJAAAAAElFTkSuQmCC",
+    navLink: "https://www.yikm.net/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1726820213"),
+    navRemark: null,
+    navType: "娱乐",
+    lastModified: Int32("1726820213"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b6589545861000029",
+    navTitle: "Life Restart - 人生重开模拟器",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADUElEQVQ4jQXBSW8bZQCA4febxUvGnonHW/atJFCFRm2pRIsQtBxQ1Rvqjd+GqIqEOFViPVQKgogIqRWHhJaWpMGNkziOEy8z8diz2DMfzyO+e/y0np/Qrdmcmuy8aYppS8fI6hx3I9aXSgwiScMds75oUzt1UXSVpXJOvjhxlUI+42h6Sp0USFPKBM0wUYws6fAtpdZLDl/1qC5NsWCYDBrzxGIWTVUZ9/sY7TbpmotmFewkl1Zl0cpIO2gJY7hPIWky1kZUrpSRcowadVH6fQpqgrXwAeW9A0nLEaJkJtru9jMxkdHFQRqWM11RnRF0WhF+FFOyckihcLR3zPTVOaY4Q7084I+Lc87jSCijQIhXvz1zzi7OLP+8K63ua6EYksapS85IYebTyDjGaXuEQcTMYoXVDz/hxZGU6amimF1ac7Q4PKZQmaGQmeC09jeXtQZhIrD1MsL1GPpD1Fhl6PjUBxdk88dcuXYbNxkxdvZQJjIms5UiUlN4vXdMrxMwmUux1Twmf+sOU5/d54f2KVkrRbPR4/cfn9I5+Iv5Shl5eYk2YU0xSmICp8F45HHijilWLVY+/Yj0+zepTE7zZV5H3drmvNajULWIRgO89lsKU++hRUGTzhl0Xz/Hsgy8wKfvJ9ybXqOSs4AxK2qJPc+nuFQmk5KMRiHNjodS30Zz+jqt+n94vQG+H1C2dYxcin+fH5IuLJNWA/yujxvqJOMh4TjBq+2RLy6TWbyGkig68WUbEfoEwRhNS2EWJrh5Zx3/z21efP2YbOeM+fkVJCns6iwiTkiSkLRIUEK3STp2iLUUdnmS2188RDcMao8f8c+3PxGYNi+/esLRo02yWZt3795FZGwUGSFVBU3p7KOqgvzSGtevrlJefoe4dUHX7GKv2VRWN+j7OpHbxrSzZGcWWPj4PjtPvuHGw1m0gTYjfXkis4oic0aVwZsjSnNzhBf7zBTyZCo2IgvJfAmjWmV03ifqevKo3kf+/L3UNLOkhIf7wtupi6YHcxsbDBnSOWlj6jE5I4V70qB12KN0y4TmLm9/+VVMmlXcoVS03u6mIwJFrj34PFm4d0MML0LqW5t4vYR2KmTezhOOIiJ0zpxLitcXqawvynE/UMKi6fwPzxKUwtwAks8AAAAASUVORK5CYII=",
+    navLink: "https://liferestart.syaro.io/public/index.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1726820798"),
+    navRemark: null,
+    navType: "娱乐",
+    lastModified: Int32("1726820798"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b72ac27554b00002a",
+    navTitle: "🐒 渣男 - 说话的艺术",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADh0lEQVQ4jU2TS0xcZRxHf//vu3fedxgGpgPMFMpDaImUWmqrFkkx0erCJmpagxpNWhOicacLNyYkpnHTuKWYlI0bo1EXWmNLMBPbdMEj1sZWmNKGgRnK8Bod5nHnPr6/C43h7M7iLA/hXwgAA8Ds+LmTf1Xs8zul2nDNcpJEBE1QlsEpzaXJcxd/vrm3of8En59N+tuPHPlsfjH/3nbR9DzzeAtCfp0tx4UuJWmaQMW0bEny8t3c+sdjX8xXAIDGAIGXB3zHBxPf3cvsnJ68elcd7YmrRCwo1rbKVCxbCPk17j3QoLqS9cLv0YRpOVOZ3ewr5Ut3qjIF8OhI/yW/V3/zytU/atGwT+6LBsXU7DJl8kVsF6vIbZXpt/SG8GgCiVjI8uiyOyhD4Q9SSz/R5EfDJxoajBvTcyt0e2lDnDnZQd+k7uO1oS4wg2YW8zjWHWddI3w1vYi3XjjErU1hVbMcsMKQCIR8ozXb0efSeZzobabU7zm0N9chWhegkunw6Jk+Ni2H6g0fDrY14PsbD2htqwyvR9NAGBVeTZ5a2yyxJkiUTRulioVqzaZC0eR8oULZjRKt75R5e9ekUtWCJgkLKzvCdlxmomHNclRCCoLtKgoFdEhB0DTJnck6am4M4NfbOQweTlA4qPPcQh6VmoNI0EvMgHJVi7BdhXg0iEjIiz+Xt9EaD8N2FJgBpRiPtktgZjADFdPGU73NONazD7btggiQZ4e7LhAhcrCtgZeyf1M6W0Buc5fWtsrs0SVFQj4UKxZfn83Q8noRVcuBEfRwrD5AAOWEUpzyaJLurxZULOLHyHM9eHXoMS7smnRtZpkNv87T8ytUNm3+8PUBCABTcxkV8OqklEoJn9edqJiOk14toLXJ4P1xA6eeSKIrGeGI4aX98TDFo0GOGj78cOshSqbNQ/1JWLbrKIsn5Ne/PMy+/eKhmJT0dHq1YOW2SmI+vUkLmQKUUgh4NSyvF1Gu2jjaE+fBvoTd197oqZi18TcuXp+QY4CgTiPV0dF0vC0e7tak4MOdjUoKonyhSu+81IuZe+vcFg+r559sI8Ov68WKNW2V1i7038q7MgXwj/OP7LB/99veA8lwneEZCPp03XYV+XSJpmgANVuJRCwk6g2PY1nu+MqD3LvvX75TTu258f+dv/zk9LO6oPNSE8MEajEtl0J+LacUp2o158rIp9du7G3+Ac3crm1GIdavAAAAAElFTkSuQmCC",
+    navLink: "https://lovelive.tools/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1726821428"),
+    navRemark: null,
+    navType: "娱乐",
+    lastModified: Int32("1726821428"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74ba538f9a86600002b",
+    navTitle: "天涯神贴",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADH0lEQVQ4jU2TzWtcZRTGf+e97713Zm6mSSYxk2jUpmkkJA2NiUprpCIUF4pUhJk/oBs/cONCXLhxIyIIBUFEyF5IRLpJF6JuRKxSaFDrR79Mm6ST0HxOOh935t73uJhWPKuz+T085/A8wv/m5DsL2enHjs25dvNZz8gU4j2ESiBCNU1aN8Rkfmy33Hfz709tPmAE4OzHfz0ceslZFS0bdNyp59ebKWIUQUlT8ANLxiouTTfUeOfTtPXp/Huzf1qAjM+5MNtTbhzcZT9OtJi3yenZHMVIjc0GNNtGL13b1+UbdcnlgsGufOGNRv1gCjhlAdQlmXZ9P6nFqZsZFH96yHndUuXCckoxL3KkP9AzJwZ4fjLRz5fWkkatiuA8KIkB8ERcQz3veG/L63axVqroV8tN+XXHcuGq6vU9kcragfRkHa+/OGha7dQTRD9gUg1ASyFvU4kbsV6uRzLc48mddkYf7zXy8vFITj6R065Q9d35W1Lsy+lzo6HsNRwTpSsdB+pUjkVNeiJfXps5xMBAxEujIqcecbhmg4++rsjVXZW3Xn2UVtyUp0cjLIlQKmEBjMDftYDKTszwUccPa3W+/yMmDC029JkeLzA13k+BmA+//Ie3zxylGAnl8mJHIAXygTJ6WDjcbxkZKDDc51PIB/goK5s1vv1pg7nJbk7MDNHXHeASB9x3YIHNpmVlGw5sjdPjAd9c3kVtgFNHLvB4aqybqZE8W5VVKutCrAKlDgudTzCWT4i3tomCYWaPRLhmzEAhy369zerGPdY3ctypOuq1GnuJxwKLHRQnKLDe9NmMLed/2WVuLGCjBhdXYlZ2Hb1dlqGRAuUnQy6upYS+x+IDAWM6qW6o4UBCqrv3uHRljxcmunimmOKLsr0Xs3PtNueW7rKVBIRGgYXOCapODR6eiHqobmokN2+m5G9VGQpbbDeE4WzCZ0s1Vl2k3RkldaKLi2VnJ0oLAYrnRFFVETEioPnQSOIMKy2friDhejtDYqxGJpVUAcWbfeWLrLz5yW8/O9ced04Pgep/3VYVub+mCAZFBNVOgUWgYWz4+78+/Gpd02H8kQAAAABJRU5ErkJggg==",
+    navLink: "https://tianya.at/?s=reload",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1726823020"),
+    navRemark: null,
+    navType: "娱乐",
+    lastModified: Int32("1726823020"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b9a2a0e53ac00002c",
+    navTitle: "古诗文网 - 古诗文经典传承",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAACHklEQVQ4jVVSTWtTURCdmfu+YrSviYkbtQoaCVXcKVgUKgoFN+LCigt1786fIW7cCYK2LkSLG0tBYguKP0DQqEWklJikpinFpDV5776X++64uK+hncVdzD1nOHPmYLdThz3FzKC1RkQiAmAAZGZENN/WHiAAAAthZbNZpVQURaZj0IZGvFOGRiR6vX+V9wvffnxFwN2zEJGZCRHNAK211jrRCSItfag8efq4198e9s1QRLSGbM/1iIiBc7mxcvn09lb38JFTsdwy+0RxZGiWQcdxvN5uSRn+7XQARHOtyTpZXHobyqBa/VwsHLp9616qmZmJaDCIX76eqSwu1Bu1gYozbiafO+j7hWKheOXyFAP8aa3ZtsPM2O3UDUcp5Y/4wvYAMs+eP7Rt5+6dB91uY2T/Aa11EAZaa2MrA4BKlOd51e9fVmsrY0dLP38tCyE+fpqfe/PixvXpSxcmlVJEBAAWMyAgMBCRjOS7yvzU1WsXJybz+cJ6u9Vo1mQYWo7NMkwPZ9xFRK3Z93Olk+Xpm/cBAgDvd3351dys4zjIYKxHxFRSeiCdrNZWZmYfOa4rhGg0G/1+4DguM/NORiwAc3ZNRKEMbcsplcaz2X2u7R4/dmJ0ZPTM+FkZSZMrRExdYmbbttsb7c3NjfPnJsKwj0gAIISQMtA6VZESTFqY2bIsIYSUoUGbPhEN90zTaoJHREmSKKWEsHbneZhT8/4HsuRC1DiQZFgAAAAASUVORK5CYII=",
+    navLink: "https://www.gushiwen.cn/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1724999420"),
+    navRemark: null,
+    navType: "娱乐",
+    lastModified: Int32("1724999420"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74ba85b625fc200002d",
+    navTitle: "熊猫音乐 - 音乐免费下载",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAACqElEQVQ4jT2SPUxTYRiFz/vd2xb6Awgqib+JP8EEGJoKi6CLg3EQ8GdCEVJxYjXRRVcHQUKii5hqNBpQdCGBBQUGDRKjglLANoJEAoUWe3vvLe2993sdRM/0DOdZTg6Z8QAAEIgBAgCAmHkLJCsuePwAkNPZtqASEQAwmADeEsACAlLaLg/rSaWrx+Ic2ltd28pZZWYpQQAEwAoJZjbBFvKCpd+x3M1XksMfGcDIO2fgmZsy3/2FBSQENnMKc0ZaEM4R1XeKPceg7nEc77vpRF/fk97eCIDxPj94ORAd8X0ZLNK/kT57XF96ZWU0KVnyVjQtzcz9L18f3FW4OBrA/eveYq8g4HlPmK3c35JlbTp2PpVcb2u9XFdXV1tb8zDy4ueHW+YcxLU7ubQpg6HQ6fCDPIvJD++z2ayqeoTi6ut/kd3MVVZWegu94bYLY1NlBf4ahUAOc3d3167y0oaGxk+fvoyNjYZCR30+38TEhGEYpmmWlpVNT0+nDM/FphPi5lW3T3UdOnyk+VKLoojy8p0ej2doaEgIEQ6HVVXd2NiIRCKO41RUHIAaUq/fEGcaSn7EJ9+MvD13tpEZq4lEUVHRwsJCV2dnR0fH7NxcdXX1vr27L7a02yuPkZ738WrJ2OBtQAVQWVVVX1+vaVokEjlx8mR8ceHfWmzreuZzDYxYiTYDffFe0/k2RaFgMBiNRpl5eX1tYqB/5OmjtWTKkpz9nUl/bdbnATNeosdc2ZmaTCI1NTNnWTlmltJOasbk8HgitiLzOXPpdebbcWMeZryYzFgAJBxbE/km7/67snCfZBBA+YRwxRxjdDM5APszuYkQADu09VYI5rRtbFfUWqg7mFfAUeAXKY5QVJCPJYgkgP8CAAWUZzYhAQFCAeAGFIYkMMBExIw/2bp8MIeFrkoAAAAASUVORK5CYII=",
+    navLink: "https://www.xmwav.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1725266345"),
+    navRemark: null,
+    navType: "娱乐",
+    lastModified: Int32("1725266345"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bfe8df823ce00002e",
+    navTitle: "Pinterest - 创意壁纸",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADNUlEQVQ4jU2TT2ibdRzGP99f3vxtTGuzbC21bZp2tTqZY4i1OOffg4I6vUwvnkQ8CAM9efHgGHrUug3ZwUlVBqIbCNKDY0pl4A4KonZsutm1SZMl7+i/JG2S9/39vh5cxef8fJ7Lw0cAFERAAUoMT8WQ1wTzcCAmDxhPddGgPwa4mX5uzP2fEW5nnly6n9R7VrzXoxKJtV2HkI4CRIhKwsSx6gJRe6rIwtv3QxNAFOQyua6ddH1zh8SeWNG2czSciWVNJN8viGCXquq2fCckTVaSpq6d72s0D92L3wRghZGPWoxribtalczdtv7+SWf9VedU1amqXdtwjZMzrtK3zxYZaLUZ1xr5aQApM/hIlOgPoYRKd9L0zp6R2NR+2fz6WzpzP4NC/NlHST79OOHla3rrycPKTd95EnctbR+kSv7TVRnXItmg8cEnzqmq/9RLbokuVyLnSnS7Ej1u7c2jTlW18fEXrkg2WJNxrZE/TY3Rv6oMu3Jiwtr1umucOuMWSWnzy1lt/fK7lvsf0BKDWmJI279dcbbecOXMXltlyFUZ/dOEIvmQENO3QySTltbsd8QnJjV5+Bli++/DDOy6fVpLw1//QNJdEhnMSUiAFRk2qDowuNUNsE4llYSwA84RXLmOnb+OSOLfjVQSAG20AAOKMR66GJU4dr2iW5+do+vVV7BrdUGEztwl7FYF1Tak7pTYwUnCq3+rLS2rRwwPd8MzmIue6u6ApF1/451I9MA9xB/cpyIi0b0TGunpQ0JL94ljRHJZ2XjrqKptuJjp9Tquc5Ei+UmfQvsmhaBsxuwSUVd/90PrwlA7CyUN/VUNV9ZVVXXj2LRbpt9WZDTwKYQ1hg4IQI2R6W4iR24JbWQzmj3/lUSGB/CnniP18ouYnTlas+cJfrqkSjrYgYlvYo/3snAEBZknl/Zl7MIWI1r2dlu7uhE0Zs7aIhlXIueK9NoSu4KKjNkWY+qTvzBPLq0gRkD34DfKWn9+i+BEoifjTCLhBZ+fM0aSRKK9xCJZkzYZz1MXbmKP12ge2oPf2DYYhf+s9B964bHm2dmZqhSuLTMSlim0fQpXa+RPlxie2u5tM/8APomzc0PzNmoAAAAASUVORK5CYII=",
+    navLink: "https://www.pinterest.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1717051103"),
+    navRemark: null,
+    navType: "娱乐",
+    lastModified: Int32("1717051103"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b5a12b196d900002f",
+    navTitle: "wallspic. - 壁纸",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACsklEQVQ4jVWTO4hdZRSFv73/x7n3ztwzucMomkJkfDNgIcEgNk4iQopgZ6GN1qKlYCGexoBGESwEC0tR1CZJp2hACwVBEwuJzIBIUBLJDMPNfc05//9vi8z4WO3mY7MWawmAGSKCXT/H49WC5/c7TpdObhezLBX7MfKVRj5eeZpPAKxBpaEAyCG8c47XbcardZ8qC0w7rO9FZhMjBkDAHF+myMtrp7nSNGjTUARg9wKv1Mqbc4WwypZFzvrIlTzn+OIvmjSRyjCGPXwH11KPU6OnuGQgsviW9ekOlwYjBtVRSq54MtzFNxxo+h3vVVNe2hvTASz1JMyS/bo65JhsMtHFmGfq2xiGO9GUmF37nh/sIt62qOwiXoTfXQ80CBrx82zt6hF5YNzyAoBqZMXfAaWQXGBp7UEelU0SX1Nkk9R1PJEMXDRxETTiElZwPGuG82GNTIXRUsRRucjbtsVJuY/x/DIndcapxZxMwAGiIB2Ieu69cZ6BuorfyhyxQuhm5NDnWNvxWXuZ47bgfVUcAVwEFzEJiHgEj+wFRKY/clQyP4fAqOswMSRUaMq0JGLKmOq/XQHMKZoKu4MV7talR/gz3eQtn9A8oXQ3sbZlZkIwT3EVSEC0OvgesNDHXOQ6mX21Bh2e4OyNP/iw1xLEkd2ASjxoPIAjJh7RgImnSI3guCAbtMJ/tPs5Ly7dr++6Hr5kkP9dASjqwIw2deXh3gbbCmCf4gBGj/V/8kvLitWmumwiNSI1UAssGwyL1rWzXL3W22DbGtQD8AsGkKY68FXtSiYZ5kBuBVcsoerdEdWyM/8gPLT3jhkqcrCFw0UCmrfv+cKNBidsr2SzoiIiMlBsP83Mpm+49atn7JY7A9B/3AmIkJ0fP5fH5TzSU3XLBmFCKx+l2WTTrV89Yw16CAP8DfU4LOFrYcKVAAAAAElFTkSuQmCC",
+    navLink: "https://wallspic.com/cn/album/popular",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1723536395"),
+    navRemark: null,
+    navType: "娱乐",
+    lastModified: Int32("1723536395"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bdc82f51830000030",
+    navTitle: "WallpapersWide - 壁纸",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACBElEQVQ4jZ2TTUtbURCGn5ne60X8/gNpFkakRboLIrpIWpG68E/o3ym0RbrSv5GAlRpQgkQXFUvBbCwJXEEXSrLwfiRnuklCGiqVvnAWc5hnzgznHWFEcRwviciOc+4tkO1d/1LVQzPbC4LgxygDgJkFURR9iaKoG0WRPXE6SZLsmtlYn5M+nKZp2TlX+Gv1EanqN9/334tIor22Pz4XBnDOFdM0/QAgcRwvmdl3QJ9boKeuiLxREdn5DxjghYhsq3PuXalUotlsPplZrVa5uLgYxI1Gg3K5jHNuXYHM5OQkx8fHtNttAC4vL7m9vQXg6uqKer3O3NwcAO12m5OTE6ampgBeKmArKyuMj49zdHREp9MhDENarRb39/ecnZ2xuLhIJpPBOUelUiEIApaXlwFMgabneRQKBVqtFufn52xsbJDNZqlUKszMzJDP5wE4PT3l4eGBYrGI53kADU9VvzrnXs3OzpLP56lWq0xPTxOGIVEUsbW1hapyfX1NvV5ndXV1MI6qHqiZ7QFdgIWFBXK5HLVajTAMWVtbY2JiYvB6Lpdjfn5+8I1mtg9AkiS7w5ZtNBp2d3f3h41vbm7s8fFxECdJ8okhK4+laVrqLdA/paqHvu9vikiqACKS+L6/qaq7/XGeUFdVP/fhQQfDiuP4tYhsO+fWR9b5wMz2gyD4OZz/G0dNLS/cDV6aAAAAAElFTkSuQmCC",
+    navLink: "https://wallpaperswide.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1723536339"),
+    navRemark: null,
+    navType: "娱乐",
+    lastModified: Int32("1723536339"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bf58568bca9000031",
+    navTitle: "Unsplash - 壁纸",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAu0lEQVQ4ja2SsQ7CMAxEnyHAQiu+lY2JP+BPGUAMFErN4lZJ6kCQOMlqc72eznZgjga4AAoMVmpck4sXjsFPCA6nwNNKjZPs/BGtCb1qaxLcgQOwyRJ09i2BOCYKvArplvZPYlAlLBkLcMy4DjgBj4xfA3trbeb8dVil4QZbz2gkwLWwLgXOkZFgA1yZYLCLFYDeMegj/ahNNiDRc+dsZ5tpppcxrkbnm9OGRCZTC1J7PUuIY2ql4X8TvAEKgz4r0Ji00AAAAABJRU5ErkJggg==",
+    navLink: "https://unsplash.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1665623225"),
+    navRemark: null,
+    navType: "娱乐",
+    lastModified: Int32("1665623225"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b886ed6e404000032",
+    navTitle: "李晓蕊",
+    navLogo: null,
+    navLink: null,
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730352640"),
+    navRemark: null,
+    navType: null,
+    lastModified: Int32("1730875015"),
+    navTag: "h3"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b8e00d6712e000033",
+    navTitle: "网易云课堂 - 悄悄变强大",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABDklEQVQ4je2QsU4CURBFz11BFgoLYoGJxSrGPFj8DwoLShoaG2u/wcbKX1ALExsbP8DWzkqQQoyhtDe+VXljQTDEQCLU3mYmM3NPZkbMkSVJ/JkvOQtyQdQwc0IOcMB5POgeAuRsMy37YmgoyCHVMBzgMkgIY5gMQNP8yiSRr6ZvQGneJnPkgVegFy1hBqMP3ADNaGEzgBiadA2wHGBK/4DlAF5md4sCvkzq2Gi0FQ+6xcJz72TSyI2D7iHcmkWPJvoi7AqdTYYEnfjp4WoWWVk1vTBoAS9T9TUgAcA4QmwAzV/edaAiq9dXfaa2jPIPNbI9Mx1gnBZC/tivfLRmX6bhzLLfbuy/76SXf3nON0LWUBpg8yv6AAAAAElFTkSuQmCC",
+    navLink: "https://study.163.com/?from=study",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730353479"),
+    navRemark: null,
+    navType: "李晓蕊",
+    lastModified: Int32("1730353479"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b22ae4b5578000034",
+    navTitle: "公务员考试_2025国家公务员考试_国考/公务员考试笔试备考培训辅导_华图教育官网",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABeklEQVQ4jY2SwUobURSGv3PnzsRIKaQboREhGKGWaCSF0p2bvIRLfQBfpbuij+HCleleKKUKbVBE20Wwi9KallbjjHOuiySTTGYG+sNZ3Hv+/7/nnHvkKmg6CuCg++3ZoP63FAdFJFskBhB4OfAVq1LISQxq9yeZ5NfSBoEK7d45URRhPY/3S6spjpkmX5abGRN//LoIYgzt3jm+ShImo5hC9XCPzeuz1F3YOcaqJGHUOMYxi6D9hrBznLr7tLWDjWUSSYWlABmEKfLFfJM/5YhXP7uTlqwPgAsjAGxsFIAXNx8yFcRGsWpGwuG8W99PATitNIYPf37acIiAcyACqvkD8abGpQ5GHdtYhoL131/yhQU4e7I2rOBjZTV3yVq/uqnzxXz2iwHsg1e4ySnkfNLIoCgza1CwzjbyuAPK/+Uyg9CqytHzlW1E9gE/j7T8I9/7wTj+BfHbpK6DWm3Bwtz47NRURc27xX6pHvq66zCTnVa9fd3vngA8ApK7f5c7g9loAAAAAElFTkSuQmCC",
+    navLink: "https://www.huatu.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730700464"),
+    navRemark: null,
+    navType: "李晓蕊",
+    lastModified: Int32("1730700464"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b7b1508545b000035",
+    navTitle: "首页_北京市人力资源和社会保障局",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAACJklEQVQ4jW1SW2gTURCdu88EYkwXjBBibbT5qIlSKqYtKoooKgqVYqQKgg/0RxRRwTcV/VBB/xQfCL6w2upPQbQt/VZD0bSUihZTtRVsku5mQ7KbZHfvvX6kSLbN/M2cmTlnDgO0WugvXmFZrgoxMC8oIcbAoH73ATWM+SjMWWDEh5W23UnJl5R8qeUrlJ3t1nSysoGzDZdK+QudZmxoNs2ofFMj411U2WOTRFJpviVSWdHv3J8JrjQ/x/9XbAy585eN9wNzRTMIT/1hA3WMVGNjsBITjNdb5UhZyR0/Vex+Qym1S8IYfx+vYgsA1fX8pSvazds2SazfjxwOAABRENat5VsjXLAeeTxEVrRr1/HPX8WuHte5M0ApJYQUet+mw6vToSbt3kOcyZQdJBgTQiileld3UvIpbVFKKSIYazdumR8+iVs3Ow8fJLJMC8VSXz9iWS4c4kINJDWTPXAE/5709L4WWiJgjIzqj5+Z38ZLH2PZYyf1lz2Z9g6czRLLMmJD2ROnk4uXpgINxXd9ZVpkTU6hGo81Oqbu2uM8egjxQuHpc3ZZACcmaF7jGleJO7Y79+9lJIlqGjVMRDBGDJM7e7Hw6Ak4RNfVTqG1mSgKWuBiA3VUyVhjX834CBiGsGkjv2E9KrtrfhlWo/uomgUAEEW21g+mhf9OM263sG2LoyPKN69BCAHA7AAAEFU1+getHwkwTbTQzdYu4cIhNliPGNv7/AMQb1Udq+zXyQAAAABJRU5ErkJggg==",
+    navLink: "https://rsj.beijing.gov.cn/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730700509"),
+    navRemark: null,
+    navType: "李晓蕊",
+    lastModified: Int32("1730700509"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b34187c8982000036",
+    navTitle: "_ 北京市人力资源和社会保障局_政务公开_事业单位公开招聘",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAACJklEQVQ4jW1SW2gTURCdu88EYkwXjBBibbT5qIlSKqYtKoooKgqVYqQKgg/0RxRRwTcV/VBB/xQfCL6w2upPQbQt/VZD0bSUihZTtRVsku5mQ7KbZHfvvX6kSLbN/M2cmTlnDgO0WugvXmFZrgoxMC8oIcbAoH73ATWM+SjMWWDEh5W23UnJl5R8qeUrlJ3t1nSysoGzDZdK+QudZmxoNs2ofFMj411U2WOTRFJpviVSWdHv3J8JrjQ/x/9XbAy585eN9wNzRTMIT/1hA3WMVGNjsBITjNdb5UhZyR0/Vex+Qym1S8IYfx+vYgsA1fX8pSvazds2SazfjxwOAABRENat5VsjXLAeeTxEVrRr1/HPX8WuHte5M0ApJYQUet+mw6vToSbt3kOcyZQdJBgTQiileld3UvIpbVFKKSIYazdumR8+iVs3Ow8fJLJMC8VSXz9iWS4c4kINJDWTPXAE/5709L4WWiJgjIzqj5+Z38ZLH2PZYyf1lz2Z9g6czRLLMmJD2ROnk4uXpgINxXd9ZVpkTU6hGo81Oqbu2uM8egjxQuHpc3ZZACcmaF7jGleJO7Y79+9lJIlqGjVMRDBGDJM7e7Hw6Ak4RNfVTqG1mSgKWuBiA3VUyVhjX834CBiGsGkjv2E9KrtrfhlWo/uomgUAEEW21g+mhf9OM263sG2LoyPKN69BCAHA7AAAEFU1+getHwkwTbTQzdYu4cIhNliPGNv7/AMQb1Udq+zXyQAAAABJRU5ErkJggg==",
+    navLink: "https://rsj.beijing.gov.cn/xxgk/gkzp/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730700565"),
+    navRemark: null,
+    navType: "李晓蕊",
+    lastModified: Int32("1730700565"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b57132bacbe000037",
+    navTitle: "简历",
+    navLogo: null,
+    navLink: null,
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1724999441"),
+    navRemark: null,
+    navType: null,
+    lastModified: Int32("1730360682"),
+    navTag: "h3"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b8715391c4d000038",
+    navTitle: "全民简历网 - 专业简历制作_个人简历模板大全",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACu0lEQVQ4jVWTTWhcdRTFf+f/3puZZCZOJmk0CR1CXNQSjEhFittu2o2FuqoiCILgomBXglCKVNuNexFciluDUFyq+IUFRcWFWBQbWxvatI3JTObrvfc/LjJN673c5e9w7zlcAdQ/Pn88bc+/E1r1p1SpVrARiIfKYCQ8HI683fu1XN+41Hn5wprqH507UTly+NMwVa+4PzBmH9YD+CER0GRNcXu3GP589WRIDsycC81GJXZ7+X04UXC06ceSfiyJNomCBcIQO708NOtpOjt9PoR6re1RbiAVCMlbxUBVJazWWqzWWlSVsFUMhOTxdqnzwqFRW0gljC0FxQiMylxnWod5feYJlrIGAOt5lw+3rvLB1u/KQmoFGTvsKQFBAkS/zHXpsWc4O7vyv+MPVZu8N/8sB7M6b936UZNJZgQRCEIKiG6Z61hjgbOzKxSOFDHicRcxkjvyxuwKJ6YO0ilzBQJ77LgKR05NLWGbACQSHi+RSATANicbbaK9H28AKDGNkLGU1gHoxhJJhPFIohdLAJayOo2QUhIfCCSIgUtuxwEG1nbWeeWfb7g26vD3qMtrN7/jk846Bu6UQ4YuCXsoqbEF5ER/39vUS83HOd1cZiuOOLNxhRJzvLHI6UeWCRLf9m4zJHoKVGCr9fX718Li3FIc5TFR0OX2MR2dnNv3xUA2tupKb5Pnr3/uwqVDpRLizc31YCMLB6RhLHTqxhf+qX+X0pGASBGlI7/07/HCjS89iIUSgixsIMTdwXVVMskuSsyT1WktZJPW2HXbgGhndY5OzFFgZEplqWJ3sBHKO/fe9XZ35MZElijEi48e8Xw6IXscnwQ2M2mVi3NPq6YQ84k09c5uXtz990KSr331R/bcyg85PrQ8fWDxzdlVVUOy94zjCO9/ZTOtlpfzW+pv7/yZ//bXq50X3/7sPyqlVvxmNzNpAAAAAElFTkSuQmCC",
+    navLink: "https://www.qmjianli.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1729663485"),
+    navRemark: null,
+    navType: "简历",
+    lastModified: Int32("1729663485"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74ba06ad4c14b000039",
+    navTitle: "BOSS直聘 - 找工作上BOSS直聘直接谈！招聘求职找工作！",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAB70lEQVQ4jU1SsU5UURA9c+99m91l4S2wqIGAErQgQWOspDFWVibGaGFpbPwIW3r+wOhfmJhYAJU2mpAtWCKdBJZdUUnePt+bORb37crN5N7czJmcM2dGnn3Zwfg4eucICoVCEDAaRQBOMEFIAAQEMtJiVJSAxLx3ruW8gAQFVVkgAUAEuen6dHp/tqNgAAzyI8t2h/3cNHEgK5IQXwfkquutmaeLyyPV0rTuQ3DuYWdh62D/L82NaStJAhFipApg+7C7Nxy0Q/J6de1B59pme/5D/3gmJEoCcCpQgQIqhACAkQSP82y3fwqg7n0JKhCRQYyxBxCRDaSqdkLt0dUlo337dV4XR1rUFDDuJlYCeHnj5vOl61fqjTRJtg+6vYvfaZLYOOtITKLqixDgPM+VfLG8ujHdzkoVSMRUthJxTATw9qi3MzhtOH8nnd26fe/V6tqb/a8xRcIBVgVtbJzUxNW8+zwcdM+Ht1ppwzk1BQlYQLSmugngT1Gc5dlUWVtpNlemWmd5VpiJuDjhQFqUbTQPAfB4cXljdm7ah835hVZSe3d0eFEWUyFEVZVLJBxxURY/89F6mt5tz0F4kmXvv/c+9U8azplZZeaTnY+TTRSBFzGjQQQoablpwydyeVvt0geGAjZZbids+mAk5T/mH2u5Gm4r0msQAAAAAElFTkSuQmCC",
+    navLink: "https://www.zhipin.com/beijing/?seoRefer=index",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730096911"),
+    navRemark: null,
+    navType: "简历",
+    lastModified: Int32("1730096911"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b1db1283d9000003a",
+    navTitle: "五百丁简历 - 全国领先的专业简历制作平台，支持手机在线编辑，智能高效，海量精美模板，HR专家推荐使用_500D.ME",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACTElEQVQ4jXWTu2uUURDFfzP3frt5GY0iViktDHYaLIIoqFGsbPQvsNFKTEDjiwXfmsZG0ljaxFJQJKkCaYzaRCN2QsDGQvPczd7HWOyXuPg4MHCZyzn3nsOM8Cde3Rug0P3gPGqGiJDa7s0MT4HpV46NzviyLdQQDj96SLYLQDeKkTHEQAyQTYlIV2eFlcY4MKPUUMAYeniTns5RYuoipQAmVJxSOMV7xbuytIJXoDmHIZ4amTd3+rE8ys+1BBiFL4BZ6mEOgGyCmrUsSGAjNFkO0wjWsqB6io5qDyuNDbqrVTbCE36+H+Hci3b3LUzf3YPz/fR1DDD1YKklIP4AhuG1IMRPDF+99BdxE75jAqdnkAQhTZQCso+YAVFghdf3L+LoxMhbFjyZjKcZDpHNKLyQ9Z0wObab3m3zqNtDSAmHo7MKpWUEKI+owHoTzDKqETihbN++D9E+Uso4cXR1QLbfLCtVDFhrGtkSzimWf7C09NmD7MVLhWCGyDfqjVs4F8lZyoANU8UIeHcesSNl7wvn7n/3eA6iCj2FEPNbjo48+2+AUw/GyJKpOCHEBQBPtqfk+BxSgxQX/0mcPOvYNfgY7wZYa2wgRZUcP7A1n5O1nfRWL2NUECvK9ATMEAWvg8AQzRBRJ4jVsTTAyRuLHkOYLo7T13ud1frvmZe2H4QIIQVQz45uYXl9nOGxRWqoIhhaDBIzxNwkpUxsq5AyIkbhCrxbZ7U+zuyV2+UC5nIb80vWm/MIgSytty0BDlSMHAWIhPSR09cW2uP5BX6YBreveAD1AAAAAElFTkSuQmCC",
+    navLink: "https://www.500d.me/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1729663195"),
+    navRemark: null,
+    navType: "简历",
+    lastModified: Int32("1729663195"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bd7880ea90800003b",
+    navTitle: "锤子简历 - 专业简历模板设计_在线生成简历神器_可编辑简历模板制作免费",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABNElEQVQ4jX2SoU4DQRCGv927EhIUjkJSTxBIGhIEEldFUoVFYFBYnuB4AAwCQRB1lUgCIRDeoSRgMATV270dBNd2O7ftn0xuM7n57p9/zzAoBYGlFSZnGeFtn1H+zKUJAJYKkuUT5UyHEIZsulPuZQXAcKccBP3VRC9QErjBtS4MtxFg+ZDuBSp5yfGz5vmOpdjLiPX4FegNK77HDZhFTNfO7RhoaH/DMjjKOGwbVgVwdfn/p50ccHV4SsbAwZZl2Mt4OM4427Wz9x3kuJm1t0+heK1orxn62xaA37Fw/V5bE1hv1cP1KoaiFB1Qt214OskB+PgROlc+HaooB1OQXsUtvpk0wEfDEgWcuO4mQBQABYhBU4C2VykHbn5oHpCi6wyqBQA0IOUgBYiUJ+3Ff2TsLKE/vPHrZ+NZoaIAAAAASUVORK5CYII=",
+    navLink: "https://www.100chui.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1729663513"),
+    navRemark: null,
+    navType: "简历",
+    lastModified: Int32("1729663513"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b685382effa00003c",
+    navTitle: "乔布简历 - 个人空白简历表格|英文简历模板|求职简历模板免费下载",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAB3UlEQVQ4jWPkzd/BQApgYWBg+DTBnUjVfAU7WXDJffrx5/6bb1eefT5y5/3FJ59KXJWCDCWgNjAwMBy49Xb+sScff/z++O0PMxPj159/X37++ebLL7j+vj33UDRI8XOwszJJs3MoCTPtvfn2/ptvDAwMcRYySVYyUgIcYrxsT9//QPiBgYFh7fnnYrxs3GzMqmLct159hWj49///i08/rzz7fPf1t3nHHj9ud0ZoePvl97OPP6QEONoXXYKIZNjJ77n+ZsnJp7JCnAH64sGGkig29IRoMjAw7Lz2eumpp2zMTOEmUl1BGgwMDEatR9hYGG1VhDy0RVE0HLr9rnLDjctPPzMwMKjIcENUf/v1V4CL5czDj2Gzz7EyM77tdWNgYGCCaChYde3y08/xFjLMTIwXn3x6+eknAwPDrZdfzzz8yMXGrCPF+/vvfxQbVqUZivOy87CzLDr5hIGB4e///wwMDGwsTAwMDH///d+YZfLo3XcUDSqi3AwMDCVrrv//z6AowiXGyw6PgZ9//rEwMRrL8UO4THCJI3fezTryiIGBYUG8PgsTIwMDw38GqDM+//gDVwbVcOf1V68pp/k5WTZnmxrK8kEE/8DczYicZnjzd/wnGvDm72AkNXkDAAVx4OhgK5A5AAAAAElFTkSuQmCC",
+    navLink: "https://cv.qiaobutang.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1729663582"),
+    navRemark: null,
+    navType: "简历",
+    lastModified: Int32("1729663582"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b08dee751a300003d",
+    navTitle: "渡一",
+    navLogo: null,
+    navLink: null,
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1718173805"),
+    navRemark: null,
+    navType: null,
+    lastModified: Int32("1730356211"),
+    navTag: "h3"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b9dfe9f177f00003e",
+    navTitle: "前端-基础",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABrElEQVQ4jZVSu8ryQBA9uxE0wcILXjobJRCw0EaCPoGFpWDjC/gWdna+gA/gA1jZ22ktRE1jEZtFJQRJ4s5X7Mcq31/9Uwwzy5lz5rIMYADAiBEjEOecMQYAgJQSABExxpQHwAAGkHL/moKqQL98qonIcRzbtrPZrBBiu91q+r81YDAMA8B6vQ6CYLVa7ff7zWZjmqaGMqaQ3wnQ7/fb7TYAy7IOh8NkMgF+uRQso+SIiHNORIPB4Pl8Ho/HKIp2u12j0fhWICLOvgyA67q2bSdJAqBarQoh9ALUPFwrMMY45+/3u9PpjEajxWLR6/V83+ecSyn1VgxNIKUkokwmUy6XW61WmqbL5ZJz7nmeIv1sWgW1Ws11XcuyVFqv1x3HqVQq3W63WCxqvAFAjTscDufzeRAEpVKpUCjMZrPxeBzH8XQ6FUKcTifDMIgoo+8ShqHv+/f7/Xw+p2l6uVySJLndbp7nPR4PNYD6Gr/7ajab+XxeCEFElmUZhsE5T5JEXf16vaqWPgpCiDAMoyjK5XIA4jiWUqZpaprm6/X6M/B/2Kel72otq2P9C38A5DjwWmrYEj4AAAAASUVORK5CYII=",
+    navLink: "https://duyiedu.yuque.com/fmi7t1/nwhh7g/bcqyd9mdraozmatp?singleDoc=",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1711503850"),
+    navRemark: null,
+    navType: "渡一",
+    lastModified: Int32("1711503850"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bd43554fa0000003f",
+    navTitle: "前端-中枢",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABrElEQVQ4jZVSu8ryQBA9uxE0wcILXjobJRCw0EaCPoGFpWDjC/gWdna+gA/gA1jZ22ktRE1jEZtFJQRJ4s5X7Mcq31/9Uwwzy5lz5rIMYADAiBEjEOecMQYAgJQSABExxpQHwAAGkHL/moKqQL98qonIcRzbtrPZrBBiu91q+r81YDAMA8B6vQ6CYLVa7ff7zWZjmqaGMqaQ3wnQ7/fb7TYAy7IOh8NkMgF+uRQso+SIiHNORIPB4Pl8Ho/HKIp2u12j0fhWICLOvgyA67q2bSdJAqBarQoh9ALUPFwrMMY45+/3u9PpjEajxWLR6/V83+ecSyn1VgxNIKUkokwmUy6XW61WmqbL5ZJz7nmeIv1sWgW1Ws11XcuyVFqv1x3HqVQq3W63WCxqvAFAjTscDufzeRAEpVKpUCjMZrPxeBzH8XQ6FUKcTifDMIgoo+8ShqHv+/f7/Xw+p2l6uVySJLndbp7nPR4PNYD6Gr/7ajab+XxeCEFElmUZhsE5T5JEXf16vaqWPgpCiDAMoyjK5XIA4jiWUqZpaprm6/X6M/B/2Kel72otq2P9C38A5DjwWmrYEj4AAAAASUVORK5CYII=",
+    navLink: "https://duyiedu.yuque.com/fmi7t1/nwhh7g/gtucggflr4xxpp6m?singleDoc=",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1711441249"),
+    navRemark: null,
+    navType: "渡一",
+    lastModified: Int32("1711441249"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b90c414d770000040",
+    navTitle: "前端-强化",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABrElEQVQ4jZVSu8ryQBA9uxE0wcILXjobJRCw0EaCPoGFpWDjC/gWdna+gA/gA1jZ22ktRE1jEZtFJQRJ4s5X7Mcq31/9Uwwzy5lz5rIMYADAiBEjEOecMQYAgJQSABExxpQHwAAGkHL/moKqQL98qonIcRzbtrPZrBBiu91q+r81YDAMA8B6vQ6CYLVa7ff7zWZjmqaGMqaQ3wnQ7/fb7TYAy7IOh8NkMgF+uRQso+SIiHNORIPB4Pl8Ho/HKIp2u12j0fhWICLOvgyA67q2bSdJAqBarQoh9ALUPFwrMMY45+/3u9PpjEajxWLR6/V83+ecSyn1VgxNIKUkokwmUy6XW61WmqbL5ZJz7nmeIv1sWgW1Ws11XcuyVFqv1x3HqVQq3W63WCxqvAFAjTscDufzeRAEpVKpUCjMZrPxeBzH8XQ6FUKcTifDMIgoo+8ShqHv+/f7/Xw+p2l6uVySJLndbp7nPR4PNYD6Gr/7ajab+XxeCEFElmUZhsE5T5JEXf16vaqWPgpCiDAMoyjK5XIA4jiWUqZpaprm6/X6M/B/2Kel72otq2P9C38A5DjwWmrYEj4AAAAASUVORK5CYII=",
+    navLink: "https://duyiedu.yuque.com/fmi7t1/nwhh7g/tfd9blexuk02ggqr?singleDoc=",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1703816407"),
+    navRemark: null,
+    navType: "渡一",
+    lastModified: Int32("1703816407"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b9f929ae354000041",
+    navTitle: "前端-甄选",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABrElEQVQ4jZVSu8ryQBA9uxE0wcILXjobJRCw0EaCPoGFpWDjC/gWdna+gA/gA1jZ22ktRE1jEZtFJQRJ4s5X7Mcq31/9Uwwzy5lz5rIMYADAiBEjEOecMQYAgJQSABExxpQHwAAGkHL/moKqQL98qonIcRzbtrPZrBBiu91q+r81YDAMA8B6vQ6CYLVa7ff7zWZjmqaGMqaQ3wnQ7/fb7TYAy7IOh8NkMgF+uRQso+SIiHNORIPB4Pl8Ho/HKIp2u12j0fhWICLOvgyA67q2bSdJAqBarQoh9ALUPFwrMMY45+/3u9PpjEajxWLR6/V83+ecSyn1VgxNIKUkokwmUy6XW61WmqbL5ZJz7nmeIv1sWgW1Ws11XcuyVFqv1x3HqVQq3W63WCxqvAFAjTscDufzeRAEpVKpUCjMZrPxeBzH8XQ6FUKcTifDMIgoo+8ShqHv+/f7/Xw+p2l6uVySJLndbp7nPR4PNYD6Gr/7ajab+XxeCEFElmUZhsE5T5JEXf16vaqWPgpCiDAMoyjK5XIA4jiWUqZpaprm6/X6M/B/2Kel72otq2P9C38A5DjwWmrYEj4AAAAASUVORK5CYII=",
+    navLink: "https://duyiedu.yuque.com/fmi7t1/nwhh7g/ohf2y7sggobkm47p?singleDoc=",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1712735037"),
+    navRemark: null,
+    navType: "渡一",
+    lastModified: Int32("1712735037"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b366d6b34c8000042",
+    navTitle: "技术应用阶段 基础领航课程目录",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABrElEQVQ4jZVSu8ryQBA9uxE0wcILXjobJRCw0EaCPoGFpWDjC/gWdna+gA/gA1jZ22ktRE1jEZtFJQRJ4s5X7Mcq31/9Uwwzy5lz5rIMYADAiBEjEOecMQYAgJQSABExxpQHwAAGkHL/moKqQL98qonIcRzbtrPZrBBiu91q+r81YDAMA8B6vQ6CYLVa7ff7zWZjmqaGMqaQ3wnQ7/fb7TYAy7IOh8NkMgF+uRQso+SIiHNORIPB4Pl8Ho/HKIp2u12j0fhWICLOvgyA67q2bSdJAqBarQoh9ALUPFwrMMY45+/3u9PpjEajxWLR6/V83+ecSyn1VgxNIKUkokwmUy6XW61WmqbL5ZJz7nmeIv1sWgW1Ws11XcuyVFqv1x3HqVQq3W63WCxqvAFAjTscDufzeRAEpVKpUCjMZrPxeBzH8XQ6FUKcTifDMIgoo+8ShqHv+/f7/Xw+p2l6uVySJLndbp7nPR4PNYD6Gr/7ajab+XxeCEFElmUZhsE5T5JEXf16vaqWPgpCiDAMoyjK5XIA4jiWUqZpaprm6/X6M/B/2Kel72otq2P9C38A5DjwWmrYEj4AAAAASUVORK5CYII=",
+    navLink: "https://duyiedu.yuque.com/fmi7t1/zm2a3b/xtsi8n?#%20%E3%80%8Alevel%201%20%E5%9F%BA%E7%A1%80%E9%A2%86%E8%88%AA%E8%AF%BE%E7%A8%8B%E7%9B%AE%E5%BD%95%E3%80%8B",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1725934027"),
+    navRemark: null,
+    navType: "渡一",
+    lastModified: Int32("1725934027"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b4ccb4b47eb000043",
+    navTitle: "技术应用阶段 60天学习课程目录",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABrElEQVQ4jZVSu8ryQBA9uxE0wcILXjobJRCw0EaCPoGFpWDjC/gWdna+gA/gA1jZ22ktRE1jEZtFJQRJ4s5X7Mcq31/9Uwwzy5lz5rIMYADAiBEjEOecMQYAgJQSABExxpQHwAAGkHL/moKqQL98qonIcRzbtrPZrBBiu91q+r81YDAMA8B6vQ6CYLVa7ff7zWZjmqaGMqaQ3wnQ7/fb7TYAy7IOh8NkMgF+uRQso+SIiHNORIPB4Pl8Ho/HKIp2u12j0fhWICLOvgyA67q2bSdJAqBarQoh9ALUPFwrMMY45+/3u9PpjEajxWLR6/V83+ecSyn1VgxNIKUkokwmUy6XW61WmqbL5ZJz7nmeIv1sWgW1Ws11XcuyVFqv1x3HqVQq3W63WCxqvAFAjTscDufzeRAEpVKpUCjMZrPxeBzH8XQ6FUKcTifDMIgoo+8ShqHv+/f7/Xw+p2l6uVySJLndbp7nPR4PNYD6Gr/7ajab+XxeCEFElmUZhsE5T5JEXf16vaqWPgpCiDAMoyjK5XIA4jiWUqZpaprm6/X6M/B/2Kel72otq2P9C38A5DjwWmrYEj4AAAAASUVORK5CYII=",
+    navLink: "https://duyiedu.yuque.com/hghs2q/qh565e/rmxoxh?#%20%E3%80%8Alevel%201%20100%E5%A4%A9%E5%AD%A6%E4%B9%A0%E8%AF%BE%E7%A8%8B%E7%9B%AE%E5%BD%95%E3%80%8B",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1725933994"),
+    navRemark: null,
+    navType: "渡一",
+    lastModified: Int32("1725933994"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bbf3268f9ed000044",
+    navTitle: "技术应用阶段 职业深化课程目录",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABrElEQVQ4jZVSu8ryQBA9uxE0wcILXjobJRCw0EaCPoGFpWDjC/gWdna+gA/gA1jZ22ktRE1jEZtFJQRJ4s5X7Mcq31/9Uwwzy5lz5rIMYADAiBEjEOecMQYAgJQSABExxpQHwAAGkHL/moKqQL98qonIcRzbtrPZrBBiu91q+r81YDAMA8B6vQ6CYLVa7ff7zWZjmqaGMqaQ3wnQ7/fb7TYAy7IOh8NkMgF+uRQso+SIiHNORIPB4Pl8Ho/HKIp2u12j0fhWICLOvgyA67q2bSdJAqBarQoh9ALUPFwrMMY45+/3u9PpjEajxWLR6/V83+ecSyn1VgxNIKUkokwmUy6XW61WmqbL5ZJz7nmeIv1sWgW1Ws11XcuyVFqv1x3HqVQq3W63WCxqvAFAjTscDufzeRAEpVKpUCjMZrPxeBzH8XQ6FUKcTifDMIgoo+8ShqHv+/f7/Xw+p2l6uVySJLndbp7nPR4PNYD6Gr/7ajab+XxeCEFElmUZhsE5T5JEXf16vaqWPgpCiDAMoyjK5XIA4jiWUqZpaprm6/X6M/B/2Kel72otq2P9C38A5DjwWmrYEj4AAAAASUVORK5CYII=",
+    navLink: "https://duyiedu.yuque.com/hghs2q/qh565e/fd49oz?#%20%E3%80%8Alevel%201%20%E8%81%8C%E4%B8%9A%E6%B7%B1%E5%8C%96%E8%AF%BE%E7%A8%8B%E7%9B%AE%E5%BD%95%E3%80%8B",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1725933989"),
+    navRemark: null,
+    navType: "渡一",
+    lastModified: Int32("1725933989"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b301efe097b000045",
+    navTitle: "高薪就业阶段 职业深化 课程目录（社招）",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABrElEQVQ4jZVSu8ryQBA9uxE0wcILXjobJRCw0EaCPoGFpWDjC/gWdna+gA/gA1jZ22ktRE1jEZtFJQRJ4s5X7Mcq31/9Uwwzy5lz5rIMYADAiBEjEOecMQYAgJQSABExxpQHwAAGkHL/moKqQL98qonIcRzbtrPZrBBiu91q+r81YDAMA8B6vQ6CYLVa7ff7zWZjmqaGMqaQ3wnQ7/fb7TYAy7IOh8NkMgF+uRQso+SIiHNORIPB4Pl8Ho/HKIp2u12j0fhWICLOvgyA67q2bSdJAqBarQoh9ALUPFwrMMY45+/3u9PpjEajxWLR6/V83+ecSyn1VgxNIKUkokwmUy6XW61WmqbL5ZJz7nmeIv1sWgW1Ws11XcuyVFqv1x3HqVQq3W63WCxqvAFAjTscDufzeRAEpVKpUCjMZrPxeBzH8XQ6FUKcTifDMIgoo+8ShqHv+/f7/Xw+p2l6uVySJLndbp7nPR4PNYD6Gr/7ajab+XxeCEFElmUZhsE5T5JEXf16vaqWPgpCiDAMoyjK5XIA4jiWUqZpaprm6/X6M/B/2Kel72otq2P9C38A5DjwWmrYEj4AAAAASUVORK5CYII=",
+    navLink: "https://duyiedu.yuque.com/hghs2q/qh565e/flnwqm?#%20%E3%80%8Alevel%202%20%E8%81%8C%E4%B8%9A%E6%B7%B1%E5%8C%96%20%E8%AF%BE%E7%A8%8B%E7%9B%AE%E5%BD%95%EF%BC%88%E7%A4%BE%E6%8B%9B%EF%BC%89%E3%80%8B",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1725933970"),
+    navRemark: null,
+    navType: "渡一",
+    lastModified: Int32("1725933970"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b03c30f906e000046",
+    navTitle: "高薪就业阶段 高薪大厂必备 课程目录（社招）",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABrElEQVQ4jZVSu8ryQBA9uxE0wcILXjobJRCw0EaCPoGFpWDjC/gWdna+gA/gA1jZ22ktRE1jEZtFJQRJ4s5X7Mcq31/9Uwwzy5lz5rIMYADAiBEjEOecMQYAgJQSABExxpQHwAAGkHL/moKqQL98qonIcRzbtrPZrBBiu91q+r81YDAMA8B6vQ6CYLVa7ff7zWZjmqaGMqaQ3wnQ7/fb7TYAy7IOh8NkMgF+uRQso+SIiHNORIPB4Pl8Ho/HKIp2u12j0fhWICLOvgyA67q2bSdJAqBarQoh9ALUPFwrMMY45+/3u9PpjEajxWLR6/V83+ecSyn1VgxNIKUkokwmUy6XW61WmqbL5ZJz7nmeIv1sWgW1Ws11XcuyVFqv1x3HqVQq3W63WCxqvAFAjTscDufzeRAEpVKpUCjMZrPxeBzH8XQ6FUKcTifDMIgoo+8ShqHv+/f7/Xw+p2l6uVySJLndbp7nPR4PNYD6Gr/7ajab+XxeCEFElmUZhsE5T5JEXf16vaqWPgpCiDAMoyjK5XIA4jiWUqZpaprm6/X6M/B/2Kel72otq2P9C38A5DjwWmrYEj4AAAAASUVORK5CYII=",
+    navLink: "https://duyiedu.yuque.com/hghs2q/qh565e/nogh0g?#%20%E3%80%8Alevel%202%20%E9%AB%98%E6%96%B0%E5%A4%A7%E5%8E%82%E5%BF%85%E5%A4%87%20%E8%AF%BE%E7%A8%8B%E7%9B%AE%E5%BD%95%EF%BC%88%E7%A4%BE%E6%8B%9B%EF%BC%89%E3%80%8B",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1725933979"),
+    navRemark: null,
+    navType: "渡一",
+    lastModified: Int32("1725933979"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74be86a0da37e000047",
+    navTitle: "教程",
+    navLogo: null,
+    navLink: null,
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1686299870"),
+    navRemark: null,
+    navType: null,
+    lastModified: Int32("1730359846"),
+    navTag: "h3"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bae69911302000048",
+    navTitle: "如何正确的学习Nodejs",
+    navLogo: "",
+    navLink: "https://i5ting.github.io/How-to-learn-node-correctly/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1720077946"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1720077946"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b81586bd8ed000049",
+    navTitle: "了不起的Node.js",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABcUlEQVQ4jY3TO2tVURAF4LXvzeOqEATBQqsgCGLhAyWx0V9hYSv4Y6IEtUhA0EJrUUSwsQn+ATshgo9bKJaCMSJJ/Gzm4OFgxIENs/eaNe+dJEFLCS7hAd5jGz9Kv4+l7CeYxWoROvlVp5NtrGDUJ44wj+f+Xx5XwFHn5E4BL3ENG9jCR3wo/VVhL8p2pSMv4yd2sVZvMziOSZ1jmCvsdtl+x7mZJDeSzFVFuxgn2Wutfeq16DNaYbtJxkkOJrkevK1GbeNkry/9ybTujkV8K87rVH0wxey+Y/rjbIzNcvB1lKQlkeRQkgP9yH8htySTJAvFG4+STAs/kmSptaaaOCxhprUmyXKSoxV0GtyrdLaqjFP/yOA03mCvyl4PztflLp6U/hRnBsSHvX7t1OjPdgbrBVzArVqoxZ6DE4N1htXhKm/gHa7i4iD1Cb70nDwrzmho9KhndLiHLVSfdrDWbeVwPJ1+GTcx6b3N1y+8MuT8Bs7LR9lce+lpAAAAAElFTkSuQmCC",
+    navLink: "https://github.com/hongye612430/awesome-programming-books-1/blob/master/nodejs/%E4%BA%86%E4%B8%8D%E8%B5%B7%E7%9A%84Node.js.pdf",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1720582024"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1720582024"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bea1cb2803900004a",
+    navTitle: "《JavaScript 权威指南第七版》中英对照",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAACD0lEQVQ4jWWSzU5UQRCFu6urb/edjM6CCCwmQe5McGCHj4Bb5h3kAXCHL6BuZKs+howvwJ8LxDUGg2xwgQHNXcwk3P6rbhctDsazrVPJqToff/XiZVEURVFIKREREQGAc84YSynFGEMIIQTvvbXWe49aa6WUUkpKmXcAAADyAhFlt3NOCGGtxbIslVJaa611URSIKIQAzhnnMUYics55740xQggAQK11WZYhhPc7Ozc3DedcCMEYizFyzvr9fq/qHX06erK2VpYl5xxyHq110zT7B3vXv34efjw8/XoaKOzu7e6MRhffLw4O9hnnOQvkc2dmZjY2ng4Gy882NweD5eFwuL39ut9furz8cXV9JVAqlV9TICJKKYuiCCHUdV3XNSJqrdvtNqKYTCZnZ9+Ag8TpD28lBGMMUQDA8fHn8XiMKDnnJydfiGhqSymxf5VSmp190Ol0AHhVVXVd+xD+TiG3E2OMRCmlECiltLhYMcaIaGVludVqTT0xQi7SOeecSyk5Z4nImGYymXgfut3u3NxsjOSDz05wt7LWxkjGmBjDaPRha+v5+fnZ/XvthwsLRMHZPzYxXF/P4WKMMaZHS0tlqxQgAKBarB6vrs7Pz3c6nV6vR0TWWv7uzdtcnFJqioYQnLG75BljjDHWWmyaJl8TQrDW/g8fEWVUc2w0xmTIvPdSykzYXbzzKAPrnPsN+btyibP7CicAAAAASUVORK5CYII=",
+    navLink: "https://js.okten.cn/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1704357530"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1704357530"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bf27a26ec3000004b",
+    navTitle: "JavaScript 设计模式",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAACF0lEQVQ4jZWSv0sbYRjH3/c5j0jIhQiSX0ehIRUu9HKkDgkUUoRiF8GhFKSBDMFaUuogQvCfEPcIcSo0i0IXR7dOGTwhN1QxJeelR66NZwdLcrl7nw6XBkE6+EwP3+/n4YHv89BgME0eUvAgejKAiDw/EwgEpioi3oVmZwM8z/siIKIghGq1D4qS8TzmE9Ho/JTwPJbNSrVaVRBCiAiU0kplbTx2VVXjuMnCarW8vv6WUkoI4ThQVc1xxpXKGqUUZFlSlEyj8Xk0cnx6bi6yvPxie/u9JD1hjBFCRqPxwUFTUTKyLEGxmNe0c8saAFBCCGNsZeVlNptJJmO53FPX9QghANSyBpp2XiwWQBTjut4jBH06nX68tfXu6qqnqlo8Hk2lHv0LAHW9J4ox8JdOIgPY2CgtLKR2d+uqqm1uVnZ2PnIcNwUYY2CalijGCaGIGA4LS0vPT06+Hh0dh0LBRCK6uJj1wyGEimLcNC1otc5kWYpEBETiuu5gYB8eHtv2Tb3+qdFoXl52h8MhISQSEWRZarXOONv28vlcMhk/PW07jnN7+8cwTMMwu13DMH602986nS6ltFx+EwjwzeYXjtLwxcX3Uul1v//TMMxOR7ft367rAsBo5HQ6uud5hcKz1dVXe3v719c3NBhMM8YSiRhjzLJ+UUoR0T+Z3yBiNDoPAKbZBwDqf6ufnc/dr7vujC/9D73v/gW7jgQGV7BuqgAAAABJRU5ErkJggg==",
+    navLink: "https://www.freecodecamp.org/chinese/news/javascript-design-patterns-explained/#what-are-design-patterns",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1720512765"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1720512765"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b8b2b1a6a6400004c",
+    navTitle: "Nodejs技术栈",
+    navLogo: "",
+    navLink: "https://www.nodejs.red/#/README",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1720076768"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1720076768"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74beb17b01e6400004d",
+    navTitle: "深入剖析Vue源码",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABhElEQVQ4jX2SQWsUQRCF36uumdnMDkkIXgKCxIMgKurvyP/NRdCbN4MklxwkeJQlIOsmYdnpruehWz2t3YcuqAf1vldNRQiAhBCIvcesNr2pzWj71YAkSSAdIRjn1d325huT1yEkAAgkIAjA+P61DYMkawr3Mh7kgyEv+jx0c9/N3s2edmbZfbfebD59rl4cpCQ/OV4cTXnOJAGpPSChiNR124uP5de9H03+1yWNTEYQUPPFIBgkANVIBFcEzXY/VvfXN+i8ygkKqGNgqfxc98vRDyeVYJQiUuuNre5AgwQIqqitEMAXz5EMkgsgkA+nq4eHQG1LgCqjEBLJNyWPqQfpkkh++HqtUo6nSRHVPoEaoFq6Tyqqm9n68bGUOH/7ajdnM6rhtYUo1A+DuUcESQdZ8VJKKVqebbsgIbDS/wkz52xmF5dXgk6mZUSNpyI0DALvzp4tFwMAllJIbuf5y+13ot1KYLUSjHz59HQcBgCMCElmxP/+KgBUBob0L8L9pw0lfwOo89kfpezsZgAAAABJRU5ErkJggg==",
+    navLink: "https://www.bookstack.cn/read/5865c0921b69e6006b3145a1/README.md",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1691372554"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1691372554"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bcb9e3949b800004e",
+    navTitle: "深入浅出 Webpack",
+    navLogo: "",
+    navLink: "http://webpack.wuhaolin.cn/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1689821895"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1689821895"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b431d68d7a000004f",
+    navTitle: "现代 JavaScript 教程",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACN0lEQVQ4jXWRz0tUcRTFP/f75ocz46jje4MyajMDVrvERcsoIQspIimEfmBBqxa1CtwKLtoE9Q+UEEEwLloYoujzZeGqdkU7QYmiUhxNTGfmvfdt4YzN6Hg2X+653PO99xzYgwAy3dLRMxlPWVXcIbwzu07Pkmiu1Kr8akBTLPyOhsMvFpLp3jJXgQDYVvqJr9WZ8+T/jP6f3UOFsBOZ+7aVXXZINubAmIIwwJyZeWgnM0tTtDblwKgZzkGourbNzIjdkh6s6kdsK/N03kqdrHCfIAiIAEzGU1Y0GLjdoAJdRa803pf/9mWGtljIjPQbwqltd/flwMbPZYBZ89iDsKhswSeXX1/+uG+U09TZLaHgDRcuiF8YAaMRIzARRlYL6KW/u4Vb0XDwMSKmuPr5+/zKzCi4h5yeoS0GELAij0Tkjq95o4ThtdWN7kQC+vP5zXrpAIiuctaJJdudZHb9a/txbZvZsXqGV8cIoAV8XY5MhyOmD99/ee6iUrqzenAU/HoCAAyVOY26rpBEydMTHnLZIdlYPXikwAR4ABhcDCOfDcWVqIjpJSLnDq5fT0AA5uIdJ4CeLd9dFGTVgDxKDVIHNQK5Sh0MDsTEiEaVGhPtf9h0vWcicm0cGg6eUSMwVF5fFDd3fP9t0WdYKdVrKLkaUtKcbs2crXdGzfpOS3tmIZnV04n0pUrDiaeseSu7MmdlX+0ZfESMADsu20XPv1fKl5wcGBpU39aPNd/17yrPf13+af+Mfw1SucRlhhhoAAAAAElFTkSuQmCC",
+    navLink: "https://zh.javascript.info/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1689821895"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1689821895"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b458756385f000050",
+    navTitle: "JavaScript Promise迷你书（中文版）",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACJUlEQVQ4jYWQTWgTURSFz33vZZrENAztdGYSFdKNIAh27yaI61AtdeGqILaKiBFx32UhCwVXpgspgnWlVUFB8GcVEFxZRBAiIug4ra39SZpkft51Y5G0iZ7V495zvnvvI9d154joh9aaATAAwh8JIaC1LgC47fv+Z/SQAvDT87xbvZoAkM/nz4VhmAfQF8AAUC6XTSllkYjCOI63lFLfK5VKnZmFECLqNwC5XK68+67VakOP7887zJzcrbmuO2nb9ol+eXIc56aU8r3WmjudTiAG0krqkKfcgrG49i0OtB4TwB3P8z72AshUKrUspWwQkW8YxuqRqw9uDIfNN3MHBi+8bW4+9FrNl77vf+p7wl6VnsXV+WV24tL5Kr9m9T+/2FuI25D1d19SiFlgcYZ6x/5q/wSGiIE2CQxjzTjOE9ONboMBBMFXelrd6QkQAvKVVdgi4iUNfRER6S6DjIkkj/D49HVaqtb3AThC201ggJ7cXQCw0GttPjNzBaxPAqh3/cH4Iy6oQRqVnWis381cnFWaeVSDjnJxVnUBtMbBZIZOMcSxfgAAQBSfRqRLGPnA+3qlF/G9a8ypf+X5bPkyT5YvAQC5rjvFzLl0Oi1ty0qweXgosbP6a2NjPVpZWQmklA2t9XMhxEQ2mxWWZSUdCHOn1WqvEvsKQJOItsMwpKxpHlK8vtkZkEJK2QLQArCtlAqjKNq2bdvJZDLYZG4kLNO02kHjN9We5mAkbn3FAAAAAElFTkSuQmCC",
+    navLink: "http://liubin.org/promises-book/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1689821895"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1689821895"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b8f5d5ed4b7000051",
+    navTitle: "阮一峰 ES6 标准入门教程",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABhElEQVQ4jX2SQWsUQRCF36uumdnMDkkIXgKCxIMgKurvyP/NRdCbN4MklxwkeJQlIOsmYdnpruehWz2t3YcuqAf1vldNRQiAhBCIvcesNr2pzWj71YAkSSAdIRjn1d325huT1yEkAAgkIAjA+P61DYMkawr3Mh7kgyEv+jx0c9/N3s2edmbZfbfebD59rl4cpCQ/OV4cTXnOJAGpPSChiNR124uP5de9H03+1yWNTEYQUPPFIBgkANVIBFcEzXY/VvfXN+i8ygkKqGNgqfxc98vRDyeVYJQiUuuNre5AgwQIqqitEMAXz5EMkgsgkA+nq4eHQG1LgCqjEBLJNyWPqQfpkkh++HqtUo6nSRHVPoEaoFq6Tyqqm9n68bGUOH/7ajdnM6rhtYUo1A+DuUcESQdZ8VJKKVqebbsgIbDS/wkz52xmF5dXgk6mZUSNpyI0DALvzp4tFwMAllJIbuf5y+13ot1KYLUSjHz59HQcBgCMCElmxP/+KgBUBob0L8L9pw0lfwOo89kfpezsZgAAAABJRU5ErkJggg==",
+    navLink: "https://www.bookstack.cn/read/es6-3rd/sidebar.md",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1689821895"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1689821895"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bf7bc95d903000052",
+    navTitle: "阮一峰 ES6 入门教程",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAB2klEQVQ4jZVSPWtTYRg9z3vfxJtrkoYmLTVKIxapFvzADnFQxC+QDg6Ci8XFKEId2sGl4uxYNz+GLh1dBH9AJ110qUUKIgqiDpfU23zY3pv7fjwO3iRGXHqmh8N7Xs55nkPhlwp2A7Gr1wBkb7K2zxIljJQwFtRlBgSZLJEgMCCgO2y0zQw5UZNdD1qxUYlGMiAIscLtueDrd+O6tNXg2mz2zqx7o9bY+KQ8j5aXCkcOibADQZBgkIAx/PptdH+ucHRCbDX5THXPw0dtP9CvVobfralcNjE2YCmVEhdmMlMnpApsysO3H3rysByfTpcnhGmw1okl0U1JStlbteBs1X/ydBsdXribf/Eyunql/nHdpF3qraS7VmZBdPN65sF87tzpVNzgU8fl+9WR8qioztRX38ReNtEklhgQDp2/5E6dlNyw5hdby2NlerZSHCkFj5+3L14ucZsHMmhtN9aUE9rWNh/c7/h1GzR5+hitf9BjoxIM/mN+53PFEYhiXKv99Ddt1hP+pl2czxeH6N5iszRMlXG5vFQo5qE0iEC9LpEga7kbCWmX2i3eCXnfAUdFtn+4niW2LLr3ByGO2Msgt5fCliX6XzUAMPdnIhgDYyAG+zkg+Ae9X//Gb+ygyuInH2W3AAAAAElFTkSuQmCC",
+    navLink: "https://es6.ruanyifeng.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1689821895"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1689821895"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b9e2ba5b5a6000053",
+    navTitle: "TypeScript 教程 - 阮一峰",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC9UlEQVQ4jU2TTWhcZRSGn/PdO3cmzk+tGWuqrVopaaiICnFndFEpCEqEYnUh6s5FaVzrxm6kG0HRrVh3YodSNBTc1IVUFKS0CyGGWolWp23SJE4zk5n7/Zzjoon6wgsvnPMsH+H/OXGq1jj4eLNf9Y7amAE0qNMfDHj7/qZ8dN9Q5ubPr38yN1duI3IHPF20Ds28K0Vt1lK4G8QhCBiiEPOc1s1r9vnkDj08+eDf3Y3B2etXFk9OT0+HHKDx7Mw70p54zwab4HIEMEAw1IxKUWPVK2+du0Bn/EWm260n0iMHEvB+xvGPq8XBxz6ErM1wMzlVISWzGE1iMlIyVbOit2Y3ry7aVwtL8dDUPibHm7sW5NHPHE8+3ZJkTcrgJFrmy+RGpQrR3KhMbjhKTqK64ShIkcwt3+plR07Nu/O/LO04/cZT9+Qk7yxolrkkg1L1uXZhVYfMd0fMPlCj7uCLrmdm74Q0dz5j36wG64pzr19ekxfuLcwRk1kws2hEnyRPKrPtAvXKK7sKXttdIw0Dh/e0ae7dL6G9T+oPTdFr7eHTK7fNQQOLKskrNYUfVkpiMqaaOb8PEt1h4kCjwl2W+PF6n0rp8f0hrvRCvUEOfczvBJQ8GWul8tcg8eruKgvrgd8y4chEldWR8udGonCCRcOCwaCPA5CgRjQIhpXKxZWSNx+us7ge+Gm55Nj+Old7ET9KuK0/AgaQs5aJjangFE1mFcQuL5dy7tqQP3qBXjDOLG1ycXlEppgGM1OFmGAtkxzxapEkzkxDklyQlYHYsQurUnUgIsx9v0qROSsESSmJVDKzqIZ4dVy60bNgt00z1ahJIyrJbAxRUVESOoZTlzCNqEVNarla1HUu3eg5Oke9BX+GrJqJq1awzEHujNyx1X+3ZQ5Xq4grMgvxSzpHfQ7gf/7uZDE1oxS1l0g6bphDTGTLCrvjnWGiZO6Wbayf9V93PvjPxu08f7zKzMst+t5RJIPG1qEPPhOsUH79tkfnhN9G/gEAqLRW/zlDGAAAAABJRU5ErkJggg==",
+    navLink: "https://wangdoc.com/typescript/intro",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1692349679"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1692349679"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b5308ca4ee3000054",
+    navTitle: "Python基础 - 廖雪峰的官方网站",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC5ElEQVQ4jY1TXYiVZRB+Zt73+845nVXXSlvFs38S4ra0WNEGgh334E3dBaeIjcgLIw1toRujm29NqIsuSk1aCCSyokQTxYJCrDDyxmA7u+XPgtKBcBHdVdf9/t53potttyCp5nKGZ2aeZ54h/J+IIkYUKQAFgP53ztxXCpZWoVK0/w1WRkQCALWRiY3q3WYVqdlicaVLZk/8SwMlRMOEiGTDnvF1xto31LsnOQjh4hn4LIUX/YL+AQLp3zPV/eeGmM0uZl4kWQLxLie2BkxTWV54aH4DmuNHimpke6p1NoXr5eWtbbvJmG0+uS1qrAD0KzF321JL4NL46A9Dq3+zC1PrUTgw8Nx7xOjXPDfAPa0gXaniYUotLOI/gEgXk13jszjNvdsLABYgxYsjwcC66kcmDJ72ySzAc8wkz6YF+ITgL5Dyo0RUI2MhPtl/ekfvKFSJ+vecWVy2Sw+E5SVPZTPXoeIUqgIwkQ1cnCTdYsu37uLsGtvQqrjxGzdvrz+78+GbAKktm9ZdRLQpvXVtnEw4DfEPgM0SQCEuz0qF4odgSdXTFFuLeDYdPLvzkRt/6gam6ek3T5bvX3FqeU8fX/19K5mgBBWBqhChzNbUCPSECUvL0njmtdM7ekdR/9zMm4pPvv7Y5JXnqdx4ddXHzzSOzzgTHg1KiwxEPBTq08T5PM7VZWJMcQJQwqG6zJ+ZR7u61lzt6PzM2/DIlkNvX+Ifv3vBZ/HhYPG9IREJ5iRlVVGQdwApouEF/9BYpbLXA9/0NZvHTnV2FjdevpzgSy1sunTu2VykZoJwUPNUwZw5hwe/f6Xn4l++Abi32dx+vtk80ejoOHh3HK8AwI1tq9/9+uW1X8UmuGKDApENc1FsngPrAhgA7E9tbcuCQmGERY6lk5OTjfb2T5WoMVyPplok71ItiqTx4LdDfYfvZHX8XKnsa1QqLwHAWHv7W6OVyu75Wu39iSOP7/tlKwCgruZOL/cHguRW0BgZ+24AAAAASUVORK5CYII=",
+    navLink: "https://www.liaoxuefeng.com/wiki/1016959663602400/1017063413904832",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1694679877"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1694679877"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b3f6372063d000055",
+    navTitle: "vitejs/awesome-vite: ⚡️ A curated list of awesome things related to Vite.js",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABcUlEQVQ4jY3TO2tVURAF4LXvzeOqEATBQqsgCGLhAyWx0V9hYSv4Y6IEtUhA0EJrUUSwsQn+ATshgo9bKJaCMSJJ/Gzm4OFgxIENs/eaNe+dJEFLCS7hAd5jGz9Kv4+l7CeYxWoROvlVp5NtrGDUJ44wj+f+Xx5XwFHn5E4BL3ENG9jCR3wo/VVhL8p2pSMv4yd2sVZvMziOSZ1jmCvsdtl+x7mZJDeSzFVFuxgn2Wutfeq16DNaYbtJxkkOJrkevK1GbeNkry/9ybTujkV8K87rVH0wxey+Y/rjbIzNcvB1lKQlkeRQkgP9yH8htySTJAvFG4+STAs/kmSptaaaOCxhprUmyXKSoxV0GtyrdLaqjFP/yOA03mCvyl4PztflLp6U/hRnBsSHvX7t1OjPdgbrBVzArVqoxZ6DE4N1htXhKm/gHa7i4iD1Cb70nDwrzmho9KhndLiHLVSfdrDWbeVwPJ1+GTcx6b3N1y+8MuT8Bs7LR9lce+lpAAAAAElFTkSuQmCC",
+    navLink: "https://github.com/vitejs/awesome-vite#templates",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1691572568"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1691572568"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b462e0855b0000056",
+    navTitle: "Hexo-Theme-Acrylic",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADNklEQVQ4jaWTOWycVRhF7/fe+5fZMx57PF4w48TBSYCkgAQMDgYhGVlJRQF1JCRKlC4N4CYoHRFSJEQDggZoKUKBEBQpwqrEmUwmNjYBj/Esnn37l/c+ChREz6nv0a0OASD8AwMA37yZwePHz4NkbK/V2nzn+o2dX1oN+1TG2f7kwoURHo6ZiYhYPRTnLl1KL80tLn5u6Er/9t2Ve/t1lFs9/Uev1wZg/1wZFD787saXbz771J3dWq1ARGUAoCcuX52EkpfjQr2SceypSNyVvzcOuNobsGtHRDIWQ6BDtIMQL8zP4r2zZxCxnUag9UfFQuFtmVpd+8Jyo69HCcmoFMIRMNJW1A4C8okQsSQsYWCTNj2vxydSKaQtO5pIJJYzmUxVkeFVORpqy3FgiERIIEdJrCzMYyqRpJPTOd6s7ePbzZJQDqE26vPIGwXWcCgF0ZpyhWy6tj0BQQjB1PECLE6N4+KLZ+FKCRDR8Ykx/Fbfx0Z9D39227yUnRYAiJnrQkh5H8qCBhmfwS0/wKFIFIoE9jpdlNttHHKjWM4fwW6zg/uNJmljiJlJSvmrECxuMRE8o7mnNff8ACk3gqhtoVSr4au7RRgYLOXncWxyhkvNBgdg0mGomXlDgPiWHwbU11oMw5AMM7KJGAjAbquDj3/4CaVqDUnHxRtnniFPGHR0SErKCjMXRdPzSl1vFHhaC19rtizFuUQCfd/H4Uwaby0/j5hlo+t5WJp9lJfzh7kW+uxY1ta18WsV1R3wZjzOVdtW06PREGPRJE3EoxiFmp/L5/Hy0QU0BgMK2TADePXYSWODhReGpXVaN6putyvj1sQDVjLX97WZTMQRd2yExvD14j0U6zVs1Sr0SDpFF1de4rSyEFeKDNFtABBYXzdG629CUlLDWEey42IskRRaKflZoSC/3tmWm80D8ePONm2Vd1lpYwljQjLmewBQAFAdNd6PDr2FuKXW8ql42Bv2Kw/2/ypnBTrnF49OPzmRncvGYpNJN2InIpGuCcP1XC63gf+UCAA4ceXq3GtPL6jtzkH70w/e7fNjq7p+7pzbmZlJ+44zq1x3fNBqbZ86ffoO/g/M/O/x37cSj4ISsHPtAAAAAElFTkSuQmCC",
+    navLink: "https://next-docs.acrylic.org.cn/erroruration/error",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1694404402"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1694404402"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b78a3a5d724000057",
+    navTitle: "JavaScript 算法与数据结构",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABcUlEQVQ4jY3TO2tVURAF4LXvzeOqEATBQqsgCGLhAyWx0V9hYSv4Y6IEtUhA0EJrUUSwsQn+ATshgo9bKJaCMSJJ/Gzm4OFgxIENs/eaNe+dJEFLCS7hAd5jGz9Kv4+l7CeYxWoROvlVp5NtrGDUJ44wj+f+Xx5XwFHn5E4BL3ENG9jCR3wo/VVhL8p2pSMv4yd2sVZvMziOSZ1jmCvsdtl+x7mZJDeSzFVFuxgn2Wutfeq16DNaYbtJxkkOJrkevK1GbeNkry/9ybTujkV8K87rVH0wxey+Y/rjbIzNcvB1lKQlkeRQkgP9yH8htySTJAvFG4+STAs/kmSptaaaOCxhprUmyXKSoxV0GtyrdLaqjFP/yOA03mCvyl4PztflLp6U/hRnBsSHvX7t1OjPdgbrBVzArVqoxZ6DE4N1htXhKm/gHa7i4iD1Cb70nDwrzmho9KhndLiHLVSfdrDWbeVwPJ1+GTcx6b3N1y+8MuT8Bs7LR9lce+lpAAAAAElFTkSuQmCC",
+    navLink: "https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1703216222"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1703216222"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b7c5b09c9ca000058",
+    navTitle: "数据结构和算法必知必会的50个代码实现",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABcUlEQVQ4jY3TO2tVURAF4LXvzeOqEATBQqsgCGLhAyWx0V9hYSv4Y6IEtUhA0EJrUUSwsQn+ATshgo9bKJaCMSJJ/Gzm4OFgxIENs/eaNe+dJEFLCS7hAd5jGz9Kv4+l7CeYxWoROvlVp5NtrGDUJ44wj+f+Xx5XwFHn5E4BL3ENG9jCR3wo/VVhL8p2pSMv4yd2sVZvMziOSZ1jmCvsdtl+x7mZJDeSzFVFuxgn2Wutfeq16DNaYbtJxkkOJrkevK1GbeNkry/9ybTujkV8K87rVH0wxey+Y/rjbIzNcvB1lKQlkeRQkgP9yH8htySTJAvFG4+STAs/kmSptaaaOCxhprUmyXKSoxV0GtyrdLaqjFP/yOA03mCvyl4PztflLp6U/hRnBsSHvX7t1OjPdgbrBVzArVqoxZ6DE4N1htXhKm/gHa7i4iD1Cb70nDwrzmho9KhndLiHLVSfdrDWbeVwPJ1+GTcx6b3N1y+8MuT8Bs7LR9lce+lpAAAAAElFTkSuQmCC",
+    navLink: "https://github.com/wangzheng0822/algo",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1703216237"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1703216237"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b5051e9afa3000059",
+    navTitle: "JavaScript权威指南(第6版).pdf",
+    navLogo: "",
+    navLink: "https://awesome-programming-books.github.io/javascript/JavaScript%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97(%E7%AC%AC6%E7%89%88).pdf",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1704357562"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1704357562"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b11f8fd64d400005a",
+    navTitle: "经典技术书籍 PDF",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABcUlEQVQ4jY3TO2tVURAF4LXvzeOqEATBQqsgCGLhAyWx0V9hYSv4Y6IEtUhA0EJrUUSwsQn+ATshgo9bKJaCMSJJ/Gzm4OFgxIENs/eaNe+dJEFLCS7hAd5jGz9Kv4+l7CeYxWoROvlVp5NtrGDUJ44wj+f+Xx5XwFHn5E4BL3ENG9jCR3wo/VVhL8p2pSMv4yd2sVZvMziOSZ1jmCvsdtl+x7mZJDeSzFVFuxgn2Wutfeq16DNaYbtJxkkOJrkevK1GbeNkry/9ybTujkV8K87rVH0wxey+Y/rjbIzNcvB1lKQlkeRQkgP9yH8htySTJAvFG4+STAs/kmSptaaaOCxhprUmyXKSoxV0GtyrdLaqjFP/yOA03mCvyl4PztflLp6U/hRnBsSHvX7t1OjPdgbrBVzArVqoxZ6DE4N1htXhKm/gHa7i4iD1Cb70nDwrzmho9KhndLiHLVSfdrDWbeVwPJ1+GTcx6b3N1y+8MuT8Bs7LR9lce+lpAAAAAElFTkSuQmCC",
+    navLink: "https://github.com/hongye612430/awesome-programming-books-1/tree/master",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1720604583"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1720604583"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b92a65b1c0b00005b",
+    navTitle: "Jartto's blog - 一个技术人的博客",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAADC0lEQVQ4jQXBW2xTZQAA4P922tPTc+lt69a6dnQd0HRTxLGZ7hIXE4wgtwcgIRpiMJqgD75oeDBLCPrggw+aaGI08cmII8QAbpoFJUPKhtsYtCMbrD2UbK2hlLKWnq09Pf//+33QuLfIC3k4MGwrrpFSsbl7cDWbHT//y8jQcD2/fkvPnT3zKUvNmYGQ0NEJLAtunftYaGzycDST0S8tLN0R5MJG5Ul+3emUaKO+BcjJRN+IncWiXc7TZ4isEAHS3Kb55Y/nU9VNAyInKBGbEGjzU86BomiM/Tqf/m7j2YWT/gEMLQgROPZBWWv9O19yyEqbJIqShDBpWpQyxiyLMuZzyy2qNF5pUocMKEW4O35DbpUwxhA0LcoZBxwAACAEAEIIQL1hujTX5cnJ5PXrGCHCAVhKpYmAKWcMQgA4hJBzDhiAEGKCIQeMc7tA7KoKESL82gSwLIQxRggQwBhjjNoEG2Pcsqzq8xpGSNVUEWHx9k2rzUvQzNVQw0hSiqtGxTAAQYByURAhYC6vMtC7azWTKzypRGy2nYVV/tM3qC46W7dHAKNev0fxaIVSuSMcfOvNxLffj53+8N2/kgvvnDjk1hyxvnjRaBAEYS2n/zk7/V9uuc3rHhzsKxaKvfHwRnXL41XNWmN+WfdI4q30itff4l+4v9tuEUd428sUlOt07fGj9qCr3eecn1tmCNdSme6wL7F3z91k+p5eHu3q3/P5e1uzSfzJznb3avqVgURlcfF2NheJRR+s6NbCo826GR9+MZ3K3rk8vQMjvdmUVR/rCEH62fsW5cVQt1tRsjMzXy3ngi/t8GAxFA38fjX5GkL7wv5ZTUXRzrWHhapJkKn5VkQtP3qYK5r+3IDBFw6+/qrD6/z54tRvUzevlY31akP0t8SjAckpHXv7FB4bv1Su1fC//zx9Wrph9+5/Y2hkKGbHeCa9Hmz3fzQ29sOVySNHR6fn9J7+vb09MYRUNXbkeM/+A892JZaymRaZX5mY/eLrcSSQzkjn1MQfrq6w7HYFOiL9/X1mw/wf+pVgD+I41AAAAAAASUVORK5CYII=",
+    navLink: "http://jartto.wang/all-categories/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1726209536"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1726209536"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b7083c456ce00005c",
+    navTitle: "Vue.js 相关的精彩内容列表",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABcUlEQVQ4jY3TO2tVURAF4LXvzeOqEATBQqsgCGLhAyWx0V9hYSv4Y6IEtUhA0EJrUUSwsQn+ATshgo9bKJaCMSJJ/Gzm4OFgxIENs/eaNe+dJEFLCS7hAd5jGz9Kv4+l7CeYxWoROvlVp5NtrGDUJ44wj+f+Xx5XwFHn5E4BL3ENG9jCR3wo/VVhL8p2pSMv4yd2sVZvMziOSZ1jmCvsdtl+x7mZJDeSzFVFuxgn2Wutfeq16DNaYbtJxkkOJrkevK1GbeNkry/9ybTujkV8K87rVH0wxey+Y/rjbIzNcvB1lKQlkeRQkgP9yH8htySTJAvFG4+STAs/kmSptaaaOCxhprUmyXKSoxV0GtyrdLaqjFP/yOA03mCvyl4PztflLp6U/hRnBsSHvX7t1OjPdgbrBVzArVqoxZ6DE4N1htXhKm/gHa7i4iD1Cb70nDwrzmho9KhndLiHLVSfdrDWbeVwPJ1+GTcx6b3N1y+8MuT8Bs7LR9lce+lpAAAAAElFTkSuQmCC",
+    navLink: "https://github.com/vuejs/awesome-vue?tab=readme-ov-file#responsive",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722396535"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1722396535"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b865dc45dfb00005d",
+    navTitle: "springleo - 开发经验",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABPklEQVQ4jZ1SPUvEQBB9MydWYnGFRARRUBArdw3YqIgIIhaWtlpYCILcLxEUrrrDxh9xYiXY3qbSwtImKVWslOyz8DxCzAb1NTvM+5jZZQUlWGuXARyIyKr3fhoAVPWJ5J2IXPb7fVfUS8l8AeCkHFoEyfMkSU5/BFhrbwBs1ZkL6DnndgCgAQDGmLaI7P/SDABzURQ1syzriTFmUUTu/2AeQlUXFEDrP2YA8N63VFXXQwIR6ZLs1GRsjJCcqmJIdpxzR/h6ow8ROa6QTWrNdF9Vl6BirX0EMB8QXA/O7QD/oiRvQ1sAGCc5VsNDAZyFSJJ7qrpbG5AkyQOAdiBgJs/z2bqA4lfule9KckJV30k+B/xvje8qTdOrKIqaIrIyXE+1CWATQBwIGJVyJ45jQ/IQwBrJpUH7tcKcA+h+Au0gaUL3kWS4AAAAAElFTkSuQmCC",
+    navLink: "https://lq782655835.github.io/blogs/team-standard/0.standard-ai-summary.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722395918"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1722395918"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b9d3af3b3b400005e",
+    navTitle: "Koa2 进阶学习笔记",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC1UlEQVQ4jXVSv0t0VxA9c+fu+7FvRVxU0IRECEIIErFbwQ+3EEQkiyDbWFoI4n8QSBCClnY2FsFmZUEFUwlW+TClWAQWiwUJIcgaV1DX9za+d++dFN9qSOGBYZhhfh4OLSwsfMXM/4Rh+Aige3h4aPEfuOffcpubm6rRaOSfnp76RCSgSqXSERFnrU2I6E/P835XSv1mrf3l5OTkAQAWFxcHwjD8LsuyGWPMtyLyBTNHAIgqlYoQEYIggLUWSZIgTVP4vv8XEf3onPOI6Ic0TT/zfR9BEEBrjSRJAADaGCN9fX2yu7sL55y0Wi25vLyk8/Pzz+/u7n5WSqFYLKJUKtmJiQk3NjamoihyGxsb6cPDQ14DIBGhgYEBxHEsrVYLKysrWFpasqurq845x1tbWzI6OsqvnFj7iRIiIiUiICLpdrtSq9Xo+flZ9vf3USgUoLUWIqLh4WFqNpuyvb0tp6encM6htxiKiCAipJSiKIpwe3tLURSRtZZE5M3Ozs5oZmYGV1dXuL+/Ry6Xw9sA5xyCIMD09DTq9TpKpRI8z0PvOhhjMDc3h4ODA4yMjGBoaAhZloGI8PoCnHNgZgwODr7FrwjDkPr7+3F9fY2pqSkws3LOgYig3xTDnzRjjPlfMxHJ0dGR1Ot1NTk5ifHxcRhjLDOLiEADEBFBt9uFcw5KKQnDkJRSiplNkiRUq9UwPz+PtbU1ISJ0Oh2ICACI1lpTmqZYX19HPp931lpzcXHBs7OzEBF4nic7Ozvu8fERe3t7rtlscrvd1nEc61wuB6pUKk89QXlExL7vI01TFItFdDqdTESoWCxyq9UiYwyYGURkmDkFYLS19sssywqFQmFIRMbSNP2GmT+02+1Z3/d9IsLNzU3med6vYRh+tNY2APwRx/HfIhIT3sHy8vLXLy8v3xOR53neT8fHx433aqlnqlqtcrlc1u8VlstlXa1WGYB67fsXNjxy8R1L2VcAAAAASUVORK5CYII=",
+    navLink: "https://chenshenhai.com/koa2-note/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1718358341"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1718358341"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b4b09aab34800005f",
+    navTitle: "Vyacheslav Egorov - 一位编译器工程师",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAcUlEQVQ4jaWSSw6AIAxEXz0ZR+dmdYOII2CRSUiazAdKCze8nGjdxXaIL9bYiAig9S6bq8dKYVlCktww4N0Az3HDg0/AMXtjAlOjYrsFfn7gBdcWvjbtxWuANcKeGZ1/a4gslWp+L1PV6oiiIdPRLuEEBBc3bnPZeZ8AAAAASUVORK5CYII=",
+    navLink: "https://mrale.ph/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1682406460"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1682406460"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bc3faceb594000060",
+    navTitle: "Airbnb JavaScript 风格指南",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABcUlEQVQ4jY3TO2tVURAF4LXvzeOqEATBQqsgCGLhAyWx0V9hYSv4Y6IEtUhA0EJrUUSwsQn+ATshgo9bKJaCMSJJ/Gzm4OFgxIENs/eaNe+dJEFLCS7hAd5jGz9Kv4+l7CeYxWoROvlVp5NtrGDUJ44wj+f+Xx5XwFHn5E4BL3ENG9jCR3wo/VVhL8p2pSMv4yd2sVZvMziOSZ1jmCvsdtl+x7mZJDeSzFVFuxgn2Wutfeq16DNaYbtJxkkOJrkevK1GbeNkry/9ybTujkV8K87rVH0wxey+Y/rjbIzNcvB1lKQlkeRQkgP9yH8htySTJAvFG4+STAs/kmSptaaaOCxhprUmyXKSoxV0GtyrdLaqjFP/yOA03mCvyl4PztflLp6U/hRnBsSHvX7t1OjPdgbrBVzArVqoxZ6DE4N1htXhKm/gHa7i4iD1Cb70nDwrzmho9KhndLiHLVSfdrDWbeVwPJ1+GTcx6b3N1y+8MuT8Bs7LR9lce+lpAAAAAElFTkSuQmCC",
+    navLink: "https://github.com/lin-123/javascript",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722396062"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1722396062"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b38a8227b36000061",
+    navTitle: "JavaScript 开发原则和代码规范",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABcUlEQVQ4jY3TO2tVURAF4LXvzeOqEATBQqsgCGLhAyWx0V9hYSv4Y6IEtUhA0EJrUUSwsQn+ATshgo9bKJaCMSJJ/Gzm4OFgxIENs/eaNe+dJEFLCS7hAd5jGz9Kv4+l7CeYxWoROvlVp5NtrGDUJ44wj+f+Xx5XwFHn5E4BL3ENG9jCR3wo/VVhL8p2pSMv4yd2sVZvMziOSZ1jmCvsdtl+x7mZJDeSzFVFuxgn2Wutfeq16DNaYbtJxkkOJrkevK1GbeNkry/9ybTujkV8K87rVH0wxey+Y/rjbIzNcvB1lKQlkeRQkgP9yH8htySTJAvFG4+STAs/kmSptaaaOCxhprUmyXKSoxV0GtyrdLaqjFP/yOA03mCvyl4PztflLp6U/hRnBsSHvX7t1OjPdgbrBVzArVqoxZ6DE4N1htXhKm/gHa7i4iD1Cb70nDwrzmho9KhndLiHLVSfdrDWbeVwPJ1+GTcx6b3N1y+8MuT8Bs7LR9lce+lpAAAAAElFTkSuQmCC",
+    navLink: "https://github.com/rwaldron/idiomatic.js/tree/master/translations/zh_CN",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1682235998"),
+    navRemark: null,
+    navType: "教程",
+    lastModified: Int32("1682235998"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b93b5a4f62c000062",
+    navTitle: "学习",
+    navLogo: null,
+    navLink: null,
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730361009"),
+    navRemark: null,
+    navType: null,
+    lastModified: Int32("1735005876"),
+    navTag: "h3"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b08f920d631000063",
+    navTitle: "Z-Library",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB+klEQVQ4jW2TwU8TURDGf7OvwaQEaEJiehBPrUE5cUCoKAb/A/8x+R8MR0iMJJJ4UC8I5SCNIiIXEkHgQENiE1vY7nweurvZGiaZvPdm9vvme7NvkLQuyVPPzb1wHMpIkpJ0XaPwsZ+cnGjz3aaurq7k7kqSZMh3tnd0cHAgSZ4kA44IUOo2MT6h1derbLzdAKDb7dLpdDAzmjtNVl6tUAolAcbAFKUbc3eNjY/Z8otldpu7dDodQingiZMkCVtbW9TrdeoP6gbIbMARZWySTBILjQUuLy85+nlECIFQClycX7D/bZ/Fp4tIot/v55gIwMzIGKcfTlOtVmk2m8Q3MSEKtFotJDH3eA4zI4qiHBOlTJgZ7k4IgcaTBntf9mi328RxzPbnbWZmZpicnMTdMTMk5VfI2bJEo9Gg1+tx+OOQs99nHB8fs/hsID8DZopLZO1MVQBM3Z+iVqvx8cMnKpUKlUqF2dnZIfmZZX8hD7o7klh6vsTZ6S++f20xvzBPuVzG3fNiOU7FU0pgZsQ3MYen51z3+zy6V6VcLucqb1Uw1EyJkTsjvP9TYq0dGB0dvRWcEWQKlDUxW7u9a/72ekOxVHCOKRJYts+VAM5wRTMbesqlwjU0yBsGuMTL2l1idxIXIcrlZ4UMiJD0pjC0no1xcZz/ixVHf/0f3/CdFnoGVAUAAAAASUVORK5CYII=",
+    navLink: "https://zh.singlelogin.re/s/%E6%98%93%E7%BB%8F?",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1719974288"),
+    navRemark: null,
+    navType: "学习",
+    lastModified: Int32("1719974288"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b909caec70a000064",
+    navTitle: "Z-Library – the world’s largest e-book library. Your gateway to knowledge and culture.",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB+klEQVQ4jW2TwU8TURDGf7OvwaQEaEJiehBPrUE5cUCoKAb/A/8x+R8MR0iMJJJ4UC8I5SCNIiIXEkHgQENiE1vY7nweurvZGiaZvPdm9vvme7NvkLQuyVPPzb1wHMpIkpJ0XaPwsZ+cnGjz3aaurq7k7kqSZMh3tnd0cHAgSZ4kA44IUOo2MT6h1derbLzdAKDb7dLpdDAzmjtNVl6tUAolAcbAFKUbc3eNjY/Z8otldpu7dDodQingiZMkCVtbW9TrdeoP6gbIbMARZWySTBILjQUuLy85+nlECIFQClycX7D/bZ/Fp4tIot/v55gIwMzIGKcfTlOtVmk2m8Q3MSEKtFotJDH3eA4zI4qiHBOlTJgZ7k4IgcaTBntf9mi328RxzPbnbWZmZpicnMTdMTMk5VfI2bJEo9Gg1+tx+OOQs99nHB8fs/hsID8DZopLZO1MVQBM3Z+iVqvx8cMnKpUKlUqF2dnZIfmZZX8hD7o7klh6vsTZ6S++f20xvzBPuVzG3fNiOU7FU0pgZsQ3MYen51z3+zy6V6VcLucqb1Uw1EyJkTsjvP9TYq0dGB0dvRWcEWQKlDUxW7u9a/72ekOxVHCOKRJYts+VAM5wRTMbesqlwjU0yBsGuMTL2l1idxIXIcrlZ4UMiJD0pjC0no1xcZz/ixVHf/0f3/CdFnoGVAUAAAAASUVORK5CYII=",
+    navLink: "https://zlibrary-africa.se/?signAll=1&ts=1012",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1691392392"),
+    navRemark: null,
+    navType: "学习",
+    lastModified: Int32("1691392392"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b1921402959000065",
+    navTitle: "600学习网",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC5UlEQVQ4jV2TzWtcZRyFn/Ped74y08SmjSRtakITIRs/KLZiFaSiRTeBFrpTsLhwpyi4CS6C4kIr+AG6EEQoin+BC1cuRNC2WBBcdBE1NiQzaZqvyb0zc+9935+LxCKe/XPO5jnif7H3J89glRdxOovZLOCAJcx+IeobLfz5I4CBBKZ74CUSzky/C+4NKqoTDCJgBokgAUoKLH5Gp/e2PuykALJFHOBpTH9Ly18kC0ZUQOYwdDAUQRFZQjMRafyBrDvP4p3MaZFIY3qRlr/IVpkjzMw8kjNBSTB84gzzBrAbC1ruHLXmFUGUfTB1CpKfSczR8LK13DHqrbzdExfG2b7Zpr5ccmiiZTYwlUMx+iKJ8oje4DmHuVeoqcJuNJ4ZdZy/z/JWVDg/jDsdGXmyQTlqZOtd8WjTuoeD2n93oO4TfPVVj9kTgFEUzrYy7OxR+ekqag6xtzCLijVGXl6maAfseFV2qyBNM7e5csdGjxw57fHJDHs9MTFpzD1mat+Qm3R035mh+PUpilu30VhK48IGoWMcevqYpUs72t1JNRiUE46Aw3vI9tDqX1ith2Vd/NwKsbuGqiv4Ex3i7i6qdOn/sYEF8BVPkRfyEJao1x5mfR373UsnZ2Erpz4f0PBN2N7Gzx0lbo7jRip0b/wmQh6da4Bp3eOr1+hvP8LUqaBL3zsAJvblqj8PDCCk4KdBVRh/c9XW3puLNRskPfx1j4tfEauX6XfU/+mLmGvIJdo3R4WgX4I3MIyKV7i7ZMSc3DlQ+FL7/s98Qiu81ltu56ur/YqEJAwDJQeqgzBMjnzs/nrtbi/5eurT9CVv4HBLC7Z38qHGgzPnxkd24np7I3jvk39JBJgFhA7XXW0rK6+7JH3dQE4Q9RbpxnJ3Pm7ufd5sNjg+NuytyEWMshjkYlAjiUkSo3aycFVl74UTH7Gpg+571wSwKw88S1K73FntPN4fDI455wA6Fcc1TFcnPs6++y/zDzgKaex/YET7AAAAAElFTkSuQmCC",
+    navLink: "https://www.600xue.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1670404827"),
+    navRemark: null,
+    navType: "学习",
+    lastModified: Int32("1670404827"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bd48af70f17000066",
+    navTitle: "书栈网",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABhElEQVQ4jX2SQWsUQRCF36uumdnMDkkIXgKCxIMgKurvyP/NRdCbN4MklxwkeJQlIOsmYdnpruehWz2t3YcuqAf1vldNRQiAhBCIvcesNr2pzWj71YAkSSAdIRjn1d325huT1yEkAAgkIAjA+P61DYMkawr3Mh7kgyEv+jx0c9/N3s2edmbZfbfebD59rl4cpCQ/OV4cTXnOJAGpPSChiNR124uP5de9H03+1yWNTEYQUPPFIBgkANVIBFcEzXY/VvfXN+i8ygkKqGNgqfxc98vRDyeVYJQiUuuNre5AgwQIqqitEMAXz5EMkgsgkA+nq4eHQG1LgCqjEBLJNyWPqQfpkkh++HqtUo6nSRHVPoEaoFq6Tyqqm9n68bGUOH/7ajdnM6rhtYUo1A+DuUcESQdZ8VJKKVqebbsgIbDS/wkz52xmF5dXgk6mZUSNpyI0DALvzp4tFwMAllJIbuf5y+13ot1KYLUSjHz59HQcBgCMCElmxP/+KgBUBob0L8L9pw0lfwOo89kfpezsZgAAAABJRU5ErkJggg==",
+    navLink: "https://www.bookstack.cn/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1689821895"),
+    navRemark: null,
+    navType: "学习",
+    lastModified: Int32("1689821895"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bde3a10cb24000067",
+    navTitle: "深入剖析 Vue2 源码",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC1UlEQVQ4jXVSv0t0VxA9c+fu+7FvRVxU0IRECEIIErFbwQ+3EEQkiyDbWFoI4n8QSBCClnY2FsFmZUEFUwlW+TClWAQWiwUJIcgaV1DX9za+d++dFN9qSOGBYZhhfh4OLSwsfMXM/4Rh+Aige3h4aPEfuOffcpubm6rRaOSfnp76RCSgSqXSERFnrU2I6E/P835XSv1mrf3l5OTkAQAWFxcHwjD8LsuyGWPMtyLyBTNHAIgqlYoQEYIggLUWSZIgTVP4vv8XEf3onPOI6Ic0TT/zfR9BEEBrjSRJAADaGCN9fX2yu7sL55y0Wi25vLyk8/Pzz+/u7n5WSqFYLKJUKtmJiQk3NjamoihyGxsb6cPDQ14DIBGhgYEBxHEsrVYLKysrWFpasqurq845x1tbWzI6OsqvnFj7iRIiIiUiICLpdrtSq9Xo+flZ9vf3USgUoLUWIqLh4WFqNpuyvb0tp6encM6htxiKiCAipJSiKIpwe3tLURSRtZZE5M3Ozs5oZmYGV1dXuL+/Ry6Xw9sA5xyCIMD09DTq9TpKpRI8z0PvOhhjMDc3h4ODA4yMjGBoaAhZloGI8PoCnHNgZgwODr7FrwjDkPr7+3F9fY2pqSkws3LOgYig3xTDnzRjjPlfMxHJ0dGR1Ot1NTk5ifHxcRhjLDOLiEADEBFBt9uFcw5KKQnDkJRSiplNkiRUq9UwPz+PtbU1ISJ0Oh2ICACI1lpTmqZYX19HPp931lpzcXHBs7OzEBF4nic7Ozvu8fERe3t7rtlscrvd1nEc61wuB6pUKk89QXlExL7vI01TFItFdDqdTESoWCxyq9UiYwyYGURkmDkFYLS19sssywqFQmFIRMbSNP2GmT+02+1Z3/d9IsLNzU3med6vYRh+tNY2APwRx/HfIhIT3sHy8vLXLy8v3xOR53neT8fHx433aqlnqlqtcrlc1u8VlstlXa1WGYB67fsXNjxy8R1L2VcAAAAASUVORK5CYII=",
+    navLink: "https://ocean1509.github.io/In-depth-analysis-of-Vue/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1735005876"),
+    navRemark: null,
+    navType: "学习",
+    lastModified: Int32("1735005876"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bb4eef7237c000068",
+    navTitle: "深入理解JavaScript",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACpklEQVQ4jW2SQWucVRSGn3Pu/WYmTUnJJDVSsKnxa5O0FMFNK9SFexHElQu7EN0oCt0ILQquxIUi2Fqx+gcERXFbUaqrCorFWDuJTDKWNEQbO5bWJN/ce46LTOgQ+q7OhXPPy/ucI2xJAAeYLGceD6F4UeFJhwfBRZAVQ741S58sLVy9zIBkoC6mZo6+I/CyqDZwx90dQEQEEdx83d3Ptlu/ngZse4BCWUzNND6PsXjKzGDr38D8e28NSkq9L9rX5p4DcgB8anrfe7Va7WRK6Zvs+Q1BxlVkr7mtOHRFpHD8ck75NO67arX60yOj4/Vba39dlAPl7PEQ46UQi5B61cft1twrQDx06NGJqvp3DSDX683rrdZNoJqaPvp+LIpXc+5tpl4+ETWEl0S15pYRSEAA8vz8leUBPjf6eYLgycyCiO5StRdUhCdwdzNf3+ilD4Hcbx4EvF3nRO88lu/g7iJyQh3ZJ4iA/73cvrbYb7QBctsUHaDTav3pcEMEBHlYAfEt7MPNZjm0w3mnZGJiouEw4i6CEFSEDu6IyNjuseJY3yneJ0IEvL5n7LiKPNC/kY6S7QdUAblbxPjp5MGDs2zB3Bkh7S8PHylCOAsgKuLu38tkOftYjPEnc/9ARR7SEJ4xy19ZtrcW53+7ArC/PHykKOLr7v6sigwDyd0t53xMO3/8/rO7fRRDeK2qqrctp3dxdv+3mW7fs682BE6qyLA76xpCdOzc0sLVXxTQdt485WaX6o36Z+b2o5udWe20tjfC9ZSWzX0VIIQwlFP6up02zwA6AOpA45HpkQsa9XnLxtrG7dHu0lIXoFmWI6NxqCui2SxfaLfmTgEV/avrU+6mW2urX+4Z3/uduN9cydVFut0EsP5Pk9Gxop6Tv7m4MHd+4Nj4HxrWR3D6SUWaAAAAAElFTkSuQmCC",
+    navLink: "https://github.com/Jacky-Summer/personal-blog/blob/master/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JavaScript%E7%B3%BB%E5%88%97/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3JavaScript%E4%B9%8B%E6%89%8B%E5%86%99call%2C%20apply%2C%20bind%E6%96%B9%E6%B3%95.md",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1735005876"),
+    navRemark: null,
+    navType: "学习",
+    lastModified: Int32("1735005876"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bab18761b17000069",
+    navTitle: "JavaScript（323题）",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB0klEQVQ4jX2SPWtUURCGn5lz7t7NSmziRxtQEUSJP0HLVBaCnSBWgghW1gF/giBWIoKFhQr+AdOJWFgEVkTEj0YjZCPEhHV3z3kt7t29l11xYDjDzJl33vkwajl9XcvpEMZ/ZLLH6MsjG7Z9BnD+ti4E5ymJIMCsBaTZI4wBzovhkLv9+/YbIAKQOBVKjk0ymFW6IAKMldjljhIn2NAVNpDX4XHOZMREmcqaUxMikSb7JHcur+2wBqbYquAGGidsNPnnLNQpsMKROTI4A7yLAG6YOxyM4ewqXL0I0gKAPX6F+t9QrwQ3Os0MqBJigO8DePmmHu8UpLa3d7HomIRlVdEZgNUg3QJWjzcM1AyQz9uN3+tNxRZFsqAs4ejhpngMUITK7nWrP+0txTpRqj9vD+D565qVwc9f8GMXgsPyEnQi5DwH4IaZoVFC51bRjXUsJegUsLkFTzZhqYRJAmXwBQaQc6763/oKNx9QH2TVSgxVcp4mq2I9AxiJ9yFj9azU3sG0mCqvBJIxa8JB1r/H25x4VvSIFgjmmIdGbaqOY0R3HChqBiaAP2NdswM+GVySODIr3r5JIQPSmETg43wYgJO3VK5AubNwiI2EffThoe0B/AU8oMSk2dj9JwAAAABJRU5ErkJggg==",
+    navLink: "https://y03l2iufsbl.feishu.cn/docx/XfL4di0YNosjoGxjfMtcGKKPnkg",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1735005876"),
+    navRemark: null,
+    navType: "学习",
+    lastModified: Int32("1735005876"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b4ed685d04b00006a",
+    navTitle: "面试题库 - 易百教程",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABoklEQVQ4jYVTMaoiQRSsbgy1ZwR1OhFPMGi0mWj8QVETD/CDDQ1lo0XwACIYegAjAzOj0XAT8QZi8L+IV7DrR6+31b9sQdPDTFW9ev161Ha7fZvNZr8Ph8MPANBaQykF5xwEWmsAgHMOSimQRKPR+DMej3+pNE0/b7ebBQCS0Fr7/RliIHupVLqoSqVCpdR/hVrrhwQkAQA5IcmLarWKTqfzYrLZbHA+n71Y+KpcLlP6JIl2u43VavViAADD4RC73c4XJAktTs45vwBgv9/DWgtrLabTKQAgTVPPEYOcCKR3MST5QASA0+n0cg65MI6IAKDVauF6vfr4x+MRWZYhTAwAWh7CaCIYDAbo9/uYTCao1+tYLpdwzuF+v/9NG0UR4zhmFEWMooi9Xo8kmWUZi8WiX4I4jj3fGMOcVAxbAYBarYbRaCS3DgCQZZk/Aw9jDGUVCgV2u11+h/V6zWazyZBvjKHK5/N8cAxA0lcLk8oU/E0MP4bifyFsVSdJ8vE8RplMOO/vRm2t/dCLxeI9SZJLWOH5h3lOpZRCkiSX+Xz+8wvBEWdUKdpsfAAAAABJRU5ErkJggg==",
+    navLink: "https://www.yiibai.com/interview",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1735005876"),
+    navRemark: null,
+    navType: "学习",
+    lastModified: Int32("1735005876"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bb58aee0db600006b",
+    navTitle: "框架",
+    navLogo: null,
+    navLink: null,
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722389270"),
+    navRemark: null,
+    navType: null,
+    lastModified: Int32("1732612858"),
+    navTag: "h3"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b62b21191a800006c",
+    navTitle: "Vue.js 用于构建用户界面的 JavaScript 框架",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACfklEQVQ4jaWSTUiVURCG3znnfD/Xn1RuurBokwsVJEoIMn9woSSi1CaoRbRy565FgV7OhRDdla2DXAS1iwJdmiKJgYgUtdDARbZRSqV7v3u/75wzLa6aWbjpXc7MMzPMvMBRaS2aWfutPOThmFp5yGtm7UNrcTRO3dPZSeGrBia20dx2rfmwE8qKQBSlGVt59vQFALTeuXvbc8F9mys61VJdSHWd3iIm6WKzrpjonQj8YSZG2FKNnys74O0EKuUe1+uh1wBAq/EjjuJaeEDYUg0Z+AATbGJvyY3nsx/P3exolFI2czklMA7xlz2jvPBUeY6p8jt3qqK8ZqIoDtrTUE2VRjhBSb7w8m1fJqsAwEnK2GIySITQv1SD+NOeZ7YiBssHBMDkLIu60PMv1jDFrCwnBScpAwACGmK+d3TNODMpQl9QmXRBWxoMBmJHHDsCGGFbGlQmnQh9YZyZnO8dXYOGENBwYFBOReMmX9gQTgq/qcqp8xWAYWbDLBsq4DVVOeGkMPnCRk5F42AQNFzpJVlNyz0Tu85yBooECAja02AJIkUUXE0DBECRcJYzyz0Tu8hqAkrhQw8AQPdlmpOpoN2RNflXmxIElA2esQJS2ai4MPueu/brXekGvzsAWruE6R5ba5CAUp11nOqsYxgQW2sSpnslUB9S4gjvoLVY6M8s2cRMycCTVC4dlUknA0/axEwt9GeWoHXpbgdOPOZYAoArbx7WpwKsEqgGABj8IyriwuLAyLf9Ov57g4OEBi0OjGxa68bIl4J8Kax1Y4sDI5vQoKPwvzY4aEMNM8P+WVH7GQz6yluN631PYtCf8EkiAGifyd7omNbXTxz2v/oFIW4et9u/Qy8AAAAASUVORK5CYII=",
+    navLink: "https://cn.vuejs.org/guide/introduction.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722389807"),
+    navRemark: null,
+    navType: "框架",
+    lastModified: Int32("1722389807"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bb8a18db5ac00006d",
+    navTitle: "React 用于构建 Web 和原生交互界面的库",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACxUlEQVQ4jXWTT2jbdRjGP+/7++nWEvaXwWTzlKYUhTl6kK1LKpV5EMtASpKxdk68CNsUOhw7eOlBD0MRhbmLepqWJD96UafghOKSdvOmg03apBfZdGUH3bq2uiTfx4NmbkXf03t4nhcenvdjrJlirb6nbWywG7eqSWFgFSBfme3Sjm25SNwpZzOXH9Tbw+bGSRN7ZbqJeFziDDFYm+O4/6ygx2RcSrI973Q83llerP7UK/HsIxtSh8vZzNFW8BMe2ccW7JNW8BPlfeljav35ksPQyOWFzL8HJuRIHoe4z8x+OPfU9mWAyHVAgSmJqch1ACAZevIu0o9RM/QhORPymCcwzNpWayyBdhWr9aMmZQXPO3YhEMD88MFavV/mM7S1C+cbzAIVRTEFaxer88OCcbAdMrab2dPBwtCjqdX64k3Y3L2+R/gUhAbuaZPeLNQWuipZ+8oKM43XLdh+qXkafMwj34jsy1I2PVmozh0TFie53g/y380fityHg7jtMecInBJccIJG795ePlIZ7Jsx8+sS/aVserJYm391/cYtZ7o2bX2/cLE+njzTOynoN+N6aaBndkkrLyMbcwM91KuZ/u43boUgkDC35tp/ua8v1hrHDZ7DOa2gMck2uXUi1F9xWVQa7PnoYG3hENKwzH4316edCAaQvzj/gpuPY+wElRGjEEZ+W/mjsW7rNnW3lzLc8ymMz8CKCroh9F4y2Hs+pqIoGbTzhVpjxeAN5ItG+F4WT29OdX/L6jJYvN8IX8t8EWkBt3eTbGaaiiLnGkJypBTYlXIufbaUy4xivOX4L4b9KuntUi4zWt6XPgt2BSmF5FxDzoQFzEKT1pyk3fnpqymAVosvFDQiGGkH+xwgP301JWl3k9YcZoEJC/8PE76zFe59GEfrRGi/1oHJjEvlB2CytbXcx9luVZOBf3Cene2S/hvnvwDvvmaf8JetjQAAAABJRU5ErkJggg==",
+    navLink: "https://zh-hans.react.dev/learn",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722389751"),
+    navRemark: null,
+    navType: "框架",
+    lastModified: Int32("1722389751"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b276040cc2a00006e",
+    navTitle: "React Native - 原生移动端应用",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACeUlEQVQ4jZ2TS0hUARSGv/vQuTozjreZEceGya5DmIYggqWIicaAIZGuSigJI6KtUAtduAxyYS0DF1GLFoVlu1CzFolGrQrTYizHxygz2TjO+3Fb2JiCmzyrczjnP/Cf/z9CRUVFu67rI4CD/4s1QRB6JVVV3+0FF9fUY21oIxncIBPdBsBgd1Dq6ULKNxBfX8mNmoFWeS9YKXVS0tLBythjnJ09hL9/2Zl0V+N//ZyjF64Q31gl7l/OQRyCpml6rrLWtyBIEoHpCQBO3hkCQWDubh8AtoY29EyG4OzULg9xL6l0JIxkKgJArW0km0yQTcRRaxsBkE0W0pHwvkPIuSSvSMVSU09JcztH6pooKCsnODMJwPFrfZR6ujBqlWxMviLq85La2gRAUlV10NZ4jrKObtYnXqKUlJEK/WZx5B6CJJEKbbI69gRj+QnS21v4x0dxXb6JIIpEfd4dCvaz51kYHiCyOM+vD2+RFAXRoFDV/4Cq/vuIBgXZVERwZpLI4jwLwwPYm9v/3SAbj1HocgNgclcjm4tJBPxEfV6iPi+JgB/ZbMHkrgag0OUmm0gAIGiapouGAlyXbqDYHChlLoLTk+iZFMujjwBwdvaAKGFv8hBb/kE8sMbS04dkEzH2yVjocuO8eJXIz29Yz7SC/rel6wRnpzBplfiejRD1eXdVkFRVHdy1lruK+MYK6+MvCLwfx3q6hcx2mK9Dtwl9/oggikhKAbG1pYN9kE0mkY07PshXbejpNIIsk6/adzQ3FpFNJg/2AUBo7hOlni4sp+pIhUPMDw8AcKz7FnlmC4gi62/G9i0QNE1bPcQn5sIvAtcB/yHAK0DvH9AW23P/1zDDAAAAAElFTkSuQmCC",
+    navLink: "https://reactnative.cn/docs/getting-started",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1724747854"),
+    navRemark: null,
+    navType: "框架",
+    lastModified: Int32("1724747854"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74be3f541bfe200006f",
+    navTitle: "UmiJS - 可扩展的企业级前端应用框架",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAClklEQVQ4jXVTT0jUQRh938zsqmtEZCrLhiHZJqSZBVELJViCtyLQunjo4NVDBEEnu4SX6tCpQ0J1CYqkFgzsEnnoEkp/6bDUKhUWmxGyv9+6+5vvddA1s3owMMzHe998780Av2FImtV9u7V2sKen52JbW9tQc3PzCQD1ADA6OmrWcSDYgN7e3gv9/f1nu7u7d6fTaSwuLvooimR8fPz55OTk1bm5uQcbOQIAfX19+wYHB5/kcjn+DxMTEz6Tydxob29vWGtOUgBgYGDgqfeeJJUkdR2890rSk2ShUGAymbxcHRsAkMlkRmZnZz1JLiws+Fwup6VSqarzr5ssNTU1Ha6O0Dg2NjZDkvl8PgqCQIMgYBRF6r1n5D1VVYvFIufn51WV3nvP4eHhmwCMA9Cwp6MzDQDbW3ZIoVCQ5sZtGw2WRCKBmrqEiEBEDDr2dh0HUONaW1oOxjWMffnwXpWKMAwZfP8sxph1HhOrTKiqOuuwM7k1mUqlBtyn5U2Zs/cW4+bhi8hXIuucharfmFRVjAQh1qpUyrFv3HzIVWDzy51DtJtrHT3g/3oZfymIWJjoZ8jK1LU5g6+vH/t32dBC1YRlNcueZtnTlCL8sarnYVktVPVdNsTC28cGwMvgTTbLyBi4uCoMIFZoHCkWFAsaR4gVhQFcXFkxJnidfQTglQUo/supGdmyc6hmV1c9K+JBLwIRiBAiEFJIJcR4uwmuOH2nEE5dOgPwp1t1+eNSNnVCXDybOHx6C2jBCiBciZJGIDErInDFZ3d/LGXPnwSZh8ha1gaAAuiqOzJypXb/qaOx1AELV7dSj0JWPs9EpZn70+H09XMAXq3jrMEArAreNg2tGk8fK8fSx8umoVUB3FopUdb+AIBf1kiUQVUuMOIAAAAASUVORK5CYII=",
+    navLink: "https://umijs.org/docs/guides/getting-started",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722394063"),
+    navRemark: null,
+    navType: "框架",
+    lastModified: Int32("1722394063"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b5cdc9729c7000070",
+    navTitle: "uni-app 跨平台开发框架",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABbElEQVQ4jZVSPU8bQRSceW+5K3wWNMTgdG4oIgoHS1ZKCpcu8hdcwR9CSulfkyJI/AoUJUBz3kTa9X5Q7HEOTgOvWe3s25nZectP377gPSVlyTkLRakEc849SFCpQulB03e3buOjb6qm1irlBEAoLnrrbaXVsGpSTiQFgFJbt7m+WK2XN9PRufVWqUq13k5H5+vlzfXFqnUbpXaWSLro5uPZYnI5Hp646EmSdNGPhyeLyeV8PHPRkXxlyXobUvBx2zsWio/bkIL1tgdNUQCgokaMkD0CQEgjRkU7ML+k9O5Y315mn4BiREsgRlS4z7i7UN7UuvaXfYgpAXj8+9S6tj/aXSh7AiGFq8+rr2fLSisAPvrR4DikwH8Yu5RSTkf1oREz/zj73/dRfVjGjAyWz+ejn51OPwyOYwpA0QOQAaiY338ebn/eFdnOUq319/sfIW4Blr6XIpCNHjQHgyKyszSsGnbE+5WRY4plms+8ja8MQZE+xgAAAABJRU5ErkJggg==",
+    navLink: "https://uniapp.dcloud.net.cn/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722389621"),
+    navRemark: null,
+    navType: "框架",
+    lastModified: Int32("1722389621"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b68167db1ef000071",
+    navTitle: "WEEX 跨平台开发框架",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACD0lEQVQ4jWXTP4gdVRgF8N93ZyYbF4wJKwSLVLLNViFFGouAhEAgagQNooKdi1VabeSlSidiZ69BbJI1fwwqhggGVmwCaiMkFhIQNJDE7K77Zu5n8Yawjz1wmeLec75zz7kTduJyLipelF7SOapaAo1/9H7SuuBE3ASTLCZRY8bMcNWy6pjiNXuc0KMixtWh+k/6ytT7TsUdkywzgSt5wIb9nvGWsGrqoKoIRaqyEpFEY1FI9zz2tlfiRsgsIqrrec6CD22gqkJIdEKLLYlBaO3HY9vC4ZmD6/mmp3zukalU0AiDTtG7/dwf6/f+OnTkZN3bhd4vqi90Dhl0re9ySe+8TSkVRUFKqRGmw53l22t//v38kajpZ/867kw8GEM/Gq7mWQs+tqkXmrlWcvRCr8WGY07HLZ9m512DiFoUrxrkmPU8AtXUHq3et07HLZMsVmMqopJRpBU9Qpmjpnwi2UrV92Bl56DIVnVgNBvj10iOMYkwFVq/g9fHMyMKtpSxohTySf8zkdn8FLZ3JLNDYK+7wgeKuxaksCE8GMPbFO5rpDpaPzefVbHlrEc+0vjVPkVjVeeaJanxg+odi4r07O4MKE7FDWdiMPjRQ+tOxme2XdQoButejise+kTrOPht/gqzvwou5EGXc9kkiy+z8U3edC3fI2cTv843rOXTu6rejZFwKVes5QvzW7nrrfwP9OnSlpkXX04AAAAASUVORK5CYII=",
+    navLink: "https://weexapp.com/zh/guide/introduction.html?spm=a2c7j.-zh-.0.0.1426c8eej91Q5L",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722389574"),
+    navRemark: null,
+    navType: "框架",
+    lastModified: Int32("1722389574"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b230946775f000072",
+    navTitle: "WePY 小程序开发框架",
+    navLogo: "",
+    navLink: "https://wepyjs.github.io/wepy-docs/2.x/#/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722389720"),
+    navRemark: null,
+    navType: "框架",
+    lastModified: Int32("1722389720"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b6c6411a2f7000073",
+    navTitle: "MorJS 基于小程序 DSL 的，可扩展的多端研发框架",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAChElEQVQ4jZWTT2hcVRTGf+fe+95MbcYY0jYL05bWnUIp7gIuoosuBBMQWggxSEEDFSWrdOFqKN10WQdFdBDrRhkVSkULoW3UCok7J0yLWmgyaf60nYlvJpkZMzPv3eMi0oWgjb/1d87hnO98AoCq5XuECsopSfgvCmrZv0vtbrHmh9IkS1HOXi2OPU685+PiWDAT5YKPSm8CFju/OEdFlQ1VWVENvr39BcPDjuyse1SVnXUw7NKXSgX3k6q7qequqYb5O/Mit2qqe3sTtpOE0DpbXq0nLw4OAN1/DA+Cwr37vn/wKWm2Y3DGtBrOsXMGi4pHMXh5gq9/fSFs1J70/QfPkoB9sHwhCfZtimfv3xpBjJNYEffNLxf94aPvaCYjUql1pLr1lXQ6PTpweETTDmIw9Q5mffkKuJame1+lpy+UqK6yejdn4leOT8la5TXq7RtmZW00efmTCQ32VEg5z2bclq24TSr06lLVzsSlcfNwfZRG8wbR/Yn29PNTBtjZIgFNvIOsl2jjd1IYsKpYlRRGahu/QdbTjgPjDWABkOBy8f3k6SNnyGREqlFXyuV348U7n7tnhz7jwOBLxCCrK9fd7bnXk33PjDNw5Lym+wJW68pi+UOx8zX1Pb3QirukXeCWVqLuyMEDQJz+YO4NPGy/PZQHXJgvP/T7D/VR6XR9IwzkjyaO2EOHRBJV7eJJ8Bw7kWJhJt5+ayj/yMRjJ1IoniZem6i2iGmoM1KLfpQUlkwQGsFIc/M7Fmb+RFUoqKWgFlVhYWbb1BpXaWNUwpAOTurVmwAmKJQm7c/198JPH//K4XRxzJyLcuZ0aRKQXQfm39jp8H8ielItzyHcQvlSkr8AQSo05OLu3DoAAAAASUVORK5CYII=",
+    navLink: "https://mor.ele.me/guides/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722391337"),
+    navRemark: null,
+    navType: "框架",
+    lastModified: Int32("1722391337"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b5022cddfc4000074",
+    navTitle: "Quasar - 基于Vue.js的多端开发框架",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADQElEQVQ4jVWSb0yVdRiGr+f3vuccOBw4EmfzjGrlktBKRqVQrRjgKkAozLBsteVYLVe2WavMPkQ2zWXMSWXlnLVaadnqA3GA1pKYY0J2KFJJQESDpmH8yQo4533fpw/Mf/fn+7q3e7uEC1EBUfaMZpMeWYHFUpJuFNRg26cR2pie+IrlmUMXuoDMsiqIKM36OI6zXnrac6WzCTk7Ap4HWVG8gmXozaWD+Hz1lMuOiyN1agCI6SZ2D6kpqFYfJKyFxY5sbHLN1naXwgccPyTs/HJl54AS0wbgIkuTPsauQbXm5joBk5q0sVQeeU3pVuWdbi9QcL9CioLl+LLmJXnvNyWmz8xe+EKj4k906IbKaz969kFv/L8pa923Q2qv24b78SbJ643R8vVn2tLWgS81Bc6Neau3fCjOltYzmpp2l+Wrrat1D8RWlf3zk7t1+zb79/5jum8Y8Y8Ni/P+00QiUf6dceSG3OtkeWWZ5N262PS2tbi/jmnYvj5v3HaUUuKtmhEI8NfYOKSE4PPNJIIBsq9ZwOj4JBvrNkAwyoK8RVr/6osSyZwjxFvVrXi0CBqdTvvOVR7gvvL6m96JoVOaFo7q3Oz5Gu/u0b6BQc2Zl6tmYYnS0K3cVuNZiGtuqVL2TfQZFBH1RICD33+HNzPFkoLFuOqRnhEilBZEUlLx+uNYGVdg5ZVgUMTMGmBjW2fcUKZH4QptK641Jauf0+TAL3L2z2HK7q7ASkmj7/hJwibJZPwHleoa4fB+Ty2/Egz/YaO0a/7SSrP/U8ctLefUjUXCoVbsE10c72qDo53UbX6LK4M2T8RHhWgENbZqfokAHQabvVpYMcy5cSN7d7nm5M9qiahT87ISCrPmyTW89PxanZqeUgQ1Xza6ZmRAtGjlKMon50V6ig+OqR2Zn/RLwDEmTW+6415tbmr2VFXrt+9QSFW/P8Oxw9lJ3u5RmnQ9l+kY0wZ29qt/0VIFEiuXVbqDvUe8w4e6vIfuq3aBhC/nduXdI0pMdwMWqiJcmpiuJTHzgvzYfDUHv8GaHMUSwUnPwltyD1pYdRpfsIEqeeM8cvkAQON0Dr7Aw3gU8/fEVYAQmjOCxQGUPVTI0Uvr/wMm54DMqMfJwwAAAABJRU5ErkJggg==",
+    navLink: "http://www.quasarchs.com/introduction-to-quasar",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722393953"),
+    navRemark: null,
+    navType: "框架",
+    lastModified: Int32("1722393953"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b5892d250c2000075",
+    navTitle: "FastCrud - 面向配置的crud开发和低代码平台开发框架",
+    navLogo: "",
+    navLink: "http://fast-crud.docmirror.cn/guide/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722395062"),
+    navRemark: null,
+    navType: "框架",
+    lastModified: Int32("1722395062"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74ba660ffefd0000076",
+    navTitle: "Fantastic-admin - 杰出的管理系统框架",
+    navLogo: "",
+    navLink: "https://fantastic-admin.github.io/guide/ready.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722394567"),
+    navRemark: null,
+    navType: "框架",
+    lastModified: Int32("1722394567"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b4b8e3762f8000077",
+    navTitle: "SolidJS - 一个用于构建用户界面，简单高效、性能卓越的JavaScript库",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACc0lEQVQ4jZVTO2hUURA9M/e+XfeTz5JVC4MaVKy0ERVRNCCaQg0EC7ESJRIbiyAk7SNWQSsLsfFTWGgpgoUa0cpGUggKCoEICmaDJuuyu2/fvXfGIomJJimc5nKH4XDOmTnAf5VSrMorO7TW2NVnmt3RNttPqns84ILqZ3h6N3J889QylhKI9G+AOOZeHOMTh3c9Kpe7zqoIfFCkzqGVJFUf9IVryZ2xM90TqxksIo6/qVzI5fIPNG14VVVRZS8gH8AcbUDSqMOH8NgFvT7ev+2DXRZDevHW5MapqdnYC4tLWxRljCnkM2grZpHPWZW06UVBuc5N5/zPSglAn10yByCtVOvXTELbQ9rwxhpDAP2gBqwlFAtZdJWLtr09h2a96nzQGwBgl5UoufTVNo4CVAJCAAikUCER1jkXUP2VhPKmEpU6ots3B3peAsDiSmICSBOVsWZtvuISx61aXZNag1ySQr0o2MA7Pz/95fupGwM9wwusFwAIiGXvpSe7mzPJcGO+yWnTE4RgrYXNRjCRhXonEFNC3R0CoEvW8cIn5owJd/KdXZejTKZsDEMh7H0LIqLKoOBEgxOW4E4uytY/Huy/cuC8tXw0rc2kIi0b0haLBAVAzJayhbzm2zoIlKHU+4crjbcAkMx9G2Q2nDbmDKBCzGATEbNRYoZL6iE4Ndl8cfJrtXBvJQMDAFFh11vv6iWRsAdsrYRAKl6DeFWVQKosIbAIhj7eP/0RiBl4rauysLV39IhBNERMfWSzG9laMDHIWqi4u5+ejg4u7fzfU156FQC2HBzp5gztY2N2EhkDNu+nJ+LnAGSt8K1ME6+X0PXqN6BLQhPLS1eIAAAAAElFTkSuQmCC",
+    navLink: "https://www.solidjs.com/guides/getting-started",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1726731758"),
+    navRemark: null,
+    navType: "框架",
+    lastModified: Int32("1726731758"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b382896dcb9000078",
+    navTitle: "Svelte - 一种全新的构建用户界面的方法",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACf0lEQVQ4jW2TT4iVZRTGf+e733CnGmOKzIhIEl2FdmdohGG88zchyAxLK9rYojZFCIGj1aJp4aZCW9hA1C6ICItGJNRCGyhrBrEgxwgCd7mJMeyS996Z7/21uN5bjr7wwoHD83DOc54HbvKEUqfe3tvno7c86bZVgzKVXetHux8rgFlAAnBrV4Xm0gFqjJLoBhr08DM5e+M0399AIESArqfMA/kkV5b3E9zKI8/KwLhcuhh8+UHw92KNLsbiW852JmkXVtnsCPP2o89sTP54spnU9vf8D3XHb9Ph+KqD64C38JBVLlvN9fDrTZv1Iqn+NJvcvTV56rNUqO59ItnHn+66706AvCNAKdtHEb1MfdJwYlc5rl4xDr2qH09H1JDfZ8le+SOxvJQR5NRT9p94U6O5Ayy4e1NRqC7MJ8dWJx9E33xOj7yX3L8zuYklq+gox4QQojXBwmoJrtJsZAKkQjYMBAcntTISQmRP7YGHp+Xdl6GU/RIkhQyhdduR7KCD6OfTzaQWbeHOHEs+P568MF8Umnx6nW7mjFMtXB6QWkypQg689VLE3Amjfwuc+y6YmQnW3S9d3QEEpTwB3dc7b/td99rHP+7boUfeLxwqJ9eSrJA8PJlcbqSkevSjukOho9mHbeNdI7h7jRX+8rWdrVN982nyxW3JX8+2gLXLhe/saTiEDnPJYTZc5wMhrMYJJ3r0/Fy9vX+hevqLpjvWaz86xqzDbPz/9NH2vyMMsMwpVt3Rw+MvyJq1MncyY/YolFikp3yArxuHAmzb/sYwTTBIk7ep0U/QRdDkdo5TLr8Rxxu/rQzczcOEwWO9/bB0D3n3xZhZvNCOeECxMvr/AkbRg8ne9qIgAAAAAElFTkSuQmCC",
+    navLink: "https://www.svelte.cn/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1726731830"),
+    navRemark: null,
+    navType: "框架",
+    lastModified: Int32("1726731830"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b517f2f6b69000079",
+    navTitle: "Vben Admin - 基于 Vue3.0、Vite、 TypeScript 的中后台解决方案",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACdElEQVQ4jYWSO4udZRSFn/2e75w5c2ImKkQkGI0mkgTBVMEmpY2FpWBswiAkQRB/gIIgEpCApAiKqTSgImgbTG2wtvASpvGCmMxF59zmu7yXvSyOWgwzuMvNWg/stZexx3zzwfihvOHv5E5ncnFLWXd3or19/vrhP3Zrq70Acewvx85fy1HBJSQ7txS0Dry1Wxt2L+68t3kk7ehSjArZRS6QHbDw6ldvbJ39X8C8Dedj52dKEcWhyHCHIh4NVXj9o4vq7wu4/Xl9dDqoVmOG4uBuyMEdYhGbdTkK9/YHlOiv5AfCM3U/4P8YXeDAOKmsbafPLt04Uu8JuH2zebJtWTWDdqVHwnBEQbSCX2Xf/hTSl/tmMG3yhXmnk20BRoGmb4szZPwerPthZDfOfvr45KLUR7J/fQZw7dr0ZNPxdSp2TIJYCsN5popGkrh7PMzSiyt3BsuhANYE3WstXL112NYqgHEXVmedjhVBdqEilkZL+DLMljL1ueFB74cXugwSVJXRH3jvJely78rV+rmtxt+dZ1a6Al0q9ILRqUeTxZ9Pi/rUiCQjC5JEcqMf7Ckl/75an+fLs2KPJRfuoo9IVOQi6mFmdmqZpIAQCMxs0Y3EoVEvvFmtT3IMw4qCCC6sqmiKUUph+4Qxf3iAuxaJS3gwMtAksRH9dJiO84dd1M9eRGVG9EBx2DkoxqdH1ARajA6IGI0WgL+mkd9+mX0Rbn38yHepzTdxKArEAimJyfEe7YOD/4pUBMkMDLroTDabtbLVvr/4wix9ciCl54vsWZmp69rZRmf303b/hEk9TyWRcrQDw0OAze/PJt1mfb258MSPfwO7Y5NFLEcWoQAAAABJRU5ErkJggg==",
+    navLink: "https://doc.vben.pro/guide/introduction/vben.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1728697691"),
+    navRemark: null,
+    navType: "框架",
+    lastModified: Int32("1728697691"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bd9e31c2b7c00007a",
+    navTitle: "插件",
+    navLogo: null,
+    navLink: null,
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722389417"),
+    navRemark: null,
+    navType: null,
+    lastModified: Int32("1732516362"),
+    navTag: "h3"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bb85d95a67400007b",
+    navTitle: "Element UI - 桌面端组件库",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAClklEQVQ4jX2TTYiVZRiGr+c7Zzwz4xn7o5/RJKFoEQRNP7RwRiSyRQylCM7CFKlNixbBUC3ciBEjQ9gpCkyYoDLczGJMnWlKxKFpE/2M0SJE0HTUStPKms6Z833v1eKYmWEXPJsXnpsH3vuCyxhsMRMyAGpu7Nvj931jHqfmRgAhY4sZGPyL1mLrcasPL3vfiW2Hdd7WDB3WO3Y5zpAPXQqKVtCVvOjijhHffPqQzVO5mnJrMxa1GQvNnc31mSnnF474Gs+5+PLVANUR1z426ez0edXCgydt9o6aFu1oTe+o6dNTNrVw8id9dMLZrhHXAAQrra4a5Ls9/Sz5+XfmX/qMtokTsCCDatnIAi7m4Q9/wGAPvNrbiDkqrN7HiU82c0+ZEpXuim0d4MBElGfOGd0LwyRRGPzWhFIQL9yPgz3GXF5JnSXjtgrtdEclo51UEOZGANzQjkmCwEYh994kH/bj8HLi8x9xYBwaRkhIGTM6CSQiIELyorXcLIhqW7C3P1i2iFj3ET6xl7jzeqlkUEhwHZS5BkmotsFb38DwV3BrJ0ythRVLUpYs/f3pZMwhgQrJoFxCJCplPFvHoS/l+R78dj1x38247YtSagglkF8ho06WYZRJlAIu/ElkWSskJA6sDjY/SOw+gne9S3xwBDoiERjkREZB40w98ouRMfq4+cDdkX6pw4UGdlcRpH8frp+ER5aGB9aYz0XGmXrUOUcdgK53fHLlfo9+fFY1OX3a5opR0407TV07TD27TdOnW0WaOq+rrijSPzzrLQvednjDQevH51VzX5+xeONSlU82ddMh5ys73f6fKl8l0wO3v+f+l7/WRmrJ9MqMLt3lOFv/T6ardd7uur4xjy0f8xg1n7qWzn8B+yieXRI8OTwAAAAASUVORK5CYII=",
+    navLink: "https://element.eleme.cn/2.15/#/zh-CN/component/installation",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730359908"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1730359908"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b612f37a24200007c",
+    navTitle: "Element Plus - 基于 Vue 3，面向设计师和开发者的组件库",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACnklEQVQ4jW2TS2hVZxSFv/2fk5vEV4gvpNY2KhUUjUJQwZp702JbcZ6KDoQQiwh2oFTiA/EIKkFRSlsVa9JbxQz01omgkw5MjNqiBopihXbixFAUFZuHeO85/3Jwc66Kbv7B/tks9tpr7wXvC8mI5Cq5ZGlpQaRM9pSi9B++A25VgFkCaNFx1d81ewZAJLd8JtOqQ444Y03uF2X6JrDHVYDnFQBQsGTpMc3KdSs/dSJPc906t+IHzSUyH3uGSLiF51ESc4NWvL3ZvCFSTUMD31nAbsU8AU5JbHRVzPAJB5895tCd7TbSfELL+jfbTQBLuzcPsy4M6cSYooQDQy85OrDJRhsPa3z9dDqcsUPGA19k39V26yGSIzIPQHO3vv3iNymXV77pe32UMmo6qao0X3pcc1p+1eBXF6VslzpSvcIxGh8Xn3Onr93aKkIW8AObrASw8metqqphv08YX/yfFzhml5lTXpVEgiiVVyejgAfTpz/qg8/OqKe2nt8F43xMc2mU2yaqAfgacwDOMHNQnsnUcoUAIKxli8uwvjRMW+8Ga1TI5MwElghGykzfuAOVn4Gptw8PEBuXi4McKxo+l9eloJo15hBGkuIqdyDPKJhoVZCqe73drmWmsL5uGoMuoCl5yZelYf40MRGAv19rYEEVCxtPaDoFS4gUEsllu9RRU8chH3Pgygab4Yf4K8gwv7L+BWMaxJ4eC3k4dRL3cmf0DZHFROYx7o8+ZnHvDfa15NUZ1vHIAp4njtNjIr42yYdbVfvJEnZi7BT8mxTZ3r/RLuW61GoZTjqjPvZ0lp5w+I9t9jTFWcVxZgJY9pPm1Y5jL2KtOf5zGWb6IhfiEXZd22L/pMaqXOE7ThyLbJeyn59VYWVeq9+u6y3/vAI0qSSwvH9RxwAAAABJRU5ErkJggg==",
+    navLink: "https://element-plus.org/zh-CN/component/overview.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730359908"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1730359908"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b0535c720bc00007d",
+    navTitle: "Ant Design Vue - UI 组件库",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACT0lEQVQ4jYWTO2tUURSFv33OvXkNanwQExsNGiIpgthYCBoVwUoQmVEEf4SgiCAyhY9gwEoEIYokEGUmhURJYyAi2FlYBVQQC9FB1IyJY2buY2+bG8cRxdXutRbr7LUP/AkzsZGRYH5kJMAQA7H5YmD5vMdM/qQLRXMURXc8t/MuUXm934/WD57Y7tqDSbeuS9nQ4ayrrbYo7nTP2Fhl54v0grW59NWwXKdozjGEAGjMsHS7awNP0rMzG/VdWlu56T9X98r76p7oa+PGrVzu08DT+Jx1uavpIsMADCEBCxgAynLyHdXYXbl0amK6cKxz6tuuA1WXyvc1M5PPBksr/dFScFlSVOssA7CABasJRPEkiKU0vriOwMDJy/lZAAPXE3cEYUTDKSF1gmaCDJpiIogp0h4jAlrK5z1lEMrppkUkCRGXIhZlojI0DRLECaCIggcolEqa5cMMpzXEEmg1KK+2h5pipljkUMwEEcumEkVoGIN4zGIUgDw4StkSY9osQYEwSOhGxCiZJ28exKTGeksJrYFqRJglMEchqzGlgsNrhA+Fu733bRsFSSlLuu6i9XvjjtZxluItopIlEFmNuHac9WtzlCTkkEWA47U6Dn94BN39zFnCAB4sZk6g8G2UKkjraW4es5zvY1o8R4jBhFcrbyBZZjDra3apQoFJqTVPufkJBMQ4Y51bdvMA4aj+ABQ0grjK48W35Lkn9V/cVoPfTIrW1ruVKec5bgYkPPy4j5MMSON38T+w+iwL+sZtove2TYAFrbP/4m/Ev4t/AmgLGpE72gNRAAAAAElFTkSuQmCC",
+    navLink: "https://www.antdv.com/components/overview-cn",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730359908"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1730359908"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b441d848c6800007e",
+    navTitle: "Ant Design of React - UI 组件库",
+    navLogo: "",
+    navLink: "https://ant-design.antgroup.com/docs/react/introduce-cn",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730359908"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1730359908"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74be0c3fae1c400007f",
+    navTitle: "Vant 2 - 轻量、可靠的移动端组件库",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACzUlEQVQ4jWWTT2hcVRSHv3Pum/cmM/MmTaZpkkaKunQhDZTiSjH+g+JKaRe6kepaGrpQWqGh4EKEEkTdWLEbF05xmUbS0oJY3BQR0UUVMdbYadKBTqaTzGTm3XtczHQS8K4uF77f5Xfv+WDvqlbdo+3Mja8OT12/+G1x6bOpwZFQNUfV3F5EADATEBCMK5+Up8r7Til22ro9rdXuH+KP9zdZkLCLmWCAiEX9GDGA6ZuXXhfR86L6lHW6SLAalQnhzT48uZK9Y+baG6/I14OriQDGrn3xdBK7DxV9lW5G6PZ2iJxDKNFeCxNL9qwr2ALI8xpg6mp4LXNypj4ntwXg8O8rS62sc6x1525XVFSci3S0RHi4ecNnb93UUvwBbQjb1hMwrUjs21xbn5OXFCAfxzKRjmbj+yu4XM4RufWw3Xnv7uqPx3wz/txvcc681UUlMkHClnkCOqwQzES8RWma+nyx2NnYbLy89swbvwDUuVQDzleWbTknfC+BnKioBALQTwFTMLwP6pDevuKBdarHHYb0X9x0p93627x1DRyGBLBhgKiIIAiIYbSDN45XbfhrJy5LKykpKiZmYAa2J6A/B2BYENU4HZGDiAQEAzEun/BP1DcOuOATr2r9EehXiPo8KmIeNIAkcRxdOfrX9cVmrvFl5+Ls1vih6F3nu/O9e2vJZmks286X3aMKEYBEio7kHVttb1nI3Egy7dLCR+k9P1ac1KNRUpjLHjaIQpZV7v9ro0leH+SdDCtkrd6prNlacmkxjkbTnMEP3WbjxdrywY+R3hHfepBZyHbIJZGkY3FcX/9u/521s7suDNaRP6+eRLRw68kXPgV47MJv45OF/K+iOq1JgeCz2wHO/XRy5pv/yzTwYdcX08cXfy6PF8r/uFzezLhQb24srs7PNvYyulcmqlU3UFoQCfR6eWDFAs/dentmYXV+tjHUecD8B5K9Q/ClV8uBAAAAAElFTkSuQmCC",
+    navLink: "https://vant-ui.github.io/vant/v2/#/zh-CN/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730359908"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1730359908"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b77abf96e5f000080",
+    navTitle: "Vant 4 - 轻量、可定制的移动端组件库",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACzUlEQVQ4jWWTT2hcVRSHv3Pum/cmM/MmTaZpkkaKunQhDZTiSjH+g+JKaRe6kepaGrpQWqGh4EKEEkTdWLEbF05xmUbS0oJY3BQR0UUVMdbYadKBTqaTzGTm3XtczHQS8K4uF77f5Xfv+WDvqlbdo+3Mja8OT12/+G1x6bOpwZFQNUfV3F5EADATEBCMK5+Up8r7Til22ro9rdXuH+KP9zdZkLCLmWCAiEX9GDGA6ZuXXhfR86L6lHW6SLAalQnhzT48uZK9Y+baG6/I14OriQDGrn3xdBK7DxV9lW5G6PZ2iJxDKNFeCxNL9qwr2ALI8xpg6mp4LXNypj4ntwXg8O8rS62sc6x1525XVFSci3S0RHi4ecNnb93UUvwBbQjb1hMwrUjs21xbn5OXFCAfxzKRjmbj+yu4XM4RufWw3Xnv7uqPx3wz/txvcc681UUlMkHClnkCOqwQzES8RWma+nyx2NnYbLy89swbvwDUuVQDzleWbTknfC+BnKioBALQTwFTMLwP6pDevuKBdarHHYb0X9x0p93627x1DRyGBLBhgKiIIAiIYbSDN45XbfhrJy5LKykpKiZmYAa2J6A/B2BYENU4HZGDiAQEAzEun/BP1DcOuOATr2r9EehXiPo8KmIeNIAkcRxdOfrX9cVmrvFl5+Ls1vih6F3nu/O9e2vJZmks286X3aMKEYBEio7kHVttb1nI3Egy7dLCR+k9P1ac1KNRUpjLHjaIQpZV7v9ro0leH+SdDCtkrd6prNlacmkxjkbTnMEP3WbjxdrywY+R3hHfepBZyHbIJZGkY3FcX/9u/521s7suDNaRP6+eRLRw68kXPgV47MJv45OF/K+iOq1JgeCz2wHO/XRy5pv/yzTwYdcX08cXfy6PF8r/uFzezLhQb24srs7PNvYyulcmqlU3UFoQCfR6eWDFAs/dentmYXV+tjHUecD8B5K9Q/ClV8uBAAAAAElFTkSuQmCC",
+    navLink: "https://vant-ui.github.io/vant/#/zh-CN",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730359908"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1730359908"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b1f51b6ebfb000081",
+    navTitle: "Vant Weapp - 轻量、可靠的小程序 UI 组件库",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACzUlEQVQ4jWWTT2hcVRSHv3Pum/cmM/MmTaZpkkaKunQhDZTiSjH+g+JKaRe6kepaGrpQWqGh4EKEEkTdWLEbF05xmUbS0oJY3BQR0UUVMdbYadKBTqaTzGTm3XtczHQS8K4uF77f5Xfv+WDvqlbdo+3Mja8OT12/+G1x6bOpwZFQNUfV3F5EADATEBCMK5+Up8r7Til22ro9rdXuH+KP9zdZkLCLmWCAiEX9GDGA6ZuXXhfR86L6lHW6SLAalQnhzT48uZK9Y+baG6/I14OriQDGrn3xdBK7DxV9lW5G6PZ2iJxDKNFeCxNL9qwr2ALI8xpg6mp4LXNypj4ntwXg8O8rS62sc6x1525XVFSci3S0RHi4ecNnb93UUvwBbQjb1hMwrUjs21xbn5OXFCAfxzKRjmbj+yu4XM4RufWw3Xnv7uqPx3wz/txvcc681UUlMkHClnkCOqwQzES8RWma+nyx2NnYbLy89swbvwDUuVQDzleWbTknfC+BnKioBALQTwFTMLwP6pDevuKBdarHHYb0X9x0p93627x1DRyGBLBhgKiIIAiIYbSDN45XbfhrJy5LKykpKiZmYAa2J6A/B2BYENU4HZGDiAQEAzEun/BP1DcOuOATr2r9EehXiPo8KmIeNIAkcRxdOfrX9cVmrvFl5+Ls1vih6F3nu/O9e2vJZmks286X3aMKEYBEio7kHVttb1nI3Egy7dLCR+k9P1ac1KNRUpjLHjaIQpZV7v9ro0leH+SdDCtkrd6prNlacmkxjkbTnMEP3WbjxdrywY+R3hHfepBZyHbIJZGkY3FcX/9u/521s7suDNaRP6+eRLRw68kXPgV47MJv45OF/K+iOq1JgeCz2wHO/XRy5pv/yzTwYdcX08cXfy6PF8r/uFzezLhQb24srs7PNvYyulcmqlU3UFoQCfR6eWDFAs/dentmYXV+tjHUecD8B5K9Q/ClV8uBAAAAAElFTkSuQmCC",
+    navLink: "https://vant-ui.github.io/vant-weapp/#/home",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730359908"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1730359908"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bd11278e0e4000082",
+    navTitle: "TechUI - 炫酷数据可视化组件库",
+    navLogo: "",
+    navLink: "https://lite.techui.net/docs/zh-CN/guide/intro",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730359908"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1730359908"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b35ef844ee1000083",
+    navTitle: "DataV - 大屏数据展示组件库",
+    navLogo: "",
+    navLink: "https://datav-vue3.jiaminghi.com/guide/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730359908"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1730359908"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bfdbea216ae000084",
+    navTitle: "Ant Design Charts - 简单好用的 React 图表库",
+    navLogo: "",
+    navLink: "https://ant-design-charts-next.antgroup.com/manual/introduction",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730359908"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1730359908"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bb9b97a5d80000085",
+    navTitle: "AntV - 蚂蚁数据可视化图表库",
+    navLogo: "",
+    navLink: "https://antv.antgroup.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730359908"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1730359908"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b1d1f6143f5000086",
+    navTitle: "Arco Design Vue - 字节出品的设计系统",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABwElEQVQ4jbVTO2tUYRA9M9997CNm12CjEQw+GjvxB0jAQhGbSNYgbMRGECL4AEFsLikCaWxtlIBYrYJWgiDYqOmzbBA7UTAouEp2s3fvvd93LK5iNGaDAaeaYubMnDNngP8flO026t/zf5l6480OXGlXB22yETmKFBDqheSSfDy0JJ+Hl/V8egsQAtEWm0w2DADgXDyDOomzJGok6iSmOJsP2IxOlKOXXz+d1ssxcZoOUzZFzWWYdImZJg9e6938k06eEAIBK83HNS3xQfahrJ27x8BOqAgclcr9o2uuUin4Sa97vTk/fDsHEcrP5lLr0ZHQ+C+Z2KKEsbPvRmT1/rhKP8DYaNdWyw6ZFahfMKm1J1pzhWcARYGGAoBn5RRCvyi0CdcC5x34pqX6Ynvf7mRlZ8WYNKMDXCbGc+rSiVwzqALLBAB6aEFVqBpK2fdph3o4+ra2pxgczxh88gpDPkR99aAAmgCAh6BCIgcAq4fPPGEnnhVjVgBZsml/orvr4vNX89JiFp8k3aIY/ZLG/Tvt/td7PyR0G6/xYqGKRhTk4lJ+KR7p3qvvRwb7gOvcFq0zzW+33/o3BhRs+7E2j+992L26mp4/8AAAAABJRU5ErkJggg==",
+    navLink: "https://arco.design/vue/docs/start",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730359908"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1730359908"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b1962f0f83c000087",
+    navTitle: "Vuetify - 功能强大的 Vue 组件框架",
+    navLogo: "",
+    navLink: "https://vuetifyjs.com/zh-Hans/introduction/why-vuetify/#section-4ec04e48662f-vuetifyff1f",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730359908"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1730359908"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b8eebccec0a000088",
+    navTitle: "Quarkd - 基于 Web Components 的跨框架 UI 组件库",
+    navLogo: "",
+    navLink: "https://quark-ecosystem.github.io/quarkd-docs/vue/#/zh-CN/component/button",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730359908"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1730359908"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b7acbac8959000089",
+    navTitle: "Taro UI - 基于 Taro 框架开发的多端 UI 组件库",
+    navLogo: "",
+    navLink: "https://taro-ui.jd.com/#/docs/quickstart",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730359908"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1730359908"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b96308a6b4200008a",
+    navTitle: "Naive UI - Vue 3 组件库",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACcElEQVQ4jX2TP2idVRjGf88533fvdy1Japu0mYx0c3BScIhDCrFQcWqxiigVOkixi4t/EDGbBQVBKMVFEEK3ulgDwUAzCF0axMG9VaFKLCGE5t77ffecx+FLblIR3+0ceH/ned/nPHBQwoglAv9Tb6/NXbv006nNN1afeg6gGDeDEQAenw/Bz67QmSnnvqQIl2Ml4iBcADb2AX71xyenenHym5y4s/zS/S8OqQLh6e7cfNmLl5tHuXZ2iXMGCIDeWj15oqfJW9VEca4sw+fnbsy+vw9eWCcCpJoqDXNqqZLU6i0Ah9h7t3c8vth/mIYKqt3oo5evTT97b/PvS+unqQFZKZsiSMo2iKB9BaTMVG6ckKPtaHmrO1G8eWp25ubiVaYAxxjjeCECkw8A4GQIdgBJmKLeSaOiiq90j5344YUlJmMn70iS3S43u914AAghIEvCws5IDp1Q1Lt50OmG+WPTMyuD7fyMTYP2elqnHvfcBkll9UT4LA3zL50joap386Dsar7eyp+Q3Yj2aYVwoMB2axdKiM7kyfLn1Dw6mwa+W1ahSo0bZCPJyMY2+QDQ3oOEnO1hP02tvrf7oL/11+JomL4vj8TSMMJYZATZKD42gg/9u+w8ArT2IdsPtHm+3kk3MccRyVYOZYiG7TEg59xaY7ulxwh44TbFxjs0K1c2XwtdroeCiepo7Ow+bG7l/tZXgIp9F4wtSbFLHNkDgPUF0l4u0nev//nBxbWnB8M6zf569P6VjedpxmHKZEIsRMhl3c9X/yh+v3MoCeP6dvHep/9OZwEwcrPcDMPFNPLXy2d++/i/gwzjqC/tWQD8AzRuHcl6CLhGAAAAAElFTkSuQmCC",
+    navLink: "https://www.naiveui.com/zh-CN/light/docs/installation",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730359908"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1730359908"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bcdbaf7c5b400008b",
+    navTitle: "CoreUI - 挺好看的组件库 Vue React 都支持",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACoUlEQVQ4jaWTT2hUVxTGf+fe9+bNmJqZRAwKI6hLNQuJodaRbCJqOpKFKP7ZSKJTRMFSpKuRNi0EBRGRdiEq6kpbuii0hhioIsYR/w1ZRF1KhdCKkDjTxHbmvXfv7SJGU6vZ+G3O5pyPA9/3E/6j7Rp+MgC5fKFbK9UPYKwtlgbO/vL2DoC8mgqwAB939axI6MRx0bLaxuYUgPL05y52I6ENv7w7eOHx7JsZA1pb802ZpdmvHPSK49epvyeLI9cvPQVo37hzSZBoPIbIFoHzld/Hvh0dHXjx+oPc5n2fesnge2fNWK1eK94bujg8842vg5ZbV07fAFjbtSeX8FNHRelsXA8PlgbPDsrytg3pxYuWPdLIyZsDZ04AtK7PN2Uy2SPAbhTOOfvQRlHx9tWL9wE68vsPG+wXfz57slKl0y0Zaw2TlWeXAT7ZvLezecHS20rrtSaOtk6NV9fgZEz7yWu5rn07AKoT4z9YG5FOt2S8KLY2lQTV0NwI/OH5/hFrzPDwldOfzYqnN7epcCKM7T8AXtAwXxCi2FovMEYElKmF09GIxM5GDwBoa/Mpl2Pok9JQ36MZN0cciwskMEYUHyhV19o5sDqZ0NP2zkP0GgDK5Qhw0GfXbdy7qr2zd/l0dJ7nxLm61s7zPaWcA/ty4i+AKAz7g2Tqu47uAyUThYdrU7WnqfS8fhG1TeK4ADyJ6y8nE6mP8D2lVLX6vKKUZn5m0S6AO0Pnf5sYf7HOGXtXaf3zvKaGMiLZWlTrLA2e+xEg3bxgp1I+1erzypxFat9UWBn4euGcRXpd5fX5pnQm+zVCz/+q3NGzJGj0jyGyBceFamXsm9Fbs6r8TpiUrI6NOSXOifa8Q866kdDMAdO03qDakS908wpnrC3efA/O/wItATwcRBtvpwAAAABJRU5ErkJggg==",
+    navLink: "https://coreui.io/vue/docs/getting-started/introduction.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730359908"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1730359908"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b227185c03c00008c",
+    navTitle: "Layui - Web UI 组件库，极简风格，适合快速构建项目",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACZ0lEQVQ4jXWTvYudRRjFf+eZuZ/7xpvsJks2ET+iLhoIq1FEoiApgmBhYWcK/xDLRLC10sImbRBBazsLK80fIIjECFoE495sdu/HO3Ms3rvXbXxgeIqHOfObc2bU/PDt5VGkW8xm72E2sAEQyF3HNkjdAGwbNRs/1rb9Kg/RZ8r5A7e1IihAlrCNTnbWJYFZLt+JZft2MJu/X6ePWyQBbKTEohStT151dTDHEsF8UbAJmYydktB+u+DT3T19uPOMHy3mJOnkuU5IsRKSlAQEwgJJ4VKtn6ePfHt3T6d7fZbdrTqKWrXfLj2v1QF2t4hjdbsqRfjhfKYLow1uXnye6XJBUmCb4sqNrfO60B/qsG0VtrAVArlWrSxQElSbjy5eYpwzANO25ebOc3z35nW+eeNdmpxpO19WBEBnswkFAq6cOs3LzYSj0hKC1hWAsobvKv8Xk8FrxxmnxCvNhHv7f7PVH3D3r9/55cljfjs84LBWBhH4JMFx1q8+dQarA3p9sgkrpxe1sttM2B6OqCua1UxGcrEZpuSrky3kzvudwZgcohfBshY+fvoSt3b3OCgtsYo4dyrooLR+cdTorTPnvKxFEcG0XXA0O+J+WzjbG/DC+BRN7vlyM9Ef8yMPUyZjQ4RdrU9euuJBSuvXc33rPF+8dg0hnh01bA9HALq2ue07D37VOPWsc99/7VpK7aekG2d3OrRqIRhEokkZA22t7JclofBP/zzUg9kT9xXO7uV7Keery8Wi3P3zfrj7ABJQcRcbIEQKGYtRSu5HwjlFbuHzXsSXkkabvT5ebf7/EqUW1wgp0p1/Adl9JnCitu7BAAAAAElFTkSuQmCC",
+    navLink: "https://layui.dev/docs/2/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730359908"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1730359908"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74be2b850aa6e00008d",
+    navTitle: "PrimeVue - Vue 的下一代 UI 组件套件",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACXklEQVQ4jX2RT2hUZxTFf+e+Ny+T0ZgopUXFoAGpGKppXQTNJpFqGoqIhVQbFyKUrgrppkvJIG50VXEluJWWZlFciKKkxiRoW0QR/1AUqgtBiGirYzAzme+7XcRMkjF4dvdyzuHcc8UCfD4w2Iv0G5n9MfN1yzZBE4AHv5/7+b+1jj8LhJ2jZ089mdMYwPorxXzXge/XROxH8Kde8RtW9XN6C5ssX4owDFRTJUfo70+6rxTz8wbTdid36MO/1aw2XM+FD3Bj6l+A6P4ymZhqMXw7UA7rs77ubz8pMW2/AqQAco1jHPaOQpONT20A0MOZ9tAZ79k0f1HWV5KaMWBrAbmIMF5L4NJVAG/NiB8ks7fJe+xFHLHrr19JagaImxqgKcHdPUQfqyWoWPVC5jrp8iY+LezT5dJKSZaOlKZi2Xdh4HkR2xufhMjlxHxy4suhP2sJMlglbFDR1nmrtXnKN+7xoleCpFiG+IsXvC8mM7tN3iuS/Yu+MAeZdlG2W9W9LRvJWSvQAZTC6qy9+kXLDiXZhElrFmpS6uDOP2rkYNzS+HFy881mF/hnBaIxkbpW1fMNoAIvHH82+xGCULNvyuMrDN/YACtTUmw5mhVFjw8WGVzrLU5GVTo9cnfeWoTOZYStjYsTirPKx73vdDDWe+wRFs9jGqmxP8qhhvmaooczMfjvoz3F6aU7cLokHtXfCRDBJdsj0+N3OqgNWXIgyksuQr2BHJdrjCwcX7SvJ247/V1ueeu6H0ycqAVzn6kGtqfL4u3RnmL1vQZz++4LR084vuPt/NPVvqHhpYj/AwzU8EAO+m4qAAAAAElFTkSuQmCC",
+    navLink: "https://primevue.org/introduction/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730359908"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1730359908"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b2e39705e8200008e",
+    navTitle: "jQuery - 快速、小巧且功能丰富的 JavaScript 库",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACMklEQVQ4jZWSTUhUYRSGn3PvjDoZlmDaj11F3bWQMIiICItAoUVI3SwIIshE8I6Q0Soy2hQJOmZFq8Ai8A7mJt0UCS2CNoEQBNHfzKRYMYWWKN6Ze9rM2Bhj0tl97zk873kPH6xVPROBmovuhtXaRj5xc6e7qaprZAuA9f1ri7dI05qArecflgHUdT4oKRTCKU+WABCjUaBhVUBF91Cx5UQv+0sBAVgyC8+ocGLqVksSQEQfAxe2dY5U5gMEClKhHkQPzAzYVwBQrQBqsgOxfnvMCrtjppFOWI57Ds+Lrq8Izs8l2WOa5ltDVNuB6T876QuAqrB7MivFI/ZhhAjCIAXByV8/GDVEdgfTC/NihV0FXsUjdianihWOJoHSdCpQlo0CUH36XpFuLN7p+/7PxEDra4AswI9HbDM7WNUVbVbVcSBp+v7BjzdbJ/Plt8LuIbEc9znCPhU6Ev32nWWIM9ytIjcyzxFVuQ/p9wZmiRrsR7VRfekVy3FPIQwBi75B3ec+eyoH0qgiV4G9OcZzAm8ULsUj9hNpaLsb/BYqnQVCCLFAIfUfrtuzuavWdj8q97xUvaKG6cnkp9v2TLYnOU7PMlpCVNtjA8fH8/6cTG3vGj5ioHFZFpzhdhFZvgHKUxXtXeHYMxGoTn7ZpaZxDZVpkUCH5FIrHbfJEAaB2r8M54BFoDx71HjEPgpgrph6GX0327xjsGShPCaCqVAkEALWAZ4goz7G2UTkWN+/4v1X/Qbv5dXyC3EahQAAAABJRU5ErkJggg==",
+    navLink: "https://api.jquery.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722390064"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1722390064"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b0e8053b93e00008f",
+    navTitle: "ChartLib - Echarts 实例展示",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB70lEQVQ4jY2SP0wUQRjFf9/OzsKJkWiCRBr/gBaQWGqCMTH+iYWFscDCBDsrGxpjZ7YwkYSOxIrG+iCxxMJKopBoq1QQrRQM4h0Lt7t3M5/FHXcedxpe9WXmmzfvvTw4iBUd5KNO814nAYg16Nj5C63LoprGdIdTPMVxHoBR5HAEAwhFNVQp0AsIEUU1nOO/CjqxrDf5pnMs6eXDrIfNaUWPYdwtapSokADHWdFJPGuMswyi/7CgdY85I4h5heehGKaClNthypQNWYreEtfXtSOPoMmcUQky3TCZr0YJ2D0IE7LIE5iUC6DCRGceLQvbfA0jeeZzt8lGsC15bdH0hhJsMWhSvlcQZR53kKApKVrQMVtgQTKKppcrvsSsdRTUcdFJ7V1YC7/kIVmyzi9i3L7yloJdjPWc1iojtocbrsKnIGDc9HOV3+EwOWd6Msr9JzRPX8qTrcesthHkm6z1DfEoTBmwuzwwCYjFWQtuh6PGcxKvR0Tpi2r01TNFurZsaE7v+jJlU+B6aBh1eyxKlR0c21qllHk+/4wl6XzZqjMAZ6d1ZnhGl0ae64tuH7VnAHBf6inHGrCFNSn3bIFhn5Ew0SAfQ4nFdyfYRyyea+rsJVXjBKqsMy8OVJhvb2R3ggYEeaOeD6s/eN046ajzH1uSxKROllHPAAAAAElFTkSuQmCC",
+    navLink: "http://chartlib.yingxidata.cn/echarts",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730359908"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1730359908"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b3ca8b68ad1000090",
+    navTitle: "VueUse - 基本 Vue 组合实用程序集合",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACaklEQVQ4jZ2SS2tUWRDHf1X3nNtJJ22CwQTstC8iiDAK0wsXkxkaRhHc6MbHRnDnB/ADeF3Mbj6BG7c6MgxuBHFhLzJIBhyycjEEQcdsGpW86Mc9955y0UlsHysLCop/nar61/+UAJBlurB/2U9VGpEX0Ftakpezs5F2uwCg1XInOx0dX1w0mrAx+F9XP5wJZFl0AK0zekXHfrltsdjorqxtTdSbB5uOVy/gEkBzvPGX1hvH1OladaG+b0qPTs33yqwNDxxAjDZXmayeyDe3CoT36tI5k3ySVksARDilLj0EzIDM+Mmq6/c35gCUoRVxkEeMLkYvxjJi9Gi3jXbbPsOMbhzkESgAHICKCIgiqDB0RPQTAxnBURAVERll8N2mANHMzGwPHI2/hZkZuwW6t4LqpxciZmaRzgGl01Ezi4gM8wao2u4KbohZKWYYmInYTjzBy4c5AIebE2KGCWaKiRlg5V4DIu/KfhBx4rWWVEMoBa/15vnrv5ugolKP/VJczU+oahr7uUSTzl6DohKXJYS+qkv96WnNV9a3NbfJZCy9BVD2cxiXzfTHaSHii7zoDYj/DDXIMv373J03iDxKvNdktlKrXpnvypTfKEO+XYawLdN+ffxyY5DMpLUk9Yrw5/KF7C1ZpoIhCPbT09uHvPmlJPWNWIRgIQ5ss1hHTKTmp8VJJUkrrujlqwPfaz3/9be14ZHu6A7Yz4+zk4lP77sx/wOyK/lOOhrlIPxr3XC1fTFbZaRw53OHTI7cuzF2pH78GiJnCWEBUROn/wFPnr16/ZCbd8PuwK/PKss+v8w/LifYF5iNDAU+AjjYF8aLHDoQAAAAAElFTkSuQmCC",
+    navLink: "https://vueuse.org/guide/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722394341"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1722394341"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b3229137172000091",
+    navTitle: "ahooks - 高质量可靠的 React Hooks 库",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC0klEQVQ4jV1TS2hdVRRda59z38+Yb5sSoTVa0JBEQU3BTxULShBEyCBYC078YItQdKoOItaJDsQONJYOBaUOdOYPzaQqWiPSpopaUSw2Yq3mkfjeffeec5aDxOfDPdqw11577QWL+F/te+T0Teb5KMG7QY1JAMFVkB/EMh5fOn79ci+e/7Un3F0Hp46Y8bD5WiOGDqC4hXJwrooU85aklz98dfIZgGmLYMEm5+f92AjerNT658pOE4ACRNe9QkpICaDPqgMo8rW3Vy/Z/m/emiwNWEhjw+lItT44F/JmQSAR9L0yJZGgJ5BC3iyq9eG5sRE9B1C887EzM5lzJyF6KZKESRAgkvyXAABFghIS6QQqlDHuNU875HytKoVNlCAANCMIgAScEYC6MynI+VrVkY97UXtjKETQQFASzIh2ngAAMQlGolEzJG2qkmgxFAJ0h6e0UwpbWiEj2c4jbpzow4F7tiMvEt5ZuoQvv91AreLQVZECSewy0LpmGYl2J2JivIEXnxzH6EiGocs9XnhiHDdc04d2J8Gs110GE3Se5kVCZGIZhPtnt+H3P0s8+PT3ePbYeXhn2LmjghASCBCEaE4CfjOKJ52vUFAKkepreE3tbuD9T9fw68UCs7cOIiXhu1/aqGROafOFZC4jqc9NUYuhzEujIwB5Bw73ZwKB2VuG8NB9ozADygBJIgkRRoUypoCj7qevXrlw9cyhUV8buBkxL1udxB0j3vbPbse9tw9j5ceWvDdMXFnne581U+YYstpAForW4kfHrnvNAQu2a3rPx+DGTFYbuhax0KmzG+GPtcDTP/yNl15fxcq5ltZbKfx8oWOuOuhDp/nuufziw2tfX5W6YZqcP1G5YtvU8wYeZlavrK+3EWOJ/sscyugRkkc9KwpBR//6ov3U8vJM2ZtGAhAA7Du4cpsRD3jDHgDTMYkGnjHDqU7EG0uL05/07vwDUOxclts6WiQAAAAASUVORK5CYII=",
+    navLink: "https://ahooks.js.org/zh-CN/hooks/use-request/index",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722395460"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1722395460"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74be8b6f6d3b8000092",
+    navTitle: "JSON5 – JSON 文件格式的扩展",
+    navLogo: "",
+    navLink: "https://json5.org/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1705394236"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1705394236"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b66a1c1adc9000093",
+    navTitle: "TypeScript - JS的超集",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACZElEQVQ4jX2SzauVVRjFf2vv93xcr3puV7liYJBCHIIG9woOFJUaVeAfEBQ0EipwGigKzZrYwGgW9DEqHIrYtAZpgheDSsJCB1lKWnpPHs+577uf1eA9SES3DRs2G9Z61rPW0vLJ1dOK+lg0JSEhLED897GRsUk5h9U5o+Xj3xRHJCBkC20InlFgSwaSUorkUoRtgdyC/X9wCwmEbZeiBCAhOyTjjeS7pZWM7ZBmSitJ2AYlu91/A2Q7vh0gG0uIqmUTdihJpPRvBlGifVX58Z8iIECPFUhi2gQPp2W2pDDGhi39jCTujxsiWic39yu6laj+Cd69NMfzzy4ybYJS2ondKvHF1bv8Oa45+sIuhk9uYu1Rw9lLt7nx+4QKt87UTbBrsc8r+3fS64jFzV3ujdaZ1MG1W39x8tAeDjwz4OL1B+zdPeCnO2O+v/WQCkEY5nuZyz8/4PA7l3lpeTvvvTbkxGfXufDtXVae3srB4ROcu3KHVz/4jqUtXZYGXbbOVSRJSAK3XhQbAUkQQJXFL39MuXpzjSN7d3D+7RUODBe4N1onSyQbuw3QkkgzwvaaTk5M6sJbH13jk69+Zd+eAR+/8RwvrywxmhTPitSGbMtt9KYpxhZNMQtzFZP14M0Pf+DFd1fdlODIynZKmGrWFUsJKWTjTk6qsuhWiWkT7Fjo8f7rQ67cGHkwl1XlxOrNkQXknYePngISwrOKq9dJIPj6x/usPWqoSzDfzzy1ra868Kdf/ubPL95OvV7HWj6xelquj0UpyYgkq25C4/XCpl6mk0UJszZukJKRLJnBfC/InTN/AxvBNBw9i+MRAAAAAElFTkSuQmCC",
+    navLink: "https://ts.nodejs.cn/docs/handbook/intro.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722390912"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1722390912"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b03f4d214ad000094",
+    navTitle: "Flow - JavaScript 代码的静态类型检查器",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAByklEQVQ4jZWSPWhTURTHf+cl2lrtIFgKtpMf2CRgFqmDUwexg9hJhCDuzQsOgh9DIQXBRZfKS+jkZsHRLupW3EUoNE/dBCNSjCCx2MS893dIXnNLGsGz3HP/95zfOefeazj2ocTJuI2iEcZSMe9kPMgFrPIPs8TZKjKPsWRwCVByJmMhF7A+DOA5zple8j6wiZe1EvfkaAd2ABCWKEg8d6QNg7rgEDBLdwXxKFuluq8DgEzAmoyFZK8JrmQq3ExF3EGEwBQwZTAxMIKW8TYXOZ4LWDdRAFr85FhY5HGU4gvGHLDTbaDXiQvYAC/t8bDm044NHyDaRYJWL2QUY03GXTPGBwBzy3T+HOE+8L53mSONSZo41RB5TvDUfrM0AADIP2EnW+EiYgWIpxuMydh1QmZtmxczz2gmQjpxtnxuY5z1YuqxsW3Qbkecz1UpA+XQ55Vg3oyOW3QP4BkfJVZk/beN4XPoczU2LqBuVcGoC9gbIRPwJhUxDXxPtFaHhoyCibLgOt2Ps3kgAODcKnXPyAO/HPmbG4PxdigAYCbgazomDzSPHua0xKR7LvG6VuRWnzfEPi1ySqIVpbgGXO4TGMf4ka1wY1juf9lff3CUegmWGygAAAAASUVORK5CYII=",
+    navLink: "https://flow.org/en/docs/getting-started/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722392951"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1722392951"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bde82809233000095",
+    navTitle: "autofit.js - 大屏适配自适应工具",
+    navLogo: "",
+    navLink: "https://larryzhu-dev.github.io/autoLarryPages/autofit.js/docs/quick-start.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722393632"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1722393632"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bc972489e64000096",
+    navTitle: "party.js 利用视觉效果增强用户体验",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB2klEQVQ4jY1Rv2tTURg9372xbQaFCgVBHHQRncTFxeGBk6OVCykFpQiluIigIZpWLhj8USIES9WhRVF0ec1c7NT/QBEHi5ODi4vEpXnvvnuPQ/pqTF6g33R/fOd855wPKCgCsn9eb53m8+bZoj9g4JI3CECuLp+DyCKCnoT3HaQhSbryYGKp+j3vAQBVCH7x+BQoT5ByB920KbfuTiOTjXGgRWuP5uAhAljbU5TqudDFF+z613KntkljtNyrtpFgC+nEDADQGF1soVo9jKmp9/B+U2q1l+wNIawV1ymd17o0q5u127laNUiAcnmSjhopfgMAjJE9dTxENa4cfX9+wwRjY4lkCHAIAIA4JqJIC0CkOgqp/Og1mhEE9fovdJnBqT80RmN+Xsv2dsabT8/Q85LyeNsbH3sAKP2/BasENviEXxV5UuLYA/Cce3aCqVsRhiVZv9/pX+NQiADAhcZxar0WHNraQVFwRVxoybv6RwJKsGevyAJhlbxa/Bl2saYIExjKQl4rAhdWvt/semPWzTQu7r9bO5zXoIU8A1YeXQjCq4qyA//pDeJ/oY0kyINxlYeREnWDDh/0xuetUcBiBZXGQvAqUiG10rbf+tM+UNEsH+NleyS3cxDMX2eD4jdXWEDmAAAAAElFTkSuQmCC",
+    navLink: "https://party.js.org/docs",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722390306"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1722390306"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b13bfdaf3ab000097",
+    navTitle: "BetterScroll - 解决移动端滚动场景的插件",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACWklEQVQ4jZWTTajNaxTGf2u97977HM4+xI18hVM3JQNFUTclpHRTBk4GMhQTyuAO7mzPyYAJE0lh5iv3IskZOAzcDJBCHfeefAyEHM4++3/+//d9DLbvUu6arZ56Vs/Hgv87LfnXq32P9+zTQKzR8AmaUyPzSPRZSeqUjLy+yR0e2OQPCab/qcNkdoYKeab2vk1QItUNmxKRBR5WFftfHrHjXxHIwDTtD230yBXrgCpUFLB5Odq6Ajs1DNfvor4ePDuozaYXx+0yyCNAY5d+lVhlJZmE6o4d3QmDK7t6F800XbuDWUXhNWoKbAMu0wJnE3XrYY6JIoK1O9jqARhcmT1l0/M3poMXoWagjFnCLfPZB+cSZTDGPBNJEEBvx7GidAWHE0NwegiaDaRE9JJSBcPdRMDB8nhiBEM5YX117J/HcPUegOy3JTC7H1IFASZzhwPWZnThZi0Gyw5yDtsYmVdu4BmZ4OBFGO+Y1iyVbVkFb99DhOCRHaHBBmVmgMxpdbXEkqeeUUrQbMDwfbj9GMC093eY2YuVJcHEfId9VmMWmJwWAsgVxUcPrCjQ9jVo2UIsZ2zRbOjvhVxiXlIGY4oHml0TW90yBXAHTRZowQw4tif7L/3CXZy8Bi9eoUYkkzBlshKPAOInCYLCMl53qpdv0NlbriXz0aEzcOEG1hsxKiw0CLnD9X/PcQ9kX6q8UVPnLuB8rLG+KoAEjQBj72B6D6hEligMhlKb3U/+tv++JQAYVO+8ftaZGFBiFiUTzcizyYJ3OfE6TzA6+peN/NzbrlX8MajPhz8A/VkM1z/Ab38AAAAASUVORK5CYII=",
+    navLink: "https://better-scroll.github.io/docs/zh-CN/guide/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1723514220"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1723514220"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b2e90a5b033000098",
+    navTitle: "UnoCSS - 即时原子 CSS 引擎，旨在灵活和可扩展",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACU0lEQVQ4jY2SMWhUQRRF73szs7t/TQIJKEiEFGlCOiXYriBYRW3cxiZgY2pTmWaNyAcbtbOysLZMAgoKaSySfDY2SaGEhdilSAhinL8z857F/gVBYnwwTDFw5s49Qzh/CIAWRXHfOXcnhDBqjNnKsuzFzMzMD/oPAIqieJxlWa6qEBE0m00cHx9/JKJ7ZwJUlYhIt7e3rzJzl5klpZRUlYkojY2N1U5OTnL+x8XDsxsjIyMaQhAAloiMqhrvvQC4dSZgZWVlmM4REZhZACiAQbRBQmfPAszOzmr1FAEQq4WqVKkSJgvAtNvtvwB7e3sOgDBzY3x83Kmqs9aCiJBSQr1ex+Hh4cS5FoqiuNZoNO6WZVnW6/VfzKwxxhqAC977np2fn7+tqpcBRGYmEVEAqMr6NDc31wXQBYDFxcXrxpjRjY2Nnd3d3SMAsABe12q1SRFBVdagOedQluUjAC/zPG9Za98S0RQALCwspBBCZ3l5OWcApymlJCIhDSaKSJlSSiGE09XV1WZK6R0RTZVlGfv9fowxGufcszzP27ZSwqo6dD9Uxd77n71e72az2bzovQ8ADAASkQiAVfWhVdXEzDpUpKpQVQKAGGMZY7xERFL1Um3EIgIAEwxgyxjDAFLlV4iIY4wUQviiqt1+v89/pBNVjc45JqLPHEJ4GmP8bq2tqSozs3HOcUrp1ebm5relpaWdEMKbLMsMERkA3Gg0at77ryGE3Ozv7x9NT09/AHAFwCgzH8QYn6+vrz8Z/oVWq7Wmqn0imlRVn1J6LyIPOp3OwW+BOETlRI+KFgAAAABJRU5ErkJggg==",
+    navLink: "https://unocss-cn.pages.dev/guide/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722393528"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1722393528"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b7fb71fbeca000099",
+    navTitle: "ESLint - 可配置的 JavaScript 代码检查工具",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACF0lEQVQ4jaWTTUhUYRSGn3PnNjr+TGQ/UJsIy01ScxsqkBmjhdAYLiJqE0EUbYKsSEgyYnIiAokgA/cuy42BykSGaC4Ka4x+qIiyVRH0n6PM3PudFjp61USis/re9zvn5fvecw78Z4gfNERHSjwzcQOlfJH8cXtCTt15HftVIGz/rTHZZpBjs7LyDVSBigLjlchnoLmArcKh3hler0jTFFJP0Y6Ala/ycoFNirQDLoBiTieiw5ULBBDTBoQU+nHV6cvUnog2RKprDm5x+jKxRkW3KpoGisR41+Z4kHAGdwkMoJLsHY1fSqW+b/A82kD2T+d1A03J5PK3e52hcwpXBep6MvF7coBbgXFn7QgQEaOHt+9z7oJ+AC2eZ2AO3MpH3a92gulCeJ4Nu46VddYdASIzrtqBor8UAwTBnuWV6tCP4HFL1StbpGVLhoiWWaW5VR2ovvGRrgi6MBkF4/pe8C77Nd9u3X65OWfQMwBqSUVLS+lHVWqAh776EdeVeDK5YsyIWQmggcDZgbHdkzMjk3AGeyysPSp0elJ8Pv04+qm19echY8SG8s4nXf2rXTt4GeQowv3eTLwO/yjX7xiqIi/PQIMKv8WSK9kv+eshe0IlHG5E9QIQBlzPSCT9NPaC+buQ2PagTVSbfP98LyKeohtnKb3Zl6k9WcBzdoFldopcfo1CCdPyOuXnKICoTlqeXPy3Xi0RfwDIF9FxRlRarwAAAABJRU5ErkJggg==",
+    navLink: "https://eslint.org/docs/head/use/configure/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722393090"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1722393090"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b92ebb215af00009a",
+    navTitle: "Standard - JavaScript 代码规范，自带代码检查 和 代码自动修正",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABsElEQVQ4jZ2TT2sTURTFfzfzGlLTpmOgxooWa131E/gBSqEIVpDiQhB33fgh+jW6E3fiThQX/tm4CUIVSnUh0ZQWrGmxjTZ13iRv5rpIMjbhKcWzehzOO/ccuFfwQHU5ON46mneOVQBjWC1eHn8p8jgZ1sow0dxenA0S7gN3RJjsGtIQkYcup2vh9PPPXoPWlxsVlfZtkBUR5vzJ+Ai6Jpp/NHblSQNATsY1I3LN93EYrqPVrFZ3cue1CHORVUYLg60iq9g45exEkHG7DcdkOaiaIH/T9Mn3mzG1epurM/lMeKYg1LY6AFw4n0lZ37DcWy4BYAASpz/XNywAtXqb+o6jHOYAOGimlMMcHz61mbn0x6QPAxAYKd26Pubta61m77BXw8YpgZES2jMABjr2K3395vgVpdR3HEsLRaYqXfloIUD1RAIfvh8m7O65rEJpPOfVednIKnHcHbG0UOSgmfLs1fHpDZ6+aFF9Z5k6Z3jzNuKolf4tqH+RDn8kWKuEEwE2TtnbT5i+OJLtyMAi9Z3+e5WHRc3txVmTyoqq3hWh0vu4LyIP/nlMg5NOf86/Adbb1v0B3EZqAAAAAElFTkSuQmCC",
+    navLink: "https://standardjs.com/readme-zhcn",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722393422"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1722393422"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b225ca28b3e00009b",
+    navTitle: "Alova.JS - 接口请求工具",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADRUlEQVQ4jV2TTWhcZRiFz/t+d+7ceydz5ydjrCGpVsW0KnFWCi4UqkgrJhWbiZaSGqQVLLpSQbSUi1jqpm7sThe1LSZkDJqosVqiXbgsrY0UGvwJMWl+OjOZmcxM7sz9+T4XbSX13Z0XzgMHzgE2nQIEAAQvJQ56L2euKMDC97VBXPAK+LqcBQA4ijd7/hMOwASEa3s7ejlmnAxZWwTgc+h1QotkoGun8O1SBg5JQNH/AeQAciFnpxO2MemRmDNHtu8hwJchgA1PQfBjYOszKEVwcCdA3XrYqY6zga5nCovlZyuO97F6Jd4PTjeIBFB1JYzEi/iq8iEckrejaCoHQQ7ClTcePmZbvHvhevWpxNO9O+1U9G3Ewr9RhqsRke/pM1ipl2AkjuDztas4SKPIjQmmPMK/Dvfuuzttvb9YC95KZzPrliFO+426grexgQo0vlGTKFQHsD/+DEqNcZB5Bp8sP4L8YMhz72az8YT1xXITZ7o6+ZRptU35jGvVlttAkk1UAV6tB5gpFgEAr8cHUA3+BOzvcHw+xV332T9yTMx2nrh4IOjITFJU2K7v7iVDl0hYGsoIuQYNjT9qOFLahaPrh1AKdqHFUXjJCUaEZlNbjXb35JP3EtGIFwS56cuXZ/WY3gZTA4pgUfXrSD/RA9h5tGgfjqXmowvNElzRozWCcI8t9EtaKnZO239+BwDMOdmkMPUAMBkFPxSSGMn4OGpyHUtuf/tra6eVp/XIfwqPc/Lwr2XfD14QMe1BmX8uDwD3PGBm9JSpoc2QWA6anmiPoWVsx0rl+c5IazgaTQ1xs/yq/+W231iNQUSHf7lKfjhEyeiAnNw9HbET41o6xtClgmmaLb2NUG4d6A4rtm51fSoqq8eLZ7eOIKcE0yBC5YAp99OobIYf0V3WTmJ+FBopWHEBF0uyVDvxkDf/s2F1T7G79sPCyJYPAMXIU8i3eiyVA+a+qaOot74hK8IIAkhzG2GGzk1X+t/T2rrPR3y/1Fq5MXRzd6TuGBMcKAIUmvVDCOUVxCLEUApQ/E7H6IROxv1yw+27Pr2jBDh8E7IJQIBSCkR9F4rwm8PwZQnKXQUgQKJLtmpvXpvY8jswJgBH3vb9C9+cYaR8lJaLAAAAAElFTkSuQmCC",
+    navLink: "https://alova.js.org/zh-CN/tutorial/getting-started/introduce",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722389364"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1722389364"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b7487ed92b200009c",
+    navTitle: "Pinia - 状态管理工具",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACuUlEQVQ4jW2STWhcVRiGn+/cM/fOb5tUbYpQCyI0qK0W3GhRi4Kr+oMSXShiKUbcuRUKvVBx4UYXKgjFbgTBWTWCK9EgrUT8WSRqdWElCDFlGjNO5s6duefc87mYaa2J3/Lj5YH3B/7n5nQuIsWkax/U37jy/sUz6++dBEg1Ndu1Ox6kmLa0S1LC1rDzOtPmga1B/8SxL1ObShq2yy0AiiDok1+/dMhWzIf+Efdpo9b8KPPZy8WfRQiuvPe+Y1PJInhSLCn+GkAmAIMQnv7ihSdsUjkvTnFO16O9zT02MnFFJC8ud98ajkZHo1uqN/nYvHr+/nPfkGLsBKMAerXsFDjNB2U5NVPdNy0jcqdseBKbu9OV2EJkCIHGfy0wBtjNzs+DeHr1uTtaB47fmvjdNRv5Msj3g9KcUy02XIhsr7j8W7+4MMkryPZQLq3ML8ze1nqcv7rghhBVoNZire/9qV960RUX5j975uOzpJjrAE0xkhJ09eSjVMznRAYdeiXricY1TDUO1GPz61qxPHv32Xt21piOLeBGpwa+wdIPTR98Bak3MTZmM7udvNvQgw0/q6uv3AmgOi7ATKrQjZUT+ykHD11dP6ALX81Ef2eJDLMengbvfiLy7UrLszeJ/TB/ajI3A2BUx5A9Uf8wVmRGtvTNFxON/e/606Ut8s0/mH8s49DNVejnasTfNQa0w7iF9pxAG3yxmwiS+pJSYppxIkcONjFGaVV/FIKx9AXjZReATKq3zLXH/oPrUYgU2UgQoZKoGhOhJfjcEUrvk6QV4UP3WgYiqBEhAGRF5zucy6wtRd3QE0rUO8F7oXQhuEKxwRD8xbGD6/n9S9OlB1+jHr9NCJS5J7IVVQ2IIExVoesW2d85zr7lgUzGt2NIeuHos9TM87jwMCK7CBKIzDKiC1jzjhxZ7N6o/weK3U0eae0m3QAAAABJRU5ErkJggg==",
+    navLink: "https://pinia.web3doc.top/introduction.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722389473"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1722389473"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b61dcd6b87c00009d",
+    navTitle: "Redux - 状态管理工具",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC7UlEQVQ4jWWTTWhcZRSGn/PdezOd3tEYm5JNi4gFRShUElBBpZN0OtOKuqhTVHAnAVGpNWRSWwsfdVFqUwtKi05LN0WoGRGxkJnOpNafSCumdiEo+IOlLvyJHRKTCZPMvd9xEQdiPNv3Pc+7eM8R/jcqIDrY+25wS8+mB8UZk6owaUlHbW2lW1ZtC6CF7RMZPA4BS4I0nWpSXTw8Ws1+tTrO/DcZLTw6kcbnRKTm8NryZPpIeSCrxCfF987uzVY2rQ5eARC1Wy/5OA6pcvDNSv/HFsgz5o1WsudE+TAw3v5lr10NUAFYSEZ9AGF5svSv0ZXYHQO0XHRakfuff+i9LrCuDfAB8pRMCXXKJ/epul8s1o3kavti2Cgan4s8b6axxI1bYc+aOGiCNW2IDzDNegFR0VoKYR7AiQylEl3djcX6vb4inR0mKeiUC7tugr3WbsQAfEo6emX7hY2qugCmE0AdT/+98NdTR8uZ9OyfXRmUZ9Tpb17A+4UdFw8s16kiAIVc9XFFXka8g4g7PPvHbQPFq32tlXUN9V+8o0N03omGzpcPxOj4G+MZa4a2nu92ItbBkaPl/i9FaYbrpncBDPZOBQB7BiZ6vIRejjr0h6VGOB3NRjlVyRdy1QHjJRJPCnLtWCVzAQDnziYTqVPDudq+4tW+lsWaVuw1FAKFrxtho+P45VzdiSsi8qJRY+4U9Ns8Y97yNXg/+yZIqZC1WGOxLkxGz4rw/eKPrSeKE5nZPGOeoFdU2GDU6a8gW9p9J6v9V+aaM4/ELt5lsW44W30OeFXQF97+aefiYO9UUGJ3LLG5W1Xm5aWHP1+/JrVYReT09fH6O23QcKa6BV9eE2Sz4gavl2cm21phZ7UPlTMOc0AARrbVNmtgjivOVzE3ce52Y3Stc+az+lzj9e4wzOLpfkW+E8RT0R6nvHWsvO0jaX8gQGFH7YEYtwE1v88FzW+K5x9bABjprXXG69w9+OYuQeoaxV+MVrMNQP4BA0JWj03hPV4AAAAASUVORK5CYII=",
+    navLink: "https://cn.redux.js.org/introduction/getting-started",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722390147"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1722390147"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b26755d546e00009e",
+    navTitle: "MobX - 简单、可扩展的状态管理",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC1UlEQVQ4jXVSv0t0VxA9c+fu+7FvRVxU0IRECEIIErFbwQ+3EEQkiyDbWFoI4n8QSBCClnY2FsFmZUEFUwlW+TClWAQWiwUJIcgaV1DX9za+d++dFN9qSOGBYZhhfh4OLSwsfMXM/4Rh+Aige3h4aPEfuOffcpubm6rRaOSfnp76RCSgSqXSERFnrU2I6E/P835XSv1mrf3l5OTkAQAWFxcHwjD8LsuyGWPMtyLyBTNHAIgqlYoQEYIggLUWSZIgTVP4vv8XEf3onPOI6Ic0TT/zfR9BEEBrjSRJAADaGCN9fX2yu7sL55y0Wi25vLyk8/Pzz+/u7n5WSqFYLKJUKtmJiQk3NjamoihyGxsb6cPDQ14DIBGhgYEBxHEsrVYLKysrWFpasqurq845x1tbWzI6OsqvnFj7iRIiIiUiICLpdrtSq9Xo+flZ9vf3USgUoLUWIqLh4WFqNpuyvb0tp6encM6htxiKiCAipJSiKIpwe3tLURSRtZZE5M3Ozs5oZmYGV1dXuL+/Ry6Xw9sA5xyCIMD09DTq9TpKpRI8z0PvOhhjMDc3h4ODA4yMjGBoaAhZloGI8PoCnHNgZgwODr7FrwjDkPr7+3F9fY2pqSkws3LOgYig3xTDnzRjjPlfMxHJ0dGR1Ot1NTk5ifHxcRhjLDOLiEADEBFBt9uFcw5KKQnDkJRSiplNkiRUq9UwPz+PtbU1ISJ0Oh2ICACI1lpTmqZYX19HPp931lpzcXHBs7OzEBF4nic7Ozvu8fERe3t7rtlscrvd1nEc61wuB6pUKk89QXlExL7vI01TFItFdDqdTESoWCxyq9UiYwyYGURkmDkFYLS19sssywqFQmFIRMbSNP2GmT+02+1Z3/d9IsLNzU3med6vYRh+tNY2APwRx/HfIhIT3sHy8vLXLy8v3xOR53neT8fHx433aqlnqlqtcrlc1u8VlstlXa1WGYB67fsXNjxy8R1L2VcAAAAASUVORK5CYII=",
+    navLink: "https://cn.mobx.js.org/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1689821349"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1689821349"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bd4fda6a02900009f",
+    navTitle: "webpack - JS 应用程序的静态模块打包工具",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACkklEQVQ4jYWTMW9bZRiFn/fzdRw7je3EbhNqoEWQCqWhJVBUBAIhIUCCAcQACwMDEhNi79gZWED8ALYOMLCgqgxkQC2IpRSZtAQIAeISx7Hd3MS51/f7DkODFEIq3vmcZzjnPXDASYokPZMFXfReFyQ9LMkO0u43mqSZ1Ou9633f+qbtdaXtw8pm+NlL5yQ19ntsj3kqwBurW3r7h1544MatYI2SI87EIBOzVRdOVt3VWsE+Aj4zsx6ASSoBL6/v6N1mP5z5sa9cPBSH8sZ9xcBOgJUdR5KJWsF4aMKlM2VbKOftA+BLk/T0Vsan3677+rVuwJlxOB9Yu7nBpastxosRz54+ymilzFoKow4eq+c4NeGaeceLETDyx1YodBIxX8sxiAd8svALXy91SbIAwHfLPV46NcWrjx8jzUX8GgcaJRudLloUAWSC32Jh8vz1+waTpYij1QLLnQE5ZxyvlXASy6tdwmSdzaHQbnTRP0maQerFpcUOrV7CE/dXmb+nzEjOMRh6LjbXSTEemaxjewqN9ldiwHJnwJ+9HV5/dJrVfsJXNzYIArP/vkIEIEC7gkLkECILcHMzoR2nCDBEMbLdyvcBDDg8akyPGa+cvZfiSI6F6x2k2+L6WJ7n5o7w1NxdFEpGa/BvwPDuMRt2U8e1biCLDvH8kyc4M9Ml3R6QZGLqSIWoPM5SAhWJ+ZpjIm8p4E3SGPBaO9E7zV44vdiX2xyKUmTMVYw4g6VYDL2YLBhzVTd8sOIuj+d5H/hi7ys3ArzZ2tZb33fD8Z9uBRql24DtTJysOs1WXbNesI+BC2bWudOYZlOvDxf7vn2l7XV5zWslDitDr/OSjv3vIndBeUkvZEELIehzSWcluYO0fwO02GAhQEQDaQAAAABJRU5ErkJggg==",
+    navLink: "https://webpack.docschina.org/concepts/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1725435823"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1725435823"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b105e2e883d0000a0",
+    navTitle: "Vite - 前端构建工具",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACyUlEQVQ4jYWSSWhdZRTHf+e7N/e+IYmhEGJwKKRWESHQgVIKIQ2CQXCdnQqiiyJ1QpDUQm7VVndOhC4UtBsFK0pRoilqCkFFsVpqsaE4NliSJm/wvdc7vPfd77h4aOOi9rc9/3PO/wzCRiI1e8cxpyZwkcLMH/cP4dvtkI7S2zNua3x1+Nh7L8wgSIQDkMnvdDiOsYtjVBBxAPokRfaPzSFuG872UTCGMIfVb6fkLo4vLET+6Y9nBlyCL/d+qS8FwuM9Dc6G1l3IaubCPYNzjUdGDryCATrOgWre6Wkfnf9w9s/lzcObQm4r5Ixqyut+YJkNEh4qeuwKcrOr0AvV+HY0cbmINU6NGK8py6t7C3Q2P711MCOrhegVVzOZOWpOjMtymPBcmICpuFQu0ynHFUcn9Vw7F+lkkHkMFc7Jvru32i0D72SmAWE7O7LvbfndgEplmTdMlXNlNaGf4PflDRGtY/IWdCyaOYrBRdJGv1z8aSowMT/3tyqzoGKIkE8ek8xPmA4TlSCBkm3SagxTqY6AjUUzJ9iYM98/iq2WpeSSg1PHb0kiEOneTw2Im37RfVTy5L5CUrd5q+CNbXmNPXc+K+R92mremn/6wdf+lXpx8cETjAMIombjG4SZTPtNTV1zwJO4IDeVvxFNPcgbcv70fknXivSb6jOC6CEQAK+bekgj1ESnZHVyezR4g7A7zDLbXB2RgDa9/qX8x4Vjvo3Nu1NzpVcVlQlEAf51ECEOVOxfHNa6rhSywKz8tlsCresvPzxl6iu+vVkvH+xav8p/RohADrwla4VYny+lYm4MazbIW2797BMmsLw89vnQr1F3X3qNAl0XZbv0ZrLO+U1+3VtbesCsXepZHyyeOQIqXc3/0O0A70/o5PxErot7VE/u0Ic3xq7LP8L5nW7usx35UsSCr6hcN/EqXfEXo+kdJ7e1dwJcq8Df4PBWwrzsx7wAAAAASUVORK5CYII=",
+    navLink: "https://cn.vitejs.dev/guide/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722389518"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1722389518"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74badbe2831bb0000a1",
+    navTitle: "Mako - 前端构建工具，基于 Rust",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADGUlEQVQ4jTWSS2hcZRzFz/l/351HkqmmmZL6rolJDYlTjLoQX9SFLuqimrakWrHu1Y0PXFhQ8IG6FEQFhYLQEqh056a4EiQYbe27TjQYY2gymZlEMs9773dcpJ7V2Zzf5vwIACOlT6Z8ruedNO2OSYhoICAancyAkAYGQQBEMDYXXUni5vvls2+d4u77PzxAXzgJyIWQBgIUBOfIdjtVqx2j0JehmUkSCAjmjWCaJM1po2XfA+QUkpgUBcF7w/p6C3feVuBL0yVmsw4hBJAESCIkMSDnXeZdH8BhhCSQ9NLWeK3W5NN7h3F4qqRisRfzC3XOzi2xUMgpBACEDyEJFO4xABEISoD3DtVqg888NaqXX5jEzOlLvFau8PrKJqLISxKFrRCgDJGBIER4T9TqTex99G5NPzfBz76aRZykCCFgeeVf5HLGOA6Swg0CQYBGiM7EzUaHo8PbefTFSX7+zRxWKg3kMh7VehPVWgtJIvT3Z+mMlAIBEQANMKUB8s70+iuP6Iuv53D19zVU1hrIZR0W/qrjgdItOHLwPhx743EM7epXq52KNAGUNwNq9Q7efPVhfH9mHot/r+Po4RKyGYeZ0xdx5NAe5LMev/y2DBIoz1fRk4+wpQVg7XbC4V0304yEEh56dgx/LFSRy3ns3zeG2bklfHn8Vzz5xBDKf9aw2ezQexLSlmzem+obbTWaXZlzOvbBDyoW+1Ac6MHxE+dw4rtL2DM+iJGhATx/sKSHJm/XaqWpNJUAijtHP0qnpyY4WOzFtzPnsb0/z9LEoCqVJoNS3LQth2Ixj0wm0h23bmMaB1WqTfx8bhnnL66Kd0182i6N74j277uXBGGOCGnK9Y0urpSripMEjUaXnU6KRqOrbiwYidpGS+12HPtM5Ob/ud4a//Gnxdh75+M0AIFaXKrzwtVVZrwBRhhNzgiQAJREUSZyxnnufvDjA0H5k+1O7KA0QKAkRJExn48kAdgyULhRac4ApIqb0666fObyjp2PXe7tK4w4j4Fs5CyX9XTeGNL/zxKDgBAkCLGZu4B487VrZ98+9R9Ea5IMeSk8kwAAAABJRU5ErkJggg==",
+    navLink: "https://makojs.dev/blog/mako-open-sourced_zh-CN",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722392013"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1722392013"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bc352e496090000a2",
+    navTitle: "draft.js - React 构建富文本编辑器",
+    navLogo: "",
+    navLink: "https://marxjiao.gitbooks.io/draft-js/content/quick-start/overview.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1709875824"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1709875824"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bb40180baac0000a3",
+    navTitle: "Jodit - 富文本编辑器",
+    navLogo: "",
+    navLink: "https://xdsoft.net/jodit/docs/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722394196"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1722394196"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b0a3fad7eb50000a4",
+    navTitle: "Summernote - 基于 Bootstrap 富文本编辑器",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACcElEQVQ4jXWTPWjdVRiHn/f8E5oidKsuGq12sItDldIOthAnV8FBJ0U6KB0E6SRObmJVSFJKdVSHKoj20m6tFVFqBEXRtNXmUi8m1iKY3nzdj/M+DjfEVPA3Hs77O/Ce5wFADTajHqx6OnV+kK4M0pXU+aqn1YPb7m3NjA7a7QnXujPqhpt5fk6f/catpPbWqtPtthNsayp2Ojt72vpLzTR1oFl95xfzzaumWdWBWWu6uqzDQavTcadaRiUb3ZnbavORvbNL1rOLOnXRvP+cuee8OXWh5geLWucu1e4LT/bsrbpWnQYI+z7GOF+JTWspeP83ypkbSCUYAxT68sah4vF7boU//ZBxYEoJIzhUcpyjVcaDjB0NceYGlkI0O6AEYDB9MDj+EPHWn7v5cM8ThciSMJZwtBQ43IRAxOs/EyQRBTIhK7z9qBzbG5xagFe+ltkfKxDRhBQ9Mlblvhe/Cx7ZFXbWgUKkYIUT++HlvcHsdTn2bRDjsDhonLkO3/9NnNrPvYWA5QGsJzRl82cqTO6Clx6E6V8ZDTcgQQDrQ1gejtYT6jz4MMjjnxe+/APKGOyegLvGYGEZaGCswLAPB+6Gy1MJBMjVkvBFGoC+ug8pSMDNDVi4PSprNndC4Gv7EJM0IOJSKfBuCQZSVHx6ksghMhw9khVqH7LiU5NEE2g0WYIB8N4WSCubIH22aP10UY9cNCfPmQ+cNw9fMD/5XVtL1uZje8uqa93ZO1FOWzfVuh3la+aJa6Zm6sBM85baS1t2Ov+ivCXTevfkdpmem9NnLrs9G651Z223J+408T86O9L5Sr+62q+upl7xf3T+B3tFDCJ3Ur9UAAAAAElFTkSuQmCC",
+    navLink: "https://summernote.org/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1722394427"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1722394427"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b7c8d3873560000a5",
+    navTitle: "Fontmin - 字体子集化方案",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAApUlEQVQ4jWNkQALO8vP/MxAJ9j5MZGRgYGBgIlYDLjDwBrDgk4T5k6YuQLGB2FhAdtnAByLtYuH/f4bV+x4lhpFlwH+G/69//2LIJt8F/xmzD79IfO0gO0eHmZnpDMN/BlZUaYa/+x4ksWE1AOr01QwMoczMzEzzGBgY2RnQkhPjfwZ4dKMYgOx0Z3mPAgYGRlPSvAB1upPsTGUGBsYmQpoZGBgYAPdzNMzj+6Q4AAAAAElFTkSuQmCC",
+    navLink: "https://ecomfe.github.io/fontmin/#banner",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1701332308"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1701332308"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b4f8380beba0000a6",
+    navTitle: "Lodash - JavaScript 实用工具库",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAByUlEQVQ4jX1SPWsiURS972N0pnid2G+Kgf0BigiKjaCyzZBUNgpC9j8klYV/wMHAwBbZwsJ6sbMZMCyLjdhYTWth446wYUZn7k3xyGA2Iad4xXv3nHvueZcREQAQEWNMn/AphGmanuc5jqNLNS17JiJEvLyR6/V6uVxedtBMXSqEyErTNBVCSMuylFLv5YlICLHb7VarlWma1WpVKYWIUitlMppDRJxz13WHw2GhUIjjmDHmeV6z2YRer2fbtjaKiIh4Pp+JaD6fA4DrunEcHw6HwWCglAqC4H9CmqZJkhBRu91uNBrZ0HEcF4vF0WjEtd0MACCEIKIgCCqVSpIkSZKkaWoYhm3b2+1WZglkE+s0LMsKw1BKGUWRju54PCqlOGMsl8sZhiGlNF7BOe90OtPpdL/fm6YppVwsFpvNptVqsW63O5vN7u7vGQAicc6jKLq+ub76clWv1/49P3+/vT0c/j48TBzHeXz8Keu1WhiGv5+ekAgAOOen06lcLpVLJd/3J5OJ7/v5fH48Hvf7fSHEm0V4CwJ4v1ckf/yhX1uwDMh47PULCREJOedAQIQnFN++Mik45ATkJHzQifMLuoAzE5w+sfQxXgAhDhrWEFGUMQAAAABJRU5ErkJggg==",
+    navLink: "https://www.lodashjs.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1681979807"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1681979807"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b2b468ec6a10000a7",
+    navTitle: "webpack - JS 应用程序的静态模块打包工具",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACkklEQVQ4jYWTMW9bZRiFn/fzdRw7je3EbhNqoEWQCqWhJVBUBAIhIUCCAcQACwMDEhNi79gZWED8ALYOMLCgqgxkQC2IpRSZtAQIAeISx7Hd3MS51/f7DkODFEIq3vmcZzjnPXDASYokPZMFXfReFyQ9LMkO0u43mqSZ1Ou9633f+qbtdaXtw8pm+NlL5yQ19ntsj3kqwBurW3r7h1544MatYI2SI87EIBOzVRdOVt3VWsE+Aj4zsx6ASSoBL6/v6N1mP5z5sa9cPBSH8sZ9xcBOgJUdR5KJWsF4aMKlM2VbKOftA+BLk/T0Vsan3677+rVuwJlxOB9Yu7nBpastxosRz54+ymilzFoKow4eq+c4NeGaeceLETDyx1YodBIxX8sxiAd8svALXy91SbIAwHfLPV46NcWrjx8jzUX8GgcaJRudLloUAWSC32Jh8vz1+waTpYij1QLLnQE5ZxyvlXASy6tdwmSdzaHQbnTRP0maQerFpcUOrV7CE/dXmb+nzEjOMRh6LjbXSTEemaxjewqN9ldiwHJnwJ+9HV5/dJrVfsJXNzYIArP/vkIEIEC7gkLkECILcHMzoR2nCDBEMbLdyvcBDDg8akyPGa+cvZfiSI6F6x2k2+L6WJ7n5o7w1NxdFEpGa/BvwPDuMRt2U8e1biCLDvH8kyc4M9Ml3R6QZGLqSIWoPM5SAhWJ+ZpjIm8p4E3SGPBaO9E7zV44vdiX2xyKUmTMVYw4g6VYDL2YLBhzVTd8sOIuj+d5H/hi7ys3ArzZ2tZb33fD8Z9uBRql24DtTJysOs1WXbNesI+BC2bWudOYZlOvDxf7vn2l7XV5zWslDitDr/OSjv3vIndBeUkvZEELIehzSWcluYO0fwO02GAhQEQDaQAAAABJRU5ErkJggg==",
+    navLink: "https://www.webpackjs.com/concepts/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1725435823"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1725435823"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bc0681df46e0000a8",
+    navTitle: "Vue-Quill-Editor - 跨平台的功能强大的富文本编辑器",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACWUlEQVQ4jXWTOWhUURSGv3PuSybEDRIXFNFSmUjCaIqoReapaURw4pJO1MpObCy0eq2ddkJAJWVINBnBBZwxLoXgjIKYaKegGAKinTqZd++xmAQmTvy7cznr/98f/gdDVn1P0OZw9aQmHCnuHTCTXUHD16fVt89ISDEEwVobJChZhBF8fDfX56JoFKw7pHwVJxu1Tcz/SS+WT7wpL5c0ryMkBEbwAKrUQ/DTqU/3lU9UBuffvs7hbVRUi/li78DywBUb5Cf3DkSRXkboCsFelQvVK/+edPhe/zWEgVKhMgiILpNyeHJf7Jw+tmBfQpAxTPqOTPW/PDi9a93SdkqCeg2jmO04cLd3M2BK0iADJwnY9dJw9VK58Pp2ebhy1IzZdtbFgJ3ONviq1fxvRHykIQMQAcY4Dtjkff1h/mk++rH4IdP2efsi4m9QD5JPiGbnUBIWMxMuBqk93/B+vtGgIYmXKT65qP18KZ55BaSwADDXfH9c7OvRoNdN/BVi0gaJS9LFUW6Pc+5BMKmKhffmVGFJax8MYYfAUTNuloarV0mISEhXqHBoMrdTVC+g0m3QiVkGRASrmfGpHrj34mT1zYqfuP9RT1dnreOcqBYssF6EWdRKT45VbjUnDhX7zxgct8AeVVmwEO6nv7gj8UTupEZuSKDTYKtgWdfhtlnKz9qf9KwSfNTRPqZt0p3+9t8w5kSYt8AvlCctXjg9jvuufbsl03ZKUgqGiUYyldaZmHlX+UhC2uqYcdy/LgPoHduyJjueXduSn6BL0v8HCZpPiJbDfIPxlgEAfwHjAPXHHSJtmQAAAABJRU5ErkJggg==",
+    navLink: "https://www.kancloud.cn/liuwave/quill/1409423",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1729738370"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1729738370"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b5e629e71100000a9",
+    navTitle: "react-error-boundary - 组件级捕获错误函数",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABJElEQVQ4jYWSPW4CQQyFP3uGREqEFImk5Ax0tBxgLwGn4CSchxKJvQF1qtAFIcLP2ilmmd1NAnHnN7af/eZJCQ4ChMCdqKpUFgEBB6uqO/WahqYGg4e3t+fx2M0AEamr3B0AUd2v16ftVoFSdQWbonB3czfvREY2RbGCUjWmgW51JYBI5hEwM0TcLKGRmrYTdji8z+fn3e5lMhlMp82De8zz6tXNRNXP54/F4stdjsfX2QyQK7n+HH7tj4NBDCH0++09k1w3haeqMGtE+6fhRtRHZx1xz0nGmy9xV7qMzS1/oxJTr6iKCFftpddzkQYHUU1EUv62hqqfTp/LpV0uj8Ph02iE2b4skzWkBJL5uuSaTdlKa/Ml34a2vd0xcxCRoErL3t85nLmIk9I1cQAAAABJRU5ErkJggg==",
+    navLink: "https://www.npmjs.com/package/react-error-boundary",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1724982637"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1724982637"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b0a45ae36ac0000aa",
+    navTitle: "lucky-canvas 抽奖插件 | 基于 Js / TS / Vue / React / 微信小程序 / uni-app / Taro 的【大转盘 & 九宫格 & 老虎机】抽奖插件",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADdUlEQVQ4jVWTS0xcZRiG3+//z5lz5gwDjIxgqVRaSnpBA7bSILUN0NCV1xhvC01UROrCRU0qC00w6QI3jat6j6ZG2SgSq5EaEcultjFRWsULSrkzhaHOzBmYM3Mu/+fCauq7fJNn9eQhAACYAGIAeKHXuUtKPCVd0cau2gwhmXQsu8Id1mC8+2q3PnY9Q7i2zs5lK7Y93is86jJ8TbfNDNYjf3Hguyh2yqlUxZAn34MRvGFkje6eHsoBAAEsOntglpr5AUsz29eQUBN7RtRKJCGCLFMq/SdgFHhXqklJ1oXjGaJt6tGhmodx77N3vJLXAFIlZq7X0sLtSV4oDLb06foPFXLTd/sg0mHcglY4sSs0efhjmdk9yZVDhwqzi/ah/Bn0Aj3P07HjbhPJYJQ9D46li5n0IqXOOghMD+FoQFJJpDXwdOsg/JI1xH6+k7dd3KWsuIZ4cfSgBgRdmtA0m5Vfu3qJnuTzSHa3Y+TXKJ0dS7ETmGiqOkevmaNcspLFmKdRn1kLJye1xdzVI5qQ1LLh5Ll6iyGeqPORLzoIVVROz+njbAzO0+T2m3HiniOsBx6BgFuLxhGOpMTJiRe5NFRoFUq5mwuuwr6adSo0NlMks46aLz7k5bJq2h9L4MGdfdDXPXKVzr6UrBKC7674lGLmKvIBNgkEAWBFwGf6Qb9MMEAAEYKKKuSePgoC/+M5ByDEgAn8ewGAEDK0ZGiE7wt1HJqbhtO4n2bqm2nLuQG+cDGHT368H16JzqGoR1pOkYgp+nz1AU455TA1WpbNbS83GJIakqIsmOFaAduG88H7GPg6oKGVck5vbMFPK/UUKbXZTt2E/vlHcOq3DmWFhFQKn9HR47kmXdIovABDe0+LeWuWon9sRfz0XoSNDAlWyG/EWBRM5KqngcyNXKo8RbqECvwWceIl6zyYXzcjES1bmfDEtiyH4mmYsSsgXzArnUXFAhYeeg+/P36SreIlL6TfoCnCW8P9t49LgEXdAf3bsHAbr0adHeFTVRzECyp5eIoye+bo8m1fYqnhAks/pHb2P0bRjR26R/bQSnKtIzm71f8vpp432Vqasnvn5xJd7Gi6G82gELM5UHmYmTKyshXwDceDrt5eTXnHLn1Vv3Etpv/nfF/H5QN2NvuM8LQWuEElkQTrSKiQN0wi9M43H+0euZ75G9vjpU5JURHxAAAAAElFTkSuQmCC",
+    navLink: "https://100px.net/usage/vue.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1731051832"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1731051832"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bd459773a160000ab",
+    navTitle: "Pixi.js - 2D sprite渲染引擎",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACsUlEQVQ4jX2ST4jVVRTHP+f+7u/33rN54zgyzrzxvZIJpESFEEEES7dFTFGziiRqXBcStEmYoG1I4EJJB0RERNFFiwhaCNEmimiRUFBWM2+mN743o6POe78/95wWM+aMRXd14Z7z4Z7v+Qj/c4wpJ0wpQGfwjf4sSeomhZVSbW5dvLgMIOsbbnG4XGmMXY6RwcIstTwf78G2apJ8UGCHBKkZZia0ROV7If1oA2CmPlFJpPrHtmjT0IKuLFnQF73zV/pdUlcMJ4KZkYhnSbukWb7brwf0Zu9r0uhbfqD5IEZHXHQmca5+z7K8QL8Tk8tq6sriD+YaXO2v8z9tAPgdw2IqPiVEwNNgkquqogs3Z357/gg3irXSkzP1iQqAezw4AVu7mSAopg43sKs+Nr6+rjF7pfufAANKRAC3DPu24mIfsJITudpuTF5rN955ZWqtz0A2An4HQQwBgQppcayr+c0Bl3iAWNyrXtz195469s184639ArYRsAPApDDFoD/rdWfzsPLCXc1OmtgCQGqKN3cgxn/ZHD363L9+gKEiAliInoiro3OX2kMz547f77m9vVC875F2SpGVJdrinT/xzywGUqLjzOhbdUW0Nh+1V98P+7GFs63h5vQneQiTgiQ9Cwrscg+TF7Doya2vJeKGDDGwX1vDfvfP9Ynt8mh9iHcjBuZXs7ojrcbbJzaJ3/PAiiDwMhAPunLS0e7HiBws4fZmqjcQuQ02YvBShER9Lo7uheJdb8h4X1TZ5zUjs4KqS2gXvR+C8kUc8eHmqEwQff2hxjmKAXc0Oz0yO33Kg329WKz4Aq06aC+G9CvNs09XWu271XptsqO9I2r6LMhmzJa9yI8auFabm/58VTeQ+dqbz0QuHgiWN0fnLvz5uFy3tx/dKRJtMfNLQ83PfnkkLfY3U3lCMflE4XEAAAAASUVORK5CYII=",
+    navLink: "https://pixijs.huashengweilai.com/guide/start/1.introduction.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1732178463"),
+    navRemark: null,
+    navType: "插件",
+    lastModified: Int32("1732178463"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b8462400b580000ac",
+    navTitle: "工具",
+    navLogo: null,
+    navLink: null,
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1658980137"),
+    navRemark: null,
+    navType: null,
+    lastModified: Int32("1735004949"),
+    navTag: "h3"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74be1f6b1eb0b0000ad",
+    navTitle: "CordCloud - VPN 登录页备份",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADLUlEQVQ4jY1TXUybZRR+zvv9gGtXISGSDLbZkJEUsplAQEJCUrYlQkzmMle2RFFjNDFeeLErjReaqTOpi2Es0xvRCx3JwHmz6NDMoUNlQ+wKYVDChIGVdhvttHz9eb/v63u8sJqqNz435y/nycmT5wAlMLOO/wlm1v7KCQCOHXu1w+P1DuSlTDp2IbE4d+NaY6B5Z9X9W3eDNJGxrJgj7YXm3c1ttuPUQaEundp44/jxlz/XAWBsbGz9xedeemh/9/6Hw4NhGJXmCzU1NXBdBwzGVs8WJK0M7iRTeDL0NKKzEZz/dDgBADozCyJao0L2wvWrVx6f+O4r2dUVNJaWYuw4DjEzBBEL3aAvLp53t/uqDdMwv5+YuBxhZkGhUEgbHR0tGjA6auvrvw40NVcamg4GA2DBTCCCUqpIIKFuLsU4Hl89JKW8AEDQn1KENGCUWls7b+ka1TmOrWy3SFAMxQxd16DrGmtCCBL6ZjqdaRoevuS2tz+QpJmZ2N6GBv87s7ML0b6+g8H67Tv8muHhlj278NjBA8ItFnH2k7NqeSVORAKrKzd/+2Do42udnW2dyeTdt0Uu5z7i8Zgta2urzzq29P96O8V72vbSwKmTVF2xk3fUBPi9MwO07cEmJNOb7DqyOha70eP1VviUUn4tEOiNapp2Jxx+07O4OL/tXiohaqsM7mjrEndT68jbm3BdxkdDpzE3M0UFKTcymczFYLD3rcHBz979h0F0Xd9HJPIAiv1PPKW+uTShfvj2avHw4SMKgG2aFdzTc+CV/zhrZGREKyu/7O9/nqenZ5zfM/miZcliJDKnjh59xm5taVcnTpw6B4DGx8d1ANABoK9vngEg+tOtQ1b+3q6pqR/dn5fjWF5eY6UYUjrc0NDo+nxeY3LySg4Ad3d3q78JwK8x6PUt64mVcO+jQf/8fBQfDr0PgGBlN5HLZuG6zn2WlXUTiV8mAWgAygiIagE0nj5z8pwm3H2JeLzqemTaNExTyEKh4LjObSnlQqGQuwxgA0ATgBgAp2Qk+ABUAkgDEKVcLz2bBGCVaWSULpAAmMoGYGYqLTER8b+0FqWoypt/ABYahFd4KjLLAAAAAElFTkSuQmCC",
+    navLink: "https://www.cordc.net/auth/login",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1723535807"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1723535807"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b51e106eb870000ae",
+    navTitle: "CordCloud - VPN 登录页",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADLUlEQVQ4jY1TXUybZRR+zvv9gGtXISGSDLbZkJEUsplAQEJCUrYlQkzmMle2RFFjNDFeeLErjReaqTOpi2Es0xvRCx3JwHmz6NDMoUNlQ+wKYVDChIGVdhvttHz9eb/v63u8sJqqNz435y/nycmT5wAlMLOO/wlm1v7KCQCOHXu1w+P1DuSlTDp2IbE4d+NaY6B5Z9X9W3eDNJGxrJgj7YXm3c1ttuPUQaEundp44/jxlz/XAWBsbGz9xedeemh/9/6Hw4NhGJXmCzU1NXBdBwzGVs8WJK0M7iRTeDL0NKKzEZz/dDgBADozCyJao0L2wvWrVx6f+O4r2dUVNJaWYuw4DjEzBBEL3aAvLp53t/uqDdMwv5+YuBxhZkGhUEgbHR0tGjA6auvrvw40NVcamg4GA2DBTCCCUqpIIKFuLsU4Hl89JKW8AEDQn1KENGCUWls7b+ka1TmOrWy3SFAMxQxd16DrGmtCCBL6ZjqdaRoevuS2tz+QpJmZ2N6GBv87s7ML0b6+g8H67Tv8muHhlj278NjBA8ItFnH2k7NqeSVORAKrKzd/+2Do42udnW2dyeTdt0Uu5z7i8Zgta2urzzq29P96O8V72vbSwKmTVF2xk3fUBPi9MwO07cEmJNOb7DqyOha70eP1VviUUn4tEOiNapp2Jxx+07O4OL/tXiohaqsM7mjrEndT68jbm3BdxkdDpzE3M0UFKTcymczFYLD3rcHBz979h0F0Xd9HJPIAiv1PPKW+uTShfvj2avHw4SMKgG2aFdzTc+CV/zhrZGREKyu/7O9/nqenZ5zfM/miZcliJDKnjh59xm5taVcnTpw6B4DGx8d1ANABoK9vngEg+tOtQ1b+3q6pqR/dn5fjWF5eY6UYUjrc0NDo+nxeY3LySg4Ad3d3q78JwK8x6PUt64mVcO+jQf/8fBQfDr0PgGBlN5HLZuG6zn2WlXUTiV8mAWgAygiIagE0nj5z8pwm3H2JeLzqemTaNExTyEKh4LjObSnlQqGQuwxgA0ATgBgAp2Qk+ABUAkgDEKVcLz2bBGCVaWSULpAAmMoGYGYqLTER8b+0FqWoypt/ABYahFd4KjLLAAAAAElFTkSuQmCC",
+    navLink: "https://www.cordc.xyz/auth/login",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1723535785"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1723535785"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b938aaf650e0000af",
+    navTitle: "RedisInsight - redis连接工具",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAACCklEQVQ4jWWSTUiUQRjHfzPvvDtL4kfS7i2/tiIQOqYULrHmQaIECyJPUofKDklFdAoLQkQSwUMYSBbRPSSSioqoCAQv0QcV1dZqlHhQ2t3efXdnOrxTGD0MwzzwzDP/5zd/YXe38zesRQgAIdzBWreiFNQ/pVIiBGFIGGIqAEqh42t7KZdEUSxQMSSTbGykfgNALsuHd3genoruKCcACENat7G3l+07SCRdi0qFh/cYH6GQR6k/L0jJ6gq9Bxk8h+8DlAKUT/AL6dHVTaHA6EV8H2ul62QsMY3vs/SDG1Ms5JCSicsMHqVYpGMXNXWUy4AEMIZ4nBfPuHObMwMkEjSneDDL9CSfP1IuIwTSQZNu6FiMpe+cP8v+Q3TvA9Ca4ycZnaC6mkf3WcihFEII29nmqOd/cuIUff0Yw9csjc1O7fwcY8Ns2sLTx4BCCBCsrnD4GH39DnHFcHqApha+LfL8CZfGCANmZ6iplQhBUKS7hyMDAK9fcneGlhQ9B8h+wvcZn2RnmpvXIoDKDZ3pwvPI5xkeYn09e3pIZ0hnnKqpK7x5RVUVxnhDqQZKAUFAewcjF5ifY3kJKdnaCrC8zPWr3JpG6+iLhe1sA4tUNDTx/i1aYwylEqnN1NaR+8JijnVVCBFZQzi3WktYQscxxkELAkwF5ROLYcx/5hMCHXeIol1rEFi7thr4DRaHzMZCtooWAAAAAElFTkSuQmCC",
+    navLink: "https://redis.io/insight/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1724405350"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1724405350"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bff2589b2ab0000b0",
+    navTitle: "Charles - Web 接口调试",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACM0lEQVQ4jXWSMUgbURjHfwlveMMNNzjckCGDQ4ZSgpQiUoqjdOgkTo4dxUHEyaF0klJEgoQiUkqRUiQ4iIQiRSRIKBLCEURCOcQhlCMccoRDjuN4Xwfr1SP2g295/N//ff/f+xiNRpIkiRhjxBgjSZLI6PZ2rJutE+GRUu6Fi+OUcBwH3x/gDQZjIm1ZABhjMpNisVgAKADU6jVxSmVKpRKWZaEVOaNqpcLA90nTFIDp6rOcCQD1nbp8OTyQVq+bxXnYN6Ob7PV291yMMXLebedj7R8eSpIkctVt57gYM5Thze+c2BgjzZNjKeayaoXnucQqQClF2Pc52/iMdxGhlB4HqFT+4LjdktskkcQY+XSwL2Y0kqSXyOXCsgyHw7EJWt12fgJLa7RS7C695WhvC3SAehJwuuqDSnOP/XQ7dyAziPWaWH+/K5iepPGtAarM7vYpcyoCP+LqqicArQfwMgNtabTWbO1ts764yNzWGR3P5U31BeXKEVbJQVs2vV+XorjL/nJqppAZxHGK1prq3BI0NBuT69jlKrvuB9BAmhLHMVEUATAz9bwAkGEceB5BEDBbcfjR/4i2O1xf97Fn5wmjiKPvDWzb5vWrhX/Lc7+J9/W+tik4E6zOLxICVuBz2nfpuGeEYcSEtllbe/d/g5WVZUlVShyGOKQordCWjU9KFEbs1L/m9DmIAJubtYJCE4Qh/cAniFNiLBT60ctjE9zXfrMpYRyilWayXGbm6dSjOoA/rF1EdnhHHfQAAAAASUVORK5CYII=",
+    navLink: "https://www.charlesproxy.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1724405253"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1724405253"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b4feff080420000b1",
+    navTitle: "Snipaste - 截图 + 贴图",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAATklEQVQ4jWNkQID/DJiAEY84AwMDAwMTFkmSwKgBVACMSOzhFo319fUoNDHgPwzX19ej+BvKR8a4DUDXjMMQ7Abg0ozFEJySBAGx6ogGAKeGJuFdBqDpAAAAAElFTkSuQmCC",
+    navLink: "https://zh.snipaste.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1669705386"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1669705386"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b9a9179150b0000b2",
+    navTitle: "Pixso -原型图",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC/ElEQVQ4jXWTTWhcZRSGn/Pdb+6dn0wSJpMm1YCh1jYtQiKNWNEKFVwk6sJFU0QXMWDdpCBVhO6m4EKooFArrdqsVDSzEKRp1IJuXKjYUkpbU1ttERR/0pK/+blzv/sdF0k0LnzX5xwe3vO+wppUERGUDdIXzh8iyD5K2twD4rHheVxSlZNDJ9ZnRKf3BTJWTTcu/jGxsKXNLB/LZ2qjmBRc7EAgCC0ioO4MLZ2U9wZvGBmrpnpgV0aPTQ5oBbMTbVus2TMivaPLrSDBech2WKIOi3eQNFtkS6MYd2KV4M39k0h2QunYIU1/6Ye5Zz689dfu13sKdd+VdzZj5m8W7OLHBlBkv9iwH9eKsWFE2jxkQbYT5e+TBe+x5eEdW05v/ma57/hCs+8gUrvZaYuPtZ+6+zqAPn9hCp98jZgSGEXNiJEXPzrIUnqcsGBouAZSunP3zg8eccHtmbn5wslN72+6fm1EIx25Fsm7Qz/i/RRRMcA1PHC/UUXklXcmafA52facNjVGyoMP3vPZtsH+82cBtrZdUf780q/5XkQVBAUtioIAcPhwmWxxFlPepSsSS9Ad0ZQ5mnavvP347wBLE1cfbouSWVGXQwKDT34WAGX1OY2X3rorm/dfoN3btJ6JRUoRsf2JJD+d+LBkRMaDwEf4tEUmH5LUXw0AjqwdGfltZvNC3H/HA+UreYl6e7WhTnyuTNi1J8jYYZPWA1Rb5DojjWsX5Pv0WbOWORHQocFa5nLQ89zRX576jtrtGTFZi+2AeAlaS2AjIWyPXJyec+TG5dxwIhsT+PS4DrQFetEhmZZyupK7dHWrpn2k+lCiphD78IbX4JM3Tv36WoW9DsCuE4Co68IsW/GCajYnTxyo3Vv96qi8PDcxV2QeBj7dXgdJV32rGKHi7UaClS4IQ0AljbPYzkLaUlRkSpb/Kdi+6UCqY6lQ8f8SKCBQ60ZdiNgOrFvksm8Pzgqi64QAUh37T/FWD6w5kfZg6paVAGbjEke+fVJurZeW/9Hfy5FECh1zqdkAAAAASUVORK5CYII=",
+    navLink: "https://pixso.net/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1724406520"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1724406520"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b20b0a40c180000b3",
+    navTitle: "RGB颜色值与十六进制颜色码转换工具",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACgElEQVQ4jYWRXWjVdRzGP9//73/m8ezlnG2uNnK+NA++oakoipEhXkQM8mKFUkHSRaY3gnmhIuatgkKgFQgqghcTE5VK3abomW5sTmpna2JBIUqUb7Ntx+2c8z//p4scis713H+e5/l+H2MMCTyDEGEyaoC3gIXA1AIkBDGBCR7bGLAZSDAZ+BBYqteJF96gyF9kRUy2BDGV4ClKDveCwZPUBuAzLSBWeJ+M/6ZVMZVY7jUNdDtyaUfkIZGSHH6xPZfugK1UUV/4iCH3HuXUeaU3poS3voLsCaaVPmBlNSyJwKxhgoTZaG12YexiJzN4t7CJf9wKyofm29BmlDuoZBTbUIUaHnF+yghn8OuuEF30N3F75uaN1PF5sJ1b/jJebZvD8NqAzG1/fbXxpfR1TYa9DH78u6o/QGULsP5ywtuj1ReqkvZgLyn10nZGtEzI+S3om5/962pjuc69Q76rk/BXedlGRe6s08SeWglD4AsO5z8hrQ7OXpW1l+ZcCh2/ZN+pk3i+eR/BNbn8Zbm/Pj2O3POzrQzn0adGWgcDuzA7IIX2pPxTSpvLfn+SsEPu/mmh6U8ZeUL/DSDHgfwGutVnqW3iF7SqKdKtdiYFqRPoqrw/jzWj+Cj4wuyFmXTpW1I3xIVEGLmGelup109fEPwou9/8G6p6KQx44XSKSZp3FCoe2eoBDs19pfaHYHC3czFUtiOJ3RPyDAvHNPCnoZGk8k3goS3DHGFkD2ZOD3qMoo7xYACfCqI9cSb8QaXHxcXltZ30r8HLZMPK/U///HJ5+F7JTZ/SARYXaHEVa7Jy5t29E8VuAhj2fwYUDzliAckCaYreJvCxfNd4j3tW/wL3LBwRt7aYhwAAAABJRU5ErkJggg==",
+    navLink: "https://www.sioe.cn/yingyong/yanse-rgb-16/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1659057801"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1659057801"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b3573695f570000b4",
+    navTitle: "docsmall - 免费在线图片压缩工具",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACfklEQVQ4jWVTPW9kRRCsmp65Z6/BdnDByvIFCNsRsnjPX7Iwh3USIHQE/gOIhNS/gBwRkNj/gtwXGA4hpBOs/SwbQXTScZk3IEL2Svt2Z6abgLd3e6akTkbV1aOqbuI1HAAFgK2trfdzzvtzc3NrZuaGw+EL59wvdV3Xd7mcftje3l4j+Q3Jz0h2psRhZkOSP6nq12dnZ39MetiKWFmWD2dmZr53znVzzgYg3xEQESGAf5qm+eLy8vIEgCMAbGxsvBtC6JnZ/dFoNAYQzAwkJ80IIcB7H83snogMYowf1nX9uwcA7/23InJ/MBiMDw8Pw/r6OmKMIEkzg4jY8fExrq6uwuLiYjSzt0TkOwCf+qqq1kk+TikpAF9VFcqyJN4Eq6qyfr+Ppmm8qqqI7Jdl+YED8IjkLEklyaZpoKqWUrKcM1JKUFXb29vDwcEBcs4gqQBERD5xnU5nDYCRNAB0zhlfA845OOcYY2RKydgaY2ZWFMWqb+OAmf2vJmh/MhG2KXOdHw6HL4qigJkRgHnv2U59w4SbmxuamZrZK5HxePzSm9nPqjo2s+C9x9HREVZWVrTb7bopIm9vb21+fp5mBlUV55zlnH8kAOzs7JyIyOOc83gwGITZ2Vmsrq5CVUkSOWdbWFhAt9vF6elp8t4HM3vW6/UeEQA2NzffCyH8qqpvkxyTDBMPSKKdClVNIiIkk6run5+f/yYA2O/3/15aWvpTRD53znXaVdY2GbP/1BhC8CRjSumruq6fAKBMjun6+vr58vLyDwDecc49IHmPpJuUcy4CeBZj/PLi4uKkTc+mN+7Vie7u7n4UY/y4KIo1khyNRn+JyNNer/f0LvdfemZYsWiUrZAAAAAASUVORK5CYII=",
+    navLink: "https://docsmall.com/image-compress",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1663552589"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1663552589"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b6eb6bad5610000b5",
+    navTitle: "WindTerm - 新一代开源免费的终端工具",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB0UlEQVQ4jYWTwWoUQRCGv+qZSVaJLB4iguZkQLK7EUMg7LKXfQTvgdx9EK8efQlBfAQPOcSD1+AtBteQHMSLsNmZ6fo9TM9mYxZSUHR3ddXfVX9XmY6OnnFxMeD6+jXuA9x3kV4gbZBlAOAOUrOXHDAkoyhkrBDt7W2Sd3qo2kXWAx+A7YAeY5YhNaBFgQkMMMbjMVW1RZ6fEsK5HR//uQM8mWwzmw2J8T3umxSFmyAziBoOPwBvqco5WCSE38AU5yeBM0K4xOyznZz80MHBd2J8SVHEHFCqc9bUZwFYR3oIbBFsBECeQ1k+ErxL9yBZvpShJXIECEmYCXfHrKKu16jr0sDV3DW4KRDMGoB2bVRIhhlIGe7pqRvulzNYJW1w80AItrAnCfcA3JZOZ+1/030AwsxSE2nJXe3mpgRJC20cGhKbtQKgrpV8WQZoTmYO+C0izUgc5OkbHwjCUlZLvwAbZFlGjALmmP0lhF+4TzE7o4yXhPDJwAVlAleeEgqE8BHpG0Vxijrn9vXL9A4hk8lTjUZvqOtu20irh2l/v0u23kPVAGkHqUcIfdyfAGspOA3T4eFzrq76zOevcO8T4wBpG6lLCCz6oG0iqSXSKAr9A0s06dvoYaIHAAAAAElFTkSuQmCC",
+    navLink: "https://windterm.org/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1724404954"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1724404954"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74ba53cb16a2d0000b6",
+    navTitle: "最优图像优化 - Recompressor",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABnUlEQVQ4jY2TMU7rQBCGv1nboCACBQIBBRIoFVfgBpSROAIdJZyEE9BxAJr38ipKaBA00ABSKguJNgpJ9qcYe7GDQG+klWfX//wz8+8soAFIoGimaCb9tEJwXLUE+mPuACDA+D9L2LzedLtYr4ckLEawBpXk+6KA4RCVZUqk3KoaNjZQv49JDgyhTTAew9ISXF1hZYlC8ES55GwxYh8fDhwOG41VBOvrsLUFkwmAJwIsVQCQ5/D+DpeXbQKAoyPY3/fqzHxJrkHLzLz82ax9fn0NT0/w+lrpXydtBs77y8uws+Nk47FXt70NnQ6UpWOSVLXS9Rfg4ADu7uDxEV5eXJuHBzg9rYKDi/jturIsiUVRwO0t3Ny4iP2+/0/tNkufzaDbheNjWFuD0chJLy7g5ATOzr7fTqgPamWLwvtcXHRAjLC6CisrsLnp+xhb+vpcdzqKe3vS7q7U60lZJh0eKtl0Kk0m7p+fe0yWKaZbGI2w5+f2e3h7g8HgS7DpFBYW0P29YyRoPSazr+D5QZqzlCgA/xpBag7JL8G1/f0E6JXsAYtf8VQAAAAASUVORK5CYII=",
+    navLink: "https://zh.recompressor.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1664157196"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1664157196"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b5d867c2cde0000b7",
+    navTitle: "Squoosh - 图片压缩",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADFElEQVQ4jVWTT0xcVRyFv3vve28GEIZBK8MYQJpJAKud1hhjKsZU64JZoDHOyoq1MdGVbrrRpYlx4dJNVyZUEtdqMiQmtialDVbRamwbqhkRbR1iYV6ZP/DevHt/bgrBszqLc07O5lPs0/T0dMo5d9xae8qJTInIIIBSal0rtai1njPGnF9YWIh2O2rXlEqlXBzH71vnTlonWSeyF9h1RqvQN3o+CIIPK5VKbW+gVCrloig6G3eSF33lyPU4xvo65HsSujzHjlWstz2qWwG32z5Ke18GQfBWpVKpqXK5HGyG4ccGeeepxw9RfDDhiL3MoKnjadk76gRubKT54PsDhLGH75lPstnsGb21tfVcJ45PFgt53j39ChsnznDh4Bs4DNbrw/r9JBbQATfvdlGPNCBY514NG40TnrV2Fhi4XW9z69fLvNCriLav4pkEb+RJlElh4xYMP0thtMVka4nr1b/BuQFJklltRaYE0FoTZAZRDPHDzSKrjVHkzgo7Oks0cRo1dJRDjxU59fLz9Pf2ICI4kac1IjlxwvjYQ4wVxpG+EdIDeYzShP+2ubJW5Npv3dg4wiYdipMFnnniUUQEEclpAK0VP9+osrT8C/3pBtqPWVx7mDDU+M0/yCVLJLeWMX6A73scOzpBKvAB8FCqJiLDhdE8j4wXMOleWiomle4hbjaZvO9TUtWERKbxhg4D0GxvY51DKV3TRqmLoPA8Q7TdxoarHOteZDz4icC3GNNBXEI73CLeaRPHHb67ukKSWIzWixrPO+cZvXFp+TpfX/oR6X6AuXiKhdQR8sMJXV2OKFIkm//goiYr1b9YvvY72phNpdQ5fXBk5LzWej6xlo2wSXK3xmsHlnlz8Aq+crSammbSh8rkWb9T5/OvLhA22gSeN5/JZL5RADMzM4OtVuusUrw0MSAcztS5P91hJzGshj6NIIc/MMSftU3WapsYY75IBcHblUqltgfTvZH3OtbNipBV9xByuwERjFb1wPc/833/o//BtKtyuRzUG43jJMnrVmQKkdw+nC/ieXO+Ut/ux/k/3FJypUO8Bu0AAAAASUVORK5CYII=",
+    navLink: "https://squoosh.app/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1665622969"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1665622969"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b5164c303fc0000b8",
+    navTitle: "Convertio - 文件转换器",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACmUlEQVQ4jYWTz0tUURTHP+fe+2YaUmkEa9Aw0k0haIwbiyaohQsXQqu2tatFQm0scTGCYC5aiERhi/6CqFVFtAgKXE2Q+ItIqnFUrKAU7FnvvXtaPJEioQtn9b3nnnPu+X4EQEEEFEC7uk5j7SWgBLQCoFpF5BVJ8kDevn39Z46wc/Tw4RxNTbcw5grGBKiC96lobXo9SSK8v8uXLzekVgsBREHo7s6h+gjnevHeE8eeJDEEQVpga0txzpPLGYwxxPFzRM5TqYROQNX7MYKgF+9/EYaOgwcdFy4oZ89CFMHcnPDwoWNmxlNX9wvneomiWwIDosViDyKvMEYIQ6FQMGxuKvm8cPIkXL8O9fXw44cyNCQ8e+ZpaFC8V1RLtlwojBAE3WxseDo7DVNTsLEhvHgBs7MwPQ1nzkBjo1AqKS9fCl+/ejIZR5IYW25puc32dp6jR4XJSUNzs3DqFNRqaVSrsLUF585BNisEgfD0KezbB9BgSJJWDhwQRkdFW1rSmYMAbt6EY8cgn4ePH+HnT1CFYlFpbxeMEaDVYEwqDg4iS0uKc7C9DQMDsLQE7e0wMZFWjGO0rU0YH4dsFrzHAFW8V96/VyoVQSQV29rg2zdYXISxsd3OZGUFhoeV798Va6u2XCicwLkikLCyIvT3QyYjdHRApZL+w/w8bG7C8ePKtWuwsOCpr7fE8WNbbm7+jOpFMhlhdRWWlw2lUrrGvj4IwzRmZ5UnT4QPH5S6OkgSj+pVO7K2VisXCk1Y20MQRMzPC9PTBu+VbBY6OyGXg3fvhPV1Ty4X71j9jrx5c39vK4ehJ44N+/enVo4ixVqPc/9Y+W+YDh0aBy5jbQpTkqSiMSlM3kfAPdbXB3dh+g/OR3be/wTsifNvfgk1PtRyjU4AAAAASUVORK5CYII=",
+    navLink: "https://convertio.co/zh/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1681264919"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1681264919"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b98db5c45cc0000b9",
+    navTitle: "UltraISO - U盘复刻",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAACTElEQVQ4jXWSTUjTYRzHv7/nefZX/xu2wGi4oWXWVocNI1/WCx16wbrsZAWeOgUhdevStYOXiqKIgqgIgvQWGTIpEIVY1qx8WWrlwlUsTJ0v2P7b8/w6aAetPvC9fX/8Dp8vsdZdfUOPxhJAEP9BhgjJ5Nnm5qZQSH0XonMkM6oAjADgtVUCMbAw6JyPRgOhEACVGR8vVWmCC1BYCcAAAYKooI1gvhSpO9XYSMwgEkuzcwzLBmzADThAHiBACzFXKLgt161otOXgnhv9bwwRADWtGODdAIAikAYU8AXwLC4eqKxs3buvIeA/c+/VhmUh9gOA2G52GGNGgA+AIapiXtK6VuvbsdiVY8cbAv6e+Mf+F3KnJGYAUKHIRnu0bCafr9Z6wHE2ud0n6utbg0GP2w3g7eLyxY6fbo8adOE0GUCoEotD4XDvwID0ett8viM1NYHqagBFrfML8v71oaJUwiCTRS4nystZMdOWQqHGmAuxWKNtAzDMZFhJeTk+GU9L2wUAnyYQ755sOblVEOFoOFxVUvL46bNfWhtjwKSluJsY7uzNeqxVIZaFnmzW5B0BQJaW7opEuqczSSmJSAhOZGav3VlGwWX+iGTG62HX89Q7AYCZwVyL4DbDRJT9RjevjllKgNZYF4SJtBAAiEgXi4fDgc2C8sVie9fo+5yFvyCCnKKVKcD2eg8FgzM/5tseTqTGtK2k4fUHjoMyr0PMDGAe+Jz42t4xNTStLNeqo3X4/Xhwzr/6oS+VevIyV/BZdQH+ZxtAUxMqKny/ASNd9Q+LTAjYAAAAAElFTkSuQmCC",
+    navLink: "https://www.ultraiso.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1724405309"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1724405309"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b06c38ee2c20000ba",
+    navTitle: "PDF24 Tools - 免费且易于使用的在线PDF工具",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACnUlEQVQ4jV2ST2hUVxTGf+fe++Zl/plJmiABK60IoQayUpAURdx1JQhdWVy46KLtrjSKtHQKBasgKoFQLYhr94qg0hG14EotRAiKkUKFjhkzM/kz8+a9d08X82ZaPXAu5x6+83HOd44AMP+gTGHG0lj2LOxvA8L8gxLmQ0d7I2ZxZoNq1dA4FvDBeEhUD9DY88tsU/iqXqJcf4oNihjXI4lOMPJJjc6zFawTfOJQLnN25kdOPpsnv+0kneYaSJt1DjrCWkpu3y6iza8JgML4bd4+GaNY3kHS/RmVGmM77jC/dAPxgvpxTHiATmuNxb0bBjttSKINrDmKCb6g07pFpdIFPCIp52bu0m31EA6j0sRYJczfIBw5CmAA8GmC2FGS+HfOTH/G0kcxRjypbwBgXA60AeqIewm9ZI5e+2qfIN30lCYrpPFNPTP9vYJMlB8WxOQczh3n1NJ9os0Wa91rwE7y2wL+WHnDhblOn2A0itlsVAlLNamqFdDVnZ9GmnS/xdgaxt7D5z7myt4Yyy266z9w6BADk0GgUKDvmqVSgaZCPgN2Mtw7fxQsVXVxuXxaC4W/tVh8pcXi6zhfaFBVtxXkz8eYCwB8ft1uTU5dVBssDGr/62D37hBrc0xNKc+fV6jXH0scTypcog/8BkC3b1+g2Qwlir5UcG44zIsXKZCyvGwAIQj6+TD0xHFZvR/rD5aGeN8ZSqBgs3aqCqsKrxReqzH/AKgx3ym8UVjJfF3hp6zG9R9AS6Xf1JgrCiWFisJIBsopjCpMKIzpxMRlDYJfBwRmOIK1ggwlgT17XKZ2T6AlsCqwhnM9RHIDmBmuLYr+Ik2PAE+AP3n58pHOzhb/t+a+XknSQbU9SL9/B/nsNgTwAg3eswyHwBbAv4EIGwPb8ubhAAAAAElFTkSuQmCC",
+    navLink: "https://tools.pdf24.org/zh/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1674877003"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1674877003"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bb3cf8acc2e0000bb",
+    navTitle: "FFmpeg - 视频压缩软件",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABwklEQVQ4jYWTsWsUQRTGf99kOYNIOGQZDiJiYSGWIaV2FuHORhERCwsLyR9gIVYpLMRCLEI4UgQREUE9JEWwshILOYKISAoRSWFAREIQOY7b/SyyK3uXRQcG5r1v3ve+eW+ebIt/rPnV+WS2NTstq+mR04wsBoWYk0cAdV52zgaHY8aRnFQoGkfENjACrhnPCDVq+NcSWY9tHwdAYFyCu0Bz310jUjzZ+b6zGGR9wgwn4D1gpmJvjseqlx3Krvdv9Edh/cJ6G/GxBI1/AYeBAKBcPeOjlegNxMbUYOoq5aVSKoCsBpAUmV45+LTQiQJ+jXluu4toVQmq+hqFlDfGEThV2G+NHwErZQKqh4lVvnkOQFIfsYx5CIx146ACs4X4iThTeD4A922vTQYfJBDbiM+Yc4VnS9Jd26vAdJ3UKsEPzDvgfGF/wSzZ7gJHgKHxrVoCWUu2nwKX/ioxty13i/8wwFxB7NUSWM6FFit1+IZYEWoa/yZwGZHKWt6HvSv0fqG30FLnRacjqVdXIGCQKbsY8nBS0oOaom8mkpq270hKgVjZQ9s3g8OcpHu1HQP0v3FuP2unSUhirjyisWlNZX39A5Rqq6tNy1IsAAAAAElFTkSuQmCC",
+    navLink: "https://ffmpeg.org/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1674899432"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1674899432"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74be39b5bb8cd0000bc",
+    navTitle: "人人都是产品经理 - 产品经理、产品爱好者学习交流平台",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAACRElEQVQ4jTXSPYicdRgE8Jnn3Y+7rCR6pyeEbfJVxCaNCAcRsQixsBJjm8ZP8mGXPkXKoDYJtkLAwkJSGGwOhcNLEQ8jJCLKBUOUyyWXy+3t7r27+39mLDaZcmCY5kfJIAjYlhHE85gMA1SaQcAkjSAN2zaAKkjCNmEjyp0v0P8TUcFpgLZpSM5USpOSN+5s1RPZE9n9W1/1rkA/dPP+d7IlSWkpAAsO8trt4cfX/v7wm9v3dhpeX+n/dAGzbY4eYOV9r56HRgAMs2RWEbce1J99/zj66xvbo8Xu6Oqej3Y31/bMVXvn7STqxGuf4NgVwI0gB2NdWnoiKarmbMuncR69NTQrZ1qAiXZg82dozGomSG70y3+90qq0vdX7fOHyyYXVOqK/21j9ZxYVLFhyFuTQdtg2WMHpavjH0hutZQQi2jf/2rszbDNgmQYhwCCD5GCUo3S4aGb+0/tXf1k/8Pvd3brdPX7qnOtgRQOY7KD0ATQAjIpTajWazcaE/ac/vvD1kaNL75z8YO6lR7lmtik6nJz0pgNXQVogOvMLB1+sL54+AZwAkGvfqpitsIgcTx8C4LhkSTfKYFwPDxw8JCvLSCrx6nEvvJ7DtCpbQE4H3lU12+ls3F0+tr9z4b1FGIwmEex0G2/fiO6b0SwkMd6GHQAQ8e/N669MHn555t19nbYBkiCt5MzLzbeuV4dPIQeoH2NKbePpYGnlt0ebW7YzU5IkS5aUE9kqw/Lr2fJwWRJtAc9MSyYBgOQznlPnCE97+3+f9oD0C/75iwAAAABJRU5ErkJggg==",
+    navLink: "https://www.woshipm.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1732612858"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1732612858"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b3db2ad65590000bd",
+    navTitle: "草料二维码 - 生成器",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADSElEQVQ4jXXQS2hcVRwG8O+87p0774dzZ2rTmSZNRoy2RQ0KJRbRumm1C8lKQqEURBpcWXShiAuXKqKgtAtRtO40CioFQQVBZQiFYmsTkw55GZvMmHncuTP3ce45LmqFLvzBt/1/H3/y6KWz8z+t/fgEzDSHVhSEKviOrOQnVj+emX/wMUC9+evTl1e7v43FRYZrrSghVA3CjjxoP/k9wYX7NawCMNwFoADCASMB9Hfw6vRrY8fzOvj06subKbOMoewDAAQ1YTALbtgGhUh68LuYO3z6pUtPfXj0lam5WaIiQGu4QVAMo65NQCBViGOjz5+am/ro6EPlky+6YQcWTw04tGKIQpwdnf3gPtvuA0Di4rH33O5azlWDItFKDqWDfHzUOTlx7hMA+Hb53ToFfUtDcwpCI/AYLm58fvz8woIAgJF48ToiidawO9YLOgeUlkgb9iIALCycFy1v7QQhFAREElw4qBHLAkEfwkxtV5N7NprDdqW727CnJ068/9yeIKpvfflCzhprxnhqzZPOSBgNywoKYTQAvzs3vry1fWUClCN0d0orraUSzAwAioZz8/B22tXQCjtuozgIu0VGOUyWRKQl9mcOrRAAmP3h9XFJuQ2KUtPfHW17Tu3vQesekKB2uuyRNBd/UF5YTIm7lk1mNRjYtmCkOTP5xjIHgDMje72YYB4H93tBKux7fdny4zpQAalmbZK2stpgaWmJXGjA8hWJfEGFBwDks8vnrt3sLU1SwuFHQ2glERMJQGvsy07+PFKooDW4cQSgUDoCAFDKEKkA2Vj1Ot/qNSYtkYcvXSTNUjtlFja9qF9u9TeLYOkrgicipaMjgllguE2DMRO94K97qcEtL1Q+Hq7OzE4feHbfqam3D8VFdsULHSREZikmMotKK9yJANAQ1OpwDcVC5aNWffwrm9guALhBp0YogymSNwySlCD4X5yASka4WFr97sxG99ovf3YWK/WNLwoGiyFGE03OSEhAAeh/m++cwgM5tOJGBvX1+Xfq6/MghMJgJigoOCVNHiWCW8+7feQWShj8aJCh+3MPfO0GbUcw0+NUhJwaviddp5QZ/32q8sz63vwjWzmrejWI+g6A/+LJnlOM1775B1zzeTy+IfN2AAAAAElFTkSuQmCC",
+    navLink: "https://cli.im/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1659057801"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1659057801"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74ba568504fd80000be",
+    navTitle: "字体天下",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABLklEQVQ4jWP8/9aUgRTARJJqcjSwQKhfv/6fPv/1+49/EO7cJa9XrHvnZMtXWSgJEeHkYDI35mZhYWSE+MEv+vbmHR+UFdkF+FgwTf3w6c/d+z8DvATXL1aBamAWPf3vH8PNU7qPnvzC1KAgx65qcomJieHva1OoeaW5kgwMDPsOfeqe8gKu7u27Px8//ZWTYTu3X7s8H+o2RlzB+uTZL2PHa+8//tm/UcPanAfd0+/e//nw8S9c9O+//1Gp9169+Z2bKi4pznrvwU8GBgYhQRYBfmaG/29N/781zUwSIxigXQ2y/9+aYnfS5Wvf9WyvqCiy3z6jhyaFL+J+/f6PKYge6t9//Hv+4ve1m98ZGBi4uZgJa6huedI//SUDAwM/H3NDuRSmBpzBiguQnPgAKNt6P38EbOIAAAAASUVORK5CYII=",
+    navLink: "https://www.fonts.net.cn/font-38213257557.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1659057801"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1659057801"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b17b71bbafb0000bf",
+    navTitle: "VUE后台管理系统模板",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACfklEQVQ4jaWSTUiVURCG3znnfD/Xn1RuurBokwsVJEoIMn9woSSi1CaoRbRy565FgV7OhRDdla2DXAS1iwJdmiKJgYgUtdDARbZRSqV7v3u/75wzLa6aWbjpXc7MMzPMvMBRaS2aWfutPOThmFp5yGtm7UNrcTRO3dPZSeGrBia20dx2rfmwE8qKQBSlGVt59vQFALTeuXvbc8F9mys61VJdSHWd3iIm6WKzrpjonQj8YSZG2FKNnys74O0EKuUe1+uh1wBAq/EjjuJaeEDYUg0Z+AATbGJvyY3nsx/P3exolFI2czklMA7xlz2jvPBUeY6p8jt3qqK8ZqIoDtrTUE2VRjhBSb7w8m1fJqsAwEnK2GIySITQv1SD+NOeZ7YiBssHBMDkLIu60PMv1jDFrCwnBScpAwACGmK+d3TNODMpQl9QmXRBWxoMBmJHHDsCGGFbGlQmnQh9YZyZnO8dXYOGENBwYFBOReMmX9gQTgq/qcqp8xWAYWbDLBsq4DVVOeGkMPnCRk5F42AQNFzpJVlNyz0Tu85yBooECAja02AJIkUUXE0DBECRcJYzyz0Tu8hqAkrhQw8AQPdlmpOpoN2RNflXmxIElA2esQJS2ai4MPueu/brXekGvzsAWruE6R5ba5CAUp11nOqsYxgQW2sSpnslUB9S4gjvoLVY6M8s2cRMycCTVC4dlUknA0/axEwt9GeWoHXpbgdOPOZYAoArbx7WpwKsEqgGABj8IyriwuLAyLf9Ov57g4OEBi0OjGxa68bIl4J8Kax1Y4sDI5vQoKPwvzY4aEMNM8P+WVH7GQz6yluN631PYtCf8EkiAGifyd7omNbXTxz2v/oFIW4et9u/Qy8AAAAASUVORK5CYII=",
+    navLink: "http://vue.easydo.work/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1680575328"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1680575328"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b076e02ecaf0000c0",
+    navTitle: "JWT 在线解密",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABmUlEQVQ4jZWTv2tTYRSGn3O997YmJqXpaksUqrHYDDradpOK7SAiioUMKnZwUqT4H3Spi4i/WkELhdKhdBJU7FhaRKIOEgoWMpiApZFea6PJzb2fg03iJclNesZzzvt873fgleyRE0OuUi8EouyjFKQV3JBv0diGJnL0/2EgcRX7Swo7+ckfolRaq/eycfoUnU8fgkgzI1Gt0UTrioCu+6pFBN8Noy+GOTSAmCbFtfcUV1ZrdnwBkcV5pPyNW+P8fvUa684EOG7VqR+glFondyXB1uhF/rxd5uDIOQKJMc+OL8C6ew/7Q5JSap3t2xO41k/aR8+3ALBtAJzvm9VeoYBrWWiHgs0BxY+fAQjevF7ptQ2f5UD34cqsXJKJxhwR8YLaTLqWFtCP9eJ83cDdzWPET6K2LXIXLuNkso0dSDhE58xj3NwP8nPzSCiE3tNN4c07cpfGPOIaBxIOEZmdwYj3s3P/AbtPpuueqOENOqYmMeL9/Hr0rCWxUgpPmPTjvZiDZ8g/f9lUvAdIiyfOTbNTVv6LsyZy7S9oEIzvJiShZAAAAABJRU5ErkJggg==",
+    navLink: "https://www.box3.cn/tools/jwt.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1723536045"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1723536045"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bdfebd173e60000c1",
+    navTitle: "Unix 时间戳转换工具",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAh0lEQVQ4jZWS2w2AIAwA2+JCJhoXcCKcwzVcAjeAxlFcwNcHxmCFCPcH3AWagEobKEJpcwY453aLu0Wx71HaUBgzc322z7Ia5u8FlLJTUJF9B/n2HQh7Qfv1mNmPROKAmiNqd9P6miHTBoAq5UXtyJMEwv4PQraxLwi8nRs8dlYQ2gCApd/7AnuLWhmJlfNeAAAAAElFTkSuQmCC",
+    navLink: "https://tool.chinaz.com/tools/unixtime.aspx",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1660007446"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1660007446"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bd65dcd8da90000c2",
+    navTitle: "Lottie tools - 预览 Lottie 动画",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACdklEQVQ4ja2Qz0vUURTFz73vve/M2GDmCFELKVtVroSoLHACAw0EKdpEQX+EixCdvlkLpV1Egasgd1GrQBctjAjBMN0YbQJNDISMymF+vO/33dtCLY1w1WdxuVwO5x4OnX9568DPb6lPs3my9z5p2lwjAPgw/ayMHZwoXs0DgP2W1XToGNlaWRubbWStaXhQOGROgTWt9TdT8uarcD5yHT03Rt9PPX0CAB09N25aZ29J2Seuv5mzBauQA1bT8I66pu5cYPArzjkO3z2qE5+hZYEifEmqdBIAXE4XCeYw5Rm5660wTRGkmohAus3yxPTS0WvFFnbutERIiAH/8UcwuaiJOAg7PWecuxSqPskUW8BHGoIhY9QnD6d7bz9mAKgFMxbqfo2FjGvfD9uas6HihUgHiHQgVLzY1px17fvBQibU/VotmDEAYMTgmb6hVQ06SoYZEWnUWQBYWRWRKiKwctRZACJSMswadHSmb2gVMZgRQwDQRpDxtObnGcbatrzY442qXlS9qD3eqLYtLwxj05qf3wgyDoAQQxgAEIPm+uKKkA6riACEzNkWpawhyhrKnG1RgKAiIqTDc31xBTEIwOYAACgIBO2aHHlus9FlQUjrr9YMAGS6D4at7y9e95aubGsBwOIvUkKJfXqRGPvcmYICAKXKIulGSij9reffG0ERg9/2lBZVwyOOHJMjIUfCkWPV8OhtT2kRMXj7+26DzS4EACrW3U+r9SUyxpAxJq3WlyrW3d+p+bfBVpbZ7sF1BY0QMxEzKWhktntwfVdnexgoFFReXpmQxC9I4hfKyysTUBDwJ/rebIpRnLxbLE7eLe68/Xd+Ac0gIaobTdCcAAAAAElFTkSuQmCC",
+    navLink: "https://q-fe.aixuexi.com/slide/lottie-preview/lottieTool.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1684286512"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1684286512"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b6f4ad063210000c3",
+    navTitle: "onlinesim - 在线获取虚拟号码短信",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACFElEQVQ4jYWTT0hUcRDHPzPvrbuxZrYb2EV5JmQXu3TsUh2sS0FEdgmiiyDmHzKoQ5CnICoIbPMUS+cOdowgOkggRIduBuUrI0hwRW3XWH3vNx3cXVfNbW7DzPc73/nO7yc0iM7cci/oI4Ev/I6uz93JrOzs8bdl46ZBtnAUSfR6Ek05xwE86TEz1pt9fyd4G0GQD1OUVvtFk2Mg2Shy0yqN9NURBPkwxVrmvqgOAk1AaWdjshhFHROrJ1XshBbjF9V1FIBSpl+kBm4YojLimr1nnU8W2gA0mFg8Jioj9WAzm/U9t1gPLDf7/vxQy3vMDYjKGWtK3QvyYUrxEn0gR7bAfMSVr34dzP74l4JwsPWNYZOCXqHYek7V5FRdfV1c/ODb0KFZANV4hjjuA3crkS7UfHGxvAVJInrZd0hLndm/VOOZalJRsUuJsl6AZBnRblVsdatk0f9MBHA0ZUGSm2Rm03XcbSb+8YbocVNVuwSWxtxnjZ17BTZXUZDGZKwrV2jfCx9kly+I6DWQEuZeCkDwdGVYVB9WTylm7xB7XHYyUzOvuD9Qz79o6DDIYcNNsm/p5iZBPkzJWuYu4o2CpTdnSQlzcwKLACbSBXRUBkzZxp+BcLRtoXaAIB+mpHjwvKl3W4SePV7lvOGebzjJ/bzRUgDY9V26coV2Z95ZQ04j2l1xeh5xH+LIXn9fav3EuLhq/1/kWM4XBU+awwAAAABJRU5ErkJggg==",
+    navLink: "https://onlinesim.io/ru",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1723536803"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1723536803"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b35d37f70ed0000c4",
+    navTitle: "SMS-Activate是在线接受短信的虚拟号码服务",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACUklEQVQ4jXWSTUiVQRSGn5n5Pu+PPzc1u3jxaqUkqFRQG6OtRJQgVIuWBbnuD6JNCFHZxoQogiDaRD+7iBYGQosWUkoa1o2LlqFwyUxDvP/fzLTwu6WiL8wMw3nfc945c2A9JFvA9v2PWRAWBPjbBtQCnRLiUhLyDPPACDA12nvAbXSygR33v6yUyGLNaYGTQCvwGfgA6I5o+GA0JGMPT7R8XyWKZvDeGitN88BE0lkjvgAsAzdsX2cN0qv3jI46ysmAmPm2mF7SUoQxTEnl7LfG1ryA6ZKDbqARuJe4uO+49myFkMwL+GO01h42UOmoKmPFokCGDHJRSH00UMg9k0AQONwAjwBhMKGAzQyHlaxyldoddFR9OEihYEl7xgSVkJUCr10Km8o5bkQCe4HkLOQA21IVSOBUtmU87RYLek5I/Vtap8bF2SaV8jL52XfaimCZ0UN7BicTEqgHfpbecnXoh5stetVtdeHZplpne5kKxI1HVIv0p6d3JkaDwVgsXu0uN0TsigUhgB5AA6+AfleKS9e74jfHUstjH+eyt461Rm4PHolPfl0q7ipXqlhEu70vp9PD0+k3gHGAX76LZuBK0djUk/GFQ8mF7Pm8tpn2ugqnCOTzuZHnD5KpPlD+jw2VxqAcuAy89p3MsNqPJSW5u3HKyhQ9vut1k9vtz0IRsALywDhw+hSonas/BVAHDPhF/6HUv2t+Egs89qtE1vCafHHHBt26yxkgAZwFYv7qAM4B/ZuJxYYkFggDXX5TDZAGJoH3fo9KvE2htgpsZhvgLxwh13efEyzDAAAAAElFTkSuQmCC",
+    navLink: "https://sms-activate.org/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1680166597"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1680166597"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b5cff425c930000c5",
+    navTitle: "易采集EasySpider：无代码可视化爬虫软件",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABxklEQVQ4jXVSoc7iQBCe2Za/BocAAUEgCITwABVoVA0SxwP0AXgAXoKER0AXAQRDVQ0gWkNqMCUkJJCKtjN7Yrged8l9YjOZ+Wb2228WiQgAtNYAoJSSGBH/Fyj4QlEU0l+CiPI8LyciopIIAAzDOJ/Pvu8DADNL3vf9y+WilNJaS8bUWhuGEcfx9Xp9Pp/NZhMRy3mWZcVx/Hw+O51Ou91mZqWUIqJGoxGGoed5cRwjYp7nWZYhYhzHm80mDMN6vf5Ry8xEJBp2u910OnVd9/V6vV4v13Wn0+l2u9VaE9HnhcwsPUR0v9/TNHUcJwiCIAgcx0nT9H6/y0QBEhEiEpFpmrPZ7Hg8zufz2+3GzK1Wa7FY2La9Wq2KokABESmlmBkRH4+H53mn0+l4PAKAbdvD4XA8HtdqtdLMj4NynXiXJEm/3+/1ekmSSEYkyanKpQBAnudEtN/vf35+LMva7/eyONEiRiMzC1vasiybTCaj0QgRD4fDer2uVCpCldP8XpPWWilVqVSWyyUADAaDkvdnKH8hz3NmjqKo2+12u90oipi5KIpvzr+SmNk0zff7DQDValXc+/6Of9kqPUQkuqX04f2u/gKD04wyBUW+8wAAAABJRU5ErkJggg==",
+    navLink: "https://www.easyspider.cn/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1687758533"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1687758533"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b300cbaaf620000c6",
+    navTitle: "🤣 Emoji表情大全，颜文字百科 💌 - EmojiXD",
+    navLogo: "",
+    navLink: "https://emojixd.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1698139152"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1698139152"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b9a4f2748c00000c7",
+    navTitle: "Postcat - 在线API 开发测试工具",
+    navLogo: "",
+    navLink: "https://postcat.com/zh/home/workspace/project/api/http/test?pid=352a1f65-87ac-49ac-ae92-c7a9be922447&wid=93c0d9cb-0433-40dd-adff-5487a1e9b856&pageID=1698139127360",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1698139160"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1698139160"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bc0d690db520000c8",
+    navTitle: "嗨格式录屏大师",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC8UlEQVQ4jUWTTWhUdxTFz73v/+bNvMlEkxntBMwq0glGXKRSXDRtBYWKC3dSQQrBBlpcKIKQLqIgdBUXUgQLTaF0240bC9kVoXYlFhNwZdNFsThTi/l6L+/9P46Ll+jiLM+9B37nyPLycvPOnaXFweDVF9YWDUAAUAAAECEBERAgSFBEEMe1/MCB9s9Xr355PRoM8u/6/f++LsvCqCpUVUQElVRUAUBABpAiAOGci/O8+PDp02ejMj39SV6WZRxFkW5ubqEsC4gISBERgiTq9TqazSZD8AAEIgDJEMc1a4qiSFQFW1tbOHHiOCYn34dzTlSFZJAoMlhdfcbHj/+UVmuIznmEQKiKlmWRqKpiY2MTFy6cx9zcLFSNtFrDTNMhqSX7QdRw+fKcnDt3ls+f/y0heIgIrHUgAeOclWazidOnP8WVK99gbe0v1ut1sY4YG3VY3yzw4MEx3F68KargmTOfSZZtY37+Jrz3UO89kyRhluUEPA8dGpOxbhtDw11cO59j9qxB//8Cnc4Ier1JuXVrkWmast1u09qShsTbWABQlhbeR2jUHG7/0kVhPQ4eNFhb+wc3bnwLY1R2dgo450ESpsJDVJzfCSC8xLu1CKj4RwCI6lflU5IUEZJkCIFRFKHqQwQTVSZrLdK0gYsXP8fhwxM0Jqaqkgw0IiJ5niNNGwCAFy/+ZZIkQhKqgizLcfToEZTWot9/xYWFecmyDP3+AMYYSK83HV6/3sClS7M4dWoGDx/+LkmSkKzqXJYlTp78GPfv/8q7d7+X8fFxqiqcK6sDExPHAgBsb+eYmfkIU1OTsNYJoAQoURRhZWWVjx79ISMjw9zjryoIgZBe74O3VV5fX0dRlHtERAQIgWg0ErRaLXofdjcCeM+QJDVrOp3Rn16+HHxlrQ379g1DBLsLFO6tMgTSOb+7AdD7gDiOo06n80O0tHTvtydPVkaKYmfKORd7H0AGCYEIgRJChbUKRQJArVbLu933flxYuHb9DUc5oTMb+fsNAAAAAElFTkSuQmCC",
+    navLink: "https://www.luping.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1710295452"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1710295452"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bf5bc437d500000c9",
+    navTitle: "git 服务搭建",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC90lEQVQ4jXWTW2hcZRDH/9/l7J5Tdze7GNfcTE279LKQopSWWrBsSyKSEnwokTzEJIUqrdYHIYIoFC8vgi/iBYSiaB/60IjVl6604rYxCRFaHxJKkV4SGlLNdrPJXnP2nO/7pg+5iDEODAzMb2Zg5j/AJkY9PWI1ZKsO6oHYjP2nCGCZVEqugd5Q76vqnb5r7lDvSPXNY6cB4H2AZ1IpSatN1yb8x9RQ71GfzFfC91uU58Mj/E3SOhn78uJPG1lGAGMALQx2HCBpHRG2vSOo/YGK54M1Pa2Y7cD76760ywUsC3le1bybyquNbrswPrJaC9DevdZce2ysIRLat1goQTe3mVj/aWJOiJtKCfzxOOWHv4H3W5rXRcLIFqtTcn52f9vVGVcCwN1E6HhMin3T2ZzrND4lG976iBfSw7x05UdmqmUKJJLMgGHZQBWLFRUVrH0pWn8SmPlUAoDnu5NlXz5gbqUhcmwAxbFfWO67z2DvfoYCiSSrTl0nAoORkgutAlVD88ar/QEAHACSP/w+oVx3ToQiXDZupWLmErF4E+Jvf8yaz3yOUKoLtcUcGXACEa8p/bD90tToegMAUFqTUhpEBKUUlNYAX0nXv3wCkUMvws1nobWGMYYYQABWbn79hfZdIhg85eYXIuFnnyMRe4Ln0t+j+ucUlsZ/ZYWJDOK9r7HQnv3Ij14mBpj+1ujlr+/lsisjBO8Mkm6tCVmbPfcFooe78GT/Gyjfn2aLExkq3ZqEcZdBAFUqVS/I0cQY61oX0pWObXUx67HxOsdOFgpFWInduu31d8HtLVyXiwg0tlDuaprmzn4iwo6DotJ3cwtLB7pvPMitK3GiI/mS5KybpGy1PLezog2c7buU2BKCOzstxcM5+HY4Y4imjfJ/fv7aneFNpTy6E+FA255XNKkPmOvWG60AK5jnjvNhaX72284bi4V/SXnjQ61tdyy1/T1hyT4CAyk9fDBz+8xG5n+fiQCeTsDy7XgUAPLlbGFwBh4DzEb2EWmEYQfEOijiAAAAAElFTkSuQmCC",
+    navLink: "https://gogs.io/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1714120538"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1714120538"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b5484d9610f0000ca",
+    navTitle: "CSS Grid Generator 布局模拟器",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAQUlEQVQ4jWNgIBEwYgr9//8fp2pGRiZSbcCugZGRkZGREZONUwMeQLIfWPCrwAQIJ+FyNzX8QLyTKIuHoesHkgEANf8PSF1vbLwAAAAASUVORK5CYII=",
+    navLink: "https://cssgrid-generator.netlify.app/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1721614972"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1721614972"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b05da34a6730000cb",
+    navTitle: "纸飞机折叠教程",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACJUlEQVQ4jZ2RT0hUURjFz/3z3pt54zj0ZprMyWwi/yRZLmzMJBJ3RRlFukhaVFTYooKClrUKhtoUUTQrcVcytoiyTQQiWAptHJA2SpT9sxmDnJq5791726hQNgN1dvc7hx/fdy5QTluuVWL3jWi5CC1nOo3re8NVoUv/DdAGOQZNe8vlSgM6ktWU0IRhsk12152WfwbQ6miftqyAoBzaCZwsleMACAD9p7FjLvPQ8lnPlSL0Z7GwOFUCQGabag5BWucBQLnKEwywPQGhlHA1ldBaApQCBUuBAAC+SZtP+2PsRaRugACgM/WxPlA7RQj3SWhoDSgtoaUGVxJUSWSpjangRow5DRi3a+U7c82FxUd3U2R5lenNkXqDBQco4+1cFDyl5Ncs8X/P2BtqR52txuTaJvLWCsOTcsLN50+JJ/0ZLN2/oqeAVRWPN04q58torK35lVN35X0gvNdgnPmUByVEMjucvgqMFFc6WNVKQ3fQaDmaJBqnQ1RzphWKrvdRKHk8P/F6HB9SP8p+Y2j7kZthyH6HSM60guvKxwufc62c0kS4fedLoJOXBqy7HGCquA8AXE+5wnMvZofTPZGoM+g3jOsG583Y37OtJKCiLZ4wuVkjhPcmn/e6cukzt4ARl5v8vhByBgAqfWxPSYBFzcMAhnILc7sKz86OLY3VpwcnhnLz861F1xuklB4EwFZ1B3Ry/4Hbib8Yv8nffa8DTecqlt+/AD5Yy2u2YQ+EAAAAAElFTkSuQmCC",
+    navLink: "https://www.foldnfly.com/#/1-1-1-1-1-1-1-1-2",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1689821349"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1689821349"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b8071b4d6210000cc",
+    navTitle: "HTML to JSX",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACPklEQVQ4jZ3Tv2veVRTH8de53+/zo22wQqh1KBIHh4pOIhQqlNZBcHJxE5xTIkHEbNJUNyMUNZhBHB38Bxwbiw6C4uCgxamtOCUBg8Q0eZ57j8OTRAUnz3C5w+dz7uV9Picc12oWq9Hcyot6i8LLpp4AvQfSl6Y2vBk/n2gR/zJv5KL0nmLeIVKaqcIQzY7wjsXYOPaEzBCR1vNtY+/bQ5qgE0cPzBpVYeAMHlqxFGsyYyb4MK8aul0OTdvsV8V/VNCQOdQ7dM1ybBayU9yMkO0QTekKpdCF6EKUQlfIpuSECKm4SXbhk7ykuWNf/8x58esf7P6OIsQRgxSaPDfP/Ji7W9IpU82VvqTLrRk897j6/WvZr/8Q+WCX0susMwpRZJ1w8RyvP8vTn2m/7BuUzuXSDiw8Nsf6i/Ldb8P9fTkci74XgxGDIX0nRqfET7vyg+/Epy/JR0c4sNCrDAqjnq0/mSYHHZnHMz4CGDycUBpzQ7puRrQvc+79tstbX4nbr6Yv7kZs7ckotJz1KEXmlAtnxStPpec/j9jZo4zcCx/lpSju5L7+2oL4cZvt7aMUzPDNziovnOfJs3x9X8Zp02yuBNn52GYMvZC7qqGu65EndmJ2qxNM1XhEl4e+8YarhaiaG9lEGSO0WqmNmrKmrI1aiaKVIdmE5gZRi8ywHJuqlXZaj06anuzBcZTTNOnaGb1qxXJsyowiIq1msRRrJq4b2DE2UP4R56IYGxjYMXHdUqxZzSIi/57U/1znvwCZxwimL92JYAAAAABJRU5ErkJggg==",
+    navLink: "https://transform.tools/html-to-jsx",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1689821179"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1689821179"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bb6414936840000cd",
+    navTitle: "AST explorer | AST 抽象语法树",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABXklEQVQ4jbWRsW4UMRRFjz1j+dlvBD8QUdBsxRekgS5VCmoKSr4gRZIyPX9AgfgBxBZIaShBm6TeIAoKKHYjUc1Iy440pvGuht1h0Ra5kmXrvvvevbbhHmDyPgLe5TXaqP0XDvgMJGNMyme3T4oKmInIUkSWwDxzW7D/4OqyLN9aa50xxpVl+Qaoh/TlwIAE4L1/0rbtqbX2oYg8rut6XdsFAxBCeK6qt5nzqvo9hHC4I/VfAwpVvRGRFysyxnimqh/7JkMoAETkpapOstNK/CDG+C2nsCvtVvTs/tV7f9yLa3OKc1W9HOhZ48B7/7qqqvcDAgNUqnrtnHsFPNpsPgLmMcZUFMUHQAYcnPf+k4gk4C73rDG21ibnXJO/6unmFYBnQAohNNbaBIzpFadd19G2bQQa4GfmU+/vfwDNYrGIXdcBTOm95pd8ngEnwGTzjsAv4ArQ7H4B/B7Q7Yc/fixMXC9SSEYAAAAASUVORK5CYII=",
+    navLink: "https://astexplorer.net/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1728352694"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1728352694"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b66d7627c4f0000ce",
+    navTitle: "Vercel 前端云部署",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABJ0lEQVQ4ja2TMYrCUBCGv/cMWcRusfAAeokE7NPZCFtsbedJYuUZFlxL8Qh6hxRpArF5hWtlCCiZbZ7Lxry4sLsD08z888Ew/0A9noAIeAcOwMXmwdYiq3HGAFgCJ0Ba8mQ1A9fw5sHgfW6+Q3xLbQg9zxPf99sgSztLBBxdoslkIrPZrA1wtLOsXIJ+vy+73U7SNJXRaNQGWQHkruZ8Ppfr9SoiIovFQrTWLkCOPVOtMRwOJUkSuYUxRoIgcAEuDYDWWuI4lvtYr9fS7XadgNoKQRCIMaYBKIpCptNpYwUP2AMvAEopxuMxeZ6TZVnNKJ1OhzAM2W63lGV5K++VPcUb8KyUotfrobV2WlVEOJ/PVFUF8AG8PjTSD/llpD9b+V+e6dfv/An3+wTVwO8WqgAAAABJRU5ErkJggg==",
+    navLink: "https://vercel.com/docs",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1691043638"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1691043638"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b05db6ce7e40000cf",
+    navTitle: "Apifox - API 文档、调试、Mock、测试一体化协作平台。拥有接口文档管理、接口调试、Mock、自动化测试等功能，接口开发、测试、联调效率，提升 10 倍。最好用的接口文档管理工具，接口自动化测试工具。",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC+ElEQVQ4jV2TW4jVZRTF19rf9/3//3PmzDCeGSIT7IKBSHQxw5kiHCwikC4gPoQgUhKGD0EhdBEb0ocuD8m8WBEERTow7/VQwRiEgmQQgvYilWVI6ch0bv/vtns4OQxtWC+bzWbBWj9i1Sh2GWIhAUC988l7xeKouLxOsn+fJxbnhzcQAEpAAYA3lwQyACzPPDU52i5fztYfEKQ1ngE0GdbkL2OujxRffH8GAHQXDBeQuNpB3LH7eSn0TZp8V113kB0iJFE1oFkk460ky/DRDd9/Z2L+7OUVB/7xFx6wBT+gzdtS6CIyBUyOmrz0N9UksGGBViPq1V9Ms92SrOHPkP3b1ednPpRZQKwp5miqbb7nfTZl4v59tt8YI4JCWACdGva5fdbu3Ivu9Y6Pyaw14o77vVun5C3MCCNH4HPCIBl36BWp161F+ukipBqlqqUOAvO5H+D27BdObXf1jW7OKH0OblKARc0sFB1v5KHNwNb7aJtN2tY4xauShbKflc1RAkCx+0XlSBv0KqCNAsyQaokakC33AAqtNm5A9epL6pcHxFKXcv+DzOJUuz2V9XeI3nYndZBopUELAJoMqBYoKygUSKr2iUepMcFVBTgzjXDhZ3ROzqN6eFq1aECTALCwwKIKH1Fkg3xliUISKcKIVdmxfRizqrpNG4myUH/qO+WlyzCuqdpPKsAMNQCoWjl/fQ7x/CVl4ZBDpPoA9R4aIoXU8u4N9ONrmK4tQ6RKyTsRYFGZrMCNiP1jOejrn2r67apK4TBUASkcYq+Pv+Y+yf74Z7HRHINkU5osg2GVtxx+BoWZg8P63FvS0C5j3vOYjRMtpF+vgKXB4Mfz2Z0+q+1bJiwYEOmP2fDPaytV1k0Hb8VYdRBODyCn0neupVABqPtCxlSOlNaMtwDtf4vcO8KvTp5aBdOsELMZAHTqjc0wPAyLpwFPNSnTiUDDhZT7R+03H5/4D0BySOVNlEFgliuPpg89qza9S4bbIekY6t/f4+mF6/+n918bnm6Y3UTOXwAAAABJRU5ErkJggg==",
+    navLink: "https://apifox.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1708251113"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1708251113"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b0ff9e39b9d0000d0",
+    navTitle: "pdf转word – 在线转换PDF文档至DOCX格式",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAC0klEQVQ4jUXHSWhTURSA4XPuu+++IRrT2mprmkZDHVKlVN25cgIRJywiiIIUxAEURBBxwI3zsClORUTQqgurIDihCKJVxKFErdXWJjGNbYxS00rSN797XbjwX30/JiIAAv6FEhGc/19KgHMhADgAAggABIoEUaKCcxCcm5yoADIFIcD3/RInGqBEkFHhe4AInEOqebnZ98UezFr9qfTWNe+n6aNdnfZAv5VJDh7e/VaD7/u22dlvVn/aKwz9aDlEaXmlWjcju6s5uGhZ5Ghr79LZan1j4cZFoo+ZtP9kof0KHV9JJ1Rld24kimpnk0T4Pnfs4vPHdqqHaDpKknDs4TvXB/ZuFpzLNRFuGty2BOf+aNHsTlDgPsos/iKFjOWO7fFHCoQpUjCETAEABBSeS4Ohya03heclm+ZRJBI3jPT6xe6vvNWXkcMVwnOFbbFwFAnhjoFMcXLZnvlxABSuSYkekAIBo6vTL7lEIYQxwpQpl+8SRXV/5syPyfK1VbSswi8ZIAApSFt01xnoN952CAcABDeKfvGPkXhd6ngyeHCHnR4mzLR6P40m3gAAUSSCTNXqG2Jtj8pWraLl5ZFTl7SZjYVbV/Mtx6oPnJ7x9CGrjUnjJ7BJ1dGzV+VwLdUb5qrTZ43cv1W1+8ho50tWEzU+vKttabO+fpIrqwq3b1rJvuDCZbG2R2Z3wvqaoYL7Vm/3zzNHQktWs/DkkXvtw3euxa4/kSuqRx60506fpzqghFNvd2S2NIEnCAISTVPr4qhqIDiriSp19UhlAMEiMaVal0IkuHgF99xxS9cIHyCzfZ1bGHJy3/Otp9Kbmrw/w+7vofy546nmlV6paH1L5i+cKHW+Sm5YYiZ7Pi+I48f4WFYTBUCzt4sbEJjTIIXKSq+ecRP0xplyxURnMCtsy0oPaNOn+EYJE2EQDgAAUQEIckMIH6TAfyMFIEBUwk2OEvwFoKRpPVT4segAAAAASUVORK5CYII=",
+    navLink: "https://pdf2docx.com/zh/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1723166697"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1723166697"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bc13041954d0000d1",
+    navTitle: "SMS-Activate -接受短信的虚拟号码服务",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACUklEQVQ4jXWSTUiVQRSGn5n5Pu+PPzc1u3jxaqUkqFRQG6OtRJQgVIuWBbnuD6JNCFHZxoQogiDaRD+7iBYGQosWUkoa1o2LlqFwyUxDvP/fzLTwu6WiL8wMw3nfc945c2A9JFvA9v2PWRAWBPjbBtQCnRLiUhLyDPPACDA12nvAbXSygR33v6yUyGLNaYGTQCvwGfgA6I5o+GA0JGMPT7R8XyWKZvDeGitN88BE0lkjvgAsAzdsX2cN0qv3jI46ysmAmPm2mF7SUoQxTEnl7LfG1ryA6ZKDbqARuJe4uO+49myFkMwL+GO01h42UOmoKmPFokCGDHJRSH00UMg9k0AQONwAjwBhMKGAzQyHlaxyldoddFR9OEihYEl7xgSVkJUCr10Km8o5bkQCe4HkLOQA21IVSOBUtmU87RYLek5I/Vtap8bF2SaV8jL52XfaimCZ0UN7BicTEqgHfpbecnXoh5stetVtdeHZplpne5kKxI1HVIv0p6d3JkaDwVgsXu0uN0TsigUhgB5AA6+AfleKS9e74jfHUstjH+eyt461Rm4PHolPfl0q7ipXqlhEu70vp9PD0+k3gHGAX76LZuBK0djUk/GFQ8mF7Pm8tpn2ugqnCOTzuZHnD5KpPlD+jw2VxqAcuAy89p3MsNqPJSW5u3HKyhQ9vut1k9vtz0IRsALywDhw+hSonas/BVAHDPhF/6HUv2t+Egs89qtE1vCafHHHBt26yxkgAZwFYv7qAM4B/ZuJxYYkFggDXX5TDZAGJoH3fo9KvE2htgpsZhvgLxwh13efEyzDAAAAAElFTkSuQmCC",
+    navLink: "https://sms-activate.io/cn",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1723537179"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1723537179"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74baa663596570000d2",
+    navTitle: "Unreal Engine - 最强大的实时3D创作工具",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABcUlEQVQ4jYWTTUpdQRCFv748g4YXhIDgFuLAQTJThGQZCVlGVpCxOHngMIISQnZgBvkxIBlkDcnEECQzQX1efd7PybnSPjE2NN1VfU51ddcpANRChrqmbqsH6kXmn/jWKtw1p3cM1ZE69u5xGsywJhb1kbob0GVFmKhdsugq/244pQ8yysFZ1k/q5lQ2x+q+ehJ71JNX1Ta3qW7G/zH2ifpTfaq+S4YX4ayg7lS3fK6e9jppv1cfqsvB9E9S3W6A54BAC/xQ36gNsAcU4HEp5RRYCq4DmuxfDIDFAM+Al8ACMAJmA2qSVBub4AuwOKgqOQTmgd+xO+CyInVVsC4BaIDDCiQwF38DDIAHKdcMcAR8CU7gsAG+Jlof9Vdu/gdsAG9LKQL7+a9JghfgG+pKStKLZUudqarRqE+yX68E1qqr00Jqs35XX6nP1A/qX3VvSmzXQvqflM+neqE/uynle5qpDji+1Uz3tPN5/ubgrna+At4vSiMeezPcAAAAAElFTkSuQmCC",
+    navLink: "https://www.unrealengine.com/zh-CN",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730282406"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1730282406"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b27c6c8cd8d0000d3",
+    navTitle: "百度搜索资源平台_共创共享鲜活搜索",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAACIElEQVQ4jW2STUiUcRDGf/N++bqiu6yY4mYWlZJhYmCXKDJqpQ8iOwUVBF06dLGIoECCsvAWSBAVHQwPYhaUByVI6eMgYn7QScWD6Ual21rtsuvu+/932FUjmtMw8wzzzDOPaK1ZDa0R+TdXGkPWK8ZaWylE+LLM02FiCURIZVj8jSFovT5vZBcoTUbhKdpfc6mHB+/JeFzu5eh9xucBPJ0bM0TQGtPAsVCKTxFCfmYXGZri3QzRBM/HUatoBCPLJBLj8QdiSXZX8DlKbTmmya8kKx51IUwD20QEAQvBU9zup3uU8QWuN1FTxukGXIurh/E5BPJp7eNMA9WlKIVoreMpwh0kMxjCUAsFDtNfcWwqgwDhDiYXCO/gyTnMLCXXpr6CyDL1GylwaOvn5CNOPaR3jHiKpTilRUSWyXiIYCGYws1jNFbRXEf3KD0fCflZiHF3gE1B9m/jxQTNu8izVimtadw1QvsAF/YS9NE2gM8h6OPWcfz5bCnGtQGMrGTAnX5eTtJ5nqYaAj6uhSkr4sohWvuIr5Dv5GAGGkOYi9I5zMV9dI3QMYjfpSLAjwTVG/iZ5MYrkmmyH7MAhLSH0kzMc7CKjCKaoKSQlkZcmzybWIKVDK6NBksEpdhczJGd3BvkwHZCAaa/4TqUF/FsjLklzu6h0M2ZTZTSgAipNG+mSKYp97O1BNPg7Qwz36kMcqIWx8rdIFl7/23s/8Ya4A8ubewE5v77YgAAAABJRU5ErkJggg==",
+    navLink: "https://ziyuan.baidu.com/?castk=LTE%3D",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730875015"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1730875015"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bc598a0a8ae0000d4",
+    navTitle: "Text Editor - File System Access API 示例页面",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAr0lEQVQ4jaXTPW7CQBCG4cdJSLoo8QGgQQil8TlJQZkiUo7AVZAQiAq4BAmUphlLWxjL63zSaDTafWc+7Q/9VWTsvavRkGYPERU2WOTA6aQf1BGfsdbp5DFyhSXesIoGWzz3gWc4BvSNEl+YtjhshU8B/ybWO9UGXyPv8JEcaha8x6TLdtETbp3cwPMhcKOXuJoal1wY3vGXPJQsGF5xwBlrjHPgtEmJp6j/9ft6wzdYvy+GudpSBgAAAABJRU5ErkJggg==",
+    navLink: "https://googlechromelabs.github.io/text-editor/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1731999550"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1731999550"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bbf052aceab0000d5",
+    navTitle: "Receive SMS - 免费获取短信",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA1ElEQVQ4jaWSPQqEQAyFX/zByhPMNbyJbK/b2QlWnsBKsLNTy232Jl7DE2wlq8xWkez4AzIPJDDJ+xJnAliKiqrtmzFIVj+E+/3cMufRPJAbd9pmAkfSOK7vJx19smYHqMsszaN5aMYgKaq2Nzvxr+bRPNRllu4AV5AzMwCQG3d69UPg9SDTIAtNM9/dIUCCeDIzxwBPHiqlNABM00Sm0czxszsmmQsWQMsocwC2ndkBlFJ6AbQHkIxyCqk/gOxwNtklwOzgAXSWY9mvslzLu7LxbvoBF1aHiVWmCfMAAAAASUVORK5CYII=",
+    navLink: "https://receive-sms-online.info/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1732699894"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1732699894"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bf4c863ffc20000d6",
+    navTitle: "即时设计 - UI图原型图",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADM0lEQVQ4jTWTX2jVdQDFz/l+v7/d3e2SXq5KsorRrroW29oYeFGSUXeRafYQDqIiCyrbS2CaGvYQEblqQRROsz9YWURg1EY+qA8+xOwPIauwLGnGSEinu3d33n+/7/f0sPZ2ng7nHD6HANDalc9FLhpW8DlQDhKNtVQIEgBjDIP3AimIMY07U49ru6cmT55hS1c+1xxF4wAywccBEGmI4lwJyWQSBFCuVHBDqhk+AADkrDOCZmr1ymaTtHaEUMb7uCaIxhhcL1fxyOADWJZeykw6zYe3bkG5XIEhQQR6H9cgZZyJRmxmZdtoCIGErDEG5XIV2dZb+On7I4zrXt2da7Bv1xC//uYUL1+ZQUNDBElWkkDeyGxPPkAEABhrcO1aAR8eeBXtq9uQSjUxcg6zs0WdO/8nnhjai3R6Kfz/XQDASFoQhizOlbA+18uBu9bzocd3cHr6Eia+P4vBx57lPXffyXW5XhbnSrDWUBCEAEOQWIggH3u+uGtIRz8fg4ssOtqzePvQJ/j9whSOfXUCL+x8RrGPKUiUCJAGgKyxmi3McWN+g26/bRVff+sDDL+0E1+On4QEHBndj1feOIjOjtXcmN+gQmGOxjkRlAGAoAAXOex57im8c/gompoa0dfbif1vvotCoYDN9/YjiiwOHP4Me3c8jShyUggQBEeIpIF80MzMLFcsz6hSqdJZi7V9nVAQQKJarWPF8jSuXC1wgamFEZm9Ix+MMSjNX2d3R7vGvjjE/k2PYm1fF/Y9PwQAeHl4FD/8OInTxz/WpsHtmPzlHJqbm+BDWDAACOsM/r18FR8dfA1LlqQwsGUb2le1URB+O/8XTo0d0WyxyG3bd2tZJo3YewgQsz0DVYnOEKxUq2i9uQXHj73H6X8uoVSaFwCkUine1LIS9z34pKYu/o1EYyMUJAF1ZnsGvjXGrPM+1AwZ1Wp19HR3YE32VnjvuQjYHxem9NPZX5FIOISAurGmIQRNsLWrP9cQJcYBZnwcB2sN58tlVCs1GBICAImJxoSSyQSCl6xzRggztVr1fi7eucHZ4SCfA+CsIUGSxCKolKTgJUJ1GPddrV7Zc/Hn0xP/AQA1iEwjh9dMAAAAAElFTkSuQmCC",
+    navLink: "https://js.design/community?category=explore",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1732874813"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1732874813"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74ba3396993750000d7",
+    navTitle: "易企秀 - 免费H5模板_AI在线设计_海报_视频_数字人_企微私域营销",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACRUlEQVQ4jVXTPWidVRgH8N9z7nuT2MT09toOYgTBQeuidKylINiCuKtUlGS1KJilooNiQRfbIi7SLYPgUL+C1sEuuhQUCoKOLgXR9MN82Mbbm3vfx+F9myYHDufwnOf/fJ3/P2bn80RVOZtjByQIiGjOuyuzfSUF0XF9NLIYvYVcjdDLWh12gXYFYDuAJKMomdaqSL3MBhyxjYxssop7USMbk0jRJuxVQi0b8HjMOAWyW0SUBjkcNS1EiKqzXUkIdZWpFNzZYqrL/mmJuPkvWyPqmn0z3NcVo1pe2xATnbayFFUJORgy9wDLp+jPiBL8+Q/H3ue5Q5x5ldsDZveIpR/l4hL7phknVSE2B3z0Cn+tcvw9JrosvcHLR3j9ec4sc+Eyj81xYVF8f4VLvzVByuomx5/i6BO8cI6nD3LoUZ59hyMH+eNvPvyC67f49jLnvuODE03mcU2JdtryLgH4b4tHHuLYk3xykcnJ1qd9H25Rt/6xfyHzxgbfnGLvNPMf0+3w9dtc+pUH+/x+lc9+4vGH+fxNXjvPlz/TrYj+QtaDIXN9lt9qhtgpXL3BM+/y4mFOv8TmkN4ePv1BHpjlq1+4eIXozWcW3BkxVdGbkVLcvNX0OBrTv7/54nEtr62L3nTDjdGYKkJdp5jsNoaV9XtE6lZNmRubrJNBTHXl7UEzixKykgrqTNHp0Gkdd1J5otpN5U4hQ0qlZFiLoiSZrUedzb1VoXqnLakbRZYMa6VOJ6NYaYW0rbiI3XunKiOIYqVOJ/8H61b6Cmu+v4wAAAAASUVORK5CYII=",
+    navLink: "https://www.eqxiu.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1735004932"),
+    navRemark: null,
+    navType: "工具",
+    lastModified: Int32("1735004932"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bb510c594950000d8",
+    navTitle: "文档",
+    navLogo: null,
+    navLink: null,
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1682235929"),
+    navRemark: null,
+    navType: null,
+    lastModified: Int32("1735005937"),
+    navTag: "h3"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bd718426b730000d9",
+    navTitle: "Quick Reference - 编程速查表",
+    navLogo: "",
+    navLink: "https://quickref.cn/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1735005934"),
+    navRemark: null,
+    navType: "文档",
+    lastModified: Int32("1735005934"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bc46748ff940000da",
+    navTitle: "编程开发 - UU在线工具",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAByklEQVQ4jUWRPXNNURiFn7X3Ocn9SEIiHxONYEYYNArGMGN8lH6CSqdSKVKo/Ax/wIzKDGPS6LS6mKBSEFJF4ro3uefspdj7srt3v+v9eNar5Y1NIWMgSoaULAHYhCBBsg1ZVmGyGrx/2ESFTh2cP8TwqG1S6k1VoogCk2dz4/TC5dWZpk0CQdOk9eX+rbMLgdLUOIAlJbuOevnwyrP768NxG4Ji0O/D5sndM28eXZ2djk1LELIqW2AbmSY5GakgSTK0BlEwRSUhScISIiezPnMIyZJlgf8zlAaS85LSZG6mVWkQJhZJBUyAbeeyHMr+55IsG9su3nsyUtg5tMGWsakQEkE0ycNx258OKTkGSSToTcXRuB23SZKFIEi2qYIORs2nn4NLJ+curMx82xt+3xutLXSvrc1/3h3s/WnqKBuJYisS8Pz91zvrS+8eX3+7tZvse+eXFmemN159PEqpr6q1bWL/5gMIJnXquLVzsP3j4NSJ7u1zixdXZ7/sDp6+3n7xYWeuWycMAayVjc0Jp4X2R+MqhvluBfwaNodtOtapEy43yitlDJDheK9OZjBONp2p2FNsjSwV21RJLjVIuDWCKuSDlrDoLeS/L8QHURdi8I4AAAAASUVORK5CYII=",
+    navLink: "https://uutool.cn/type/code/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1735005934"),
+    navRemark: null,
+    navType: "文档",
+    lastModified: Int32("1735005934"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b9c43c902180000db",
+    navTitle: "印记中文 - 技术速查",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACe0lEQVQ4ja2Tv2vVZxTGn+e87/u9ucn1JqTG5KZxqYVihi7RwZRCbMF0SHFw7KCFDu6FbgWFzOnYv0CEzDaogxmkiLRptxZLig4aIUOSm5h77/fH+z4drskNdNQzHTiczznn4TnAOwaPs1W5y83imhlbAnICgpKQFGF0NBuWaCnFZ+tfDf3yP8Dna5rIXLlN4GmCJil+QMi5RjZcHeZvlHiP3s0gxrOdZnb+yTy7AGCACABK+SlAf6cq/iBhtQddSsRK1Uk3kXDHn/Ive9HdFPUv9vfrR4M9RICAD7VMyCHvDpliJ4N9oqhduOqsYH+hl4bqjFeSOJlSVR0BDBQAoEDhKYxJuEi6jwAdhoZfIDlDpedlXr6IKcGINyGNuxMb9JXwFQjP0/Wx8HO+V6yZuOxH3IXYjQXI5965OZe5iZTHaUVUA8BtEIAssEahLA6KFYl3CZ0vdsrvYAxVTL852P1Upm8BXOgZ4uCEWxAAmDgMqV3muCOkiYL8J5bpDzqre+Ol0oVdSp+BjN0GbADoS4CUYCKaIfjvAbwIwHzWDFdUxvBosfajxV7JIfcKQC/b2/P9LtG/9YJkMfhGbSQ0cL27RQ9qqd6y0YNNPv7yfr4p6GHsxCehkS26YswPNCATAHDr9eOiNf1N2U4jNDYB/Nl+VglOowY2SNbobKrsFMsbG9nOWx/qeBW2inMqs4frG9iZW4Jrb8OmlH9Y87X2Xhfdja/ZWVjXUGe3M/LFXGw9grYA9l348ZpqMyxvGBFIvYwpjRLcFTQugt6shNAD4CPQI+3Tout/+vUqDwZvpT5s7neF2VVlC+vyJ2uzq8qObD//QGdwS4b3Ef8BLG8yWtH1Wy8AAAAASUVORK5CYII=",
+    navLink: "https://docschina.org/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1735005934"),
+    navRemark: null,
+    navType: "文档",
+    lastModified: Int32("1735005934"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b0d6c9e8b610000dc",
+    navTitle: "MDN - 面向开发者的 Web 技术",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAACM0lEQVQ4jU2S30tUQRTHz5m5P+e6udAGrWjha/WWtGLZklIumwjVQ/W3BELQfyO95gqBmvkrfDFRelgtie3B8Mr+uPdy78yd08O4m/Mw8IXvfM+Zcz54ozRCRIg4uAEAEQEAAK5KY7CMHrg554iotdZaI6JlcQDM83xgsExGPwzb7Y6UUgjf8zytdbvdJiIhhOM4xsmD4Jp5gIh5LhcW5ufn60mctFotz/PevH09/ehhGIbn5+eWZQP0KyBimmblkZsfPrz3fN+2ra2dL5XKg8XFd1EUnf09Ozr6IYQvJVkmnjEWRb2ZmSfN5nGr9YdbHADqz2tbm9tSSc454uWnGfSPJpqbe7q9vZMkCWMcAKvV6tr6GuecIQMgAgQAZvrJsmykXJ6YuL/caIjAT+J4bHR8fPz2ysrnIBCa9GDUrN9PPDU1mWXZ3t7eUDDU7fZqtWfHzZOTk6bn+VrToJF+BZnW67Xd3W9KpZZtMc5nZ2dWV9eJFGfM7NPMnwGAlLI4XKxMVpY/LQNAHMW3xkbv3rvTaKwg2koprQkREAgAGOe814seV6dLpdLGxiaALaV8+erFRXixv//ddXzf9x3b0bqPQiAKWufF4vDXjc2Dg0PHcTudzq+fp0tLH09PfzuOHYbh4eFRt9vjnAMAlq6XETFJEqVUoVAgoCRO0jR1XVcIQURR1HNs13Ev0UBDK2MMEfM8N0NjjBHpPNcAwDknIsMiEf2n1SzSUKiUQkQjtdZXif4H9y5AmuLgRAoAAAAASUVORK5CYII=",
+    navLink: "https://developer.mozilla.org/zh-CN/docs/Web/JavaScript",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360842"),
+    navRemark: null,
+    navType: "文档",
+    lastModified: Int32("1730360842"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b47001f0b160000dd",
+    navTitle: "Can I use - 查看浏览器兼容性文档",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAACV0lEQVQ4jU3Rv4tcVRjG8ed5z7n33DszqzFxDagEFLuo2FgpiliKaJ3GMmCZwkawsxIEfxSCYCOmCFhYaCliIhb+AF1wCxfNxiQ76242k3Fn5t4757yPhSn8/AVf+PK3X69EY9XP1Wzc6MtmbeYe+96BWVFrqPqcx6FHKXlEWEzRRD+xcd+P3fU3pxfffujcU6NHVkYjT5KRjK2rMTeUkswY7x3XDhgTnYyLVIe2SaVWoDWSQIcoQmIQqZhdgpKFIDNUktyl4k4AAigJJAAJBI1gke8Of899CcDhgggQxP/wLsUKdpCPX7/6/tnxow0rgo3VS+8FkZRIQoDkpFE0Sw3qOiIQlljN8vL37oZLJP5rkZQYW0uQRFl/9c98cw9mrjIKzRe3v7+w+9GggaDcJQXazfWt7dU1QQBt+u47h599GpuWEoCI0FiVrG6sZtN4tLE1l44uv3Ht40E5yKLqSnVwuUOQF8+Q/ljtNVadnnbaGGnzjDkMlMvN43jQIlNG0uAhhFDn9OHsq/EiX/hgJ770Ynrt6bBvFmxSj0aW4g/3l1m7wswWfqf3xTG807Kt4Yv1kQ84PKwvf9MtbpHlyl8/3VNPQn7rme0TCH32+Zq09axb58F64M7yyf00PTrov/1uq+2mE/9lf3unm/J4d+sgz9+7/vnDzenb6/nJuFGglQ+txfNnXl2VflyNvj78eeufnfMPvpwsRqZAY6nEKhx7/8oDzz4xeeyTvS8TqxQCGKH186fOPnfqcSMFREgUJtZWDAlVQqTnc5svGK0rA0EnKCPufvwXys1FbkTZ2O0AAAAASUVORK5CYII=",
+    navLink: "https://caniuse.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1689821349"),
+    navRemark: null,
+    navType: "文档",
+    lastModified: Int32("1689821349"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74becec8b8b850000de",
+    navTitle: "JSDoc 文档注释",
+    navLogo: "",
+    navLink: "https://www.jsdoc.com.cn/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1689821349"),
+    navRemark: null,
+    navType: "文档",
+    lastModified: Int32("1689821349"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b36f71babfc0000df",
+    navTitle: "V8 垃圾回收机制",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAACj0lEQVQ4jSXBS27bRhgAYHHmnyE5EkU9LVuV7Sgo3CAIENQoErj73qBH6CF6pO6766qL7rooskmRBIGdQLEjiw+RnBeHnJku+n3BL7/+xqKQEAwYUYIBsLVO6a41fRSS1tjyyKsqZ8MJi+npcgzOBQM/iCgBQN57YyxCQTKKqOmrRkWUjJO4rlFV3DdAy2IPN9eX281skkRu4KXqHrPmdlc2XBPA41FUHGUc0fE4/Zx/cX2bzs/QzfUFi8ljwR8zbq07X09evTw/O0m73qIgIIC5NFEUYQxaN1oK/PLHnx/2dWusMbYWrRBdSGA2ZY1oG2Gs9UoZQkjX2zLfda2ELBcYUFEp53wcgh/4fUYWs2HCwryUdSOt811vvXcYYckLONYqDCGOyNky+Zo1DTcY2qJS4yQ0nRWCAwkBQ9eqVgstK2ARmUzi7flMyi4r+JfdTggxna/GadLUNa/ziCUYY17l+cN7Eg6BUjhbjucpO+RZlhV3H99YIyTf7CnrjHS9CRAGCD/+++fh4cPFt68hCkmaRISgOKLGaCVKLQrTShIOvXNAYyCHt3//fn/7z3J9lUxPgVLc9Q4hNGKUseFgENi+rYt755z3jtD47t1foj6cnj+fnjxdrr8Dqbu60csZSxP65HL96fYq8JbXWSfLzmjJD0GA19vvp4vtavPsm80W8kJ45+ZTNmL0xdUqy3/4nC60qrTkRnPvXcTGs8Vmtlgxxkyr4Vgra/3drlwvk5P58Ob6klDScIWCAAgARpQAQkHf9+WRS6Xx5fOfrHVAQJu+OMpkFF6cpqrtuDC9tdZarU3N5bHiSqny8RN+cnXTdtb7AWNxI9rd18q6wXqVEMBdb9X/pOiN2u/evn/zx3/kGJwRSI40QQAAAABJRU5ErkJggg==",
+    navLink: "https://jayconrod.com/posts/55/a-tour-of-v8-garbage-collection",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1682406474"),
+    navRemark: null,
+    navType: "文档",
+    lastModified: Int32("1682406474"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bbd6d416f190000e0",
+    navTitle: "V8 JavaScript 引擎",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACQElEQVQ4jaWSTUhUYRiFz/czd6TG8IdAMoMsUuc2K7UfCCpu4iYpAmsjtYhoEbUVkULaRAUSLYLCFikROctWUyAFgYTLnDEKdZFpUmmNMzp35rvfaTEoohlJZ3k453nhfV/gPyX+ZLYPUmE2c7RgRFsxxBe6OvImflYE6wAdHR17hRANxhiQFKT/wRx+GjOGDylQSQKW+CGluCxenRmF49RZawkAUsox7ft+BYD71toakIKq5G2Qzzhbt0Qq2w+FAALPhguVCwtzndAl1vpLzSzqs5TynIzH4yMkB7TWiqC0lEfs4vfmqnKFlv0KLTGFqjIJuzTfSKgDAGUoFFJSyoFEIjGiAdB13T6lVDSZTB7P5bIVIjuBqblaDL4zAIGpOUJmJqQ1WThOeD4Wiw0FQdCXSCS4ssRkMulc7+7utE75TTZcRVBaDxMQJCGlgPg1BjvaC+a+3ejtvXfbdd08AMhlgOu6+Vw+3c+atpQtrUNYE56r4bkaYU3YbfXArtMpVcj2L5cBQK8+yc5Td6Zn0vsmjUW0qUbhWqsDAMj4xPCnAHJH6+SsXzuNoaaVjlwNmC9vtBBqEQCyPpHxiUyOyPoAi/MWa0802r8+0sm76UuW8oEQ0Lu3F/njsxaBhQHMlZddZY9W5/VaQC4wgw7kwUCo8x+/IkQAgiyQQT+lfb7uE9caAHCsh5GweX+B6fFbAMDInq6CE3vyukdk/gkAAO3RqPOzuvoxYFH2ZeZiPJXKb5TdUJ7nRT3Pi266uBn9Bg4qCYm+V6FqAAAAAElFTkSuQmCC",
+    navLink: "https://v8.dev/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1682406469"),
+    navRemark: null,
+    navType: "文档",
+    lastModified: Int32("1682406469"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b927a4811540000e1",
+    navTitle: "Chrome 开发者文档",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADO0lEQVQ4jV3TS2hdVRjF8bW+vc859yZp3gnmIQaTNDElFtImKjalRUQjSnDgoyAEwUIHgiNFg48ohSCCFLUDHdgO7CBxUClOi49iNQ0ZWCwkbaw2ShKax22Sm5t7zzl7fw5KBP3P1+jHIv7XQv/efsvg5YyVhxJFMw0RGbOYQKeA5Ez9D9emFSAAEFDuDieBcLD/gQ8UfFUMyxMFYMSLEAJI1hqosBAIP5nNzbx7cAYJAHIMkNohBM/e7pqosGZ4PXWeQeBojNFCkYDQZso8oU7gTWMmlKLT85d+zB27gvmEALDS2f6h1EZvrMVpyURhqPltcLuEPa2tkBBayC9SslnYoEIdfNIURdGOdePl38yMEldHDkx8NPfT4akVs1WfEV1eY3Xvg1r51nu4Ub2PEGhP2W8wC2OI16fAwACaqDEoOdketO3zO8c/HWqK+q5tpbqSY3XvPo1PX8Dzk05+vrGlAvBAWx++GLmgLdHTTHOXIUacZF0Z4uAVaYyTwZtloueO1LPqrw1k3z7JExOe3/26omUVirI9wMXZ2zh+lkzbxlVdBPUZo7FVBMHDsuN8U10+xVfdIVeHe/Rv24mr85usacpqnCp3Es/mxqxeWbjDuVwnw8r76VXpVRTe3iPeKwLnkQ8MPz/aghCKVADoXV6C8Ar4XW8CoAHEADQqECzGVDT4QM/5JW7W/IFH7qvU9dUSbSBqQ+rqapGH2mq0q/o64vwtFRuqiCUDsyypSy+pkPDOZzXC6zOf4dQLXp/sqmUmT2Q3gKGuOp4+poqFURVjoaBnYKkpf2HHl0/0BTSXXepsCMPFQg59zR0YO3iCmVI3AgBLdk6zt97Ho8E0IFWgjxURSuLiQwSA7jNPjUskb8Z3iqVATLhe2kLJ5bW95l6o9yxu/KkX92+yMVsOn8SxrZfIb6fjZmBhlBiDAD12b0vrJDN2ON0sqlXjUqU4V+BSifp1d6zPNGyYkvMa1Qm1kJznzd9fxHNI/j0TjsB2vPT4SZ/610BmTOqwVgIeq0p1cn+OsIQmrqiBPyW52Xd4FOkuyn9q/XhwwER2JCAObxbR/G1vHv0N8bJL9Xvvi2fDgevTuKtMAvoPS1eAiSEF3fUAAAAASUVORK5CYII=",
+    navLink: "https://developer.chrome.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1689821349"),
+    navRemark: null,
+    navType: "文档",
+    lastModified: Int32("1689821349"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b74d9fb327c0000e2",
+    navTitle: "微信小程序官方开发文档",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABhElEQVQ4jX2SQWsUQRCF36uumdnMDkkIXgKCxIMgKurvyP/NRdCbN4MklxwkeJQlIOsmYdnpruehWz2t3YcuqAf1vldNRQiAhBCIvcesNr2pzWj71YAkSSAdIRjn1d325huT1yEkAAgkIAjA+P61DYMkawr3Mh7kgyEv+jx0c9/N3s2edmbZfbfebD59rl4cpCQ/OV4cTXnOJAGpPSChiNR124uP5de9H03+1yWNTEYQUPPFIBgkANVIBFcEzXY/VvfXN+i8ygkKqGNgqfxc98vRDyeVYJQiUuuNre5AgwQIqqitEMAXz5EMkgsgkA+nq4eHQG1LgCqjEBLJNyWPqQfpkkh++HqtUo6nSRHVPoEaoFq6Tyqqm9n68bGUOH/7ajdnM6rhtYUo1A+DuUcESQdZ8VJKKVqebbsgIbDS/wkz52xmF5dXgk6mZUSNpyI0DALvzp4tFwMAllJIbuf5y+13ot1KYLUSjHz59HQcBgCMCElmxP/+KgBUBob0L8L9pw0lfwOo89kfpezsZgAAAABJRU5ErkJggg==",
+    navLink: "https://www.bookstack.cn/read/miniprogram-guide-20210305/697ff23c614d0ad6.md",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1684977154"),
+    navRemark: null,
+    navType: "文档",
+    lastModified: Int32("1684977154"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b2efea2ea090000e3",
+    navTitle: "微信公众平台",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACVklEQVQ4jYWTsYsdZRTFf+fO7LxdV4Vskfd2RfCPiMbCRpJKEKJZi9Q2sRMllQjTmUaxkVjZBjSiIAQ2REI6NdvaBAKmSPY9XWNYNc95M3OPxZuNm8pTfXzfveccvsOBQ9QER3GDcrwzXh/vjNe5QfnE25FZAWCEMMDWd1tnnH6NzifAx4exXym1q9DV+6/f//bojqgJanJ8eXyyeEqfEnqZAHpYUg4yBZBA+of+kd+dnZv9SE0I4Lmvxqc8im8Qz7g3MQo8N04ngEKhNZFNokJg/lSTb9x7a/a9ti5vPO+q+omSCdCpY9f4OsQ7hDcASD2AvCR02iUngJKOqRaLl4KquhCrMaGlUakSxcW9s7MPEdeiCkUVQlxb3sVFlSppaWI1JlTVBW1+PblDwQv0pFZUuPUt5OtynHf4GIBSf1j5OdZprehFt9lTKOj5RVtXNueWR49jqSSNhP82Tnv4A2lduDFe2P9FqCaQHwypWkheuPdBtk5bSEJy2j7I1gv3QgJMgO2HYemmKsl2GhsIi1JIxjZLIosSCGPbTlWSxM0g209o+EeFwjgHBQ0WdUgEHJ57lRItTdJ+HHvb+7uZfi+qCGnpBJOH6sMymMRuI6KM1Sgy/f707O+3gpqYbk8v5aPuvAq1iFCpkJbqQkusKPS0Vij4rfurf3v65vQzIIIaA5qXix0KRogDp29jGtsMLubu/HPO+ah/mCdn27MvhkJlSY2oyTXWXvHCV9pF98H+s/t3J81k0+mJQqnUbG9j7x6v0j1uY00+0VCuMuL/8CUFHho84F84lT/uunoxgAAAAABJRU5ErkJggg==",
+    navLink: "https://mp.weixin.qq.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1680574601"),
+    navRemark: null,
+    navType: "文档",
+    lastModified: Int32("1680574601"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b604ec54fa20000e4",
+    navTitle: "微信官方文档",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACVklEQVQ4jYWTsYsdZRTFf+fO7LxdV4Vskfd2RfCPiMbCRpJKEKJZi9Q2sRMllQjTmUaxkVjZBjSiIAQ2REI6NdvaBAKmSPY9XWNYNc95M3OPxZuNm8pTfXzfveccvsOBQ9QER3GDcrwzXh/vjNe5QfnE25FZAWCEMMDWd1tnnH6NzifAx4exXym1q9DV+6/f//bojqgJanJ8eXyyeEqfEnqZAHpYUg4yBZBA+of+kd+dnZv9SE0I4Lmvxqc8im8Qz7g3MQo8N04ngEKhNZFNokJg/lSTb9x7a/a9ti5vPO+q+omSCdCpY9f4OsQ7hDcASD2AvCR02iUngJKOqRaLl4KquhCrMaGlUakSxcW9s7MPEdeiCkUVQlxb3sVFlSppaWI1JlTVBW1+PblDwQv0pFZUuPUt5OtynHf4GIBSf1j5OdZprehFt9lTKOj5RVtXNueWR49jqSSNhP82Tnv4A2lduDFe2P9FqCaQHwypWkheuPdBtk5bSEJy2j7I1gv3QgJMgO2HYemmKsl2GhsIi1JIxjZLIosSCGPbTlWSxM0g209o+EeFwjgHBQ0WdUgEHJ57lRItTdJ+HHvb+7uZfi+qCGnpBJOH6sMymMRuI6KM1Sgy/f707O+3gpqYbk8v5aPuvAq1iFCpkJbqQkusKPS0Vij4rfurf3v65vQzIIIaA5qXix0KRogDp29jGtsMLubu/HPO+ah/mCdn27MvhkJlSY2oyTXWXvHCV9pF98H+s/t3J81k0+mJQqnUbG9j7x6v0j1uY00+0VCuMuL/8CUFHho84F84lT/uunoxgAAAAABJRU5ErkJggg==",
+    navLink: "https://developers.weixin.qq.com/doc/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1680574691"),
+    navRemark: null,
+    navType: "文档",
+    lastModified: Int32("1680574691"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b123bb492840000e5",
+    navTitle: "Google JavaScript 样式指南",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACIklEQVQ4jYWSS0iUURTHf/fe8RvHooE2VlT2FNqUGWmNEYUR9lhEEVJhUIsoXOQuap1Rq6KHNQt3LaPAIOxhlNTChUwLMU3NR1CklUzg6xvPd1ro2KhTHjjcA/e8/uf/hzmmqsUiEheRLhHxp/2TiDxQ1aK5+ZmFeSJSrwuYiMRVNZKuMxnFz51zu9T3GX/6iPGmRqS/F5WAUMEawuUVRI5UYjwPEWl2zlUYY8YMgIjUW2vPBkPfSV6uYbKvJ+uW3rZSojfuABAEQdw5d96oajHQqr7P8IUqpL8X43lEjp3EK4mBtfgt75l4+4po7U3cytWZPbcyjUlTidv642ipDu7foX7bh2zgs92jDhHpUlWdbNmuEw15OvqweqE7ZjboCAEFADrSjs1LkRM7NAt3+bWRebfYudFx9XguwFqbwePs9z/mT/6NLdAHMBpex28W0/C1Y1Zy05VFM75nUwiAZVGT/v5sgdcA3UurOPUrxvXOFhJD7fOmdn4LeNc5NbpkfWimv5mWZ8KXFKdfXqInOYBnc6gsPEjZ8mKssbQOtvEkMczYl0oK8z3un4lgppbYkhZS3Fp7bnD0Jxeba+lODmTFviFcxq29NeRHDUEQ1DnnqtNSjohIo3Nutx+keNz9gmf9zfQkB0ChYMkK9q2KcaLwMJFQGFV9Y4w5YIwZzyBBI2lRLcD9PVXN/SdFqlokInUi0iEiE9P+UUTuqurmufl/AKTzsFGmvUNUAAAAAElFTkSuQmCC",
+    navLink: "https://google.github.io/styleguide/jsguide.html#introduction",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1682235899"),
+    navRemark: null,
+    navType: "文档",
+    lastModified: Int32("1682235899"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b0282a8b9340000e6",
+    navTitle: "AI",
+    navLogo: null,
+    navLink: null,
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1694413411"),
+    navRemark: null,
+    navType: null,
+    lastModified: Int32("1735004932"),
+    navTag: "h3"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b45400644b10000e7",
+    navTitle: "Claude",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACYElEQVQ4jY2TzWvUVxiFn3N/k5n4AdoiVpTWD6ymBlRsAlWLmyq4cGHEaRKRblposRsDIRN1EyzUsS24caELVwqJRhEUFP8AQVCRCKnJNCpFqEFKbLEkTpzfPS6cyCSK9uzOe9/7vPfCeWGGSoW2zlJX+7YpP9iTzw51tTXN7JtSqDWPOvKzjI9Y8aTz+QQgea69Urz0vwAfH+ufMJwClg8vT1peVbUC6wHA/UL+k+FC681SoW3P1J0MwL1C26aE2FGpZDodJg6FmP3a8gHDhZK1kOCBh/t3zp8kXAMaUPS0F2TEhNHWJBNvy/XN0RwWbPijq7UFewkwMFmfOw00gM6sKp7rnQb4tNh3J60k68GDcrwSxFLEn1EcslhEdAtmB/D787Tuh9pvq9a4pyeUxu/tQxSBOdVyGcgBKWIjZlJmg6HRIVzRUHf7duEvFBkzPDX8K3k2cARYVsOvVGFZ4C74RproRMZ4KNhLY9D8QFygSBaUM5jpeoq5iLhO8N9Ow5PPfu4b1IwmRrrzK1OHo5hmxGIgqR7dsnQee3OALw0fIHdmakM0Xhd+Ss0+m+MSgHOg9cBiYBn22nRW3L2axkqpPLzqr9zjkdeA8Wy4hag4agtys+ErpKIijxFzgbUS/yQT4fLd9P6udb/1Ds1M4p5nY/OakiStExzOKLYqeo2l0UqMHcAiW2PIZ+uT8sU3orz66NmB7If/zY0Ovba+XVnsHyGoSTDa+Gv/KPCjcHcM2auV6G/eugtJ+YWEv2v4pe/V8tifS3G0OqAPaa+z5WdV4PtVKrR+/+Bg+0fv6nkJeHMA2HVTxIkAAAAASUVORK5CYII=",
+    navLink: "https://claude.ai/chat/66797384-fb7e-46de-807e-5cbe081eabb9",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1689144301"),
+    navRemark: null,
+    navType: "AI",
+    lastModified: Int32("1689144301"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bab390ecaad0000e8",
+    navTitle: "Bito AI",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACmUlEQVQ4jXWTS2tdZRSGn7W+b+9kN0ljTSoqKhkozakEKVKEFEVFHDgRigTixHYkFUciDjrqRHSkqFAoSBEqROJ/EK0FFQQvdJATL00glNomWpuGk3322evt4Fiwgi+s0XsZLHgMAGRgAnjkM3VK49lWzGI8iiGDrjlftg0Xuot2eViRYSbjtpZVHhRvCt6ygkla7pCVoB6/R3B6JfMRC9YHGA6cUtnp8EkaY7G9SWAIMPvHFwghjJTGYLDN0u4ur60dt+sZoNPhXKpYaHeoBaUCTwkpsBC4g8AR0e7Q5DEWRwXAy3ZgSS/lis+1S9MXeTxj0xVau4HtLWGyhD93oSrQTh/rBSqdhkRZNxxxc45FTdRBmsjYu0+gD+ax7PD4fjj7NMzfC28fxt6bR5MFVgdZgQrndTcxMxB2T4W9P49mJrCT38G1HhzeDyMOK9fhnR/goXHszFPovj1YE+DGk46xLwK7ewQdmsbWb8BPW3D/GDw2BReuQPcvWNse3oPj2EQe/kfQc4lLZULdv7FXz6O5afThETg0BQfugh+3IDmcewY6+9CJr4fZcjhyNU0dPdX3kqMe6NI2/u1V7I8ebOwMy99cgQBwdHYF+3kLG82EZVzijD2wrGoi+N6cg4joBzYIrHBoA4oEGOoPsOyocAaWKaJl/doIc76xYL3WOQ7UEpSO9hSodNqqoE1GOESVaQpnYKMU0bCuHs9vvmjbDrBacVFBF8cEDaJVIslIGO4FySoKEkVb81XfeW7lFVsFyAAzm4QqLnpizgtGFBC7rAOFoLA+v9mAjQjO37zMxxtvWO82Ixlg7Rj17DKrtAzamtNhfBENvyjjCZKMzXacrV9fsPrfJN5B28Ofau/skmaGaP+PlpX+698ChDYtp7EWyhQAAAAASUVORK5CYII=",
+    navLink: "https://alpha.bito.co/bitoai/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1692092539"),
+    navRemark: null,
+    navType: "AI",
+    lastModified: Int32("1692092539"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bb01f216c8c0000e9",
+    navTitle: "Bard",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACsElEQVQ4jY2SSWhTURSG/3Pvey8vyWsqWhd1QEUqpU6gO1cpboquFF5VRHFsoW0cQDS2CLcoCopanApVVAQREkUEkUoLjTvBoQtRaBW1g0MbO70YrW+6LmLRUIv+m3vOXXz85z8H+EMSggFA5y6x5knNqa67285Owz/E8jqRe8bU6TtRuHSRHympBADTTPCpADRRdESFUp4SbmvVhRWeXvx4TJvLh8G7VUsuq25Z6QKNBAh/kgMpwCQklaeE2771+AwnUHTF0mapH0nx0hGj9MWsQBNAEhA+zAQHJP3VQefuhlWj2vxzlr5wZQ8i3uegwgZ07n8NGTzjO9ds1xHt8cW9k0YYOrOu4lv/zB3p7Jz1I3oJ78Ns76Nu8P4QxyddlWMBxbdDBvft7BfdoZua7Ta3Hirt+h2ilC3FBYWmB41nfbIdxrnNmPzOmRznRFmF2CD9sEcMo0idu3AvY7IqF7hkOcAPtaL3S+a0hBwKKgENIA8kc+MRJBGXXDc033NfWOl3Mct1juUA5Odl8Lz22LzPNP+UpZeYbxXN7Q9xNhDU5WiAS4vjSDrd2/RelI9PykBKULLSZJXJpAcAt/a238+Eite+ZbYzVFigDvp23b142UUAiAqppAS5fyxAMiLIymTSEyJ3hf7XgVp9fGR4DjeoyMo8uhcvu4hEggvxUksJchvjzzafOPi0BoBMmELLs2PC5ABwu+52c1vjG3lpX+daABDRDgUAYrHXkeYDz7pv7H+UTsQezMzLAAAkQASgreZyaZYKtg84Yw3VLdUOANzc83AjU8Jx1f+23PCHEfEGXxW6PefzAFOIAMi7sTtHw/S9XnUtFvYsadAoqTxzdSoACSFJ/FrVBOTJlvol4bCfCqrZIJBZveD89cf/YSCnjmhUAYC+w5viH8SGkxN/PwGHnR53LEWEIgAAAABJRU5ErkJggg==",
+    navLink: "https://bard.google.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1695008324"),
+    navRemark: null,
+    navType: "AI",
+    lastModified: Int32("1695008324"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b98f7a2ee130000ea",
+    navTitle: "Explore - Coze",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACr0lEQVQ4jT2TzWuddRCFnzO/972513xq4keyEkFa4lZcixqCNq0aq6LgQgQ3BXEhiBu7UfAPcCEoBET3gktpKeoiVNCqVUsrqAimFSxNcm9yv945Lm50FrOawwznPKMTp2++Wam81TSHsxLYBOAISxIC0pCJwZKUNkRpd7PJd7Wxeb2PYgpnAtJROxykRkMDoqqg05FtMSkblcAeVNgtKdNHYtv0DlLH7q9ZXa0pRVy9NuLyT0PVrXBVRKYUyky7VVmAETaWGI5Sr74y62eenFZVTzZmmi/O9f3+B7fUNOEIYSMhQiCwoljdXqOnT037+dOzUsB4bMZjkwnra7fp5ZfmfHjYKCIFFrICZCSPx/LcrHzi8bYyExtKERFCgqZJHnu0rZWVyoOhLMkQDrCElbaWFqXbFwoREAH2/5Zhw8x0cM9dUjaWZKFUHNnK/l7S7SWlCCaxYRvbVFVQVZNjewfJ7l5DJmAImAydfKLDi8/N0O4E2990eee9PyklKCXYvrjLj5e7hIKnTs7wwrPT1NXE3Go4gqU74LUz83Q6hUxz9501nU6L738YIMHODjz0YE0zNutrM6yvmV9/+5srV5Jy/IE3zg76cPVaj7qGleVKS0s1993b4dNPupy70OeRh6c5fmyKpjHfXjrw1sc3+fmXpJRAG5s7FnBrd8zKMmx9uOxWLUVhgnEDUcRwZFq1OPP6Dt9dSpYWCwYqGyOxsFDT7SUfbf2jXje9utrWqRMLRIGvvt7n/JddryzX+mtHXlys8RG1FUckTUAXn30+cjO2ti/u8/sfA6ZawfkLfa7fkKoq3W5PYpawjbSxeaMPmrKbBFTK5ANH49TBYQOGTqfQqsPmv3ixIgLcD6jfjtLak0SEnGmNGxMB83MV8/MVpcC4MZmWhCUoMbWL6rP/Ap/DYDYHEcpXAAAAAElFTkSuQmCC",
+    navLink: "https://www.coze.com/explore",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1704289360"),
+    navRemark: null,
+    navType: "AI",
+    lastModified: Int32("1704289360"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bfbea6132a40000eb",
+    navTitle: "AI文本工具站",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAChklEQVQ4jQXBzW4bVRQA4HPOvXdmPGNPmoztxI1IlSa0qvhpRYsQEhJiwUOw4AF4C3bs2PIIbEGqyq4sWroptCqCBiWCVJXcNE6bOLbjO/fvHL4PR+vvZLowRSNVM6y31nobg85ombFZq/57+tvJ7JCXExtcWaxZnkd7RqUpUAAkMaeU/DwuDfEgKy6mpz62wh6AQdhFyxIRSCOKiIgk4RC5DeiO/YRJJ20s2xitkkQEIkk4IaFGAJbYhqUS08opZMVrbt3Cd1S5mL5up8cGvW2tLhtW0btzXB9sDHt9gax+79bq5XfD6by5sX347JnOjSasho19M9FlffT8yfTFwcc7n+jI8U1rL5UrN7/+qtrZfXXvYSrd6vXd7uZGGI8Ht+4kqsJ4fPbygIP3iYkAOaR8dBkpmx0c+LK4/+33oCUmf/bvn09+/OH87f4v331z+PjXi7S4/9fPhIQcQn3t6sLZ5z/dXb+5W29vcQpAkG9tF6NNVCrr1spoFKmyLgkAYOq/f21+NG66nao0o08/jK4F4MHt2+VwGJYWhIUZEbJMU07UW10ZXb2++HuvufPB2739G59/UVerGBO7oBkLMjlpIuqX+UebazqlRAiTB48mf/zunu6lstv/8rPpyTEcuWKlN3v5Ak5n3lmfgsJMC+J604iARKnrwZX+lTMXXGLSMF0cU0qSAgCypFm72L7U2xk0ZEgRYVWVGuWfk33v5v28HORdxYlAFIAmVEgADCCFIT33tmMMcSTgjs408NzNvHUEAMAMgswAIgKEslIQ5YSGiAiJEAkBkqKEwASCACACACBMCEvvL1pLnSwDAEWEiAhCCojAKKUUogCAiLCAsEim8dX54n+SdGEt6sVQ0wAAAABJRU5ErkJggg==",
+    navLink: "https://laicj.cn/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1683600540"),
+    navRemark: null,
+    navType: "AI",
+    lastModified: Int32("1683600540"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b7ba39ff3800000ec",
+    navTitle: "Bing AI",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACXklEQVQ4jZWTT0hUURjFz3ffn3FGZ9RMTamFBS00KIgiKAIhCIqCiBGCCIKoXbtatchq61JI2gS1GmmR4MrAIGghriKpaJOZ6YzMvHHmvZl377vvfi1egxoV9e0ul/Pju+ecCwAAMwHAiXn/zKk34U38xwgAwDgIAIQW15yO1NTJuebs8dnawX8H3AcDAEtS2oOx3LZzFpwXR6fY+VcAAQCUII5AUVnGrMSQvQ/p5J5F65m/B/wcEwEsQaxgsYTWK9AJgAyIGAW2fgXYO04hCARAEgBiD55z7BUXWJiKIvno3Sh9+/sGIYElwFKAQxJBrVuDeI/dJ24Zx1oYWgjuYWnJ/SOAA4bxGSYw4CZbxTsURLZ5LBtgTbo36sk87Ned08OFLUjLxGSDIILxAeNrmHoc781zeq3LeimbzZLqzdhhsxT1dLVf7B5x8wCAQsFKAJzEaOoG8SbB1GOYumZ3v+cWD6MRdcSjflyfcCrK2+XA5FJ0GgCQz3NiYmIdaz82SBk2UoMJVC/pGCDun15e72RLllZVh3ekiv7LKtGNb6XAAKB9mTahBLOmWBqz8Ql8dqZ6Qxb5gbOZGWj3ypH8aAmzHrwHAAxP044i5QZRiaoN+F/9yLYiXJjIzrlu+xNLYIBUXWa6dzspJ14OV9RzAMDYWJy0i5lAxFc+80h50V/UfiyyB9qMSFltsugrVRWurmXhr27OBI3m7Q+Tg8utFLbq2YJ856sUYTJuIKdrgPIMwrXgS7CB8bd3c0+36XgnYBvk/Lw8lMral0yItCoHXqMSPnt9vW8daP0H4pbkB1H4QbCB//9FAAAAAElFTkSuQmCC",
+    navLink: "https://www.bing.com/search?form=MY0291&OCID=MY0291&q=Bing+AI&showconv=1",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1695016673"),
+    navRemark: null,
+    navType: "AI",
+    lastModified: Int32("1695016673"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b296c2104cb0000ed",
+    navTitle: "PizzaGPT - ChatGPT per l'Italia",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAACG0lEQVQ4jTWSu25UZxSFv/Wff87M2GDHXMZGmESEu5CgQAIhEBFCckUTJQUlD0CXOi0vgJQHSBWlSSKFCglaGm5CXCQuEmAQAsfm4hlmcs7Zi2LGu9rFXt++rK3m+b8WYFnIGEDCCAzCtiSwJCsjCwCSMSTZ2DERy0gAYgzJTDiTLo4QqCiTCiskRV3ZbITyRmYbTFG0cTP8tPzp7ZO15edRN9+fulBObTKMZ85jPraUVJT9/x6/vn/jxe3bK69WBqv9PD0zd/h8rzMtgTBkQB4vp1d3/7711x/16mjX3l7zlC0r+buftvZHVV01rTLZAUo4cKjIL2/9ef3Kb1TTJ5dOH186sWfH7LZORFXX1f8mwGA5Mm6wcL22Vi4cPnZkz7cPfr368dz87ouHPj8rP7usqhDGIcBkCKQYDeePnMl7j9aP7yws1MVse/ChePL7u/LA3MwJOxo5whJkwpaFZ7sM+untzoOLly9t7XXWbj5qfRy4PxUOubHT+PQZV3ICup282Nvcbun16uJw5f3Mvh3bfzm+2l93HRBYtmVn3EAYsMpWmp+bzvjNerF87aH+udf5cX/KSVHLxoKJYOK+Tc7ePtdttfTy7A/rw7pikMsWrglsC7LqComJ+wIS/maqKHpT735eGn0ZbUpNcu2mIQCyqyGalG68J0nMtNzuqirbZanUjNxIGMiKagK3LAMyFhLdkq5lhSLwGMdXQzwmpuFlxS8AAAAASUVORK5CYII=",
+    navLink: "https://www.pizzagpt.it/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1680598871"),
+    navRemark: null,
+    navType: "AI",
+    lastModified: Int32("1680598871"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b36b2a9f1ab0000ee",
+    navTitle: "AI工具集导航 | 500+ AI工具导航大全，国内外AI工具集合网站",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACPklEQVQ4jbWSO2hTYRTHz/lu7v3uK83LkIIkrTpEVBAXV9tBHMTHEkWhEHDQoYhFobTYekuHDgYLog5SKII4xMVFEBxaEFwURKoBsbUFCZi+Yl73kdx7j4NG+9DNnunAOed3Xn+AnTICQgLCtr9jjbaRCQgRkObvF5NlW7y93lTVNdMZujge+9iObcxn25DGT+iKKd4Sefy8TdqpZVu6Z/RQYKxnVtiaHthUaxBDA30AgLIt+GUCKFoAJYuZE7PobpmcNq3QHi+bXZTTnd1KtFUTWiJOlBwuJyXrcTrGzs5XqfHhU2Vk8mnSAiAEQGK/OwPS8NXaub2x3XMB31lsCMJ0YcEaGJ+U+o4mnEFV1q9E1OD1rj2R53cGSIFft8A26WZ/9ZKmaFMcXRDBhniwA8CrvWcOHj+UsF40SDvy5bttVSmqFmvWDDjKaeMBNBgA0ug180JYU6ZUZrsK2q2gRD56ZSeha4dDevOZ0/JGA+hVdElUvWbF0mWlt4bmXQAkvNH3TdsV15YishgSwKGQLEmy0ALOPAhAq56MxvX1yvKg7VkvIRB/XayjXLI5rJjWZ2nuzQGWCifcGPdXE0EupiIdkozmI47OGc7cUlckrEc4QQdH4dhQ9zvbLp/kgr/EmVsBn0aN2V4XAQCejKwdjOqhfvTqCyeGwzkAgLe51f1Rnfc3m/Wv6c5XubFCgQzD8KezM3JTSvHLD/dV/inPfIa2Cab9rQ2a/aNiAkLDILaxkIgwnyEhn8n/Ffbf7AeJCvhL+7aUVQAAAABJRU5ErkJggg==",
+    navLink: "https://ai-bot.cn/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1695020120"),
+    navRemark: null,
+    navType: "AI",
+    lastModified: Int32("1695020120"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74be24b2723de0000ef",
+    navTitle: "ChatGPT 资源汇总",
+    navLogo: "",
+    navLink: "https://ainav.sciencat.net/chatgpt",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1691395492"),
+    navRemark: null,
+    navType: "AI",
+    lastModified: Int32("1691395492"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b823bfb40af0000f0",
+    navTitle: "ChatGPT 镜像网站 - 最优网址",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAB8UlEQVQ4jZ1TsU7rQBCcvTMKEknl5lFEckWBHKXIP6RKxwfQUIaSb6AOH4FoXFGCoIurSFGkKEoTyaLgGaew3CARvPMKzsEJVG+llU++2Z25uVsAOAOQACgBfAJQAKx9uffv02ETAGcC4BXAH7cpDmgAUL4CIkK3pwBEVUnSAPgrtc4CQESEIiKqil+CNRKKiBEnR2qgak3f9+Xk5ARBELDdbovv+1BVZlmG5XKJ6XRKOPbtGbvdro5GI8ZxzDzPudlsuB9XV1dstVrqeZ56dUYRkaIoYK2F7/t4e3tDEAQAgKIo8PDwgNFohPF4zLIst6p3FFTnC8OQj4+PJMkkSXhxcfHbjWhlDJ3TBMDz83OmaUqSvLm54enp6RZjrd3iXO4WX19fkyRVlbe3t2w0Gj8IdtIYowD06OiId3d3WkkeDAY7QM/z2Gq1eHh4qK6ZAlABwGaziSiK2O/3JcsyRFGEl5cXhGGI4+NjHBwcYD6f4/n5GZPJBEmS8OPj48vEMAw1jmP9cVckN5sNi6LgYrHgcDisG/et4P7+vhwMBub9/Z2LxQJPT0+yWq0wm824Xq8lz3OkaVq9wMr075fZ6XR4eXlZ9no9dYbVh2g/6+xl1ezVLUoAKiKltZbGGHVzUS8s94pfYa09s9Ymxpj/Gud/KgpsUeOtURoAAAAASUVORK5CYII=",
+    navLink: "https://c.aalib.net/tool/chatgpt//",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1691395501"),
+    navRemark: null,
+    navType: "AI",
+    lastModified: Int32("1691395501"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bc60dee8fd00000f1",
+    navTitle: "AI驿站 - AI工具集 - ChatGPT",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABvElEQVQ4jaWSvYsaYRDGf2vcwOEZF1HBrSyDhSk0TRAUEYRAsLNNdylCQITVv8Hm2kDAYMRKPLARLSTRQuxsohbaxOJAkAWxSCOXucaVPU8vgTwwvMPwzvPMF/wnnp2JvwO+Aq+BO+A5sP5X0iiwAMRmO+DTnvjtU8mxvaI8YUV7gsPmXwBtK6aqKqlUCqfTeSzy65z6taWSTqdlsViIiMh6vZbxeCydTke8Xq8AOXuSnT5oOdFolMlkQrVapd1uk81m2Ww2KIoC8Aq42bdq68XhKHs8HgmFQtLr9WQ6nYqmaQJIJpORWCxmzWAOKFaetcZErVb7YhiGslwuMQwDv99PMBgkEAhQKBSIRCK43W6A29Vq9fm4/6v5fC6NRkP6/b6cQrPZFBGRcrn8G3hxqHz/NovF4k9VVUkkEo+ma5om8XgcAJ/PdwFcntqCQ1XV98Ph8IHyYDCQbrcrrVZLRERKpdKDi7TfwZ/dbvctn8/fmKZ5COq6jmma6LqOiDAajX6cUrfjMplMfrfuwI56vX4HvLF/Vs6QODVN+5jL5T6Ew+GXLpdLmc1mq0qlYmy32/rfKnhUERA4aveAe1PD3vek1FgGAAAAAElFTkSuQmCC",
+    navLink: "https://www.51aiyz.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1701229383"),
+    navRemark: null,
+    navType: "AI",
+    lastModified: Int32("1701229383"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bf5005fdb660000f2",
+    navTitle: "毒鸡汤生成器 - https://shadiao.app",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADK0lEQVQ4jTXRy0+cVQCG8fc935lvLswMlzLDlGCRKiC2NK0ETWxdCIlprBuTLky66EZdVGs3xo3+F8atUdOkiQm2iTFpGq0sJE2F0IhsgBZSWi4WOzDQDnM557wuiLtn9yx+/On78UNvjrz8dVvano8jE0liCKAkRYYEAB8kkjQGIqmGD36n6q7PTq9+ys2/P77W1ZP/QJWal8jgPW3KEnGERtUBAOKMBRoeruZkokigZPKp6MlaZYL1+580E5YMQSZ4MJGLsXS/rLszm3xe9wjBI5tJ4I2Rbg30d9Dt1URDGDI4gdZGjEIQFIRELombvy5rcaXC8bFuFduTzCQzWN14pluTi1xezunsO6/SPatL1tBSMAIgAbYlwbsz61pe2uNHF4c0/ZfhtZtJrD+uoLeUYrptQN/+EnF2bk02EzP4QAm0AEkJDR809ccGP7s4rJ9/22R38QoGysDtmR8Qz22iv+crnnqvpltT3/DY4L4sEhQIC0lRHHFtfY8dcUK2LclM1mBx5U9szTzCS6cb6OhIYfrebTTXNzi/+1i75RQLHUl4H2QlUYao1x3SiYiqB7x1rIB2N4PWty16WmO0pNI40j2NlNrRecdyryp0FgE50YIEfUA+l0Sl5oDnHomExfEXS5j4fQULh4qgAZ5uAmMjMZLpNNIpCzoBJKwh5F1AoZSlMtLC/DZfOVPAttvG1asPkYyAloTD7va/SJX2ICsVS1n6mpMxhJFAAWTD69y7R3l96oFWZ3dQPFzCF1/24d7IMJ4OrWO0uIMXSu06e6aXxgcJ+F8BMoZwdc+eQhbnLwzyx4kl9S1sMWOF9tigt6uE4qMtDR5tZWechGt6GkNJgDkIIbJGrubU353H5UsneeRETg+rNTxZrSBvghzMgbeCjKEAyhjKNF0IxjAAEA3pm17WS6OnDvPC+/3obizhu8l5PsjsK5+OESRIAiE5Hxhd/vDkcLaYPa66CwRBgqSB228imbIcPxHQmbD6/MprSEcWOhjJtKaicrl6Ixob7ZpszSf7YhsNRYYUQAOAhgheLHTmcPr1HqZEeh8QGQMvoLxTvTF3559L/wHWXpmHG3CrwwAAAABJRU5ErkJggg==",
+    navLink: "https://du.shadiao.pro/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1681465895"),
+    navRemark: null,
+    navType: "AI",
+    lastModified: Int32("1681465895"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b38bdb70b8d0000f3",
+    navTitle: "开放猫-你的智能助手",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABOElEQVQ4jd1QwUoCURQ9975AbUAI27TLNv5BYqhg81y4KmjT9BVFu76hZZl/EEXu2vgDRqSQNmSZNCAtHGGgyIVM9F4roYZR2taBC5fDPefce4F/ixyATICb/5WSmfePKydaFouaiC6YuRKPx6+PymW1ls0eBufngoTWOtu57yAajUIIsUVEWE2n4bouPnx/D8ABAH+qAYBYciWJdquF7R0LicQinrpdjEbvaDYaYwCfPzYOMVh2nh0U1gswDAOARi6fx2AwmPxhYer5lmXtMvMpM+uwEkLclEqlzVC1aZrFWq2mpZSPzHwXFBPRlZSyWa1WtWmauYlOTBrHcV56vZ5dr9f7SqkUES0FMvrD4fA2Eomc27Z96XmejxnIMPP4W/oDgFjYIM0wSTHzBoBXpdQZgLdZiX8YXxyfb3DVU4cRAAAAAElFTkSuQmCC",
+    navLink: "https://openmao.panchuang.net/#/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1683600634"),
+    navRemark: null,
+    navType: "AI",
+    lastModified: Int32("1683600634"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b3b406518080000f4",
+    navTitle: "Futurepedia - The Largest AI Tools Directory | Home",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC6ElEQVQ4jV2SS2hdVRSGv3+ffc5p7u0rEZUMlPpIbIui0VYLRixYRBBK4mPgQEeCtoJTHYlgR4KoHQUVHTiwIFoNTmrEiRfqoGl1ErW3oTWkiVVCY5Ke5N6z914OktLgGi0WP2ut/yH+V3c9OPJQJr2Cc0+A9W+M582YSCl9PH32m8nNeG3qs8H9zx4TvO4y35DsBkhCcoRQVzHG99tnTr4FpOsLHHv3+sHm7hPOF6MWa1KM4d/lypmZEGAyI6WtzYbvaTQJ3bWv29UfLzA1VXsgDTTuOeZ9ORpjt9vtBr9zR9O//NKIlUVBTAlJSin5Uz/+nC5cnA2NRvOZAXa/02bqDd05dHif93kLJ08yxRTd2Htv2qHHH9lMD4DW6XO8ePTtVJaFmVkIdT3sszw/4lxWWgohxOi2b9tqQ/cNanWtw+zc31yrVtc1AL6baBlmklmSy8osT0e8LA1bkoGcJNUhsLK8wk19O/ng+KeMn2qxY1uD5AqqtY7KIicZTimZTMMedLtZEggzWe7Qci0+nzIu3/E0/aP7Sf/MsPTLBD1lgYGllAQScJu/YRWA4Zzjk+leJivH9sF99N8LsQud2Sk6Vy4hX2xgAQgemJHcgJmZE64K0P79PLGqWTQj31KwNnue7tW/UJYjITOXJGEpXfYmaznnBokhJpBX4rU9y7pWrfHh2BfMXFnAk9YvO2dmBpDkMm8Wf3LRNJZSrHFOIBPSoweG7PmRJzn42MNUqx3yniZyzjYSZUiyGOsQ4kfZ1bnf5nr799yS58UBSHVVdbS0tOIWl1bsxFff0+nWaJ20zJQkBe+LPMT6+PTZbz8T4HbtOlgUN/edzPLyqVh3WO10A4bLfaY892y8HQGf5SWh2xlv25/PMTkZM8AWFy+FhTl92XdrbyanB7aUPT1FninLnMyQ5OSyzIGtxJjebZ9ZOMr86QDYdUMEGMDd9x8ecoV/FTgE9BsgNI/ZD6kOYxd+HT+3Od7/AbJ7b1xdGpxeAAAAAElFTkSuQmCC",
+    navLink: "https://www.futurepedia.io/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1683806888"),
+    navRemark: null,
+    navType: "AI",
+    lastModified: Int32("1683806888"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bf0f30d63280000f5",
+    navTitle: "Google AI Studio",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC4klEQVQ4jW2TTWicZRCAn5n3/bb7fbtuatLEJq1KU0NN/IViFaX2YClavVko0kMpUhAPCoJGEIli68WLP/hzEpFSc696KMQ2kIpBFNtGpNRCq4lYbTdms9nsz/e+42HjRZ3TXOYZZuYZYc/ZEpXwKs49SMwBQBD+J5yKiUAwh+Xha2p/vuGphHHSyjj5Kug6EMD+VSmCCIRmhDxCQZCsZ6cR2x6x3RLbwUI7Yjh1ggH2D0SAjmG5cd9YmdFNRU7/uBx++aOheN3tEYK1guJEyqmT+mJb8IIUtAvpRHoyx/uHb+aph3pRFar1wJNvL8jp2d+D0jTGtqQye/R2u/TOqEyOD7O5v4C1IiJGQYXjLwxzYGcfAO1OpLfs9Nk9GwRRFDOZ2LeRHVtTty5RRjcVmZoY4aa+BFvKeebxfvbeW6HViUQzooGBVTIFjyiJUC468khMC8Lszw1+q3Z4ff8geOG5R/sJ0XAK3inFgiKYfDpdhZbhaUQ+O7PI3rsHFVUOP7KBuV9X2Ta0ni8f7mOgkuBUAOHs5QbfXmpwfKYaT821lLLHkylffL/EK5MWHxjJNEuUnpJj8MaEl54YIHFQawSe/vAKJ2b/otWO3etkKeTg8cpiLefNYwtQVDDjruES0xMjbBkoUG8ahz66wudT1yBzuJLDInQxEY9F8ELS4wnR2DaU8d6hzXxw8hpz86vM/FTHEGbevYPxYwuc+aGGlH1XFFEUxNbMM6/Ca/s2smvsBmYu1Jmcus789TYHd/Wy0gzceWvK1ltSrG2GCpiZrtlmnY7J+pK3HbdlvHXiKqfO19BUKXjlm4srnDy3zNH9Q6hXw0xkTXgPJCARkVhdCW77yxesWs+7Q3qhncNX55d57J4Kz38yz8XLDchcMBMFEo8wjU/vh+DyqFRXAO+6m7a1FgIvfny1m5RSsKj4FEJz2tMsHYGlAiLbiR1EBcvtP+/sMwUzy3MDddBa+o7m6pG/AWYpN6by3hqRAAAAAElFTkSuQmCC",
+    navLink: "https://makersuite.google.com/app/prompts/new_freeform",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1703070760"),
+    navRemark: null,
+    navType: "AI",
+    lastModified: Int32("1703070760"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b64bd5361580000f6",
+    navTitle: "Monica - Your ChatGPT AI Assistant Chrome Extension",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADNUlEQVQ4jV2TW2hcZRSF1/7/M7eYxkwkUzPG0kJIMGIipmMuRaWtD7Ziy5QqVBTjDQtSihAxDxIjCAUfFEGECglVLKLiaN4KQrGC2FC8RDESDem0OJmmaGYmJpk5c86/lw8JNfjBgv2w99oPa2/B/8g+wV4T06eskX3quEMEECNXnfK8c+7DL89Ef9raL/+VtMcO6Otho5ysW2mshUToHBgQnjNIRC0iMa6SfOdzmNfwmbhNA5puzHpDezo+DiR6ZGllja2dXti129h0mwh8ojBP/nbJucWr9JLpBkHc5eYKc8dmZ7tDAMDJweqpF+8lnx6o1HITvquUVElHUm+osqz6yXu+e6RrtXb4LjK7JzgFADLav9bnO37r4oF34t1G6egVowoCBqoQCGAEFEMIVGZ/EH112NeA1kWTZsjEbe0F4yP2+CtxdvRaA1gYYwWAeJ7Qs0JSRWAE8NB9jzHH37BY9SRWbwiOG13lvvaOgLsfihhQOD09zampKRgjVFVxzom1Fn/MzyOX+4Kq4N6Ho6ZtoMZSg9tvGPi3pzsB6xlRJUZHRzE8PMxCoSAiGyHl83k8evQoJycnICKIGJquO4jQC9pNI5zZZh1IEeccVBWxWAzr6+sQEVhrMT4+jpmZGWSzWSgVEDASD4DmdeOlY3ItuuDfBqhaayTVmkKhUJCWlhaSFJIYGxtjIpGQkZER9vT0IJPJyLy/wrCHRXz64OLZ3OA1Fr9bDUiyWFjShYUFJUndhJv8OPOLalDVS3NrQeb0FfZ9lT8rZw5dvx9VOR+7JeTBt1pNU5s1ABCGJLARI0mKEJ61UixTn88V9fKtakwq3C8A8MGhvyZM/aZnqs0V/74TyUhnvyfGimy9eFXwwu81vvlNKcjvTMTYXJ6c69/1rACU032lpkia52raNHClVnbJOxPclfFs0w6DMEosroS4mPfd9+WqsGubdc3LFxdZOlDee3flxpbxwV9bbk7tfPtvkSev+1FZCuooNZHrqQD1pC92ewR2u9N6MvxoeeXyS38+NrS85RspgBAAXj5cO7gW8Z6rQB74x4ZJPxmi3h6Ua2n39Vqze//nI6lzGyMUiPBf/0zFZgGgg9kAAAAASUVORK5CYII=",
+    navLink: "https://monica.im/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1704356817"),
+    navRemark: null,
+    navType: "AI",
+    lastModified: Int32("1704356817"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bc89ae276230000f7",
+    navTitle: "DeepSeek",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACcklEQVQ4jY2TO4icZRSGn/f7/v+fnVmzkEajomKjMIIQQ1C0WRHRzWDhZbAJiAHNZhPBLmJjCkWx0sLdmCAIwcZRC82IES+DKNgYxCKgnQQRkRCNy1z+y/darEtWyYKnOncOh/eBbc1aXHQG1mZ82b+SHXPYvniFvmMOYP1rY7fv4qZdzDV/0MQ2u7KMh5uG0cdv8l3vEHfUNTvPnNRnW2f+OVHuHfbRKA7YXB13eAosxEKdcswekJHv7FzFC/uWveKc07Fhr+EuAfQONa+0OuFoNTUgJEjJxKgqJb4Z/8VjRae6sT2fn62mjG3Oz81z62TdAy0tV/cURfa1BAhSDcmuMRGTWh3FcsoPs0vcne/g2SzjRYC64avKk/1ZCOGJpuZTEu9Z7FbwI1mua5rSDUFhOvHPWabbiwV/Se13HIJT4rnhql4FCLJuSSl9cvq4Tg7XtFJV2l2VvB1yxZBh7NFsRi8Eunk7vGbjqmbjkX3HQOBPBd0HVrfv4swJ/Tpc1ZOp4i2JEKP2K1I3tV4POXWyz88u8hMAAzVB6PMQtHT/Aa49N1DJojOAj37nYF35+5ApRvwh8mFMZvv90UDrm6IKKXEKuNDu+AQAI9UPrnjvIrQnpR5PDZWCWjFoYTbmbFOGlzYUIAOE4Zou1olnio56Dx3xqW7fRXR6dOf1fFuIpixZkjzNWggxcslsq6S1KaR9B72ctbyWGi5h1uc6um42caWgN1LtG0KmecTNTc3zw1V9AA6gtAUU+YGnfFuec0Rwb8Klgn7D/DhuePmL4/ql23dxbqByO/ouw9R/N+552vn/guu/S/p9x62ZjXh7jP8GIyojXsMDG+sAAAAASUVORK5CYII=",
+    navLink: "https://chat.deepseek.com/coder",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1719470473"),
+    navRemark: null,
+    navType: "AI",
+    lastModified: Int32("1719470473"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bdd1802b71b0000f8",
+    navTitle: "Kimi.ai - 帮你看更大的世界",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACCElEQVQ4jYWTMU8bQRCFv9lbG2NkkFzEEpIjpUv4J5ShoKCAdGkoIgHyj0AKRRo6SiLxAyJRpqV2ESIr4uKYAjchyDmdvPtS3B1cSJS8Zme1b2dm3+yDAtvAEPgJBCACKtd6HLBkBjYEdsq77NRI4S+XHsf1/TbAZ0Bmlrdareicq5MEqLW4qNZCM9JoR15sRDpP8+LMLnHOzYC4vr4e0zSNg8EgAvLeC4h7e3tx/G2iN69fiWcb0b2TePm+LOJmzswWAFZWVuj3+7a6umpmphgj3W7XDg4OrNd7wofzc5F/N32diPRj+XoteEkGEEJAkrIsQ5JJYnNzk16vx9HREZ++TMySqfT2Ocx/VAnMm5kBmBlmRrfbpd/v02632d3dJU1TTk9PC3rIDXLASnmAJEkiELe2tqIkhRBUx3w+1+3trQ4PDwtRzerTiL6aZYwRgKurK0ajEUmS4Jzj4uKCtbU19vf3OT4+ZjQaYWZIRQe+7IcQAgBnZ2cMBgOcc/eJT05OiDGyvLxMxa/gVaUCJOG9LyUpqjjnaDabVTJVvArOzFRqgZlZkiQ1hYoOvPc453DO3Qte1XSScoC7uztubm40nU4FmCTK7nR9fc14PCbLsofSBTKAS0BJkuSdTid67//4yo1GQ0tLS9EeJlB+ZS4rJ/7LMI/jUNv/5sghMPuvnQvLDysn/gK2LDHPFYe+SAAAAABJRU5ErkJggg==",
+    navLink: "https://kimi.moonshot.cn/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1721124772"),
+    navRemark: null,
+    navType: "AI",
+    lastModified: Int32("1721124772"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74beae8630ee30000f9",
+    navTitle: "blackbox - ai",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACU0lEQVQ4jXWTv0tbURTHP+e+93gvTx44JGKI2ECSXUMXhS4dTBehu+Dgkj/B0eL/IEXI6uSWqYsO7Sh0UhCsQUEHNTyIhILc3Hs6NAmpbQ+c5XK+n/vl/BBeRZqmTe99W1Xfi0hVRABuROTUWntorf3+WjPVZlnWmZub80mSaBzHGsexJkkyzTiOfRzHHSCdiGQinp+f/wK8G41GOOfw3rO8vIyqcnd3h6rOfvbt5eXlA/AzGNv+7L3/GAQBxhgajQZRFOGcwzlHlmWUy2XyPAdAVd8YYxa9910TRVHTObfjvcdai/eeRqPB0tLSFFCpVKjX64jI1Imq7gDNQEQ+AW9VlVarxXA45OLign6/T7vdZmVlhW63y+3tLaVSifX1da6vr1FVERERY8yViNQBjDEYY9jb2+Px8ZGjoyOstWxtbVGpVNjf30dVp+m9/yHGGAuEIsL29jZnZ2fc39+jquzu7mKt5eDgABGhWq1Sq9U4Pj4GwDk3mgIAFhYWGAwGtFot+v0+YRgSxzHGGLIs4+TkhCRJeHp6mgKMqt5MGuOcQ1V5eHggz3MGz8+oKsPhkDzPfzdQhPFyAdwYVT0dd5VisUihUOD8/Jxer0d5cZFCoUCv1+Py8pI0TSkVi7PTOAVoiogXEZ3kxsaGrq6uqohoFEW6tramm5ubmqbpZCM1DEMPNCdWOoDOQkRE6/W61mo1DcNwdp01iiI1xnT+uAPgK6D/AomIGmM0DEMNgkBF5OvsPcxCOoD/H0RE/LjmL/FsNIFD4EpErIhY4Gr81nxd/AtqoS8M+KcgVwAAAABJRU5ErkJggg==",
+    navLink: "https://www.blackbox.ai/chat/EVWdX5p",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1732058264"),
+    navRemark: null,
+    navType: "AI",
+    lastModified: Int32("1732058264"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b1cf49043730000fa",
+    navTitle: "New conversation · GitHub Copilot",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABuElEQVQ4jV2TPWsUURSGnzOzuDGo2RW1EkUhopVBMGAdFX+ERJA01hZiY2llLxIEKxHEFDaxSBEkhR8gFgaMjU3SxV2TFO6GzT4WnpFhLhzmzvu+597zdYPGUg8BJTCOiGFiE0AABxGx33SI/F5UX6m7/lt99YH6UP2d2K76Up2ufCvnDvAVOAO8ALaAa8Bc3rMCfABOA3eAn8CViNiporibN1yvRTap7qm9TKHCb6X2NkAr8XPAGFhV25lvUcu0yEMEVlN7viIC2EmnTkQMI2IA3ASOAF1gLiIGWdSp1O6p0YoI1fUE36orwHHgHrCW+JL6DOgBNxJbjwhRT6rv1KG6lfltq0/VKbWjLiamupnaZfUE6pskfqld9XDV2ka7i+S6WVjV16ijtL56NMXz6qd0KnM/n9yxnIuROipy6qo1oRbADHA1OxG5n0muXdOXBfAtDzkAehExBjaA73lAkfuN5PrZxhL4gXpWfZ85LaoXmvnX6nBJfZ7aj+p0Ncot4D7wCJgEvgCfge30PQXMApeBP8Bj4ElEDKhXPFu2oC5lu/bTNhNbULvNh1j9lI1wQ22nRYP7r/0LypmjIobucagAAAAASUVORK5CYII=",
+    navLink: "https://github.com/copilot",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1734663941"),
+    navRemark: null,
+    navType: "AI",
+    lastModified: Int32("1734663941"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b8bb30023810000fb",
+    navTitle: "渡一机构",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACuUlEQVQ4jZ2Tz2obVxTGv3NGM55BqqaSNVZNcGyRBieltBtvnC6anZ+gdJVN/ACtN6V/NgIvDX6PQF7BGJNmXAhNwW6dYBzSpAt7VDGVZc1o5uree7oQ0gPkWx2453zc8zt8wAeo2+3yrCYA+GVn55ZbrW6WxtjZgy5LKopClMrR66X47cULutVuD5W18cnJSTbrqwCABMFXXhA80XkOJoI2BlYEViy0Frz/5z2CIEC1Xsf927fPtra2Hu3t7b0EQAwAIqKLorBKKZ3lubm5udHD4bVNksT+/vIPk/zbN1GrZcIw1FEUfea57pMfHj/+CIDMDAgAWWtpMlE0UYp7vR6tra3RUvsTXvB9bkURt9ttdl1XO8yfUhQ9mK9ARGKMobIsoZTC4L8UzIwff/oZoyzD9vY2fRyGttlsTrkx20qlUgMAngFTSqEoCspGN3Q9GNB33+/QYqtFq6urtLu7K/UwJMdxpuSmP7ZzA6UUivEY5XiMXpLg8y++xNcPH0JrDa01Njc3aWNjA+PxmGaazTIA5HmJLBtBqQJ/v3uH5uIiRARaaxhjYK1FmqZIkgSe58Ha+bWnDEajawgE/X4f/TTF6ekpAMD3/XnjwcEBzs/PpdPpiOM4Yo0RAHAA4O6dO/cnqvz2z1evbasVIcsyXF1dodls4vLyEvv7+3R8fCx5nqMsS6yvr6PI86e/xvGrCgCwCJ2/eSuOU0Gj0UCtVsPh4SGOjo4wmUwwGo2k0WiQ53ny19mZrKysOOv37mXzFZ7FsfjVqiwvL4vv+2BmqdVqbIyB67rieR6KooBMVXkexxdrnU48N6jW65WlpSUOw5AXFhbAPM0KM8NaC8dxwMxgZhDRWZqmj7rd7hAAVQCgXq8/D4LgG2a2RAQRgYgQEcmMOBGR67rDwWAQX1xczMIkH5Lm+fkB4H+tD15kR8fPOgAAAABJRU5ErkJggg==",
+    navLink: "https://fe.duyiedu.com/bought",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1735104153"),
+    navRemark: null,
+    navType: null,
+    lastModified: Int32("1735104153"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bf36307c64e0000fc",
+    navTitle: "宝塔Linux面板",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACW0lEQVQ4jW2TTWiUVxSGn/ec75svMTPp+IcGB420oNJBCoVC6aJScGGhq6IbXdSNFMS1LroIlC5cBcF9Vy6kRV24KaVUCoWK0JVIIy4SOqWFJiMm1Uycufd0MZlgft67O+e9z+Hccy5s1QzGDAVAc3a62Zx9r7keL5jBttq1DTDSWfzgBye/KvZW0ak/+oZzpJ1sGpn3HT22i73gqfyYHB+BjmGUVauOTP2AP+T69eUr/QKLLDbmXnGO5IB4QjQ+nbrkya+Yq56z/lWKn1T4fmuULzB9J4txwYmaxxdlOb77xVznEQ/AAfZcP9karPWfuSyTmUC8HeJDxJw3ayvmdoagEVnPMX5fex0/vLX/0MTKnb+WDcBfp/ZYUdzGox2wlIx75eGJS1g0FKp3ny5+ST/dxVmSaNdK3S4jtzc94p4r70zWpsY/t0b1NC2v3lTN/yTis7HDDQa9fN89WqvdtcvVZHX8Zcn33QsPlzdP4RTFgdPtRRVWj0GSCrNIkapWHZ8oPfcGOVAo8n8Lz8b2MfNgALwx11PTBZG7RHgQ5H5OEAZhuZdS5MBKOag7fWS4J5sBS/MBWBABCgkTQhIQhhQREYDNL8yzHVC0bNiREIhY35MYtrkRE7Qmp7QN0AIIVYgcjKwEEEIaxpQVVJ3df8dWgDqznVUZt6xmrmGxQTA6DCThu9yDuMXF+d5oACNAAPzTf3wt99INudwqK7QuG/dChTyv9G8s1H67+uadHT/Tga/f/USuy4jT1aE6qvmPkQY3F84//Hkn/1ZtQKeut09Mf/v+8Y1MbC/4PyUD4+pzwjbVAAAAAElFTkSuQmCC",
+    navLink: "http://120.26.76.192:8888/83d5ac99",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1735104153"),
+    navRemark: null,
+    navType: null,
+    lastModified: Int32("1735104153"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b142228393b0000fd",
+    navTitle: "TypeScript 入门教程",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABwElEQVQ4jZ1SO2hUURA9M+++l7du3uKuCoL4QZNGEBs/jWlEsBMCltrZB4liFCx1hYAo2FrYWizRykLED4KohY1IzEYIxsQPJrjft/vuvcci2WQt16lm5syZGeaM4NILDGI6UPX/EAzIAQkiG4H8i7Evz01C3wR6gn24QAP1IB0BQAWA6e9YyAUKUQUA7+HBWsMCTPKhJ5qphYoBCVVYVxoOP105ti0frrYyBUr56GV1daIyd3t89PjeREXuvfp2ufLZQAQkRNqZv/l0IRkyV0/u+dHoTj+b/97IHpw/uL8UTz3+UhwOSSJQweTz3kZE00KxWB77uNQ4festduTa5bHZn62j0++ylQ6KMaJAAawfSjVIwrgwZFQio6YUB4733ywf3pUs3TgxdXY0ChXO68ZKAJyjdZ6kB62jU5mYqV6szHUyXz4zcnf8gGRO16vJNYfSk4AMjXrizkx19/XXHxbr547sTApRTzgREKAXahhIGAgct8bBwwuHnsz+Trt+ZHtuYSVtt12fDkKIEFyudX81M6j8SW29Y6+d2ieC91/rk4/mM+tl873JNY2LOeM8a6kFgMxvyYdGUGtZeCIK/gJKbtA8G9bs1wAAAABJRU5ErkJggg==",
+    navLink: "https://ts.xcatliu.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1735104153"),
+    navRemark: null,
+    navType: null,
+    lastModified: Int32("1735104153"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b18195f1e380000fe",
+    navTitle: "领天",
+    navLogo: null,
+    navLink: null,
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1703144189"),
+    navRemark: null,
+    navType: null,
+    lastModified: Int32("1731485954"),
+    navTag: "h3"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bbf150fd2fa0000ff",
+    navTitle: "入离职应用后台管理系统",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADVUlEQVQ4jV2TTWhcZRSG33O++917M5lJJtOJIRObxkQTaDRprbWlLbVBsCitYFqLIiiiC3d1IYKu6qIiCG7EX3DnQgSDuFAqKootUbCpNjEak5SYlGlMJs3/zP2Z7xwXIojP/oFn8xD+x+qerjx+BtaAaAVzrhOtQbivJdzY3tamphyqUWq4vlG9ZXJ5CwBIFUQETb7o3Y/QDq6cjEf9A2YYOSloSHlXwSpVJHJMa1C95olExKYbhOvFsekRD6+AAKjJBo9pXU/t+CwYYdY8wT4qLG/CuK/OH5r59vnBnmNqvYcFuFi4Mv320t6es4sDXQeZzkHSL3ffL4ITUSTPaKxOEkASmXKbUrGHp745R5BadXtcoE5hHvknneZhvH7SC22Nzm/9BGn6gQh3pIm75OeCVyWW79XhSJDbemphWMgvcUDGv5ugzVZwJWL0MJFwqoVhSWSKyDtFzM/6Of99rTkfovcYC4bXUPQyfrs1dsgSHQf0xugvM5Pk9KarS5VT3vraPz55FpDLxmeTXN98iD1e8Rr4TmLU4JJ121gv15l6ozR5w6SYOLKv9zx75iAz3cqNDyyUFWARvSTQi5kTVEOGwvpy+qI6+VFM5gkk3n3E6Uft43OzTlwaeOYnVQQKTQkAyt2lzu1r5b92vNfd5s/5p4Oj5tebp+NisNcMZN+x495dEx8CwHzfzlK2MXy6ZWz6taXB2x+HAQgAKgNdB5IomZ36o7zVv7v3dagWOcdGa/FbreNz3y0O7Lot44dDsdM8Mc4Y4ONEZFlUDQNA6mST18u1ISCKA/e5ybJhh3uttX1Lx1qzoQ1ecIqOBkbREO2s3dh6VwFL4IQBQIjy9baOluW+Yi6AOcpC+wXIJKqHaTFXcuvyEhMxmBpi50ZMoZ5zhGVhJQYAsNdpN9OUG/P9hnDIQeecynPE9GeAeIUycScEP6xG8achex0ePJ+FxCiaGAA80sTkm88UqHrVinuZ4s0n28amR1RQKVfipHB1YaJ57PcLec+qz5iNg2zNZz7Jit8IABTgyp47HiSmwbrKBAQ9UGywcdMQOyDQxDDlVGUe5JTJtinJaOvlmTH678rlUikTtofWRImJNU7IKbHL05oIFZqE6rXAVf2at2t8fvVf529AKqA4hCUDSQAAAABJRU5ErkJggg==",
+    navLink: "http://sign.bz.com/Admin/index/welcome.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1703144150"),
+    navRemark: null,
+    navType: "领天",
+    lastModified: Int32("1703144150"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b4aadd5ce6e000100",
+    navTitle: "入离职应用后台管理系统测试环境",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADVUlEQVQ4jV2TTWhcZRSG33O++917M5lJJtOJIRObxkQTaDRprbWlLbVBsCitYFqLIiiiC3d1IYKu6qIiCG7EX3DnQgSDuFAqKootUbCpNjEak5SYlGlMJs3/zP2Z7xwXIojP/oFn8xD+x+qerjx+BtaAaAVzrhOtQbivJdzY3tamphyqUWq4vlG9ZXJ5CwBIFUQETb7o3Y/QDq6cjEf9A2YYOSloSHlXwSpVJHJMa1C95olExKYbhOvFsekRD6+AAKjJBo9pXU/t+CwYYdY8wT4qLG/CuK/OH5r59vnBnmNqvYcFuFi4Mv320t6es4sDXQeZzkHSL3ffL4ITUSTPaKxOEkASmXKbUrGHp745R5BadXtcoE5hHvknneZhvH7SC22Nzm/9BGn6gQh3pIm75OeCVyWW79XhSJDbemphWMgvcUDGv5ugzVZwJWL0MJFwqoVhSWSKyDtFzM/6Of99rTkfovcYC4bXUPQyfrs1dsgSHQf0xugvM5Pk9KarS5VT3vraPz55FpDLxmeTXN98iD1e8Rr4TmLU4JJ121gv15l6ozR5w6SYOLKv9zx75iAz3cqNDyyUFWARvSTQi5kTVEOGwvpy+qI6+VFM5gkk3n3E6Uft43OzTlwaeOYnVQQKTQkAyt2lzu1r5b92vNfd5s/5p4Oj5tebp+NisNcMZN+x495dEx8CwHzfzlK2MXy6ZWz6taXB2x+HAQgAKgNdB5IomZ36o7zVv7v3dagWOcdGa/FbreNz3y0O7Lot44dDsdM8Mc4Y4ONEZFlUDQNA6mST18u1ISCKA/e5ybJhh3uttX1Lx1qzoQ1ecIqOBkbREO2s3dh6VwFL4IQBQIjy9baOluW+Yi6AOcpC+wXIJKqHaTFXcuvyEhMxmBpi50ZMoZ5zhGVhJQYAsNdpN9OUG/P9hnDIQeecynPE9GeAeIUycScEP6xG8achex0ePJ+FxCiaGAA80sTkm88UqHrVinuZ4s0n28amR1RQKVfipHB1YaJ57PcLec+qz5iNg2zNZz7Jit8IABTgyp47HiSmwbrKBAQ9UGywcdMQOyDQxDDlVGUe5JTJtinJaOvlmTH678rlUikTtofWRImJNU7IKbHL05oIFZqE6rXAVf2at2t8fvVf529AKqA4hCUDSQAAAABJRU5ErkJggg==",
+    navLink: "http://testing.ehrsino.com/admin/examination/examinationSj",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1703487023"),
+    navRemark: null,
+    navType: "领天",
+    lastModified: Int32("1703487023"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b9efb05751d000101",
+    navTitle: "易捷签",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAACnklEQVQ4jTXTX2sUZxQH4N85885MZtbNZrWajUYjRhEREkqwQoNQAkIbpa3kJuJFEPEbeNfrQj9Br1rwE5SaG1GbtjQY0aptNHXVaIR2NdkNMZvdnf0z877n9KL0+Q4PiQgAqIIZgGY98nwwEwBAnVMRIiJjBIAIiSpElKCdt8h6rYfvXPUNXBfOuXbPGyiYoWFJmkSUn/qMwpChqipELJV5++hqPLwW7Z2P9tyIx7R/+tMgX8Tq82hklIxp3J4HEUMF7Em7Ius3+dAsksde3jf79odjs+HhE9HkGfvoYXZvcdfZ81mlomnKqgoief0d75uieIQOzCj61Ay6jUXXbEvS6PtyhgqFtLzC+QKYDNjITlnTHdiWVG+BQwRFbb3CB+OuWkt//9WurkbnvvAOHeYXf4GYSYXNLjP+NUVD4D4z9o02ytAOEHilvbJZjWfntJW0v//Wbm1q2jMKUO6gWFDhQ2aPjOXiBBXOaPtJuqzh5JR/5GgmFoUB7bTJ+EyAqtp3a4jHqTCdPv6Fdl9uXX+p6XDf9Nlw4nRafpo9+SM3O8fE5HkGUALJTh1+6Encnl/T+oPg1Cnv6Jz7+5/OvR+kvt37+Q4NFBEYtZahRADFOQ4DLg0Fpydk4226dFeTre7NH6X+3j5b4cFS8NHHmqYwhkGqgDQarr4ttY3ewk+uVlWXZct/xhfnNEl4aL9/4qRmlnN5tdZAQUx2e8uPc5JsSm2j/9pXkjS9wZJ2OtHnM9nKcnp/iaPI1tYJSs46YuqWV5LFhf5zF9x6xYyMZs+fke+bY8fJM93fFiBioZK0ipeukIioKjF3y087D5Z4d9G93w5Gj2mSuGZDkqYpHQB7XhznJj+BCOn/iJkAsY4MQxREIEABETAT0X8R/gXt2m7UClLc9gAAAABJRU5ErkJggg==",
+    navLink: "https://sign.ehrsino.com/Admin/HistoryRecord/index",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1717480825"),
+    navRemark: null,
+    navType: "领天",
+    lastModified: Int32("1717480825"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b0280fa3c1f000102",
+    navTitle: "领天英才工资系统后台（内部系统）",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADWklEQVQ4jV2Sf2jUdRjH38/n+/3ubrfddbedpDYzsyRZtVFiaOBszvaDICy9+sMfKZEaEVQufyDsO3ILyUFwGJyw/rLIO4QGO9lyp0cWFBQxMkflmDLnmtv92r67fX99Pp/+cCfq89fzx/N6PfB+HmpOXfhGCFZ/cWtLbWv6h6RpovJyy6sNkJJAJAEA0Bmgi2XHhxKuQyunT25Zv+TopbR0uctI0gxTtTXLYzEfd/l1KvNueOrs+RoQScTjCnbEFUAX4X29fkUr2wIpbwIACV4nuchT81B/E/OFLhrTuV1KgKWZ9N/IFexfs0Z++81db04CwOOf94c8orLXYhXbZm5PvxCoRIC8VWk7l99NiMeVpmDwF06ex8ZHhlc9umL166av+pyVLRbZPAYcC46w2FZSH6ky/pv88FZ3W3RFx+VrtiPKp/7NPMcQiXDHFp+yMs+yqlXPnv/50miflZmqI2JJKPQSiDaBsZ+c7MTLt7rbok+eSH+tVATXCtdtRyJiUCmsjX0XDkp/+Ku5fHGUz5kHRva0pAAshgis7hncqHDPadKC9UZm6vjEieYuQBIBQElSl0i+JrVADyneNTJvjDGXjdsOSWE6y0n1P80N87ZTnD88preeBSQBJKm04d7ZdN37TM2mjxjXuhVyrrsus4St1rq2cyo3PvFZNrpztgQDALsnIJKIxTTouumaclALh2Hb9iEuF/b6nlgCNcBT2ejOWbz3m1aCAUDF/bV/v4t4XAmH1AVSc1863P7DdalYHsr2lFciA10yoJPfjzwoAIBIhBe+61cU03tHFcFeaUntzriRFpYL6CQeHqeHernu+6FjNvN2wWIgwx62TXKlw16EKINVmP9irOPHI0CHfDADKQmAbEgOtvuqq7uEbcezxYWa4b2b60cONqybM6ywNIsxNVDVvvTohpOLMJUEBCLZmEquVMs9XU4h13d1e+NboQrR9vy3V/5Ze/rKDa9U3vn7yCsHnMLMGcUXOBT8eKDu7o/ojC1uRxmxN1RN02yj8EnTwMDuiurqM8JxJknyEdUfPLX0WOrwbMZul5ybCqN9AIAdfxFDZ+fdBIRc7xrGxO9vbxslhb0v5wt/Xt3T2HDtg82trlEYYhDvZqNts8JeGCZitQCARIL/D6DBnsN1zsALAAAAAElFTkSuQmCC",
+    navLink: "https://salary.ehrsino.com/v2/dashboard",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1720576272"),
+    navRemark: null,
+    navType: "领天",
+    lastModified: Int32("1720576272"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b083ccec8bf000103",
+    navTitle: "首钢正式",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACwklEQVQ4jXWTX2iXVRjHP+ec931/++fWKPAiIjMQ/yEUhM55YYkF5Z8Mpl4UKCQ5W+wnMihw+asLiaKc9Qsq8ionqyGEFElBbjXUKYMYEoIXGxqENNjvl9ve93fe95yni3dNZ/RcnHPx8H3O83zP51EsDgUIT334CGFwCpE2lPqOWnyQsTergAb8vQJ9XwEBIIrKREu2omgkemAvhcbjd/MlDR1m/rH8uKeYZ/3JndS3fIud6YX4C6g7QBD1ksXPcrFyGUr2/pYXx6bPzgMxIwd3saFvPWQvYQqHQX5H0uuIXg5qlHiyl9/6KkGuKmk6VivGJxoQt5Zaup+NH59B/KNYOY7xFVTYiUveR/wKosYyTSsMcEgvdDG429HatBXFH9QHz6PUSlTwFmM935NIP+Is6dx1RnsG8H4A9Pb5uTs0lDwb+45g/A6UmUbUHmz6Hhe7fmHd0ccYK95C6ZjCgxtyt7RB3JW7HrSX30Z8C6g7BOE6snQVUfNt3FyILjQSV96hrvlVnDqG+9sTFk5j7V5Gi+OGtpO70LqTquukoFvRhWXUklOE4QuI/IUOIpTfAkYgm0XxIpn7mtHiD/kIxnyA919xrXgbUQ3AQ1w93M/UjW38+tpz2Oo5lIlwyY9IuhQvl7jc/SV8YwACTN3jyFwOVKqHCWyRZfvqWP3kBM1921DBy6R2AEluEusRxnsm2FwKGNqd5R60fzoM/mGSrBttE6KGs2TZG0iqMNERtP4ZLwpjnmFk+Ak2r1EMldy/1AYk6StE6l0iShDdQDGFCT7BpR+RzOygVq2xdO2fZMkJGHQMYRaQBwLGijeBfSAKnja07ezA1J9GZBIdWlpbyniXYO/055LBRcukFoRccPO/KrSXzxE2bcdWhHCJw858zqXurv9gn4OkBIay/C7lXNja69jqTwizpLNniaeP/t/u/APDgRolqXUfLAAAAABJRU5ErkJggg==",
+    navLink: "https://hrdzq.shougang.com.cn/admin/index/login.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1721368275"),
+    navRemark: null,
+    navType: "领天",
+    lastModified: Int32("1721368275"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b48729734d3000104",
+    navTitle: "京投本地",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACHUlEQVQ4jbWTv0vVYRjFz3ne9/1+7w+VlIbKzMIlbGlradCtf0CHIoeGwC0KI6jBlqZqbWgriHCPlghbIlqNlAqhHBQcuqZc7/1+v+97Gi6X3Aqk84znGZ6H8znAIUUAmJHc9vIyDxpTU1NpkUx/9hYdMClgNgJLDvhMYLE67AHgzPuN0dzZ5dhte8gEA2gm3xhc+9FaebU8PV0dP/NwvJb7KzEWu8Vu9TIfCldJ79VpP/e1LJxErO6YuUAQMgqAmKruaDbxFMA9l9tp0t01chOZvTXjAsVaDOGN7xTl12B2LVXJaE5IAiJQpSJPRAMCf41hZbge55Biu9jrbGRZ87pJbieGdT8w2DgL6EUMzIwUQAiSb9Q7vpk9AKHhc+G8ly2lWG2FRu2Sd/4ZzdUHEy/6D7dfp8ynpFiIpASARsb91Pq5ur0DADGW0cGZlAAUkOihYChL+NanrSzzYQAQSADqhUbjqcbw0SfjzceWhI8wJxIIwRGkQCgEwPtG/s25dEsqnfWCYSITUxqJlW7SOMdYfaElCLAeFL1RmehdF0Os8wLkvSABJCUBnoByCi1RXUARQlmWTiEoQoolTB4ex8yas/0XpD6fQIzdnWK/fd97RwsDPqZiJCk6MBwhcyST96j210pXzkuVczDFPmFE6nbcu83vC6snJh6NuWrvhpD2MnBDqOYTCldTWv/nvvzF7JfjoCYFzCSA+q9l+g2wfgW87kLtoAAAAABJRU5ErkJggg==",
+    navLink: "http://sign.jt.com/admin/index/orglogin",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1721875415"),
+    navRemark: null,
+    navType: "领天",
+    lastModified: Int32("1721875415"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bfe2920ce3d000105",
+    navTitle: "领天英才工资系统后台测试环境",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADWklEQVQ4jV2Sf2jUdRjH38/n+/3ubrfddbedpDYzsyRZtVFiaOBszvaDICy9+sMfKZEaEVQufyDsO3ILyUFwGJyw/rLIO4QGO9lyp0cWFBQxMkflmDLnmtv92r67fX99Pp/+cCfq89fzx/N6PfB+HmpOXfhGCFZ/cWtLbWv6h6RpovJyy6sNkJJAJAEA0Bmgi2XHhxKuQyunT25Zv+TopbR0uctI0gxTtTXLYzEfd/l1KvNueOrs+RoQScTjCnbEFUAX4X29fkUr2wIpbwIACV4nuchT81B/E/OFLhrTuV1KgKWZ9N/IFexfs0Z++81db04CwOOf94c8orLXYhXbZm5PvxCoRIC8VWk7l99NiMeVpmDwF06ex8ZHhlc9umL166av+pyVLRbZPAYcC46w2FZSH6ky/pv88FZ3W3RFx+VrtiPKp/7NPMcQiXDHFp+yMs+yqlXPnv/50miflZmqI2JJKPQSiDaBsZ+c7MTLt7rbok+eSH+tVATXCtdtRyJiUCmsjX0XDkp/+Ku5fHGUz5kHRva0pAAshgis7hncqHDPadKC9UZm6vjEieYuQBIBQElSl0i+JrVADyneNTJvjDGXjdsOSWE6y0n1P80N87ZTnD88preeBSQBJKm04d7ZdN37TM2mjxjXuhVyrrsus4St1rq2cyo3PvFZNrpztgQDALsnIJKIxTTouumaclALh2Hb9iEuF/b6nlgCNcBT2ejOWbz3m1aCAUDF/bV/v4t4XAmH1AVSc1863P7DdalYHsr2lFciA10yoJPfjzwoAIBIhBe+61cU03tHFcFeaUntzriRFpYL6CQeHqeHernu+6FjNvN2wWIgwx62TXKlw16EKINVmP9irOPHI0CHfDADKQmAbEgOtvuqq7uEbcezxYWa4b2b60cONqybM6ywNIsxNVDVvvTohpOLMJUEBCLZmEquVMs9XU4h13d1e+NboQrR9vy3V/5Ze/rKDa9U3vn7yCsHnMLMGcUXOBT8eKDu7o/ojC1uRxmxN1RN02yj8EnTwMDuiurqM8JxJknyEdUfPLX0WOrwbMZul5ybCqN9AIAdfxFDZ+fdBIRc7xrGxO9vbxslhb0v5wt/Xt3T2HDtg82trlEYYhDvZqNts8JeGCZitQCARIL/D6DBnsN1zsALAAAAAElFTkSuQmCC",
+    navLink: "http://121.36.226.106:8091/v2/report/list",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1731463338"),
+    navRemark: null,
+    navType: "领天",
+    lastModified: Int32("1731463338"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b3a0bf13623000106",
+    navTitle: "中德",
+    navLogo: null,
+    navLink: null,
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: null,
+    lastModified: Int32("1730360000"),
+    navTag: "h3"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b3cdbfb32a0000107",
+    navTitle: "中德智慧项目文档",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC/UlEQVQ4jY2TW2gTeRTGv/8/k8nkbkxrq2mtXbpad91N1CpVd/VBUdwHcVFcREV98EVYX1dxLyOooIgPgkKfirJSreBeqKBY7ysWbakNVBPT0NZMU5s2aWuaTmYymeNDlUXx9j3+znfOgcN3gNciIobP0Cd9HzO8v0bELyuK/36kf/Mb1N1N4q1osgQAWsL9vsZbvdKb5sdP43O7epSzbV1Kxf8zGk+Xt0X6+tqfJS63dydnA0B3NLE0Fkt7otHnSyiZdABATBnaMTiaTaWyKoWV9DIQMSBmbKiNT266H+lLxUcmqf9F+tGJ8NjiWddGarVsdv7GtrHFaIh7VVX9fTSXL2Q1gzRNS9LZwwEA4JxRbUTFhRsFqVQfGdIdXk/dtkrWEOSm/a/YaPDvjoHxzM7AVkmSDjlsVuYSOW4ruSLTt+wSr2e+YQQw2/nIZik5cORApaX6h0Vf4MvqgDAynj/YEh6uqK/23F1Y5TlTBPP2D6bNiJLB3isJIeFyDVsCpesth0Bs8CSJM5lRF1MyLgGmp7JsGrkk4dvyEmehzMG3xZOZGfe64sZAcsx690mKX+vsbbJGw3sKx358zEDE2js6BFYy+w+/276f9Dwj0yS/12mxSxJSoxPIqnkj0jtMqdRExiWy06E/rx77+pKsA8QEMEZ1/9B0XGwN1gxE+coadyFQXiJWBGaifsEs1dAnbfFEmjXd7LF0kk/tq1nXiEv1OmTikJkp4NwLp10fOm91O1b3KGn0DOZEt1cbXxW0HX1p2hyt7fHfHrR14uVE3nAvWT6nVIs2DZ+KrcE+pgGAgHJpBxX4amLFoi8UGnPa3LfhnX685dfQwxY0W5w/+6uk4He73OkEJ17QNYGtcJb6vs8BrZCJC2CWOwaKax2BeTlUC8+V7X5lKl4yB7YUQz/Rvt5HkZxZ5t1t2ERHMVCBoqmuAtCKr/De2DPIMn8X+i5kFnjPKQftV7L/if9mfpnaIXOAiE0dhDjwwUd6mzeQ9QO+j0iWOZqbLe/iV1bibkYXTM3OAAAAAElFTkSuQmCC",
+    navLink: "http://local.luojigou.vip:82/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b9af438e7ef000108",
+    navTitle: "上传",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAClElEQVQ4jW1TTWtUZxg953nfe2+ccRqdaYiCDnTTFrpz2UW5+AMCXQnuTKnxBwT8DUJ+gCJJFy12KfgDZFAQXLS4NCuhlKqYmJiZxrn3vu9zukgqs/CsHng+zuHhHAKAABIQAPx9/8bVaFrPUN22uggAZcnXAZgkt51LP//yeHGHOMXLO2uD86ujLSVfJxHnXYbkEgmzyKXCIPfEYDsHb/c3v739aAoAFMDd7bWz5zh81CtDvX+cM0MpQPY/geYzMRQugKNBFY6bbnKosPbNTzuzSED/4PxWv4r1u1lq7PvrBc4MDZ4gOULVR//tLg+f/x5C9YX2pk2zMliqfd5uEdjgX3ev/1AU5eOmacWqb6pvEkUPhODKJALG4+9w9MdDvX/2G6w6K0heFcau667GEMKGGQOAJDihjObjMY5n/zKWUeeWlzH/OGXvyo/sulbTPx8SsYLRQghhIzqsbroskAYRBOEuilDOzg9HU+y/f6G9vUMG9DAu+wi5tSZBpNWWsl/IEkDQBQIASUGgJLRtC8+Zq6tfKrJDyk4SzBJS9guGBZALNQCCMBoAoqwqXB5fQjCDpE9zFoO9CSc2EnliJgGkUadXYEa5Z5JADCYICiRisDdm8ElVBEJyAJAASEpdorJL2ZW6RGiBWPKqCDT4JOac75mFayfqKVhgdaZEjFE6NRJBhSKCuT31HuCunHO+Z+NbD54I2h4u92Jq227+YU+pbYDcgrkTcyfkFqltcNJru+FyLwraHt968CQK4C4ONtkMv14ZxPrV019zQnQjbFGBCx6R+NVoqZo1aXKEg00t/v3lnbXBaGW0Jfg6gdgkR3YXAAQzVtEgIBG2s/9uIUyfj7OvJ0fdJb8IAEW019E+H+f/AJvEd3R++Q5SAAAAAElFTkSuQmCC",
+    navLink: "https://open.test.luojigou.vip/admin/doc.html#/Admin/%E6%96%87%E4%BB%B6%E6%8E%A5%E5%8F%A3/uploadFileUsingPOST",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b53d1433ab2000109",
+    navTitle: "订货宝",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAClElEQVQ4jW1TTWtUZxg953nfe2+ccRqdaYiCDnTTFrpz2UW5+AMCXQnuTKnxBwT8DUJ+gCJJFy12KfgDZFAQXLS4NCuhlKqYmJiZxrn3vu9zukgqs/CsHng+zuHhHAKAABIQAPx9/8bVaFrPUN22uggAZcnXAZgkt51LP//yeHGHOMXLO2uD86ujLSVfJxHnXYbkEgmzyKXCIPfEYDsHb/c3v739aAoAFMDd7bWz5zh81CtDvX+cM0MpQPY/geYzMRQugKNBFY6bbnKosPbNTzuzSED/4PxWv4r1u1lq7PvrBc4MDZ4gOULVR//tLg+f/x5C9YX2pk2zMliqfd5uEdjgX3ev/1AU5eOmacWqb6pvEkUPhODKJALG4+9w9MdDvX/2G6w6K0heFcau667GEMKGGQOAJDihjObjMY5n/zKWUeeWlzH/OGXvyo/sulbTPx8SsYLRQghhIzqsbroskAYRBOEuilDOzg9HU+y/f6G9vUMG9DAu+wi5tSZBpNWWsl/IEkDQBQIASUGgJLRtC8+Zq6tfKrJDyk4SzBJS9guGBZALNQCCMBoAoqwqXB5fQjCDpE9zFoO9CSc2EnliJgGkUadXYEa5Z5JADCYICiRisDdm8ElVBEJyAJAASEpdorJL2ZW6RGiBWPKqCDT4JOac75mFayfqKVhgdaZEjFE6NRJBhSKCuT31HuCunHO+Z+NbD54I2h4u92Jq227+YU+pbYDcgrkTcyfkFqltcNJru+FyLwraHt968CQK4C4ONtkMv14ZxPrV019zQnQjbFGBCx6R+NVoqZo1aXKEg00t/v3lnbXBaGW0Jfg6gdgkR3YXAAQzVtEgIBG2s/9uIUyfj7OvJ0fdJb8IAEW019E+H+f/AJvEd3R++Q5SAAAAAElFTkSuQmCC",
+    navLink: "https://open.test.luojigou.vip/place-order/doc.html#/backend/%E5%8F%91%E7%A5%A8%E8%AE%A2%E5%8D%95/sendInvoicePdfEmailUsingPOST",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b45caa8616b00010a",
+    navTitle: "mall",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAClElEQVQ4jW1TTWtUZxg953nfe2+ccRqdaYiCDnTTFrpz2UW5+AMCXQnuTKnxBwT8DUJ+gCJJFy12KfgDZFAQXLS4NCuhlKqYmJiZxrn3vu9zukgqs/CsHng+zuHhHAKAABIQAPx9/8bVaFrPUN22uggAZcnXAZgkt51LP//yeHGHOMXLO2uD86ujLSVfJxHnXYbkEgmzyKXCIPfEYDsHb/c3v739aAoAFMDd7bWz5zh81CtDvX+cM0MpQPY/geYzMRQugKNBFY6bbnKosPbNTzuzSED/4PxWv4r1u1lq7PvrBc4MDZ4gOULVR//tLg+f/x5C9YX2pk2zMliqfd5uEdjgX3ev/1AU5eOmacWqb6pvEkUPhODKJALG4+9w9MdDvX/2G6w6K0heFcau667GEMKGGQOAJDihjObjMY5n/zKWUeeWlzH/OGXvyo/sulbTPx8SsYLRQghhIzqsbroskAYRBOEuilDOzg9HU+y/f6G9vUMG9DAu+wi5tSZBpNWWsl/IEkDQBQIASUGgJLRtC8+Zq6tfKrJDyk4SzBJS9guGBZALNQCCMBoAoqwqXB5fQjCDpE9zFoO9CSc2EnliJgGkUadXYEa5Z5JADCYICiRisDdm8ElVBEJyAJAASEpdorJL2ZW6RGiBWPKqCDT4JOac75mFayfqKVhgdaZEjFE6NRJBhSKCuT31HuCunHO+Z+NbD54I2h4u92Jq227+YU+pbYDcgrkTcyfkFqltcNJru+FyLwraHt968CQK4C4ONtkMv14ZxPrV019zQnQjbFGBCx6R+NVoqZo1aXKEg00t/v3lnbXBaGW0Jfg6gdgkR3YXAAQzVtEgIBG2s/9uIUyfj7OvJ0fdJb8IAEW019E+H+f/AJvEd3R++Q5SAAAAAElFTkSuQmCC",
+    navLink: "https://open.test.luojigou.vip/mall/doc.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b09d6dd9fcb00010b",
+    navTitle: "app",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAClElEQVQ4jW1TTWtUZxg953nfe2+ccRqdaYiCDnTTFrpz2UW5+AMCXQnuTKnxBwT8DUJ+gCJJFy12KfgDZFAQXLS4NCuhlKqYmJiZxrn3vu9zukgqs/CsHng+zuHhHAKAABIQAPx9/8bVaFrPUN22uggAZcnXAZgkt51LP//yeHGHOMXLO2uD86ujLSVfJxHnXYbkEgmzyKXCIPfEYDsHb/c3v739aAoAFMDd7bWz5zh81CtDvX+cM0MpQPY/geYzMRQugKNBFY6bbnKosPbNTzuzSED/4PxWv4r1u1lq7PvrBc4MDZ4gOULVR//tLg+f/x5C9YX2pk2zMliqfd5uEdjgX3ev/1AU5eOmacWqb6pvEkUPhODKJALG4+9w9MdDvX/2G6w6K0heFcau667GEMKGGQOAJDihjObjMY5n/zKWUeeWlzH/OGXvyo/sulbTPx8SsYLRQghhIzqsbroskAYRBOEuilDOzg9HU+y/f6G9vUMG9DAu+wi5tSZBpNWWsl/IEkDQBQIASUGgJLRtC8+Zq6tfKrJDyk4SzBJS9guGBZALNQCCMBoAoqwqXB5fQjCDpE9zFoO9CSc2EnliJgGkUadXYEa5Z5JADCYICiRisDdm8ElVBEJyAJAASEpdorJL2ZW6RGiBWPKqCDT4JOac75mFayfqKVhgdaZEjFE6NRJBhSKCuT31HuCunHO+Z+NbD54I2h4u92Jq227+YU+pbYDcgrkTcyfkFqltcNJru+FyLwraHt968CQK4C4ONtkMv14ZxPrV019zQnQjbFGBCx6R+NVoqZo1aXKEg00t/v3lnbXBaGW0Jfg6gdgkR3YXAAQzVtEgIBG2s/9uIUyfj7OvJ0fdJb8IAEW019E+H+f/AJvEd3R++Q5SAAAAAElFTkSuQmCC",
+    navLink: "https://open.test.luojigou.vip/app/doc.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b3780ead49600010c",
+    navTitle: "adminTeach",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAClElEQVQ4jW1TTWtUZxg953nfe2+ccRqdaYiCDnTTFrpz2UW5+AMCXQnuTKnxBwT8DUJ+gCJJFy12KfgDZFAQXLS4NCuhlKqYmJiZxrn3vu9zukgqs/CsHng+zuHhHAKAABIQAPx9/8bVaFrPUN22uggAZcnXAZgkt51LP//yeHGHOMXLO2uD86ujLSVfJxHnXYbkEgmzyKXCIPfEYDsHb/c3v739aAoAFMDd7bWz5zh81CtDvX+cM0MpQPY/geYzMRQugKNBFY6bbnKosPbNTzuzSED/4PxWv4r1u1lq7PvrBc4MDZ4gOULVR//tLg+f/x5C9YX2pk2zMliqfd5uEdjgX3ev/1AU5eOmacWqb6pvEkUPhODKJALG4+9w9MdDvX/2G6w6K0heFcau667GEMKGGQOAJDihjObjMY5n/zKWUeeWlzH/OGXvyo/sulbTPx8SsYLRQghhIzqsbroskAYRBOEuilDOzg9HU+y/f6G9vUMG9DAu+wi5tSZBpNWWsl/IEkDQBQIASUGgJLRtC8+Zq6tfKrJDyk4SzBJS9guGBZALNQCCMBoAoqwqXB5fQjCDpE9zFoO9CSc2EnliJgGkUadXYEa5Z5JADCYICiRisDdm8ElVBEJyAJAASEpdorJL2ZW6RGiBWPKqCDT4JOac75mFayfqKVhgdaZEjFE6NRJBhSKCuT31HuCunHO+Z+NbD54I2h4u92Jq227+YU+pbYDcgrkTcyfkFqltcNJru+FyLwraHt968CQK4C4ONtkMv14ZxPrV019zQnQjbFGBCx6R+NVoqZo1aXKEg00t/v3lnbXBaGW0Jfg6gdgkR3YXAAQzVtEgIBG2s/9uIUyfj7OvJ0fdJb8IAEW019E+H+f/AJvEd3R++Q5SAAAAAElFTkSuQmCC",
+    navLink: "https://open.test.luojigou.vip/adminTeach/doc.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bec4033b2fe00010d",
+    navTitle: "admin",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAClElEQVQ4jW1TTWtUZxg953nfe2+ccRqdaYiCDnTTFrpz2UW5+AMCXQnuTKnxBwT8DUJ+gCJJFy12KfgDZFAQXLS4NCuhlKqYmJiZxrn3vu9zukgqs/CsHng+zuHhHAKAABIQAPx9/8bVaFrPUN22uggAZcnXAZgkt51LP//yeHGHOMXLO2uD86ujLSVfJxHnXYbkEgmzyKXCIPfEYDsHb/c3v739aAoAFMDd7bWz5zh81CtDvX+cM0MpQPY/geYzMRQugKNBFY6bbnKosPbNTzuzSED/4PxWv4r1u1lq7PvrBc4MDZ4gOULVR//tLg+f/x5C9YX2pk2zMliqfd5uEdjgX3ev/1AU5eOmacWqb6pvEkUPhODKJALG4+9w9MdDvX/2G6w6K0heFcau667GEMKGGQOAJDihjObjMY5n/zKWUeeWlzH/OGXvyo/sulbTPx8SsYLRQghhIzqsbroskAYRBOEuilDOzg9HU+y/f6G9vUMG9DAu+wi5tSZBpNWWsl/IEkDQBQIASUGgJLRtC8+Zq6tfKrJDyk4SzBJS9guGBZALNQCCMBoAoqwqXB5fQjCDpE9zFoO9CSc2EnliJgGkUadXYEa5Z5JADCYICiRisDdm8ElVBEJyAJAASEpdorJL2ZW6RGiBWPKqCDT4JOac75mFayfqKVhgdaZEjFE6NRJBhSKCuT31HuCunHO+Z+NbD54I2h4u92Jq227+YU+pbYDcgrkTcyfkFqltcNJru+FyLwraHt968CQK4C4ONtkMv14ZxPrV019zQnQjbFGBCx6R+NVoqZo1aXKEg00t/v3lnbXBaGW0Jfg6gdgkR3YXAAQzVtEgIBG2s/9uIUyfj7OvJ0fdJb8IAEW019E+H+f/AJvEd3R++Q5SAAAAAElFTkSuQmCC",
+    navLink: "https://open.test.luojigou.vip/admin/doc.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b93a53a61ee00010e",
+    navTitle: "forum",
+    navLogo: "",
+    navLink: "https://open.test.luojigou.vip/forum/doc.html#/forum-api/%E9%A6%96%E9%A1%B5/queryNoticeUsingGET",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b4335de625800010f",
+    navTitle: "teacher-lib",
+    navLogo: "",
+    navLink: "https://open.test.luojigou.vip/teacher-lib/doc.html",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bc0e85eceb7000110",
+    navTitle: "teach",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAClElEQVQ4jW1TTWtUZxg953nfe2+ccRqdaYiCDnTTFrpz2UW5+AMCXQnuTKnxBwT8DUJ+gCJJFy12KfgDZFAQXLS4NCuhlKqYmJiZxrn3vu9zukgqs/CsHng+zuHhHAKAABIQAPx9/8bVaFrPUN22uggAZcnXAZgkt51LP//yeHGHOMXLO2uD86ujLSVfJxHnXYbkEgmzyKXCIPfEYDsHb/c3v739aAoAFMDd7bWz5zh81CtDvX+cM0MpQPY/geYzMRQugKNBFY6bbnKosPbNTzuzSED/4PxWv4r1u1lq7PvrBc4MDZ4gOULVR//tLg+f/x5C9YX2pk2zMliqfd5uEdjgX3ev/1AU5eOmacWqb6pvEkUPhODKJALG4+9w9MdDvX/2G6w6K0heFcau667GEMKGGQOAJDihjObjMY5n/zKWUeeWlzH/OGXvyo/sulbTPx8SsYLRQghhIzqsbroskAYRBOEuilDOzg9HU+y/f6G9vUMG9DAu+wi5tSZBpNWWsl/IEkDQBQIASUGgJLRtC8+Zq6tfKrJDyk4SzBJS9guGBZALNQCCMBoAoqwqXB5fQjCDpE9zFoO9CSc2EnliJgGkUadXYEa5Z5JADCYICiRisDdm8ElVBEJyAJAASEpdorJL2ZW6RGiBWPKqCDT4JOac75mFayfqKVhgdaZEjFE6NRJBhSKCuT31HuCunHO+Z+NbD54I2h4u92Jq227+YU+pbYDcgrkTcyfkFqltcNJru+FyLwraHt968CQK4C4ONtkMv14ZxPrV019zQnQjbFGBCx6R+NVoqZo1aXKEg00t/v3lnbXBaGW0Jfg6gdgkR3YXAAQzVtEgIBG2s/9uIUyfj7OvJ0fdJb8IAEW019E+H+f/AJvEd3R++Q5SAAAAAElFTkSuQmCC",
+    navLink: "https://open.test.luojigou.vip/teach/doc.html#/%E6%80%9D%E7%BB%B4%E8%8A%AF/%E5%9B%9B%E5%A4%A7%E5%8C%BA/districtListUsingGET_1",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b275f920d98000111",
+    navTitle: "crm",
+    navLogo: "",
+    navLink: "https://open.test.luojigou.vip/crm-api/swagger#/home",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b0b4f051260000112",
+    navTitle: "crm生产",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADTUlEQVQ4jXWTbWiVZRjH/9f93M/znNedQ6dpY8kOrdNgzAxfkNDlqWjU0gV+qB1dsQrWh6JR++CHIM6nPgR9WAblKDNyiEolUaKMtmMSaIkuCHtRt2ngnLrOnvP+vNz31QebSNT1/XddcP3/P8L/zGB2MPmHiD7olOtbtBs8BCJlSHE5mYwdP9m9e5Ly0ABg/IsjANi5eKqpfLG6XhWLqzkIwkWyZbXs7qjXsLlUbuT2zm3o7OvNTp47d6pOyyQDRACDDxmfbdw/ELq2uE3X6xkDQCpuT36e6Tp7fNZ9VzXcZsMMG8kEHTrf92mO7rjMH259oTX6y+yYWar2smL4YDAzVpANpOR3b6S6bjo3qs8xAk9KKdPpxBa5DO99pn+VPHvhmFWqd9ZY+yyIJbNFlsS1eOhg+K7IR1J720gIJiatNJFTrPcKBpAfykeM6T8PW069s0bsMRHZGpYRC8/ojrael2a+z+XOHCv4SrQwmJhAzIxAcZsggNtOnBiJOI2NNdIuQIbJkDoevlTdkO558YevJvIEGs4Nr3Qb/mOsAwZIEAAIqog92wdaaKnyWk37GkIYQmuIkFnzM639rxw5eGkwnQ3lAT11sTLs+VgJYsWaBQmikGX+JKzfr241PbVCETFrhi2k4SXjoy8XvjiTTWdD++YKjUeffn1dseQPq8BXQggwE1kmXb/v/ru/FbrhrSfNDEFaMhuuLRfm17WPAjAKc4XG9h0jbVfmSgdc148IAbDWSkpLNCXsD77c/868IIUY34pLm8IghKyptw58vMCA7ul59ZHp6cWJSs3LEOmAAMUw7ViUTj+85t73AJAU0rhMRCDSbDBxYNLVNU+ObF69sDjkzDo7PV8JIu1qJsFkWvGoPP9AR/zZsbF8DQAJlYof9Q1i1hBKawoJar1RbLztlMznfS8Qt95t2lJaZiJpHe3san7im8PvX1nuD4HzYl/71Hj8r0q/o3wVtczrv63t2DVaSq01nNLjxMxNIfvCPc2hr09O7B4nglqGb8uzZ2hXIjJ1ehTFcs4K2PIN+HYy/MlCLDLPTdHiqq6WX7vf3PRjKjNQuhO+veAfm2h8U1934+bSU+zpdoBMsmjaTCQKM1Hj53zhyNJ/af836NiNnEUaqdsAAAAASUVORK5CYII=",
+    navLink: "https://luojigou.vip/crm/#/workbench/index",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bf959caddf2000113",
+    navTitle: "逻辑狗后台生产",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACwUlEQVQ4jV2TX2jWdRTGP+f81Ll3vXOaeyHUtNFq9kqmREyQSrQLCYSki64KgggXXVTgpSgUFQWhBN0UYTAQKYOCshH+KRJN1x8MFHvBiNdsbS5d892f3+97ni72bjUfOHDgnOfcnOeDpB5JZySFpCQpIkKSIqVQnhfK8yLyvFBKaW6n6emh2UhS0RzMVPPKrSqKFM1dSTpjkgQkwAEEKCVwt/rwdQZ/rPHz4EU6l7Xr0UfWU127xiIkdwsgcyAAoykVBZ5lNjp8TRc+HWB68Aemxie0e99B27z1Jd7/8Au5m0kyICwiwsyICEOSZ5n9euSoBve8Y/nVIYqb/9C95SE+W9urAwePWXvbIh0/+pZV71ujiMABk2TWNJ//4JC+frLPxi9foTHWwFetZumO7VTXdVnLokw3J6bs2MmfBFiKMDczESHLMqt/871O9e2x0rKlRJ6zYvvDPPHdYaq7nqb2xyhFXphhunFj3AAZJo+QCbMUiXP79ptjFBOTdNx/L9v699NeWc7QnyMc/vgk5XIbIdmqlRUAE5gj4Zlz7ZdLjAyeZ2FbiUiJB9/YzeJyGwB7X++nXh/B3ah0LmHrlg1IIjPDQQI0drmOJqeVNyZYvmkDXds2Eymx97WP6D90gs7ODob++puXX9yplSs6iZA8cy2YfeHi2ztkCxeYGpNa0tNlnw+c5b13P+Hb0xcolVqp14fZ9dzjeuH5HZYiZDbjc3MXkiob11l792pNxbhN/X5VR746y8DpS7S230a53Mqbrz6rA2/3mbvLwNxdgExSQgIzv3LqnI4/8wpjtZrd89ROjT6w3qZbWuh9rFd3V7tnU4vZf7mbi7Ii3NytMTyq3748wfWLNav0dHHHpo2U7rqTMJe7/d8cQDYPppihbZ5CUoSiiehszcHErThHRKQ8V+RFpDxXSmn2jpqoz8P5X4ONKWAA7QIAAAAAAElFTkSuQmCC",
+    navLink: "https://zaojiao.net/admin/#/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b6289163876000114",
+    navTitle: "思维芯资源库生产",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADAUlEQVQ4jW3TS2hcdRQG8O/73zvPjp3m1co0NWUU0QiKBMnCWjXWaLGg3ahYt92nK4NCEAXdSZpWRUwrhojTXZc+QAQREx3BPhiitjHUNG0zMZFJk5k7d/7nczMDXXjg7M7vLM7hAwBIItol6YCks5Kum1nkvY8kXZV0Jo7jA5KcJN5pOjAjaVJSM4oiTU9P63/Kl0qlUwCyd0InKSvpq/aQbW9vx6Ojo358fNyq1apJkpnFs7OzfnBwUJVK5VtJOQDsLJls44b33ktSuVy2oaEhKxaLVi6XTZLuKRb804eearRnJzt4WFLTe9+SZO2WJM3MfK5cLqfFxUU7VzpnAGzq9JSX5FutVlPSMNoHkyRFzchk0uWLf9jarU3NzpTs2OvHbGlpSfn8TjsxdsJHUWRmFrfJ2WBiYuIDkrsWFhb0ysuvcu6XH9HKV7ilP5Xbmea1K+tMphLKZnOcOjWFMAwJACQBIB9K6geA9Y1/ePHCZWzlKzhy8BElbZnVaoRUdgCFQj/fee8tkaSZl3NB54X9lBSZfMIx4HeXZvTz5vso9OQRIskdqV7saD6GlbW/URhI6tDeSUCgwYtwIBmHgK47uv2ALH/3be5CHs2Y9G5LvuF5m98g2ZdQLcpxPfpd2WC30mEXIQDAsgP4PUDCk2nXi4T1qGFQIw16J8UWYaNxg7nEvYIC/HBjHPOr77bquIZmHXMOwCcAYjnowe4XVei9j34ljZXP1vTbhZtcrTVUi7aUcXtQ2fgS641VFTIjDNHbcgmcdiTnAXxEwtGn7Im9b+vJ4DAO/zqMvpvdagYtBpbEldp51JprOjJwprXvrseDQNmPEwn+FEpyAN6U9ABDPlermpU+nfdjAw+5TWtxLryk/sSInt3/hvWkiiEckpL/2rlgXJJzJI3kNsmjgJ3c093li6/dH37Yd95dfXQZXUEKDxeecT2ZYmj0scFOksHRtjHXiTPJOhmM1f91z7/w0sGZfceTi+FuxNkg3cyE+b/iBr4wH48EDMZI1jtx/g/4pg3lfySg9QAAAABJRU5ErkJggg==",
+    navLink: "http://luojigou.vip/teacher_lib/#/home",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b1ecde7f4a0000115",
+    navTitle: "中德官网生产",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACrUlEQVQ4jaWSa0iTURzGn/Mub3Pp3GxzXoJkWIquoBS8VaSSiZFGGdEH7SZEF+tDRVgtUQMhCS8Jlklk1odCTAzzhpKRoH3Q6byUOjWb+Dad5TbH3Hb69L7NIBA63845z+/5P8/hAP+5yL8utFqt6EP3+KXBoenjswvGYLvdjgCZhA0OkZYUq0+/IYRYAWDT3yCllOkuqMztyS0qWBmdkEW6CbB7Xzwq58wGzZAuUiAQ1LHsr1OU0kxCiFWwDtbrhd2XC9/NvGi4ImB/eHvDCXeHHeTrJDKy08baxhcUa2t2TEzqlSKR0NncVN/NuMIdV++/nW5qT6ZOJ5cGnv5+lrDszJrYrJRrcpnYwJ2/b/28d12Fvkcvy+baPya7VIFkZ/iw6mLO2dCs1D5afk/kcDj5tObV1QjeYKalK6E3r+icKyxV7Rg58LQoabNSyQLA68aeCOOyyZ/T2NYcAAAGACbqm/IsrIF3FwXJ7XvUeec5GABaWvvzTKZVXqOQ+1kBgKGUMitTM/sJIfz0gIToyqCkuE+cuO5VZ1xv72iWqyZQIWkAAGbNbFZZWCMfzUsmtSqPpT7k9oODE7Kqx81Pln+a+PcKVEgtaemxFXwF19/kuz2UDUxJnAWAzs6BmOv5tZ063XwEN51hCDIOx5cnJ6qmAIBx8/Ye8dwiWeIM3IRe0Gq/KfPVtSU379Z0aYanIv9EB9IORnfcuXWykNMzhBCbKETRTCkFABiHv4irqxvra5613fiuXxRyMCEE6YdiOgpunzhCCLFwBgIAeFBWqjEMjGauLhp9bSsmj3Cplwcrlgrnl1bg7nQgapvckpOdWlpceOaCj48PD6+rv9CvCR2teq42junSrQajxE3sY8fWYL1vVFiD6mhqhVwVNoWNLEqpu81m20UpVW5E/xvA+ySqa2BXsgAAAABJRU5ErkJggg==",
+    navLink: "https://www.zaojiao.net/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b69a288fa8b000116",
+    navTitle: "中德官网后台生产",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACoElEQVQ4jX2TO4idZRCGn5n5vv9yLrtelmiCGneJRk4RSUjhBZMNYjDRELKyFgomhZ2VjVhYnMpCYi14AREE2QiiaIJEQdHCIkYLsXGJheKKSjaevZw9+///NxZmZZU1A1PMC+/MvMy8sEXMMmtb4YBcE+iD9iFt1M/e9shUiLY9iSy+PP/+99fsuIms/d2PnUL0ZOXVfkELoAmuH/60uvT0Gz9/vAj4Bi9sJr+463hPsvxVRe5vPGEWAEneJG2HeOL2TncJOHl1sG9sIIC/tGtmX5ZnHyXn5srryh1ZH6xqSrXEokixVSRzsWqUDj5/6cyXgALJAE7feWyiFdvnTeVW96YKSMii6d4nH5besQMEERn8uJA6ZRGCSufs79+9uyFBAcZD95nxkE2ap1GhFrImcd0N1/vkfXtk4dMLVAuXacVokhrPRI+8PvnEzqsSRAEtLRxWPOWqoUDJxYi41CtDb5bXYHmN0kwytXosxK6VcgRgjlnVadBCpcxVKUTJVSnNiLVL96YbpTczLROTOzzWTqFGKerdGA4BPM6ZpJ9BXYp+PaZRc7G6ECV3od0qfeXSL37huVcYXPxB2q2C3FHDycXu7tPLAFcATdVpE788bjHPRKo8BLfVEd1btvHgWy/4HTOHiGsVpQUxETFnx97deyb+dcbz+07dU0Z7W0Wmlup1x6m1lVvslNKsjqiXV3ERjyKSnF+rK7/ddXT+3EAB74M+dPHNrxbXBgfWdfhayJthp03UekmHfyykanilkrypNatGRemSFfW3R+fPDQDZ6pU5+8DxXmn5U6IyK+JTmSrJwQSaxPLK+ujRw1+893kf9L/ukv7fmQDmetOdbdvH7q1hf8J3qsqf0Xnn4CcffLOVsf4JB5n7f0vjm0z4FyVf90YEicz1AAAAAElFTkSuQmCC",
+    navLink: "https://zaojiao.net/official-admin/#/article/list",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b026250ce52000117",
+    navTitle: "中德论坛生产",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABeklEQVQ4jZVSrcoCURC9f85uWDCo1RdYMChGsQj6Ajaz1bKID2AymBaLzVcwCFar5YILG8wiGERB0V2ca5jFb9nP4qTLmTszh3MOtyyL/VLip9+MMWWMYYxxzj8QIRnwbyCDCiEQ0RjDOU/v+mxJLiDi6/WihlIKAIwxNEaTiJistG2bMdbtdtfr9Wq1mk6njuP8p2RZFgAAgASAOI57vV6lUvE8z/M8x3Fs22632/f73XXd4XColAqCQErJGBNEKYqi8/l8PB4fj0ehUPB9v9Fo1Go13/cPh8NkMul0OlEUCSESWW+3W7VaXSwW2+12NpsZYwaDQS6XO51O4/E4CIJms0mSCCJaLBZ3u12r1er3+9frNZ/Pl0olrXW5XB6NRq7rbjYbkkRKKREREcMw1FoDgBDicrlorcMw3O/39Xp9Pp8vl0uSjgMA5/z5fJIUJHEcx1JKpRTh1EpsoRdxIys452Qfkc74IEmstJfpjKTrSzQyMfna+jmtb7Ye0Xz4nbLJAAAAAElFTkSuQmCC",
+    navLink: "https://luojigou.vip/tieba-admin/#/user/login",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bd076fda28a000118",
+    navTitle: "验证后台生产",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACrUlEQVQ4jaWSa0iTURzGn/Mub3Pp3GxzXoJkWIquoBS8VaSSiZFGGdEH7SZEF+tDRVgtUQMhCS8Jlklk1odCTAzzhpKRoH3Q6byUOjWb+Dad5TbH3Hb69L7NIBA63845z+/5P8/hAP+5yL8utFqt6EP3+KXBoenjswvGYLvdjgCZhA0OkZYUq0+/IYRYAWDT3yCllOkuqMztyS0qWBmdkEW6CbB7Xzwq58wGzZAuUiAQ1LHsr1OU0kxCiFWwDtbrhd2XC9/NvGi4ImB/eHvDCXeHHeTrJDKy08baxhcUa2t2TEzqlSKR0NncVN/NuMIdV++/nW5qT6ZOJ5cGnv5+lrDszJrYrJRrcpnYwJ2/b/28d12Fvkcvy+baPya7VIFkZ/iw6mLO2dCs1D5afk/kcDj5tObV1QjeYKalK6E3r+icKyxV7Rg58LQoabNSyQLA68aeCOOyyZ/T2NYcAAAGACbqm/IsrIF3FwXJ7XvUeec5GABaWvvzTKZVXqOQ+1kBgKGUMitTM/sJIfz0gIToyqCkuE+cuO5VZ1xv72iWqyZQIWkAAGbNbFZZWCMfzUsmtSqPpT7k9oODE7Kqx81Pln+a+PcKVEgtaemxFXwF19/kuz2UDUxJnAWAzs6BmOv5tZ063XwEN51hCDIOx5cnJ6qmAIBx8/Ye8dwiWeIM3IRe0Gq/KfPVtSU379Z0aYanIv9EB9IORnfcuXWykNMzhBCbKETRTCkFABiHv4irqxvra5613fiuXxRyMCEE6YdiOgpunzhCCLFwBgIAeFBWqjEMjGauLhp9bSsmj3Cplwcrlgrnl1bg7nQgapvckpOdWlpceOaCj48PD6+rv9CvCR2teq42junSrQajxE3sY8fWYL1vVFiD6mhqhVwVNoWNLEqpu81m20UpVW5E/xvA+ySqa2BXsgAAAABJRU5ErkJggg==",
+    navLink: "https://luojigou.vip/verify/#/resourceManage",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b6a87ee6458000119",
+    navTitle: "品宣宝后台生产",
+    navLogo: "",
+    navLink: "https://luojigou.vip/share_admin/#/createResource",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bc05ba6641200011a",
+    navTitle: "精英俱乐部后台生产",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABeklEQVQ4jZVSrcoCURC9f85uWDCo1RdYMChGsQj6Ajaz1bKID2AymBaLzVcwCFar5YILG8wiGERB0V2ca5jFb9nP4qTLmTszh3MOtyyL/VLip9+MMWWMYYxxzj8QIRnwbyCDCiEQ0RjDOU/v+mxJLiDi6/WihlIKAIwxNEaTiJistG2bMdbtdtfr9Wq1mk6njuP8p2RZFgAAgASAOI57vV6lUvE8z/M8x3Fs22632/f73XXd4XColAqCQErJGBNEKYqi8/l8PB4fj0ehUPB9v9Fo1Go13/cPh8NkMul0OlEUCSESWW+3W7VaXSwW2+12NpsZYwaDQS6XO51O4/E4CIJms0mSCCJaLBZ3u12r1er3+9frNZ/Pl0olrXW5XB6NRq7rbjYbkkRKKREREcMw1FoDgBDicrlorcMw3O/39Xp9Pp8vl0uSjgMA5/z5fJIUJHEcx1JKpRTh1EpsoRdxIys452Qfkc74IEmstJfpjKTrSzQyMfna+jmtb7Ye0Xz4nbLJAAAAAElFTkSuQmCC",
+    navLink: "https://luojigou.vip/tieba-admin/?primaryColor=%231890ff&pwa=false&title=%E4%B8%AD%E5%BE%B7%E8%AE%BA%E5%9D%9B&menuHeaderRender=false#/./agent/list",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bc05cc17aa900011b",
+    navTitle: "题卡后台生产",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACrUlEQVQ4jaWSa0iTURzGn/Mub3Pp3GxzXoJkWIquoBS8VaSSiZFGGdEH7SZEF+tDRVgtUQMhCS8Jlklk1odCTAzzhpKRoH3Q6byUOjWb+Dad5TbH3Hb69L7NIBA63845z+/5P8/hAP+5yL8utFqt6EP3+KXBoenjswvGYLvdjgCZhA0OkZYUq0+/IYRYAWDT3yCllOkuqMztyS0qWBmdkEW6CbB7Xzwq58wGzZAuUiAQ1LHsr1OU0kxCiFWwDtbrhd2XC9/NvGi4ImB/eHvDCXeHHeTrJDKy08baxhcUa2t2TEzqlSKR0NncVN/NuMIdV++/nW5qT6ZOJ5cGnv5+lrDszJrYrJRrcpnYwJ2/b/28d12Fvkcvy+baPya7VIFkZ/iw6mLO2dCs1D5afk/kcDj5tObV1QjeYKalK6E3r+icKyxV7Rg58LQoabNSyQLA68aeCOOyyZ/T2NYcAAAGACbqm/IsrIF3FwXJ7XvUeec5GABaWvvzTKZVXqOQ+1kBgKGUMitTM/sJIfz0gIToyqCkuE+cuO5VZ1xv72iWqyZQIWkAAGbNbFZZWCMfzUsmtSqPpT7k9oODE7Kqx81Pln+a+PcKVEgtaemxFXwF19/kuz2UDUxJnAWAzs6BmOv5tZ063XwEN51hCDIOx5cnJ6qmAIBx8/Ye8dwiWeIM3IRe0Gq/KfPVtSU379Z0aYanIv9EB9IORnfcuXWykNMzhBCbKETRTCkFABiHv4irqxvra5613fiuXxRyMCEE6YdiOgpunzhCCLFwBgIAeFBWqjEMjGauLhp9bSsmj3Cplwcrlgrnl1bg7nQgapvckpOdWlpceOaCj48PD6+rv9CvCR2teq42junSrQajxE3sY8fWYL1vVFiD6mhqhVwVNoWNLEqpu81m20UpVW5E/xvA+ySqa2BXsgAAAABJRU5ErkJggg==",
+    navLink: "https://luojigou.vip/question-bank/#/QuestionBankManage/question-card",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b8ba965662a00011c",
+    navTitle: "智慧币规则生产",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACrUlEQVQ4jaWSa0iTURzGn/Mub3Pp3GxzXoJkWIquoBS8VaSSiZFGGdEH7SZEF+tDRVgtUQMhCS8Jlklk1odCTAzzhpKRoH3Q6byUOjWb+Dad5TbH3Hb69L7NIBA63845z+/5P8/hAP+5yL8utFqt6EP3+KXBoenjswvGYLvdjgCZhA0OkZYUq0+/IYRYAWDT3yCllOkuqMztyS0qWBmdkEW6CbB7Xzwq58wGzZAuUiAQ1LHsr1OU0kxCiFWwDtbrhd2XC9/NvGi4ImB/eHvDCXeHHeTrJDKy08baxhcUa2t2TEzqlSKR0NncVN/NuMIdV++/nW5qT6ZOJ5cGnv5+lrDszJrYrJRrcpnYwJ2/b/28d12Fvkcvy+baPya7VIFkZ/iw6mLO2dCs1D5afk/kcDj5tObV1QjeYKalK6E3r+icKyxV7Rg58LQoabNSyQLA68aeCOOyyZ/T2NYcAAAGACbqm/IsrIF3FwXJ7XvUeec5GABaWvvzTKZVXqOQ+1kBgKGUMitTM/sJIfz0gIToyqCkuE+cuO5VZ1xv72iWqyZQIWkAAGbNbFZZWCMfzUsmtSqPpT7k9oODE7Kqx81Pln+a+PcKVEgtaemxFXwF19/kuz2UDUxJnAWAzs6BmOv5tZ063XwEN51hCDIOx5cnJ6qmAIBx8/Ye8dwiWeIM3IRe0Gq/KfPVtSU379Z0aYanIv9EB9IORnfcuXWykNMzhBCbKETRTCkFABiHv4irqxvra5613fiuXxRyMCEE6YdiOgpunzhCCLFwBgIAeFBWqjEMjGauLhp9bSsmj3Cplwcrlgrnl1bg7nQgapvckpOdWlpceOaCj48PD6+rv9CvCR2teq42junSrQajxE3sY8fWYL1vVFiD6mhqhVwVNoWNLEqpu81m20UpVW5E/xvA+ySqa2BXsgAAAABJRU5ErkJggg==",
+    navLink: "https://luojigou.vip/wisdom_coin_rule/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b3f3433264500011d",
+    navTitle: "题卡后台测试",
+    navLogo: "",
+    navLink: "http://nginx.test.luojigou.vip:8899/question-bank/#/QuestionBankManage/question-card",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b2538ea470800011e",
+    navTitle: "CRM测试",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADTUlEQVQ4jXWTbWiVZRjH/9f93M/znNedQ6dpY8kOrdNgzAxfkNDlqWjU0gV+qB1dsQrWh6JR++CHIM6nPgR9WAblKDNyiEolUaKMtmMSaIkuCHtRt2ngnLrOnvP+vNz31QebSNT1/XddcP3/P8L/zGB2MPmHiD7olOtbtBs8BCJlSHE5mYwdP9m9e5Ly0ABg/IsjANi5eKqpfLG6XhWLqzkIwkWyZbXs7qjXsLlUbuT2zm3o7OvNTp47d6pOyyQDRACDDxmfbdw/ELq2uE3X6xkDQCpuT36e6Tp7fNZ9VzXcZsMMG8kEHTrf92mO7rjMH259oTX6y+yYWar2smL4YDAzVpANpOR3b6S6bjo3qs8xAk9KKdPpxBa5DO99pn+VPHvhmFWqd9ZY+yyIJbNFlsS1eOhg+K7IR1J720gIJiatNJFTrPcKBpAfykeM6T8PW069s0bsMRHZGpYRC8/ojrael2a+z+XOHCv4SrQwmJhAzIxAcZsggNtOnBiJOI2NNdIuQIbJkDoevlTdkO558YevJvIEGs4Nr3Qb/mOsAwZIEAAIqog92wdaaKnyWk37GkIYQmuIkFnzM639rxw5eGkwnQ3lAT11sTLs+VgJYsWaBQmikGX+JKzfr241PbVCETFrhi2k4SXjoy8XvjiTTWdD++YKjUeffn1dseQPq8BXQggwE1kmXb/v/ru/FbrhrSfNDEFaMhuuLRfm17WPAjAKc4XG9h0jbVfmSgdc148IAbDWSkpLNCXsD77c/868IIUY34pLm8IghKyptw58vMCA7ul59ZHp6cWJSs3LEOmAAMUw7ViUTj+85t73AJAU0rhMRCDSbDBxYNLVNU+ObF69sDjkzDo7PV8JIu1qJsFkWvGoPP9AR/zZsbF8DQAJlYof9Q1i1hBKawoJar1RbLztlMznfS8Qt95t2lJaZiJpHe3san7im8PvX1nuD4HzYl/71Hj8r0q/o3wVtczrv63t2DVaSq01nNLjxMxNIfvCPc2hr09O7B4nglqGb8uzZ2hXIjJ1ehTFcs4K2PIN+HYy/MlCLDLPTdHiqq6WX7vf3PRjKjNQuhO+veAfm2h8U1934+bSU+zpdoBMsmjaTCQKM1Hj53zhyNJ/af836NiNnEUaqdsAAAAASUVORK5CYII=",
+    navLink: "http://nginx.test.luojigou.vip:8899/crm/#/workbench/index",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b97121cf48a00011f",
+    navTitle: "逻辑狗后台测试",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACwUlEQVQ4jV2TX2jWdRTGP+f81Ll3vXOaeyHUtNFq9kqmREyQSrQLCYSki64KgggXXVTgpSgUFQWhBN0UYTAQKYOCshH+KRJN1x8MFHvBiNdsbS5d892f3+97ni72bjUfOHDgnOfcnOeDpB5JZySFpCQpIkKSIqVQnhfK8yLyvFBKaW6n6emh2UhS0RzMVPPKrSqKFM1dSTpjkgQkwAEEKCVwt/rwdQZ/rPHz4EU6l7Xr0UfWU127xiIkdwsgcyAAoykVBZ5lNjp8TRc+HWB68Aemxie0e99B27z1Jd7/8Au5m0kyICwiwsyICEOSZ5n9euSoBve8Y/nVIYqb/9C95SE+W9urAwePWXvbIh0/+pZV71ujiMABk2TWNJ//4JC+frLPxi9foTHWwFetZumO7VTXdVnLokw3J6bs2MmfBFiKMDczESHLMqt/871O9e2x0rKlRJ6zYvvDPPHdYaq7nqb2xyhFXphhunFj3AAZJo+QCbMUiXP79ptjFBOTdNx/L9v699NeWc7QnyMc/vgk5XIbIdmqlRUAE5gj4Zlz7ZdLjAyeZ2FbiUiJB9/YzeJyGwB7X++nXh/B3ah0LmHrlg1IIjPDQQI0drmOJqeVNyZYvmkDXds2Eymx97WP6D90gs7ODob++puXX9yplSs6iZA8cy2YfeHi2ztkCxeYGpNa0tNlnw+c5b13P+Hb0xcolVqp14fZ9dzjeuH5HZYiZDbjc3MXkiob11l792pNxbhN/X5VR746y8DpS7S230a53Mqbrz6rA2/3mbvLwNxdgExSQgIzv3LqnI4/8wpjtZrd89ROjT6w3qZbWuh9rFd3V7tnU4vZf7mbi7Ii3NytMTyq3748wfWLNav0dHHHpo2U7rqTMJe7/d8cQDYPppihbZ5CUoSiiehszcHErThHRKQ8V+RFpDxXSmn2jpqoz8P5X4ONKWAA7QIAAAAAAElFTkSuQmCC",
+    navLink: "http://nginx.test.luojigou.vip:8899/admin/#/dashboard/analysis",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bc6b62e561d000120",
+    navTitle: "精英俱乐部后台测试",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAABeklEQVQ4jZVSrcoCURC9f85uWDCo1RdYMChGsQj6Ajaz1bKID2AymBaLzVcwCFar5YILG8wiGERB0V2ca5jFb9nP4qTLmTszh3MOtyyL/VLip9+MMWWMYYxxzj8QIRnwbyCDCiEQ0RjDOU/v+mxJLiDi6/WihlIKAIwxNEaTiJistG2bMdbtdtfr9Wq1mk6njuP8p2RZFgAAgASAOI57vV6lUvE8z/M8x3Fs22632/f73XXd4XColAqCQErJGBNEKYqi8/l8PB4fj0ehUPB9v9Fo1Go13/cPh8NkMul0OlEUCSESWW+3W7VaXSwW2+12NpsZYwaDQS6XO51O4/E4CIJms0mSCCJaLBZ3u12r1er3+9frNZ/Pl0olrXW5XB6NRq7rbjYbkkRKKREREcMw1FoDgBDicrlorcMw3O/39Xp9Pp8vl0uSjgMA5/z5fJIUJHEcx1JKpRTh1EpsoRdxIys452Qfkc74IEmstJfpjKTrSzQyMfna+jmtb7Ye0Xz4nbLJAAAAAElFTkSuQmCC",
+    navLink: "http://nginx.test.luojigou.vip:8899/tieba-admin/#/./setting/banner",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1730360000"),
+    navRemark: null,
+    navType: "中德",
+    lastModified: Int32("1730360000"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b04ccc129db000121",
+    navTitle: "Coder Station",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACeElEQVQ4jZ2TTWicVRiFn3O/ycS0+ZtJBQ3ERonkB4NtVdSULlNcdNGFFReKbRbSjQhutCt1oRBpoavi0mWiIIiIhRZS8kNSuqiWGmKx+BOMTdImTTKNM5P57nHxTTVr7+I93Hvfc3jv4Vxs99qeth1tp3WMtmOMdoz27rNdPdO2e2V7FngJSAEZBPXyL+CHRRkYSIA52TaQptEhEarTXYsoqdOjIQQsrExI0cZBJIrRqYTAKu9AOZVbGlCSmBgzhRAMFqWdbJLmvB8OGHOAqjVrdFp8+wveqKDHmvHIoPTWoaxtblF8NIl/WkVNDfjAo+Kzo7i7HeUk9OmU+HjKFJukYhO+fged/A325OF4P5z+DhbW0NsH8c0V9NWP2EbjJyB3ZxOPz1vNefHO8+bdF6UPr8Dl27C4AUsbsLINXa3w+gAqPod/fRn1FDNDcgv30HpFtDXCawOisAfOHc3sbkhguwpPF2ByEV4Zg/1tqL8DPjiMFCDsREgNuQD55D/XNytQTbNnfPkqnBmCZ/bBX1vw9c9w6hu49wBCTwG3NeL1Mly8jWspfDIJAxfgve9heQtuLMMLnXDpDZh4E3e3wWoZ/34f554soOH98PkPeHQWjc3jW2totQTPPg5bFTg2BtUajBzCXa1oqYT7iuipAihGx/W/4f3LaOIPvF1Fe/P45CA6cwRCgC+uw/lr+M9NVIu4vwOdHcZDT1iKdiocAFZK8mYZ2h9B+5pNdBbcEEypIu4+wEmAzhZIEstWlLMspxhJmRBAmopQ32Umm13LaVRMAkkA5gSJhLOMy0ZOEiyBBLmAjVy/iyYjA1ex3Wd75n985xnbff8Aki6MtmXzODoAAAAASUVORK5CYII=",
+    navLink: "https://maitao.shop/web/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1735104153"),
+    navRemark: null,
+    navType: null,
+    lastModified: Int32("1735104153"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74bd39a3029bb000122",
+    navTitle: "TypeScript 教程 - 网道",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC9UlEQVQ4jU2TTWhcZRSGn/PdO3cmzk+tGWuqrVopaaiICnFndFEpCEqEYnUh6s5FaVzrxm6kG0HRrVh3YodSNBTc1IVUFKS0CyGGWolWp23SJE4zk5n7/Zzjoon6wgsvnPMsH+H/OXGq1jj4eLNf9Y7amAE0qNMfDHj7/qZ8dN9Q5ubPr38yN1duI3IHPF20Ds28K0Vt1lK4G8QhCBiiEPOc1s1r9vnkDj08+eDf3Y3B2etXFk9OT0+HHKDx7Mw70p54zwab4HIEMEAw1IxKUWPVK2+du0Bn/EWm260n0iMHEvB+xvGPq8XBxz6ErM1wMzlVISWzGE1iMlIyVbOit2Y3ry7aVwtL8dDUPibHm7sW5NHPHE8+3ZJkTcrgJFrmy+RGpQrR3KhMbjhKTqK64ShIkcwt3+plR07Nu/O/LO04/cZT9+Qk7yxolrkkg1L1uXZhVYfMd0fMPlCj7uCLrmdm74Q0dz5j36wG64pzr19ekxfuLcwRk1kws2hEnyRPKrPtAvXKK7sKXttdIw0Dh/e0ae7dL6G9T+oPTdFr7eHTK7fNQQOLKskrNYUfVkpiMqaaOb8PEt1h4kCjwl2W+PF6n0rp8f0hrvRCvUEOfczvBJQ8GWul8tcg8eruKgvrgd8y4chEldWR8udGonCCRcOCwaCPA5CgRjQIhpXKxZWSNx+us7ge+Gm55Nj+Old7ET9KuK0/AgaQs5aJjangFE1mFcQuL5dy7tqQP3qBXjDOLG1ycXlEppgGM1OFmGAtkxzxapEkzkxDklyQlYHYsQurUnUgIsx9v0qROSsESSmJVDKzqIZ4dVy60bNgt00z1ahJIyrJbAxRUVESOoZTlzCNqEVNarla1HUu3eg5Oke9BX+GrJqJq1awzEHujNyx1X+3ZQ5Xq4grMgvxSzpHfQ7gf/7uZDE1oxS1l0g6bphDTGTLCrvjnWGiZO6Wbayf9V93PvjPxu08f7zKzMst+t5RJIPG1qEPPhOsUH79tkfnhN9G/gEAqLRW/zlDGAAAAABJRU5ErkJggg==",
+    navLink: "https://wangdoc.com/typescript/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1735104153"),
+    navRemark: null,
+    navType: null,
+    lastModified: Int32("1735104153"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b7765b79c1d000123",
+    navTitle: "JavaScript 教程 - 网道",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC9UlEQVQ4jU2TTWhcZRSGn/PdO3cmzk+tGWuqrVopaaiICnFndFEpCEqEYnUh6s5FaVzrxm6kG0HRrVh3YodSNBTc1IVUFKS0CyGGWolWp23SJE4zk5n7/Zzjoon6wgsvnPMsH+H/OXGq1jj4eLNf9Y7amAE0qNMfDHj7/qZ8dN9Q5ubPr38yN1duI3IHPF20Ds28K0Vt1lK4G8QhCBiiEPOc1s1r9vnkDj08+eDf3Y3B2etXFk9OT0+HHKDx7Mw70p54zwab4HIEMEAw1IxKUWPVK2+du0Bn/EWm260n0iMHEvB+xvGPq8XBxz6ErM1wMzlVISWzGE1iMlIyVbOit2Y3ry7aVwtL8dDUPibHm7sW5NHPHE8+3ZJkTcrgJFrmy+RGpQrR3KhMbjhKTqK64ShIkcwt3+plR07Nu/O/LO04/cZT9+Qk7yxolrkkg1L1uXZhVYfMd0fMPlCj7uCLrmdm74Q0dz5j36wG64pzr19ekxfuLcwRk1kws2hEnyRPKrPtAvXKK7sKXttdIw0Dh/e0ae7dL6G9T+oPTdFr7eHTK7fNQQOLKskrNYUfVkpiMqaaOb8PEt1h4kCjwl2W+PF6n0rp8f0hrvRCvUEOfczvBJQ8GWul8tcg8eruKgvrgd8y4chEldWR8udGonCCRcOCwaCPA5CgRjQIhpXKxZWSNx+us7ge+Gm55Nj+Old7ET9KuK0/AgaQs5aJjangFE1mFcQuL5dy7tqQP3qBXjDOLG1ycXlEppgGM1OFmGAtkxzxapEkzkxDklyQlYHYsQurUnUgIsx9v0qROSsESSmJVDKzqIZ4dVy60bNgt00z1ahJIyrJbAxRUVESOoZTlzCNqEVNarla1HUu3eg5Oke9BX+GrJqJq1awzEHujNyx1X+3ZQ5Xq4grMgvxSzpHfQ7gf/7uZDE1oxS1l0g6bphDTGTLCrvjnWGiZO6Wbayf9V93PvjPxu08f7zKzMst+t5RJIPG1qEPPhOsUH79tkfnhN9G/gEAqLRW/zlDGAAAAABJRU5ErkJggg==",
+    navLink: "https://wangdoc.com/javascript/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1735104153"),
+    navRemark: null,
+    navType: null,
+    lastModified: Int32("1735104153"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74be0168f5aba000124",
+    navTitle: "ES6 教程 - 网道",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAC9UlEQVQ4jU2TTWhcZRSGn/PdO3cmzk+tGWuqrVopaaiICnFndFEpCEqEYnUh6s5FaVzrxm6kG0HRrVh3YodSNBTc1IVUFKS0CyGGWolWp23SJE4zk5n7/Zzjoon6wgsvnPMsH+H/OXGq1jj4eLNf9Y7amAE0qNMfDHj7/qZ8dN9Q5ubPr38yN1duI3IHPF20Ds28K0Vt1lK4G8QhCBiiEPOc1s1r9vnkDj08+eDf3Y3B2etXFk9OT0+HHKDx7Mw70p54zwab4HIEMEAw1IxKUWPVK2+du0Bn/EWm260n0iMHEvB+xvGPq8XBxz6ErM1wMzlVISWzGE1iMlIyVbOit2Y3ry7aVwtL8dDUPibHm7sW5NHPHE8+3ZJkTcrgJFrmy+RGpQrR3KhMbjhKTqK64ShIkcwt3+plR07Nu/O/LO04/cZT9+Qk7yxolrkkg1L1uXZhVYfMd0fMPlCj7uCLrmdm74Q0dz5j36wG64pzr19ekxfuLcwRk1kws2hEnyRPKrPtAvXKK7sKXttdIw0Dh/e0ae7dL6G9T+oPTdFr7eHTK7fNQQOLKskrNYUfVkpiMqaaOb8PEt1h4kCjwl2W+PF6n0rp8f0hrvRCvUEOfczvBJQ8GWul8tcg8eruKgvrgd8y4chEldWR8udGonCCRcOCwaCPA5CgRjQIhpXKxZWSNx+us7ge+Gm55Nj+Old7ET9KuK0/AgaQs5aJjangFE1mFcQuL5dy7tqQP3qBXjDOLG1ycXlEppgGM1OFmGAtkxzxapEkzkxDklyQlYHYsQurUnUgIsx9v0qROSsESSmJVDKzqIZ4dVy60bNgt00z1ahJIyrJbAxRUVESOoZTlzCNqEVNarla1HUu3eg5Oke9BX+GrJqJq1awzEHujNyx1X+3ZQ5Xq4grMgvxSzpHfQ7gf/7uZDE1oxS1l0g6bphDTGTLCrvjnWGiZO6Wbayf9V93PvjPxu08f7zKzMst+t5RJIPG1qEPPhOsUH79tkfnhN9G/gEAqLRW/zlDGAAAAABJRU5ErkJggg==",
+    navLink: "https://wangdoc.com/es6/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1735104153"),
+    navRemark: null,
+    navType: null,
+    lastModified: Int32("1735104153"),
+    navTag: "a"
+} ]);
+db.getCollection("navs").insert([ {
+    _id: "676ba74b946e7e0fd4000125",
+    navTitle: "chatGPT",
+    navLogo: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAADWUlEQVQ4jTWTvUssVxiHf+85M7MfnBlXcRGzgikkC4JXQUWjRUSwyVZBS9EoViJbXEFu5zYSEWzURiUq2NjEyiUQwesnURBEgyDb2GjQ6Eri6ujO7Jw3RXKff+ApHh4CAMuyPpim+RMRfQsgJoSA1hpaazJNE/wfYGYA+JuZf/d9/5PneX+QaZotoVDoVyKqZGZIKblQKJBlWYjFYnh8fMT/EpimyVprAgBm/qtYLH4vI5HIz0KID8zsm6Ypnp+fqauri2dnZ9Hd3U1tbW3I5/P89vaGp6cnEkKwlNIH4EgpE1BK/WPbduA4jgbATU1N+ujoiFtaWri2tpZPTk747u6ODw8PeWFhQVdWVnIkEtG2bQdKqScopVgpxZFIRA8NDenz83Pu7e3lnp4e3t/f53Q6za2trew4Dk9MTPDGxoYOhULatm22bZuFlJJfXl4wMDBAfX19dHFxAa01ent7MTMzg4eHBwwPD2NpaQlbW1sgImpsbCTXdQGADa01wuEwUqkUf/z4kQYHByGlxPv7O7q7u5FMJrG8vAzP8zA9PY2GhgYUCgUWQhAAGMxMQghIKen19RXhcBg1NTVwXRfz8/N4fX3F+vo6Li4uMDY2hqmpKbS3t9PV1RWklCSklHBdF9vb25icnMTc3BwSiQSSySTy+Tzi8TjOzs7w/v6OkZERZDIZpFIpGIYBrTUMZmYpJR0fH3M6naZYLIbFxUVUVFRgc3MTuVwOxWIR19fXqKmpQTQaRalUYmYmZmYDALTWsG0bBwcHmJ2dRSaTwe3tLdbW1hAEAbq6uuB5Hurr69HR0YGVlRVorSGEwJeMOhqNcjab1f39/ew4Djc3N/P4+Djv7e1xZ2cnDw4O8uXlJff392spJTuOo5VSDKXUg+M4gWVZQV1dHa+srOhsNsu5XI53d3e5urqa29vbeWdnh5PJpAbAZWVlgVIqUEo9UjQa3RRC/EBEXrFYNEulElVVVXE8Hsfo6CglEgnc3Nzw6uoqTk9PqaysjD3PKwkhzCAIfqFQKPSNYRifhRBfAQARse/75Ps+DMNAeXk57u/vQURQSnEQBERE0Fr/WSqVvpNBEOSJ6DchxNcAKpk5LKWEZVmQUpLruohEImxZFrTWX3b+7Pv+j57nXf0LfgeqKaXBmV0AAAAASUVORK5CYII=",
+    navLink: "https://chat.openai.com/",
+    navDesc: null,
+    clickNumber: Int32("0"),
+    createTime: Int32("1735104153"),
+    navRemark: null,
+    navType: null,
+    lastModified: Int32("1735104153"),
+    navTag: "a"
+} ]);
+
+// ----------------------------
+// Collection structure for types
+// ----------------------------
+db.getCollection("types").drop();
+db.createCollection("types");
+
+// ----------------------------
+// Documents of types
+// ----------------------------
+db.getCollection("types").insert([ {
+    _id: ObjectId("634d7f707797638ec96fe2e9"),
+    typeName: "HTML"
+} ]);
+db.getCollection("types").insert([ {
+    _id: ObjectId("634d7fc47797638ec96fe2ee"),
+    typeName: "CSS"
+} ]);
+db.getCollection("types").insert([ {
+    _id: ObjectId("634d7fcc7797638ec96fe2f1"),
+    typeName: "JS"
+} ]);
+db.getCollection("types").insert([ {
+    _id: ObjectId("634d801e7797638ec96fe2f5"),
+    typeName: "jQuery"
+} ]);
+db.getCollection("types").insert([ {
+    _id: ObjectId("634d80417797638ec96fe2f9"),
+    typeName: "Vue"
+} ]);
+db.getCollection("types").insert([ {
+    _id: ObjectId("634d804d7797638ec96fe2fd"),
+    typeName: "React"
+} ]);
+db.getCollection("types").insert([ {
+    _id: ObjectId("634d806d7797638ec96fe302"),
+    typeName: "前端工程化"
+} ]);
+db.getCollection("types").insert([ {
+    _id: ObjectId("634d809b7797638ec96fe307"),
+    typeName: "Node.js"
+} ]);
+db.getCollection("types").insert([ {
+    _id: ObjectId("634d81077797638ec96fe30c"),
+    typeName: "Go"
+} ]);
+db.getCollection("types").insert([ {
+    _id: ObjectId("634e1b17386eea42f85fad04"),
+    typeName: "Java"
+} ]);
+db.getCollection("types").insert([ {
+    _id: ObjectId("634e431a2fac4881713db242"),
+    typeName: "PHP"
+} ]);
+db.getCollection("types").insert([ {
+    _id: ObjectId("6357e132d84d68f7b87e13a6"),
+    typeName: "Python"
+} ]);
+db.getCollection("types").insert([ {
+    _id: ObjectId("6359eb5ca5f3673044ad9775"),
+    typeName: "数据库"
+} ]);
+
+// ----------------------------
+// Collection structure for users
+// ----------------------------
+db.getCollection("users").drop();
+db.createCollection("users");
+
+// ----------------------------
+// Documents of users
+// ----------------------------
+db.getCollection("users").insert([ {
+    _id: ObjectId("634e56402fac4881713db3e8"),
+    loginId: "xiejie",
+    loginPwd: "e10adc3949ba59abbe56e057f20f883e",
+    avatar: "/static/avatar/looklook.png",
+    nickname: "阿诺瓦柴诺德",
+    mail: "745007854@qq.com",
+    qq: "745007854",
+    wechat: "",
+    intro: "hello，there～",
+    registerDate: "1666078272372",
+    lastLoginDate: "1666078272372",
+    points: Int32("122"),
+    enabled: true
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("6357ae1537fe7a1aab3aeb0f"),
+    loginId: "yajing",
+    loginPwd: "e10adc3949ba59abbe56e057f20f883e",
+    avatar: "/static/avatar/666.png",
+    nickname: "陟上晴明",
+    mail: "",
+    qq: "",
+    wechat: "",
+    intro: "",
+    registerDate: "1666690581784",
+    lastLoginDate: "1666690581784",
+    points: Int32("100"),
+    enabled: true
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("6357ae8b37fe7a1aab3aeb1f"),
+    loginId: "jinge",
+    loginPwd: "e10adc3949ba59abbe56e057f20f883e",
+    avatar: "/static/avatar/miao.png",
+    nickname: "山上有大王",
+    mail: "",
+    qq: "",
+    wechat: "",
+    intro: "",
+    registerDate: "1666690699531",
+    lastLoginDate: "1666690699531",
+    points: Int32("104"),
+    enabled: true
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("6357e0f1d84d68f7b87e13a2"),
+    loginId: "10086",
+    loginPwd: "e10adc3949ba59abbe56e057f20f883e",
+    avatar: "/static/avatar/yeah.png",
+    nickname: "amh面板",
+    mail: "",
+    qq: "",
+    wechat: "",
+    intro: "",
+    registerDate: "1666703601068",
+    lastLoginDate: "1666703601068",
+    points: Int32("104"),
+    enabled: true
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("6358cef287dceb95c5f978d8"),
+    loginId: "10000",
+    loginPwd: "e10adc3949ba59abbe56e057f20f883e",
+    avatar: "/static/avatar/ohmygood.gif",
+    nickname: "木木剑光",
+    mail: "",
+    qq: "",
+    wechat: "",
+    intro: "",
+    registerDate: "1666764530973",
+    lastLoginDate: "1666764530973",
+    points: Int32("100"),
+    enabled: true
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("6358cf7487dceb95c5f97913"),
+    loginId: "test1",
+    loginPwd: "e10adc3949ba59abbe56e057f20f883e",
+    avatar: "/static/avatar/ohmygood.gif",
+    nickname: "唯一丶",
+    mail: "",
+    qq: "",
+    wechat: "",
+    intro: "",
+    registerDate: "1666764660879",
+    lastLoginDate: "1666764660879",
+    points: Int32("100"),
+    enabled: true
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("6358cf9387dceb95c5f97924"),
+    loginId: "test2",
+    loginPwd: "e10adc3949ba59abbe56e057f20f883e",
+    avatar: "/static/avatar/fire.gif",
+    nickname: "边城",
+    mail: "",
+    qq: "",
+    wechat: "",
+    intro: "",
+    registerDate: "1666764691252",
+    lastLoginDate: "1666764691252",
+    points: Int32("100"),
+    enabled: false
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("6358d00f87dceb95c5f97938"),
+    loginId: "test3",
+    loginPwd: "e10adc3949ba59abbe56e057f20f883e",
+    avatar: "/static/avatar/rainbow.gif",
+    nickname: "zxdposter",
+    mail: "",
+    qq: "",
+    wechat: "",
+    intro: "",
+    registerDate: "1666764815846",
+    lastLoginDate: "1666764815846",
+    points: Int32("100"),
+    enabled: false
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("6359e24fa5f3673044ad94ba"),
+    loginId: "user1",
+    loginPwd: "e10adc3949ba59abbe56e057f20f883e",
+    avatar: "/static/avatar/looklook.png",
+    nickname: "zxdposter",
+    mail: "",
+    qq: "",
+    wechat: "",
+    intro: "",
+    registerDate: "1666835023268",
+    lastLoginDate: "1666835023268",
+    points: Int32("100"),
+    enabled: false
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("6359f46ea5f3673044ad986c"),
+    loginId: "user2",
+    loginPwd: "e10adc3949ba59abbe56e057f20f883e",
+    avatar: "/static/avatar/ohmygood.gif",
+    nickname: "李狗蛋",
+    mail: "",
+    qq: "",
+    wechat: "",
+    intro: "",
+    registerDate: "1666839662748",
+    lastLoginDate: "1666839662748",
+    points: Int32("100"),
+    enabled: true
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("635a275fa5f3673044ad9a0d"),
+    loginId: "user123",
+    loginPwd: "e10adc3949ba59abbe56e057f20f883e",
+    avatar: "/static/avatar/fire.gif",
+    nickname: "123",
+    mail: "",
+    qq: "",
+    wechat: "",
+    intro: "",
+    registerDate: "1666852703277",
+    lastLoginDate: "1666852703277",
+    points: Int32("70"),
+    enabled: true
+} ]);
+db.getCollection("users").insert([ {
+    _id: ObjectId("635bdd204df02505401d4d12"),
+    loginId: "luoli",
+    loginPwd: "e10adc3949ba59abbe56e057f20f883e",
+    avatar: "/static/avatar/yeah.png",
+    nickname: "新用户294867733",
+    mail: "",
+    qq: "",
+    wechat: "",
+    intro: "",
+    registerDate: "1666964768492",
+    lastLoginDate: "1666964768492",
+    points: Int32("70"),
+    enabled: true
+} ]);

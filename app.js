@@ -22,6 +22,7 @@ const typeRouter = require("./routes/type");
 const interviewRouter = require("./routes/interview");
 const commentRouter = require("./routes/comment");
 const uploadRouter = require("./routes/upload");
+const navRouter = require("./routes/nav");
 
 // 创建服务器实例
 const app = express();
@@ -54,6 +55,7 @@ app.use("/api/comment", commentRouter);
 app.use("/api/interview", interviewRouter);
 app.use("/api/upload", uploadRouter);
 app.use("/res/captcha", captchaRouter);
+app.use("/api/nav", navRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
