@@ -9,9 +9,10 @@ const router = express.Router();
 const {
     addNavService,
     findNavByPageService,
+    findNavTagByPageService,
     findNavByIdService,
     updateNavService,
-    deleteNavService,
+    deleteNavService, findNavService, updateNavClickService, findNavSubTagByPageService,
 } = require("../services/navService");
 
 const { formatResponse } = require("../utils/tools");
@@ -21,6 +22,42 @@ const { formatResponse } = require("../utils/tools");
  */
 router.get("/", async function (req, res) {
     const result = await findNavByPageService(req.query)
+    res.send(formatResponse(0, "", result));
+});
+
+/**
+ * 根据分页获取网址导航标签
+ */
+router.get("/tag", async function (req, res) {
+    const result = await findNavTagByPageService(req.query)
+    res.send(formatResponse(0, "", result));
+});
+
+/**
+ * 根据分页获取网址导航二级标签
+ */
+router.get("/subTag", async function (req, res) {
+    const result = await findNavSubTagByPageService(req.query)
+    res.send(formatResponse(0, "", result));
+});
+
+/**
+ * 网址导航列表（网站专用）
+ */
+router.get("/list", async function (req, res) {
+    const result = await findNavService();
+    res.send(formatResponse(0, "", result));
+});
+
+/**
+ * 修改网址导航点击数（网站专用）
+ */
+router.patch("/click", async function (req, res) {
+    const oldNav = await findNavByIdService(req.body._id);
+    const result = await updateNavClickService(req.body._id, {
+        ...oldNav,
+        clickNumber: req.body.clickNumber,
+    });
     res.send(formatResponse(0, "", result));
 });
 

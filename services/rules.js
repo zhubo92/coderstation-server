@@ -151,7 +151,7 @@ exports.navRule = {
   },
   navLink: {
     presence: {
-      allowEmpty: false,
+      allowEmpty: true,
     },
     type: "string",
   },
@@ -161,21 +161,21 @@ exports.navRule = {
     },
     type: "string",
   },
-  createTime: {
+  navRemark: {
     presence: {
       allowEmpty: true,
     },
     type: "string",
   },
-  clickNumber:{
+  navType: {
     presence: {
       allowEmpty: true,
     },
-    type: "number",
+    type: "string",
   },
-  navRemark: {
+  navTag: {
     presence: {
-      allowEmpty: true,
+      allowEmpty: false,
     },
     type: "string",
   },

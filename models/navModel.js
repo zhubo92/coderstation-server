@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 // 定义对应的 Schema
 const navSchema = new mongoose.Schema(
     {
-        id: String, // mongodb 自动生成的 id
+        _id: String, // mongodb 自动生成的 id
         navTitle: String, // 网址导航标题
         navLogo: String, // 网址导航 logo
         navLink: String, // 网址导航链接
@@ -11,6 +11,9 @@ const navSchema = new mongoose.Schema(
         clickNumber: Number, // 点击数
         createTime: String, // 创建时间
         navRemark: String, // 备注
+        navType: String, // 类型
+        lastModified: String, // 最后一次修改时间
+        navTag: String, // 标签
     },
     {
         versionKey: false,
